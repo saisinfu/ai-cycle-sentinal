@@ -434,8 +434,11 @@ def calibrate(panel: pd.DataFrame, signals: list[dict], until=None) -> list[dict
 
 def ic_by_signal(subs: pd.DataFrame, px: pd.Series) -> dict:
     f12 = (px.shift(-12) / px - 1).reindex(subs.index)
-    df = subs.assign(f12=f12).dropna()
-    return {k: round(float(df[[k, "f12"]].rank().corr().iloc[0, 1]), 3) for k in subs.columns}
+    out = {}
+    for k in subs.columns:
+        df = pd.DataFrame({"s": subs[k], "f": f12}).dropna()
+        out[k] = round(float(df.rank().corr().iloc[0, 1]), 3) if len(df) > 24 else None
+    return out
 
 
 # ----------------------------------------------------------------------------- main
