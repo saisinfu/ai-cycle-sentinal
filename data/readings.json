@@ -1,0 +1,541 @@
+{
+ "updated_at": "2026-10-24T05:49:39+00:00",
+ "readings": [
+  {
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "enterprise_adoption": "medium",
+    "gpu_spot_price": "high",
+    "power_grid": "medium",
+    "prices": "medium"
+   },
+   "created_by": "claude",
+   "date": "2026-10-16",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "enterprise_ai_adoption_change_3m_pp": 1.8,
+    "enterprise_ai_adoption_pct": 59,
+    "gpu_spot_price_change_1m_pct": 16.7,
+    "gpu_spot_price_usd_hr": 3.21,
+    "power_grid_stress_level": 8.5
+   },
+   "method_version": 1,
+   "notes_th": {
+    "capex_vs_revenue": "CapEx ไตรมาส 2/2026 ของ Microsoft ($41B), Alphabet ($44.9B) และ Amazon ($53.1B) คูณ 4 = $556B ต่อปี หารด้วยรายได้คลาวด์ต่อปีของ AWS ($42.2B×4), Azure (เกิน $100B ต่อปี) และ Google Cloud ($24.8B×4) = $368B ได้ 1.51 เท่า ปี 2024 อยู่ราว 0.85 เท่า แปลว่าการลงทุนโตเร็วกว่ารายได้ แต่ backlog ยังสูงมาก (Google Cloud $514B)",
+    "chip_lead_time": "Nvidia ไม่เปิดเผยระยะรอ ตัวเลขมาจากผู้ขายต่อ: H100 10–14 สัปดาห์ (สั้นลง), H200 20–30 สัปดาห์, B200 ต้องจองล่วงหน้า ใช้ 24 สัปดาห์เป็นค่ากลางของชิปรุ่นใหม่",
+    "enterprise_adoption": "ไม่มีข้อมูลอัตรายกเลิกใช้งานสาธารณะ จึงใช้ Ramp AI Index ของธุรกิจขนาดใหญ่แทน: ส.ค. 2026 = 59.0% ที่จ่ายเงินใช้ AI เพิ่มจาก 57.3% ใน พ.ค. (+1.8 จุดใน 3 เดือน)",
+    "gpu_spot_price": "ดัชนี OCPI-H100 ปิดที่ $3.21/ชม. เมื่อ 14 ต.ค. 2026 เพิ่มขึ้น 16.7% ใน 30 วัน (จาก $2.75) ช่วง 30 วันอยู่ระหว่าง $2.49–$3.21 ค่อนข้างผันผวน",
+    "power_grid": "ประเมินจากข่าว: การประมูลกำลังผลิตของ PJM (โครงข่ายใหญ่สุดของสหรัฐฯ) ขาด 6.8 GW, PJM เตรียมตัดไฟดาต้าเซ็นเตอร์ช่วงวิกฤตตั้งแต่ มิ.ย. 2027 และราคาไฟฟ้าขายส่งเกือบเพิ่มเป็น 2 เท่าในปีที่ผ่านมา ให้ 8.5/10",
+    "prices": "ราคาหุ้นเดือน ต.ค. 2026 (ไม่ระบุวันที่แน่นอน) KLAC แตกพาร์ 10:1 เมื่อ พ.ค. 2026 ราคาจึงต่ำกว่าเดิมมาก"
+   },
+   "prices": {
+    "AVGO": 344.33,
+    "ETN": 408.85,
+    "KLAC": 174.46
+   },
+   "prices_as_of": null,
+   "sources": [
+    {
+     "key": "capex_vs_revenue",
+     "label": "Q2 2026 capex (EffectStory)",
+     "url": "https://effectstory.com/en/articles/hyperscaler-ai-capex-q2-2026-microsoft-alphabet-meta-amazon"
+    },
+    {
+     "key": "capex_vs_revenue",
+     "label": "Q2 2026 cloud revenue (UpperEdge)",
+     "url": "https://upperedge.com/cloud/aws-hits-37-growth-azure-tops-100b-gcp-launches-flexible-savings-plan-what-q2-2026-earnings-mean-for-enterprise-cloud-contracts/"
+    },
+    {
+     "key": "capex_vs_revenue",
+     "label": "Google Cloud backlog $514B",
+     "url": "https://cryptobriefing.com/alphabet-cloud-backlog-514b-revenue-growth/"
+    },
+    {
+     "key": "chip_lead_time",
+     "label": "GPU lead times (Sell-Server)",
+     "url": "https://www.sell-server.com/ai-server-gpu-supply-pricing-2026-procurement-guide/"
+    },
+    {
+     "key": "chip_lead_time",
+     "label": "GPU shortage 2026 (Spheron)",
+     "url": "https://www.spheron.network/blog/gpu-shortage-2026/"
+    },
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index – large businesses (FRED)",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM backstop auction (Utility Dive)",
+     "url": "https://www.utilitydive.com/news/pjm-backstop-capacity-auction-ferc-data-centers/826792/"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM data-center curtailment (TechCrunch)",
+     "url": "https://techcrunch.com/2026/07/28/data-centers-may-face-temporary-power-cuts-to-prevent-blackouts-on-largest-us-grid/"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC",
+     "url": "https://www.digrin.com/stocks/detail/KLAC/price"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO",
+     "url": "https://www.digrin.com/stocks/detail/AVGO/price"
+    },
+    {
+     "key": "prices",
+     "label": "ETN",
+     "url": "https://www.digrin.com/stocks/detail/ETN/price"
+    }
+   ]
+  },
+  {
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "enterprise_adoption": "medium",
+    "gpu_spot_price": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "created_by": "claude",
+   "date": "2026-10-19",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "enterprise_ai_adoption_pct": 65.7,
+    "gpu_spot_price_change_1m_pct": -2.5,
+    "gpu_spot_price_usd_hr": 2.78,
+    "power_grid_stress_level": 8.7
+   },
+   "method_version": 1,
+   "notes_th": {
+    "capex_vs_revenue": "ยังไม่มีงบไตรมาสใหม่ (Microsoft, Alphabet, Amazon จะประกาศปลาย ต.ค.) จึงใช้ค่าเดิม 1.51 เท่าจากงบไตรมาส 2/2026 ต่อไป",
+    "chip_lead_time": "ไม่มีหลักฐานใหม่ที่ชัดเจน คงไว้ที่ 24 สัปดาห์ บทความ ก.ย. 2026 บางแหล่งอ้างคิวรอ GPU องค์กร 36–52 สัปดาห์ แต่เป็นข้อมูลทางอ้อม จึงยังไม่ปรับ",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจขนาดใหญ่ (FRED) ก.ย. 2026 = 65.7% เทียบ มิ.ย. 63.7% (+2.1 จุดใน 3 เดือน) หมายเหตุ: FRED ปรับปรุงข้อมูลย้อนหลัง ส.ค. เป็น 65.2% (เดิม 59.0%)",
+    "gpu_spot_price": "ดัชนี OCPI-H100 ปิดที่ $2.78/ชม. เมื่อ 17 ต.ค. 2026 ลดลง 2.5% ใน 30 วัน (จาก $2.85) ร่วงจาก $3.21 เมื่อสัปดาห์ก่อน โมเมนตัมเปลี่ยนจาก +16.7% เป็นติดลบ",
+    "power_grid": "สูงขึ้นเป็น 8.7/10: PJM เรียกลดการใช้ไฟ 13–14 ต.ค. เหลือกำลังสำรองเกินเกณฑ์เพียง ~900 MW, กระทรวงพลังงานสหรัฐฯ ออกคำสั่งฉุกเฉิน 12–16 ต.ค. ให้ย้ายดาต้าเซ็นเตอร์ไปใช้เครื่องปั่นไฟสำรองได้ ขณะที่ FERC (9 ต.ค.) ปฏิเสธแผนตัดไฟดาต้าเซ็นเตอร์ของ PJM แต่อนุมัติทะเบียนดาต้าเซ็นเตอร์ ผลประมูล backstop ยังไม่ออก",
+    "prices": "ราคาปิด 16 ต.ค. 2026: KLAC $165.74 (-5.0%), AVGO $328.75 (-4.5%), ETN $391.25 (-2.8% ในวันนั้น)"
+   },
+   "prices": {
+    "AVGO": 328.75,
+    "ETN": 391.25,
+    "KLAC": 165.74
+   },
+   "prices_as_of": "2026-10-16",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index – large businesses (FRED)",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "chip_lead_time",
+     "label": "Blackwell Ultra allocation queues (Axe Compute)",
+     "url": "https://axecompute.com/blackwell-ultra-mass-production-gpu-allocation-queues/"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM demand response & DOE order (Eastern Herald)",
+     "url": "https://easternherald.com/2026/10/15/pjm-grid-demand-response-emergency-order/"
+    },
+    {
+     "key": "power_grid",
+     "label": "FERC registry / curtailment ruling (Tech Insider)",
+     "url": "https://tech-insider.org/ferc-pjm-data-center-registry-curtailment-2026/"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/avgo/"
+    },
+    {
+     "key": "prices",
+     "label": "ETN (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/etn/"
+    }
+   ]
+  },
+  {
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "enterprise_adoption": "medium",
+    "gpu_spot_price": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "created_by": "claude",
+   "date": "2026-10-20",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "enterprise_ai_adoption_pct": 65.7,
+    "gpu_spot_price_change_1m_pct": -7,
+    "gpu_spot_price_usd_hr": 2.81,
+    "power_grid_stress_level": 8.7
+   },
+   "method_version": 1,
+   "notes_th": {
+    "capex_vs_revenue": "ยังไม่มีงบไตรมาสใหม่ (Microsoft, Alphabet, Amazon จะประกาศปลาย ต.ค.) จึงใช้ค่าเดิม 1.51 เท่าจากงบไตรมาส 2/2026 ต่อไป",
+    "chip_lead_time": "ไม่มีหลักฐานใหม่ คงไว้ที่ 24 สัปดาห์ บทความ GPUsmith (อัปเดต 14 ต.ค.) ระบุ H100 ส่งได้ใน 2–4 สัปดาห์ ส่วน Blackwell ถูกจองเต็มล่วงหน้า แต่ไม่มีตัวเลขเป็นสัปดาห์ที่ชัดเจน",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ (FRED) ก.ย. 2026 = 65.7% เทียบ มิ.ย. 63.7% (+2.1 จุดใน 3 เดือน) เท่ากับครั้งก่อน",
+    "gpu_spot_price": "ดัชนี OCPI-H100 ปิดที่ $2.81/ชม. เมื่อ 18 ต.ค. 2026 ลดลง 7.0% ใน 30 วัน (จาก $3.02) แย่ลงจาก -2.5% ครั้งก่อน แม้ราคาจะขยับขึ้นเล็กน้อยจาก $2.78",
+    "power_grid": "คงไว้ที่ 8.7/10 ไม่มีเหตุการณ์ใหม่หลังการเรียกลดใช้ไฟของ PJM และคำสั่งฉุกเฉินของกระทรวงพลังงาน (12–16 ต.ค.) ผลประมูล backstop ของ PJM ยังไม่ออก (การประมูลปิด 21 ต.ค.)",
+    "prices": "ราคาปิด 19 ต.ค. 2026: KLAC $166.40 (+0.4%), AVGO $334.59 (+1.8%), ETN $391.50 (+0.1%)"
+   },
+   "prices": {
+    "AVGO": 334.59,
+    "ETN": 391.5,
+    "KLAC": 166.4
+   },
+   "prices_as_of": "2026-10-19",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index – large businesses (FRED)",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "chip_lead_time",
+     "label": "Nvidia GPU lead times (GPUsmith)",
+     "url": "https://gpusmith.com/articles/en/nvidia-gpu-lead-times-h100-h200-gb200"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM data-center costs (Utility Dive)",
+     "url": "https://www.utilitydive.com/news/data-center-pjm-wholesale-market/828917/"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/avgo/"
+    },
+    {
+     "key": "prices",
+     "label": "ETN (Equibles)",
+     "url": "https://equibles.com/stocks/etn/price"
+    }
+   ]
+  },
+  {
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "enterprise_adoption": "medium",
+    "gpu_spot_price": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "created_by": "claude",
+   "date": "2026-10-21",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "enterprise_ai_adoption_pct": 65.7,
+    "gpu_spot_price_change_1m_pct": 17.7,
+    "gpu_spot_price_usd_hr": 3.12,
+    "power_grid_stress_level": 8.7
+   },
+   "method_version": 1,
+   "notes_th": {
+    "capex_vs_revenue": "ยังไม่มีงบไตรมาสใหม่ (Amazon ประกาศ 29 ต.ค., Microsoft/Alphabet ปลาย ต.ค.) จึงใช้ค่าเดิม 1.51 เท่าจากงบไตรมาส 2/2026 ต่อไป",
+    "chip_lead_time": "ไม่มีหลักฐานใหม่เป็นตัวเลขสัปดาห์ คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ)",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ (FRED) ก.ย. 2026 = 65.7% เทียบ มิ.ย. 63.7% (+2.1 จุด) เท่ากับครั้งก่อน",
+    "gpu_spot_price": "ดัชนี OCPI-H100 ปิดที่ $3.12/ชม. เมื่อ 20 ต.ค. 2026 เพิ่มขึ้น 17.7% ใน 30 วัน (จาก $2.65) ฟื้นแรงจาก $2.81 (-7.0%) ครั้งก่อน หลังราคาดีดขึ้น 19–20 ต.ค.",
+    "power_grid": "คงไว้ที่ 8.7/10 การประมูล backstop ของ PJM ถูกเลื่อนตั้งแต่ 30 ก.ย. หลัง FERC อนุมัติเพียงบางส่วน ยังไม่มีวันใหม่ จึงจะไม่มีผลภายใน 2 ธ.ค. ตามกำหนดเดิม PJM เตือนเสี่ยงไฟขาดตั้งแต่ปี 2027",
+    "prices": "ราคาปิด 20 ต.ค. 2026: KLAC $161.74 (-2.8%), AVGO $334.37 (-0.1%), ETN $381.98 (-2.4%)"
+   },
+   "prices": {
+    "AVGO": 334.37,
+    "ETN": 381.98,
+    "KLAC": 161.74
+   },
+   "prices_as_of": "2026-10-20",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index – large businesses (FRED)",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM delays backstop auction (Utility Dive)",
+     "url": "https://www.utilitydive.com/news/pjm-delays-backstop-procurement-ferc-data-center/831751/"
+    },
+    {
+     "key": "power_grid",
+     "label": "FERC rejects PJM data-center rules (Conduit Street)",
+     "url": "https://conduitstreet.mdcounties.org/2026/10/20/federal-regulators-reject-pjms-proposed-data-center-power-rules/"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/avgo/"
+    },
+    {
+     "key": "prices",
+     "label": "ETN (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/etn/"
+    }
+   ]
+  },
+  {
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "enterprise_adoption": "medium",
+    "gpu_spot_price": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "created_by": "claude",
+   "date": "2026-10-22",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "enterprise_ai_adoption_pct": 65.7,
+    "gpu_spot_price_change_1m_pct": 17.7,
+    "gpu_spot_price_usd_hr": 3.12,
+    "power_grid_stress_level": 8.7
+   },
+   "method_version": 1,
+   "notes_th": {
+    "capex_vs_revenue": "ยังไม่มีงบไตรมาสใหม่ (Microsoft/Alphabet ปลาย ต.ค., Amazon 29 ต.ค.) จึงใช้ค่าเดิม 1.51 เท่าจากงบไตรมาส 2/2026 ต่อไป",
+    "chip_lead_time": "ไม่มีหลักฐานใหม่ที่เป็นตัวเลขสัปดาห์ คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ)",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ (FRED) ก.ย. 2026 = 65.7% เทียบ มิ.ย. 63.7% (+2.1 จุด) เท่ากับครั้งก่อน",
+    "gpu_spot_price": "ยังไม่มีค่าใหม่หลัง 20 ต.ค.: ดัชนี OCPI-H100 อยู่ที่ $3.12/ชม. เพิ่มขึ้น 17.7% ใน 30 วัน เท่ากับครั้งก่อน",
+    "power_grid": "คงไว้ที่ 8.7/10 ไม่มีเหตุการณ์ใหม่ที่เปลี่ยนภาพ: FERC ปฏิเสธแผนเชื่อมต่อโหลดขนาดใหญ่ (IRAS) ของ PJM เมื่อ 9 ต.ค. ทำให้ราคาค่าความพร้อมไฟฟ้าอาจสูงนานขึ้น ส่วนการประมูล backstop ยังถูกเลื่อน ไม่มีผล",
+    "prices": "ราคาปิด 21 ต.ค. 2026: KLAC $163.43 (+1.0%), AVGO $337.80 (+1.0%), ETN $393.94 (+3.1%)"
+   },
+   "prices": {
+    "AVGO": 337.8,
+    "ETN": 393.94,
+    "KLAC": 163.43
+   },
+   "prices_as_of": "2026-10-21",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index – large businesses (FRED)",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "power_grid",
+     "label": "FERC rejects PJM large-load plan (Utility Dive)",
+     "url": "https://www.utilitydive.com/news/ferc-pjm-large-load-interconnection-iras-byonc/832716/"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/avgo/"
+    },
+    {
+     "key": "prices",
+     "label": "ETN (Equibles)",
+     "url": "https://equibles.com/stocks/etn/price"
+    }
+   ]
+  },
+  {
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "enterprise_adoption": "medium",
+    "gpu_spot_price": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "created_by": "claude",
+   "date": "2026-10-23",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "enterprise_ai_adoption_pct": 65.7,
+    "gpu_spot_price_change_1m_pct": 10.5,
+    "gpu_spot_price_usd_hr": 3.15,
+    "power_grid_stress_level": 8.7
+   },
+   "method_version": 1,
+   "notes_th": {
+    "capex_vs_revenue": "ยังไม่มีงบไตรมาสใหม่ของ Microsoft, Alphabet, Amazon (ประกาศปลาย ต.ค.) จึงใช้ค่าเดิม 1.51 เท่าจากงบไตรมาส 2/2026 ต่อไป ส่วน Meta เปิดเผยว่าใช้เงินลงทุนไตรมาส 3 ($34.9B) มากกว่ากระแสเงินสดที่ทำได้ ตลาดเริ่มกังวลเรื่องการลงทุน AI",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่มีตัวเลขระยะรอ GPU ใหม่ แต่ Lam Research (21 ต.ค.) เตือนว่าพื้นที่คลีนรูมและชิ้นส่วนจะตึงตัวไปถึงปี 2027 สนับสนุนว่าอุปทานยังแน่น",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ (FRED) ก.ย. 2026 = 65.7% เทียบ มิ.ย. 63.7% (+2.1 จุด) เท่ากับครั้งก่อน",
+    "gpu_spot_price": "ดัชนี OCPI-H100 ปิดที่ $3.15/ชม. เมื่อ 22 ต.ค. 2026 เพิ่มขึ้น 10.5% ใน 30 วัน (จาก $2.85) ราคาขยับขึ้นจาก $3.12 แต่การเติบโตรายเดือนชะลอลงจาก +17.7%",
+    "power_grid": "คงไว้ที่ 8.7/10 ไม่มีเหตุการณ์ใหม่ที่เปลี่ยนภาพ การประมูล backstop ของ PJM ยังถูกเลื่อนและยังไม่มีผล ข้อจำกัดไฟฟ้าสำหรับดาต้าเซ็นเตอร์ยังตึงตัว",
+    "prices": "ราคาปิด 22 ต.ค. 2026 วันที่หุ้นชิปถูกเทขายหนัก (Lam เตือนเรื่องอุปทาน + กังวลการลงทุน AI): KLAC $147.83 (-9.6%), AVGO $323.24 (-4.3%), ETN $368.99 (-6.3%)"
+   },
+   "prices": {
+    "AVGO": 323.24,
+    "ETN": 368.99,
+    "KLAC": 147.83
+   },
+   "prices_as_of": "2026-10-22",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index – large businesses (FRED)",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "chip_lead_time",
+     "label": "Lam Research supply warning (24/7 Wall St)",
+     "url": "https://247wallst.com/investing/2026/10/22/chip-stocks-fall-as-supply-warning-deepens-ai-selloff-marvell-and-amd-sink-8-intel-drops-7/"
+    },
+    {
+     "key": "capex_vs_revenue",
+     "label": "Oct 22 AI selloff & Meta capex (StockTitan)",
+     "url": "https://www.stocktitan.net/articles/why-is-nasdaq-down-today-october-22-2026-ai-chip-stocks"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/avgo/"
+    },
+    {
+     "key": "prices",
+     "label": "ETN (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/etn/"
+    }
+   ]
+  },
+  {
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "enterprise_adoption": "medium",
+    "gpu_spot_price": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "created_by": "claude",
+   "date": "2026-10-24",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "enterprise_ai_adoption_pct": 65.7,
+    "gpu_spot_price_change_1m_pct": 3.9,
+    "gpu_spot_price_usd_hr": 3.17,
+    "power_grid_stress_level": 8.7
+   },
+   "method_version": 1,
+   "notes_th": {
+    "capex_vs_revenue": "Microsoft, Alphabet และ Amazon ยังไม่ประกาศงบไตรมาส 3 (คาดปลาย ต.ค.) จึงใช้ค่าเดิม 1.51 เท่าจากงบไตรมาส 2/2026 ต่อไป",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) สัปดาห์นี้ไม่พบรายงานระยะรอ GPU ใหม่ที่เปลี่ยนภาพ",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ (FRED) ก.ย. 2026 = 65.7% เทียบ มิ.ย. 63.7% (+2.1 จุด) เท่ากับครั้งก่อน",
+    "gpu_spot_price": "ดัชนี OCPI-H100 ปิดที่ $3.17/ชม. เมื่อ 23 ต.ค. 2026 เพิ่มขึ้น 3.9% ใน 30 วัน (จาก $3.05) ราคาทรงตัว แต่การเติบโตรายเดือนชะลอลงชัดเจนจาก +10.5% ครั้งก่อน",
+    "power_grid": "คงไว้ที่ 8.7/10 การประมูล backstop ของ PJM ยังถูกเลื่อนไม่มีกำหนดใหม่และยังไม่มีผล หลัง FERC (9 ต.ค.) ปฏิเสธแผนเชื่อมต่อโหลดขนาดใหญ่ส่วนใหญ่ของ PJM ข้อจำกัดไฟฟ้ายังตึงตัว",
+    "prices": "ราคาปิด 23 ต.ค. 2026 ลงต่อเล็กน้อยหลังวันเทขายหนัก: KLAC $145.61 (-1.5%), AVGO $321.68 (-0.5%), ETN $366.11 (-0.8%)"
+   },
+   "prices": {
+    "AVGO": 321.68,
+    "ETN": 366.11,
+    "KLAC": 145.61
+   },
+   "prices_as_of": "2026-10-23",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index – large businesses (FRED)",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "power_grid",
+     "label": "FERC rejects most of PJM large load plan (Utility Dive)",
+     "url": "https://www.utilitydive.com/news/ferc-pjm-large-load-interconnection-iras-byonc/832716/"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM delays backstop auction (Utility Dive)",
+     "url": "https://www.utilitydive.com/news/pjm-delays-backstop-procurement-ferc-data-center/831751/"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/avgo/"
+    },
+    {
+     "key": "prices",
+     "label": "ETN history (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/etn/history/"
+    }
+   ]
+  }
+ ]
+}

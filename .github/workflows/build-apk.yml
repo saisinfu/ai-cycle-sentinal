@@ -1,0 +1,78 @@
+# Builds the Android app and publishes it as a GitHub Release.
+# Download: https://github.com/saisinfu/ai-cycle-sentinal/releases/latest
+name: Build Android APK
+
+on:
+  push:
+    branches: [main]
+    paths: ["app/**", ".github/workflows/build-apk.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-apk
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Create Android project files
+        run: |
+          flutter create . --project-name ai_cycle_sentinel --org com.saisinfu --platforms android
+          rm -rf test
+          M=android/app/src/main/AndroidManifest.xml
+          grep -q 'android.permission.INTERNET' "$M" || sed -i '0,/<application/s//<uses-permission android:name="android.permission.INTERNET"\/>\n    <application/' "$M"
+          sed -i 's/android:label="[^"]*"/android:label="AI Sentinel"/' "$M"
+          # Same signing key every build, so a new APK installs over the old one.
+          mkdir -p ~/.android && cp signing/debug.keystore ~/.android/debug.keystore
+
+      - name: Get packages and app icon
+        run: |
+          flutter pub get
+          dart run flutter_launcher_icons
+
+      - name: Analyze
+        run: |
+          set -o pipefail
+          if ! flutter analyze --no-fatal-infos --no-fatal-warnings 2>&1 | tee analyze.log; then
+            grep -E "error" analyze.log | head -45 | while IFS= read -r l; do echo "::error::$l"; done
+            exit 1
+          fi
+
+      - name: Build APK
+        run: |
+          set -o pipefail
+          if ! flutter build apk --release 2>&1 | tee build.log; then
+            grep -iE "error|exception|failed|what went wrong" build.log | head -45 | while IFS= read -r l; do echo "::error::$l"; done
+            exit 1
+          fi
+          cp build/app/outputs/flutter-apk/app-release.apk "$GITHUB_WORKSPACE/AI-Sentinel.apk"
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: app-v1.0.${{ github.run_number }}
+          name: AI Sentinel 1.0.${{ github.run_number }}
+          body: |
+            ดาวน์โหลดไฟล์ AI-Sentinel.apk ด้านล่าง แล้วเปิดในมือถือเพื่อติดตั้ง
+            (ติดตั้งทับเวอร์ชันเดิมได้เลย ข้อมูลไม่หาย)
+          files: AI-Sentinel.apk
+          make_latest: true
