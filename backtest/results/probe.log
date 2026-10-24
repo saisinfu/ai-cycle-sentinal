@@ -1,0 +1,20 @@
+/home/runner/work/_temp/9e2aef76-787e-40a7-b1fa-9f613db7899f.sh: line 4: /tmp/p: No such file or directory
+head: cannot open '/tmp/p' for reading: No such file or directory
+fred_csv_h11 | 000 |  bytes | 
+/home/runner/work/_temp/9e2aef76-787e-40a7-b1fa-9f613db7899f.sh: line 4: /tmp/p: No such file or directory
+head: cannot open '/tmp/p' for reading: No such file or directory
+fred_txt | 000 |  bytes | 
+/home/runner/work/_temp/9e2aef76-787e-40a7-b1fa-9f613db7899f.sh: line 4: /tmp/p: No such file or directory
+head: cannot open '/tmp/p' for reading: No such file or directory
+alfred | 000 |  bytes | 
+fred_api | 400 | 162 bytes | {"error_code":400,"error_message":"Bad Request.  Variable api_key is not set.  Read https:\/\/fred.stlouisfed.org\/docs\
+fed_ddp | 200 | 1008823 bytes | "Series Description","Market yield on U.S. Treasury securities at 1-month   constant maturity, quoted on investment basi
+fed_chargeoff | 200 | 134820 bytes | <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+fed_h8 | 200 | 666463 bytes |  <!DOCTYPE html> <html lang="en" class="no-js">   <head>     <meta charset="utf-8" />     <meta http-equiv="X-UA-Compati
+treasury | 403 | 505 bytes | <HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1>   You don't have permission to access "ht
+dbnomics | 200 | 3937 bytes | {"_meta":{"args":{"align_periods":false,"dataset_code":"H15","dimensions":{},"facets":false,"format":"json","limit":1,"m
+yahoo | 200 | 3607 bytes | {"chart":{"result":[{"meta":{"currency":"USD","symbol":"XLF","exchangeName":"PCX","fullExchangeName":"NYSEArca","instrum
+stooq | 200 | 796 bytes | <!DOCTYPE html><html><head><meta charset="utf-8"><meta name="robots" content="noindex,nofollow"></head><body><noscript>T
+oecd | 200 | 7356 bytes | DATAFLOW,REF_AREA,FREQ,MEASURE,UNIT_MEASURE,ACTIVITY,ADJUSTMENT,TRANSFORMATION,TIME_HORIZ,METHODOLOGY,TIME_PERIOD,OBS_VA
+nasdaq_dl | 403 | 886 bytes | <html style="height:100%"><head><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"><meta name="format-detection" content="t
+github_raw_fred | 200 | 15060 bytes | Date,Rate  1953-04-01,2.83  1953-05-01,3.05  1953-06-01,3.11  1953-07-01,2.93  1953-08-01,2.95  1953-09-01,2.87  1953-10
