@@ -183,7 +183,7 @@ Yahoo SPY: 1993-01-29 -> 2026-10-23 (8492)
 Yahoo ^BKX: 1993-02-22 -> 2026-10-23 (8475)
 /home/runner/work/ai-cycle-sentinal/ai-cycle-sentinal/backtest/finance_backtest.py:221: Pandas4Warning: Sorting by default when concatenating all DatetimeIndex is deprecated.  In the future, pandas will respect the default of `sort=False`. Specify `sort=True` or `sort=False` to silence this message. If you see this warnings when not directly calling concat, report a bug to pandas.
   px = pd.concat({k: month_end(v) for k, v in p.items()}, axis=1)
-/home/runner/work/ai-cycle-sentinal/ai-cycle-sentinal/backtest/finance_backtest.py:492: Pandas4Warning: Timestamp.utcnow is deprecated and will be removed in a future version. Use Timestamp.now('UTC') instead.
+/home/runner/work/ai-cycle-sentinal/ai-cycle-sentinal/backtest/finance_backtest.py:495: Pandas4Warning: Timestamp.utcnow is deprecated and will be removed in a future version. Use Timestamp.now('UTC') instead.
   "generated": pd.Timestamp.utcnow().isoformat(),
 {
  "panel": {
@@ -216,17 +216,17 @@ Yahoo ^BKX: 1993-02-22 -> 2026-10-23 (8475)
    "to": "2026-09-30",
    "months": 334,
    "plain": {
-    "terminal": 1214.5437889858301,
-    "irr": 0.08187815781482133,
-    "max_dd": -0.7382356256131433
+    "terminal": 1214.543816264109,
+    "irr": 0.08187815911601559,
+    "max_dd": -0.738235598640465
    },
    "rules": {
-    "terminal": 1138.919607951017,
-    "irr": 0.0781420937067554,
-    "max_dd": -0.7196150604731285
+    "terminal": 1138.919713430413,
+    "irr": 0.07814209910584657,
+    "max_dd": -0.719615015970006
    },
-   "terminal_ratio": 0.9377344960958872,
-   "irr_diff_pp": -0.37360641080659285
+   "terminal_ratio": 0.9377345618815853,
+   "irr_diff_pp": -0.3736060010169018
   },
   "^BKX": {
    "from": "1993-02-28",
@@ -250,34 +250,34 @@ Yahoo ^BKX: 1993-02-22 -> 2026-10-23 (8475)
    "to": "2026-09-30",
    "months": 422,
    "plain": {
-    "terminal": 7751.34406473448,
-    "irr": 0.1332567106750031,
-    "max_dd": -0.6077530489960377
+    "terminal": 7751.343976881039,
+    "irr": 0.13325671021050356,
+    "max_dd": -0.6077531757044998
    },
    "rules": {
-    "terminal": 6135.607164883229,
-    "irr": 0.1236437930656138,
-    "max_dd": -0.5575275092496736
+    "terminal": 6135.608033562632,
+    "irr": 0.12364379890938837,
+    "max_dd": -0.5575275563918987
    },
-   "terminal_ratio": 0.7915539696912426,
-   "irr_diff_pp": -0.9612917609389315
+   "terminal_ratio": 0.7915540907309158,
+   "irr_diff_pp": -0.961291130111519
   },
   "3_stock_matrix": {
    "from": "2008-03-31",
    "to": "2026-09-30",
    "months": 223,
    "plain": {
-    "terminal": 1576.2586561576231,
-    "irr": 0.18382737024554374,
-    "max_dd": -0.25099195234386396
+    "terminal": 1576.2586837850256,
+    "irr": 0.18382737177760355,
+    "max_dd": -0.2509920091632517
    },
    "rules": {
-    "terminal": 1519.79549061564,
-    "irr": 0.18063711472258182,
-    "max_dd": -0.2503011147584576
+    "terminal": 1519.7955202052697,
+    "irr": 0.18063711642622282,
+    "max_dd": -0.2503011401199441
    },
-   "terminal_ratio": 0.964178997322926,
-   "irr_diff_pp": -0.31902555229619267
+   "terminal_ratio": 0.9641789991956317,
+   "irr_diff_pp": -0.3190255351380733
   }
  },
  "variants": [
