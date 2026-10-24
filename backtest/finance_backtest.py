@@ -31,7 +31,6 @@ OUT = ROOT / "backtest" / "results"
 CONFIG = ROOT / "config" / "sectors.json"
 
 X_TH, D_TH, BAND = 70.0, 40.0, 3.0
-FRED_IDS = ["T10Y2Y", "BAMLH0A0HYM2", "BAA10Y", "TOTLL", "DRCCLACBS", "FEDFUNDS", "TB3MS"]
 TICKERS = ["XLF", "KBE", "JPM", "GS", "V", "SPY", "^BKX"]
 EPISODES_MIN_DD = 0.25
 
@@ -54,18 +53,70 @@ def _get(url: str, tries: int = 4) -> str:
     raise RuntimeError(f"download failed: {url}: {last}")
 
 
-def fred(series_id: str) -> pd.Series:
-    cached = ROOT / "backtest" / "cache" / f"{series_id}.csv"
-    if cached.exists() and cached.stat().st_size > 100:
-        txt = cached.read_text()
-    else:
-        txt = _get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}")
-    df = pd.read_csv(io.StringIO(txt))
-    df.columns = ["date", series_id]
-    df["date"] = pd.to_datetime(df["date"])
-    s = pd.to_numeric(df[series_id], errors="coerce")
-    s.index = df["date"]
-    return s.dropna()
+DBN = "https://api.db.nomics.world/v22"
+
+# FRED blocks GitHub's runners, so the same Federal Reserve series are read from DBnomics,
+# which mirrors the Fed's Data Download Program. Each entry: candidate codes, then a search fallback.
+DBN_SERIES = {
+    "T10": ("FED", "H15", ["RIFLGFCY10_N.M"], "10-year", ["Monthly", "Nominal", "10-year"]),
+    "T2": ("FED", "H15", ["RIFLGFCY02_N.M"], "2-year", ["Monthly", "Nominal", "2-year"]),
+    "FEDFUNDS": ("FED", "H15", ["RIFSPFF_N.M"], "federal funds", ["Monthly", "ederal funds"]),
+    "TB3MS": ("FED", "H15", ["RIFSGFSM03_N.M"], "3-month", ["Monthly", "3-month", "ill"]),
+    "BAA": ("FED", "H15", ["RIMLPBAAR_N.M"], "Baa", ["Monthly", "Baa"]),
+    "AAA": ("FED", "H15", ["RIMLPAAAR_N.M"], "Aaa", ["Monthly", "Aaa"]),
+    "LOANS": ("FED", "H8", ["B1020NCBAM"], "loans and leases in bank credit all commercial banks", ["Monthly", "All Commercial Banks", "Levels", "Seasonally adjusted", "Loans and leases in bank credit"]),
+    "DRCCLACBS": ("FED", "CHGDEL", ["STFBQDCC%STFBAILCC_XEOP_MA.Q"], "delinquencies credit card", ["All commercial banks", "Delinquencies", "rate", "Seasonally adjusted", "redit card"]),
+}
+
+
+def _json(url: str) -> dict:
+    return json.loads(_get(url))
+
+
+def dbn_series(provider: str, dataset: str, code: str) -> pd.Series:
+    import urllib.parse
+    url = f"{DBN}/series/{provider}/{dataset}/{urllib.parse.quote(code, safe='')}?observations=1&format=json"
+    doc = _json(url)["series"]["docs"][0]
+    idx = pd.to_datetime(doc["period_start_day"])
+    vals = pd.to_numeric(pd.Series(doc["value"]), errors="coerce").values
+    return pd.Series(vals, idx).dropna()
+
+
+def dbn_find(provider: str, dataset: str, q: str, must: list[str]) -> str | None:
+    import urllib.parse
+    r = _json(f"{DBN}/series/{provider}/{dataset}?q={urllib.parse.quote(q)}&observations=0&limit=50")
+    for d in r.get("series", {}).get("docs", []):
+        name = d.get("series_name", "")
+        if all(m in name for m in must) and not ("Seasonally adjusted" in must and "Not seasonally adjusted" in name):
+            return d["series_code"]
+    return None
+
+
+def fetch_all() -> tuple[dict[str, pd.Series], dict]:
+    out, used = {}, {}
+    for key, (prov, ds, codes, q, must) in DBN_SERIES.items():
+        got = None
+        for c in codes:
+            try:
+                got = dbn_series(prov, ds, c)
+                used[key] = f"{prov}/{ds}/{c}"
+                break
+            except Exception as e:  # noqa: BLE001
+                print(f"{key}: {c} failed ({e})", flush=True)
+        if got is None:
+            try:
+                c = dbn_find(prov, ds, q, must)
+                if c:
+                    got = dbn_series(prov, ds, c)
+                    used[key] = f"{prov}/{ds}/{c} (found by search)"
+            except Exception as e:  # noqa: BLE001
+                print(f"{key}: search failed ({e})", flush=True)
+        if got is not None and len(got):
+            out[key] = got
+            print(f"{key}: {used[key]} {got.index.min().date()} -> {got.index.max().date()} ({len(got)})", flush=True)
+        else:
+            print(f"{key}: NOT AVAILABLE", flush=True)
+    return out, used
 
 
 def prices_yahoo(tickers: list[str]) -> dict[str, pd.Series]:
@@ -94,11 +145,11 @@ def synthetic() -> tuple[dict[str, pd.Series], dict[str, pd.Series]]:
     m = pd.date_range("1985-01-01", "2026-09-01", freq="MS")
     cyc = np.sin(np.arange(len(d)) / 900)
     f = {
-        "T10Y2Y": pd.Series(1 + 1.2 * cyc + rng.normal(0, .1, len(d)), d),
-        "BAMLH0A0HYM2": pd.Series(4.5 - 2 * cyc + rng.normal(0, .2, len(d)), d)["1997":],
-        "BAA10Y": pd.Series(2.2 - .8 * cyc + rng.normal(0, .1, len(d)), d),
-        "TOTLL": pd.Series(np.exp(np.cumsum(0.0002 + 0.0001 * cyc)) * 1000, d).resample("W").last(),
-        "DRCCLACBS": pd.Series(3.5 - cyc[::91][: len(pd.date_range('1991-01-01', '2026-06-30', freq='QS'))], pd.date_range("1991-01-01", "2026-06-30", freq="QS")),
+        "T10": pd.Series(4 + 1.2 * np.sin(np.arange(len(m)) / 40), m),
+        "T2": pd.Series(3 + 2 * np.sin(np.arange(len(m)) / 30), m),
+        "BAA": pd.Series(6.2 + .8 * np.sin(np.arange(len(m)) / 25), m)[:"2016-10"],
+        "LOANS": pd.Series(np.exp(np.cumsum(0.005 + 0.003 * np.sin(np.arange(len(m)) / 20))) * 1000, m),
+        "DRCCLACBS": pd.Series(3.5 - np.sin(np.arange(142) / 8), pd.date_range("1991-01-01", periods=142, freq="QS")),
         "FEDFUNDS": pd.Series(3 + 2 * np.sin(np.arange(len(m)) / 30), m),
         "TB3MS": pd.Series(3 + 2 * np.sin(np.arange(len(m)) / 30), m),
     }
@@ -115,57 +166,54 @@ def month_end(s: pd.Series) -> pd.Series:
     return s.resample("ME").last()
 
 
+def _me(s: pd.Series) -> pd.Series:
+    """Monthly series dated on the 1st -> month end."""
+    s = s.copy()
+    s.index = s.index + pd.offsets.MonthEnd(0)
+    return s.groupby(level=0).last()
+
+
 def build_panel(f: dict[str, pd.Series]) -> tuple[pd.DataFrame, dict]:
     notes = {}
-    curve = month_end(f["T10Y2Y"])
+    curve = _me(f["T10"]) - _me(f["T2"])
+    notes["yield_curve"] = "10-year minus 2-year Treasury, monthly averages (Fed H.15). App uses the latest daily value."
 
-    # Credit spread: ICE HY OAS where FRED has it; earlier months spliced from Moody's Baa-10y
-    # through a linear fit on the overlap (FRED only keeps a few years of ICE history).
-    hy = month_end(f["BAMLH0A0HYM2"]) if "BAMLH0A0HYM2" in f else pd.Series(dtype=float)
-    baa = month_end(f["BAA10Y"])
-    both = pd.concat([hy, baa], axis=1, keys=["hy", "baa"]).dropna()
-    if len(both) >= 24:
-        b, a = np.polyfit(both["baa"], both["hy"], 1)
-        corr = float(both.corr().iloc[0, 1])
+    # Credit spread: the ICE high-yield OAS is not on DBnomics. Stand-in: Moody's Baa minus 10-year
+    # (Fed H.15, until H.15 stopped carrying Moody's). It is rescaled linearly so that its 3rd and 85th
+    # percentiles land on 2.5 and 7.0 - roughly where the app's HY anchors sit in the HY history.
+    credit = pd.Series(dtype=float)
+    if "BAA" in f:
+        baa = _me(f["BAA"]) - _me(f["T10"])
+        baa = baa.dropna()
+        lo, hi = baa.quantile(0.03), baa.quantile(0.85)
+        credit = 2.5 + (baa - lo) / (hi - lo) * (7.0 - 2.5)
+        notes["credit_spread"] = (f"Stand-in: Moody's Baa - 10y (H.15) {baa.index.min().date()} -> {baa.index.max().date()}, "
+                                  f"rescaled so p3={lo:.2f}->2.5 and p85={hi:.2f}->7.0. Months without it use the other signals, re-weighted.")
     else:
-        b, a, corr = 2.4, -0.8, float("nan")
-    proxy = a + b * baa
-    credit = hy.combine_first(proxy)
-    notes["credit_spread"] = {
-        "hy_history_from": str(hy.index.min().date()) if len(hy) else None,
-        "spliced_from_baa10y_before": str(hy.index.min().date()) if len(hy) else "all",
-        "fit": f"HY = {a:.2f} + {b:.2f} x BAA10Y (overlap {len(both)} months, corr {corr:.2f})",
-    }
+        notes["credit_spread"] = "Not available; index uses the other four signals re-weighted."
 
-    # Loans: year-over-year growth of TOTLL, known about one month later.
-    loans = month_end(f["TOTLL"])
+    loans = _me(f["LOANS"])
     loan_g = (loans.pct_change(12, fill_method=None) * 100).shift(1)
-    notes["loan_growth"] = "TOTLL year-over-year %, lagged 1 month (app uses a recent annualized rate)"
+    notes["loan_growth"] = "H.8 loans & leases, all commercial banks, SA, year-over-year %, lagged 1 month (app uses a recent annualized rate)"
 
-    # Delinquency: quarterly, published ~2 months after the quarter ends.
     dq = f["DRCCLACBS"].copy()
     dq.index = dq.index + pd.DateOffset(months=5) - pd.Timedelta(days=1)
     dq = dq.resample("ME").last().ffill()
-    notes["delinquency"] = "DRCCLACBS, usable from the end of the 2nd month after each quarter"
+    notes["delinquency"] = "Credit-card delinquency rate, all banks, SA (Fed charge-off/delinquency release), usable from the end of the 2nd month after each quarter"
 
-    # Fed policy: the app uses a judgement score; history uses a mechanical stand-in.
-    ff = f["FEDFUNDS"].copy()
-    ff.index = ff.index + pd.offsets.MonthEnd(0)
-    d6 = ff.diff(6)
-    fed = (50 - 50 * d6 / 1.0).clip(0, 100)
-    notes["fed_policy"] = "Proxy: 50 - 50 x (6-month change in fed funds, pp), clamped 0-100. Cutting 1pp = 100, hiking 1pp = 0"
+    ff = _me(f["FEDFUNDS"])
+    fed = (50 - 50 * ff.diff(6) / 1.0).clip(0, 100)
+    notes["fed_policy"] = "Proxy: 50 - 50 x (6-month change in effective fed funds, pp), clamped 0-100. Cutting 1pp = 100, hiking 1pp = 0"
 
-    rf = f["TB3MS"].copy()
-    rf.index = rf.index + pd.offsets.MonthEnd(0)
+    rf = _me(f["TB3MS"]) if "TB3MS" in f else pd.Series(dtype=float)
 
     panel = pd.concat(
         {"yield_curve_10y2y_pct": curve, "hy_oas_pct": credit, "loan_growth_pct": loan_g,
          "cc_delinquency_pct": dq, "fed_policy_score": fed, "rf": rf},
         axis=1,
     )
-    panel["rf"] = panel["rf"].ffill()
-    panel = panel.dropna(subset=[c for c in panel.columns if c != "rf"])
-    panel = panel[panel.index <= pd.Timestamp.today() + pd.offsets.MonthEnd(0)]
+    panel["rf"] = panel["rf"].ffill().fillna(0)
+    panel = panel.dropna(subset=["yield_curve_10y2y_pct", "loan_growth_pct", "cc_delinquency_pct", "fed_policy_score"])
     return panel, notes
 
 
@@ -183,7 +231,8 @@ def score(panel: pd.DataFrame, signals: list[dict]) -> tuple[pd.Series, pd.DataF
         subs[s["key"]] = ((v - s["worst"]) / (s["best"] - s["worst"]) * 100).clip(0, 100)
     subs = pd.DataFrame(subs)
     w = pd.Series({s["key"]: s["weight"] for s in signals})
-    idx = (subs * w).sum(axis=1) / w.sum()
+    avail = subs.notna().astype(float) * w
+    idx = (subs * w).sum(axis=1, min_count=1) / avail.sum(axis=1)
     return idx, subs
 
 
@@ -403,15 +452,9 @@ def main() -> None:
 
     if args.synthetic:
         f, p = synthetic()
+        used = {"synthetic": True}
     else:
-        f = {}
-        for sid in FRED_IDS:
-            try:
-                print(f"FRED {sid} ...", flush=True)
-                f[sid] = fred(sid)
-                print(f"FRED {sid}: {f[sid].index.min().date()} -> {f[sid].index.max().date()} ({len(f[sid])})")
-            except Exception as e:  # noqa: BLE001
-                print(f"FRED {sid} failed: {e}", file=sys.stderr)
+        f, used = fetch_all()
         p = prices_yahoo(TICKERS)
         for k, v in p.items():
             print(f"Yahoo {k}: {v.index.min().date()} -> {v.index.max().date()} ({len(v)})")
@@ -452,6 +495,7 @@ def main() -> None:
         "data_coverage": {k: [str(v.index.min().date()), str(v.index.max().date())] for k, v in f.items()},
         "price_coverage": {k: [str(v.index.min().date()), str(v.index.max().date())] for k, v in p.items()},
         "notes": notes,
+        "series_used": used,
         "current_rules": {"signals": [{k: s[k] for k in ("key", "weight", "worst", "best")} for s in signals],
                           "sector_level_rules": sec_rules},
         "latest": {"date": str(panel.index[-1].date()), "index": round(float(idx.iloc[-1]), 1), "zone": z.iloc[-1],
