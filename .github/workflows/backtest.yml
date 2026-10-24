@@ -1,0 +1,31 @@
+name: Backtest
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "backtest/*.py"
+      - ".github/workflows/backtest.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  finance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas numpy matplotlib yfinance
+      - run: python backtest/finance_backtest.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add backtest/results
+          git diff --cached --quiet || git commit -m "Backtest results (finance)"
+          git pull --rebase origin main
+          git push
