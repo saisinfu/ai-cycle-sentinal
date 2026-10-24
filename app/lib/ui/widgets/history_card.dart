@@ -2,17 +2,18 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import '../../core/format.dart';
 import '../../core/theme.dart';
 import '../../data/engine.dart';
+import '../../data/zone.dart';
 import 'common.dart';
 
-/// Index line over status zones, with the ±3 dead-band drawn as grey stripes,
-/// ticks on days the status changed, and touch-and-drag readout.
+/// Index line over status zones with the ±3 dead-band, status-change ticks,
+/// a range selector and touch-and-drag readout.
 class HistoryCard extends StatefulWidget {
-  const HistoryCard({super.key, required this.scored, required this.live});
+  const HistoryCard({super.key, required this.scored});
 
   final List<Scored> scored;
-  final bool live;
 
   @override
   State<HistoryCard> createState() => _HistoryCardState();
@@ -20,12 +21,20 @@ class HistoryCard extends StatefulWidget {
 
 class _HistoryCardState extends State<HistoryCard> {
   int? _selected;
+  int _days = 30;
 
-  static const _height = 180.0;
+  static const _height = 170.0;
   static const _padRight = 30.0;
 
-  void _pick(double dx, double width) {
-    final n = widget.scored.length;
+  List<Scored> get _points {
+    final all = widget.scored;
+    if (all.isEmpty) return all;
+    final cutoff = parseDate(all.last.reading.date).subtract(Duration(days: _days));
+    final list = all.where((s) => !parseDate(s.reading.date).isBefore(cutoff)).toList();
+    return list.length >= 2 ? list : all;
+  }
+
+  void _pick(double dx, double width, int n) {
     final i = ((dx / (width - _padRight)) * (n - 1)).round().clamp(0, n - 1);
     if (i != _selected) setState(() => _selected = i);
   }
@@ -36,15 +45,14 @@ class _HistoryCardState extends State<HistoryCard> {
 
   @override
   Widget build(BuildContext context) {
-    final pts = widget.scored;
+    final pts = _points;
     final last = pts.last;
-    final title = widget.live ? 'ประวัติดัชนี (ข้อมูลจริง)' : 'ประวัติดัชนี 90 วัน (จำลอง)';
     if (pts.length < 2) {
       return SurfaceCard(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Eyebrow(title),
+            const Eyebrow('ประวัติดัชนี'),
             const SizedBox(height: 16),
             Center(
               child: Text(
@@ -57,7 +65,8 @@ class _HistoryCardState extends State<HistoryCard> {
         ),
       );
     }
-    final shown = pts[_selected ?? pts.length - 1];
+    final sel = _selected != null && _selected! < pts.length ? _selected : null;
+    final shown = pts[sel ?? pts.length - 1];
     var changes = 0;
     for (var i = 1; i < pts.length; i++) {
       if (pts[i].zone != pts[i - 1].zone) changes++;
@@ -68,11 +77,21 @@ class _HistoryCardState extends State<HistoryCard> {
         children: [
           Row(
             children: [
-              Expanded(child: Eyebrow(title)),
-              Text(
-                '${pts.first.index.toStringAsFixed(0)} → ${last.index.toStringAsFixed(0)}',
-                style: const TextStyle(fontSize: 13, fontFeatures: tabular),
-              ),
+              const Expanded(child: Eyebrow('ประวัติดัชนี')),
+              Text('${pts.first.index.toStringAsFixed(0)} → ${last.index.toStringAsFixed(0)}',
+                  style: const TextStyle(fontSize: 13, fontFeatures: tabular)),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              for (final (i, (d, label)) in const [(7, '7D'), (30, '30D'), (90, '90D'), (365, '1Y')].indexed) ...[
+                if (i > 0) const SizedBox(width: 6),
+                ToggleChip(label: label, selected: _days == d, onTap: () => setState(() {
+                      _days = d;
+                      _selected = null;
+                    })),
+              ],
             ],
           ),
           const SizedBox(height: 10),
@@ -80,39 +99,35 @@ class _HistoryCardState extends State<HistoryCard> {
             children: [
               SizedBox(
                 width: 64,
-                child: Text(
-                  _selected == null ? 'ล่าสุด' : thDate(shown.reading.date),
-                  style: const TextStyle(color: AppColors.muted, fontSize: 13),
-                ),
+                child: Text(sel == null ? 'ล่าสุด' : thDate(shown.reading.date),
+                    style: const TextStyle(color: AppColors.muted, fontSize: 13)),
               ),
-              Text(
-                shown.index.toStringAsFixed(1),
-                style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700, fontFeatures: tabular),
-              ),
+              Text(shown.index.toStringAsFixed(1),
+                  style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700, fontFeatures: tabular)),
               const SizedBox(width: 10),
-              StatusPill(label: zoneTh(shown.zone), color: zoneColor(shown.zone)),
+              StatusPill(label: zoneName(shown.zone), color: zoneColor(shown.zone)),
             ],
           ),
           const SizedBox(height: 10),
           LayoutBuilder(
             builder: (context, c) => GestureDetector(
               behavior: HitTestBehavior.opaque,
-              onTapDown: (d) => _pick(d.localPosition.dx, c.maxWidth),
+              onTapDown: (d) => _pick(d.localPosition.dx, c.maxWidth, pts.length),
               onTapUp: (_) => _clear(),
-              onHorizontalDragStart: (d) => _pick(d.localPosition.dx, c.maxWidth),
-              onHorizontalDragUpdate: (d) => _pick(d.localPosition.dx, c.maxWidth),
+              onHorizontalDragStart: (d) => _pick(d.localPosition.dx, c.maxWidth, pts.length),
+              onHorizontalDragUpdate: (d) => _pick(d.localPosition.dx, c.maxWidth, pts.length),
               onHorizontalDragEnd: (_) => _clear(),
               onHorizontalDragCancel: _clear,
               child: CustomPaint(
                 size: Size(c.maxWidth, _height),
-                painter: _HistoryPainter(scored: pts, selected: _selected, dots: widget.live && pts.length <= 40),
+                painter: _HistoryPainter(scored: pts, selected: sel),
               ),
             ),
           ),
           const SizedBox(height: 8),
           Text(
-            'แถบสีเทา = ช่วงกันชน ±${hysteresisBand.toStringAsFixed(0)} แต้ม สถานะจะเปลี่ยนเมื่อเส้นหลุดออกจากแถบเท่านั้น '
-            '(เปลี่ยน $changes ครั้ง) แตะค้างแล้วลากบนกราฟเพื่อดูค่าแต่ละวัน',
+            'แถบเทา = ช่วงกันชน ±${hysteresisBand.toStringAsFixed(0)} แต้ม สถานะเปลี่ยนเมื่อเส้นหลุดออกจากแถบเท่านั้น '
+            '(เปลี่ยน $changes ครั้งในช่วงนี้) · ขีดสีใต้กราฟ = วันที่สถานะเปลี่ยน · แตะค้างแล้วลากเพื่อดูค่าแต่ละวัน',
             style: const TextStyle(color: AppColors.muted, fontSize: 12, height: 1.4),
           ),
         ],
@@ -122,11 +137,10 @@ class _HistoryCardState extends State<HistoryCard> {
 }
 
 class _HistoryPainter extends CustomPainter {
-  _HistoryPainter({required this.scored, required this.selected, required this.dots});
+  _HistoryPainter({required this.scored, required this.selected});
 
   final List<Scored> scored;
   final int? selected;
-  final bool dots;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -140,10 +154,8 @@ class _HistoryPainter extends CustomPainter {
 
     canvas.save();
     canvas.clipRect(plot);
-    void band(double top, double bottom, Color c, int alpha) {
-      canvas.drawRect(Rect.fromLTRB(plot.left, y(top), plot.right, y(bottom)), Paint()..color = c.withAlpha(alpha));
-    }
-
+    void band(double top, double bottom, Color c, int alpha) =>
+        canvas.drawRect(Rect.fromLTRB(plot.left, y(top), plot.right, y(bottom)), Paint()..color = c.withAlpha(alpha));
     band(hi, expansionThreshold, AppColors.green, 16);
     band(expansionThreshold, digestionThreshold, AppColors.yellow, 16);
     band(digestionThreshold, lo, AppColors.red, 16);
@@ -168,7 +180,7 @@ class _HistoryPainter extends CustomPainter {
         ..strokeJoin = StrokeJoin.round
         ..color = AppColors.text,
     );
-    if (dots) {
+    if (scores.length <= 40) {
       for (var i = 0; i < scores.length; i++) {
         canvas.drawCircle(Offset(x(i), y(scores[i])), 2.5, Paint()..color = AppColors.text);
       }
@@ -188,9 +200,7 @@ class _HistoryPainter extends CustomPainter {
       }
     }
     final sel = selected;
-    if (sel != null) {
-      canvas.drawLine(Offset(x(sel), plot.top), Offset(x(sel), plot.bottom), Paint()..color = AppColors.muted);
-    }
+    if (sel != null) canvas.drawLine(Offset(x(sel), plot.top), Offset(x(sel), plot.bottom), Paint()..color = AppColors.muted);
     final i = sel ?? scored.length - 1;
     final p = Offset(x(i), y(scores[i]));
     canvas.drawCircle(p, 6.5, Paint()..color = AppColors.surface);

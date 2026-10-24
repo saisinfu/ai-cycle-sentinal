@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../data/engine.dart';
+import '../data/config.dart';
+import '../data/zone.dart';
 
 abstract final class AppColors {
   static const background = Color(0xFF121212);
   static const surface = Color(0xFF1E1E1E);
+  static const sunken = Color(0xFF161616);
   static const raised = Color(0xFF262626);
   static const line = Color(0xFF2E2E2E);
   static const green = Color(0xFF00E676);
@@ -12,18 +14,16 @@ abstract final class AppColors {
   static const red = Color(0xFFFF5252);
   static const text = Color(0xFFF5F5F5);
   static const muted = Color(0xFFA0A0A0);
+
+  // Provenance tags (never reuse status colours).
+  static const tagData = Color(0xFF8AB4F8);
+  static const tagCalc = Color(0xFFC3A6FF);
 }
 
 Color zoneColor(Zone z) => switch (z) {
       Zone.expansion => AppColors.green,
       Zone.earlyWarning => AppColors.yellow,
       Zone.digestion => AppColors.red,
-    };
-
-String zoneTh(Zone z) => switch (z) {
-      Zone.expansion => 'ขยายตัว',
-      Zone.earlyWarning => 'เตือนล่วงหน้า',
-      Zone.digestion => 'ช่วงย่อยการลงทุน',
     };
 
 String zoneLabel(Zone z) => switch (z) {
@@ -40,58 +40,31 @@ String levelTh(Zone z) => switch (z) {
 
 Color actionColor(StockAction a) => switch (a) {
       StockAction.buyDca || StockAction.overweightDca || StockAction.accumulate => AppColors.green,
-      StockAction.pauseDca => AppColors.yellow,
+      StockAction.pauseDca || StockAction.hold => AppColors.yellow,
       StockAction.reduceHoldings => AppColors.red,
     };
 
-String actionTh(StockAction a) => switch (a) {
-      StockAction.buyDca => 'ซื้อแบบ DCA',
-      StockAction.pauseDca => 'พัก DCA / ถือไว้',
-      StockAction.overweightDca => 'เพิ่มน้ำหนัก DCA',
-      StockAction.reduceHoldings => 'ลดสัดส่วน',
-      StockAction.accumulate => 'ถือ / สะสม',
+IconData sectorIcon(String icon) => switch (icon) {
+      'chip' => Icons.memory_outlined,
+      'bank' => Icons.account_balance_outlined,
+      'health' => Icons.monitor_heart_outlined,
+      'space' => Icons.rocket_launch_outlined,
+      _ => Icons.insights,
     };
 
-const statusCopy = {
-  Zone.expansion: (
-    'สัญญาณความต้องการ AI แข็งแรงทั้งชิป GPU และการใช้งานองค์กร ลงทุนแบบ DCA ตามปกติ',
-    'Demand signals are strong across chips, GPUs and enterprise usage. Regular DCA applies.',
-  ),
-  Zone.earlyWarning: (
-    'การลงทุนเริ่มเร็วกว่ารายได้ และความตึงตัวของซัพพลายเชนผ่อนคลายลง ชะลอการซื้อหุ้นชิป เน้นโครงสร้างพื้นฐานพลังงาน',
-    'Spending is outpacing monetization and supply-chain tightness is easing. Slow new semis buying; favor power infrastructure.',
-  ),
-  Zone.digestion: (
-    'หลายสัญญาณชี้ว่าเข้าสู่ช่วงย่อยการลงทุน AI พิจารณาลดสัดส่วนหุ้นชิป โครงสร้างพื้นฐานพลังงานยังเป็นขาป้องกัน',
-    'Multiple signals point to an AI CapEx digestion phase. Review trims on semis; power infrastructure remains the defensive leg.',
-  ),
-};
-
-const _monthsShort = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
-const _monthsLong = [
-  'มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน',
-  'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม',
-];
-
-/// "16 ต.ค."
-String thDate(String iso) {
-  final d = parseDate(iso);
-  return '${d.day} ${_monthsShort[d.month - 1]}';
-}
-
-/// "16 ตุลาคม 2569"
-String thDateLong(String iso) {
-  final d = parseDate(iso);
-  return '${d.day} ${_monthsLong[d.month - 1]} ${d.year + 543}';
-}
+String confidenceTh(String c) => switch (c) {
+      'high' => 'ความมั่นใจสูง',
+      'low' => 'ความมั่นใจต่ำ',
+      _ => 'ความมั่นใจปานกลาง',
+    };
 
 ThemeData buildTheme() {
   final base = ThemeData(brightness: Brightness.dark, useMaterial3: true);
   return base.copyWith(
     scaffoldBackgroundColor: AppColors.background,
     colorScheme: const ColorScheme.dark(
-      primary: AppColors.green,
-      secondary: AppColors.yellow,
+      primary: AppColors.text,
+      secondary: AppColors.green,
       error: AppColors.red,
       surface: AppColors.surface,
       onSurface: AppColors.text,
@@ -103,6 +76,28 @@ ThemeData buildTheme() {
       scrolledUnderElevation: 0,
     ),
     dividerColor: AppColors.line,
+    navigationBarTheme: NavigationBarThemeData(
+      backgroundColor: AppColors.sunken,
+      indicatorColor: AppColors.raised,
+      labelTextStyle: WidgetStateProperty.resolveWith(
+        (states) => TextStyle(
+          fontSize: 12,
+          fontWeight: states.contains(WidgetState.selected) ? FontWeight.w600 : FontWeight.w400,
+          color: states.contains(WidgetState.selected) ? AppColors.text : AppColors.muted,
+        ),
+      ),
+      iconTheme: WidgetStateProperty.resolveWith(
+        (states) => IconThemeData(color: states.contains(WidgetState.selected) ? AppColors.text : AppColors.muted),
+      ),
+    ),
+    inputDecorationTheme: const InputDecorationTheme(
+      filled: true,
+      fillColor: AppColors.sunken,
+      border: OutlineInputBorder(borderSide: BorderSide(color: AppColors.line)),
+      enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.line)),
+      focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.muted)),
+      isDense: true,
+    ),
     textTheme: base.textTheme.apply(bodyColor: AppColors.text, displayColor: AppColors.text),
   );
 }

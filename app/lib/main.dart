@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'core/theme.dart';
-import 'ui/dashboard_screen.dart';
+import 'ui/app_shell.dart';
 
 void main() {
   runApp(const ProviderScope(child: SentinelApp()));
@@ -17,7 +17,7 @@ class SentinelApp extends StatelessWidget {
       title: 'AI Sentinel',
       debugShowCheckedModeBanner: false,
       theme: buildTheme(),
-      home: const DashboardScreen(),
+      home: const AppShell(),
     );
   }
 }

@@ -1,5 +1,4 @@
-/// One daily reading as stored in data/readings.json (same schema as the
-/// Claude dashboard's database).
+/// Data files written by the daily Claude task.
 library;
 
 double? _num(Object? v) => v is num ? v.toDouble() : null;
@@ -42,22 +41,10 @@ class Reading {
     this.sources = const [],
   });
 
-  /// Returns null when the entry is malformed (it is skipped, not fatal).
   static Reading? tryParse(Object? j) {
     if (j is! Map) return null;
     final date = j['date'];
     if (date is! String || date.length != 10) return null;
-    final ind = _numMap(j['indicators']);
-    const required = [
-      'capex_to_cloud_revenue_ratio',
-      'chip_lead_time_weeks',
-      'gpu_spot_price_usd_hr',
-      'gpu_spot_price_change_1m_pct',
-      'enterprise_ai_adoption_pct',
-      'enterprise_ai_adoption_change_3m_pp',
-      'power_grid_stress_level',
-    ];
-    if (!required.every(ind.containsKey)) return null;
     final sources = <SourceLink>[];
     final rawSources = j['sources'];
     if (rawSources is List) {
@@ -73,7 +60,7 @@ class Reading {
     }
     return Reading(
       date: date,
-      indicators: ind,
+      indicators: _numMap(j['indicators']),
       confidence: _strMap(j['confidence']),
       notes: _strMap(j['notes_th']),
       prices: _numMap(j['prices']),
@@ -89,16 +76,60 @@ class Reading {
   final Map<String, double> prices;
   final String? pricesAsOf;
   final List<SourceLink> sources;
-
-  double ind(String k) => indicators[k] ?? 0;
 }
 
-class ReadingsResult {
-  const ReadingsResult({required this.readings, required this.fromCache, this.updatedAt});
+class Quote {
+  const Quote({
+    required this.ticker,
+    required this.price,
+    required this.currency,
+    this.asOf,
+    this.ma200,
+    this.pe,
+    this.pe5yAvg,
+    this.sourceUrl,
+    this.peSourceUrl,
+  });
 
-  final List<Reading> readings;
+  final String ticker;
+  final double price;
+  final String currency;
+  final String? asOf;
+  final double? ma200;
+  final double? pe;
+  final double? pe5yAvg;
+  final String? sourceUrl;
+  final String? peSourceUrl;
+}
 
-  /// True when the network failed and the last saved copy is shown.
-  final bool fromCache;
+class MarketData {
+  const MarketData({required this.quotes, this.updatedAt});
+
+  factory MarketData.fromJson(Object? j) {
+    final quotes = <String, Quote>{};
+    if (j is Map && j['quotes'] is Map) {
+      (j['quotes'] as Map).forEach((k, v) {
+        if (k is String && v is Map && _num(v['price']) != null) {
+          String? str(String key) => v[key] is String ? v[key] as String : null;
+          quotes[k] = Quote(
+            ticker: k,
+            price: _num(v['price'])!,
+            currency: str('currency') ?? 'USD',
+            asOf: str('as_of'),
+            ma200: _num(v['ma200']),
+            pe: _num(v['pe']),
+            pe5yAvg: _num(v['pe_5y_avg']),
+            sourceUrl: str('source_url'),
+            peSourceUrl: str('pe_source_url'),
+          );
+        }
+      });
+    }
+    return MarketData(quotes: quotes, updatedAt: j is Map && j['updated_at'] is String ? j['updated_at'] as String : null);
+  }
+
+  static const empty = MarketData(quotes: {});
+
+  final Map<String, Quote> quotes;
   final String? updatedAt;
 }
