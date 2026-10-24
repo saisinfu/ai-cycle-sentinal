@@ -6,3 +6,4 @@ app/.flutter-plugins*
 app/pubspec.lock
 app/*.log
 .DS_Store
+backtest/cache/

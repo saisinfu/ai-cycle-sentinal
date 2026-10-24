@@ -39,7 +39,9 @@ EPISODES_MIN_DD = 0.25
 # ----------------------------------------------------------------------------- data
 
 def _get(url: str, tries: int = 4) -> str:
+    import socket
     import urllib.request
+    socket.setdefaulttimeout(40)
     last = None
     for i in range(tries):
         try:
@@ -53,7 +55,11 @@ def _get(url: str, tries: int = 4) -> str:
 
 
 def fred(series_id: str) -> pd.Series:
-    txt = _get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}")
+    cached = ROOT / "backtest" / "cache" / f"{series_id}.csv"
+    if cached.exists() and cached.stat().st_size > 100:
+        txt = cached.read_text()
+    else:
+        txt = _get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}")
     df = pd.read_csv(io.StringIO(txt))
     df.columns = ["date", series_id]
     df["date"] = pd.to_datetime(df["date"])
@@ -68,7 +74,8 @@ def prices_yahoo(tickers: list[str]) -> dict[str, pd.Series]:
     for t in tickers:
         for attempt in range(3):
             try:
-                df = yf.download(t, start="1985-01-01", auto_adjust=True, progress=False, threads=False)
+                print(f"yahoo {t} ...", flush=True)
+                df = yf.download(t, start="1985-01-01", auto_adjust=True, progress=False, threads=False, timeout=30)
                 if df is not None and len(df) > 0:
                     close = df["Close"]
                     if isinstance(close, pd.DataFrame):
@@ -400,6 +407,7 @@ def main() -> None:
         f = {}
         for sid in FRED_IDS:
             try:
+                print(f"FRED {sid} ...", flush=True)
                 f[sid] = fred(sid)
                 print(f"FRED {sid}: {f[sid].index.min().date()} -> {f[sid].index.max().date()} ({len(f[sid])})")
             except Exception as e:  # noqa: BLE001
