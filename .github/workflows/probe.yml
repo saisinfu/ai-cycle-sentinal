@@ -13,9 +13,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Probe
         run: |
+          set +e
           mkdir -p backtest/results
           UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
-          probe() { code=$(curl -s -o /tmp/p -w "%{http_code}" --http1.1 --max-time 25 -A "$UA" -H "Accept: text/csv,text/html,*/*" "$2"); echo "$1 | $code | $(wc -c </tmp/p) bytes | $(head -c 120 /tmp/p | tr '\n\r' '  ')"; }
+          probe() { code=$(curl -s -o /tmp/p -w "%{http_code}" --http1.1 --max-time 25 -A "$UA" -H "Accept: text/csv,text/html,*/*" "$2" || true); echo "$1 | $code | $(wc -c </tmp/p) bytes | $(head -c 120 /tmp/p | tr '\n\r' '  ')"; }
           {
           probe fred_csv_h11 "https://fred.stlouisfed.org/graph/fredgraph.csv?id=T10Y2Y"
           probe fred_txt "https://fred.stlouisfed.org/data/T10Y2Y.txt"
@@ -36,4 +37,4 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add backtest/results/probe.log && git commit -m "probe log" && git pull --rebase origin main && git push
+          git add backtest/results/probe.log && git commit -m "probe log 2" && git pull --rebase origin main && git push
