@@ -1,0 +1,164 @@
+{
+ "generated": "2026-10-25T02:48:24.529590+00:00",
+ "chart_url": "https://raw.githubusercontent.com/saisinfu/ai-cycle-sentinal/main/backtest/results/finance_backtest.png",
+ "details_url": "https://github.com/saisinfu/ai-cycle-sentinal/tree/main/backtest",
+ "sectors": {
+  "finance": {
+   "status": "tested",
+   "verdict": "no_edge",
+   "headline": "ทดสอบ 35 ปี: ดัชนีหมวดแทบไม่บอกผลตอบแทน 12 เดือนข้างหน้า (ค่าสหสัมพันธ์ +0.01) กฎเดิมที่หยุด/ลดตามสัญญาณได้ผลต่างจาก DCA ปกติ -0.9% ถึง -0.3% ต่อปี ส่วนกฎปัจจุบัน (DCA ต่อเสมอ) ต่างจาก DCA ปกติ +0.0% ถึง +0.2% ต่อปี",
+   "period_from": "1991-08",
+   "period_to": "2026-09",
+   "months": 422,
+   "index_ic": 0.01,
+   "strategies": [
+    {
+     "label": "XLF กองทุนหุ้นการเงินสหรัฐ",
+     "from": "1998-12",
+     "to": "2026-09",
+     "plain_irr": 8.2,
+     "previous_irr": 7.8,
+     "current_irr": 8.2,
+     "plain_dd": -74.0,
+     "previous_dd": -72.0,
+     "current_dd": -74.0
+    },
+    {
+     "label": "ดัชนีหุ้นธนาคาร KBW",
+     "from": "1993-02",
+     "to": "2026-09",
+     "plain_irr": 5.1,
+     "previous_irr": 4.6,
+     "current_irr": 5.1,
+     "plain_dd": -77.0,
+     "previous_dd": -76.0,
+     "current_dd": -77.0
+    },
+    {
+     "label": "JPMorgan (JPM)",
+     "from": "1991-08",
+     "to": "2026-09",
+     "plain_irr": 13.3,
+     "previous_irr": 12.4,
+     "current_irr": 13.3,
+     "plain_dd": -61.0,
+     "previous_dd": -56.0,
+     "current_dd": -61.0
+    },
+    {
+     "label": "JPM / V / GS ตามสัดส่วนในแอป",
+     "from": "2008-03",
+     "to": "2026-09",
+     "plain_irr": 18.4,
+     "previous_irr": 18.1,
+     "current_irr": 18.6,
+     "plain_dd": -25.0,
+     "previous_dd": -25.0,
+     "current_dd": -25.0
+    }
+   ],
+   "zones": [
+    {
+     "zone": "X",
+     "months": 62,
+     "fwd12_mean": 8.9,
+     "fwd12_neg_share": 0.403
+    },
+    {
+     "zone": "W",
+     "months": 251,
+     "fwd12_mean": 8.5,
+     "fwd12_neg_share": 0.327
+    },
+    {
+     "zone": "D",
+     "months": 9,
+     "fwd12_mean": 7.4,
+     "fwd12_neg_share": 0.333
+    }
+   ],
+   "signals": [
+    {
+     "key": "yield_curve",
+     "label": "ส่วนต่างดอกเบี้ย",
+     "ic": -0.06,
+     "verdict": "แทบไม่มีประโยชน์ในการจับจังหวะ"
+    },
+    {
+     "key": "credit_spread",
+     "label": "ส่วนต่างหุ้นกู้",
+     "ic": null,
+     "verdict": "ไม่ได้ทดสอบ (ไม่มีข้อมูลย้อนหลังที่เข้าถึงได้)"
+    },
+    {
+     "key": "loan_growth",
+     "label": "สินเชื่อ",
+     "ic": 0.05,
+     "verdict": "แทบไม่มีประโยชน์ในการจับจังหวะ"
+    },
+    {
+     "key": "delinquency",
+     "label": "หนี้ค้างชำระ",
+     "ic": 0.14,
+     "verdict": "มีประโยชน์เล็กน้อย ค่าดีมักตามด้วยผลตอบแทนดี"
+    },
+    {
+     "key": "fed_policy",
+     "label": "ทิศทาง Fed",
+     "ic": -0.15,
+     "verdict": "กลับด้าน ค่าที่กฎให้คะแนนดีมักเกิดช่วงวิกฤต"
+    }
+   ],
+   "robustness": [
+    {
+     "label": "สุ่มน้ำหนักสัญญาณ 300 ชุด",
+     "value": "ชนะ DCA ปกติแค่ 11% ของชุด"
+    },
+    {
+     "label": "ไม่มีช่วงกันชน ±3",
+     "value": "สลับโซน 26 ครั้ง · ผลต่างจาก DCA ปกติ -0.7% ต่อปี (XLF)"
+    },
+    {
+     "label": "เฉลี่ยดัชนี 3 เดือน",
+     "value": "สลับโซน 8 ครั้ง · ผลต่างจาก DCA ปกติ -0.3% ต่อปี (XLF)"
+    },
+    {
+     "label": "ตั้งเกณฑ์จากสถิติก่อนปี 2010 แล้วทดสอบหลังปี 2010",
+     "value": "สลับโซน 4 ครั้ง · ผลต่างจาก DCA ปกติ -2.2% ต่อปี (XLF)"
+    }
+   ],
+   "caveats": [
+    "ไม่มีข้อมูลส่วนต่างหุ้นกู้เสี่ยงสูงย้อนหลัง (FRED บล็อกเซิร์ฟเวอร์ทดสอบ) จึงทดสอบด้วย 4 จาก 5 สัญญาณ",
+    "ทิศทาง Fed ในการทดสอบใช้สูตรจากการเปลี่ยนแปลงดอกเบี้ยนโยบาย 6 เดือน แทนคะแนนที่ Claude ประเมินในแอป",
+    "ใช้ข้อมูลเศรษฐกิจฉบับปรับปรุงล่าสุด ไม่ใช่ตัวเลขที่ประกาศจริงในวันนั้น",
+    "โซนชะลอตัวเกิดแค่ 9 เดือนในช่วงที่มีราคา XLF จึงสรุปเรื่องโซนนี้ได้น้อย",
+    "ผลในอดีตไม่รับประกันอนาคต และไม่ใช่คำแนะนำการลงทุน"
+   ],
+   "data_sources": [
+    {
+     "label": "ดอกเบี้ยพันธบัตร, Fed funds, T-bill: Fed H.15 ผ่าน DBnomics",
+     "url": "https://db.nomics.world/FED/H15"
+    },
+    {
+     "label": "สินเชื่อธนาคาร: Fed H.8 ผ่าน DBnomics",
+     "url": "https://db.nomics.world/FED/H8"
+    },
+    {
+     "label": "หนี้บัตรเครดิตค้างชำระ: Fed Charge-off and Delinquency ผ่าน DBnomics",
+     "url": "https://db.nomics.world/FED/CHGDEL"
+    },
+    {
+     "label": "ราคาหุ้นรวมเงินปันผล: Yahoo Finance",
+     "url": "https://finance.yahoo.com/quote/XLF/history"
+    }
+   ]
+  },
+  "ai": {
+   "status": "not_tested",
+   "headline": "ยังทดสอบย้อนหลังไม่ได้ ข้อมูลหลายตัว (ราคาเช่า GPU, อัตราใช้ AI ขององค์กร) มีย้อนหลังแค่ 1–3 ปี",
+   "caveats": [
+    "โครงสร้างกฎเหมือนหมวดการเงิน จึงน่าจะมีข้อจำกัดคล้ายกัน ใช้เป็นข้อมูลประกอบ ไม่ใช่สัญญาณซื้อขาย"
+   ]
+  }
+ }
+}
