@@ -451,7 +451,8 @@ def main() -> None:
     cfg = json.loads(CONFIG.read_text())
     fin = next(s for s in cfg["sectors"] if s["id"] == "finance")
     signals = fin["signals"]
-    rules = fin["rules"]
+    rules_cur = fin["rules"]
+    rules = fin.get("rules_previous", rules_cur)  # the timing rules (pause / reduce) under test
 
     if args.synthetic:
         f, p = synthetic()
@@ -469,6 +470,7 @@ def main() -> None:
     rf = panel["rf"]
 
     sec_rules = sector_rules(rules)
+    sec_rules_cur = sector_rules(rules_cur)
     assets = [a for a in ["XLF", "^BKX", "KBE", "JPM", "SPY"] if a in px.columns]
 
     def evaluate(sig, label, smooth=False, band=BAND, oos_from=None):
@@ -510,16 +512,22 @@ def main() -> None:
         "episodes": {a: episodes(px[a], z, idx) for a in ["XLF", "JPM", "^BKX"] if a in px.columns},
     }
 
-    # Strategy: sector-level on long series, and the real 3-stock matrix since Visa listed.
-    strat = {}
-    for a in [a for a in ["XLF", "^BKX", "JPM"] if a in px.columns]:
-        sp = strategy_pair(z, px[[a]].rename(columns={a: "SECTOR"}), rf, sec_rules)
-        if sp:
-            strat[a] = {k: v for k, v in sp.items() if k != "_series"}
-    stocks = [t for t in rules["X"] if t in px.columns]
-    three = strategy_pair(z, px[stocks], rf, rules) if len(stocks) == len(rules["X"]) else {}
-    if three:
-        strat["3_stock_matrix"] = {k: v for k, v in three.items() if k != "_series"}
+    # Strategy: sector-level on long series, and the real 3-stock matrix since Visa listed,
+    # for the previous timing rules and the current always-DCA tilt rules.
+    def strategies(rs, srs):
+        st = {}
+        for a in [a for a in ["XLF", "^BKX", "JPM"] if a in px.columns]:
+            sp = strategy_pair(z, px[[a]].rename(columns={a: "SECTOR"}), rf, srs)
+            if sp:
+                st[a] = {k: v for k, v in sp.items() if k != "_series"}
+        stocks = [t for t in rs["X"] if t in px.columns]
+        three = strategy_pair(z, px[stocks], rf, rs) if len(stocks) == len(rs["X"]) else {}
+        if three:
+            st["3_stock_matrix"] = {k: v for k, v in three.items() if k != "_series"}
+        return st
+    strat = strategies(rules, sec_rules)
+    results["strategy_current_rules"] = strategies(rules_cur, sec_rules_cur)
+    results["current_rules"]["sector_level_rules_current"] = sec_rules_cur
     results["strategy"] = strat
 
     # Calibration + robustness.
@@ -573,11 +581,13 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / "finance.json").write_text(json.dumps(results, indent=1, default=str))
     pd.DataFrame({"index": idx.round(1), "zone": z}).join(subs.round(1)).join(panel.round(3)).to_csv(OUT / "finance_monthly.csv")
-    charts(idx, z, px, strategy_pair(z, px[[main_asset]].rename(columns={main_asset: "SECTOR"}), rf, sec_rules), main_asset)
+    charts(idx, z, px, strategy_pair(z, px[[main_asset]].rename(columns={main_asset: "SECTOR"}), rf, sec_rules), main_asset,
+           strategy_pair(z, px[[main_asset]].rename(columns={main_asset: "SECTOR"}), rf, sec_rules_cur))
+    app_summary(results, fin, cfg)
     print(json.dumps({k: results[k] for k in ("panel", "latest", "zone_share", "flips", "strategy", "variants")}, indent=1, default=str))
 
 
-def charts(idx, z, px, sp, asset):
+def charts(idx, z, px, sp, asset, sp_cur=None):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -609,11 +619,134 @@ def charts(idx, z, px, sp, asset):
     if sp:
         plain, rule = sp["_series"]
         a3.plot(plain.index, plain.values, color="#A0A0A0", lw=1.2, label="Plain monthly DCA")
-        a3.plot(rule.index, rule.values, color="#00E676", lw=1.2, label="Following the rules")
+        a3.plot(rule.index, rule.values, color="#FF5252", lw=1.2, label="Previous rules (pause / reduce)")
+        if sp_cur:
+            a3.plot(sp_cur["_series"][1].index, sp_cur["_series"][1].values, color="#00E676", lw=1.2, ls="--", label="Current rules (always DCA, tilt)")
         a3.set_ylabel("Portfolio value (1/month)", color="#A0A0A0")
         a3.legend(facecolor="#1E1E1E", labelcolor="#F5F5F5", edgecolor="#333")
+    for ax in (a1, a2, a3):
+        ax.yaxis.label.set_color("#A0A0A0")
     fig.tight_layout()
     fig.savefig(OUT / "finance_backtest.png", dpi=110, facecolor=fig.get_facecolor())
+
+
+# ----------------------------------------------------------------------------- app summary
+
+REPO_RAW = "https://raw.githubusercontent.com/saisinfu/ai-cycle-sentinal/main"
+ASSET_TH = {"XLF": "XLF กองทุนหุ้นการเงินสหรัฐ", "^BKX": "ดัชนีหุ้นธนาคาร KBW", "JPM": "JPMorgan (JPM)",
+            "3_stock_matrix": "JPM / V / GS ตามสัดส่วนในแอป"}
+
+
+def _avg(xs):
+    xs = [x for x in xs if x is not None and not (isinstance(x, float) and math.isnan(x))]
+    return sum(xs) / len(xs) if xs else None
+
+
+def app_summary(r: dict, fin: dict, cfg: dict) -> None:
+    """Compact, Thai-language summary the app reads from data/backtest.json."""
+    prev, cur = r["strategy"], r.get("strategy_current_rules", {})
+    rows = []
+    for k in ["XLF", "^BKX", "JPM", "3_stock_matrix"]:
+        if k not in prev:
+            continue
+        a, b = prev[k], cur.get(k, {})
+        rows.append({
+            "label": ASSET_TH.get(k, k), "from": a["from"][:7], "to": a["to"][:7],
+            "plain_irr": round(a["plain"]["irr"] * 100, 1),
+            "previous_irr": round(a["rules"]["irr"] * 100, 1),
+            "current_irr": round(b["rules"]["irr"] * 100, 1) if b else None,
+            "plain_dd": round(a["plain"]["max_dd"] * 100, 0),
+            "previous_dd": round(a["rules"]["max_dd"] * 100, 0),
+            "current_dd": round(b["rules"]["max_dd"] * 100, 0) if b else None,
+        })
+    dprev = [x["previous_irr"] - x["plain_irr"] for x in rows]
+    dcur = [x["current_irr"] - x["plain_irr"] for x in rows if x["current_irr"] is not None]
+
+    def rng_txt(ds):
+        lo, hi = min(ds), max(ds)
+        return f"{lo:+.1f}%" if abs(hi - lo) < 0.05 else f"{lo:+.1f}% ถึง {hi:+.1f}%"
+
+    ics = [r["forward"][a]["spearman_idx_fwd12"] for a in ["XLF", "^BKX", "JPM"] if a in r["forward"]]
+    ic = _avg(ics)
+    verdict = "no_edge" if ic is not None and abs(ic) < 0.1 else ("helps" if (ic or 0) >= 0.1 else "hurts")
+    headline = (f"ทดสอบ {r['panel']['months'] // 12} ปี: ดัชนีหมวดแทบไม่บอกผลตอบแทน 12 เดือนข้างหน้า "
+                f"(ค่าสหสัมพันธ์ {ic:+.2f}) กฎเดิมที่หยุด/ลดตามสัญญาณได้ผลต่างจาก DCA ปกติ {rng_txt(dprev)} ต่อปี"
+                + (f" ส่วนกฎปัจจุบัน (DCA ต่อเสมอ) ต่างจาก DCA ปกติ {rng_txt(dcur)} ต่อปี" if dcur else ""))
+
+    zones_xlf = []
+    fx = r["forward"].get("XLF") or next(iter(r["forward"].values()))
+    for code in "XWD":
+        z = fx["by_zone"].get(code)
+        if z:
+            zones_xlf.append({"zone": code, "months": z["months"], "fwd12_mean": z["fwd12_mean"],
+                              "fwd12_neg_share": z["fwd12_neg_share"]})
+
+    sigs = []
+    for sp in fin["signals"]:
+        vals = [r["signal_ic_fwd12"].get(a, {}).get(sp["key"]) for a in ["XLF", "^BKX", "JPM"]]
+        v = _avg(vals)
+        if v is None:
+            verdict_s = "ไม่ได้ทดสอบ (ไม่มีข้อมูลย้อนหลังที่เข้าถึงได้)"
+        elif v >= 0.07:
+            verdict_s = "มีประโยชน์เล็กน้อย ค่าดีมักตามด้วยผลตอบแทนดี"
+        elif v <= -0.07:
+            verdict_s = "กลับด้าน ค่าที่กฎให้คะแนนดีมักเกิดช่วงวิกฤต"
+        else:
+            verdict_s = "แทบไม่มีประโยชน์ในการจับจังหวะ"
+        sigs.append({"key": sp["key"], "label": sp.get("short", sp["key"]),
+                     "ic": None if v is None else round(v, 2), "verdict": verdict_s})
+
+    rob = []
+    ws = r.get("weight_sensitivity")
+    if ws:
+        rob.append({"label": f"สุ่มน้ำหนักสัญญาณ {ws['draws']} ชุด",
+                    "value": f"ชนะ DCA ปกติแค่ {ws['share_beating_plain'] * 100:.0f}% ของชุด"})
+    names = {"no dead-band": "ไม่มีช่วงกันชน ±3", "3-month smoothing": "เฉลี่ยดัชนี 3 เดือน",
+             "anchors from pre-2010 data, tested 2010+ (out-of-sample)": "ตั้งเกณฑ์จากสถิติก่อนปี 2010 แล้วทดสอบหลังปี 2010"}
+    for v in r["variants"]:
+        if v["label"] in names and "XLF" in v:
+            rob.append({"label": names[v["label"]],
+                        "value": f"สลับโซน {v['flips']} ครั้ง · ผลต่างจาก DCA ปกติ {v['XLF']['irr_diff_pp']:+.1f}% ต่อปี (XLF)"})
+
+    credit_ok = not (r["signal_ic_fwd12"].get("XLF", {}).get("credit_spread") is None)
+    caveats = []
+    if not credit_ok:
+        caveats.append("ไม่มีข้อมูลส่วนต่างหุ้นกู้เสี่ยงสูงย้อนหลัง (FRED บล็อกเซิร์ฟเวอร์ทดสอบ) จึงทดสอบด้วย 4 จาก 5 สัญญาณ")
+    caveats += [
+        "ทิศทาง Fed ในการทดสอบใช้สูตรจากการเปลี่ยนแปลงดอกเบี้ยนโยบาย 6 เดือน แทนคะแนนที่ Claude ประเมินในแอป",
+        "ใช้ข้อมูลเศรษฐกิจฉบับปรับปรุงล่าสุด ไม่ใช่ตัวเลขที่ประกาศจริงในวันนั้น",
+        f"โซนชะลอตัวเกิดแค่ {next((z['months'] for z in zones_xlf if z['zone'] == 'D'), 0)} เดือนในช่วงที่มีราคา XLF จึงสรุปเรื่องโซนนี้ได้น้อย",
+        "ผลในอดีตไม่รับประกันอนาคต และไม่ใช่คำแนะนำการลงทุน",
+    ]
+
+    out = {
+        "generated": r["generated"],
+        "chart_url": f"{REPO_RAW}/backtest/results/finance_backtest.png",
+        "details_url": "https://github.com/saisinfu/ai-cycle-sentinal/tree/main/backtest",
+        "sectors": {
+            "finance": {
+                "status": "tested", "verdict": verdict, "headline": headline,
+                "period_from": r["panel"]["from"][:7], "period_to": r["panel"]["to"][:7], "months": r["panel"]["months"],
+                "index_ic": None if ic is None else round(ic, 2),
+                "strategies": rows, "zones": zones_xlf, "signals": sigs, "robustness": rob, "caveats": caveats,
+                "data_sources": [
+                    {"label": "ดอกเบี้ยพันธบัตร, Fed funds, T-bill: Fed H.15 ผ่าน DBnomics", "url": "https://db.nomics.world/FED/H15"},
+                    {"label": "สินเชื่อธนาคาร: Fed H.8 ผ่าน DBnomics", "url": "https://db.nomics.world/FED/H8"},
+                    {"label": "หนี้บัตรเครดิตค้างชำระ: Fed Charge-off and Delinquency ผ่าน DBnomics", "url": "https://db.nomics.world/FED/CHGDEL"},
+                    {"label": "ราคาหุ้นรวมเงินปันผล: Yahoo Finance", "url": "https://finance.yahoo.com/quote/XLF/history"},
+                ],
+            },
+            "ai": {
+                "status": "not_tested",
+                "headline": "ยังทดสอบย้อนหลังไม่ได้ ข้อมูลหลายตัว (ราคาเช่า GPU, อัตราใช้ AI ขององค์กร) มีย้อนหลังแค่ 1–3 ปี",
+                "caveats": ["โครงสร้างกฎเหมือนหมวดการเงิน จึงน่าจะมีข้อจำกัดคล้ายกัน ใช้เป็นข้อมูลประกอบ ไม่ใช่สัญญาณซื้อขาย"],
+            },
+        },
+    }
+    target = ROOT / "data" / "backtest.json"
+    if not r.get("synthetic"):
+        target.write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    (OUT / "app_summary.json").write_text(json.dumps(out, ensure_ascii=False, indent=1))
 
 
 if __name__ == "__main__":

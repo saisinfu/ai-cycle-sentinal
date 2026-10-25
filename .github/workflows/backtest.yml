@@ -35,9 +35,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           cp -r backtest/results "$RUNNER_TEMP/results"
+          [ -f data/backtest.json ] && cp data/backtest.json "$RUNNER_TEMP/backtest.json" || true
           git fetch origin main
           git reset --hard origin/main
           rm -rf backtest/results && cp -r "$RUNNER_TEMP/results" backtest/results
-          git add -A backtest/results
+          [ -f "$RUNNER_TEMP/backtest.json" ] && cp "$RUNNER_TEMP/backtest.json" data/backtest.json || true
+          git add -A backtest/results data/backtest.json
           git diff --cached --quiet || git commit -m "Backtest results (finance)"
           git push origin HEAD:main

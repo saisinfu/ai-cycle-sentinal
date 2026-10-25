@@ -1,91 +1,514 @@
 {
- "version": 1,
- "main_port": [
-  { "key": "gold", "name": "ทองคำ", "proxy": "GLD", "note": "ใช้ราคา GLD (กองทุน ETF ทองคำในสหรัฐฯ) แทนราคาทองในไทย" },
-  { "key": "sp500", "name": "กองทุน S&P 500", "proxy": "SPY", "note": "ใช้ราคา SPY แทนดัชนี S&P 500" },
-  { "key": "nasdaq", "name": "กองทุน NASDAQ", "proxy": "QQQ", "note": "ใช้ราคา QQQ แทนดัชนี NASDAQ-100" },
-  { "key": "kkp", "name": "KKP เกียรตินาคินภัทร", "proxy": "KKP.BK", "note": "ราคาหุ้นในตลาดหลักทรัพย์ฯ (บาท)" }
- ],
- "sectors": [
-  {
-   "id": "ai",
-   "name": "ชิป / AI",
-   "icon": "chip",
-   "data": "data/readings.json",
-   "confidence": "medium",
-   "confidence_note": "2 จาก 5 สัญญาณเป็นค่าประมาณ (ระยะรอชิป และคอขวดไฟฟ้า)",
-   "summary": {
-    "X": "สัญญาณความต้องการ AI แข็งแรงทั้งชิป GPU และการใช้งานองค์กร",
-    "W": "การลงทุนเริ่มเร็วกว่ารายได้ ซัพพลายเชนผ่อนคลายลง ชะลอหุ้นชิป เน้นโครงสร้างพื้นฐานพลังงาน",
-    "D": "หลายสัญญาณชี้ว่าเข้าสู่ช่วงย่อยการลงทุน AI ทบทวนลดหุ้นชิป"
-   },
-   "signals": [
-    { "key": "capex_vs_revenue", "field": "capex_to_cloud_revenue_ratio", "label": "การลงทุน CapEx เทียบรายได้คลาวด์", "label_en": "Hyperscaler CapEx vs Cloud Revenue", "short": "CapEx / รายได้", "weight": 0.25, "worst": 2.0, "best": 0.8, "display": "{capex_to_cloud_revenue_ratio:2} เท่า", "range": "2.0 เท่า → 0.8 เท่า", "why": "ยิ่งลงทุนเร็วกว่ารายได้มาก ความเสี่ยงที่จะต้องชะลอการลงทุนยิ่งสูง", "source": "งบไตรมาส Microsoft, Alphabet, Amazon", "frequency": "รายไตรมาส", "kind": "data" },
-    { "key": "chip_lead_time", "field": "chip_lead_time_weeks", "label": "ระยะรอชิป", "label_en": "AI Chip Lead Time", "short": "ระยะรอชิป", "weight": 0.20, "worst": 8, "best": 30, "display": "{chip_lead_time_weeks:0} สัปดาห์", "range": "8 → 30 สัปดาห์", "why": "รอนาน = ความต้องการชิปเกินกำลังผลิต", "source": "รายงานจากผู้จำหน่าย (Nvidia ไม่เปิดเผย)", "frequency": "เมื่อมีข่าวใหม่", "kind": "estimate" },
-    { "key": "gpu_spot_price", "field": "gpu_spot_price_change_1m_pct", "label": "ราคาเช่า GPU", "label_en": "GPU Spot Rental (H100 index)", "short": "ราคาเช่า GPU", "weight": 0.20, "worst": -20, "best": 10, "display": "${gpu_spot_price_usd_hr:2}/ชม. ({gpu_spot_price_change_1m_pct:+1}% ใน 1 เดือน)", "range": "−20% → +10% ใน 1 เดือน", "why": "ราคาเช่าขึ้น = ความต้องการใช้ GPU ยังแรง", "source": "ดัชนี OCPI-H100 (Ornn)", "source_url": "https://data.ornn.com/markets/h100-sxm", "frequency": "รายวัน", "kind": "data" },
-    { "key": "enterprise_adoption", "field": "enterprise_ai_adoption_change_3m_pp", "label": "การใช้ AI ในธุรกิจใหญ่", "label_en": "Enterprise AI Adoption (Ramp)", "short": "การใช้งานองค์กร", "weight": 0.15, "worst": -3, "best": 3, "display": "{enterprise_ai_adoption_pct:1}% ({enterprise_ai_adoption_change_3m_pp:+1} จุดใน 3 เดือน)", "range": "−3 → +3 จุดใน 3 เดือน", "why": "ธุรกิจจ่ายเงินใช้ AI มากขึ้น = รายได้จริงของ AI โต", "source": "Ramp AI Index (FRED: RAMPAIENTERPRISE)", "source_url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE", "frequency": "รายเดือน", "kind": "data" },
-    { "key": "power_grid", "field": "power_grid_stress_level", "label": "คอขวดโครงข่ายไฟฟ้า", "label_en": "Power Grid Stress", "short": "โครงข่ายไฟฟ้า", "weight": 0.20, "worst": 9, "best": 2, "display": "{power_grid_stress_level:1}/10", "range": "9 → 2 (ยิ่งต่ำยิ่งดี)", "why": "ไฟไม่พอ = สร้างดาต้าเซ็นเตอร์ช้าลง แต่หนุนผู้ขายอุปกรณ์ไฟฟ้าอย่าง ETN", "source": "ข่าว PJM และโครงข่ายไฟฟ้าสหรัฐฯ", "frequency": "รายวัน", "kind": "estimate" }
-   ],
-   "stocks": [
-    { "ticker": "KLAC", "name": "KLA Corporation" },
-    { "ticker": "AVGO", "name": "Broadcom Inc." },
-    { "ticker": "ETN", "name": "Eaton Corporation" }
-   ],
-   "rules": {
-    "X": { "KLAC": ["BUY_DCA", 25], "AVGO": ["BUY_DCA", 40], "ETN": ["BUY_DCA", 35] },
-    "W": { "KLAC": ["PAUSE_DCA", 0], "AVGO": ["PAUSE_DCA", 0], "ETN": ["OVERWEIGHT_DCA", 50] },
-    "D": { "KLAC": ["REDUCE_HOLDINGS", 0, 30], "AVGO": ["REDUCE_HOLDINGS", 0, 20], "ETN": ["ACCUMULATE", 60] }
-   },
-   "rules_origin": "user",
-   "reasons": {
-    "X": { "KLAC": "ความต้องการเครื่องตรวจสอบการผลิตชิปเพิ่มตามการขยายกำลังผลิต", "AVGO": "ความต้องการชิป AI แบบสั่งทำและอุปกรณ์เครือข่ายขยายตัว", "ETN": "งานระบบไฟฟ้าดาต้าเซ็นเตอร์เติบโตตามการลงทุน" },
-    "W": { "KLAC": "ระยะรอชิปเริ่มสั้นลง ถือสถานะเดิมไว้", "AVGO": "ราคาเช่า GPU เริ่มอ่อนตัว พักการ DCA ใหม่", "ETN": "ได้ประโยชน์จากคอขวดโครงข่ายไฟฟ้า" },
-    "D": { "KLAC": "ยอดสั่งเครื่องจักรผลิตชิปมักลดลงก่อนในช่วงย่อยการลงทุน", "AVGO": "ยอดสั่งชิปเสี่ยงลดลงเมื่อผู้ให้บริการคลาวด์ชะลอการขยาย", "ETN": "งานปรับปรุงโครงข่ายไฟฟ้าเป็นโครงการหลายปี ผันผวนน้อยกว่าหุ้นชิป" }
-   },
-   "alerts": [
-    { "field": "gpu_spot_price_change_1m_pct", "op": "<", "value": -15, "zone": "D", "title": "ราคาเช่า GPU ร่วงแรง", "message": "เปลี่ยน {gpu_spot_price_change_1m_pct:+1}% ใน 1 เดือน (เกณฑ์แจ้งเตือน: ต่ำกว่า −15%)" },
-    { "field": "power_grid_stress_level", "op": ">", "value": 8, "zone": "X", "title": "คอขวดไฟฟ้าวิกฤต", "message": "ระดับ {power_grid_stress_level:1}/10 (เกณฑ์แจ้งเตือน: เกิน 8) เป็นปัจจัยหนุน ETN" }
-   ]
-  },
-  {
-   "id": "finance",
-   "name": "การเงิน / ธนาคาร",
-   "icon": "bank",
-   "data": "data/finance.json",
-   "confidence": "high",
-   "confidence_note": "4 จาก 5 สัญญาณเป็นตัวเลขทางการจาก Fed และ FRED",
-   "summary": {
-    "X": "สินเชื่อโต ดอกเบี้ยเอื้อต่อกำไรธนาคาร และความเสี่ยงหนี้เสียยังต่ำ",
-    "W": "พื้นฐานธนาคารยังดี แต่มีปัจจัยกดดัน เช่น เส้นดอกเบี้ยแบนหรือ Fed เข้มงวด",
-    "D": "สัญญาณหนี้เสียหรือดอกเบี้ยกดดันกำไรธนาคาร ทบทวนลดสัดส่วน"
-   },
-   "signals": [
-    { "key": "yield_curve", "field": "yield_curve_10y2y_pct", "label": "ส่วนต่างดอกเบี้ย 10 ปี − 2 ปี", "label_en": "10Y − 2Y Treasury Spread", "short": "ส่วนต่างดอกเบี้ย", "weight": 0.25, "worst": -1.0, "best": 1.5, "display": "{yield_curve_10y2y_pct:+2}%", "range": "−1.0% → +1.5%", "why": "ส่วนต่างกว้าง = ธนาคารกู้ระยะสั้นมาปล่อยระยะยาวได้กำไรมากขึ้น", "source": "FRED: T10Y2Y", "source_url": "https://fred.stlouisfed.org/series/T10Y2Y", "frequency": "รายวัน", "kind": "data" },
-    { "key": "credit_spread", "field": "hy_oas_pct", "label": "ส่วนต่างหุ้นกู้เสี่ยงสูง", "label_en": "High-Yield Credit Spread", "short": "ส่วนต่างหุ้นกู้", "weight": 0.20, "worst": 7.0, "best": 2.5, "display": "{hy_oas_pct:2}%", "range": "7.0% → 2.5%", "why": "ส่วนต่างแคบ = ตลาดยังไม่กังวลเรื่องหนี้เสีย", "source": "FRED: BAMLH0A0HYM2", "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2", "frequency": "รายวัน", "kind": "data" },
-    { "key": "loan_growth", "field": "loan_growth_pct", "label": "การเติบโตสินเชื่อ", "label_en": "Bank Loan Growth", "short": "สินเชื่อ", "weight": 0.20, "worst": 0.0, "best": 8.0, "display": "{loan_growth_pct:+1}% ต่อปี", "range": "0% → +8% ต่อปี", "why": "สินเชื่อโต = รายได้ดอกเบี้ยของธนาคารโต", "source": "Fed H.8 / FRED: TOTLL", "source_url": "https://fred.stlouisfed.org/series/TOTLL", "frequency": "รายสัปดาห์", "kind": "data" },
-    { "key": "delinquency", "field": "cc_delinquency_pct", "label": "หนี้บัตรเครดิตค้างชำระ", "label_en": "Credit Card Delinquency", "short": "หนี้ค้างชำระ", "weight": 0.15, "worst": 4.5, "best": 2.0, "display": "{cc_delinquency_pct:2}%", "range": "4.5% → 2.0%", "why": "ค้างชำระสูง = ธนาคารต้องกันเงินสำรองหนี้เสียมากขึ้น", "source": "FRED: DRCCLACBS", "source_url": "https://fred.stlouisfed.org/series/DRCCLACBS", "frequency": "รายไตรมาส", "kind": "data" },
-    { "key": "fed_policy", "field": "fed_policy_score", "label": "ทิศทางดอกเบี้ย Fed", "label_en": "Fed Policy Direction", "short": "ทิศทาง Fed", "weight": 0.20, "worst": 0, "best": 100, "display": "{fed_policy_score:0}/100", "range": "0 (ขึ้นแรง) → 100 (ลดต่อเนื่อง)", "why": "Fed ผ่อนคลาย = ต้นทุนเงินลดและเศรษฐกิจได้แรงหนุน", "source": "แถลงการณ์ FOMC (Claude ให้คะแนน)", "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm", "frequency": "ทุก 6 สัปดาห์", "kind": "estimate" }
-   ],
-   "stocks": [
-    { "ticker": "JPM", "name": "JPMorgan Chase" },
-    { "ticker": "V", "name": "Visa Inc." },
-    { "ticker": "GS", "name": "Goldman Sachs" }
-   ],
-   "rules": {
-    "X": { "JPM": ["BUY_DCA", 40], "V": ["BUY_DCA", 35], "GS": ["BUY_DCA", 25] },
-    "W": { "JPM": ["PAUSE_DCA", 0], "V": ["BUY_DCA", 50], "GS": ["PAUSE_DCA", 0] },
-    "D": { "JPM": ["REDUCE_HOLDINGS", 0, 20], "V": ["HOLD", 0], "GS": ["REDUCE_HOLDINGS", 0, 30] }
-   },
-   "rules_origin": "draft",
-   "reasons": {
-    "X": { "JPM": "ธนาคารใหญ่ได้ประโยชน์จากสินเชื่อโตและส่วนต่างดอกเบี้ย", "V": "รายได้ผูกกับการใช้จ่ายผ่านบัตรที่โตตามเศรษฐกิจ", "GS": "งานวาณิชธนกิจและการซื้อขายคึกคักในช่วงเศรษฐกิจขยายตัว" },
-    "W": { "JPM": "รอสัญญาณดอกเบี้ยชัดเจนก่อนเพิ่มเงินลงทุน", "V": "รายได้ค่าธรรมเนียมไม่พึ่งดอกเบี้ยโดยตรง ทนทานกว่าธนาคาร", "GS": "รายได้ผันผวนตามตลาดทุน พักไว้ก่อน" },
-    "D": { "JPM": "ความเสี่ยงหนี้เสียกดดันกำไรธนาคาร", "V": "ไม่มีความเสี่ยงสินเชื่อโดยตรง ถือต่อได้", "GS": "รายได้จากตลาดทุนมักลดลงแรงช่วงขาลง" }
-   },
-   "alerts": [
-    { "field": "yield_curve_10y2y_pct", "op": "<", "value": 0, "zone": "D", "title": "เส้นดอกเบี้ยกลับหัว", "message": "ส่วนต่าง 10 ปี − 2 ปี เป็น {yield_curve_10y2y_pct:+2}% (เกณฑ์แจ้งเตือน: ต่ำกว่า 0)" },
-    { "field": "hy_oas_pct", "op": ">", "value": 5, "zone": "D", "title": "ส่วนต่างหุ้นกู้กว้างขึ้นแรง", "message": "อยู่ที่ {hy_oas_pct:2}% (เกณฑ์แจ้งเตือน: เกิน 5%) ตลาดเริ่มกังวลหนี้เสีย" }
-   ]
-  }
- ]
+  "version": 2,
+  "main_port": [
+    {
+      "key": "gold",
+      "name": "ทองคำ",
+      "proxy": "GLD",
+      "note": "ใช้ราคา GLD (กองทุน ETF ทองคำในสหรัฐฯ) แทนราคาทองในไทย"
+    },
+    {
+      "key": "sp500",
+      "name": "กองทุน S&P 500",
+      "proxy": "SPY",
+      "note": "ใช้ราคา SPY แทนดัชนี S&P 500"
+    },
+    {
+      "key": "nasdaq",
+      "name": "กองทุน NASDAQ",
+      "proxy": "QQQ",
+      "note": "ใช้ราคา QQQ แทนดัชนี NASDAQ-100"
+    },
+    {
+      "key": "kkp",
+      "name": "KKP เกียรตินาคินภัทร",
+      "proxy": "KKP.BK",
+      "note": "ราคาหุ้นในตลาดหลักทรัพย์ฯ (บาท)"
+    }
+  ],
+  "sectors": [
+    {
+      "id": "ai",
+      "name": "ชิป / AI",
+      "icon": "chip",
+      "data": "data/readings.json",
+      "confidence": "medium",
+      "confidence_note": "2 จาก 5 สัญญาณเป็นค่าประมาณ (ระยะรอชิป และคอขวดไฟฟ้า) · ยังทดสอบย้อนหลังไม่ได้เพราะข้อมูลสั้นเกินไป",
+      "summary": {
+        "X": "สัญญาณความต้องการ AI แข็งแรงทั้งชิป GPU และการใช้งานองค์กร · DCA ตามน้ำหนักปกติ",
+        "W": "การลงทุนเริ่มเร็วกว่ารายได้ ซัพพลายเชนผ่อนคลายลง · DCA ต่อ แต่เอียงน้ำหนักไปหาโครงสร้างพื้นฐานพลังงาน",
+        "D": "หลายสัญญาณชี้ว่าเข้าสู่ช่วงย่อยการลงทุน AI · DCA ต่อ 80% ของงบ ไม่ขาย และกันเงินสด 20% ไว้ซื้อเพิ่มเมื่อกลับเป็นโซนขยายตัว"
+      },
+      "signals": [
+        {
+          "key": "capex_vs_revenue",
+          "field": "capex_to_cloud_revenue_ratio",
+          "label": "การลงทุน CapEx เทียบรายได้คลาวด์",
+          "label_en": "Hyperscaler CapEx vs Cloud Revenue",
+          "short": "CapEx / รายได้",
+          "weight": 0.25,
+          "worst": 2.0,
+          "best": 0.8,
+          "display": "{capex_to_cloud_revenue_ratio:2} เท่า",
+          "range": "2.0 เท่า → 0.8 เท่า",
+          "why": "ยิ่งลงทุนเร็วกว่ารายได้มาก ความเสี่ยงที่จะต้องชะลอการลงทุนยิ่งสูง",
+          "source": "งบไตรมาส Microsoft, Alphabet, Amazon",
+          "frequency": "รายไตรมาส",
+          "kind": "data"
+        },
+        {
+          "key": "chip_lead_time",
+          "field": "chip_lead_time_weeks",
+          "label": "ระยะรอชิป",
+          "label_en": "AI Chip Lead Time",
+          "short": "ระยะรอชิป",
+          "weight": 0.2,
+          "worst": 8,
+          "best": 30,
+          "display": "{chip_lead_time_weeks:0} สัปดาห์",
+          "range": "8 → 30 สัปดาห์",
+          "why": "รอนาน = ความต้องการชิปเกินกำลังผลิต",
+          "source": "รายงานจากผู้จำหน่าย (Nvidia ไม่เปิดเผย)",
+          "frequency": "เมื่อมีข่าวใหม่",
+          "kind": "estimate"
+        },
+        {
+          "key": "gpu_spot_price",
+          "field": "gpu_spot_price_change_1m_pct",
+          "label": "ราคาเช่า GPU",
+          "label_en": "GPU Spot Rental (H100 index)",
+          "short": "ราคาเช่า GPU",
+          "weight": 0.2,
+          "worst": -20,
+          "best": 10,
+          "display": "${gpu_spot_price_usd_hr:2}/ชม. ({gpu_spot_price_change_1m_pct:+1}% ใน 1 เดือน)",
+          "range": "−20% → +10% ใน 1 เดือน",
+          "why": "ราคาเช่าขึ้น = ความต้องการใช้ GPU ยังแรง",
+          "source": "ดัชนี OCPI-H100 (Ornn)",
+          "source_url": "https://data.ornn.com/markets/h100-sxm",
+          "frequency": "รายวัน",
+          "kind": "data"
+        },
+        {
+          "key": "enterprise_adoption",
+          "field": "enterprise_ai_adoption_change_3m_pp",
+          "label": "การใช้ AI ในธุรกิจใหญ่",
+          "label_en": "Enterprise AI Adoption (Ramp)",
+          "short": "การใช้งานองค์กร",
+          "weight": 0.15,
+          "worst": -3,
+          "best": 3,
+          "display": "{enterprise_ai_adoption_pct:1}% ({enterprise_ai_adoption_change_3m_pp:+1} จุดใน 3 เดือน)",
+          "range": "−3 → +3 จุดใน 3 เดือน",
+          "why": "ธุรกิจจ่ายเงินใช้ AI มากขึ้น = รายได้จริงของ AI โต",
+          "source": "Ramp AI Index (FRED: RAMPAIENTERPRISE)",
+          "source_url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        },
+        {
+          "key": "power_grid",
+          "field": "power_grid_stress_level",
+          "label": "คอขวดโครงข่ายไฟฟ้า",
+          "label_en": "Power Grid Stress",
+          "short": "โครงข่ายไฟฟ้า",
+          "weight": 0.2,
+          "worst": 9,
+          "best": 2,
+          "display": "{power_grid_stress_level:1}/10",
+          "range": "9 → 2 (ยิ่งต่ำยิ่งดี)",
+          "why": "ไฟไม่พอ = สร้างดาต้าเซ็นเตอร์ช้าลง แต่หนุนผู้ขายอุปกรณ์ไฟฟ้าอย่าง ETN",
+          "source": "ข่าว PJM และโครงข่ายไฟฟ้าสหรัฐฯ",
+          "frequency": "รายวัน",
+          "kind": "estimate"
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "KLAC",
+          "name": "KLA Corporation"
+        },
+        {
+          "ticker": "AVGO",
+          "name": "Broadcom Inc."
+        },
+        {
+          "ticker": "ETN",
+          "name": "Eaton Corporation"
+        }
+      ],
+      "rules": {
+        "X": {
+          "KLAC": [
+            "BUY_DCA",
+            25
+          ],
+          "AVGO": [
+            "BUY_DCA",
+            40
+          ],
+          "ETN": [
+            "BUY_DCA",
+            35
+          ]
+        },
+        "W": {
+          "KLAC": [
+            "BUY_DCA",
+            20
+          ],
+          "AVGO": [
+            "BUY_DCA",
+            35
+          ],
+          "ETN": [
+            "OVERWEIGHT_DCA",
+            45
+          ]
+        },
+        "D": {
+          "KLAC": [
+            "BUY_DCA",
+            15
+          ],
+          "AVGO": [
+            "BUY_DCA",
+            30
+          ],
+          "ETN": [
+            "OVERWEIGHT_DCA",
+            35
+          ]
+        }
+      },
+      "rules_origin": "user",
+      "reasons": {
+        "X": {
+          "KLAC": "ความต้องการเครื่องตรวจสอบการผลิตชิปเพิ่มตามการขยายกำลังผลิต",
+          "AVGO": "ความต้องการชิป AI แบบสั่งทำและอุปกรณ์เครือข่ายขยายตัว",
+          "ETN": "งานระบบไฟฟ้าดาต้าเซ็นเตอร์เติบโตตามการลงทุน"
+        },
+        "W": {
+          "KLAC": "ยัง DCA ต่อ แต่ลดน้ำหนักจาก 25% เหลือ 20% เพราะหุ้นอุปกรณ์ผลิตชิปผันผวนตามรอบการลงทุน",
+          "AVGO": "ยัง DCA ต่อ ลดน้ำหนักจาก 40% เหลือ 35% ระหว่างที่ราคาเช่า GPU และยอดลงทุนส่งสัญญาณผสม",
+          "ETN": "เพิ่มน้ำหนักจาก 35% เป็น 45% งานระบบไฟฟ้าเป็นโครงการหลายปี ผันผวนน้อยกว่าหุ้นชิป"
+        },
+        "D": {
+          "KLAC": "ยัง DCA ต่อในน้ำหนักต่ำ 15% (ไม่หยุด ไม่ขาย) ถ้าราคาลงแรงจะได้ต้นทุนเฉลี่ยต่ำลง",
+          "AVGO": "ยัง DCA ต่อ 30% (ไม่หยุด ไม่ขาย) ธุรกิจซอฟต์แวร์และเครือข่ายช่วยพยุงรายได้",
+          "ETN": "คงน้ำหนักหลัก 35% งานปรับปรุงโครงข่ายไฟฟ้าผันผวนน้อยกว่าหุ้นชิป อีก 20% ของงบหมวดเก็บเป็นเงินสดสำรอง"
+        }
+      },
+      "alerts": [
+        {
+          "field": "gpu_spot_price_change_1m_pct",
+          "op": "<",
+          "value": -15,
+          "zone": "D",
+          "title": "ราคาเช่า GPU ร่วงแรง",
+          "message": "เปลี่ยน {gpu_spot_price_change_1m_pct:+1}% ใน 1 เดือน (เกณฑ์แจ้งเตือน: ต่ำกว่า −15%)"
+        },
+        {
+          "field": "power_grid_stress_level",
+          "op": ">",
+          "value": 8,
+          "zone": "X",
+          "title": "คอขวดไฟฟ้าวิกฤต",
+          "message": "ระดับ {power_grid_stress_level:1}/10 (เกณฑ์แจ้งเตือน: เกิน 8) เป็นปัจจัยหนุน ETN"
+        }
+      ],
+      "rules_previous": {
+        "X": {
+          "KLAC": [
+            "BUY_DCA",
+            25
+          ],
+          "AVGO": [
+            "BUY_DCA",
+            40
+          ],
+          "ETN": [
+            "BUY_DCA",
+            35
+          ]
+        },
+        "W": {
+          "KLAC": [
+            "PAUSE_DCA",
+            0
+          ],
+          "AVGO": [
+            "PAUSE_DCA",
+            0
+          ],
+          "ETN": [
+            "OVERWEIGHT_DCA",
+            50
+          ]
+        },
+        "D": {
+          "KLAC": [
+            "REDUCE_HOLDINGS",
+            0,
+            30
+          ],
+          "AVGO": [
+            "REDUCE_HOLDINGS",
+            0,
+            20
+          ],
+          "ETN": [
+            "ACCUMULATE",
+            60
+          ]
+        }
+      },
+      "rules_previous_origin": "user",
+      "rules_version": 2,
+      "rules_note": "ทดสอบย้อนหลัง 35 ปี (หมวดการเงิน) พบว่าการหยุด DCA หรือขายตามสัญญาณวัฏจักรให้ผลแย่กว่า DCA ปกติ กฎชุดนี้จึง DCA ต่อทุกโซน ไม่หยุดและไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสดสำรอง 20% ในโซนชะลอตัว เพื่อใช้ซื้อเพิ่มเมื่อกลับเป็นโซนขยายตัว"
+    },
+    {
+      "id": "finance",
+      "name": "การเงิน / ธนาคาร",
+      "icon": "bank",
+      "data": "data/finance.json",
+      "confidence": "medium",
+      "confidence_note": "ข้อมูล 4 จาก 5 ตัวเป็นตัวเลขทางการ แต่ทดสอบย้อนหลัง 35 ปีพบว่าดัชนีหมวดแทบไม่บอกผลตอบแทนข้างหน้า ใช้เป็นข้อมูลประกอบ ไม่ใช่สัญญาณซื้อขาย",
+      "summary": {
+        "X": "สินเชื่อโต ดอกเบี้ยเอื้อต่อกำไรธนาคาร และความเสี่ยงหนี้เสียยังต่ำ · DCA ตามน้ำหนักปกติ",
+        "W": "พื้นฐานธนาคารยังดี แต่มีปัจจัยกดดัน · DCA ต่อ แต่เอียงน้ำหนักไปหา Visa ที่ไม่มีความเสี่ยงหนี้เสีย",
+        "D": "สัญญาณหนี้เสียหรือดอกเบี้ยกดดันกำไรธนาคาร · DCA ต่อ 80% ของงบ ไม่ขาย และกันเงินสด 20% ไว้ซื้อเพิ่มเมื่อกลับเป็นโซนขยายตัว"
+      },
+      "signals": [
+        {
+          "key": "yield_curve",
+          "field": "yield_curve_10y2y_pct",
+          "label": "ส่วนต่างดอกเบี้ย 10 ปี − 2 ปี",
+          "label_en": "10Y − 2Y Treasury Spread",
+          "short": "ส่วนต่างดอกเบี้ย",
+          "weight": 0.25,
+          "worst": -1.0,
+          "best": 1.5,
+          "display": "{yield_curve_10y2y_pct:+2}%",
+          "range": "−1.0% → +1.5%",
+          "why": "ส่วนต่างกว้าง = ธนาคารกู้ระยะสั้นมาปล่อยระยะยาวได้กำไรมากขึ้น",
+          "source": "FRED: T10Y2Y",
+          "source_url": "https://fred.stlouisfed.org/series/T10Y2Y",
+          "frequency": "รายวัน",
+          "kind": "data"
+        },
+        {
+          "key": "credit_spread",
+          "field": "hy_oas_pct",
+          "label": "ส่วนต่างหุ้นกู้เสี่ยงสูง",
+          "label_en": "High-Yield Credit Spread",
+          "short": "ส่วนต่างหุ้นกู้",
+          "weight": 0.2,
+          "worst": 7.0,
+          "best": 2.5,
+          "display": "{hy_oas_pct:2}%",
+          "range": "7.0% → 2.5%",
+          "why": "ส่วนต่างแคบ = ตลาดยังไม่กังวลเรื่องหนี้เสีย",
+          "source": "FRED: BAMLH0A0HYM2",
+          "source_url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2",
+          "frequency": "รายวัน",
+          "kind": "data"
+        },
+        {
+          "key": "loan_growth",
+          "field": "loan_growth_pct",
+          "label": "การเติบโตสินเชื่อ",
+          "label_en": "Bank Loan Growth",
+          "short": "สินเชื่อ",
+          "weight": 0.2,
+          "worst": 0.0,
+          "best": 8.0,
+          "display": "{loan_growth_pct:+1}% ต่อปี",
+          "range": "0% → +8% ต่อปี",
+          "why": "สินเชื่อโต = รายได้ดอกเบี้ยของธนาคารโต",
+          "source": "Fed H.8 / FRED: TOTLL",
+          "source_url": "https://fred.stlouisfed.org/series/TOTLL",
+          "frequency": "รายสัปดาห์",
+          "kind": "data"
+        },
+        {
+          "key": "delinquency",
+          "field": "cc_delinquency_pct",
+          "label": "หนี้บัตรเครดิตค้างชำระ",
+          "label_en": "Credit Card Delinquency",
+          "short": "หนี้ค้างชำระ",
+          "weight": 0.15,
+          "worst": 4.5,
+          "best": 2.0,
+          "display": "{cc_delinquency_pct:2}%",
+          "range": "4.5% → 2.0%",
+          "why": "ค้างชำระสูง = ธนาคารต้องกันเงินสำรองหนี้เสียมากขึ้น",
+          "source": "FRED: DRCCLACBS",
+          "source_url": "https://fred.stlouisfed.org/series/DRCCLACBS",
+          "frequency": "รายไตรมาส",
+          "kind": "data"
+        },
+        {
+          "key": "fed_policy",
+          "field": "fed_policy_score",
+          "label": "ทิศทางดอกเบี้ย Fed",
+          "label_en": "Fed Policy Direction",
+          "short": "ทิศทาง Fed",
+          "weight": 0.2,
+          "worst": 0,
+          "best": 100,
+          "display": "{fed_policy_score:0}/100",
+          "range": "0 (ขึ้นแรง) → 100 (ลดต่อเนื่อง)",
+          "why": "Fed ผ่อนคลาย = ต้นทุนเงินลดและเศรษฐกิจได้แรงหนุน",
+          "source": "แถลงการณ์ FOMC (Claude ให้คะแนน)",
+          "source_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+          "frequency": "ทุก 6 สัปดาห์",
+          "kind": "estimate"
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "JPM",
+          "name": "JPMorgan Chase"
+        },
+        {
+          "ticker": "V",
+          "name": "Visa Inc."
+        },
+        {
+          "ticker": "GS",
+          "name": "Goldman Sachs"
+        }
+      ],
+      "rules": {
+        "X": {
+          "JPM": [
+            "BUY_DCA",
+            40
+          ],
+          "V": [
+            "BUY_DCA",
+            35
+          ],
+          "GS": [
+            "BUY_DCA",
+            25
+          ]
+        },
+        "W": {
+          "JPM": [
+            "BUY_DCA",
+            35
+          ],
+          "V": [
+            "OVERWEIGHT_DCA",
+            45
+          ],
+          "GS": [
+            "BUY_DCA",
+            20
+          ]
+        },
+        "D": {
+          "JPM": [
+            "BUY_DCA",
+            30
+          ],
+          "V": [
+            "OVERWEIGHT_DCA",
+            40
+          ],
+          "GS": [
+            "BUY_DCA",
+            10
+          ]
+        }
+      },
+      "rules_origin": "user",
+      "reasons": {
+        "X": {
+          "JPM": "ธนาคารใหญ่ได้ประโยชน์จากสินเชื่อโตและส่วนต่างดอกเบี้ย",
+          "V": "รายได้ผูกกับการใช้จ่ายผ่านบัตรที่โตตามเศรษฐกิจ",
+          "GS": "งานวาณิชธนกิจและการซื้อขายคึกคักในช่วงเศรษฐกิจขยายตัว"
+        },
+        "W": {
+          "JPM": "ยัง DCA ต่อ ลดน้ำหนักจาก 40% เหลือ 35% ระหว่างรอทิศทางดอกเบี้ยชัดเจน",
+          "V": "เพิ่มน้ำหนักจาก 35% เป็น 45% รายได้ค่าธรรมเนียมไม่มีความเสี่ยงหนี้เสียโดยตรง",
+          "GS": "ยัง DCA ต่อ ลดน้ำหนักจาก 25% เหลือ 20% รายได้ผันผวนตามตลาดทุน"
+        },
+        "D": {
+          "JPM": "ยัง DCA ต่อ 30% (ไม่หยุด ไม่ขาย) ธนาคารใหญ่ที่สุดมักฟื้นก่อนเมื่อวิกฤตผ่านไป",
+          "V": "น้ำหนักหลัก 40% ไม่มีความเสี่ยงสินเชื่อโดยตรง อีก 20% ของงบหมวดเก็บเป็นเงินสดสำรอง",
+          "GS": "ยัง DCA ต่อในน้ำหนักต่ำ 10% รายได้จากตลาดทุนมักลดลงแรงช่วงขาลง"
+        }
+      },
+      "alerts": [
+        {
+          "field": "yield_curve_10y2y_pct",
+          "op": "<",
+          "value": 0,
+          "zone": "D",
+          "title": "เส้นดอกเบี้ยกลับหัว",
+          "message": "ส่วนต่าง 10 ปี − 2 ปี เป็น {yield_curve_10y2y_pct:+2}% (เกณฑ์แจ้งเตือน: ต่ำกว่า 0)"
+        },
+        {
+          "field": "hy_oas_pct",
+          "op": ">",
+          "value": 5,
+          "zone": "D",
+          "title": "ส่วนต่างหุ้นกู้กว้างขึ้นแรง",
+          "message": "อยู่ที่ {hy_oas_pct:2}% (เกณฑ์แจ้งเตือน: เกิน 5%) ตลาดเริ่มกังวลหนี้เสีย"
+        }
+      ],
+      "rules_previous": {
+        "X": {
+          "JPM": [
+            "BUY_DCA",
+            40
+          ],
+          "V": [
+            "BUY_DCA",
+            35
+          ],
+          "GS": [
+            "BUY_DCA",
+            25
+          ]
+        },
+        "W": {
+          "JPM": [
+            "PAUSE_DCA",
+            0
+          ],
+          "V": [
+            "BUY_DCA",
+            50
+          ],
+          "GS": [
+            "PAUSE_DCA",
+            0
+          ]
+        },
+        "D": {
+          "JPM": [
+            "REDUCE_HOLDINGS",
+            0,
+            20
+          ],
+          "V": [
+            "HOLD",
+            0
+          ],
+          "GS": [
+            "REDUCE_HOLDINGS",
+            0,
+            30
+          ]
+        }
+      },
+      "rules_previous_origin": "draft",
+      "rules_version": 2,
+      "rules_note": "ทดสอบย้อนหลัง 35 ปี (หมวดการเงิน) พบว่าการหยุด DCA หรือขายตามสัญญาณวัฏจักรให้ผลแย่กว่า DCA ปกติ กฎชุดนี้จึง DCA ต่อทุกโซน ไม่หยุดและไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสดสำรอง 20% ในโซนชะลอตัว เพื่อใช้ซื้อเพิ่มเมื่อกลับเป็นโซนขยายตัว"
+    }
+  ]
 }
