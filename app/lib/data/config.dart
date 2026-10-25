@@ -132,6 +132,7 @@ class SectorConfig {
     required this.rulesFromUser,
     required this.reasons,
     required this.alerts,
+    this.rulesNote = '',
   });
 
   factory SectorConfig.fromJson(Map j) {
@@ -189,6 +190,7 @@ class SectorConfig {
       ],
       rules: rules,
       rulesFromUser: j['rules_origin'] == 'user',
+      rulesNote: _s(j['rules_note']),
       reasons: reasons,
       alerts: [
         for (final a in (j['alerts'] as List? ?? const [])) if (a is Map) AlertRule.fromJson(a),
@@ -207,6 +209,9 @@ class SectorConfig {
   final List<StockSpec> stocks;
   final Map<Zone, Map<String, RuleCell>> rules;
   final bool rulesFromUser;
+
+  /// Why the rules look the way they do (e.g. backtest outcome); empty if none.
+  final String rulesNote;
   final Map<Zone, Map<String, String>> reasons;
   final List<AlertRule> alerts;
 

@@ -5,6 +5,7 @@ import '../core/format.dart';
 import '../core/theme.dart';
 import '../data/engine.dart';
 import '../state/providers.dart';
+import 'backtest_screen.dart';
 import 'method_screen.dart';
 import 'widgets/common.dart';
 import 'widgets/gauge.dart';
@@ -26,6 +27,9 @@ class _SectorScreenState extends ConsumerState<SectorScreen> {
 
   void _openMethod() =>
       Navigator.of(context).push(MaterialPageRoute(builder: (_) => MethodScreen(sectorId: widget.sectorId)));
+
+  void _openBacktest() =>
+      Navigator.of(context).push(MaterialPageRoute(builder: (_) => BacktestScreen(sectorId: widget.sectorId)));
 
   @override
   Widget build(BuildContext context) {
@@ -190,6 +194,28 @@ class _SectorScreenState extends ConsumerState<SectorScreen> {
                       ? 'เงินสดสำรอง ${cashReservePct(vm.config, latest.zone).toStringAsFixed(0)}%'
                       : 'ลงทุนครบ 100%',
                 ),
+                if (vm.config.rulesNote.isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 12),
+                    child: SurfaceCard(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              const Icon(Icons.science_outlined, size: 18, color: AppColors.muted),
+                              const SizedBox(width: 8),
+                              const Expanded(child: Text('ทำไมกฎถึงไม่หยุด DCA', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600))),
+                            ],
+                          ),
+                          const SizedBox(height: 6),
+                          Text(vm.config.rulesNote, style: const TextStyle(fontSize: 12.5, color: AppColors.muted, height: 1.5)),
+                          const SizedBox(height: 4),
+                          TextLinkButton(label: 'ดูผลทดสอบย้อนหลัง', onTap: _openBacktest),
+                        ],
+                      ),
+                    ),
+                  ),
                 for (final r in vm.recommendations)
                   StockCard(key: ValueKey('s-${r.stock.ticker}'), rec: r, vm: vm, onEditRules: _openMethod, onMethod: _openMethod),
                 const Disclaimer(),

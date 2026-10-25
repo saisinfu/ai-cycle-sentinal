@@ -5,6 +5,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'backtest.dart';
 import 'config.dart';
 import 'models.dart';
 
@@ -86,6 +87,17 @@ class Repository {
       return MarketData.fromJson(jsonDecode(r.value));
     } catch (_) {
       return MarketData.empty;
+    }
+  }
+
+  /// Null when the file is missing and nothing is cached.
+  Future<BacktestSummary?> loadBacktest() async {
+    try {
+      final r = await _fetch('data/backtest.json');
+      final j = jsonDecode(r.value);
+      return j is Map ? BacktestSummary.fromJson(j) : null;
+    } catch (_) {
+      return null;
     }
   }
 }

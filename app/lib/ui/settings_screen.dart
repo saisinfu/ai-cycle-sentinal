@@ -5,6 +5,7 @@ import '../core/theme.dart';
 import '../data/engine.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
+import 'backtest_screen.dart';
 import 'tax_screen.dart';
 import 'widgets/common.dart';
 import 'widgets/number_field.dart';
@@ -120,18 +121,23 @@ class SettingsScreen extends ConsumerWidget {
             ),
           ),
           const SectionHeader(title: 'ข้อมูลและกฎ'),
-          const SurfaceCard(
+          SurfaceCard(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                TextLinkButton(
+                  label: 'ผลทดสอบย้อนหลังของกฎ',
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const BacktestScreen())),
+                ),
+                const SizedBox(height: 8),
+                const Text(
                   'Claude ค้นข้อมูลใหม่ทุกเช้า 08:00 น. แล้วบันทึกลง GitHub แอปดึงข้อมูลทุกครั้งที่เปิดหรือดึงหน้าจอลง '
                   'กฎจัดพอร์ต หุ้นในแต่ละหมวด และเกณฑ์คะแนน ปรับได้โดยบอก Claude ไม่ต้องติดตั้งแอปใหม่ '
                   'ส่วนตั้งค่าในหน้านี้เก็บไว้ในมือถือของคุณเท่านั้น',
                   style: TextStyle(fontSize: 12.5, color: AppColors.muted, height: 1.5),
                 ),
-                SizedBox(height: 6),
-                LinkRow(links: [('ไฟล์ข้อมูลบน GitHub', 'https://github.com/saisinfu/ai-cycle-sentinal/tree/main/data')]),
+                const SizedBox(height: 6),
+                const LinkRow(links: [('ไฟล์ข้อมูลบน GitHub', 'https://github.com/saisinfu/ai-cycle-sentinal/tree/main/data')]),
               ],
             ),
           ),

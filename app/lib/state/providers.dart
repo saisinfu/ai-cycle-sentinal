@@ -1,5 +1,6 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../data/backtest.dart';
 import '../data/budget.dart';
 import '../data/config.dart';
 import '../data/engine.dart';
@@ -12,6 +13,8 @@ final repositoryProvider = Provider<Repository>((ref) => Repository());
 final configProvider = FutureProvider<AppConfig>((ref) => ref.watch(repositoryProvider).loadConfig());
 
 final marketProvider = FutureProvider<MarketData>((ref) => ref.watch(repositoryProvider).loadMarket());
+
+final backtestProvider = FutureProvider<BacktestSummary?>((ref) => ref.watch(repositoryProvider).loadBacktest());
 
 final readingsProvider = FutureProvider.family<Loaded<List<Reading>>, String>(
   (ref, path) => ref.watch(repositoryProvider).loadReadings(path),
@@ -92,4 +95,5 @@ void refreshAll(WidgetRef ref) {
   ref.invalidate(configProvider);
   ref.invalidate(marketProvider);
   ref.invalidate(readingsProvider);
+  ref.invalidate(backtestProvider);
 }

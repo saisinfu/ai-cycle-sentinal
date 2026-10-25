@@ -7,6 +7,7 @@ import '../data/config.dart';
 import '../data/engine.dart';
 import '../data/zone.dart';
 import '../state/providers.dart';
+import 'backtest_screen.dart';
 import 'widgets/common.dart';
 
 /// Everything about how one sector's numbers are produced.
@@ -188,6 +189,14 @@ class MethodScreen extends ConsumerWidget {
                       ),
                     ),
                   ],
+                ),
+                if (cfg.rulesNote.isNotEmpty) ...[
+                  const SizedBox(height: 10),
+                  Text(cfg.rulesNote, style: const TextStyle(fontSize: 12.5, color: AppColors.muted, height: 1.5)),
+                ],
+                TextLinkButton(
+                  label: 'ดูผลทดสอบย้อนหลัง',
+                  onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => BacktestScreen(sectorId: cfg.id))),
                 ),
               ],
             ),
