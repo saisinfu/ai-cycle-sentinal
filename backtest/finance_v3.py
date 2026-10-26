@@ -184,9 +184,39 @@ def main() -> None:
     (fb.OUT / "finance_v3.json").write_text(json.dumps(res, indent=1, ensure_ascii=False, default=str))
     pd.concat({"v1": v1_idx, "v3": v3_idx}, axis=1).join(cand).round(3).to_csv(fb.OUT / "finance_v3_monthly.csv")
     chart(v1_idx, v3_idx, px)
+    if not args.synthetic:
+        add_to_app_summary(res)
     print(json.dumps({k: res[k] for k in ("candidates", "chosen", "latest_v3")}, indent=1, ensure_ascii=False, default=str))
     for k in ("v1", "v3"):
         print(k, json.dumps({x: res[k].get(x) for x in ("ic_test", "share_test", "flips_test", "strategy_test")}, default=str))
+
+
+def add_to_app_summary(res: dict) -> None:
+    """Append the out-of-sample verdict to data/backtest.json (written by finance_backtest.py)."""
+    target = fb.ROOT / "data" / "backtest.json"
+    if not target.exists():
+        return
+    d = json.loads(target.read_text())
+    f = d.get("sectors", {}).get("finance")
+    if not f:
+        return
+    v3 = res["v3"]
+    tr = fb._avg([v3["ic_train"].get(a) for a in ("^BKX", "JPM")])
+    te = fb._avg([v3["ic_test"].get(a) for a in ("^BKX", "JPM")])
+    names = " · ".join(c["label"] for c in res["chosen"])
+    f["robustness"] = [r for r in f.get("robustness", []) if not r.get("label", "").startswith("ดัชนีรุ่นทดลอง")]
+    f["robustness"].append({
+        "label": "ดัชนีรุ่นทดลอง (คัดสัญญาณจากข้อมูลก่อนปี 2010)",
+        "value": (f"ช่วงที่ใช้คัด ค่าสหสัมพันธ์ {tr:+.2f} แต่ช่วงทดสอบหลังปี 2010 เหลือ {te:+.2f} "
+                  f"จึงไม่นำมาใช้ (สัญญาณที่คัดได้: {names})"),
+    })
+    dq = next((c for c in res["candidates"] if c["key"] == "dq_level"), None)
+    if dq and dq.get("train_ic") and dq.get("test_ic"):
+        f["robustness"].append({
+            "label": "ดัชนีรุ่นทดลอง: หนี้บัตรเครดิตค้างชำระ",
+            "value": f"เป็นสัญญาณเดียวที่ได้ผลทั้งก่อนและหลังปี 2010 ({dq['train_ic']:+.2f} / {dq['test_ic']:+.2f}) แต่สัญญาณเดียวยังไม่พอใช้จับจังหวะ",
+        })
+    target.write_text(json.dumps(d, ensure_ascii=False, indent=1))
 
 
 def chart(v1, v3, px):
