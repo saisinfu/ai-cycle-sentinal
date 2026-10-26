@@ -1,11 +1,11 @@
 {
- "updated_at": "2026-10-24T11:30:00+00:00",
+ "updated_at": "2026-10-26T08:54:39+00:00",
  "readings": [
   {
    "date": "2026-10-24",
    "indicators": {
     "yield_curve_10y2y_pct": 0.31,
-    "hy_oas_pct": 3.40,
+    "hy_oas_pct": 3.4,
     "loan_growth_pct": 7.1,
     "cc_delinquency_pct": 2.85,
     "fed_policy_score": 35
@@ -26,17 +26,119 @@
     "fed_policy": "Fed ขึ้นดอกเบี้ย 0.25% เป็น 3.75–4.00% เมื่อ 16 ก.ย. 2026 เพื่อคุมเงินเฟ้อ ทิศทางเข้มงวดขึ้น จึงให้ 35/100 (ประชุมถัดไป 28 ต.ค.)",
     "prices": "ราคาปิด 23 ต.ค. 2026 จาก stockanalysis.com"
    },
-   "prices": { "JPM": 331.58, "V": 407.92, "GS": 875.68 },
+   "prices": {
+    "JPM": 331.58,
+    "V": 407.92,
+    "GS": 875.68
+   },
    "prices_as_of": "2026-10-23",
    "sources": [
-    { "key": "yield_curve", "label": "FRED · T10Y2Y", "url": "https://fred.stlouisfed.org/series/T10Y2Y" },
-    { "key": "credit_spread", "label": "FRED · BAMLH0A0HYM2", "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2" },
-    { "key": "loan_growth", "label": "Fed H.8 (9 ต.ค. 2026)", "url": "https://www.federalreserve.gov/releases/h8/20261009/" },
-    { "key": "delinquency", "label": "FRED · DRCCLACBS", "url": "https://fred.stlouisfed.org/series/DRCCLACBS" },
-    { "key": "fed_policy", "label": "แถลงการณ์ FOMC 16 ก.ย. 2026", "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm" },
-    { "key": "prices", "label": "JPM", "url": "https://stockanalysis.com/stocks/jpm/statistics/" },
-    { "key": "prices", "label": "V", "url": "https://stockanalysis.com/stocks/v/statistics/" },
-    { "key": "prices", "label": "GS", "url": "https://stockanalysis.com/stocks/gs/statistics/" }
+    {
+     "key": "yield_curve",
+     "label": "FRED · T10Y2Y",
+     "url": "https://fred.stlouisfed.org/series/T10Y2Y"
+    },
+    {
+     "key": "credit_spread",
+     "label": "FRED · BAMLH0A0HYM2",
+     "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+    },
+    {
+     "key": "loan_growth",
+     "label": "Fed H.8 (9 ต.ค. 2026)",
+     "url": "https://www.federalreserve.gov/releases/h8/20261009/"
+    },
+    {
+     "key": "delinquency",
+     "label": "FRED · DRCCLACBS",
+     "url": "https://fred.stlouisfed.org/series/DRCCLACBS"
+    },
+    {
+     "key": "fed_policy",
+     "label": "แถลงการณ์ FOMC 16 ก.ย. 2026",
+     "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+    },
+    {
+     "key": "prices",
+     "label": "JPM",
+     "url": "https://stockanalysis.com/stocks/jpm/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "V",
+     "url": "https://stockanalysis.com/stocks/v/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "GS",
+     "url": "https://stockanalysis.com/stocks/gs/statistics/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-10-26",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.31,
+    "hy_oas_pct": 3.4,
+    "loan_growth_pct": 7.1,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 35
+   },
+   "confidence": {
+    "yield_curve": "high",
+    "credit_spread": "high",
+    "loan_growth": "medium",
+    "delinquency": "high",
+    "fed_policy": "low",
+    "prices": "high"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่างพันธบัตรสหรัฐฯ 10 ปี ลบ 2 ปี +0.31% (23 ต.ค. 2026) เท่ากับครั้งก่อน เส้นยังเป็นบวกแต่แบน",
+    "credit_spread": "ส่วนต่างหุ้นกู้เสี่ยงสูง 3.40% (ข้อมูลล่าสุด 22 ต.ค. 2026 ยังไม่มีค่าใหม่) ตลาดยังไม่กังวลหนี้เสีย",
+    "loan_growth": "ใช้ค่าเดิม ~7.1% ต่อปี (เฉลี่ยรายไตรมาส Q4/2025–Q3/2026 จากรายงาน H.8) ยังไม่มีข้อมูลไตรมาสใหม่",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) ไม่มีข้อมูลใหม่ ข้อมูลไตรมาส 3 คาดออกปลาย พ.ย.",
+    "fed_policy": "คงไว้ 35/100: Fed ขึ้นดอกเบี้ยเป็น 3.75–4.00% เมื่อ 16 ก.ย. ประชุมครั้งถัดไป 28 ต.ค. (มะรืนนี้) จะปรับคะแนนหลังประชุม",
+    "prices": "ใช้ราคาปิด 23 ต.ค. 2026: JPM $331.58, V $407.92, GS $875.68 (ตลาดสหรัฐฯ ยังไม่เปิดวันนี้)"
+   },
+   "prices": {
+    "JPM": 331.58,
+    "V": 407.92,
+    "GS": 875.68
+   },
+   "prices_as_of": "2026-10-23",
+   "sources": [
+    {
+     "key": "yield_curve",
+     "label": "FRED · T10Y2Y",
+     "url": "https://fred.stlouisfed.org/series/T10Y2Y"
+    },
+    {
+     "key": "credit_spread",
+     "label": "FRED · BAMLH0A0HYM2 (graph)",
+     "url": "https://fred.stlouisfed.org/graph/?g=1iMh5"
+    },
+    {
+     "key": "delinquency",
+     "label": "FRED · DRCCLACBS",
+     "url": "https://fred.stlouisfed.org/series/DRCCLACBS"
+    },
+    {
+     "key": "prices",
+     "label": "JPM",
+     "url": "https://stockanalysis.com/stocks/jpm/"
+    },
+    {
+     "key": "prices",
+     "label": "V",
+     "url": "https://stockanalysis.com/stocks/v/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "GS",
+     "url": "https://stockanalysis.com/stocks/gs/statistics/"
+    }
    ],
    "created_by": "claude",
    "method_version": 1

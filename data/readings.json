@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-24T05:49:39+00:00",
+ "updated_at": "2026-10-26T08:54:39+00:00",
  "readings": [
   {
    "confidence": {
@@ -534,6 +534,79 @@
      "key": "prices",
      "label": "ETN history (StockAnalysis)",
      "url": "https://stockanalysis.com/stocks/etn/history/"
+    }
+   ]
+  },
+  {
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "high",
+    "enterprise_adoption": "medium",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "created_by": "claude",
+   "date": "2026-10-26",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "enterprise_ai_adoption_pct": 65.7,
+    "gpu_spot_price_change_1m_pct": 6.3,
+    "gpu_spot_price_usd_hr": 3.03,
+    "power_grid_stress_level": 8.7
+   },
+   "method_version": 1,
+   "notes_th": {
+    "capex_vs_revenue": "ยังใช้ค่าเดิม 1.51 เท่า (งบไตรมาส 2/2026) Microsoft, Alphabet และ Amazon จะประกาศงบไตรมาส 3 ในสัปดาห์นี้ (ปลาย ต.ค.) แล้วจะคำนวณใหม่",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ที่เปลี่ยนภาพ",
+    "gpu_spot_price": "ดัชนี OCPI-H100 ปิดที่ $3.03/ชม. (25 ต.ค. 2026) ลดลงจาก $3.17 (23 ต.ค.) แต่ยังสูงกว่า 30 วันก่อน 6.3% (ครั้งก่อน +3.9%)",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ ก.ย. 2026 = 65.7% เทียบ มิ.ย. 63.7% (+2.1 จุด) เท่าเดิม",
+    "power_grid": "คงไว้ที่ 8.7/10 ยังไม่มีผลการประมูล backstop ของ PJM ข่าวล่าสุด (PJM เร่งรับโรงไฟฟ้าใหม่ 2.1 GW ที่จะเริ่มจ่ายไฟปี 2029, หลายเมืองพักการสร้างดาต้าเซ็นเตอร์) ยังสะท้อนว่าไฟฟ้าตึงตัว",
+    "prices": "ตลาดสหรัฐฯ ยังไม่เปิดวันจันทร์ ใช้ราคาปิด 23 ต.ค. 2026: KLAC $145.61, AVGO $321.68, ETN $366.11 (ไม่เปลี่ยนจากครั้งก่อน)"
+   },
+   "prices": {
+    "KLAC": 145.61,
+    "AVGO": 321.68,
+    "ETN": 366.11
+   },
+   "prices_as_of": "2026-10-23",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index – large businesses (FRED)",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM fast-tracks 2.1 GW (ChargedUp)",
+     "url": "https://www.chargeduppro.com/p/pjm-fast-tracks-21-gw-of-generation"
+    },
+    {
+     "key": "power_grid",
+     "label": "FERC OKs PJM data center registry (Tech Insider)",
+     "url": "https://tech-insider.org/ferc-pjm-data-center-registry-curtailment-2026/"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/avgo/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "ETN (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/etn/statistics/"
     }
    ]
   }

@@ -1,15 +1,91 @@
 {
- "updated_at": "2026-10-24T11:30:00+00:00",
+ "updated_at": "2026-10-26T08:54:39+00:00",
  "quotes": {
-  "KLAC": { "price": 145.61, "currency": "USD", "as_of": "2026-10-23", "ma200": 181.64, "pe": 39.78, "pe_5y_avg": 29.15, "source_url": "https://stockanalysis.com/stocks/klac/statistics/", "pe_source_url": "https://fullratio.com/stocks/nasdaq-klac/pe-ratio" },
-  "AVGO": { "price": 321.68, "currency": "USD", "as_of": "2026-10-23", "ma200": 367.82, "pe": 41.06, "pe_5y_avg": 53.65, "source_url": "https://stockanalysis.com/stocks/avgo/statistics/", "pe_source_url": "https://fullratio.com/stocks/nasdaq-avgo/pe-ratio" },
-  "ETN": { "price": 366.11, "currency": "USD", "as_of": "2026-10-23", "ma200": 395.56, "pe": 37.27, "pe_5y_avg": 31.28, "source_url": "https://stockanalysis.com/stocks/etn/statistics/", "pe_source_url": "https://fullratio.com/stocks/nyse-etn/pe-ratio" },
-  "JPM": { "price": 331.58, "currency": "USD", "as_of": "2026-10-23", "ma200": 322.51, "pe": 13.92, "pe_5y_avg": 11.64, "source_url": "https://stockanalysis.com/stocks/jpm/statistics/", "pe_source_url": "https://fullratio.com/stocks/nyse-jpm/pe-ratio" },
-  "V": { "price": 407.92, "currency": "USD", "as_of": "2026-10-23", "ma200": 340.56, "pe": 34.73, "pe_5y_avg": 30.69, "source_url": "https://stockanalysis.com/stocks/v/statistics/", "pe_source_url": "https://fullratio.com/stocks/nyse-v/pe-ratio" },
-  "GS": { "price": 875.68, "currency": "USD", "as_of": "2026-10-23", "ma200": 958.56, "pe": 12.60, "pe_5y_avg": 12.95, "source_url": "https://stockanalysis.com/stocks/gs/statistics/", "pe_source_url": "https://fullratio.com/stocks/nyse-gs/pe-ratio" },
-  "GLD": { "price": 366.61, "currency": "USD", "as_of": "2026-10-23", "source_url": "https://stockanalysis.com/etf/gld/" },
-  "SPY": { "price": 759.97, "currency": "USD", "as_of": "2026-10-23", "source_url": "https://stockanalysis.com/etf/spy/" },
-  "QQQ": { "price": 704.40, "currency": "USD", "as_of": "2026-10-23", "source_url": "https://stockanalysis.com/etf/qqq/" },
-  "KKP.BK": { "price": 117.50, "currency": "THB", "as_of": "2026-10-20", "ma200": 90.61, "pe": 11.92, "source_url": "https://stockanalysis.com/quote/bkk/KKP/statistics/" }
+  "KLAC": {
+   "price": 145.61,
+   "currency": "USD",
+   "as_of": "2026-10-23",
+   "ma200": 181.64,
+   "pe": 39.78,
+   "pe_5y_avg": 29.15,
+   "source_url": "https://stockanalysis.com/stocks/klac/statistics/",
+   "pe_source_url": "https://fullratio.com/stocks/nasdaq-klac/pe-ratio"
+  },
+  "AVGO": {
+   "price": 321.68,
+   "currency": "USD",
+   "as_of": "2026-10-23",
+   "ma200": 367.82,
+   "pe": 41.06,
+   "pe_5y_avg": 40.19,
+   "source_url": "https://stockanalysis.com/stocks/avgo/statistics/",
+   "pe_source_url": "https://fullratio.com/stocks/nasdaq-avgo/pe-ratio"
+  },
+  "ETN": {
+   "price": 366.11,
+   "currency": "USD",
+   "as_of": "2026-10-23",
+   "ma200": 395.56,
+   "pe": 37.27,
+   "pe_5y_avg": 31.28,
+   "source_url": "https://stockanalysis.com/stocks/etn/statistics/",
+   "pe_source_url": "https://fullratio.com/stocks/nyse-etn/pe-ratio"
+  },
+  "JPM": {
+   "price": 331.58,
+   "currency": "USD",
+   "as_of": "2026-10-23",
+   "ma200": 322.51,
+   "pe": 13.92,
+   "pe_5y_avg": 11.64,
+   "source_url": "https://stockanalysis.com/stocks/jpm/statistics/",
+   "pe_source_url": "https://fullratio.com/stocks/nyse-jpm/pe-ratio"
+  },
+  "V": {
+   "price": 407.92,
+   "currency": "USD",
+   "as_of": "2026-10-23",
+   "ma200": 340.56,
+   "pe": 34.73,
+   "pe_5y_avg": 30.69,
+   "source_url": "https://stockanalysis.com/stocks/v/statistics/",
+   "pe_source_url": "https://fullratio.com/stocks/nyse-v/pe-ratio"
+  },
+  "GS": {
+   "price": 875.68,
+   "currency": "USD",
+   "as_of": "2026-10-23",
+   "ma200": 958.56,
+   "pe": 12.6,
+   "pe_5y_avg": 12.95,
+   "source_url": "https://stockanalysis.com/stocks/gs/statistics/",
+   "pe_source_url": "https://fullratio.com/stocks/nyse-gs/pe-ratio"
+  },
+  "GLD": {
+   "price": 366.61,
+   "currency": "USD",
+   "as_of": "2026-10-23",
+   "source_url": "https://stockanalysis.com/etf/gld/"
+  },
+  "SPY": {
+   "price": 759.97,
+   "currency": "USD",
+   "as_of": "2026-10-23",
+   "source_url": "https://stockanalysis.com/etf/spy/"
+  },
+  "QQQ": {
+   "price": 704.4,
+   "currency": "USD",
+   "as_of": "2026-10-23",
+   "source_url": "https://stockanalysis.com/etf/qqq/"
+  },
+  "KKP.BK": {
+   "price": 117.5,
+   "currency": "THB",
+   "as_of": "2026-10-20",
+   "ma200": 90.61,
+   "pe": 11.92,
+   "source_url": "https://stockanalysis.com/quote/bkk/KKP/statistics/"
+  }
  }
 }
