@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T05:15:17.604833+00:00",
+ "generated": "2026-10-26T05:19:45.482813+00:00",
  "synthetic": false,
  "split": "2010-01-01",
  "procedure": "Candidate finance index v3: signals picked on pre-2010 data only, judged on 2010+.\n\nProcedure (fixed before looking at the test years):\n1. Candidate signals, each with a direction set from economic reasoning, not from the data.\n2. Anchors (worst/best) = 10th/90th percentile of the TRAIN period (to end-2009).\n3. Keep candidates whose TRAIN correlation with next-12-month bank returns is >= 0.05\n   (average of KBW bank index and JPM); weight them in proportion to that correlation.\n4. Judge on the TEST period (2010+): correlation, returns by zone, and DCA strategies\n   (current tilt rules, and a stronger variant) against plain DCA and against the v1 index.\n\nRun: python backtest/finance_v3.py [--synthetic]\n",
