@@ -29,6 +29,10 @@ jobs:
       - name: Run backtest
         timeout-minutes: 15
         run: python -u backtest/finance_backtest.py 2>&1 | tee backtest/results/run.log; exit ${PIPESTATUS[0]}
+      - name: Run v3 candidate
+        if: always()
+        timeout-minutes: 15
+        run: python -u backtest/finance_v3.py 2>&1 | tee backtest/results/run_v3.log; exit ${PIPESTATUS[0]}
       - name: Commit results
         if: always()
         run: |
