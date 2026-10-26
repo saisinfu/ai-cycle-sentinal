@@ -1,0 +1,621 @@
+{
+ "generated": "2026-10-26T05:15:17.604833+00:00",
+ "synthetic": false,
+ "split": "2010-01-01",
+ "procedure": "Candidate finance index v3: signals picked on pre-2010 data only, judged on 2010+.\n\nProcedure (fixed before looking at the test years):\n1. Candidate signals, each with a direction set from economic reasoning, not from the data.\n2. Anchors (worst/best) = 10th/90th percentile of the TRAIN period (to end-2009).\n3. Keep candidates whose TRAIN correlation with next-12-month bank returns is >= 0.05\n   (average of KBW bank index and JPM); weight them in proportion to that correlation.\n4. Judge on the TEST period (2010+): correlation, returns by zone, and DCA strategies\n   (current tilt rules, and a stronger variant) against plain DCA and against the v1 index.\n\nRun: python backtest/finance_v3.py [--synthetic]\n",
+ "candidates": [
+  {
+   "key": "dq_level",
+   "label": "หนี้บัตรเครดิตค้างชำระ (ระดับ)",
+   "dir": -1,
+   "worst": 5.26,
+   "best": 3.7,
+   "train_ic": 0.154,
+   "test_ic": 0.251,
+   "first": "1991-08-31"
+  },
+  {
+   "key": "dq_change_12m",
+   "label": "หนี้ค้างชำระเปลี่ยนจาก 12 เดือนก่อน",
+   "dir": -1,
+   "worst": 0.65,
+   "best": -0.642,
+   "train_ic": 0.0905,
+   "test_ic": -0.2885,
+   "first": "1992-08-31"
+  },
+  {
+   "key": "credit_momentum_6m",
+   "label": "กองทุนหุ้นกู้เสี่ยงสูง vs พันธบัตรรัฐ (6 เดือน)",
+   "dir": 1,
+   "worst": -7.872,
+   "best": 6.473,
+   "train_ic": 0.098,
+   "test_ic": 0.0235,
+   "first": "1992-04-30"
+  },
+  {
+   "key": "bank_trend_10m",
+   "label": "หุ้นธนาคารเทียบเส้นเฉลี่ย 10 เดือน",
+   "dir": 1,
+   "worst": -11.988,
+   "best": 14.437,
+   "train_ic": 0.127,
+   "test_ic": -0.15,
+   "first": "1993-11-30"
+  },
+  {
+   "key": "market_trend_10m",
+   "label": "S&P 500 เทียบเส้นเฉลี่ย 10 เดือน",
+   "dir": 1,
+   "worst": -8.288,
+   "best": 12.357,
+   "train_ic": 0.14600000000000002,
+   "test_ic": -0.092,
+   "first": "1993-10-31"
+  },
+  {
+   "key": "yield_curve",
+   "label": "ส่วนต่างดอกเบี้ย 10 ปี − 2 ปี",
+   "dir": 1,
+   "worst": -0.01,
+   "best": 2.31,
+   "train_ic": 0.044,
+   "test_ic": -0.22399999999999998,
+   "first": "1991-08-31"
+  },
+  {
+   "key": "loan_growth",
+   "label": "การเติบโตสินเชื่อ",
+   "dir": 1,
+   "worst": -0.103,
+   "best": 11.716,
+   "train_ic": -0.053500000000000006,
+   "test_ic": 0.223,
+   "first": "1991-08-31"
+  },
+  {
+   "key": "fed_policy",
+   "label": "ทิศทาง Fed (ผ่อนคลาย = ดี)",
+   "dir": 1,
+   "worst": 0.0,
+   "best": 100.0,
+   "train_ic": -0.246,
+   "test_ic": -0.02149999999999999,
+   "first": "1991-08-31"
+  }
+ ],
+ "chosen": [
+  {
+   "key": "dq_level",
+   "label": "หนี้บัตรเครดิตค้างชำระ (ระดับ)",
+   "weight": 0.25,
+   "worst": 5.26,
+   "best": 3.7,
+   "live": "FRED DRCCLACBS"
+  },
+  {
+   "key": "dq_change_12m",
+   "label": "หนี้ค้างชำระเปลี่ยนจาก 12 เดือนก่อน",
+   "weight": 0.147,
+   "worst": 0.65,
+   "best": -0.642,
+   "live": "FRED DRCCLACBS"
+  },
+  {
+   "key": "credit_momentum_6m",
+   "label": "กองทุนหุ้นกู้เสี่ยงสูง vs พันธบัตรรัฐ (6 เดือน)",
+   "weight": 0.159,
+   "worst": -7.872,
+   "best": 6.473,
+   "live": "HYG vs IEF ผลตอบแทน 6 เดือน"
+  },
+  {
+   "key": "bank_trend_10m",
+   "label": "หุ้นธนาคารเทียบเส้นเฉลี่ย 10 เดือน",
+   "weight": 0.206,
+   "worst": -11.988,
+   "best": 14.437,
+   "live": "XLF เทียบเส้นเฉลี่ย 200 วัน"
+  },
+  {
+   "key": "market_trend_10m",
+   "label": "S&P 500 เทียบเส้นเฉลี่ย 10 เดือน",
+   "weight": 0.237,
+   "worst": -8.288,
+   "best": 12.357,
+   "live": "SPY เทียบเส้นเฉลี่ย 200 วัน"
+  }
+ ],
+ "v1": {
+  "label": "v1 (current app index)",
+  "from": "1991-08-31",
+  "flips_test": 4,
+  "share_test": {
+   "X": 0.204,
+   "W": 0.796,
+   "D": 0.0
+  },
+  "ic_test": {
+   "XLF": 0.107,
+   "^BKX": 0.109,
+   "KBE": 0.159,
+   "JPM": 0.02
+  },
+  "ic_train": {
+   "XLF": -0.267,
+   "^BKX": -0.1,
+   "KBE": -0.541,
+   "JPM": 0.02
+  },
+  "forward_test": {
+   "XLF": {
+    "X": {
+     "months": 41,
+     "share": 0.217,
+     "fwd6_mean": 8.9,
+     "fwd12_mean": 21.1,
+     "fwd12_median": 19.6,
+     "fwd12_neg_share": 0.22,
+     "worst_dd_next12_mean": -3.1
+    },
+    "W": {
+     "months": 148,
+     "share": 0.783,
+     "fwd6_mean": 5.8,
+     "fwd12_mean": 11.3,
+     "fwd12_median": 11.1,
+     "fwd12_neg_share": 0.304,
+     "worst_dd_next12_mean": -6.6
+    }
+   },
+   "^BKX": {
+    "X": {
+     "months": 41,
+     "share": 0.217,
+     "fwd6_mean": 9.8,
+     "fwd12_mean": 22.5,
+     "fwd12_median": 16.3,
+     "fwd12_neg_share": 0.22,
+     "worst_dd_next12_mean": -6.5
+    },
+    "W": {
+     "months": 148,
+     "share": 0.783,
+     "fwd6_mean": 3.9,
+     "fwd12_mean": 8.0,
+     "fwd12_median": 7.9,
+     "fwd12_neg_share": 0.432,
+     "worst_dd_next12_mean": -11.2
+    }
+   },
+   "JPM": {
+    "X": {
+     "months": 41,
+     "share": 0.217,
+     "fwd6_mean": 13.5,
+     "fwd12_mean": 30.2,
+     "fwd12_median": 28.0,
+     "fwd12_neg_share": 0.073,
+     "worst_dd_next12_mean": -3.9
+    },
+    "W": {
+     "months": 148,
+     "share": 0.783,
+     "fwd6_mean": 8.3,
+     "fwd12_mean": 16.7,
+     "fwd12_median": 16.2,
+     "fwd12_neg_share": 0.257,
+     "worst_dd_next12_mean": -7.7
+    }
+   }
+  },
+  "strategy_test": {
+   "XLF": {
+    "current_rules": {
+     "irr_diff_pp": 0.0,
+     "plain_irr": 12.34,
+     "dd_rules": -30.9,
+     "dd_plain": -30.9,
+     "from": "2010-01-31"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.86,
+     "plain_irr": 12.34,
+     "dd_rules": -28.1,
+     "dd_plain": -30.9,
+     "from": "2010-01-31"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": 0.0,
+     "plain_irr": 12.34,
+     "dd_rules": -30.9,
+     "dd_plain": -30.9,
+     "from": "2010-01-31"
+    }
+   },
+   "^BKX": {
+    "current_rules": {
+     "irr_diff_pp": 0.0,
+     "plain_irr": 8.7,
+     "dd_rules": -41.3,
+     "dd_plain": -41.3,
+     "from": "2010-01-31"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.61,
+     "plain_irr": 8.7,
+     "dd_rules": -38.0,
+     "dd_plain": -41.3,
+     "from": "2010-01-31"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": 0.0,
+     "plain_irr": 8.7,
+     "dd_rules": -41.3,
+     "dd_plain": -41.3,
+     "from": "2010-01-31"
+    }
+   },
+   "JPM": {
+    "current_rules": {
+     "irr_diff_pp": 0.0,
+     "plain_irr": 18.5,
+     "dd_rules": -35.3,
+     "dd_plain": -35.3,
+     "from": "2010-01-31"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -1.01,
+     "plain_irr": 18.5,
+     "dd_rules": -34.3,
+     "dd_plain": -35.3,
+     "from": "2010-01-31"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": 0.0,
+     "plain_irr": 18.5,
+     "dd_rules": -35.3,
+     "dd_plain": -35.3,
+     "from": "2010-01-31"
+    }
+   }
+  },
+  "strategy_full": {
+   "XLF": {
+    "current_rules": {
+     "irr_diff_pp": -0.0,
+     "plain_irr": 8.19,
+     "dd_rules": -73.8,
+     "dd_plain": -73.8,
+     "from": "1998-12-31"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.37,
+     "plain_irr": 8.19,
+     "dd_rules": -72.0,
+     "dd_plain": -73.8,
+     "from": "1998-12-31"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": -0.0,
+     "plain_irr": 8.19,
+     "dd_rules": -73.8,
+     "dd_plain": -73.8,
+     "from": "1998-12-31"
+    }
+   },
+   "^BKX": {
+    "current_rules": {
+     "irr_diff_pp": -0.0,
+     "plain_irr": 5.05,
+     "dd_rules": -77.3,
+     "dd_plain": -77.3,
+     "from": "1993-02-28"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.46,
+     "plain_irr": 5.05,
+     "dd_rules": -76.3,
+     "dd_plain": -77.3,
+     "from": "1993-02-28"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": -0.0,
+     "plain_irr": 5.05,
+     "dd_rules": -77.3,
+     "dd_plain": -77.3,
+     "from": "1993-02-28"
+    }
+   },
+   "JPM": {
+    "current_rules": {
+     "irr_diff_pp": 0.0,
+     "plain_irr": 13.33,
+     "dd_rules": -60.7,
+     "dd_plain": -60.8,
+     "from": "1991-08-31"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.96,
+     "plain_irr": 13.33,
+     "dd_rules": -55.8,
+     "dd_plain": -60.8,
+     "from": "1991-08-31"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": 0.0,
+     "plain_irr": 13.33,
+     "dd_rules": -60.7,
+     "dd_plain": -60.8,
+     "from": "1991-08-31"
+    }
+   }
+  }
+ },
+ "v3": {
+  "label": "v3 candidate",
+  "from": "1993-11-30",
+  "flips_test": 25,
+  "share_test": {
+   "X": 0.542,
+   "W": 0.423,
+   "D": 0.035
+  },
+  "ic_test": {
+   "XLF": -0.022,
+   "^BKX": -0.001,
+   "KBE": 0.008,
+   "JPM": -0.217
+  },
+  "ic_train": {
+   "XLF": 0.092,
+   "^BKX": 0.294,
+   "KBE": 0.222,
+   "JPM": 0.302
+  },
+  "forward_test": {
+   "XLF": {
+    "X": {
+     "months": 98,
+     "share": 0.519,
+     "fwd6_mean": 6.6,
+     "fwd12_mean": 12.6,
+     "fwd12_median": 14.4,
+     "fwd12_neg_share": 0.286,
+     "worst_dd_next12_mean": -4.8
+    },
+    "W": {
+     "months": 84,
+     "share": 0.444,
+     "fwd6_mean": 5.8,
+     "fwd12_mean": 13.9,
+     "fwd12_median": 8.5,
+     "fwd12_neg_share": 0.286,
+     "worst_dd_next12_mean": -7.3
+    },
+    "D": {
+     "months": 7,
+     "share": 0.037,
+     "fwd6_mean": 12.9,
+     "fwd12_mean": 19.5,
+     "fwd12_median": 9.0,
+     "fwd12_neg_share": 0.286,
+     "worst_dd_next12_mean": -3.2
+    }
+   },
+   "^BKX": {
+    "X": {
+     "months": 98,
+     "share": 0.519,
+     "fwd6_mean": 5.8,
+     "fwd12_mean": 11.2,
+     "fwd12_median": 14.2,
+     "fwd12_neg_share": 0.306,
+     "worst_dd_next12_mean": -7.5
+    },
+    "W": {
+     "months": 84,
+     "share": 0.444,
+     "fwd6_mean": 4.2,
+     "fwd12_mean": 10.4,
+     "fwd12_median": 2.1,
+     "fwd12_neg_share": 0.476,
+     "worst_dd_next12_mean": -13.6
+    },
+    "D": {
+     "months": 7,
+     "share": 0.037,
+     "fwd6_mean": 8.9,
+     "fwd12_mean": 17.5,
+     "fwd12_median": 0.3,
+     "fwd12_neg_share": 0.429,
+     "worst_dd_next12_mean": -7.3
+    }
+   },
+   "JPM": {
+    "X": {
+     "months": 98,
+     "share": 0.519,
+     "fwd6_mean": 7.6,
+     "fwd12_mean": 16.2,
+     "fwd12_median": 17.4,
+     "fwd12_neg_share": 0.245,
+     "worst_dd_next12_mean": -7.3
+    },
+    "W": {
+     "months": 84,
+     "share": 0.444,
+     "fwd6_mean": 11.3,
+     "fwd12_mean": 23.4,
+     "fwd12_median": 21.5,
+     "fwd12_neg_share": 0.19,
+     "worst_dd_next12_mean": -6.7
+    },
+    "D": {
+     "months": 7,
+     "share": 0.037,
+     "fwd6_mean": 12.3,
+     "fwd12_mean": 21.6,
+     "fwd12_median": 10.3,
+     "fwd12_neg_share": 0.143,
+     "worst_dd_next12_mean": -4.5
+    }
+   }
+  },
+  "strategy_test": {
+   "XLF": {
+    "current_rules": {
+     "irr_diff_pp": -0.02,
+     "plain_irr": 12.34,
+     "dd_rules": -30.9,
+     "dd_plain": -30.9,
+     "from": "2010-01-31"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.59,
+     "plain_irr": 12.34,
+     "dd_rules": -30.8,
+     "dd_plain": -30.9,
+     "from": "2010-01-31"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": -0.05,
+     "plain_irr": 12.34,
+     "dd_rules": -30.9,
+     "dd_plain": -30.9,
+     "from": "2010-01-31"
+    }
+   },
+   "^BKX": {
+    "current_rules": {
+     "irr_diff_pp": -0.02,
+     "plain_irr": 8.7,
+     "dd_rules": -41.3,
+     "dd_plain": -41.3,
+     "from": "2010-01-31"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.49,
+     "plain_irr": 8.7,
+     "dd_rules": -41.3,
+     "dd_plain": -41.3,
+     "from": "2010-01-31"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": -0.04,
+     "plain_irr": 8.7,
+     "dd_rules": -41.3,
+     "dd_plain": -41.3,
+     "from": "2010-01-31"
+    }
+   },
+   "JPM": {
+    "current_rules": {
+     "irr_diff_pp": -0.02,
+     "plain_irr": 18.5,
+     "dd_rules": -35.3,
+     "dd_plain": -35.3,
+     "from": "2010-01-31"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.68,
+     "plain_irr": 18.5,
+     "dd_rules": -35.0,
+     "dd_plain": -35.3,
+     "from": "2010-01-31"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": -0.05,
+     "plain_irr": 18.5,
+     "dd_rules": -35.3,
+     "dd_plain": -35.3,
+     "from": "2010-01-31"
+    }
+   }
+  },
+  "strategy_full": {
+   "XLF": {
+    "current_rules": {
+     "irr_diff_pp": -0.02,
+     "plain_irr": 8.19,
+     "dd_rules": -72.7,
+     "dd_plain": -73.8,
+     "from": "1998-12-31"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.09,
+     "plain_irr": 8.19,
+     "dd_rules": -55.2,
+     "dd_plain": -73.8,
+     "from": "1998-12-31"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": -0.05,
+     "plain_irr": 8.19,
+     "dd_rules": -71.1,
+     "dd_plain": -73.8,
+     "from": "1998-12-31"
+    }
+   },
+   "^BKX": {
+    "current_rules": {
+     "irr_diff_pp": -0.01,
+     "plain_irr": 5.0,
+     "dd_rules": -76.4,
+     "dd_plain": -77.0,
+     "from": "1993-11-30"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.07,
+     "plain_irr": 5.0,
+     "dd_rules": -63.0,
+     "dd_plain": -77.0,
+     "from": "1993-11-30"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": -0.03,
+     "plain_irr": 5.0,
+     "dd_rules": -75.6,
+     "dd_plain": -77.0,
+     "from": "1993-11-30"
+    }
+   },
+   "JPM": {
+    "current_rules": {
+     "irr_diff_pp": -0.03,
+     "plain_irr": 13.14,
+     "dd_rules": -57.8,
+     "dd_plain": -58.6,
+     "from": "1993-11-30"
+    },
+    "previous_rules": {
+     "irr_diff_pp": -0.31,
+     "plain_irr": 13.14,
+     "dd_rules": -41.2,
+     "dd_plain": -58.6,
+     "from": "1993-11-30"
+    },
+    "strong_tilt": {
+     "irr_diff_pp": -0.07,
+     "plain_irr": 13.14,
+     "dd_rules": -56.6,
+     "dd_plain": -58.6,
+     "from": "1993-11-30"
+    }
+   }
+  }
+ },
+ "latest_v3": {
+  "date": "2026-09-30",
+  "index": 72.3,
+  "zone": "X",
+  "values": {
+   "dq_level": 2.91,
+   "dq_change_12m": -0.14,
+   "credit_momentum_6m": 3.5,
+   "bank_trend_10m": -0.52,
+   "market_trend_10m": 6.27
+  }
+ }
+}
