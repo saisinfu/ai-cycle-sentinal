@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-26T08:55:17+00:00",
+ "updated_at": "2026-10-27T01:10:55+00:00",
  "readings": [
   {
    "date": "2026-10-24",
@@ -138,6 +138,72 @@
      "key": "prices",
      "label": "GS",
      "url": "https://stockanalysis.com/stocks/gs/statistics/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-10-27",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.32,
+    "hy_oas_pct": 3.38,
+    "loan_growth_pct": 7.1,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 35
+   },
+   "confidence": {
+    "yield_curve": "high",
+    "credit_spread": "high",
+    "loan_growth": "medium",
+    "delinquency": "high",
+    "fed_policy": "low",
+    "prices": "high"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่างพันธบัตรสหรัฐฯ 10 ปี ลบ 2 ปี +0.32% (26 ต.ค. 2026) จาก +0.31% ครั้งก่อน เส้นยังเป็นบวกแต่แบน",
+    "credit_spread": "ส่วนต่างหุ้นกู้เสี่ยงสูง 3.38% (23 ต.ค. 2026) ลดลงเล็กน้อยจาก 3.40% ตลาดยังไม่กังวลหนี้เสีย",
+    "loan_growth": "ใช้ค่าเดิม ~7.1% ต่อปี (เฉลี่ยรายไตรมาส Q4/2025–Q3/2026 จากรายงาน H.8) ยังไม่มีข้อมูลไตรมาสใหม่",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) ไม่มีข้อมูลใหม่ ข้อมูลไตรมาส 3 คาดออกปลาย พ.ย.",
+    "fed_policy": "คงไว้ 35/100: Fed ขึ้นดอกเบี้ยเป็น 3.75–4.00% เมื่อ 16 ก.ย. ประชุมครั้งถัดไป 28 ต.ค. (พรุ่งนี้ตามเวลาสหรัฐฯ) จะปรับคะแนนหลังประชุม",
+    "prices": "ราคาปิด 26 ต.ค. 2026: JPM $334.04 (จาก $331.58), V $404.16 (จาก $407.92), GS $893.28 (จาก $875.68)"
+   },
+   "prices": {
+    "JPM": 334.04,
+    "V": 404.16,
+    "GS": 893.28
+   },
+   "prices_as_of": "2026-10-26",
+   "sources": [
+    {
+     "key": "yield_curve",
+     "label": "FRED · T10Y2Y",
+     "url": "https://fred.stlouisfed.org/series/T10Y2Y"
+    },
+    {
+     "key": "credit_spread",
+     "label": "FRED · BAMLH0A0HYM2 (table)",
+     "url": "https://fred.stlouisfed.org/data/BAMLH0A0HYM2"
+    },
+    {
+     "key": "prices",
+     "label": "JPM",
+     "url": "https://stockanalysis.com/stocks/jpm/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "V",
+     "url": "https://stockanalysis.com/stocks/v/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "GS",
+     "url": "https://stockanalysis.com/stocks/gs/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "V close",
+     "url": "https://stockanalysis.com/stocks/v/"
     }
    ],
    "created_by": "claude",

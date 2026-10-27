@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-26T08:55:17+00:00",
+ "updated_at": "2026-10-27T01:10:55+00:00",
  "readings": [
   {
    "confidence": {
@@ -609,6 +609,74 @@
      "url": "https://stockanalysis.com/stocks/etn/statistics/"
     }
    ]
+  },
+  {
+   "date": "2026-10-27",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 3.17,
+    "gpu_spot_price_change_1m_pct": 24.8,
+    "enterprise_ai_adoption_pct": 65.7,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "power_grid_stress_level": 8.7
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "high",
+    "enterprise_adoption": "medium",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "ยังใช้ค่าเดิม 1.51 เท่า (งบไตรมาส 2/2026) รอ Microsoft, Alphabet และ Amazon ประกาศงบไตรมาส 3 ปลายสัปดาห์นี้แล้วจะคำนวณใหม่",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่",
+    "gpu_spot_price": "ดัชนี OCPI-H100 ปิดที่ $3.17/ชม. (26 ต.ค. 2026) ขึ้นจาก $3.03 (25 ต.ค.) และสูงกว่า 30 วันก่อน ($2.54) ถึง +24.8% (ครั้งก่อน +6.3%) ส่วนหนึ่งเพราะฐานเดือนก่อนต่ำ",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ ก.ย. 2026 = 65.7% (+2.1 จุดใน 3 เดือน) เท่าเดิม",
+    "power_grid": "คงไว้ที่ 8.7/10 ยังไม่มีข่าวใหม่ที่เปลี่ยนภาพ การประมูล backstop ของ PJM (6.8 GW) ยังไม่มีกำหนดใหม่หลังเลื่อนเมื่อ 30 ก.ย. ไฟฟ้ายังตึงตัว",
+    "prices": "ราคาปิด 26 ต.ค. 2026: KLAC $149.21 (จาก $145.61), AVGO $329.17 (จาก $321.68), ETN $371.92 (จาก $366.11) ขึ้นทั้งสามตัว"
+   },
+   "prices": {
+    "KLAC": 149.21,
+    "AVGO": 329.17,
+    "ETN": 371.92
+   },
+   "prices_as_of": "2026-10-26",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM delays backstop auction (Utility Dive)",
+     "url": "https://www.utilitydive.com/news/pjm-delays-backstop-procurement-ferc-data-center/831751/"
+    },
+    {
+     "key": "chip_lead_time",
+     "label": "Nvidia GPU lead times (GPUsmith)",
+     "url": "https://gpusmith.com/articles/en/nvidia-gpu-lead-times-h100-h200-gb200"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/avgo/statistics/"
+    },
+    {
+     "key": "prices",
+     "label": "ETN (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/etn/statistics/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
   }
  ]
 }
