@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-27T01:10:55+00:00",
+ "updated_at": "2026-10-28T01:10:28+00:00",
  "readings": [
   {
    "confidence": {
@@ -673,6 +673,64 @@
      "key": "prices",
      "label": "ETN (StockAnalysis)",
      "url": "https://stockanalysis.com/stocks/etn/statistics/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-10-28",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.51,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 3.17,
+    "gpu_spot_price_change_1m_pct": 24.8,
+    "enterprise_ai_adoption_pct": 65.7,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "power_grid_stress_level": 8.7
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "high",
+    "enterprise_adoption": "medium",
+    "power_grid": "medium",
+    "prices": "low"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "ยังใช้ค่าเดิม 1.51 เท่า (งบไตรมาส 2/2026) Microsoft, Alphabet และ Amazon ยังไม่ประกาศงบไตรมาส 3 คาดว่าจะประกาศช่วง 28–30 ต.ค. แล้วจะคำนวณใหม่",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่",
+    "gpu_spot_price": "ดัชนี OCPI-H100 ล่าสุดยังเป็น $3.17/ชม. (26 ต.ค. 2026) ยังไม่มีค่าปิดวันที่ 27 ต.ค. เปลี่ยนแปลง 30 วัน +24.8% เท่าครั้งก่อน",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ ก.ย. 2026 = 65.7% (+2.1 จุดใน 3 เดือน) เท่าเดิม",
+    "power_grid": "คงไว้ที่ 8.7/10 ไม่มีข่าวใหม่ที่เปลี่ยนภาพ การประมูล backstop ของ PJM ยังไม่มีผล (กำหนดภายใน 2 ธ.ค.) ไฟฟ้ายังตึงตัว",
+    "prices": "ดึงราคาปิดวันที่ 27 ต.ค. ไม่ได้ (หน้าเว็บยังไม่อัปเดต) จึงใช้ราคาปิด 26 ต.ค. เดิม: KLAC $149.21, AVGO $329.17, ETN $371.92 (ความเชื่อมั่นต่ำ)"
+   },
+   "prices": {
+    "KLAC": 149.21,
+    "AVGO": 329.17,
+    "ETN": 371.92
+   },
+   "prices_as_of": "2026-10-26",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "FRED · RAMPAIENTERPRISE",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM power costs (MyChesCo)",
+     "url": "https://www.mychesco.com/a/news/regional/pjm-power-costs-jump-50-as-data-centers-drive-capacity-surge/"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/statistics"
     }
    ],
    "created_by": "claude",
