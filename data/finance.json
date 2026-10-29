@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-28T01:10:28+00:00",
+ "updated_at": "2026-10-29T01:21:28+00:00",
  "readings": [
   {
    "date": "2026-10-24",
@@ -255,6 +255,57 @@
      "key": "prices",
      "label": "JPM (StockAnalysis)",
      "url": "https://stockanalysis.com/stocks/jpm/statistics/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-10-29",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.29,
+    "hy_oas_pct": 3.18,
+    "loan_growth_pct": 7.1,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 40
+   },
+   "confidence": {
+    "yield_curve": "high",
+    "credit_spread": "high",
+    "loan_growth": "medium",
+    "delinquency": "high",
+    "fed_policy": "medium",
+    "prices": "low"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่างพันธบัตรสหรัฐฯ 10 ปี ลบ 2 ปี +0.29% (27 ต.ค. 2026) เท่าครั้งก่อน เส้นยังเป็นบวก",
+    "credit_spread": "ส่วนต่างหุ้นกู้เสี่ยงสูง 3.18% (27 ต.ค. 2026) แคบลงจาก 3.30% ตลาดยังไม่กังวลหนี้เสีย",
+    "loan_growth": "ใช้ค่าเดิม ~7.1% ต่อปี (เฉลี่ยรายไตรมาส Q4/2025–Q3/2026 จากรายงาน H.8) ยังไม่มีข้อมูลไตรมาสใหม่",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) ไม่มีข้อมูลใหม่ ข้อมูลไตรมาส 3 คาดออกปลาย พ.ย.",
+    "fed_policy": "ปรับเป็น 40/100 (จาก 35): ประชุม 28 ต.ค. Fed คงดอกเบี้ย 3.75–4.00% ไม่ส่งสัญญาณทิศทาง แต่มี 2 กรรมการค้านเพราะอยากขึ้นดอกเบี้ยต่อ จึงยังเอียงไปทางตึงตัว",
+    "prices": "ยังดึงราคาปิดใหม่ไม่ได้ (หน้าเว็บค้างที่ 26 ต.ค.) จึงใช้ราคาปิด 26 ต.ค. เดิม: JPM $334.04, V $404.16, GS $893.28 (ความเชื่อมั่นต่ำ)"
+   },
+   "prices": {
+    "JPM": 334.04,
+    "V": 404.16,
+    "GS": 893.28
+   },
+   "prices_as_of": "2026-10-26",
+   "sources": [
+    {
+     "key": "yield_curve",
+     "label": "FRED · T10Y2Y",
+     "url": "https://fred.stlouisfed.org/graph/?g=KWqs"
+    },
+    {
+     "key": "credit_spread",
+     "label": "FRED · BAMLH0A0HYM2",
+     "url": "https://fred.stlouisfed.org/graph?g=fVbi"
+    },
+    {
+     "key": "fed_policy",
+     "label": "FOMC statement 28 ต.ค. 2026",
+     "url": "https://www.federalreserve.gov/monetarypolicy/files/monetary20261028a1.pdf"
     }
    ],
    "created_by": "claude",

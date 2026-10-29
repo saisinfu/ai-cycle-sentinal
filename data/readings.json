@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-28T01:10:28+00:00",
+ "updated_at": "2026-10-29T01:21:28+00:00",
  "readings": [
   {
    "confidence": {
@@ -731,6 +731,74 @@
      "key": "prices",
      "label": "KLAC (StockAnalysis)",
      "url": "https://stockanalysis.com/stocks/klac/statistics"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-10-29",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.41,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 2.96,
+    "gpu_spot_price_change_1m_pct": 15.6,
+    "enterprise_ai_adoption_pct": 65.7,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "power_grid_stress_level": 8.7
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "high",
+    "enterprise_adoption": "medium",
+    "power_grid": "medium",
+    "prices": "low"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คำนวณใหม่ได้ 1.41 เท่า (ลดจาก 1.51) หลังงบที่ประกาศ 28 ต.ค.: Microsoft ลงทุน $45.2B Azure $33.2B ต่อไตรมาส (+48%), Alphabet ลงทุน $51.4B Google Cloud $30.7B (โตเกือบเท่าตัว) รายได้คลาวด์โตเร็วกว่าการลงทุน ส่วน Amazon จะประกาศคืนนี้ จึงยังใช้ตัวเลขไตรมาส 2 ไปก่อน",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่",
+    "gpu_spot_price": "ดัชนี OCPI-H100 $2.96/ชม. (28 ต.ค. 2026) ลดลงจาก $3.57 วันก่อน การเปลี่ยนแปลง 30 วัน +15.6% (ครั้งก่อน +24.8%)",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ ก.ย. 2026 = 65.7% (+2.1 จุดใน 3 เดือน) เท่าเดิม",
+    "power_grid": "คงไว้ที่ 8.7/10 ไม่พบข่าวใหม่ที่เปลี่ยนภาพ ผลประมูล backstop ของ PJM กำหนดภายใน 2 ธ.ค.",
+    "prices": "ยังดึงราคาปิดใหม่จาก StockAnalysis ไม่ได้ (หน้าเว็บค้างที่ 26 ต.ค.) จึงใช้ราคาปิด 26 ต.ค. เดิม: KLAC $149.21, AVGO $329.17, ETN $371.92 (ความเชื่อมั่นต่ำ)"
+   },
+   "prices": {
+    "KLAC": 149.21,
+    "AVGO": 329.17,
+    "ETN": 371.92
+   },
+   "prices_as_of": "2026-10-26",
+   "sources": [
+    {
+     "key": "capex_vs_revenue",
+     "label": "Microsoft Q1 FY27 (TradersAgency)",
+     "url": "https://tradersagency.com/blog/microsoft-beats-q1-fy27-estimates-as-azure-tops-dollar33-billion-for-the-first-time-shares-rise"
+    },
+    {
+     "key": "capex_vs_revenue",
+     "label": "Microsoft capex tracker",
+     "url": "https://www.regardsofwallstreet.com/data/capex/company/microsoft"
+    },
+    {
+     "key": "capex_vs_revenue",
+     "label": "Alphabet Q3 2026 (Fortune)",
+     "url": "https://fortune.com/2026/10/28/alphabet-google-stock-drops-cloud-revenue-doubles-free-cash-flow-negative/"
+    },
+    {
+     "key": "gpu_spot_price",
+     "label": "OCPI H100 index (Ornn)",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "FRED · RAMPAIENTERPRISE",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/statistics/"
     }
    ],
    "created_by": "claude",
