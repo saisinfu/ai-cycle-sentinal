@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-29T01:21:28+00:00",
+ "updated_at": "2026-10-30T01:06:26+00:00",
  "readings": [
   {
    "confidence": {
@@ -794,6 +794,64 @@
      "key": "enterprise_adoption",
      "label": "FRED · RAMPAIENTERPRISE",
      "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/statistics/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-10-30",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 2.96,
+    "gpu_spot_price_change_1m_pct": 15.6,
+    "enterprise_ai_adoption_pct": 65.7,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "power_grid_stress_level": 8.7
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "low",
+    "enterprise_adoption": "medium",
+    "power_grid": "medium",
+    "prices": "low"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คำนวณใหม่ได้ 1.58 เท่า (เพิ่มจาก 1.41) หลัง Amazon ประกาศงบไตรมาส 3/2026 (29 ต.ค.): ลงทุน $77.3B ในไตรมาสเดียว (ปีก่อน $35.1B) ขณะที่รายได้ AWS $46.0B (+39%) รวม 3 บริษัทลงทุน $173.9B ต่อไตรมาส การลงทุนกลับมาโตเร็วกว่ารายได้คลาวด์",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่",
+    "gpu_spot_price": "เปิดหน้าดัชนี OCPI-H100 ไม่ได้วันนี้ จึงใช้ค่าเดิม $2.96/ชม. (28 ต.ค.) และ +15.6% ใน 30 วัน (ความเชื่อมั่นต่ำ)",
+    "enterprise_adoption": "ไม่มีข้อมูลเดือนใหม่: Ramp AI Index ธุรกิจขนาดใหญ่ ก.ย. 2026 = 65.7% (+2.1 จุดใน 3 เดือน) เท่าเดิม",
+    "power_grid": "คงไว้ที่ 8.7/10 ไม่พบข่าวใหม่ช่วง 22–30 ต.ค. ผลประมูล backstop ของ PJM (ปิดรับ 21 ต.ค.) กำหนดประกาศภายใน 2 ธ.ค.",
+    "prices": "ยังดึงราคาปิดใหม่ไม่ได้ (หน้า StockAnalysis ที่เปิดได้ยังค้างที่ 26–27 ต.ค.) จึงใช้ราคาปิด 26 ต.ค. เดิม: KLAC $149.21, AVGO $329.17, ETN $371.92 (ความเชื่อมั่นต่ำ)"
+   },
+   "prices": {
+    "KLAC": 149.21,
+    "AVGO": 329.17,
+    "ETN": 371.92
+   },
+   "prices_as_of": "2026-10-26",
+   "sources": [
+    {
+     "key": "capex_vs_revenue",
+     "label": "Amazon Q3 2026 (Business Wire)",
+     "url": "https://www.businesswire.com/news/home/20261028373648/en/Amazon.com-Announces-Third-Quarter-Results"
+    },
+    {
+     "key": "capex_vs_revenue",
+     "label": "Amazon Q3 2026 (StockTitan)",
+     "url": "https://www.stocktitan.net/articles/amazon-q3-2026-earnings-aws-cloud-growth"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM backstop filing (Baxtel)",
+     "url": "https://baxtel.com/news/pjm-files-plans-with-ferc-to-address-data-centre-power-shortfall"
     },
     {
      "key": "prices",
