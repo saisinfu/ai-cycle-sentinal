@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-30T01:06:26+00:00",
+ "updated_at": "2026-10-31T01:05:34+00:00",
  "readings": [
   {
    "confidence": {
@@ -852,6 +852,54 @@
      "key": "power_grid",
      "label": "PJM backstop filing (Baxtel)",
      "url": "https://baxtel.com/news/pjm-files-plans-with-ferc-to-address-data-centre-power-shortfall"
+    },
+    {
+     "key": "prices",
+     "label": "KLAC (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/statistics/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-10-31",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 2.92,
+    "gpu_spot_price_change_1m_pct": 4.7,
+    "enterprise_ai_adoption_pct": 65.7,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "power_grid_stress_level": 8.7
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "high",
+    "enterprise_adoption": "low",
+    "power_grid": "medium",
+    "prices": "low"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon ที่ประกาศปลาย ต.ค. จะเปลี่ยนอีกครั้งหลังงบไตรมาสถัดไป",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่",
+    "gpu_spot_price": "ดัชนีค่าเช่า GPU H100 (OCPI) $2.92/ชม. (29 ต.ค.) ลดจาก $2.96 ครั้งก่อน เทียบ 30 วันก่อน ($2.79) เพิ่ม +4.7% (ค่าเดิม +15.6% เป็นตัวเลขค้างจาก 28 ต.ค.) ความต้องการยังแข็งแต่โตช้าลง",
+    "enterprise_adoption": "ยังไม่มีข้อมูลเดือนใหม่ (Ramp AI Index ออกกลางเดือน) ใช้ค่าเดิม 65.7% (+2.1 จุดใน 3 เดือน) วันนี้ตรวจหน้า FRED ไม่ได้ครบ จึงให้ความเชื่อมั่นต่ำ",
+    "power_grid": "คงไว้ที่ 8.7/10 ไม่พบข่าวใหม่ ภาพเดิมคือ PJM ขาดกำลังผลิตรองรับศูนย์ข้อมูล ผลประมูล backstop กำหนดประกาศภายใน 2 ธ.ค.",
+    "prices": "วันนี้วันเสาร์ ตลาดปิด และหน้า StockAnalysis ยังไม่อัปเดตราคาปิดล่าสุด (30 ต.ค.) จึงใช้ราคาปิด 26 ต.ค. เดิม: KLAC $149.21, AVGO $329.17, ETN $371.92 (ความเชื่อมั่นต่ำ)"
+   },
+   "prices": {
+    "KLAC": 149.21,
+    "AVGO": 329.17,
+    "ETN": 371.92
+   },
+   "prices_as_of": "2026-10-26",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "Ornn OCPI-H100",
+     "url": "https://data.ornn.com/markets/h100-sxm"
     },
     {
      "key": "prices",
