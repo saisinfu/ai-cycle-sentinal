@@ -1,34 +1,34 @@
 {
- "updated_at": "2026-10-31T01:05:34+00:00",
+ "updated_at": "2026-11-01T01:06:02+00:00",
  "quotes": {
   "KLAC": {
-   "price": 149.21,
+   "price": 157.91,
    "currency": "USD",
-   "as_of": "2026-10-26",
+   "as_of": "2026-10-30",
    "ma200": 181.73,
    "pe": 40.77,
    "pe_5y_avg": 29.15,
-   "source_url": "https://stockanalysis.com/stocks/klac/statistics/",
+   "source_url": "https://stockanalysis.com/stocks/klac/history/",
    "pe_source_url": "https://fullratio.com/stocks/nasdaq-klac/pe-ratio"
   },
   "AVGO": {
-   "price": 329.17,
+   "price": 345.0,
    "currency": "USD",
-   "as_of": "2026-10-26",
+   "as_of": "2026-10-29",
    "ma200": 367.81,
    "pe": 42.02,
    "pe_5y_avg": 40.19,
-   "source_url": "https://stockanalysis.com/stocks/avgo/statistics/",
+   "source_url": "https://stockanalysis.com/stocks/avgo/history",
    "pe_source_url": "https://fullratio.com/stocks/nasdaq-avgo/pe-ratio"
   },
   "ETN": {
-   "price": 371.92,
+   "price": 369.97,
    "currency": "USD",
-   "as_of": "2026-10-26",
+   "as_of": "2026-10-30",
    "ma200": 395.82,
    "pe": 37.86,
    "pe_5y_avg": 31.28,
-   "source_url": "https://stockanalysis.com/stocks/etn/statistics/",
+   "source_url": "https://stockanalysis.com/stocks/etn/history/",
    "pe_source_url": "https://fullratio.com/stocks/nyse-etn/pe-ratio"
   },
   "JPM": {

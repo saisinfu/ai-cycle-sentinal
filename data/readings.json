@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-31T01:05:34+00:00",
+ "updated_at": "2026-11-01T01:06:02+00:00",
  "readings": [
   {
    "confidence": {
@@ -905,6 +905,59 @@
      "key": "prices",
      "label": "KLAC (StockAnalysis)",
      "url": "https://stockanalysis.com/stocks/klac/statistics/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-01",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 2.92,
+    "gpu_spot_price_change_1m_pct": 4.7,
+    "enterprise_ai_adoption_pct": 65.7,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "power_grid_stress_level": 8.7
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "low",
+    "enterprise_adoption": "low",
+    "power_grid": "medium",
+    "prices": "medium"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon จะเปลี่ยนอีกครั้งหลังงบไตรมาสถัดไป",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่",
+    "gpu_spot_price": "วันนี้เปิดหน้า Ornn ไม่ได้ จึงใช้ค่าเดิม $2.92/ชม. (29 ต.ค.) เปลี่ยน +4.7% ใน 30 วัน (ความเชื่อมั่นต่ำ)",
+    "enterprise_adoption": "ยังไม่มีข้อมูลเดือนใหม่ (Ramp AI Index ออกกลางเดือน) ใช้ค่าเดิม 65.7% (+2.1 จุดใน 3 เดือน) วันนี้เปิดหน้า FRED ไม่ได้ จึงให้ความเชื่อมั่นต่ำ",
+    "power_grid": "คงไว้ที่ 8.7/10 ไม่พบข่าวใหม่ที่เปลี่ยนภาพ PJM ยังขาดกำลังผลิตรองรับศูนย์ข้อมูล ผลประมูล backstop กำหนดประกาศภายใน 2 ธ.ค.",
+    "prices": "วันนี้วันอาทิตย์ ตลาดปิด ราคาปิดล่าสุด: KLAC $157.91 (30 ต.ค., จาก $149.21), ETN $369.97 (30 ต.ค., จาก $371.92), AVGO $345.00 (ราคาปิด 29 ต.ค. เพราะหน้าเว็บยังไม่อัปเดต 30 ต.ค., จาก $329.17)"
+   },
+   "prices": {
+    "KLAC": 157.91,
+    "AVGO": 345.0,
+    "ETN": 369.97
+   },
+   "prices_as_of": "2026-10-30",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "KLAC history (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/klac/history/"
+    },
+    {
+     "key": "prices",
+     "label": "AVGO history (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/avgo/history"
+    },
+    {
+     "key": "prices",
+     "label": "ETN history (StockAnalysis)",
+     "url": "https://stockanalysis.com/stocks/etn/history/"
     }
    ],
    "created_by": "claude",
