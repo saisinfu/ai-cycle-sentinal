@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-01T01:06:02+00:00",
+ "updated_at": "2026-11-02T01:06:52+00:00",
  "quotes": {
   "KLAC": {
    "price": 157.91,
@@ -12,9 +12,9 @@
    "pe_source_url": "https://fullratio.com/stocks/nasdaq-klac/pe-ratio"
   },
   "AVGO": {
-   "price": 345.0,
+   "price": 326.08,
    "currency": "USD",
-   "as_of": "2026-10-29",
+   "as_of": "2026-10-30",
    "ma200": 367.81,
    "pe": 42.02,
    "pe_5y_avg": 40.19,
@@ -32,46 +32,46 @@
    "pe_source_url": "https://fullratio.com/stocks/nyse-etn/pe-ratio"
   },
   "JPM": {
-   "price": 334.04,
+   "price": 335.52,
    "currency": "USD",
-   "as_of": "2026-10-26",
+   "as_of": "2026-10-27",
    "ma200": 322.53,
    "pe": 14.03,
    "pe_5y_avg": 11.64,
-   "source_url": "https://stockanalysis.com/stocks/jpm/statistics/",
+   "source_url": "https://stockanalysis.com/stocks/jpm/history",
    "pe_source_url": "https://fullratio.com/stocks/nyse-jpm/pe-ratio"
   },
   "V": {
-   "price": 404.16,
+   "price": 401.14,
    "currency": "USD",
-   "as_of": "2026-10-26",
+   "as_of": "2026-10-27",
    "ma200": 340.82,
    "pe": 34.39,
    "pe_5y_avg": 30.69,
-   "source_url": "https://stockanalysis.com/stocks/v/statistics/",
+   "source_url": "https://stockanalysis.com/stocks/v/history",
    "pe_source_url": "https://fullratio.com/stocks/nyse-v/pe-ratio"
   },
   "GS": {
-   "price": 893.28,
+   "price": 894.55,
    "currency": "USD",
-   "as_of": "2026-10-26",
+   "as_of": "2026-10-30",
    "ma200": 958.35,
    "pe": 12.86,
    "pe_5y_avg": 12.95,
-   "source_url": "https://stockanalysis.com/stocks/gs/statistics/",
+   "source_url": "https://stockscan.io/stocks/GS/price-history",
    "pe_source_url": "https://fullratio.com/stocks/nyse-gs/pe-ratio"
   },
   "GLD": {
-   "price": 367.82,
+   "price": 355.78,
    "currency": "USD",
-   "as_of": "2026-10-26",
-   "source_url": "https://stockanalysis.com/etf/gld/"
+   "as_of": "2026-10-30",
+   "source_url": "https://stockanalysis.com/etf/gld/history"
   },
   "SPY": {
-   "price": 765.37,
+   "price": 755.72,
    "currency": "USD",
-   "as_of": "2026-10-26",
-   "source_url": "https://stockanalysis.com/etf/spy/"
+   "as_of": "2026-10-30",
+   "source_url": "https://stockscan.io/stocks/SPY/price-history"
   },
   "QQQ": {
    "price": 712.2,
