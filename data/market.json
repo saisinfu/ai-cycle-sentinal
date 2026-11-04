@@ -1,10 +1,10 @@
 {
- "updated_at": "2026-11-03T01:06:39+00:00",
+ "updated_at": "2026-11-04T01:07:56+00:00",
  "quotes": {
   "KLAC": {
-   "price": 153.51,
+   "price": 156.17,
    "currency": "USD",
-   "as_of": "2026-11-02",
+   "as_of": "2026-11-03",
    "ma200": 181.73,
    "pe": 40.77,
    "pe_5y_avg": 29.15,
@@ -12,39 +12,39 @@
    "pe_source_url": "https://fullratio.com/stocks/nasdaq-klac/pe-ratio"
   },
   "AVGO": {
-   "price": 326.08,
+   "price": 332.13,
    "currency": "USD",
-   "as_of": "2026-10-30",
+   "as_of": "2026-11-03",
    "ma200": 367.67,
    "pe": 41.62,
    "pe_5y_avg": 40.19,
-   "source_url": "https://stockanalysis.com/stocks/avgo/statistics/",
+   "source_url": "https://www.marketbeat.com/stocks/NASDAQ/AVGO/price-history/",
    "pe_source_url": "https://fullratio.com/stocks/nasdaq-avgo/pe-ratio"
   },
   "ETN": {
-   "price": 369.97,
+   "price": 366.15,
    "currency": "USD",
-   "as_of": "2026-10-30",
+   "as_of": "2026-11-02",
    "ma200": 396.07,
    "pe": 38.33,
    "pe_5y_avg": 31.28,
-   "source_url": "https://stockanalysis.com/stocks/etn/history/",
+   "source_url": "https://stockscan.io/stocks/ETN/price-history",
    "pe_source_url": "https://fullratio.com/stocks/nyse-etn/pe-ratio"
   },
   "JPM": {
-   "price": 337.04,
+   "price": 340.07,
    "currency": "USD",
-   "as_of": "2026-10-30",
+   "as_of": "2026-11-03",
    "ma200": 322.95,
    "pe": 14.15,
    "pe_5y_avg": 11.64,
-   "source_url": "https://stockanalysis.com/stocks/jpm/statistics/",
+   "source_url": "https://stockscan.io/stocks/JPM/price-history",
    "pe_source_url": "https://fullratio.com/stocks/nyse-jpm/pe-ratio"
   },
   "V": {
-   "price": 425.51,
+   "price": 420.42,
    "currency": "USD",
-   "as_of": "2026-11-02",
+   "as_of": "2026-11-03",
    "ma200": 342.2,
    "pe": 33.57,
    "pe_5y_avg": 30.69,
@@ -52,9 +52,9 @@
    "pe_source_url": "https://fullratio.com/stocks/nyse-v/pe-ratio"
   },
   "GS": {
-   "price": 910.64,
+   "price": 895.65,
    "currency": "USD",
-   "as_of": "2026-11-02",
+   "as_of": "2026-11-03",
    "ma200": 957.85,
    "pe": 12.87,
    "pe_5y_avg": 12.95,
@@ -62,21 +62,21 @@
    "pe_source_url": "https://fullratio.com/stocks/nyse-gs/pe-ratio"
   },
   "GLD": {
-   "price": 362.66,
+   "price": 360.68,
    "currency": "USD",
-   "as_of": "2026-11-02",
+   "as_of": "2026-11-03",
    "source_url": "https://stockscan.io/stocks/GLD/price-history"
   },
   "SPY": {
-   "price": 755.72,
+   "price": 752.1,
    "currency": "USD",
-   "as_of": "2026-10-30",
+   "as_of": "2026-11-02",
    "source_url": "https://stockscan.io/stocks/SPY/price-history"
   },
   "QQQ": {
-   "price": 694.82,
+   "price": 685.72,
    "currency": "USD",
-   "as_of": "2026-11-02",
+   "as_of": "2026-11-03",
    "source_url": "https://stockscan.io/stocks/QQQ/price-history"
   },
   "KKP.BK": {
