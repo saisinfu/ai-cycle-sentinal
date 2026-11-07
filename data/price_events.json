@@ -1,0 +1,77 @@
+{
+ "updated_at": "2026-11-07T03:11:53+00:00",
+ "rules": {
+  "day_drop_pct": -7.0,
+  "drawdown_pct": -20.0,
+  "rearm_pct": -15.0
+ },
+ "armed": {
+  "KLAC": false,
+  "AVGO": false,
+  "ETN": false,
+  "JPM": true,
+  "V": true,
+  "GS": false,
+  "GLD": false,
+  "SPY": true,
+  "QQQ": true,
+  "KKP.BK": true
+ },
+ "events": [
+  {
+   "date": "2026-11-06",
+   "ticker": "AVGO",
+   "name": "Broadcom Inc.",
+   "kind": "drawdown",
+   "value": -39.01,
+   "price": 293.69,
+   "drawdown_pct": -39.01,
+   "title_th": "AVGO ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 293.69 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (481.57) อยู่ 39.0%"
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "ETN",
+   "name": "Eaton Corporation",
+   "kind": "drawdown",
+   "value": -25.71,
+   "price": 341.72,
+   "drawdown_pct": -25.71,
+   "title_th": "ETN ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 341.72 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (459.96) อยู่ 25.7%"
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "GLD",
+   "name": "ทองคำ",
+   "kind": "drawdown",
+   "value": -24.88,
+   "price": 372.52,
+   "drawdown_pct": -24.88,
+   "title_th": "GLD ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 372.52 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (495.9) อยู่ 24.9%"
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "GS",
+   "name": "Goldman Sachs",
+   "kind": "drawdown",
+   "value": -24.85,
+   "price": 865.82,
+   "drawdown_pct": -24.85,
+   "title_th": "GS ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 865.82 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (1,152.07) อยู่ 24.9%"
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "KLAC",
+   "name": "KLA Corporation",
+   "kind": "drawdown",
+   "value": -54.1,
+   "price": 138.49,
+   "drawdown_pct": -54.1,
+   "title_th": "KLAC ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 138.49 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (301.71) อยู่ 54.1%"
+  }
+ ]
+}
