@@ -1,0 +1,66 @@
+{
+ "updated_at": "2026-11-07T03:29:13Z",
+ "readings": [
+  {
+   "date": "2026-11-07",
+   "indicators": {
+    "lly_revenue_growth_yoy_pct": 39.0,
+    "unh_medical_care_ratio_pct": 88.4,
+    "isrg_procedure_growth_yoy_pct": 14.0,
+    "hc_policy_risk": 6.0,
+    "healthcare_jobs_growth_yoy_pct": 2.22
+   },
+   "confidence": {
+    "glp1_demand": "high",
+    "insurer_cost": "medium",
+    "surgery_volume": "high",
+    "policy_risk": "low",
+    "hc_jobs": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "glp1_demand": "Eli Lilly รายได้ไตรมาส 3/2026 $24.4 พันล้าน +39% เทียบปีก่อน (ปริมาณขาย +53% ราคาเฉลี่ย −15%) ประกาศ 29 ต.ค. · ค่าแรกของหมวดนี้",
+    "insurer_cost": "UnitedHealth สัดส่วนค่ารักษาไตรมาส 3/2026 = 88.4% ดีขึ้นจาก 89.9% ในไตรมาส 3/2025 (ประกาศ 13 ต.ค.) · ค่าแรก",
+    "surgery_volume": "Intuitive Surgical จำนวนผ่าตัด da Vinci ทั่วโลกไตรมาส 3/2026 โตราว 14% เทียบปีก่อน (รวม Ion ~15%) ประกาศ 20 ต.ค. · ค่าแรก",
+    "policy_risk": "ประเมิน 6/10 (ความเชื่อมั่นต่ำ) ภาษีนำเข้ายาและการเจรจาราคายายังกดดัน และพรรคเดโมแครตที่ชนะเลือกตั้ง 3 พ.ย. อาจเพิ่มแรงกดดันเรื่องราคายา · ค่าแรก",
+    "hc_jobs": "การจ้างงานสาธารณสุขสหรัฐฯ ก.ย. 2026 = 23.96 ล้านคน +2.22% เทียบ ก.ย. 2025 · รายงาน ต.ค. (6 พ.ย.) เพิ่มอีก 42,000 ตำแหน่ง แต่ FRED ยังไม่อัปเดต · ค่าแรก",
+    "prices": "ราคาปิด 6 พ.ย. 2026 จาก Yahoo Finance: LLY $1,354.0 (-0.79% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -4.51%) · ISRG $452.8 (-3.36% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -23.62%) · UNH $394.15 (-0.40% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -9.67%)"
+   },
+   "prices": {
+    "LLY": 1354.0,
+    "ISRG": 452.8,
+    "UNH": 394.15
+   },
+   "prices_as_of": "2026-11-06",
+   "sources": [
+    {
+     "key": "glp1_demand",
+     "label": "ChemXplore · Lilly Q3 2026",
+     "url": "https://chemxplore.com/news/lilly-q3-2026-financial-results-guidance"
+    },
+    {
+     "key": "insurer_cost",
+     "label": "Pulse 2.0 · UnitedHealth Q3 2026",
+     "url": "https://pulse2.com/unitedhealth-group-raises-2026-outlook-as-q3-operating-earnings-rise-to-6-6-billion"
+    },
+    {
+     "key": "surgery_volume",
+     "label": "Intuitive Q3 2026 earnings release (SEC)",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001035267/000103526726000067/q326ex-991earningsrelease.htm"
+    },
+    {
+     "key": "hc_jobs",
+     "label": "FRED · CES6562000001",
+     "url": "https://fred.stlouisfed.org/data/CES6562000001"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  }
+ ]
+}

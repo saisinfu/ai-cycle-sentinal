@@ -1,0 +1,71 @@
+{
+ "updated_at": "2026-11-07T03:29:13Z",
+ "readings": [
+  {
+   "date": "2026-11-07",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 137.0,
+    "us10y_change_3m_pp": 0.2
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "medium",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "ประเมิน 4.5/10 (ความเชื่อมั่นต่ำ) กระทรวงกลาโหมใช้งบชั่วคราว (CR) ถึง 11 ธ.ค. งบปี 2027 คำขอ $1.5 ล้านล้าน และงบเพิ่ม $350 พันล้านยังไม่ผ่าน · สภาชุดใหม่เป็นเดโมแครต อาจทำให้การเพิ่มงบยากขึ้น · ค่าแรก",
+    "gpr": "หาค่ารายเดือน ต.ค. ไม่ได้ จึงใช้ค่าเฉลี่ยดัชนี GPR รายวันเบื้องต้น 30 ต.ค.–2 พ.ย. ≈ 115.8 (134.0, 153.9, 77.6, 97.7) ความเชื่อมั่นต่ำ · ค่าแรก",
+    "launches": "จรวดขึ้นสู่วงโคจรทั่วโลกปี 2026 ถึง 31 ต.ค. = 254 ครั้ง มากกว่าช่วงเดียวกันปีก่อน 1 ครั้ง (+0.4%) · ค่าแรก",
+    "rklb_backlog": "Rocket Lab งานในมือ (backlog) ณ ไตรมาส 2/2026 = $2.36 พันล้าน +137% เทียบปีก่อน · งบไตรมาส 3 คาดประกาศราว 9–10 พ.ย. · ค่าแรก",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 4.86% เทียบ 3 เดือนก่อน 4.66% = +0.20 จุด (ดอกเบี้ยสูงขึ้นกดดันหุ้นเติบโตอย่างหุ้นอวกาศ) · ค่าแรก",
+    "prices": "ราคาปิด 6 พ.ย. 2026 จาก Yahoo Finance: LMT $567.08 (-1.58% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -16.2%) · RKLB $53.07 (+15.39% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -64.67%) · ASTS $32.33 (+7.05% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -75.71%)"
+   },
+   "prices": {
+    "LMT": 567.08,
+    "RKLB": 53.07,
+    "ASTS": 32.33
+   },
+   "prices_as_of": "2026-11-06",
+   "sources": [
+    {
+     "key": "defense_budget",
+     "label": "Air & Space Forces · CR to Dec 11",
+     "url": "https://www.airandspaceforces.com/congress-cr-pentagon-december-1-5t-budget-request/"
+    },
+    {
+     "key": "gpr",
+     "label": "stock-marketdata.com · GPR daily",
+     "url": "https://stock-marketdata.com/gpr-index"
+    },
+    {
+     "key": "launches",
+     "label": "SpaceNexus · Launch cadence Oct 2026",
+     "url": "https://spacenexus.us/releases/launch-cadence/2026-10"
+    },
+    {
+     "key": "rklb_backlog",
+     "label": "Rocket Lab Q2 2026 release (SEC)",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001819994/000181999426000061/rklb-08102026ex991.htm"
+    },
+    {
+     "key": "rates",
+     "label": "Yahoo Finance · ^TNX",
+     "url": "https://finance.yahoo.com/quote/%5ETNX"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  }
+ ]
+}

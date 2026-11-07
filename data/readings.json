@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-07T01:06:55+00:00",
+ "updated_at": "2026-11-07T03:29:13Z",
  "readings": [
   {
    "confidence": {
@@ -1253,44 +1253,49 @@
    "indicators": {
     "capex_to_cloud_revenue_ratio": 1.58,
     "chip_lead_time_weeks": 24,
-    "gpu_spot_price_usd_hr": 2.92,
-    "gpu_spot_price_change_1m_pct": 4.7,
+    "gpu_spot_price_usd_hr": 3.13,
+    "gpu_spot_price_change_1m_pct": 10.2,
     "enterprise_ai_adoption_pct": 65.7,
     "enterprise_ai_adoption_change_3m_pp": 2.1,
-    "power_grid_stress_level": 8.7
+    "power_grid_stress_level": 8.8
    },
    "confidence": {
     "capex_vs_revenue": "medium",
     "chip_lead_time": "low",
-    "gpu_spot_price": "low",
+    "gpu_spot_price": "high",
     "enterprise_adoption": "medium",
     "power_grid": "medium",
-    "prices": "low"
+    "prices": "high"
    },
    "notes_th": {
     "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon จะเปลี่ยนอีกครั้งหลังงบไตรมาสถัดไป",
     "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่",
-    "gpu_spot_price": "วันนี้เปิดหน้า Ornn ไม่ได้ จึงใช้ค่าเดิม $2.92/ชม. (29 ต.ค.) เปลี่ยน +4.7% ใน 30 วัน (ความเชื่อมั่นต่ำ) · ข่าว 6 พ.ย.: IREN ต่อสัญญาเช่า H100 ได้ราคาราว 2 เท่าของเดิม สะท้อนว่าความต้องการเช่า GPU ยังแรง",
+    "gpu_spot_price": "ดัชนี Ornn OCPI-H100 ปิดล่าสุด $3.13/ชม. (5 พ.ย.) จากค่าเดิม $2.92 · เปลี่ยน +10.2% ใน 30 วัน (จาก $2.84) เทียบเดิม +4.7% ความต้องการเช่า GPU ยังแข็งแรง แม้หุ้น AI ร่วงหนัก",
     "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ก.ย. 2026 = 65.7% (+2.1 จุดจาก มิ.ย.) เท่าเดิม ข้อมูลเดือน ต.ค. กำหนดออก 11 พ.ย.",
-    "power_grid": "คงไว้ที่ 8.7/10 · 6 พ.ย. Susquehanna ประเมินว่าโครงการศูนย์ข้อมูล AI ราว 60 GW (~40% ของที่วางแผนปี 2025–2030) เสี่ยงล่าช้าจากการรออนุมัติ สะท้อนคอขวดไฟฟ้า/ใบอนุญาตที่ยังตึงมาก ผลประมูล backstop ของ PJM กำหนดภายใน 2 ธ.ค.",
-    "prices": "AVGO ≈$293.69 (ปิด 6 พ.ย. +0.74% จาก $291.53 คำนวณจาก % ที่ StockTitan รายงาน) · KLAC $149.79 และ ETN $352.38 ยังเป็นราคาปิด 4 พ.ย. (หาราคาปิดล่าสุดไม่ได้ วันที่ 5 พ.ย. KLAC ซื้อขายระหว่างวันราว $135 จึงน่าจะต่ำกว่าค่าที่แสดง) วันนี้ตลาดปิด (เสาร์)"
+    "power_grid": "ปรับขึ้นเป็น 8.8/10 จาก 8.7 · หลังพรรคเดโมแครตชนะเลือกตั้งกลางเทอม (3 พ.ย.) ตลาดกังวลว่าจะมีการชะลอการสร้างศูนย์ข้อมูลและแรงต้านจากค่าไฟที่แพงขึ้น (AP 5 พ.ย.) ผลประมูล backstop ของ PJM กำหนดภายใน 2 ธ.ค.",
+    "prices": "ราคาปิด 6 พ.ย. 2026 จาก Yahoo Finance: KLAC $138.49 (+6.69% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -54.1%) · AVGO $293.69 (+0.74% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -39.01%) · ETN $341.72 (+4.50% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -25.71%)"
    },
    "prices": {
-    "KLAC": 149.79,
+    "KLAC": 138.49,
     "AVGO": 293.69,
-    "ETN": 352.38
+    "ETN": 341.72
    },
    "prices_as_of": "2026-11-06",
    "sources": [
     {
-     "key": "prices",
-     "label": "StockTitan · Stock market today Nov 6",
-     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-6-2026"
+     "key": "gpu_spot_price",
+     "label": "Ornn · OCPI H100 SXM",
+     "url": "https://data.ornn.com/markets/h100-sxm"
     },
     {
      "key": "power_grid",
-     "label": "Investrade · Market Review Nov 6",
-     "url": "https://investrade.com/market-review-november-06-2026/"
+     "label": "AP via NBC Bay Area · Nov 5 sell-off",
+     "url": "https://www.nbcbayarea.com/news/national-international/november-5-stock-market/4170982/"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
     }
    ],
    "created_by": "claude",
