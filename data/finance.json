@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06T01:08:17+00:00",
+ "updated_at": "2026-11-07T01:06:55+00:00",
  "readings": [
   {
    "date": "2026-10-24",
@@ -779,6 +779,62 @@
      "key": "prices",
      "label": "StockTitan market wrap Nov 5",
      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-5-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-07",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.38,
+    "hy_oas_pct": 3.32,
+    "loan_growth_pct": 7.15,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 40
+   },
+   "confidence": {
+    "yield_curve": "high",
+    "credit_spread": "low",
+    "loan_growth": "high",
+    "delinquency": "high",
+    "fed_policy": "medium",
+    "prices": "low"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่างพันธบัตรสหรัฐฯ 10 ปี ลบ 2 ปี +0.38% (5 พ.ย. 2026) จาก +0.32% ชันขึ้น เส้นยังเป็นบวก",
+    "credit_spread": "วันนี้หาค่าใหม่ไม่ได้ จึงใช้ค่าเดิม 3.32% (4 พ.ย.) ความเชื่อมั่นต่ำ ยังไม่รวมวันที่ตลาดร่วง 5 พ.ย. แต่ยังต่ำกว่าเกณฑ์กังวล 5% มาก",
+    "loan_growth": "สินเชื่อธนาคารสหรัฐฯ โตเฉลี่ย ~7.15% ต่อปี (H.8 ฉบับ 30 ต.ค.: 6.1/8.3/8.1/6.1%) เท่าเดิม",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) เท่าเดิม ข้อมูลไตรมาส 3 ยังไม่ออก",
+    "fed_policy": "คงไว้ที่ 40/100: Fed คงดอกเบี้ย 3.75–4.00% (28 ต.ค.) · การจ้างงาน ต.ค. ออกมาแรง (+165,000 ตำแหน่ง ว่างงาน 4.1%) ตลาดให้โอกาสขึ้นดอกเบี้ยเดือน ธ.ค. เกิน 65% เป็นความเสี่ยงที่คะแนนอาจลดลงหลังประชุม ธ.ค.",
+    "prices": "JPM $352.14 · V $436.21 · GS $929.21 ยังเป็นราคาปิด 4 พ.ย. (หาราคาปิดล่าสุดไม่ได้ ความเชื่อมั่นต่ำ) กลุ่มการเงินลง −0.59% ในวันที่ 6 พ.ย. วันนี้ตลาดปิด (เสาร์)"
+   },
+   "prices": {
+    "JPM": 352.14,
+    "V": 436.21,
+    "GS": 929.21
+   },
+   "prices_as_of": "2026-11-04",
+   "sources": [
+    {
+     "key": "yield_curve",
+     "label": "FRED · T10Y2Y",
+     "url": "https://fred.stlouisfed.org/series/T10Y2Y"
+    },
+    {
+     "key": "loan_growth",
+     "label": "Fed H.8 (Oct 30)",
+     "url": "https://www.federalreserve.gov/releases/h8/current/"
+    },
+    {
+     "key": "fed_policy",
+     "label": "StockTitan · Nov 6 (jobs, FedWatch)",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-6-2026"
+    },
+    {
+     "key": "prices",
+     "label": "CappNotes · Closing Look Nov 6",
+     "url": "https://cappnotes.substack.com/p/closing-look-friday-november-6-2026"
     }
    ],
    "created_by": "claude",

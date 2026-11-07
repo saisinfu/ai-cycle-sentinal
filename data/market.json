@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-06T01:08:17+00:00",
+ "updated_at": "2026-11-07T01:06:55+00:00",
  "quotes": {
   "KLAC": {
    "price": 149.79,
@@ -12,13 +12,13 @@
    "pe_source_url": "https://fullratio.com/stocks/nasdaq-klac/pe-ratio"
   },
   "AVGO": {
-   "price": 291.53,
+   "price": 293.69,
    "currency": "USD",
-   "as_of": "2026-11-05",
+   "as_of": "2026-11-06",
    "ma200": 367.67,
    "pe": 41.62,
    "pe_5y_avg": 40.19,
-   "source_url": "https://www.stocktitan.net/articles/stock-market-today-live-november-5-2026",
+   "source_url": "https://www.stocktitan.net/articles/stock-market-today-live-november-6-2026",
    "pe_source_url": "https://fullratio.com/stocks/nasdaq-avgo/pe-ratio"
   },
   "ETN": {
@@ -74,10 +74,10 @@
    "source_url": "https://stockscan.io/stocks/SPY/price-history"
   },
   "QQQ": {
-   "price": 647.05,
+   "price": 656.11,
    "currency": "USD",
-   "as_of": "2026-11-05",
-   "source_url": "https://www.stocktitan.net/articles/stock-market-today-live-november-5-2026"
+   "as_of": "2026-11-06",
+   "source_url": "https://www.stocktitan.net/articles/stock-market-today-live-november-6-2026"
   },
   "KKP.BK": {
    "price": 117.5,
