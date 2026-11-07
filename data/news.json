@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-07T03:30:05Z",
+ "updated_at": "2026-11-07T03:31:36Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -25,6 +25,106 @@
     {
      "label": "Bank of Thailand · MPC 5/2026",
      "url": "https://www.bot.or.th/en/news-and-media/news/mpc/news-20261028-5FWvBPSf.html"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-28-fomc-hold-hike-priced",
+   "date": "2026-10-28",
+   "time_utc": "2026-10-28T18:00:00Z",
+   "run": "morning",
+   "level": "high",
+   "category": "fed",
+   "title_th": "Fed คงดอกเบี้ย 3.75–4.00% (10–2) ตลาดคาดขึ้นดอกเบี้ย ธ.ค.",
+   "summary_th": "28 ต.ค. 2026 Fed คงดอกเบี้ย 3.75–4.00% ด้วยเสียง 10–2 โดย Hammack และ Cook ต้องการขึ้น 0.25% แถลงการณ์ปรับมุมมองเศรษฐกิจเป็น 'แข็งแกร่ง' และระบุว่าเงินเฟ้อยังสูง CME FedWatch ให้โอกาสขึ้นดอกเบี้ยเดือน ธ.ค. ราว 78% และ Fed จะลดจำนวนการประชุมตั้งแต่ปี 2027",
+   "impacts": [
+    {
+     "target": "finance",
+     "label_th": "การเงิน / ธนาคาร",
+     "direction": "mixed",
+     "strength": "medium",
+     "reason_th": "ดอกเบี้ยสูงช่วยรายได้ดอกเบี้ยธนาคาร แต่เพิ่มความเสี่ยงหนี้เสียและกดคะแนนนโยบาย Fed"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "กองทุน NASDAQ",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "หุ้นเทคโนโลยีมูลค่าสูงอ่อนไหวต่อดอกเบี้ยขาขึ้น"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ดอกเบี้ยแท้จริงสูงขึ้นเพิ่มต้นทุนการถือทอง"
+    },
+    {
+     "target": "space",
+     "label_th": "อวกาศ",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "หุ้นเติบโตที่ยังไม่มีกำไรถูกกดดันจากดอกเบี้ยสูง"
+    }
+   ],
+   "what_to_do_th": "ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค. ไม่ต้องเปลี่ยนแผน DCA",
+   "watch_next_th": "CPI ต.ค. (กลาง พ.ย.) · ประชุม Fed 9 ธ.ค.",
+   "sources": [
+    {
+     "label": "StockAnalysis · Fed holds Oct 2026",
+     "url": "https://stockanalysis.com/news/fed-holds-rates-steady-oct-2026/"
+    },
+    {
+     "label": "Nation Thailand · Fed holds",
+     "url": "https://www.nationthailand.com/news/world/40072859"
+    }
+   ]
+  },
+  {
+   "id": "2026-10-30-bigtech-capex-earnings",
+   "date": "2026-10-30",
+   "time_utc": "2026-10-30T20:00:00Z",
+   "run": "morning",
+   "level": "high",
+   "category": "earnings",
+   "title_th": "งบบริษัทเทคใหญ่: ลงทุน AI สูง กระแสเงินสดติดลบ หุ้นเทคร่วง",
+   "summary_th": "ปลาย ต.ค. 2026 Alphabet ร่วงกว่า 12% (29 ต.ค.) และ 30 ต.ค. Intel −28.6% จากคาดการณ์กำไรอ่อน Amazon มีกระแสเงินสดอิสระ 12 เดือน −$42.4 พันล้าน จากงบลงทุน $94.8 พันล้าน S&P 500 −1.8% Nasdaq −2.9% แย่สุดตั้งแต่ มิ.ย. ตลาดเข้าสู่โหมด 'ต้องเห็นผลตอบแทนก่อน' ของการลงทุน AI",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI",
+     "direction": "mixed",
+     "strength": "high",
+     "reason_th": "งบลงทุนที่สูงยังหนุนความต้องการชิปและระบบไฟฟ้า แต่ความกังวลเรื่องผลตอบแทนทำให้หุ้น AI ถูกเทขาย"
+    },
+    {
+     "target": "AVGO",
+     "label_th": "Broadcom",
+     "direction": "mixed",
+     "strength": "medium",
+     "reason_th": "ลูกค้าคลาวด์ยังลงทุนชิปสั่งทำ แต่ราคาหุ้นถูกกดจากความกังวลรอบการลงทุน"
+    },
+    {
+     "target": "KLAC",
+     "label_th": "KLA",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "หุ้นอุปกรณ์ผลิตชิปผันผวนแรงตามมุมมองรอบการลงทุน"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "กองทุน NASDAQ",
+     "direction": "negative",
+     "strength": "high",
+     "reason_th": "บริษัทเทคใหญ่มีน้ำหนักสูงในดัชนี"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ ค่าลงทุน/รายได้คลาวด์ในแอปคงที่ 1.58 เท่า",
+   "watch_next_th": "งบ Nvidia ปลาย พ.ย.",
+   "sources": [
+    {
+     "label": "AP via AJC · Oct 30",
+     "url": "https://www.ajc.com/news/2026/10/wall-street-tumbles-to-its-worst-day-since-june-after-the-sell-off-for-tech-stocks-deepens/"
     }
    ]
   },
@@ -247,7 +347,7 @@
    "level": "medium",
    "category": "market",
    "title_th": "9 รายการต่ำกว่าจุดสูงสุด 52 สัปดาห์เกิน 20%",
-   "summary_th": "ระบบราคาเริ่มติดตาม 6 พ.ย. พบ 9 รายการลงเกิน 20% จากจุดสูงสุด: ASTS −75.7%, RKLB −64.7%, KLAC −54.1%, AVGO −39.0%, BKNG −26.9%, ETN −25.7%, GLD −24.9%, GS −24.9%, ISRG −23.6% หุ้นชิปมาจากการเทขาย AI (5 พ.ย.) BKNG จากงบ 3 พ.ย. ทอง GLD จากความคาดหวังดอกเบี้ยขาขึ้น ส่วน ASTS, RKLB, GS, ISRG ยังไม่พบข่าวเฉพาะในรอบนี้",
+   "summary_th": "ระบบราคาเริ่มติดตาม 6 พ.ย. พบ 9 รายการลงเกิน 20% จากจุดสูงสุด: ASTS −75.7%, RKLB −64.7%, KLAC −54.1%, AVGO −39.0%, BKNG −26.9%, ETN −25.7%, GLD −24.9%, GS −24.9%, ISRG −23.6% หุ้นชิปมาจากการเทขาย AI (5 พ.ย.) BKNG จากงบ 3 พ.ย. ทอง GLD จากความคาดหวังว่า Fed จะขึ้นดอกเบี้ย ธ.ค. (โอกาส ~77–78%) ทองลง ~1% เหลือ ~$4,048 วันที่ 6 พ.ย. ส่วน ASTS, RKLB, GS, ISRG ยังไม่พบข่าวเฉพาะในรอบนี้",
    "impacts": [
     {
      "target": "ai",
