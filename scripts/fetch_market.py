@@ -45,7 +45,7 @@ GAUGES = {
 def tickers_from_config() -> tuple[list[str], dict[str, str]]:
     cfg = json.loads(CONFIG.read_text())
     names: dict[str, str] = {}
-    for s in cfg["sectors"]:
+    for s in cfg["sectors"] + cfg.get("sectors_next", []):
         for st in s["stocks"]:
             names[st["ticker"]] = st.get("name", st["ticker"])
     for a in cfg.get("main_port", []):
@@ -84,6 +84,7 @@ def snapshot(t: str) -> dict | None:
                 "ma200": r(c.tail(200).mean()) if len(c) >= 200 else None,
                 "chg_1m_pct": r((last / m1 - 1) * 100) if m1 else None,
                 "chg_3m_pct": r((last / m3 - 1) * 100) if m3 else None,
+                "price_1m_ago": r(m1), "price_3m_ago": r(m3),
                 "as_of": str(c.index[-1].date()),
                 "source_url": f"https://finance.yahoo.com/quote/{t}",
             }
