@@ -1,12 +1,12 @@
 {
- "generated": "2026-10-26T05:18:02.986689+00:00",
+ "generated": "2026-11-07T03:12:58.120212+00:00",
  "chart_url": "https://raw.githubusercontent.com/saisinfu/ai-cycle-sentinal/main/backtest/results/finance_backtest.png",
  "details_url": "https://github.com/saisinfu/ai-cycle-sentinal/tree/main/backtest",
  "sectors": {
   "finance": {
    "status": "tested",
    "verdict": "no_edge",
-   "headline": "ทดสอบ 35 ปี: ดัชนีหมวดแทบไม่บอกผลตอบแทน 12 เดือนข้างหน้า (ค่าสหสัมพันธ์ +0.01) กฎเดิมที่หยุด/ลดตามสัญญาณได้ผลต่างจาก DCA ปกติ -0.9% ถึง -0.3% ต่อปี ส่วนกฎปัจจุบัน (DCA ต่อเสมอ) ต่างจาก DCA ปกติ +0.0% ถึง +0.2% ต่อปี",
+   "headline": "ทดสอบ 35 ปี: ดัชนีหมวดแทบไม่บอกผลตอบแทน 12 เดือนข้างหน้า (ค่าสหสัมพันธ์ +0.01) กฎเดิมที่หยุด/ลดตามสัญญาณได้ผลต่างจาก DCA ปกติ -1.0% ถึง -0.3% ต่อปี ส่วนกฎปัจจุบัน (DCA ต่อเสมอ) ต่างจาก DCA ปกติ -0.1% ถึง +0.2% ต่อปี",
    "period_from": "1991-08",
    "period_to": "2026-09",
    "months": 422,
@@ -16,8 +16,8 @@
      "label": "XLF กองทุนหุ้นการเงินสหรัฐ",
      "from": "1998-12",
      "to": "2026-09",
-     "plain_irr": 8.2,
-     "previous_irr": 7.8,
+     "plain_irr": 8.3,
+     "previous_irr": 7.9,
      "current_irr": 8.2,
      "plain_dd": -74.0,
      "previous_dd": -72.0,
@@ -38,9 +38,9 @@
      "label": "JPMorgan (JPM)",
      "from": "1991-08",
      "to": "2026-09",
-     "plain_irr": 13.3,
+     "plain_irr": 13.4,
      "previous_irr": 12.4,
-     "current_irr": 13.3,
+     "current_irr": 13.4,
      "plain_dd": -61.0,
      "previous_dd": -56.0,
      "current_dd": -61.0
@@ -49,9 +49,9 @@
      "label": "JPM / V / GS ตามสัดส่วนในแอป",
      "from": "2008-03",
      "to": "2026-09",
-     "plain_irr": 18.4,
-     "previous_irr": 18.1,
-     "current_irr": 18.6,
+     "plain_irr": 18.5,
+     "previous_irr": 18.2,
+     "current_irr": 18.7,
      "plain_dd": -25.0,
      "previous_dd": -25.0,
      "current_dd": -25.0
@@ -168,5 +168,159 @@
     "โครงสร้างกฎเหมือนหมวดการเงิน จึงน่าจะมีข้อจำกัดคล้ายกัน ใช้เป็นข้อมูลประกอบ ไม่ใช่สัญญาณซื้อขาย"
    ]
   }
+ },
+ "dynamic_budget": {
+  "generated": "2026-11-07T03:14:49.532978+00:00",
+  "rules": {
+   "gentle": "ใกล้จุดสูงสุดลง 0.8 เท่า · ย่อ 10–20% ลง 1.5 เท่า · ย่อ 20–30% ลง 2 เท่า · ย่อเกิน 30% ลง 3 เท่า",
+   "gentle_cap6": "แบบ gentle แต่เงินสำรองเกิน 6 เดือนของงบฐานให้ลงทุนส่วนเกินทันที",
+   "strong": "ใกล้จุดสูงสุดลง 0.6 เท่า · ย่อ 10–20% ลง 2 เท่า · ย่อ 20–30% ลง 3 เท่า · ย่อเกิน 30% ลง 4 เท่า",
+   "dip_only": "ปกติลง 0.9 เท่า (กันไว้ 10%) · ย่อ 10–20% ลง 1.5 เท่า · ย่อเกิน 20% ลง 2.5 เท่า · สำรองไม่เกิน 6 เดือน",
+   "ma200": "เทียบเส้นเฉลี่ย 200 วัน: สูงกว่า 10% ลง 0.7 เท่า · ต่ำกว่า 0–10% ลง 1.5 เท่า · ต่ำกว่าเกิน 10% ลง 2.5 เท่า"
+  },
+  "summary": {
+   "gentle": {
+    "median_irr_diff_pp": -0.08,
+    "min": -0.25,
+    "max": 0.01,
+    "share_beating_plain": 0.09
+   },
+   "gentle_cap6": {
+    "median_irr_diff_pp": -0.05,
+    "min": -0.25,
+    "max": 0.01,
+    "share_beating_plain": 0.09
+   },
+   "strong": {
+    "median_irr_diff_pp": -0.16,
+    "min": -0.5,
+    "max": 0.02,
+    "share_beating_plain": 0.09
+   },
+   "dip_only": {
+    "median_irr_diff_pp": -0.04,
+    "min": -0.12,
+    "max": 0.01,
+    "share_beating_plain": 0.09
+   },
+   "ma200": {
+    "median_irr_diff_pp": -0.02,
+    "min": -0.94,
+    "max": 0.02,
+    "share_beating_plain": 0.18
+   }
+  },
+  "assets": [
+   {
+    "label": "SPY",
+    "from": "1993-09",
+    "plain_irr": 10.57,
+    "gentle": -0.13,
+    "gentle_cap6": -0.13,
+    "strong": -0.25,
+    "dip_only": -0.09,
+    "ma200": -0.05
+   },
+   {
+    "label": "QQQ",
+    "from": "1999-10",
+    "plain_irr": 14.77,
+    "gentle": -0.13,
+    "gentle_cap6": -0.08,
+    "strong": -0.28,
+    "dip_only": -0.06,
+    "ma200": -0.08
+   },
+   {
+    "label": "SMH",
+    "from": "2001-01",
+    "plain_irr": 19.54,
+    "gentle": -0.04,
+    "gentle_cap6": -0.04,
+    "strong": -0.09,
+    "dip_only": -0.01,
+    "ma200": -0.06
+   },
+   {
+    "label": "XLF",
+    "from": "1999-07",
+    "plain_irr": 8.42,
+    "gentle": -0.01,
+    "gentle_cap6": -0.03,
+    "strong": -0.02,
+    "dip_only": -0.01,
+    "ma200": -0.02
+   },
+   {
+    "label": "XLV",
+    "from": "1999-07",
+    "plain_irr": 10.68,
+    "gentle": -0.08,
+    "gentle_cap6": -0.05,
+    "strong": -0.16,
+    "dip_only": -0.04,
+    "ma200": -0.02
+   },
+   {
+    "label": "XLP",
+    "from": "1999-07",
+    "plain_irr": 8.91,
+    "gentle": -0.22,
+    "gentle_cap6": -0.07,
+    "strong": -0.45,
+    "dip_only": -0.05,
+    "ma200": 0.0
+   },
+   {
+    "label": "JPM",
+    "from": "1985-08",
+    "plain_irr": 13.29,
+    "gentle": -0.0,
+    "gentle_cap6": -0.0,
+    "strong": -0.0,
+    "dip_only": -0.0,
+    "ma200": -0.0
+   },
+   {
+    "label": "AVGO",
+    "from": "2010-03",
+    "plain_irr": 38.25,
+    "gentle": -0.25,
+    "gentle_cap6": -0.25,
+    "strong": -0.5,
+    "dip_only": -0.12,
+    "ma200": -0.94
+   },
+   {
+    "label": "KLAC",
+    "from": "1985-08",
+    "plain_irr": 19.58,
+    "gentle": -0.0,
+    "gentle_cap6": -0.0,
+    "strong": -0.0,
+    "dip_only": -0.0,
+    "ma200": 0.02
+   },
+   {
+    "label": "ETN",
+    "from": "1985-08",
+    "plain_irr": 14.72,
+    "gentle": 0.01,
+    "gentle_cap6": 0.01,
+    "strong": 0.02,
+    "dip_only": 0.01,
+    "ma200": 0.02
+   },
+   {
+    "label": "GLD",
+    "from": "2005-06",
+    "plain_irr": 9.49,
+    "gentle": -0.08,
+    "gentle_cap6": -0.08,
+    "strong": -0.17,
+    "dip_only": -0.05,
+    "ma200": -0.1
+   }
+  ]
  }
 }

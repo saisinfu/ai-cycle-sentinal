@@ -1,0 +1,57 @@
+yahoo SPY ...
+yahoo QQQ ...
+yahoo SMH ...
+yahoo XLF ...
+yahoo XLV ...
+yahoo XLP ...
+yahoo JPM ...
+yahoo AVGO ...
+yahoo KLAC ...
+yahoo ETN ...
+yahoo GLD ...
+yahoo ^IRX ...
+/home/runner/work/ai-cycle-sentinal/ai-cycle-sentinal/backtest/dynamic_budget.py:91: Pandas4Warning: Timestamp.utcnow is deprecated and will be removed in a future version. Use Timestamp.now('UTC') instead.
+  out = {"generated": pd.Timestamp.utcnow().isoformat(), "synthetic": args.synthetic, "assets": {}, "rules": {k: v["th"] for k, v in RULES.items()}}
+SPY 1993-09-30 {'gentle': -0.13, 'gentle_cap6': -0.13, 'strong': -0.25, 'dip_only': -0.09, 'ma200': -0.05}
+QQQ 1999-10-31 {'gentle': -0.13, 'gentle_cap6': -0.08, 'strong': -0.28, 'dip_only': -0.06, 'ma200': -0.08}
+SMH 2001-01-31 {'gentle': -0.04, 'gentle_cap6': -0.04, 'strong': -0.09, 'dip_only': -0.01, 'ma200': -0.06}
+XLF 1999-07-31 {'gentle': -0.01, 'gentle_cap6': -0.03, 'strong': -0.02, 'dip_only': -0.01, 'ma200': -0.02}
+XLV 1999-07-31 {'gentle': -0.08, 'gentle_cap6': -0.05, 'strong': -0.16, 'dip_only': -0.04, 'ma200': -0.02}
+XLP 1999-07-31 {'gentle': -0.22, 'gentle_cap6': -0.07, 'strong': -0.45, 'dip_only': -0.05, 'ma200': 0.0}
+JPM 1985-08-31 {'gentle': -0.0, 'gentle_cap6': -0.0, 'strong': -0.0, 'dip_only': -0.0, 'ma200': -0.0}
+AVGO 2010-03-31 {'gentle': -0.25, 'gentle_cap6': -0.25, 'strong': -0.5, 'dip_only': -0.12, 'ma200': -0.94}
+KLAC 1985-08-31 {'gentle': -0.0, 'gentle_cap6': -0.0, 'strong': -0.0, 'dip_only': -0.0, 'ma200': 0.02}
+ETN 1985-08-31 {'gentle': 0.01, 'gentle_cap6': 0.01, 'strong': 0.02, 'dip_only': 0.01, 'ma200': 0.02}
+GLD 2005-06-30 {'gentle': -0.08, 'gentle_cap6': -0.08, 'strong': -0.17, 'dip_only': -0.05, 'ma200': -0.1}
+{
+ "gentle": {
+  "median_irr_diff_pp": -0.08,
+  "min": -0.25,
+  "max": 0.01,
+  "share_beating_plain": 0.09
+ },
+ "gentle_cap6": {
+  "median_irr_diff_pp": -0.05,
+  "min": -0.25,
+  "max": 0.01,
+  "share_beating_plain": 0.09
+ },
+ "strong": {
+  "median_irr_diff_pp": -0.16,
+  "min": -0.5,
+  "max": 0.02,
+  "share_beating_plain": 0.09
+ },
+ "dip_only": {
+  "median_irr_diff_pp": -0.04,
+  "min": -0.12,
+  "max": 0.01,
+  "share_beating_plain": 0.09
+ },
+ "ma200": {
+  "median_irr_diff_pp": -0.02,
+  "min": -0.94,
+  "max": 0.02,
+  "share_beating_plain": 0.18
+ }
+}

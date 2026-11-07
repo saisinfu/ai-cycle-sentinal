@@ -1,0 +1,474 @@
+{
+ "generated": "2026-11-07T03:14:49.532978+00:00",
+ "synthetic": false,
+ "assets": {
+  "SPY": {
+   "from": "1993-09-30",
+   "to": "2026-10-31",
+   "months": 398,
+   "plain_irr": 10.57,
+   "plain_dd": -47.8,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.13,
+     "terminal_ratio": 0.972,
+     "avg_reserve_share": 4.0,
+     "max_dd": -46.8
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.13,
+     "terminal_ratio": 0.972,
+     "avg_reserve_share": 2.8,
+     "max_dd": -47.4
+    },
+    "strong": {
+     "irr_diff_pp": -0.25,
+     "terminal_ratio": 0.947,
+     "avg_reserve_share": 8.4,
+     "max_dd": -45.6
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.09,
+     "terminal_ratio": 0.981,
+     "avg_reserve_share": 1.9,
+     "max_dd": -47.4
+    },
+    "ma200": {
+     "irr_diff_pp": -0.05,
+     "terminal_ratio": 0.988,
+     "avg_reserve_share": 1.2,
+     "max_dd": -47.7
+    }
+   }
+  },
+  "QQQ": {
+   "from": "1999-10-31",
+   "to": "2026-10-31",
+   "months": 325,
+   "plain_irr": 14.77,
+   "plain_dd": -41.8,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.13,
+     "terminal_ratio": 0.977,
+     "avg_reserve_share": 1.4,
+     "max_dd": -41.3
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.08,
+     "terminal_ratio": 0.986,
+     "avg_reserve_share": 1.2,
+     "max_dd": -41.3
+    },
+    "strong": {
+     "irr_diff_pp": -0.28,
+     "terminal_ratio": 0.952,
+     "avg_reserve_share": 2.9,
+     "max_dd": -40.8
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.06,
+     "terminal_ratio": 0.989,
+     "avg_reserve_share": 0.8,
+     "max_dd": -41.5
+    },
+    "ma200": {
+     "irr_diff_pp": -0.08,
+     "terminal_ratio": 0.986,
+     "avg_reserve_share": 1.5,
+     "max_dd": -41.8
+    }
+   }
+  },
+  "SMH": {
+   "from": "2001-01-31",
+   "to": "2026-10-31",
+   "months": 310,
+   "plain_irr": 19.54,
+   "plain_dd": -47.7,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.04,
+     "terminal_ratio": 0.993,
+     "avg_reserve_share": 0.3,
+     "max_dd": -47.7
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.04,
+     "terminal_ratio": 0.993,
+     "avg_reserve_share": 0.3,
+     "max_dd": -47.7
+    },
+    "strong": {
+     "irr_diff_pp": -0.09,
+     "terminal_ratio": 0.985,
+     "avg_reserve_share": 0.7,
+     "max_dd": -47.6
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.01,
+     "terminal_ratio": 0.999,
+     "avg_reserve_share": 0.2,
+     "max_dd": -47.7
+    },
+    "ma200": {
+     "irr_diff_pp": -0.06,
+     "terminal_ratio": 0.99,
+     "avg_reserve_share": 0.7,
+     "max_dd": -47.7
+    }
+   }
+  },
+  "XLF": {
+   "from": "1999-07-31",
+   "to": "2026-10-31",
+   "months": 328,
+   "plain_irr": 8.42,
+   "plain_dd": -73.4,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.01,
+     "terminal_ratio": 0.998,
+     "avg_reserve_share": 1.5,
+     "max_dd": -72.8
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.03,
+     "terminal_ratio": 0.996,
+     "avg_reserve_share": 1.3,
+     "max_dd": -73.1
+    },
+    "strong": {
+     "irr_diff_pp": -0.02,
+     "terminal_ratio": 0.996,
+     "avg_reserve_share": 3.0,
+     "max_dd": -72.3
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.01,
+     "terminal_ratio": 0.999,
+     "avg_reserve_share": 0.9,
+     "max_dd": -73.1
+    },
+    "ma200": {
+     "irr_diff_pp": -0.02,
+     "terminal_ratio": 0.997,
+     "avg_reserve_share": 0.7,
+     "max_dd": -73.4
+    }
+   }
+  },
+  "XLV": {
+   "from": "1999-07-31",
+   "to": "2026-10-31",
+   "months": 328,
+   "plain_irr": 10.68,
+   "plain_dd": -26.7,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.08,
+     "terminal_ratio": 0.986,
+     "avg_reserve_share": 1.6,
+     "max_dd": -25.6
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.05,
+     "terminal_ratio": 0.991,
+     "avg_reserve_share": 1.2,
+     "max_dd": -25.9
+    },
+    "strong": {
+     "irr_diff_pp": -0.16,
+     "terminal_ratio": 0.972,
+     "avg_reserve_share": 3.3,
+     "max_dd": -24.5
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.04,
+     "terminal_ratio": 0.994,
+     "avg_reserve_share": 1.1,
+     "max_dd": -26.0
+    },
+    "ma200": {
+     "irr_diff_pp": -0.02,
+     "terminal_ratio": 0.997,
+     "avg_reserve_share": 0.2,
+     "max_dd": -26.7
+    }
+   }
+  },
+  "XLP": {
+   "from": "1999-07-31",
+   "to": "2026-10-31",
+   "months": 328,
+   "plain_irr": 8.91,
+   "plain_dd": -23.0,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.22,
+     "terminal_ratio": 0.963,
+     "avg_reserve_share": 3.6,
+     "max_dd": -21.0
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.07,
+     "terminal_ratio": 0.989,
+     "avg_reserve_share": 1.7,
+     "max_dd": -22.1
+    },
+    "strong": {
+     "irr_diff_pp": -0.45,
+     "terminal_ratio": 0.926,
+     "avg_reserve_share": 7.3,
+     "max_dd": -18.9
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.05,
+     "terminal_ratio": 0.992,
+     "avg_reserve_share": 1.4,
+     "max_dd": -22.1
+    },
+    "ma200": {
+     "irr_diff_pp": 0.0,
+     "terminal_ratio": 1.0,
+     "avg_reserve_share": 0.1,
+     "max_dd": -23.0
+    }
+   }
+  },
+  "JPM": {
+   "from": "1985-08-31",
+   "to": "2026-10-31",
+   "months": 495,
+   "plain_irr": 13.29,
+   "plain_dd": -64.3,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.0,
+     "terminal_ratio": 1.0,
+     "avg_reserve_share": 0.3,
+     "max_dd": -64.0
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.0,
+     "terminal_ratio": 1.0,
+     "avg_reserve_share": 0.3,
+     "max_dd": -64.0
+    },
+    "strong": {
+     "irr_diff_pp": -0.0,
+     "terminal_ratio": 0.999,
+     "avg_reserve_share": 0.5,
+     "max_dd": -63.7
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.0,
+     "terminal_ratio": 0.999,
+     "avg_reserve_share": 0.2,
+     "max_dd": -64.1
+    },
+    "ma200": {
+     "irr_diff_pp": -0.0,
+     "terminal_ratio": 0.999,
+     "avg_reserve_share": 0.8,
+     "max_dd": -63.5
+    }
+   }
+  },
+  "AVGO": {
+   "from": "2010-03-31",
+   "to": "2026-10-31",
+   "months": 200,
+   "plain_irr": 38.25,
+   "plain_dd": -34.0,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.25,
+     "terminal_ratio": 0.976,
+     "avg_reserve_share": 1.0,
+     "max_dd": -34.0
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.25,
+     "terminal_ratio": 0.976,
+     "avg_reserve_share": 1.0,
+     "max_dd": -34.0
+    },
+    "strong": {
+     "irr_diff_pp": -0.5,
+     "terminal_ratio": 0.951,
+     "avg_reserve_share": 2.0,
+     "max_dd": -34.0
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.12,
+     "terminal_ratio": 0.988,
+     "avg_reserve_share": 0.6,
+     "max_dd": -34.0
+    },
+    "ma200": {
+     "irr_diff_pp": -0.94,
+     "terminal_ratio": 0.911,
+     "avg_reserve_share": 4.6,
+     "max_dd": -33.9
+    }
+   }
+  },
+  "KLAC": {
+   "from": "1985-08-31",
+   "to": "2026-10-31",
+   "months": 495,
+   "plain_irr": 19.58,
+   "plain_dd": -76.9,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.0,
+     "terminal_ratio": 1.0,
+     "avg_reserve_share": 0.0,
+     "max_dd": -76.9
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.0,
+     "terminal_ratio": 1.0,
+     "avg_reserve_share": 0.0,
+     "max_dd": -76.9
+    },
+    "strong": {
+     "irr_diff_pp": -0.0,
+     "terminal_ratio": 1.0,
+     "avg_reserve_share": 0.1,
+     "max_dd": -76.9
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.0,
+     "terminal_ratio": 1.0,
+     "avg_reserve_share": 0.0,
+     "max_dd": -76.9
+    },
+    "ma200": {
+     "irr_diff_pp": 0.02,
+     "terminal_ratio": 1.005,
+     "avg_reserve_share": 0.5,
+     "max_dd": -76.8
+    }
+   }
+  },
+  "ETN": {
+   "from": "1985-08-31",
+   "to": "2026-10-31",
+   "months": 495,
+   "plain_irr": 14.72,
+   "plain_dd": -61.3,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": 0.01,
+     "terminal_ratio": 1.003,
+     "avg_reserve_share": 0.4,
+     "max_dd": -61.3
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": 0.01,
+     "terminal_ratio": 1.003,
+     "avg_reserve_share": 0.4,
+     "max_dd": -61.3
+    },
+    "strong": {
+     "irr_diff_pp": 0.02,
+     "terminal_ratio": 1.006,
+     "avg_reserve_share": 0.8,
+     "max_dd": -61.3
+    },
+    "dip_only": {
+     "irr_diff_pp": 0.01,
+     "terminal_ratio": 1.002,
+     "avg_reserve_share": 0.3,
+     "max_dd": -61.3
+    },
+    "ma200": {
+     "irr_diff_pp": 0.02,
+     "terminal_ratio": 1.006,
+     "avg_reserve_share": 0.8,
+     "max_dd": -61.3
+    }
+   }
+  },
+  "GLD": {
+   "from": "2005-06-30",
+   "to": "2026-10-31",
+   "months": 257,
+   "plain_irr": 9.49,
+   "plain_dd": -26.8,
+   "rules": {
+    "gentle": {
+     "irr_diff_pp": -0.08,
+     "terminal_ratio": 0.989,
+     "avg_reserve_share": 1.3,
+     "max_dd": -26.7
+    },
+    "gentle_cap6": {
+     "irr_diff_pp": -0.08,
+     "terminal_ratio": 0.989,
+     "avg_reserve_share": 1.3,
+     "max_dd": -26.7
+    },
+    "strong": {
+     "irr_diff_pp": -0.17,
+     "terminal_ratio": 0.979,
+     "avg_reserve_share": 2.7,
+     "max_dd": -26.6
+    },
+    "dip_only": {
+     "irr_diff_pp": -0.05,
+     "terminal_ratio": 0.993,
+     "avg_reserve_share": 0.9,
+     "max_dd": -26.7
+    },
+    "ma200": {
+     "irr_diff_pp": -0.1,
+     "terminal_ratio": 0.988,
+     "avg_reserve_share": 2.3,
+     "max_dd": -26.4
+    }
+   }
+  }
+ },
+ "rules": {
+  "gentle": "ใกล้จุดสูงสุดลง 0.8 เท่า · ย่อ 10–20% ลง 1.5 เท่า · ย่อ 20–30% ลง 2 เท่า · ย่อเกิน 30% ลง 3 เท่า",
+  "gentle_cap6": "แบบ gentle แต่เงินสำรองเกิน 6 เดือนของงบฐานให้ลงทุนส่วนเกินทันที",
+  "strong": "ใกล้จุดสูงสุดลง 0.6 เท่า · ย่อ 10–20% ลง 2 เท่า · ย่อ 20–30% ลง 3 เท่า · ย่อเกิน 30% ลง 4 เท่า",
+  "dip_only": "ปกติลง 0.9 เท่า (กันไว้ 10%) · ย่อ 10–20% ลง 1.5 เท่า · ย่อเกิน 20% ลง 2.5 เท่า · สำรองไม่เกิน 6 เดือน",
+  "ma200": "เทียบเส้นเฉลี่ย 200 วัน: สูงกว่า 10% ลง 0.7 เท่า · ต่ำกว่า 0–10% ลง 1.5 เท่า · ต่ำกว่าเกิน 10% ลง 2.5 เท่า"
+ },
+ "summary": {
+  "gentle": {
+   "median_irr_diff_pp": -0.08,
+   "min": -0.25,
+   "max": 0.01,
+   "share_beating_plain": 0.09
+  },
+  "gentle_cap6": {
+   "median_irr_diff_pp": -0.05,
+   "min": -0.25,
+   "max": 0.01,
+   "share_beating_plain": 0.09
+  },
+  "strong": {
+   "median_irr_diff_pp": -0.16,
+   "min": -0.5,
+   "max": 0.02,
+   "share_beating_plain": 0.09
+  },
+  "dip_only": {
+   "median_irr_diff_pp": -0.04,
+   "min": -0.12,
+   "max": 0.01,
+   "share_beating_plain": 0.09
+  },
+  "ma200": {
+   "median_irr_diff_pp": -0.02,
+   "min": -0.94,
+   "max": 0.02,
+   "share_beating_plain": 0.18
+  }
+ }
+}
