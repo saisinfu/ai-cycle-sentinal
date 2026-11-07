@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../core/format.dart';
 import '../core/theme.dart';
 import '../state/providers.dart';
 import 'alerts_screen.dart';
@@ -23,12 +24,17 @@ class _AppShellState extends ConsumerState<AppShell> {
   @override
   Widget build(BuildContext context) {
     final latest = ref.watch(allSectorsProvider).map((s) => s.latest.reading.date).fold<String?>(null, (a, b) => a == null || b.compareTo(a) > 0 ? b : a);
-    final todayAlerts = latest == null ? 0 : ref.watch(allAlertsProvider).where((a) => a.date == latest).length;
+    final market = ref.watch(marketProvider).valueOrNull;
+    final lastTrading = market?.quotes['SPY']?.asOf;
+    final recent = isoDate(DateTime.now().subtract(const Duration(days: 1)));
+    final todayAlerts = (latest == null ? 0 : ref.watch(allAlertsProvider).where((a) => a.date == latest).length) +
+        (lastTrading == null ? 0 : ref.watch(followedPriceEventsProvider).where((e) => e.date.compareTo(lastTrading) >= 0).length) +
+        (ref.watch(newsProvider).valueOrNull ?? const []).where((n) => n.level == 'high' && n.date.compareTo(recent) >= 0).length;
     return Scaffold(
       body: IndexedStack(
         index: _tab,
         children: [
-          OverviewScreen(onOpenBudget: () => _go(1)),
+          OverviewScreen(onOpenBudget: () => _go(1), onOpenAlerts: () => _go(2)),
           BudgetScreen(onOpenSettings: () => _go(3)),
           const AlertsScreen(),
           const SettingsScreen(),

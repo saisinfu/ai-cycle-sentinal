@@ -2,6 +2,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../data/backtest.dart';
 import '../data/budget.dart';
+import '../data/feed.dart';
+import '../data/flex.dart';
 import '../data/config.dart';
 import '../data/engine.dart';
 import '../data/models.dart';
@@ -75,6 +77,40 @@ final budgetProvider = Provider<BudgetPlan?>((ref) {
   );
 });
 
+final newsProvider = FutureProvider<List<NewsItem>>((ref) => ref.watch(repositoryProvider).loadNews());
+
+final priceEventsProvider = FutureProvider<PriceEvents>((ref) => ref.watch(repositoryProvider).loadPriceEvents());
+
+/// Price events for tickers the user can see (sector stocks + main-port proxies).
+final followedPriceEventsProvider = Provider<List<PriceEvent>>((ref) {
+  final ev = ref.watch(priceEventsProvider).valueOrNull?.events ?? const [];
+  final config = ref.watch(configProvider).valueOrNull;
+  final settings = ref.watch(settingsProvider);
+  if (config == null) return ev;
+  final tickers = <String>{
+    for (final a in config.mainPort) a.proxy,
+    for (final s in config.sectors)
+      if (settings.isFollowed(s.id)) ...s.stocks.map((x) => x.ticker),
+  };
+  return [for (final e in ev) if (tickers.contains(e.ticker)) e];
+});
+
+final flexProvider = Provider<FlexPlan?>((ref) {
+  final plan = ref.watch(budgetProvider);
+  final config = ref.watch(configProvider).valueOrNull;
+  final market = ref.watch(marketProvider).valueOrNull;
+  if (plan == null || config == null) return null;
+  final s = ref.watch(settingsProvider);
+  return buildFlex(
+    plan: plan,
+    mainAssets: config.mainPort,
+    market: market ?? MarketData.empty,
+    mode: s.flexMode,
+    reserve: s.planReserve,
+    capMonths: s.reserveCapMonths,
+  );
+});
+
 final taxProvider = Provider<TaxResult>((ref) {
   final s = ref.watch(settingsProvider);
   return planTax(TaxInput(
@@ -96,4 +132,6 @@ void refreshAll(WidgetRef ref) {
   ref.invalidate(marketProvider);
   ref.invalidate(readingsProvider);
   ref.invalidate(backtestProvider);
+  ref.invalidate(newsProvider);
+  ref.invalidate(priceEventsProvider);
 }

@@ -7,6 +7,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'backtest.dart';
 import 'config.dart';
+import 'feed.dart';
 import 'models.dart';
 
 /// Public repository written by the daily Claude task.
@@ -98,6 +99,24 @@ class Repository {
       return j is Map ? BacktestSummary.fromJson(j) : null;
     } catch (_) {
       return null;
+    }
+  }
+
+  Future<List<NewsItem>> loadNews() async {
+    try {
+      final r = await _fetch('data/news.json');
+      return parseNews(jsonDecode(r.value));
+    } catch (_) {
+      return const [];
+    }
+  }
+
+  Future<PriceEvents> loadPriceEvents() async {
+    try {
+      final r = await _fetch('data/price_events.json');
+      return PriceEvents.fromJson(jsonDecode(r.value));
+    } catch (_) {
+      return const PriceEvents(events: []);
     }
   }
 }

@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/engine.dart';
+import '../data/flex.dart';
 
 /// Everything the user can change in the app. Stored on the phone only.
 class UserSettings {
@@ -24,7 +25,33 @@ class UserSettings {
     this.esgBought = 0.0,
     this.rmfBought = 0.0,
     this.targetNet = 300000.0,
+    this.flexMode = FlexMode.dipOnly,
+    this.reserve = 0.0,
+    this.reserveCapMonths = 6.0,
+    this.lastRecordedMonth = '',
+    this.recordedReserveBefore = 0.0,
   });
+
+  /// Reserve before the confirmation of [lastRecordedMonth] (to show and undo that month's plan).
+  final double recordedReserveBefore;
+
+  static String monthKey(DateTime d) => '${d.year}-${d.month.toString().padLeft(2, '0')}';
+
+  bool get recordedThisMonth => lastRecordedMonth == monthKey(DateTime.now());
+
+  /// Reserve the current month's plan starts from.
+  double get planReserve => recordedThisMonth ? recordedReserveBefore : reserve;
+
+  final FlexMode flexMode;
+
+  /// Cash reserve for buying dips (baht), kept by the user.
+  final double reserve;
+
+  /// Reserve above this many months of base budget is invested right away (0 = no cap).
+  final double reserveCapMonths;
+
+  /// 'YYYY-MM' of the last month the user confirmed the plan.
+  final String lastRecordedMonth;
 
   final double salary;
   final double dcaPct;
@@ -64,6 +91,11 @@ class UserSettings {
     double? esgBought,
     double? rmfBought,
     double? targetNet,
+    FlexMode? flexMode,
+    double? reserve,
+    double? reserveCapMonths,
+    String? lastRecordedMonth,
+    double? recordedReserveBefore,
   }) =>
       UserSettings(
         salary: salary ?? this.salary,
@@ -82,6 +114,11 @@ class UserSettings {
         esgBought: esgBought ?? this.esgBought,
         rmfBought: rmfBought ?? this.rmfBought,
         targetNet: targetNet ?? this.targetNet,
+        flexMode: flexMode ?? this.flexMode,
+        reserve: reserve ?? this.reserve,
+        reserveCapMonths: reserveCapMonths ?? this.reserveCapMonths,
+        lastRecordedMonth: lastRecordedMonth ?? this.lastRecordedMonth,
+        recordedReserveBefore: recordedReserveBefore ?? this.recordedReserveBefore,
       );
 
   Map<String, Object> toJson() => {
@@ -101,6 +138,11 @@ class UserSettings {
         'esgBought': esgBought,
         'rmfBought': rmfBought,
         'targetNet': targetNet,
+        'flexMode': flexModeKey(flexMode),
+        'reserve': reserve,
+        'reserveCapMonths': reserveCapMonths,
+        'lastRecordedMonth': lastRecordedMonth,
+        'recordedReserveBefore': recordedReserveBefore,
       };
 
   static Map<String, double>? _nums(Object? v) {
@@ -131,6 +173,11 @@ class UserSettings {
       esgBought: n('esgBought', d.esgBought),
       rmfBought: n('rmfBought', d.rmfBought),
       targetNet: n('targetNet', d.targetNet),
+      flexMode: flexModeFrom(j['flexMode'] as String?),
+      reserve: n('reserve', d.reserve),
+      reserveCapMonths: n('reserveCapMonths', d.reserveCapMonths),
+      lastRecordedMonth: j['lastRecordedMonth'] is String ? j['lastRecordedMonth'] as String : '',
+      recordedReserveBefore: n('recordedReserveBefore', d.recordedReserveBefore),
     );
   }
 }

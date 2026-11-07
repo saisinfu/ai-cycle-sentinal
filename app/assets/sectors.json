@@ -510,5 +510,791 @@
       "rules_version": 2,
       "rules_note": "ทดสอบย้อนหลัง 35 ปี (หมวดการเงิน) พบว่าการหยุด DCA หรือขายตามสัญญาณวัฏจักรให้ผลแย่กว่า DCA ปกติ กฎชุดนี้จึง DCA ต่อทุกโซน ไม่หยุดและไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสดสำรอง 20% ในช่วงย่อยการลงทุน เพื่อใช้ซื้อเพิ่มเมื่อกลับเป็นโซนขยายตัว"
     }
+  ],
+  "sectors_next": [
+    {
+      "id": "health",
+      "name": "สุขภาพ / Health & Wellness",
+      "icon": "health",
+      "data": "data/health.json",
+      "confidence": "medium",
+      "confidence_note": "3 จาก 5 สัญญาณเป็นตัวเลขรายไตรมาสจากงบบริษัท 1 ตัวเป็นค่าประเมิน (ความเสี่ยงนโยบาย) · ยังไม่ได้ทดสอบย้อนหลัง",
+      "summary": {
+        "X": "ความต้องการยาและบริการสุขภาพโตดี ต้นทุนประกันคุมได้ · DCA ตามน้ำหนักปกติ",
+        "W": "มีแรงกดดันบางด้าน เช่น ต้นทุนรักษาสูงหรือความเสี่ยงนโยบายราคายา · DCA ต่อ แต่เอียงไปหาธุรกิจที่ทนกว่า",
+        "D": "ต้นทุนหรือนโยบายกดดันกำไรทั้งกลุ่ม · DCA ต่อ 80% ของงบ ไม่ขาย กันเงินสด 20% ไว้ซื้อเพิ่ม"
+      },
+      "signals": [
+        {
+          "key": "glp1_demand",
+          "field": "lly_revenue_growth_yoy_pct",
+          "label": "ยอดขาย Eli Lilly (ยา GLP-1)",
+          "label_en": "Eli Lilly revenue growth",
+          "short": "ยอดขายยา GLP-1",
+          "weight": 0.25,
+          "worst": 0,
+          "best": 40,
+          "display": "{lly_revenue_growth_yoy_pct:+1}% เทียบปีก่อน",
+          "range": "0% → +40%",
+          "why": "ยาลดน้ำหนัก/เบาหวานกลุ่ม GLP-1 เป็นตัวขับเคลื่อนใหญ่ที่สุดของกลุ่มสุขภาพตอนนี้",
+          "source": "งบไตรมาส Eli Lilly",
+          "source_url": "https://investor.lilly.com/financial-information/quarterly-results",
+          "frequency": "รายไตรมาส",
+          "kind": "data"
+        },
+        {
+          "key": "insurer_cost",
+          "field": "unh_medical_care_ratio_pct",
+          "label": "สัดส่วนค่ารักษาของ UnitedHealth",
+          "label_en": "UnitedHealth medical care ratio",
+          "short": "ต้นทุนค่ารักษา",
+          "weight": 0.2,
+          "worst": 92,
+          "best": 82,
+          "display": "{unh_medical_care_ratio_pct:1}% ของเบี้ย",
+          "range": "92% → 82%",
+          "why": "ยิ่งต่ำ ประกันสุขภาพยิ่งมีกำไร ถ้าพุ่งสูงแปลว่าคนใช้บริการมากกว่าที่คาด",
+          "source": "งบไตรมาส UnitedHealth",
+          "source_url": "https://www.unitedhealthgroup.com/investors.html",
+          "frequency": "รายไตรมาส",
+          "kind": "data"
+        },
+        {
+          "key": "surgery_volume",
+          "field": "isrg_procedure_growth_yoy_pct",
+          "label": "จำนวนผ่าตัดด้วยหุ่นยนต์ da Vinci",
+          "label_en": "Intuitive da Vinci procedure growth",
+          "short": "ผ่าตัดด้วยหุ่นยนต์",
+          "weight": 0.2,
+          "worst": 5,
+          "best": 20,
+          "display": "{isrg_procedure_growth_yoy_pct:+1}% เทียบปีก่อน",
+          "range": "+5% → +20%",
+          "why": "สะท้อนความต้องการผ่าตัดและการลงทุนของโรงพยาบาล",
+          "source": "งบไตรมาส Intuitive Surgical",
+          "source_url": "https://isrg.intuitive.com/",
+          "frequency": "รายไตรมาส",
+          "kind": "data"
+        },
+        {
+          "key": "policy_risk",
+          "field": "hc_policy_risk",
+          "label": "ความเสี่ยงนโยบายสุขภาพสหรัฐ",
+          "label_en": "US health policy risk",
+          "short": "ความเสี่ยงนโยบาย",
+          "weight": 0.2,
+          "worst": 8,
+          "best": 2,
+          "display": "{hc_policy_risk:1}/10",
+          "range": "8 → 2 (ยิ่งต่ำยิ่งดี)",
+          "why": "การคุมราคายา, Medicare, ภาษีนำเข้ายา กระทบกำไรทั้งกลุ่มได้เร็ว",
+          "source": "Claude ประเมินจากข่าวนโยบาย (CMS, ทำเนียบขาว, สภาคองเกรส)",
+          "source_url": "https://www.cms.gov/newsroom",
+          "frequency": "รายวัน",
+          "kind": "estimate"
+        },
+        {
+          "key": "hc_jobs",
+          "field": "healthcare_jobs_growth_yoy_pct",
+          "label": "การจ้างงานสาธารณสุขสหรัฐ",
+          "label_en": "US health care employment growth",
+          "short": "จ้างงานสาธารณสุข",
+          "weight": 0.15,
+          "worst": 0.5,
+          "best": 4.0,
+          "display": "{healthcare_jobs_growth_yoy_pct:+1}% เทียบปีก่อน",
+          "range": "+0.5% → +4.0%",
+          "why": "จ้างงานเพิ่ม = ความต้องการบริการสุขภาพยังโต",
+          "source": "FRED: CES6562000001",
+          "source_url": "https://fred.stlouisfed.org/series/CES6562000001",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "LLY",
+          "name": "Eli Lilly"
+        },
+        {
+          "ticker": "ISRG",
+          "name": "Intuitive Surgical"
+        },
+        {
+          "ticker": "UNH",
+          "name": "UnitedHealth Group"
+        }
+      ],
+      "rules": {
+        "X": {
+          "LLY": [
+            "BUY_DCA",
+            40
+          ],
+          "ISRG": [
+            "BUY_DCA",
+            30
+          ],
+          "UNH": [
+            "BUY_DCA",
+            30
+          ]
+        },
+        "W": {
+          "LLY": [
+            "BUY_DCA",
+            35
+          ],
+          "ISRG": [
+            "BUY_DCA",
+            25
+          ],
+          "UNH": [
+            "OVERWEIGHT_DCA",
+            40
+          ]
+        },
+        "D": {
+          "LLY": [
+            "BUY_DCA",
+            30
+          ],
+          "ISRG": [
+            "BUY_DCA",
+            20
+          ],
+          "UNH": [
+            "OVERWEIGHT_DCA",
+            30
+          ]
+        }
+      },
+      "reasons": {
+        "X": {
+          "LLY": "ผู้นำยา GLP-1 ยอดขายโตเร็วที่สุดในกลุ่มยาใหญ่",
+          "ISRG": "ผู้นำหุ่นยนต์ผ่าตัด รายได้ประจำจากอุปกรณ์สิ้นเปลือง",
+          "UNH": "ประกันสุขภาพรายใหญ่ที่สุดของสหรัฐ ได้ประโยชน์เมื่อต้นทุนรักษาคุมได้"
+        },
+        "W": {
+          "LLY": "ยัง DCA ต่อ ลดจาก 40% เหลือ 35% เพราะราคาสะท้อนการเติบโตไว้สูง",
+          "ISRG": "ยัง DCA ต่อ ลดจาก 30% เหลือ 25% หุ้นมูลค่าสูงผันผวนกว่า",
+          "UNH": "เพิ่มจาก 30% เป็น 40% ราคาไม่แพงเมื่อเทียบกำไร และรายได้ผูกกับเบี้ยประกันที่ต่อสัญญาทุกปี"
+        },
+        "D": {
+          "LLY": "ยัง DCA ต่อ 30% (ไม่หยุด ไม่ขาย)",
+          "ISRG": "ยัง DCA ต่อในน้ำหนักต่ำ 20%",
+          "UNH": "คงน้ำหนักหลัก 30% อีก 20% ของงบหมวดเก็บเป็นเงินสดสำรอง"
+        }
+      },
+      "alerts": [
+        {
+          "field": "unh_medical_care_ratio_pct",
+          "op": ">",
+          "value": 90,
+          "zone": "D",
+          "title": "ต้นทุนค่ารักษาพุ่ง",
+          "message": "สัดส่วนค่ารักษาของ UnitedHealth {unh_medical_care_ratio_pct:1}% (เกณฑ์แจ้งเตือน: เกิน 90%)"
+        },
+        {
+          "field": "hc_policy_risk",
+          "op": ">",
+          "value": 8,
+          "zone": "D",
+          "title": "ความเสี่ยงนโยบายสูง",
+          "message": "คะแนนความเสี่ยงนโยบาย {hc_policy_risk:1}/10 (เกณฑ์แจ้งเตือน: เกิน 8)"
+        }
+      ],
+      "rules_origin": "draft",
+      "rules_version": 2,
+      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน"
+    },
+    {
+      "id": "staples",
+      "name": "อาหาร / ของใช้จำเป็น",
+      "icon": "food",
+      "data": "data/staples.json",
+      "confidence": "high",
+      "confidence_note": "ทุกสัญญาณเป็นตัวเลขทางการหรือจากบริษัท (รายเดือน) · ยังไม่ได้ทดสอบย้อนหลัง",
+      "summary": {
+        "X": "ผู้บริโภคมั่นใจ ใช้จ่ายร้านอาหารโต ต้นทุนอาหารนิ่ง · DCA ตามน้ำหนักปกติ",
+        "W": "ผู้บริโภคเริ่มระวังหรือต้นทุนวัตถุดิบสูงขึ้น · DCA ต่อ แต่เอียงไปหาสินค้าจำเป็นที่ขึ้นราคาได้",
+        "D": "ผู้บริโภคตึงตัวและต้นทุนกดดันกำไร · DCA ต่อ 80% ของงบ ไม่ขาย กันเงินสด 20% ไว้ซื้อเพิ่ม"
+      },
+      "signals": [
+        {
+          "key": "sentiment",
+          "field": "consumer_sentiment",
+          "label": "ความเชื่อมั่นผู้บริโภค (U. Michigan)",
+          "label_en": "UMich consumer sentiment",
+          "short": "ความเชื่อมั่นผู้บริโภค",
+          "weight": 0.2,
+          "worst": 50,
+          "best": 90,
+          "display": "{consumer_sentiment:1}",
+          "range": "50 → 90",
+          "why": "ผู้บริโภคมั่นใจ = กล้าใช้จ่ายกินข้างนอกและซื้อของมากขึ้น",
+          "source": "FRED: UMCSENT",
+          "source_url": "https://fred.stlouisfed.org/series/UMCSENT",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        },
+        {
+          "key": "restaurant_sales",
+          "field": "food_services_sales_yoy_pct",
+          "label": "ยอดขายร้านอาหารสหรัฐ",
+          "label_en": "Food services & drinking places sales",
+          "short": "ยอดขายร้านอาหาร",
+          "weight": 0.2,
+          "worst": 0,
+          "best": 8,
+          "display": "{food_services_sales_yoy_pct:+1}% เทียบปีก่อน",
+          "range": "0% → +8%",
+          "why": "วัดการใช้จ่ายกินข้างนอกโดยตรง (เกี่ยวกับ McDonald's)",
+          "source": "FRED: RSFSDP",
+          "source_url": "https://fred.stlouisfed.org/series/RSFSDP",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        },
+        {
+          "key": "food_inflation",
+          "field": "food_at_home_cpi_yoy_pct",
+          "label": "เงินเฟ้ออาหารในบ้าน",
+          "label_en": "Food at home CPI",
+          "short": "เงินเฟ้ออาหาร",
+          "weight": 0.2,
+          "worst": 6,
+          "best": 1.5,
+          "display": "{food_at_home_cpi_yoy_pct:+1}% เทียบปีก่อน",
+          "range": "6% → 1.5% (ยิ่งต่ำยิ่งดี)",
+          "why": "อาหารแพงเร็ว = คนซื้อน้อยลงหรือหันไปของถูก ยอดขายแบรนด์ใหญ่ลดลง",
+          "source": "FRED: CUSR0000SAF11",
+          "source_url": "https://fred.stlouisfed.org/series/CUSR0000SAF11",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        },
+        {
+          "key": "input_cost",
+          "field": "fao_food_price_yoy_pct",
+          "label": "ราคาวัตถุดิบอาหารโลก (FAO)",
+          "label_en": "FAO Food Price Index",
+          "short": "ต้นทุนวัตถุดิบ",
+          "weight": 0.2,
+          "worst": 20,
+          "best": -5,
+          "display": "{fao_food_price_yoy_pct:+1}% เทียบปีก่อน",
+          "range": "+20% → −5% (ยิ่งต่ำยิ่งดี)",
+          "why": "วัตถุดิบถูกลง = กำไรต่อหน่วยของผู้ผลิตอาหารดีขึ้น",
+          "source": "FAO Food Price Index",
+          "source_url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        },
+        {
+          "key": "costco_comps",
+          "field": "costco_us_comp_sales_pct",
+          "label": "ยอดขายสาขาเดิม Costco สหรัฐ (ไม่รวมน้ำมัน)",
+          "label_en": "Costco US comparable sales ex-gas",
+          "short": "ยอดขาย Costco",
+          "weight": 0.2,
+          "worst": 0,
+          "best": 8,
+          "display": "{costco_us_comp_sales_pct:+1}%",
+          "range": "0% → +8%",
+          "why": "ตัวชี้วัดรายเดือนที่เร็วที่สุดของการจับจ่ายของใช้จำเป็น",
+          "source": "Costco รายงานยอดขายรายเดือน",
+          "source_url": "https://investor.costco.com/",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "COST",
+          "name": "Costco Wholesale"
+        },
+        {
+          "ticker": "PEP",
+          "name": "PepsiCo"
+        },
+        {
+          "ticker": "MCD",
+          "name": "McDonald's"
+        }
+      ],
+      "rules": {
+        "X": {
+          "COST": [
+            "BUY_DCA",
+            35
+          ],
+          "PEP": [
+            "BUY_DCA",
+            30
+          ],
+          "MCD": [
+            "BUY_DCA",
+            35
+          ]
+        },
+        "W": {
+          "COST": [
+            "BUY_DCA",
+            35
+          ],
+          "PEP": [
+            "OVERWEIGHT_DCA",
+            35
+          ],
+          "MCD": [
+            "BUY_DCA",
+            30
+          ]
+        },
+        "D": {
+          "COST": [
+            "BUY_DCA",
+            30
+          ],
+          "PEP": [
+            "OVERWEIGHT_DCA",
+            30
+          ],
+          "MCD": [
+            "BUY_DCA",
+            20
+          ]
+        }
+      },
+      "reasons": {
+        "X": {
+          "COST": "ยอดสมาชิกและยอดขายโตสม่ำเสมอ",
+          "PEP": "เครื่องดื่มและขนมแบรนด์ใหญ่ ปันผลสม่ำเสมอ",
+          "MCD": "ได้ประโยชน์เมื่อคนกินข้างนอกมากขึ้น"
+        },
+        "W": {
+          "COST": "ยัง DCA ต่อ 35% คนหันมาซื้อของคุ้มค่าเมื่อเศรษฐกิจชะลอ",
+          "PEP": "เพิ่มจาก 30% เป็น 35% สินค้าจำเป็นราคาไม่แพงเทียบกำไร",
+          "MCD": "ยัง DCA ต่อ ลดจาก 35% เหลือ 30% ร้านอาหารอ่อนไหวต่อกำลังซื้อ"
+        },
+        "D": {
+          "COST": "ยัง DCA ต่อ 30% (ไม่หยุด ไม่ขาย)",
+          "PEP": "คงน้ำหนักหลัก 30% อีก 20% ของงบหมวดเก็บเป็นเงินสดสำรอง",
+          "MCD": "ยัง DCA ต่อในน้ำหนักต่ำ 20%"
+        }
+      },
+      "alerts": [
+        {
+          "field": "food_at_home_cpi_yoy_pct",
+          "op": ">",
+          "value": 5,
+          "zone": "D",
+          "title": "เงินเฟ้ออาหารสูง",
+          "message": "ราคาอาหารในบ้าน {food_at_home_cpi_yoy_pct:+1}% เทียบปีก่อน (เกณฑ์แจ้งเตือน: เกิน 5%)"
+        },
+        {
+          "field": "consumer_sentiment",
+          "op": "<",
+          "value": 55,
+          "zone": "D",
+          "title": "ผู้บริโภคขาดความมั่นใจ",
+          "message": "ความเชื่อมั่นผู้บริโภค {consumer_sentiment:1} (เกณฑ์แจ้งเตือน: ต่ำกว่า 55)"
+        }
+      ],
+      "rules_origin": "draft",
+      "rules_version": 2,
+      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน"
+    },
+    {
+      "id": "travel",
+      "name": "ท่องเที่ยว / การเดินทาง",
+      "icon": "travel",
+      "data": "data/travel.json",
+      "confidence": "medium",
+      "confidence_note": "สัญญาณรายวัน (TSA, น้ำมัน) สดดี แต่ RevPAR โรงแรมมาจากรายงานข่าว CoStar · ยังไม่ได้ทดสอบย้อนหลัง",
+      "summary": {
+        "X": "คนเดินทางมากขึ้น โรงแรมขึ้นราคาได้ รายได้คนยังโต · DCA ตามน้ำหนักปกติ",
+        "W": "ความต้องการเดินทางเริ่มชะลอหรือน้ำมันแพงขึ้น · DCA ต่อ แต่เอียงไปหาแพลตฟอร์มจองที่ทนกว่า",
+        "D": "การเดินทางหดตัวหรือกำลังซื้อตึง · DCA ต่อ 80% ของงบ ไม่ขาย กันเงินสด 20% ไว้ซื้อเพิ่ม"
+      },
+      "signals": [
+        {
+          "key": "tsa",
+          "field": "tsa_throughput_yoy_pct",
+          "label": "ผู้โดยสารผ่านจุดตรวจ TSA",
+          "label_en": "TSA checkpoint throughput",
+          "short": "ผู้โดยสารสนามบิน",
+          "weight": 0.25,
+          "worst": -5,
+          "best": 5,
+          "display": "{tsa_throughput_yoy_pct:+1}% เทียบปีก่อน (เฉลี่ย 7 วัน)",
+          "range": "−5% → +5%",
+          "why": "นับคนบินจริงทุกวันในสหรัฐ เร็วที่สุดในการบอกความต้องการเดินทาง",
+          "source": "TSA checkpoint numbers",
+          "source_url": "https://www.tsa.gov/travel/passenger-volumes",
+          "frequency": "รายวัน",
+          "kind": "data"
+        },
+        {
+          "key": "hotel",
+          "field": "us_hotel_revpar_yoy_pct",
+          "label": "รายได้ต่อห้องโรงแรมสหรัฐ (RevPAR)",
+          "label_en": "US hotel RevPAR",
+          "short": "RevPAR โรงแรม",
+          "weight": 0.2,
+          "worst": -5,
+          "best": 5,
+          "display": "{us_hotel_revpar_yoy_pct:+1}% เทียบปีก่อน",
+          "range": "−5% → +5%",
+          "why": "รวมทั้งอัตราเข้าพักและราคาห้อง สะท้อนกำไรโรงแรมโดยตรง",
+          "source": "CoStar/STR รายสัปดาห์ (ผ่านข่าว)",
+          "source_url": "https://www.costar.com/",
+          "frequency": "รายสัปดาห์",
+          "kind": "data"
+        },
+        {
+          "key": "oil",
+          "field": "wti_usd",
+          "label": "ราคาน้ำมันดิบ WTI",
+          "label_en": "WTI crude oil",
+          "short": "ราคาน้ำมัน",
+          "weight": 0.15,
+          "worst": 100,
+          "best": 60,
+          "display": "${wti_usd:1}/บาร์เรล",
+          "range": "$100 → $60 (ยิ่งต่ำยิ่งดี)",
+          "why": "น้ำมันแพง = ตั๋วเครื่องบินและค่าเดินทางแพง คนเที่ยวน้อยลง",
+          "source": "Yahoo Finance: CL=F (data/market.json)",
+          "source_url": "https://finance.yahoo.com/quote/CL=F",
+          "frequency": "รายวัน",
+          "kind": "data"
+        },
+        {
+          "key": "income",
+          "field": "real_disposable_income_yoy_pct",
+          "label": "รายได้หลังภาษีที่แท้จริงของคนสหรัฐ",
+          "label_en": "Real disposable personal income",
+          "short": "รายได้คนสหรัฐ",
+          "weight": 0.2,
+          "worst": 0,
+          "best": 4,
+          "display": "{real_disposable_income_yoy_pct:+1}% เทียบปีก่อน",
+          "range": "0% → +4%",
+          "why": "การท่องเที่ยวเป็นรายจ่ายที่คนตัดก่อนเมื่อรายได้ไม่โต",
+          "source": "FRED: DSPIC96",
+          "source_url": "https://fred.stlouisfed.org/series/DSPIC96",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        },
+        {
+          "key": "bookings",
+          "field": "bkng_room_nights_growth_yoy_pct",
+          "label": "จำนวนคืนที่จองผ่าน Booking",
+          "label_en": "Booking Holdings room nights",
+          "short": "ยอดจองห้องพัก",
+          "weight": 0.2,
+          "worst": 0,
+          "best": 12,
+          "display": "{bkng_room_nights_growth_yoy_pct:+1}% เทียบปีก่อน",
+          "range": "0% → +12%",
+          "why": "แพลตฟอร์มจองที่ใหญ่ที่สุดในโลก สะท้อนการเดินทางทั่วโลก",
+          "source": "งบไตรมาส Booking Holdings",
+          "source_url": "https://ir.bookingholdings.com/",
+          "frequency": "รายไตรมาส",
+          "kind": "data"
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "BKNG",
+          "name": "Booking Holdings"
+        },
+        {
+          "ticker": "MAR",
+          "name": "Marriott International"
+        },
+        {
+          "ticker": "ABNB",
+          "name": "Airbnb"
+        }
+      ],
+      "rules": {
+        "X": {
+          "BKNG": [
+            "BUY_DCA",
+            40
+          ],
+          "MAR": [
+            "BUY_DCA",
+            30
+          ],
+          "ABNB": [
+            "BUY_DCA",
+            30
+          ]
+        },
+        "W": {
+          "BKNG": [
+            "OVERWEIGHT_DCA",
+            45
+          ],
+          "MAR": [
+            "BUY_DCA",
+            30
+          ],
+          "ABNB": [
+            "BUY_DCA",
+            25
+          ]
+        },
+        "D": {
+          "BKNG": [
+            "OVERWEIGHT_DCA",
+            40
+          ],
+          "MAR": [
+            "BUY_DCA",
+            25
+          ],
+          "ABNB": [
+            "BUY_DCA",
+            15
+          ]
+        }
+      },
+      "reasons": {
+        "X": {
+          "BKNG": "แพลตฟอร์มจองที่ใหญ่และทำกำไรดีที่สุด",
+          "MAR": "เครือโรงแรมใหญ่ ได้ค่าธรรมเนียมแฟรนไชส์ ไม่ต้องลงทุนตึกเอง",
+          "ABNB": "โตเร็วจากที่พักทางเลือกและประสบการณ์ท่องเที่ยว"
+        },
+        "W": {
+          "BKNG": "เพิ่มจาก 40% เป็น 45% กระจายทั่วโลกและกำไรสูง ทนกว่าเมื่อการเดินทางชะลอ",
+          "MAR": "ยัง DCA ต่อ 30%",
+          "ABNB": "ยัง DCA ต่อ ลดจาก 30% เหลือ 25% หุ้นเติบโตผันผวนกว่า"
+        },
+        "D": {
+          "BKNG": "คงน้ำหนักหลัก 40% อีก 20% ของงบหมวดเก็บเป็นเงินสดสำรอง",
+          "MAR": "ยัง DCA ต่อ 25% (ไม่หยุด ไม่ขาย)",
+          "ABNB": "ยัง DCA ต่อในน้ำหนักต่ำ 15%"
+        }
+      },
+      "alerts": [
+        {
+          "field": "tsa_throughput_yoy_pct",
+          "op": "<",
+          "value": -3,
+          "zone": "D",
+          "title": "คนเดินทางทางอากาศลดลง",
+          "message": "ผู้โดยสาร TSA {tsa_throughput_yoy_pct:+1}% เทียบปีก่อน (เกณฑ์แจ้งเตือน: ต่ำกว่า −3%)"
+        },
+        {
+          "field": "wti_usd",
+          "op": ">",
+          "value": 95,
+          "zone": "D",
+          "title": "น้ำมันแพง",
+          "message": "WTI ${wti_usd:1}/บาร์เรล (เกณฑ์แจ้งเตือน: เกิน $95)"
+        }
+      ],
+      "rules_origin": "draft",
+      "rules_version": 2,
+      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน"
+    },
+    {
+      "id": "space",
+      "name": "อวกาศ / กลาโหม",
+      "icon": "space",
+      "data": "data/space.json",
+      "confidence": "low",
+      "confidence_note": "งบกลาโหมเป็นค่าประเมิน และหุ้นอวกาศ (RKLB, ASTS) ผันผวนสูงมาก ราคาขึ้นกับข่าวมากกว่าตัวเลข · ยังไม่ได้ทดสอบย้อนหลัง",
+      "summary": {
+        "X": "งบกลาโหมโต การยิงจรวดถี่ขึ้น ต้นทุนเงินไม่แพง · DCA ตามน้ำหนักปกติ",
+        "W": "งบหรือดอกเบี้ยเริ่มกดดัน · DCA ต่อ แต่เอียงไปหาผู้รับเหมากลาโหมรายใหญ่ที่มีกำไรแน่นอน",
+        "D": "งบสะดุดหรือดอกเบี้ยพุ่ง หุ้นเก็งกำไรเสี่ยงสูง · DCA ต่อ 80% ของงบ ไม่ขาย กันเงินสด 20% ไว้ซื้อเพิ่ม"
+      },
+      "signals": [
+        {
+          "key": "defense_budget",
+          "field": "defense_budget_score",
+          "label": "สถานะงบกลาโหมสหรัฐ",
+          "label_en": "US defense budget outlook",
+          "short": "งบกลาโหม",
+          "weight": 0.25,
+          "worst": 2,
+          "best": 8,
+          "display": "{defense_budget_score:1}/10",
+          "range": "2 → 8",
+          "why": "งบผ่านสภาและเพิ่มขึ้น = สัญญาใหม่สำหรับผู้รับเหมา ถ้าต้องใช้งบชั่วคราว (CR) โครงการใหม่จะเลื่อน",
+          "source": "Claude ประเมินจากข่าว NDAA/งบประมาณ",
+          "source_url": "https://www.congress.gov/",
+          "frequency": "รายสัปดาห์",
+          "kind": "estimate"
+        },
+        {
+          "key": "gpr",
+          "field": "geopolitical_risk_index",
+          "label": "ดัชนีความเสี่ยงภูมิรัฐศาสตร์ (GPR)",
+          "label_en": "Geopolitical Risk Index",
+          "short": "ความเสี่ยงภูมิรัฐศาสตร์",
+          "weight": 0.15,
+          "worst": 80,
+          "best": 180,
+          "display": "{geopolitical_risk_index:0}",
+          "range": "80 → 180",
+          "why": "ความขัดแย้งสูง = ประเทศต่างๆ เพิ่มงบกลาโหม (ดีต่อหุ้นกลาโหม แต่ไม่ดีต่อตลาดโดยรวม)",
+          "source": "Caldara & Iacoviello GPR Index",
+          "source_url": "https://www.matteoiacoviello.com/gpr.htm",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        },
+        {
+          "key": "launches",
+          "field": "orbital_launches_ytd_growth_pct",
+          "label": "จำนวนการยิงจรวดขึ้นวงโคจรทั่วโลก",
+          "label_en": "Global orbital launches YTD",
+          "short": "การยิงจรวด",
+          "weight": 0.2,
+          "worst": -10,
+          "best": 25,
+          "display": "{orbital_launches_ytd_growth_pct:+0}% เทียบปีก่อน (สะสมทั้งปี)",
+          "range": "−10% → +25%",
+          "why": "ยิงถี่ขึ้น = ความต้องการดาวเทียมและบริการขนส่งอวกาศโต",
+          "source": "สถิติการยิงจรวด (Next Spaceflight / Jonathan McDowell)",
+          "source_url": "https://nextspaceflight.com/launches/past/",
+          "frequency": "รายเดือน",
+          "kind": "data"
+        },
+        {
+          "key": "rklb_backlog",
+          "field": "rklb_backlog_growth_yoy_pct",
+          "label": "งานในมือของ Rocket Lab",
+          "label_en": "Rocket Lab backlog growth",
+          "short": "งานในมือ Rocket Lab",
+          "weight": 0.2,
+          "worst": 0,
+          "best": 60,
+          "display": "{rklb_backlog_growth_yoy_pct:+0}% เทียบปีก่อน",
+          "range": "0% → +60%",
+          "why": "งานในมือโต = รายได้อนาคตชัดขึ้นสำหรับบริษัทอวกาศขนาดกลาง",
+          "source": "งบไตรมาส Rocket Lab",
+          "source_url": "https://investors.rocketlabusa.com/",
+          "frequency": "รายไตรมาส",
+          "kind": "data"
+        },
+        {
+          "key": "rates",
+          "field": "us10y_change_3m_pp",
+          "label": "ดอกเบี้ยพันธบัตร 10 ปี เปลี่ยนใน 3 เดือน",
+          "label_en": "US 10Y yield 3-month change",
+          "short": "ทิศทางดอกเบี้ย",
+          "weight": 0.2,
+          "worst": 0.75,
+          "best": -0.75,
+          "display": "{us10y_change_3m_pp:+2} จุด",
+          "range": "+0.75 → −0.75 (ยิ่งลดยิ่งดี)",
+          "why": "หุ้นอวกาศยังขาดทุน มูลค่าอยู่ที่กำไรอนาคต ดอกเบี้ยขึ้นจึงกดราคาแรง",
+          "source": "Yahoo Finance: ^TNX (data/market.json)",
+          "source_url": "https://finance.yahoo.com/quote/%5ETNX",
+          "frequency": "รายวัน",
+          "kind": "data"
+        }
+      ],
+      "stocks": [
+        {
+          "ticker": "LMT",
+          "name": "Lockheed Martin"
+        },
+        {
+          "ticker": "RKLB",
+          "name": "Rocket Lab"
+        },
+        {
+          "ticker": "ASTS",
+          "name": "AST SpaceMobile"
+        }
+      ],
+      "rules": {
+        "X": {
+          "LMT": [
+            "BUY_DCA",
+            40
+          ],
+          "RKLB": [
+            "BUY_DCA",
+            35
+          ],
+          "ASTS": [
+            "BUY_DCA",
+            25
+          ]
+        },
+        "W": {
+          "LMT": [
+            "OVERWEIGHT_DCA",
+            50
+          ],
+          "RKLB": [
+            "BUY_DCA",
+            30
+          ],
+          "ASTS": [
+            "BUY_DCA",
+            20
+          ]
+        },
+        "D": {
+          "LMT": [
+            "OVERWEIGHT_DCA",
+            45
+          ],
+          "RKLB": [
+            "BUY_DCA",
+            25
+          ],
+          "ASTS": [
+            "BUY_DCA",
+            10
+          ]
+        }
+      },
+      "reasons": {
+        "X": {
+          "LMT": "ผู้รับเหมากลาโหมรายใหญ่ที่สุด กำไรและปันผลสม่ำเสมอ",
+          "RKLB": "ผู้ให้บริการยิงจรวดขนาดเล็ก-กลาง รายได้โตเร็ว",
+          "ASTS": "ดาวเทียมเชื่อมมือถือโดยตรง ศักยภาพสูงแต่ยังไม่มีกำไร"
+        },
+        "W": {
+          "LMT": "เพิ่มจาก 40% เป็น 50% รายได้มาจากสัญญารัฐระยะยาว",
+          "RKLB": "ยัง DCA ต่อ ลดจาก 35% เหลือ 30%",
+          "ASTS": "ยัง DCA ต่อ ลดจาก 25% เหลือ 20% หุ้นเก็งกำไรผันผวนสูง"
+        },
+        "D": {
+          "LMT": "คงน้ำหนักหลัก 45% อีก 20% ของงบหมวดเก็บเป็นเงินสดสำรอง",
+          "RKLB": "ยัง DCA ต่อ 25% (ไม่หยุด ไม่ขาย)",
+          "ASTS": "ยัง DCA ต่อในน้ำหนักต่ำ 10%"
+        }
+      },
+      "alerts": [
+        {
+          "field": "defense_budget_score",
+          "op": "<",
+          "value": 3,
+          "zone": "D",
+          "title": "งบกลาโหมสะดุด",
+          "message": "คะแนนงบกลาโหม {defense_budget_score:1}/10 (เกณฑ์แจ้งเตือน: ต่ำกว่า 3)"
+        },
+        {
+          "field": "geopolitical_risk_index",
+          "op": ">",
+          "value": 200,
+          "zone": "D",
+          "title": "ความเสี่ยงสงครามสูง",
+          "message": "ดัชนี GPR {geopolitical_risk_index:0} (เกณฑ์แจ้งเตือน: เกิน 200) กระทบตลาดโดยรวม"
+        }
+      ],
+      "rules_origin": "draft",
+      "rules_version": 2,
+      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน"
+    }
   ]
 }

@@ -49,6 +49,8 @@ IconData sectorIcon(String icon) => switch (icon) {
       'bank' => Icons.account_balance_outlined,
       'health' => Icons.monitor_heart_outlined,
       'space' => Icons.rocket_launch_outlined,
+      'food' => Icons.restaurant_outlined,
+      'travel' => Icons.flight_takeoff_outlined,
       _ => Icons.insights,
     };
 

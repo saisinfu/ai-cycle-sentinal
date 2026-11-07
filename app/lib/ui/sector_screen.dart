@@ -5,9 +5,11 @@ import '../core/format.dart';
 import '../core/theme.dart';
 import '../data/engine.dart';
 import '../state/providers.dart';
+import '../state/settings.dart';
 import 'backtest_screen.dart';
 import 'method_screen.dart';
 import 'widgets/common.dart';
+import 'widgets/market_pulse.dart';
 import 'widgets/gauge.dart';
 import 'widgets/history_card.dart';
 import 'widgets/stock_card.dart';
@@ -106,6 +108,10 @@ class _SectorScreenState extends ConsumerState<SectorScreen> {
                       ),
                     ),
                   ),
+                if (ref.watch(marketProvider).valueOrNull case final market? when market.quotes.isNotEmpty) ...[
+                  const SizedBox(height: kGap),
+                  StockPriceCard(cfg: vm.config, market: market, mode: ref.watch(settingsProvider).flexMode),
+                ],
                 const SizedBox(height: kGap),
                 HistoryCard(key: ValueKey('h-${vm.config.id}-${vm.scored.length}'), scored: vm.scored),
                 const SizedBox(height: kGap),

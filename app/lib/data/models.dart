@@ -89,7 +89,31 @@ class Quote {
     this.pe5yAvg,
     this.sourceUrl,
     this.peSourceUrl,
+    this.name,
+    this.change1d,
+    this.high52w,
+    this.drawdownPct,
+    this.chg1m,
+    this.chg3m,
+    this.gauge = false,
+    this.stale = false,
   });
+
+  final String? name;
+  final double? change1d;
+  final double? high52w;
+
+  /// % below the 52-week high (negative or 0).
+  final double? drawdownPct;
+  final double? chg1m;
+  final double? chg3m;
+
+  /// Market gauge (VIX, yields, sector ETFs), not a holding.
+  final bool gauge;
+  final bool stale;
+
+  /// % above (+) or below (−) the 200-day average.
+  double? get vsMa200 => ma200 == null || ma200 == 0 ? null : (price / ma200! - 1) * 100;
 
   final String ticker;
   final double price;
@@ -121,6 +145,14 @@ class MarketData {
             pe5yAvg: _num(v['pe_5y_avg']),
             sourceUrl: str('source_url'),
             peSourceUrl: str('pe_source_url'),
+            name: str('name'),
+            change1d: _num(v['change_1d_pct']),
+            high52w: _num(v['high_52w']),
+            drawdownPct: _num(v['drawdown_pct']),
+            chg1m: _num(v['chg_1m_pct']),
+            chg3m: _num(v['chg_3m_pct']),
+            gauge: v['gauge'] == true,
+            stale: v['stale'] == true,
           );
         }
       });

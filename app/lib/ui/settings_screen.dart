@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/theme.dart';
 import '../data/engine.dart';
+import '../data/flex.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import 'backtest_screen.dart';
@@ -24,7 +25,7 @@ class SettingsScreen extends ConsumerWidget {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 40),
         children: [
-          const SectionHeader(title: 'งบ DCA ต่อเดือน'),
+          const SectionHeader(title: 'งบฐานต่อเดือน'),
           SurfaceCard(
             child: Column(
               children: [
@@ -38,10 +39,45 @@ class SettingsScreen extends ConsumerWidget {
               ],
             ),
           ),
+          const SectionHeader(title: 'งบยืดหยุ่นตามราคาตลาด'),
+          SurfaceCard(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                for (final m in FlexMode.values)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: Row(children: [
+                      ToggleChip(label: flexModeName(m), selected: s.flexMode == m, expand: true, onTap: () => n.update((x) => x.copyWith(flexMode: m))),
+                    ]),
+                  ),
+                Text(flexModeHelp(s.flexMode), style: const TextStyle(fontSize: 12.5, color: AppColors.muted, height: 1.45)),
+                const SizedBox(height: 8),
+                NumberField(
+                  label: 'เงินสำรองที่มีตอนนี้ (สำหรับซื้อตอนย่อ)',
+                  value: s.reserve,
+                  suffix: '฿',
+                  onSaved: (v) => n.update((x) => x.copyWith(reserve: v < 0 ? 0 : v)),
+                ),
+                NumberField(
+                  label: 'เพดานเงินสำรอง (เท่าของงบฐานต่อเดือน, 0 = ไม่จำกัด)',
+                  value: s.reserveCapMonths,
+                  suffix: 'เดือน',
+                  onSaved: (v) => n.update((x) => x.copyWith(reserveCapMonths: v.clamp(0, 60).toDouble())),
+                ),
+                const SizedBox(height: 4),
+                const Text(
+                  'ใส่เงินเก็บที่กันไว้ซื้อตอนตลาดย่อได้ (เช่น ส่วนหนึ่งของโบนัส) · กด "ลงทุนตามนี้แล้ว" ในหน้างบทุกเดือนเพื่อให้แอปอัปเดตยอดเอง · '
+                  'กองทุนลดหย่อนภาษีไม่ปรับตามราคา',
+                  style: TextStyle(fontSize: 12, color: AppColors.muted, height: 1.45),
+                ),
+              ],
+            ),
+          ),
           const SectionHeader(title: 'แบ่งงบเป็น 3 ส่วน'),
           PercentGroupEditor(
             key: ValueKey('b-${s.buckets}'),
-            items: const [('main', 'พอร์ตหลัก'), ('tech', 'หุ้นรายตัว Tech/AI'), ('tax', 'กองทุนลดหย่อนภาษี')],
+            items: const [('main', 'พอร์ตหลัก'), ('tech', 'หุ้นรายตัว (หมวดต่างๆ)'), ('tax', 'กองทุนลดหย่อนภาษี')],
             values: s.buckets,
             mustEqual100: true,
             onSave: (v) => n.update((x) => x.copyWith(buckets: v)),
@@ -56,7 +92,7 @@ class SettingsScreen extends ConsumerWidget {
               hint: s.mainSplitSet ? null : 'ยังไม่ได้ตั้ง ตอนนี้แบ่งเท่ากันไปก่อน',
               onSave: (v) => n.update((x) => x.copyWith(mainSplit: v, mainSplitSet: true)),
             ),
-            const SectionHeader(title: 'น้ำหนักแต่ละหมวดในส่วน Tech/AI'),
+            const SectionHeader(title: 'น้ำหนักแต่ละหมวดในส่วนหุ้นรายตัว'),
             PercentGroupEditor(
               key: ValueKey('w-${s.sectorWeights}'),
               items: [for (final sc in config.sectors) (sc.id, sc.name)],

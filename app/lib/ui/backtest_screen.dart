@@ -66,6 +66,43 @@ class _BacktestScreenState extends ConsumerState<BacktestScreen> {
                 ),
                 const SizedBox(height: 12),
                 if (bt.tested) ..._tested(context, bt, summary) else ..._notTested(bt),
+                if (summary.flexRules.isNotEmpty) ...[
+                  const SectionHeader(title: 'งบยืดหยุ่น: ซื้อเพิ่มตอนย่อ ดีกว่า DCA ปกติไหม'),
+                  SurfaceCard(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('ทดสอบกับ ${summary.flexRules.first.assets} สินทรัพย์ (SPY, QQQ, หุ้นชิป, ธนาคาร, สุขภาพ, สินค้าจำเป็น, ทองคำ และหุ้นรายตัว) ย้อนหลัง 15–40 ปี · '
+                            'ตัวเลข = ผลตอบแทนต่อปีต่างจาก DCA ปกติ (ค่ากลาง, ต่ำสุด ถึง สูงสุด)',
+                            style: const TextStyle(fontSize: 12.5, color: AppColors.muted, height: 1.45)),
+                        const SizedBox(height: 8),
+                        for (final r in summary.flexRules)
+                          Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 5),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(children: [
+                                  Expanded(
+                                    child: Text(r.key == 'dip_only' ? 'ยืดหยุ่นเบา (ที่แอปใช้เป็นค่าเริ่มต้น)' : r.key == 'gentle' ? 'ยืดหยุ่นมาก' : r.key,
+                                        style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600)),
+                                  ),
+                                  Text('${r.medianDiff >= 0 ? '+' : ''}${r.medianDiff.toStringAsFixed(2)}%',
+                                      style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w700, color: r.medianDiff >= 0 ? AppColors.green : AppColors.red, fontFeatures: tabular)),
+                                ]),
+                                Text('${r.description} · ช่วง ${r.minDiff.toStringAsFixed(2)} ถึง ${r.maxDiff.toStringAsFixed(2)}%',
+                                    style: const TextStyle(fontSize: 12, color: AppColors.muted, height: 1.4)),
+                              ],
+                            ),
+                          ),
+                        const SizedBox(height: 6),
+                        const Text('สรุป: ทุกแบบได้ผลใกล้ DCA ปกติ (ต่างกันไม่ถึง 0.3% ต่อปี) แบบยืดหยุ่นเบาเสียน้อยที่สุด '
+                            'ประโยชน์จริงคือมีเงินพร้อมซื้อตอนตลาดร่วง ไม่ใช่กำไรเพิ่ม',
+                            style: TextStyle(fontSize: 12.5, height: 1.45)),
+                      ],
+                    ),
+                  ),
+                ],
                 const Disclaimer(),
               ],
             ),

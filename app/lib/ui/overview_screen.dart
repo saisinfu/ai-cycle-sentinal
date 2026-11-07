@@ -4,17 +4,21 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/format.dart';
 import '../core/theme.dart';
 import '../data/engine.dart';
+import '../data/feed.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import 'alerts_screen.dart';
+import 'news_screen.dart';
 import 'sector_screen.dart';
 import 'widgets/common.dart';
 import 'widgets/gauge.dart';
+import 'widgets/market_pulse.dart';
 
 class OverviewScreen extends ConsumerWidget {
-  const OverviewScreen({super.key, required this.onOpenBudget});
+  const OverviewScreen({super.key, required this.onOpenBudget, required this.onOpenAlerts});
 
   final VoidCallback onOpenBudget;
+  final VoidCallback onOpenAlerts;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,6 +29,16 @@ class OverviewScreen extends ConsumerWidget {
     final sectors = ref.watch(allSectorsProvider).where((vm) => settings.isFollowed(vm.config.id)).toList();
     final latestDate = sectors.isEmpty ? null : sectors.map((s) => s.latest.reading.date).reduce((a, b) => a.compareTo(b) > 0 ? a : b);
     final today = latestDate == null ? const <AlertEvent>[] : alerts.where((a) => a.date == latestDate).toList();
+    final market = ref.watch(marketProvider).valueOrNull;
+    final flex = ref.watch(flexProvider);
+    final prices = ref.watch(followedPriceEventsProvider);
+    final lastTrading = market?.quotes['SPY']?.asOf;
+    final todayPrices = lastTrading == null ? const <PriceEvent>[] : prices.where((e) => e.date.compareTo(lastTrading) >= 0).toList();
+    final cutoff = isoDate(DateTime.now().subtract(const Duration(days: 4)));
+    final news = (ref.watch(newsProvider).valueOrNull ?? const <NewsItem>[])
+        .where((n) => n.level != 'low' && n.date.compareTo(cutoff) >= 0)
+        .take(3)
+        .toList();
 
     return Scaffold(
       appBar: AppBar(
@@ -60,8 +74,30 @@ class OverviewScreen extends ConsumerWidget {
                   children: [
                     const Eyebrow('สรุปวันนี้'),
                     const SizedBox(height: 8),
-                    if (today.isEmpty)
-                      const Text('ไม่มีหมวดไหนเปลี่ยนสถานะ และไม่มีสัญญาณพิเศษใหม่', style: TextStyle(fontSize: 14, height: 1.5))
+                    if (todayPrices.isNotEmpty)
+                      InkWell(
+                        onTap: onOpenAlerts,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 4),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Icon(Icons.trending_down, size: 16, color: AppColors.red),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: Text(
+                                  'ราคาร่วงแรง ${todayPrices.length} ตัว: ${todayPrices.map((e) => e.ticker).toSet().join(', ')}',
+                                  style: const TextStyle(fontSize: 14, height: 1.5),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    if (today.isEmpty && todayPrices.isEmpty)
+                      const Text('ไม่มีหมวดไหนเปลี่ยนสถานะ และไม่มีหุ้นร่วงแรงใหม่', style: TextStyle(fontSize: 14, height: 1.5))
+                    else if (today.isEmpty)
+                      const Text('คะแนนพื้นฐานของทุกหมวดยังไม่เปลี่ยนสถานะ', style: TextStyle(fontSize: 13, color: AppColors.muted, height: 1.5))
                     else
                       for (final a in today.take(3))
                         InkWell(
@@ -85,6 +121,10 @@ class OverviewScreen extends ConsumerWidget {
                   ],
                 ),
               ),
+              if (news.isNotEmpty) ...[
+                SectionHeader(title: 'ข่าวสำคัญล่าสุด', trailing: 'ดูทั้งหมด', onTrailing: onOpenAlerts),
+                for (final n in news) Padding(padding: const EdgeInsets.only(bottom: 8), child: NewsTile(item: n, compact: true)),
+              ],
               if (budget != null) ...[
                 const SizedBox(height: kGap),
                 Material(
@@ -103,11 +143,13 @@ class OverviewScreen extends ConsumerWidget {
                               children: [
                                 Eyebrow('งบลงทุนเดือน${thMonthYear(DateTime.now())}'),
                                 const SizedBox(height: 6),
-                                Text('${baht(budget.total)} บาท',
+                                Text('${baht((flex?.plannedTotal ?? budget.main + budget.tech) + budget.tax)} บาท',
                                     style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, fontFeatures: tabular)),
                                 const SizedBox(height: 2),
                                 Text(
-                                  'หลัก ${baht(budget.main)} · Tech/AI ${baht(budget.tech)} · ลดหย่อน ${baht(budget.tax)}',
+                                  flex == null || flex.used == 0 && flex.saved == 0
+                                      ? 'หลัก ${baht(budget.main)} · Tech/AI ${baht(budget.tech)} · ลดหย่อน ${baht(budget.tax)}'
+                                      : 'งบฐาน ${baht(budget.total)} · ใช้เงินสำรอง ${baht(flex.used)} · เก็บเข้าสำรอง ${baht(flex.saved)}',
                                   style: const TextStyle(fontSize: 12.5, color: AppColors.muted),
                                 ),
                               ],
@@ -120,7 +162,15 @@ class OverviewScreen extends ConsumerWidget {
                   ),
                 ),
               ],
-              SectionHeader(title: '${sectors.length} หมวดที่ติดตาม', trailing: 'คะแนน 0–100'),
+              if (market != null && market.quotes.isNotEmpty) ...[
+                const SizedBox(height: kGap),
+                MarketPulseCard(
+                  market: market,
+                  sectors: [for (final vm in sectors) vm.config],
+                  onSector: (id) => Navigator.of(context).push(MaterialPageRoute(builder: (_) => SectorScreen(sectorId: id))),
+                ),
+              ],
+              SectionHeader(title: '${sectors.length} หมวดที่ติดตาม', trailing: 'คะแนนพื้นฐาน 0–100'),
               GridView.count(
                 crossAxisCount: 2,
                 shrinkWrap: true,

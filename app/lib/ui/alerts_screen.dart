@@ -6,9 +6,11 @@ import '../core/theme.dart';
 import '../data/budget.dart';
 import '../data/config.dart';
 import '../data/engine.dart';
+import '../data/feed.dart';
 import '../data/zone.dart';
 import '../state/providers.dart';
 import 'method_screen.dart';
+import 'news_screen.dart';
 import 'sector_screen.dart';
 import 'widgets/common.dart';
 import 'widgets/waterfall.dart';
@@ -22,12 +24,26 @@ class AlertsScreen extends ConsumerStatefulWidget {
 
 class _AlertsScreenState extends ConsumerState<AlertsScreen> {
   String? _filter;
+  String _type = 'all';
 
   @override
   Widget build(BuildContext context) {
     final all = ref.watch(allAlertsProvider);
     final sectors = ref.watch(allSectorsProvider);
-    final list = _filter == null ? all : all.where((a) => a.sector.id == _filter).toList();
+    final news = ref.watch(newsProvider).valueOrNull ?? const <NewsItem>[];
+    final prices = ref.watch(followedPriceEventsProvider);
+    final signals = _filter == null ? all : all.where((a) => a.sector.id == _filter).toList();
+
+    // (date, sort key, widget)
+    final entries = <(String, String, Widget)>[
+      if (_type == 'all' || _type == 'news')
+        for (final n in news) (n.date, '${n.date}~3${n.sortKey}', NewsTile(item: n)),
+      if (_type == 'all' || _type == 'price')
+        for (final e in prices) (e.date, '${e.date}~2${e.ticker}', PriceEventTile(event: e)),
+      if (_type == 'all' || _type == 'signal')
+        for (final a in signals) (a.date, '${a.date}~1${a.title}', _SignalTile(a: a)),
+    ]..sort((a, b) => b.$2.compareTo(a.$2));
+
     String? lastDate;
     return Scaffold(
       appBar: AppBar(title: const Text('แจ้งเตือน', style: TextStyle(fontWeight: FontWeight.w700))),
@@ -39,82 +55,99 @@ class _AlertsScreenState extends ConsumerState<AlertsScreen> {
           physics: const AlwaysScrollableScrollPhysics(),
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 32),
           children: [
-            const Text('การเปลี่ยนสถานะและสัญญาณพิเศษของทุกหมวด แตะเพื่อดูเหตุผลและแหล่งข้อมูล',
-                style: TextStyle(fontSize: 12.5, color: AppColors.muted)),
+            const Text('ข่าวสำคัญพร้อมผลกระทบต่อพอร์ต (Claude ตรวจวันละ 2 รอบ) · ราคาหุ้นร่วงแรง · การเปลี่ยนสถานะของหมวด',
+                style: TextStyle(fontSize: 12.5, color: AppColors.muted, height: 1.4)),
             const SizedBox(height: 10),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  ToggleChip(label: 'ทั้งหมด', selected: _filter == null, onTap: () => setState(() => _filter = null)),
-                  for (final vm in sectors) ...[
-                    const SizedBox(width: 6),
-                    ToggleChip(label: vm.config.name, selected: _filter == vm.config.id, onTap: () => setState(() => _filter = vm.config.id)),
-                  ],
+            Row(
+              children: [
+                for (final (k, label) in const [('all', 'ทั้งหมด'), ('news', 'ข่าว'), ('price', 'ราคา'), ('signal', 'สัญญาณหมวด')]) ...[
+                  ToggleChip(label: label, selected: _type == k, expand: true, onTap: () => setState(() => _type = k)),
+                  if (k != 'signal') const SizedBox(width: 6),
                 ],
-              ),
-            ),
-            const SizedBox(height: 6),
-            if (list.isEmpty)
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 60),
-                child: Center(
-                  child: Text('ยังไม่มีแจ้งเตือน\nจะแสดงเมื่อหมวดเปลี่ยนสถานะหรือมีสัญญาณพิเศษ',
-                      textAlign: TextAlign.center, style: TextStyle(color: AppColors.muted)),
-                ),
-              ),
-            for (final a in list) ...[
-              if (a.date != lastDate) ...[
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(4, 16, 4, 8),
-                  child: Eyebrow(() {
-                    lastDate = a.date;
-                    return thDateLong(a.date);
-                  }()),
-                ),
               ],
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8),
-                child: Material(
-                  color: AppColors.surface,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14),
-                    side: BorderSide(color: a.kind == AlertKind.status ? zoneColor(a.zone).withAlpha(90) : AppColors.line),
-                  ),
-                  child: InkWell(
-                    borderRadius: BorderRadius.circular(14),
-                    onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => AlertDetailScreen(event: a))),
-                    child: Padding(
-                      padding: const EdgeInsets.all(14),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: 10,
-                            height: 10,
-                            margin: const EdgeInsets.only(top: 6, right: 10),
-                            decoration: BoxDecoration(color: zoneColor(a.zone), shape: BoxShape.circle),
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(a.title, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
-                                const SizedBox(height: 3),
-                                Text(a.message, style: const TextStyle(fontSize: 13, color: AppColors.muted, height: 1.45)),
-                                const SizedBox(height: 4),
-                                const Text('ดูเหตุผลและแหล่งข้อมูล ›', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600)),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+            ),
+            if (_type == 'signal') ...[
+              const SizedBox(height: 8),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ToggleChip(label: 'ทุกหมวด', selected: _filter == null, onTap: () => setState(() => _filter = null)),
+                    for (final vm in sectors) ...[
+                      const SizedBox(width: 6),
+                      ToggleChip(label: vm.config.name, selected: _filter == vm.config.id, onTap: () => setState(() => _filter = vm.config.id)),
+                    ],
+                  ],
                 ),
               ),
             ],
+            const SizedBox(height: 6),
+            if (entries.isEmpty)
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 60),
+                child: Center(
+                  child: Text('ยังไม่มีแจ้งเตือนในหมวดนี้', textAlign: TextAlign.center, style: TextStyle(color: AppColors.muted)),
+                ),
+              ),
+            for (final (date, _, w) in entries) ...[
+              if (date != lastDate)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(4, 16, 4, 8),
+                  child: Eyebrow(() {
+                    lastDate = date;
+                    return thDateLong(date);
+                  }()),
+                ),
+              Padding(padding: const EdgeInsets.only(bottom: 8), child: w),
+            ],
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _SignalTile extends StatelessWidget {
+  const _SignalTile({required this.a});
+
+  final AlertEvent a;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: AppColors.surface,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+        side: BorderSide(color: a.kind == AlertKind.status ? zoneColor(a.zone).withAlpha(90) : AppColors.line),
+      ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(14),
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => AlertDetailScreen(event: a))),
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                width: 10,
+                height: 10,
+                margin: const EdgeInsets.only(top: 6, right: 10),
+                decoration: BoxDecoration(color: zoneColor(a.zone), shape: BoxShape.circle),
+              ),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('${a.sector.name} · ${a.title}', style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
+                    const SizedBox(height: 3),
+                    Text(a.message, style: const TextStyle(fontSize: 13, color: AppColors.muted, height: 1.45)),
+                    const SizedBox(height: 4),
+                    const Text('ดูเหตุผลและแหล่งข้อมูล ›', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600)),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

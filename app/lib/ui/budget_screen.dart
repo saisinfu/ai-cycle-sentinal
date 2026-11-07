@@ -5,6 +5,7 @@ import '../core/format.dart';
 import '../core/theme.dart';
 import '../data/budget.dart';
 import '../data/engine.dart';
+import '../data/flex.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import 'sector_screen.dart';
@@ -24,6 +25,8 @@ class BudgetScreen extends ConsumerWidget {
     final config = ref.watch(configProvider).valueOrNull;
     final market = ref.watch(marketProvider).valueOrNull;
     final tax = ref.watch(taxProvider);
+    final flex = ref.watch(flexProvider);
+    final n = ref.read(settingsProvider.notifier);
     final month = DateTime.now().month;
 
     Widget line(BudgetLine l, {bool strong = false}) => Padding(
@@ -55,6 +58,23 @@ class BudgetScreen extends ConsumerWidget {
           ),
         );
 
+    /// A budget line with the flexible-budget multiplier applied.
+    Widget flexLine(BudgetLine l, String key) {
+      final f = flex?.line(key);
+      if (f == null || flex!.mode == FlexMode.off || l.amount <= 0) return line(l);
+      final m = f.multiplier;
+      final dd = f.drawdown;
+      final why = dd == null
+          ? 'ไม่มีราคาล่าสุด ลงเท่างบฐาน'
+          : 'ห่างจุดสูงสุด 52 สัปดาห์ ${dd.toStringAsFixed(0)}% → ×${m.toStringAsFixed(1)}${(f.planned - f.base * m).abs() > 1 && m > 1 ? ' (เงินสำรองไม่พอ ลดเหลือ ${baht(f.planned)})' : ''}';
+      return line(BudgetLine(
+        label: l.label,
+        amount: f.planned,
+        note: '${l.note}\nงบฐาน ${baht(f.base)} · $why',
+        tag: l.tag,
+      ));
+    }
+
     if (plan == null || config == null) {
       return Scaffold(
         appBar: AppBar(title: const Text('งบเดือนนี้')),
@@ -77,7 +97,7 @@ class BudgetScreen extends ConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Eyebrow('งบ DCA ทั้งหมด'),
+                const Eyebrow('งบฐานต่อเดือน'),
                 const SizedBox(height: 6),
                 Text('${baht(plan.total)} บาท', style: const TextStyle(fontSize: 28, fontWeight: FontWeight.w700, fontFeatures: tabular)),
                 const SizedBox(height: 4),
@@ -111,7 +131,7 @@ class BudgetScreen extends ConsumerWidget {
                 const SizedBox(height: 10),
                 for (final (k, label, c, amount) in [
                   ('main', 'พอร์ตหลัก', AppColors.text, plan.main),
-                  ('tech', 'หุ้นรายตัว Tech/AI', AppColors.tagData, plan.tech),
+                  ('tech', 'หุ้นรายตัว (หมวดต่างๆ)', AppColors.tagData, plan.tech),
                   ('tax', 'กองทุนลดหย่อนภาษี', AppColors.tagCalc, plan.tax),
                 ])
                   Padding(
@@ -128,13 +148,99 @@ class BudgetScreen extends ConsumerWidget {
             ),
           ),
 
+          if (flex != null) ...[
+            const SizedBox(height: kGap),
+            SurfaceCard(
+              borderColor: flex.used > 0 ? AppColors.green.withAlpha(90) : null,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(children: [
+                    const Expanded(child: Eyebrow('งบยืดหยุ่นตามราคาตลาด')),
+                    InkWell(onTap: onOpenSettings, child: Text(flexModeName(flex.mode), style: const TextStyle(fontSize: 12, decoration: TextDecoration.underline))),
+                  ]),
+                  const SizedBox(height: 8),
+                  if (flex.mode == FlexMode.off)
+                    const Text('ตอนนี้ตั้งเป็นงบคงที่ ลงเท่ากันทุกเดือน', style: TextStyle(fontSize: 13.5))
+                  else ...[
+                    Text('ลงทุนเดือนนี้ ${baht(flex.plannedTotal)} บาท',
+                        style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w700, fontFeatures: tabular)),
+                    Text('งบฐานพอร์ตหลัก + หุ้นรายตัว ${baht(flex.baseTotal)} บาท (ไม่รวมกองทุนลดหย่อน ${baht(plan.tax)})',
+                        style: const TextStyle(fontSize: 12.5, color: AppColors.muted)),
+                    const Divider(height: 18),
+                    for (final (label, v, c) in [
+                      ('เงินสำรองตอนต้นเดือน', flex.reserveBefore, AppColors.text),
+                      ('+ เก็บเข้าสำรอง (ตัวที่ราคาใกล้จุดสูงสุด/เงินสดตามกฎ)', flex.saved, AppColors.muted),
+                      ('− ใช้ซื้อเพิ่มตัวที่ราคาย่อ', flex.used, AppColors.green),
+                      ('เงินสำรองหลังเดือนนี้', flex.reserveAfter, AppColors.text),
+                    ])
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 2),
+                        child: Row(children: [
+                          Expanded(child: Text(label, style: TextStyle(fontSize: 13, color: c))),
+                          Text('${baht(v)} ฿', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: c, fontFeatures: tabular)),
+                        ]),
+                      ),
+                    if (flex.shortfall > 1)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 6),
+                        child: Text(
+                          'ราคาย่อหลายตัว แผนอยากซื้อเพิ่มอีก ${baht(flex.shortfall)} บาทแต่เงินสำรองไม่พอ '
+                          '${flex.reserveBefore <= 0 ? 'ถ้ามีเงินเก็บแยกไว้ (เช่น จากโบนัส) ใส่ยอดในหน้าตั้งค่า แอปจะนำมาใช้ให้' : ''}',
+                          style: const TextStyle(fontSize: 12.5, color: AppColors.yellow, height: 1.45),
+                        ),
+                      ),
+                    if (flex.capAmount.isFinite && flex.reserveAfter >= flex.capAmount - 1)
+                      Text('เงินสำรองเต็มเพดาน ${baht(flex.capAmount)} บาท ส่วนเกินลงทุนเลย',
+                          style: const TextStyle(fontSize: 12, color: AppColors.muted)),
+                    const SizedBox(height: 10),
+                    if (!s.recordedThisMonth)
+                      Row(children: [
+                        ToggleChip(
+                          label: 'ลงทุนตามนี้แล้ว (บันทึกเงินสำรอง)',
+                          selected: true,
+                          expand: true,
+                          onTap: () {
+                            n.update((x) => x.copyWith(
+                                  recordedReserveBefore: x.reserve,
+                                  reserve: flex.reserveAfter,
+                                  lastRecordedMonth: UserSettings.monthKey(DateTime.now()),
+                                ));
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text('บันทึกแล้ว เงินสำรองตอนนี้ ${baht(flex.reserveAfter)} บาท')));
+                          },
+                        ),
+                      ])
+                    else
+                      Row(children: [
+                        Expanded(
+                          child: Text('บันทึกเดือนนี้แล้ว · เงินสำรองตอนนี้ ${baht(s.reserve)} บาท',
+                              style: const TextStyle(fontSize: 12.5, color: AppColors.green)),
+                        ),
+                        InkWell(
+                          onTap: () => n.update((x) => x.copyWith(reserve: x.recordedReserveBefore, lastRecordedMonth: '')),
+                          child: const Text('ยกเลิก', style: TextStyle(fontSize: 12.5, decoration: TextDecoration.underline)),
+                        ),
+                      ]),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'ทดสอบย้อนหลัง 11 สินทรัพย์ 20–40 ปี: แบบ "ซื้อเพิ่มเมื่อย่อ" ได้ผลใกล้ DCA ปกติมาก (ต่างกันราว −0.04% ต่อปี) '
+                      'ข้อดีคือมีเงินพร้อมซื้อตอนตลาดร่วงและช่วยให้ไม่ตื่นตระหนก ไม่ได้ทำให้กำไรมากขึ้น',
+                      style: TextStyle(fontSize: 11.5, color: AppColors.muted, height: 1.45),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ],
+
           SectionHeader(title: 'พอร์ตหลัก · ${baht(plan.main)} บาท', trailing: 'ปรับสัดส่วน', onTrailing: onOpenSettings),
           SurfaceCard(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 for (final (i, l) in plan.mainLines.indexed) ...[
-                  line(l),
+                  flexLine(l, 'main:${config.mainPort[i].key}'),
                   () {
                     final asset = config.mainPort[i];
                     final q = market?.quotes[asset.proxy];
@@ -156,13 +262,13 @@ class BudgetScreen extends ConsumerWidget {
                       style: TextStyle(fontSize: 12.5, color: AppColors.yellow)),
                 ],
                 const SizedBox(height: 6),
-                const Text('ราคาที่แสดงใช้เป็นข้อมูลประกอบ แอปไม่ปรับเงินพอร์ตหลักตามวัฏจักร',
+                const Text('พอร์ตหลักไม่ปรับตามคะแนนวัฏจักร แต่ปรับตามราคาตามแผนงบยืดหยุ่น (ถ้าเปิดไว้)',
                     style: TextStyle(fontSize: 12, color: AppColors.muted)),
               ],
             ),
           ),
 
-          SectionHeader(title: 'หุ้นรายตัว Tech/AI · ${baht(plan.tech)} บาท', trailing: 'ปรับน้ำหนักหมวด', onTrailing: onOpenSettings),
+          SectionHeader(title: 'หุ้นรายตัว · งบฐาน ${baht(plan.tech)} บาท', trailing: 'ปรับน้ำหนักหมวด', onTrailing: onOpenSettings),
           for (final sb in plan.sectors) ...[
             SurfaceCard(
               borderColor: zoneColor(sb.vm.latest.zone).withAlpha(70),
@@ -188,7 +294,7 @@ class BudgetScreen extends ConsumerWidget {
                   Text('งบหมวดนี้ ${baht(sb.amount)} บาท (${baht(plan.tech)} × ${sb.weightPct.toStringAsFixed(0)}%)',
                       style: const TextStyle(fontSize: 12.5, color: AppColors.muted)),
                   const Divider(height: 18),
-                  for (final l in sb.lines) line(l),
+                  for (final l in sb.lines) flexLine(l, '${sb.vm.config.id}:${l.label}'),
                   if (sb.cash > 0)
                     line(BudgetLine(
                       label: 'เก็บเป็นเงินสดสำรอง',

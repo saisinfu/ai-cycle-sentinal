@@ -116,7 +116,7 @@ class SectorBacktest {
 }
 
 class BacktestSummary {
-  const BacktestSummary({required this.generated, required this.chartUrl, required this.detailsUrl, required this.sectors});
+  const BacktestSummary({required this.generated, required this.chartUrl, required this.detailsUrl, required this.sectors, this.flexRules = const []});
 
   factory BacktestSummary.fromJson(Map j) {
     final raw = j['sectors'];
@@ -129,6 +129,23 @@ class BacktestSummary {
           for (final e in raw.entries)
             if (e.key is String && e.value is Map) e.key as String: SectorBacktest.fromJson(e.value as Map),
       },
+      flexRules: () {
+        final d = j['dynamic_budget'];
+        if (d is! Map || d['summary'] is! Map || d['rules'] is! Map) return const <FlexRuleResult>[];
+        final sum = d['summary'] as Map, rules = d['rules'] as Map;
+        return [
+          for (final e in sum.entries)
+            if (e.key is String && e.value is Map)
+              FlexRuleResult(
+                key: e.key as String,
+                description: _s(rules[e.key]),
+                medianDiff: _n((e.value as Map)['median_irr_diff_pp']) ?? 0,
+                minDiff: _n((e.value as Map)['min']) ?? 0,
+                maxDiff: _n((e.value as Map)['max']) ?? 0,
+                assets: _maps(d['assets']).length,
+              ),
+        ];
+      }(),
     );
   }
 
@@ -136,4 +153,16 @@ class BacktestSummary {
   final String chartUrl;
   final String detailsUrl;
   final Map<String, SectorBacktest> sectors;
+  final List<FlexRuleResult> flexRules;
+}
+
+class FlexRuleResult {
+  const FlexRuleResult({required this.key, required this.description, required this.medianDiff, required this.minDiff, required this.maxDiff, required this.assets});
+
+  final String key;
+  final String description;
+  final double medianDiff;
+  final double minDiff;
+  final double maxDiff;
+  final int assets;
 }
