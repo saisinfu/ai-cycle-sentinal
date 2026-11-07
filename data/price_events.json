@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-07T03:11:53+00:00",
+ "updated_at": "2026-11-07T03:14:20+00:00",
  "rules": {
   "day_drop_pct": -7.0,
   "drawdown_pct": -20.0,
@@ -15,9 +15,29 @@
   "GLD": false,
   "SPY": true,
   "QQQ": true,
-  "KKP.BK": true
+  "KKP.BK": true,
+  "LLY": true,
+  "ISRG": false,
+  "UNH": true,
+  "COST": true,
+  "BKNG": false,
+  "MAR": true,
+  "ABNB": true,
+  "RKLB": false,
+  "ASTS": false
  },
  "events": [
+  {
+   "date": "2026-11-06",
+   "ticker": "ASTS",
+   "name": "AST SpaceMobile",
+   "kind": "drawdown",
+   "value": -75.71,
+   "price": 32.33,
+   "drawdown_pct": -75.71,
+   "title_th": "ASTS ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 32.33 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (133.09) อยู่ 75.7%"
+  },
   {
    "date": "2026-11-06",
    "ticker": "AVGO",
@@ -28,6 +48,17 @@
    "drawdown_pct": -39.01,
    "title_th": "AVGO ต่ำกว่าจุดสูงสุดเกิน 20%",
    "detail_th": "ราคา 293.69 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (481.57) อยู่ 39.0%"
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "BKNG",
+   "name": "Booking Holdings",
+   "kind": "drawdown",
+   "value": -26.86,
+   "price": 160.67,
+   "drawdown_pct": -26.86,
+   "title_th": "BKNG ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 160.67 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (219.68) อยู่ 26.9%"
   },
   {
    "date": "2026-11-06",
@@ -64,6 +95,17 @@
   },
   {
    "date": "2026-11-06",
+   "ticker": "ISRG",
+   "name": "Intuitive Surgical",
+   "kind": "drawdown",
+   "value": -23.62,
+   "price": 452.8,
+   "drawdown_pct": -23.62,
+   "title_th": "ISRG ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 452.8 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (592.85) อยู่ 23.6%"
+  },
+  {
+   "date": "2026-11-06",
    "ticker": "KLAC",
    "name": "KLA Corporation",
    "kind": "drawdown",
@@ -72,6 +114,17 @@
    "drawdown_pct": -54.1,
    "title_th": "KLAC ต่ำกว่าจุดสูงสุดเกิน 20%",
    "detail_th": "ราคา 138.49 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (301.71) อยู่ 54.1%"
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "RKLB",
+   "name": "Rocket Lab",
+   "kind": "drawdown",
+   "value": -64.67,
+   "price": 53.07,
+   "drawdown_pct": -64.67,
+   "title_th": "RKLB ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 53.07 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (150.23) อยู่ 64.7%"
   }
  ]
 }
