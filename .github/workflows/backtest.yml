@@ -33,6 +33,10 @@ jobs:
         if: always()
         timeout-minutes: 15
         run: python -u backtest/finance_v3.py 2>&1 | tee backtest/results/run_v3.log; exit ${PIPESTATUS[0]}
+      - name: Run dynamic budget
+        if: always()
+        timeout-minutes: 15
+        run: python -u backtest/dynamic_budget.py 2>&1 | tee backtest/results/run_dynamic.log; exit ${PIPESTATUS[0]}
       - name: Commit results
         if: always()
         run: |

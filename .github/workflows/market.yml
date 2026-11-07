@@ -1,0 +1,48 @@
+name: Market data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 22 * * 1-5"   # 05:20 Bangkok, after the US close (Tue-Sat)
+    - cron: "40 12 * * 1-5"   # 19:40 Bangkok, Thai close / before the evening news check
+  push:
+    branches: [main]
+    paths:
+      - "scripts/fetch_market.py"
+      - ".github/workflows/market.yml"
+      - "config/sectors.json"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas yfinance
+      - name: Fetch quotes
+        run: python -u scripts/fetch_market.py
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp data/market.json data/price_events.json "$RUNNER_TEMP/"
+          for i in 1 2 3; do
+            git fetch -q origin main && git reset -q --hard origin/main
+            cp "$RUNNER_TEMP/market.json" "$RUNNER_TEMP/price_events.json" data/
+            git add data/market.json data/price_events.json
+            git diff --cached --quiet && exit 0
+            git commit -qm "market: $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push -q origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
