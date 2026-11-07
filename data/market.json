@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-07T03:14:20+00:00",
+ "updated_at": "2026-11-07T03:31:32+00:00",
  "source": "Yahoo Finance (GitHub Actions)",
  "failed": [],
  "quotes": {
@@ -155,7 +155,7 @@
    "as_of": "2026-11-06",
    "source_url": "https://finance.yahoo.com/quote/ISRG",
    "currency": "USD",
-   "pe": 54.75,
+   "pe": 56.67,
    "name": "Intuitive Surgical",
    "gauge": false
   },
@@ -191,7 +191,7 @@
    "as_of": "2026-11-06",
    "source_url": "https://finance.yahoo.com/quote/COST",
    "currency": "USD",
-   "pe": 50.75,
+   "pe": 51.32,
    "name": "Costco Wholesale",
    "gauge": false
   },
@@ -263,7 +263,7 @@
    "as_of": "2026-11-06",
    "source_url": "https://finance.yahoo.com/quote/MAR",
    "currency": "USD",
-   "pe": 41.52,
+   "pe": 41.61,
    "name": "Marriott International",
    "gauge": false
   },
