@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-07T03:29:13Z",
+ "updated_at": "2026-11-08T01:07:20Z",
  "readings": [
   {
    "confidence": {
@@ -1291,6 +1291,54 @@
      "key": "power_grid",
      "label": "AP via NBC Bay Area · Nov 5 sell-off",
      "url": "https://www.nbcbayarea.com/news/national-international/november-5-stock-market/4170982/"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-08",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 3.28,
+    "gpu_spot_price_change_1m_pct": 15.1,
+    "enterprise_ai_adoption_pct": 65.7,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "high",
+    "enterprise_adoption": "medium",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon จะเปลี่ยนอีกครั้งหลังงบไตรมาสถัดไป",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ช่วงสุดสัปดาห์",
+    "gpu_spot_price": "ดัชนี Ornn OCPI-H100 ปิด $3.28/ชม. (6 พ.ย.) จาก $3.13 (5 พ.ย.) · เปลี่ยน +15.1% ใน 1 เดือน เทียบเดิม +10.2% ค่าเช่า GPU ยังขึ้นต่อแม้หุ้น AI ร่วง",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ก.ย. 2026 = 65.7% (+2.1 จุดจาก มิ.ย.) เท่าเดิม ข้อมูล ต.ค. กำหนดออก 11 พ.ย.",
+    "power_grid": "คงไว้ 8.8/10 (เท่าเดิม) ไม่มีข่าวไฟฟ้าศูนย์ข้อมูลใหม่ช่วงสุดสัปดาห์ · ผลประมูล backstop ของ PJM กำหนดภายใน 2 ธ.ค.",
+    "prices": "ราคาปิด 6 พ.ย. 2026 จาก Yahoo Finance: KLAC $138.49 (+6.69% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -54.1%) · AVGO $293.69 (+0.74% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -39.01%) · ETN $341.72 (+4.50% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -25.71%) · ตลาดปิดสุดสัปดาห์"
+   },
+   "prices": {
+    "KLAC": 138.49,
+    "AVGO": 293.69,
+    "ETN": 341.72
+   },
+   "prices_as_of": "2026-11-06",
+   "sources": [
+    {
+     "key": "gpu_spot_price",
+     "label": "Ornn OCPI (settled 6 Nov 2026)",
+     "url": "https://data.ornn.com/"
     },
     {
      "key": "prices",

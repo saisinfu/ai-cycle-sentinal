@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-07T03:29:13Z",
+ "updated_at": "2026-11-08T01:07:20Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -57,6 +57,57 @@
      "key": "oil",
      "label": "Yahoo Finance · CL=F",
      "url": "https://finance.yahoo.com/quote/CL=F"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-08",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.7,
+    "us_hotel_revpar_yoy_pct": 9.7,
+    "wti_usd": 90.34,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "high",
+    "oil": "high",
+    "income": "high",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "ยังเปิดหน้า TSA ไม่ได้ ใช้ค่าเดิม −0.7% (สะสมถึง 23 ก.ย. ไม่ใช่ค่า 7 วันล่าสุด) ความเชื่อมั่นต่ำ",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 25–31 ต.ค. 2026 = $101.88 +9.7% เทียบปีก่อน (อัตราเข้าพัก +4.3%, ราคาห้อง +5.2%) จากเดิม +12.6%",
+    "oil": "น้ำมัน WTI $90.34/บาร์เรล (ปิด 6 พ.ย.) เท่าเดิม ตลาดปิดสุดสัปดาห์ ความตึงเครียดอิหร่าน–ฮอร์มุซยังกดดันราคา",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% (ประกาศ 3 พ.ย.) เท่าเดิม",
+    "prices": "ราคาปิด 6 พ.ย. 2026 จาก Yahoo Finance: BKNG $160.67 (-4.77% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -26.86%) · MAR $416.47 (-0.19% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -1.98%) · ABNB $189.99 (+11.67% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -0.27%) · ตลาดปิดสุดสัปดาห์"
+   },
+   "prices": {
+    "BKNG": 160.67,
+    "MAR": 416.47,
+    "ABNB": 189.99
+   },
+   "prices_as_of": "2026-11-06",
+   "sources": [
+    {
+     "key": "hotel",
+     "label": "CoStar via Hospitality Net (week ending 31 Oct 2026)",
+     "url": "https://www.hospitalitynet.org/news/4135319/us-hotel-results-for-week-ending-31-october"
+    },
+    {
+     "key": "tsa",
+     "label": "AirAdvisor TSA statistics",
+     "url": "https://airadvisor.com/en/statistics/tsa-checkpoint-travel-numbers"
     },
     {
      "key": "prices",
