@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T01:07:28Z",
+ "updated_at": "2026-11-08T13:54:40Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -473,6 +473,73 @@
     {
      "label": "RFE/RL live blog · Nov 7",
      "url": "https://www.rferl.org/a/iran-live-blog-trump-middle-east/33803414.html"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-08-houthi-riyadh-tankers-hormuz",
+   "date": "2026-11-08",
+   "time_utc": "2026-11-08T09:26:00Z",
+   "run": "evening",
+   "level": "high",
+   "category": "war",
+   "title_th": "ฮูตียิงขีปนาวุธใส่ริยาด อาคารอารัมโกเสียหาย เรือน้ำมันไฟไหม้ในฮอร์มุซ",
+   "summary_th": "เช้า 8 พ.ย. 2026 ซาอุฯ สกัดขีปนาวุธ 3 ลูก ขีปนาวุธร่อน 2 ลูก และโดรน 1 ลำจากเยเมน โดยมีเป้าหมายที่ริยาด เศษชิ้นส่วนตกใส่อาคารของ Saudi Aramco ในริยาด เสียหายเล็กน้อยและไม่มีผู้บาดเจ็บ ส่วนคืนวันที่ 7 พ.ย. UKMTO รายงานว่าเรือบรรทุกน้ำมันลำหนึ่งในช่องแคบฮอร์มุซถูกวัตถุไม่ทราบชนิดโจมตี และอีกลำเกิดไฟไหม้ใกล้คาซับ (โอมาน) โดยลูกเรือปลอดภัย ขณะที่อิหร่านอ้างว่าเรือ 2 ลำชนทุ่นระเบิด การเจรจาที่กาตาร์ไกล่เกลี่ยยังไม่คืบหน้า (อิหร่านกำลังพิจารณาข้อเสนอ) ตลาดน้ำมันและหุ้นสหรัฐฯ จะเปิดคืนวันจันทร์เวลาไทย จึงยังไม่มีราคาตอบสนอง",
+   "impacts": [
+    {
+     "target": "main:sp500",
+     "label_th": "กองทุน S&P 500",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "สงครามที่ลามไปถึงซาอุฯ อาจทำให้น้ำมันแพงขึ้นเมื่อตลาดเปิด ดันเงินเฟ้อและเพิ่มโอกาสที่ Fed จะขึ้นดอกเบี้ย ธ.ค."
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "กองทุน NASDAQ",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "หุ้นเทคยังเปราะบางหลังร่วงหนักสัปดาห์ก่อน ข่าวสงครามบวกดอกเบี้ยสูงกดดันหุ้นเติบโตเพิ่ม"
+    },
+    {
+     "target": "travel",
+     "label_th": "ท่องเที่ยว",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "น้ำมันเครื่องบินแพงขึ้นและความไม่ปลอดภัยในตะวันออกกลางกดดันการเดินทาง (BKNG, MAR, ABNB)"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "สงครามหนุนทองในฐานะสินทรัพย์ปลอดภัย แต่ถ้าน้ำมันดันความคาดหวังให้ Fed ขึ้นดอกเบี้ย ก็ฉุดทองลง"
+    },
+    {
+     "target": "main:kkp",
+     "label_th": "KKP",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ไทยนำเข้าน้ำมัน ราคาน้ำมันที่สูงขึ้นกดดันเศรษฐกิจและหุ้นไทย"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขายตามข่าว ถ้าตลาดเปิดวันจันทร์แล้วลง แผนจะใช้เงินสำรองซื้อเพิ่มตามระยะห่างจากจุดสูงสุดโดยอัตโนมัติ เตรียมใจรับความผันผวนเท่านั้น",
+   "watch_next_th": "ราคาน้ำมันตอนเปิดตลาด (เช้าวันจันทร์ 9 พ.ย. เวลาไทย) · ท่าทีทรัมป์ว่าจะโจมตีอิหร่านรอบใหม่หรือไม่ · ผลการเจรจาผ่านกาตาร์ · CPI สหรัฐฯ ต.ค. กลาง พ.ย.",
+   "sources": [
+    {
+     "label": "ABC News – Iran live updates (8 พ.ย.)",
+     "url": "https://abcnews.com/International/live-updates/iran-live-updates-trump-good-call-netanyahu/?id=137762456"
+    },
+    {
+     "label": "Al Jazeera – Iran war live (8 พ.ย.)",
+     "url": "https://www.aljazeera.com/news/liveblog/2026/11/8/iran-war-live-explosions-hit-qeshm-us-moves-to-block-land-supply-routes"
+    },
+    {
+     "label": "ABC (Australia) – Explosions heard in Strait of Hormuz",
+     "url": "https://www.abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730"
+    },
+    {
+     "label": "Iran International – live blog",
+     "url": "https://www.iranintl.com/en/liveblog/202611077068"
     }
    ]
   }
