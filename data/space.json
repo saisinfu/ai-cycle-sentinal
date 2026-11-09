@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T01:07:20Z",
+ "updated_at": "2026-11-09T01:09:05+00:00",
  "readings": [
   {
    "date": "2026-11-07",
@@ -103,6 +103,62 @@
      "key": "rklb_backlog",
      "label": "Rocket Lab IR: Q3 2026 results date",
      "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-date-third-quarter-2026-financial-results"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-09",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 137.0,
+    "us10y_change_3m_pp": 0.2
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "medium",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 (ความเชื่อมั่นต่ำ) กลาโหมยังใช้งบชั่วคราวถึง 11 ธ.ค. ไม่มีความคืบหน้าใหม่",
+    "gpr": "ดัชนี GPR อัปเดตแล้ว 2 พ.ย. แต่อ่านตัวเลข ต.ค. ไม่ได้ ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ · ความขัดแย้งอิหร่านยังยกระดับ (ทุ่นระเบิดในฮอร์มุซ 8 พ.ย.)",
+    "launches": "จรวดขึ้นสู่วงโคจรทั่วโลกปี 2026 ถึง 31 ต.ค. 254 ครั้ง +0.4% เทียบปีก่อน เท่าเดิม",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 2/2026 $2.36 พันล้าน +137% เท่าเดิม · งบไตรมาส 3 ออกคืนนี้หลังตลาดสหรัฐฯ ปิด (เช้า 10 พ.ย. เวลาไทย)",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 4.86% เทียบ 3 เดือนก่อน 4.66% = +0.20 จุด เท่าเดิม (ตลาดปิดสุดสัปดาห์)",
+    "prices": "ราคาปิด 6 พ.ย. 2026 จาก Yahoo Finance: LMT $567.08 (-1.58% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -16.2%) · RKLB $53.07 (+15.39% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -64.67%) · ASTS $32.33 (+7.05% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -75.71%) · ตลาดสหรัฐฯ เปิดคืนนี้ (9 พ.ย.)"
+   },
+   "prices": {
+    "LMT": 567.08,
+    "RKLB": 53.07,
+    "ASTS": 32.33
+   },
+   "prices_as_of": "2026-11-06",
+   "sources": [
+    {
+     "key": "gpr",
+     "label": "Caldara–Iacoviello GPR",
+     "url": "https://www.matteoiacoviello.com/gpr.htm"
+    },
+    {
+     "key": "launches",
+     "label": "SpaceNexus launch cadence Oct 2026",
+     "url": "https://spacenexus.us/releases/launch-cadence/2026-10"
+    },
+    {
+     "key": "rklb_backlog",
+     "label": "Rocket Lab Q3 date (Finviz)",
+     "url": "https://finviz.com/news/404901/rocket-lab-announces-date-of-third-quarter-2026-financial-results"
     },
     {
      "key": "prices",

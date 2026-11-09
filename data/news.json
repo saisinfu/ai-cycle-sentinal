@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T13:54:40Z",
+ "updated_at": "2026-11-09T01:09:40+00:00",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -540,6 +540,152 @@
     {
      "label": "Iran International – live blog",
      "url": "https://www.iranintl.com/en/liveblog/202611077068"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-09-iran-mines-irongate",
+   "date": "2026-11-09",
+   "time_utc": "2026-11-09T01:00:00+00:00",
+   "run": "morning",
+   "level": "high",
+   "category": "war",
+   "title_th": "เรือน้ำมันชนทุ่นระเบิดในฮอร์มุซ สหรัฐฯ ตั้งหน่วยปิดล้อมอิหร่านทางบก",
+   "summary_th": "8 พ.ย. 2026 กองทัพอิหร่านระบุเรือน้ำมัน 2 ลำไฟไหม้หลังชนทุ่นระเบิดในช่องแคบฮอร์มุซ และกองกำลังพิทักษ์ปฏิวัติประกาศยกเลิกเพดานพิสัยขีปนาวุธ 2,000 กม. ขณะที่ 7 พ.ย. สหรัฐฯ ตั้ง Task Force Iron Gate สกัดการขนส่งทางบกของอิหร่าน ส่วนอิหร่านกำลังพิจารณาข้อเสนอลดความตึงเครียดของกาตาร์",
+   "impacts": [
+    {
+     "target": "travel",
+     "label_th": "ท่องเที่ยว",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ความเสี่ยงต่อการขนส่งน้ำมันอาจดันราคาน้ำมันกลับขึ้น (WTI ปิดศุกร์ $90.34) เพิ่มต้นทุนสายการบินและกดการเดินทาง"
+    },
+    {
+     "target": "space",
+     "label_th": "อวกาศ/กลาโหม",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "สงครามยืดเยื้อหนุนความต้องการอาวุธและงบกลาโหม เช่น LMT"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "ความเสี่ยงภูมิรัฐศาสตร์ทำให้นักลงทุนหาสินทรัพย์ปลอดภัย"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "น้ำมันแพงเพิ่มแรงกดดันเงินเฟ้อ ซ้ำเติมความกังวลว่า Fed จะขึ้นดอกเบี้ย"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย ข่าวสงครามทำให้ตลาดผันผวน แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ",
+   "watch_next_th": "ผลการพิจารณาข้อเสนอกาตาร์ · ประชุมรัฐมนตรีต่างประเทศ G7 ที่ปารีส 9–10 พ.ย. · ราคาน้ำมันเมื่อตลาดเปิด",
+   "sources": [
+    {
+     "label": "ABC News (8 Nov 2026)",
+     "url": "https://www.abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730"
+    },
+    {
+     "label": "CBS News live updates",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-09-msft-oracle-winddown",
+   "date": "2026-11-09",
+   "time_utc": "2026-11-09T01:00:00+00:00",
+   "run": "morning",
+   "level": "medium",
+   "category": "sector",
+   "title_th": "Microsoft ทยอยเลิกเช่าเซิร์ฟเวอร์ AI จาก Oracle",
+   "summary_th": "Bloomberg รายงาน (6 พ.ย. 2026) ว่า Microsoft ไม่ต่อสัญญาเช่าพลังประมวลผล AI จาก Oracle ที่ทำไว้ปี 2023 เพราะใช้ชิป Nvidia รุ่นเก่า และย้ายงานไปศูนย์ข้อมูลของตัวเอง หุ้น Oracle ลง ~4% วันศุกร์ ข่าวนี้ตอกย้ำคำถามว่าบริษัทใหญ่เริ่มคุมการลงทุน AI หรือไม่",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "ชิป/AI",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "สะท้อนว่าชิปรุ่นเก่าเริ่มด้อยค่า แต่ Microsoft ยังลงทุนศูนย์ข้อมูลของตัวเองต่อ ความต้องการชิปรุ่นใหม่จึงยังอยู่"
+    },
+    {
+     "target": "AVGO",
+     "label_th": "Broadcom",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "บริษัทใหญ่ที่สร้างศูนย์ข้อมูลเองมักใช้ชิปออกแบบเฉพาะและอุปกรณ์เครือข่ายของ Broadcom แต่ความกังวลงบลงทุน AI กดดันทั้งกลุ่ม"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ข่าวลดการเช่าพลังประมวลผลเพิ่มความกังวลเรื่องฟองสบู่ AI หลัง Nasdaq ร่วง 3.4% สัปดาห์ก่อน"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย หมวด AI ยังอยู่โซนเฝ้าระวัง แผนยัง DCA ต่อและใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ",
+   "watch_next_th": "Ramp AI Index ต.ค. ออก 11 พ.ย. · งบ Nvidia ปลาย พ.ย.",
+   "sources": [
+    {
+     "label": "Reuters via Manila Times (8 Nov 2026)",
+     "url": "https://www.manilatimes.net/2026/11/08/business/top-business/microsoft-is-winding-down-deal-with-oracle/2464470"
+    },
+    {
+     "label": "TokenPost (8 Nov 2026)",
+     "url": "https://www.tokenpost.com/news/business/51955"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-09-week-cpi-rklb",
+   "date": "2026-11-09",
+   "time_utc": "2026-11-09T01:00:00+00:00",
+   "run": "morning",
+   "level": "medium",
+   "category": "inflation",
+   "title_th": "สัปดาห์นี้: CPI สหรัฐฯ (10 พ.ย.) ชี้ทาง Fed ขึ้นดอกเบี้ย ธ.ค.",
+   "summary_th": "สัปดาห์ก่อน S&P 500 ลง 2.68% (แย่สุดตั้งแต่ เม.ย. 2025) Nasdaq ลง 3.37% VIX 25.6 ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย 9 ธ.ค. ราว 77% สัปดาห์นี้มี CPI ต.ค. (อ. 10 พ.ย.) และ PPI (ศ. 13 พ.ย.) ส่วน Rocket Lab ประกาศงบไตรมาส 3 คืนนี้หลังตลาดปิด",
+   "impacts": [
+    {
+     "target": "finance",
+     "label_th": "การเงิน",
+     "direction": "mixed",
+     "strength": "medium",
+     "reason_th": "เงินเฟ้อสูงทำให้โอกาสขึ้นดอกเบี้ยเพิ่ม ส่วนต่างหุ้นกู้กว้างขึ้นเป็น 3.48% แต่ดอกเบี้ยสูงช่วยรายได้ดอกเบี้ยธนาคาร"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ",
+     "direction": "mixed",
+     "strength": "medium",
+     "reason_th": "CPI สูงกว่าคาดจะกดหุ้นเติบโต ถ้าต่ำกว่าคาดอาจทำให้ตลาดฟื้น"
+    },
+    {
+     "target": "RKLB",
+     "label_th": "Rocket Lab",
+     "direction": "mixed",
+     "strength": "high",
+     "reason_th": "งบและ backlog ไตรมาส 3 อาจทำให้หุ้นที่ต่ำกว่าจุดสูงสุด ~65% แกว่งแรงทั้งขึ้นและลง"
+    }
+   ],
+   "what_to_do_th": "ระวังความผันผวนช่วงประกาศ CPI และก่อนประชุม Fed 9 ธ.ค. ไม่ต้องขาย ซื้อตามแผนต่อไป",
+   "watch_next_th": "CPI ต.ค. อ. 10 พ.ย. · งบ Rocket Lab เช้า 10 พ.ย. เวลาไทย · PPI ศ. 13 พ.ย. · ตลาดพันธบัตรปิด 11 พ.ย.",
+   "sources": [
+    {
+     "label": "PalmaFutures Sunday Post (8 Nov 2026)",
+     "url": "https://palmafutures.substack.com/p/sunday-post-recap-and-week-ahead-19f"
+    },
+    {
+     "label": "FRED BAMLH0A0HYM2",
+     "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+    },
+    {
+     "label": "Finviz: Rocket Lab Q3 date",
+     "url": "https://finviz.com/news/404901/rocket-lab-announces-date-of-third-quarter-2026-financial-results"
     }
    ]
   }

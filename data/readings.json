@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-08T01:07:20Z",
+ "updated_at": "2026-11-09T01:09:05+00:00",
  "readings": [
   {
    "confidence": {
@@ -1339,6 +1339,59 @@
      "key": "gpu_spot_price",
      "label": "Ornn OCPI (settled 6 Nov 2026)",
      "url": "https://data.ornn.com/"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-09",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 3.28,
+    "gpu_spot_price_change_1m_pct": 15.1,
+    "enterprise_ai_adoption_pct": 65.7,
+    "enterprise_ai_adoption_change_3m_pp": 2.1,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "low",
+    "enterprise_adoption": "medium",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon · ข่าว Microsoft ทยอยเลิกเช่าเซิร์ฟเวอร์ AI จาก Oracle ยังไม่เปลี่ยนตัวเลขนี้",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ช่วงสุดสัปดาห์",
+    "gpu_spot_price": "รอบนี้เปิดหน้า Ornn ไม่ได้ จึงใช้ค่าเดิม $3.28/ชม. (ปิด 6 พ.ย.) และ +15.1% ใน 1 เดือน ความเชื่อมั่นต่ำ",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ก.ย. 2026 = 65.7% (+2.1 จุดจาก มิ.ย.) เท่าเดิม ข้อมูล ต.ค. กำหนดออก 11 พ.ย.",
+    "power_grid": "คงไว้ 8.8/10 (เท่าเดิม) ไม่มีข่าวไฟฟ้าศูนย์ข้อมูลใหม่ช่วงสุดสัปดาห์ · ผลประมูล backstop ของ PJM กำหนดภายใน 2 ธ.ค.",
+    "prices": "ราคาปิด 6 พ.ย. 2026 จาก Yahoo Finance: KLAC $138.49 (+6.69% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -54.1%) · AVGO $293.69 (+0.74% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -39.01%) · ETN $341.72 (+4.50% วันที่ 06/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -25.71%) · ตลาดสหรัฐฯ เปิดคืนนี้ (9 พ.ย.)"
+   },
+   "prices": {
+    "KLAC": 138.49,
+    "AVGO": 293.69,
+    "ETN": 341.72
+   },
+   "prices_as_of": "2026-11-06",
+   "sources": [
+    {
+     "key": "capex_vs_revenue",
+     "label": "Reuters via Manila Times: Microsoft winding down Oracle deal (8 Nov 2026)",
+     "url": "https://www.manilatimes.net/2026/11/08/business/top-business/microsoft-is-winding-down-deal-with-oracle/2464470"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "FRED RAMPAIENTERPRISE",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
     },
     {
      "key": "prices",

@@ -193,7 +193,9 @@
    "currency": "USD",
    "pe": 51.32,
    "name": "Costco Wholesale",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 46.64,
+   "pe_source_url": "https://fullratio.com/stocks/nasdaq-cost/pe-ratio"
   },
   "PEP": {
    "price": 141.34,
@@ -283,7 +285,9 @@
    "currency": "USD",
    "pe": 43.28,
    "name": "Airbnb",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 36.53,
+   "pe_source_url": "https://fullratio.com/stocks/nasdaq-abnb/pe-ratio"
   },
   "LMT": {
    "price": 567.08,
