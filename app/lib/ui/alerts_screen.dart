@@ -9,6 +9,7 @@ import '../data/engine.dart';
 import '../data/feed.dart';
 import '../data/zone.dart';
 import '../state/providers.dart';
+import 'briefs_screen.dart';
 import 'method_screen.dart';
 import 'news_screen.dart';
 import 'sector_screen.dart';
@@ -57,6 +58,24 @@ class _AlertsScreenState extends ConsumerState<AlertsScreen> {
           children: [
             const Text('ข่าวสำคัญพร้อมผลกระทบต่อพอร์ต (Claude ตรวจวันละ 2 รอบ) · ราคาหุ้นร่วงแรง · การเปลี่ยนสถานะของหมวด',
                 style: TextStyle(fontSize: 12.5, color: AppColors.muted, height: 1.4)),
+            const SizedBox(height: 10),
+            Material(
+              color: AppColors.surface,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14), side: const BorderSide(color: AppColors.line)),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(14),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const BriefsScreen())),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                  child: Row(children: [
+                    Icon(Icons.forum_outlined, size: 18, color: AppColors.muted),
+                    SizedBox(width: 10),
+                    Expanded(child: Text('สรุปรอบเช้า/ค่ำจาก Claude (ข้อความแจ้งเตือนทั้งหมด)', style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w600))),
+                    Icon(Icons.chevron_right, color: AppColors.muted),
+                  ]),
+                ),
+              ),
+            ),
             const SizedBox(height: 10),
             Row(
               children: [

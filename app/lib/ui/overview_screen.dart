@@ -8,6 +8,7 @@ import '../data/feed.dart';
 import '../state/providers.dart';
 import '../state/settings.dart';
 import 'alerts_screen.dart';
+import 'briefs_screen.dart';
 import 'news_screen.dart';
 import 'sector_screen.dart';
 import 'widgets/common.dart';
@@ -34,6 +35,7 @@ class OverviewScreen extends ConsumerWidget {
     final prices = ref.watch(followedPriceEventsProvider);
     final lastTrading = market?.quotes['SPY']?.asOf;
     final todayPrices = lastTrading == null ? const <PriceEvent>[] : prices.where((e) => e.date.compareTo(lastTrading) >= 0).toList();
+    final briefs = ref.watch(briefsProvider).valueOrNull ?? const <Brief>[];
     final cutoff = isoDate(DateTime.now().subtract(const Duration(days: 4)));
     final news = (ref.watch(newsProvider).valueOrNull ?? const <NewsItem>[])
         .where((n) => n.level != 'low' && n.date.compareTo(cutoff) >= 0)
@@ -121,6 +123,13 @@ class OverviewScreen extends ConsumerWidget {
                   ],
                 ),
               ),
+              if (briefs.isNotEmpty) ...[
+                const SectionHeader(title: 'สรุปล่าสุดจาก Claude'),
+                BriefCard(
+                  brief: briefs.first,
+                  onMore: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const BriefsScreen())),
+                ),
+              ],
               if (news.isNotEmpty) ...[
                 SectionHeader(title: 'ข่าวสำคัญล่าสุด', trailing: 'ดูทั้งหมด', onTrailing: onOpenAlerts),
                 for (final n in news) Padding(padding: const EdgeInsets.only(bottom: 8), child: NewsTile(item: n, compact: true)),

@@ -134,3 +134,55 @@ class PriceEvents {
   final double dayDropPct;
   final double drawdownPct;
 }
+
+/// Summary message of one morning/evening Claude run (data/briefs.json) — the same text
+/// the user gets as a push notification.
+class Brief {
+  const Brief({
+    required this.id,
+    required this.date,
+    required this.run,
+    required this.time,
+    required this.headline,
+    required this.text,
+    required this.level,
+    required this.newsIds,
+    this.reconstructed = false,
+  });
+
+  factory Brief.fromJson(Map j) => Brief(
+        id: _s(j['id']),
+        date: _s(j['date']),
+        run: _s(j['run'], 'morning'),
+        time: _s(j['time_utc']),
+        headline: _s(j['headline_th']),
+        text: _s(j['text_th']),
+        level: _s(j['level'], 'low'),
+        newsIds: [for (final x in (j['news_ids'] is List ? j['news_ids'] as List : const [])) if (x is String) x],
+        reconstructed: j['reconstructed'] == true,
+      );
+
+  final String id;
+  final String date;
+
+  /// morning | evening
+  final String run;
+  final String time;
+  final String headline;
+  final String text;
+  final String level;
+  final List<String> newsIds;
+
+  /// Rebuilt from the news feed rather than the original notification text.
+  final bool reconstructed;
+
+  String get runTh => run == 'evening' ? 'รอบค่ำ' : 'รอบเช้า';
+  String get sortKey => time.isNotEmpty ? time : '$date${run == 'evening' ? 'T20' : 'T08'}';
+}
+
+List<Brief> parseBriefs(Object? j) {
+  if (j is! Map) return const [];
+  final items = [for (final m in _maps(j['items'])) Brief.fromJson(m)]..removeWhere((b) => b.date.isEmpty || (b.headline.isEmpty && b.text.isEmpty));
+  items.sort((a, b) => b.sortKey.compareTo(a.sortKey));
+  return items;
+}

@@ -119,4 +119,13 @@ class Repository {
       return const PriceEvents(events: []);
     }
   }
+
+  Future<List<Brief>> loadBriefs() async {
+    try {
+      final r = await _fetch('data/briefs.json');
+      return parseBriefs(jsonDecode(r.value));
+    } catch (_) {
+      return const [];
+    }
+  }
 }

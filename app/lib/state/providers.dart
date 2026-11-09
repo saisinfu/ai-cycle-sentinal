@@ -79,6 +79,8 @@ final budgetProvider = Provider<BudgetPlan?>((ref) {
 
 final newsProvider = FutureProvider<List<NewsItem>>((ref) => ref.watch(repositoryProvider).loadNews());
 
+final briefsProvider = FutureProvider<List<Brief>>((ref) => ref.watch(repositoryProvider).loadBriefs());
+
 final priceEventsProvider = FutureProvider<PriceEvents>((ref) => ref.watch(repositoryProvider).loadPriceEvents());
 
 /// Price events for tickers the user can see (sector stocks + main-port proxies).
@@ -133,5 +135,6 @@ void refreshAll(WidgetRef ref) {
   ref.invalidate(readingsProvider);
   ref.invalidate(backtestProvider);
   ref.invalidate(newsProvider);
+  ref.invalidate(briefsProvider);
   ref.invalidate(priceEventsProvider);
 }
