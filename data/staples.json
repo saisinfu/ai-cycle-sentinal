@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T01:09:05+00:00",
+ "updated_at": "2026-11-10T01:10:13+00:00",
  "readings": [
   {
    "date": "2026-11-07",
@@ -149,6 +149,57 @@
      "key": "food_inflation",
      "label": "FRED CUSR0000SAF11",
      "url": "https://fred.stlouisfed.org/data/CUSR0000SAF11"
+    },
+    {
+     "key": "restaurant_sales",
+     "label": "FRED RSFSDP",
+     "url": "https://fred.stlouisfed.org/data/RSFSDP"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-10",
+   "indicators": {
+    "consumer_sentiment": 51.0,
+    "food_services_sales_yoy_pct": 6.99,
+    "food_at_home_cpi_yoy_pct": 1.77,
+    "fao_food_price_yoy_pct": 5.9,
+    "costco_us_comp_sales_pct": 8.1
+   },
+   "confidence": {
+    "sentiment": "high",
+    "restaurant_sales": "high",
+    "food_inflation": "high",
+    "input_cost": "medium",
+    "costco_comps": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "sentiment": "ความเชื่อมั่นผู้บริโภค ม.มิชิแกน พ.ย. 2026 (เบื้องต้น 6 พ.ย.) = 51 เท่าเดิม ค่าสุดท้ายออก 20 พ.ย. (ตรวจ 10 พ.ย.: ยังไม่มีข้อมูลใหม่)",
+    "restaurant_sales": "ยอดขายร้านอาหาร ก.ย. 2026 +6.99% เทียบปีก่อน เท่าเดิม (ข้อมูล ต.ค. ยังไม่ออก) (ตรวจ 10 พ.ย.: ยังไม่มีข้อมูลใหม่)",
+    "food_inflation": "ราคาอาหารในบ้าน (CPI) ก.ย. 2026 +1.77% เท่าเดิม · CPI ต.ค. ออกคืนนี้ 10 พ.ย.",
+    "input_cost": "ดัชนีราคาอาหารโลก FAO ต.ค. 2026 = 133.9 จุด +5.9% เทียบปีก่อน (ลดลง 1.2% จาก ก.ย.) จากเดิม +5.8% (ก.ย.) (ตรวจ 10 พ.ย.: ยังไม่มีข้อมูลใหม่)",
+    "costco_comps": "Costco ยอดขายสาขาเดิมในสหรัฐฯ ต.ค. 2026 +8.1% (ประกาศ 4 พ.ย.) เท่าเดิม (ตรวจ 10 พ.ย.: ยังไม่มีข้อมูลใหม่)",
+    "prices": "ราคาปิด 9 พ.ย. 2026 จาก Yahoo Finance: COST $1,066.18 (+1.20% วันที่ 09/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -2.57%) · PEP $141.88 (+0.38% วันที่ 09/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -16.78%) · MCD $281.44 (+1.78% วันที่ 09/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -17.48%)"
+   },
+   "prices": {
+    "COST": 1066.18,
+    "PEP": 141.88,
+    "MCD": 281.44
+   },
+   "prices_as_of": "2026-11-09",
+   "sources": [
+    {
+     "key": "input_cost",
+     "label": "Bizcommunity: Global food prices fall in October (6 Nov 2026)",
+     "url": "https://www.bizcommunity.com/article/global-food-prices-fall-in-october-as-sugar-rises-for-fourth-month-639621a"
     },
     {
      "key": "restaurant_sales",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-09T13:55:58+00:00",
+ "updated_at": "2026-11-10T01:10:43+00:00",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -736,6 +736,103 @@
     {
      "label": "TipRanks (9 Nov 2026)",
      "url": "https://tipranks.com/news/stock-market-today-nov-9-nvidia-stock-falls-on-probe-into-ceo-huang-focus-on-inflation-data-ai-earnings"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-10-relief-rally-oil-drop",
+   "date": "2026-11-10",
+   "time_utc": "2026-11-10T01:10:43+00:00",
+   "run": "morning",
+   "level": "medium",
+   "category": "market",
+   "title_th": "หุ้นสหรัฐฯ ฟื้นแรง Nasdaq-100 +3.4% น้ำมันลง ~5% VIX ลด 22%",
+   "summary_th": "9 พ.ย. 2026 ตลาดหุ้นสหรัฐฯ ฟื้นหลังสัปดาห์ก่อนร่วงหนัก: Nasdaq-100 +3.4% (QQQ +3.54%) S&P 500 +2.4% หุ้นชิปนำ (SMH +5.1%, KLAC +9.3%, AVGO +8.8%) น้ำมัน WTI ลง 4.9% เหลือ $86.38 หลังทรัมป์บอกว่าการโจมตีอิหร่านรอบใหม่ 'ไม่น่าเกิด' หากการเจรจาคืบหน้า ดัชนีความกลัว VIX ลง 22% เหลือ 19.9",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "ชิป/AI",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "แรงขายหุ้น AI หยุดชั่วคราว KLAC/AVGO/ETN เด้ง 5–9% แต่ยังต่ำกว่าจุดสูงสุด 22–50% จึงยังผันผวนได้อีก"
+    },
+    {
+     "target": "travel",
+     "label_th": "ท่องเที่ยว",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "น้ำมันถูกลงช่วยลดต้นทุนเดินทางและสายการบิน"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "หุ้นเทคใหญ่ฟื้นนำตลาด แต่ Nasdaq ยังอยู่ในช่วงปรับฐาน (−10.6% จากจุดสูงสุด)"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "ความกังวลสงครามและน้ำมันลดลงช่วยหนุนตลาดทั้งกระดาน"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "ดอลลาร์อ่อน (DXY −0.6%) ช่วยให้ GLD บวก 1.9%"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องไล่ซื้อเพิ่มหรือขาย ทำตามแผน DCA ปกติ งบยืดหยุ่นจะลดการใช้เงินสำรองเองเมื่อราคาฟื้นขึ้น",
+   "watch_next_th": "CPI ต.ค. คืนนี้ 10 พ.ย. (คาด +0.3% ต่อเดือน) · การเจรจาสหรัฐฯ–อิหร่าน · ประชุม Fed 9 ธ.ค.",
+   "sources": [
+    {
+     "label": "TheStreet: Stock market today Nov 9 2026",
+     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-09-202"
+    },
+    {
+     "label": "CBS News Iran war live updates",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-10-rklb-q3-backlog",
+   "date": "2026-11-10",
+   "time_utc": "2026-11-10T01:10:43+00:00",
+   "run": "morning",
+   "level": "medium",
+   "category": "earnings",
+   "title_th": "Rocket Lab งบ Q3: รายได้สูงสุดใหม่ backlog $3.6 พันล้าน แต่ Neutron เลื่อนไป 2027",
+   "summary_th": "9 พ.ย. 2026 Rocket Lab รายงานรายได้ไตรมาส 3 $268 ล้าน (+73% เทียบปีก่อน สูงกว่าคาด $257 ล้าน) backlog ≈ $3.57 พันล้าน (+52% จากไตรมาสก่อน, ราว 3 เท่าของปีก่อน) คาดรายได้ Q4 $270–290 ล้าน แต่ขาดทุน $0.12/หุ้น แย่กว่าคาด และจรวด Neutron เลื่อนบินครั้งแรกไปปี 2027 หุ้นบวก 10.9% ในวันนั้นก่อนลง ~6.5% หลังตลาดปิด",
+   "impacts": [
+    {
+     "target": "RKLB",
+     "label_th": "Rocket Lab",
+     "direction": "mixed",
+     "strength": "medium",
+     "reason_th": "ยอดสั่งงานโตแรงยืนยันความต้องการ แต่ความล่าช้าของ Neutron และขาดทุนทำให้หุ้นผันผวน"
+    },
+    {
+     "target": "space",
+     "label_th": "อวกาศ/กลาโหม",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "สัญญาณ backlog ของ Rocket Lab ในแอปดีขึ้นจาก +137% เป็น +225% ดัชนีหมวดขยับขึ้นเล็กน้อย"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย หุ้น RKLB ยังต่ำกว่าจุดสูงสุด ~61% แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ อยู่ในกรอบแผน",
+   "watch_next_th": "กำหนดการทดสอบถัง Neutron ขั้นที่ 1 · งบกลาโหมหลังงบชั่วคราวหมด 11 ธ.ค.",
+   "sources": [
+    {
+     "label": "Rocket Lab Q3 2026 results",
+     "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts"
+    },
+    {
+     "label": "Investing.com: Rocket Lab Q3 2026 call transcript",
+     "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-rocket-lab-beats-revenue-in-q3-2026-stock-swings-lower-after-hours-93CH-5013696"
     }
    ]
   }
