@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-10T01:10:13+00:00",
+ "updated_at": "2026-11-11T01:07:01+00:00",
  "readings": [
   {
    "confidence": {
@@ -1440,6 +1440,74 @@
      "key": "capex_vs_revenue",
      "label": "Reuters via Manila Times: Microsoft winding down Oracle deal (8 Nov 2026)",
      "url": "https://www.manilatimes.net/2026/11/08/business/top-business/microsoft-is-winding-down-deal-with-oracle/2464470"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-11",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 3.3,
+    "gpu_spot_price_change_1m_pct": 23.6,
+    "enterprise_ai_adoption_pct": 65.72,
+    "enterprise_ai_adoption_change_3m_pp": 2.06,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "high",
+    "enterprise_adoption": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon (ตรวจ 11 พ.ย.: ยังไม่มีข้อมูลใหม่)",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ · ข่าวคดีความซีอีโอ Nvidia ไม่กระทบอุปทานชิป",
+    "gpu_spot_price": "ราคาเช่า GPU H100 (Ornn OCPI) $3.30/ชม. (ปิด 9 พ.ย.) เทียบ $2.67 เมื่อ 11 ต.ค. = +23.6% ใน 1 เดือน (จากเดิม +15.1%) แต่ 7 วันล่าสุด −2.4%",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ก.ย. 2026 = 65.7% เทียบ มิ.ย. 63.7% = +2.1 จุด เท่าเดิม · ฉบับ พ.ย. (ข้อมูล ต.ค.) ยังไม่ขึ้น FRED (ตรวจ 11 พ.ย.: ยังไม่มีข้อมูลใหม่)",
+    "power_grid": "คงไว้ 8.8/10 (เท่าเดิม) PJM รอผลประมูล backstop ~6.8 GW ต้น ธ.ค. และ FERC กำหนดส่งเอกสารกฎเชื่อมต่อโหลดขนาดใหญ่ 16 พ.ย.",
+    "prices": "ราคาปิด 10 พ.ย. 2026 จาก Yahoo Finance: KLAC $152.19 (+0.54% วันที่ 10/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -49.56%) · AVGO $331.57 (+3.78% วันที่ 10/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -31.15%) · ETN $352.88 (-1.79% วันที่ 10/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -23.28%)"
+   },
+   "prices": {
+    "KLAC": 152.19,
+    "AVGO": 331.57,
+    "ETN": 352.88
+   },
+   "prices_as_of": "2026-11-10",
+   "sources": [
+    {
+     "key": "capex_vs_revenue",
+     "label": "Reuters via Manila Times: Microsoft winding down Oracle deal (8 Nov 2026)",
+     "url": "https://www.manilatimes.net/2026/11/08/business/top-business/microsoft-is-winding-down-deal-with-oracle/2464470"
+    },
+    {
+     "key": "gpu_spot_price",
+     "label": "Ornn OCPI H100 SXM",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "FRED RAMPAIENTERPRISE",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index Oct 2026 (ข้อมูล ก.ย.)",
+     "url": "https://ramp.com/data/ai-index-oct-2026"
+    },
+    {
+     "key": "power_grid",
+     "label": "Construction Review: PJM 6.8GW backstop",
+     "url": "https://constructionreviewonline.com/6-8gw-pjm-data-center-plan-gets-20-billion-backstop-as-federal-grid-review-faces-5-month-pause/"
     },
     {
      "key": "prices",
