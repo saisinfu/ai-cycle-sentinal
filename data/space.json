@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-11T01:07:01+00:00",
+ "updated_at": "2026-11-12T01:30:00+00:00",
  "readings": [
   {
    "date": "2026-11-07",
@@ -261,6 +261,67 @@
     "ASTS": 32.98
    },
    "prices_as_of": "2026-11-10",
+   "sources": [
+    {
+     "key": "gpr",
+     "label": "Caldara–Iacoviello GPR",
+     "url": "https://www.matteoiacoviello.com/gpr.htm"
+    },
+    {
+     "key": "launches",
+     "label": "SpaceNexus launch cadence Oct 2026",
+     "url": "https://spacenexus.us/releases/launch-cadence/2026-10"
+    },
+    {
+     "key": "rklb_backlog",
+     "label": "Rocket Lab Q3 2026 results (9 Nov 2026)",
+     "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts"
+    },
+    {
+     "key": "rklb_backlog",
+     "label": "TipRanks: Rocket Lab Q3 2025 backlog $1.1B",
+     "url": "https://www.tipranks.com/news/rklb-earnings-rocket-lab-stock-surges-after-strong-q3"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-12",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 225.0,
+    "us10y_change_3m_pp": 0.32
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "medium",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 (ความเชื่อมั่นต่ำ) กลาโหมยังใช้งบชั่วคราวถึง 11 ธ.ค. ไม่มีความคืบหน้าใหม่ (12 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "gpr": "ดัชนี GPR อัปเดตแล้ว 2 พ.ย. แต่อ่านตัวเลข ต.ค. ไม่ได้ ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ · ความขัดแย้งอิหร่านยังยกระดับ (ทุ่นระเบิดในฮอร์มุซ 8 พ.ย.) (12 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "launches": "จรวดขึ้นสู่วงโคจรทั่วโลกปี 2026 ถึง 31 ต.ค. 254 ครั้ง +0.4% เทียบปีก่อน เท่าเดิม (12 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 3/2026 ≈ $3.57 พันล้าน (ประกาศ 9 พ.ย.) เทียบ $1.1 พันล้าน ไตรมาส 3/2025 = +225% (จากเดิม +137% ของไตรมาส 2) โต 52% จากไตรมาสก่อน (12 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 5.00% (11 พ.ย. ตลาดพันธบัตรปิดวัน Veterans Day) เทียบ 3 เดือนก่อน 4.68% = +0.32 จุด (จากเดิม +0.30)",
+    "prices": "ราคาปิด 11 พ.ย. 2026 จาก Yahoo Finance: LMT $607.91 (+0.79% วันที่ 11/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -10.17%) · RKLB $66.28 (+5.69% วันที่ 11/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -55.88%) · ASTS $36.03 (+6.95% วันที่ 11/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -72.93%)"
+   },
+   "prices": {
+    "LMT": 607.91,
+    "RKLB": 66.28,
+    "ASTS": 36.03
+   },
+   "prices_as_of": "2026-11-11",
    "sources": [
     {
      "key": "gpr",
