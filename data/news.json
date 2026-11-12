@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T01:35:00+00:00",
+ "updated_at": "2026-11-12T14:05:00+00:00",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -701,33 +701,40 @@
    "run": "evening",
    "level": "medium",
    "category": "sector",
-   "title_th": "Nvidia ถูกฟ้องกรณีซีอีโอ หุ้นลง ~5–6% อีกวัน FBI ร่วมตรวจสอบ",
-   "summary_th": "9 พ.ย. บอร์ด Nvidia ตั้งการสอบสวนอิสระกรณีความสัมพันธ์ของเจนเซน หวง กับผู้หญิงที่ถูกเชื่อว่าทำงานให้หน่วยข่าวกรองจีน 10 พ.ย. มีคดีฟ้องว่าบริษัทและหวงให้ข้อมูลผู้ถือหุ้นไม่ครบ และทรัมป์ระบุว่า FBI กำลังตรวจสอบ หุ้น Nvidia ลงราว 5–6% ระหว่างวัน 10 พ.ย. รวมลง ~26% ใน 1 เดือน กองทุนชิป SMH −1.25%",
+   "title_th": "บอร์ด Nvidia ส่อปลดซีอีโอหวง หุ้นร่วง ~5.6% ก่อนเปิด ทรัมป์คุมชิปส่งจีน",
+   "summary_th": "9 พ.ย. บอร์ด Nvidia ตั้งการสอบสวนอิสระกรณีความสัมพันธ์ของเจนเซน หวง กับผู้หญิงที่ถูกเชื่อว่าทำงานให้หน่วยข่าวกรองจีน 10 พ.ย. มีคดีฟ้องว่าบริษัทและหวงให้ข้อมูลผู้ถือหุ้นไม่ครบ และทรัมป์ระบุว่า FBI กำลังตรวจสอบ หุ้น Nvidia ลงราว 5–6% ระหว่างวัน 10 พ.ย. รวมลง ~26% ใน 1 เดือน กองทุนชิป SMH −1.25% อัปเดต 12 พ.ย.: WSJ รายงานว่าบอร์ด Nvidia กำลังพิจารณาปลดเจนเซน หวง (มีข่าวความสัมพันธ์กับผู้บริหารหญิงอีกราย) Bloomberg ระบุ CFO Colette Kress เป็นตัวเต็งรักษาการ หุ้น Nvidia ลง ~5.6% ก่อนตลาดเปิด และ Axios รายงานว่าทรัมป์อนุมัติปราบปรามการลักลอบส่งชิป AI ไปจีน ฟิวเจอร์ส Nasdaq-100 −0.7 ถึง −1.0% S&P 500 −0.3 ถึง −0.4% แต่ Broadcom (AVGO) กลับบวก ~3.6% ก่อนเปิด",
    "impacts": [
     {
      "target": "ai",
      "label_th": "ชิป/AI",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "ข่าวกระทบความเชื่อมั่นผู้นำบริษัทชิปใหญ่สุด แต่ไม่เปลี่ยนความต้องการชิปและอุปกรณ์ศูนย์ข้อมูลของ KLAC, AVGO, ETN โดยตรง"
+     "direction": "mixed",
+     "strength": "medium",
+     "reason_th": "ความไม่แน่นอนเรื่องผู้นำและการคุมส่งออกชิปไปจีนกดดันหุ้นชิปทั้งกลุ่ม แต่ความต้องการศูนย์ข้อมูลยังแข็ง (งบ CoreWeave) จึงกระทบ KLAC/ETN ไม่มาก"
     },
     {
      "target": "AVGO",
      "label_th": "Broadcom",
-     "direction": "mixed",
+     "direction": "positive",
      "strength": "low",
-     "reason_th": "Alphabet เปิดชิป TPU ใหม่ 2 รุ่น ซึ่ง Broadcom ร่วมออกแบบ อาจได้ประโยชน์จากลูกค้าที่หันมาใช้ชิปเฉพาะ"
+     "reason_th": "นักลงทุนย้ายเงินไปหาผู้ผลิตชิปทางเลือก AVGO บวก ~3.6% ก่อนเปิด 12 พ.ย."
+    },
+    {
+     "target": "KLAC",
+     "label_th": "KLA",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "KLA มีรายได้จากจีนสูง ถ้าสหรัฐฯ คุมชิป/อุปกรณ์ไปจีนเข้มขึ้นอาจกระทบยอดขาย"
     },
     {
      "target": "main:nasdaq",
      "label_th": "NASDAQ",
      "direction": "negative",
-     "strength": "low",
-     "reason_th": "Nvidia มีน้ำหนักราว 7% ของ S&P 500 และมากกว่านั้นใน Nasdaq-100 หุ้นลงแรงจึงฉุดดัชนี แต่หุ้นเทคอื่นที่บวกช่วยชดเชย"
+     "strength": "medium",
+     "reason_th": "Nvidia มีน้ำหนักมากใน Nasdaq-100 หุ้นร่วงแรงฉุดดัชนี ฟิวเจอร์สลงราว 1% ก่อนเปิด"
     }
    ],
-   "what_to_do_th": "ไม่ต้องขาย เป็นข่าวเฉพาะบริษัทที่ไม่ได้อยู่ในพอร์ตโดยตรง แผนยังซื้อ NASDAQ และหมวด AI ตามปกติ ถ้าราคาย่อเงินสำรองจะซื้อเพิ่มเอง",
-   "watch_next_th": "ผลการสอบสวนและสถานะซีอีโอ · งบ Nvidia ปลาย พ.ย.",
+   "what_to_do_th": "ไม่ต้องขาย Nvidia ไม่ได้อยู่ในพอร์ตโดยตรง ถ้า NASDAQ หรือหมวด AI ย่อลง แผนจะใช้เงินสำรองซื้อเพิ่มเองตามกฎ",
+   "watch_next_th": "การตัดสินของบอร์ดเรื่องซีอีโอ · รายละเอียดมาตรการคุมชิปไปจีน · งบ Applied Materials คืน 12 พ.ย. และ Nvidia 19 พ.ย.",
    "sources": [
     {
      "label": "Yahoo Finance live (9 Nov 2026)",
@@ -740,6 +747,18 @@
     {
      "label": "TheStreet: Stock market today Nov 10 2026",
      "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+    },
+    {
+     "label": "Yahoo Finance live (12 Nov 2026)",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-thursday-november-12-sp-500-nasdaq-dow-nvidia-invest-110027430.html"
+    },
+    {
+     "label": "Newsquawk US Opening News (12 Nov 2026)",
+     "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---12th-november-2026"
+    },
+    {
+     "label": "Yahoo Finance UK: Nasdaq futures fall (12 Nov 2026)",
+     "url": "https://uk.finance.yahoo.com/news/nasdaq-futures-fall-nvidia-leadership-100447985.html"
     }
    ]
   },
@@ -874,33 +893,33 @@
    "run": "evening",
    "level": "medium",
    "category": "geopolitics",
-   "title_th": "สงครามอิหร่านส่อจบ แต่เรือยังถูกโจมตีในฮอร์มุซ น้ำมันเด้งจากต่ำสุด",
-   "summary_th": "10 พ.ย. 2026 หลังทรัมป์กล่าวว่าสงครามกับอิหร่าน 'ทางทหารจบลงแล้วโดยปริยาย' น้ำมันเบรนต์ลง 2.2% เหลือ $90.55 (ต่ำสุดรอบ 3 เดือน) WTI ลง 1.8% เหลือ $84.94 ตลาดเอเชียบวกแรง Nikkei +2.9% Kospi +4.4% ยุโรปบวก ~1% อัปเดต 11 พ.ย.: น้ำมันเด้งกลับ เบรนต์ +1.1% เป็น $92.53 WTI +0.8% เป็น $86.71 เพราะยังมีเรือน้ำมันถูกโจมตี/ชนทุ่นระเบิดในช่องแคบฮอร์มุซ (ต.ค. ถูกโจมตี 37 ลำ สูงสุดตั้งแต่เริ่มสงคราม และอีก ~10 ลำใน พ.ย.) และเจ้าหน้าที่อิหร่านระบุว่ายังไม่มีการเจรจากับสหรัฐฯ",
+   "title_th": "ทรัมป์ว่าไม่ต้องมีดีลกับอิหร่าน เรือน้ำมันถูกโจมตี เบรนต์เด้งเหนือ $94",
+   "summary_th": "10 พ.ย. 2026 หลังทรัมป์กล่าวว่าสงครามกับอิหร่าน 'ทางทหารจบลงแล้วโดยปริยาย' น้ำมันเบรนต์ลง 2.2% เหลือ $90.55 (ต่ำสุดรอบ 3 เดือน) WTI ลง 1.8% เหลือ $84.94 ตลาดเอเชียบวกแรง Nikkei +2.9% Kospi +4.4% ยุโรปบวก ~1% อัปเดต 11 พ.ย.: น้ำมันเด้งกลับ เบรนต์ +1.1% เป็น $92.53 WTI +0.8% เป็น $86.71 เพราะยังมีเรือน้ำมันถูกโจมตี/ชนทุ่นระเบิดในช่องแคบฮอร์มุซ (ต.ค. ถูกโจมตี 37 ลำ สูงสุดตั้งแต่เริ่มสงคราม และอีก ~10 ลำใน พ.ย.) และเจ้าหน้าที่อิหร่านระบุว่ายังไม่มีการเจรจากับสหรัฐฯ อัปเดต 12 พ.ย.: IRGC ระบุเกิดระเบิดที่ซูเปอร์แทงเกอร์ 2 ลำในฮอร์มุซ (รวมน้ำมันกว่า 4 ล้านบาร์เรล) และทรัมป์โพสต์ว่า 'หมดเวลาทำข้อตกลงแล้ว' สหรัฐฯ ไม่จำเป็นต้องมีดีล ทำให้แผนของกาตาร์ที่จะเปิดช่องแคบอีกครั้งไม่แน่นอน เบรนต์ขึ้น ~1.4% เหนือ $94 หลังร่วงก่อนหน้าเพราะซาอุฯ เพิ่มการผลิตเป็น 10.56 ล้านบาร์เรล/วัน (สัปดาห์ก่อนเบรนต์ลง 16%)",
    "impacts": [
     {
      "target": "travel",
      "label_th": "ท่องเที่ยว",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "น้ำมันถูกลงลดต้นทุนการเดินทาง และความเสี่ยงสงครามที่ลดลงช่วยความต้องการท่องเที่ยว (BKNG, MAR, ABNB)"
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "น้ำมันเด้งกลับและความหวังสันติภาพลดลง เพิ่มต้นทุนการเดินทางของ BKNG, MAR, ABNB"
     },
     {
      "target": "space",
      "label_th": "อวกาศ/กลาโหม",
-     "direction": "negative",
+     "direction": "positive",
      "strength": "low",
-     "reason_th": "ความตึงเครียดลดลงอาจลดแรงซื้อหุ้นกลาโหมอย่าง LMT ระยะสั้น แต่งบกลาโหมระยะยาวไม่เปลี่ยน"
+     "reason_th": "ความตึงเครียดที่ยืดเยื้อหนุนหุ้นกลาโหมอย่าง LMT"
     },
     {
      "target": "main:sp500",
      "label_th": "S&P 500 (เงินเฟ้อ)",
-     "direction": "mixed",
+     "direction": "negative",
      "strength": "low",
-     "reason_th": "น้ำมันที่ยังทรงตัว ~$90 ทำให้เงินเฟ้อลดช้า หนุนเหตุผลให้ Fed ขึ้นดอกเบี้ย ธ.ค."
+     "reason_th": "น้ำมันสูงทำให้เงินเฟ้อลดช้า หนุนเหตุผลให้ Fed ขึ้นดอกเบี้ย ธ.ค."
     }
    ],
-   "what_to_do_th": "ไม่เปลี่ยนแผน สถานการณ์ยังกลับมาตึงได้ (ทุ่นระเบิดในฮอร์มุซ การปิดล้อม) ซื้อตามแผนต่อไป",
-   "watch_next_th": "การเดินเรือ/เก็บกู้ทุ่นระเบิดในฮอร์มุซ · ท่าทีอิหร่านต่อการเจรจา · สต็อกน้ำมันสหรัฐฯ (API +9 ล้านบาร์เรล)",
+   "what_to_do_th": "ไม่เปลี่ยนแผน ข่าวสงครามสลับขึ้นลงทุกวัน ซื้อตามแผนต่อไป ถ้าตลาดย่อเงินสำรองจะซื้อเพิ่มเอง",
+   "watch_next_th": "การพบกันระหว่างรองปธน. Vance กับเจ้าหน้าที่อิหร่าน · ข้อเสนอกาตาร์ · การโจมตีเรือในฮอร์มุซ",
    "sources": [
     {
      "label": "AP via WPTF: Before the bell, 10 Nov 2026",
@@ -913,6 +932,14 @@
     {
      "label": "Reuters via Yahoo Finance: Oil rebounds as Hormuz attacks blunt truce hopes (11 Nov 2026)",
      "url": "https://finance.yahoo.com/energy/articles/oil-rebounds-hormuz-shipping-attacks-045504059.html"
+    },
+    {
+     "label": "Le Private Banker: Oil jumps above $94 (12 Nov 2026)",
+     "url": "https://leprivatebanker.com/2026/11/12/oil-jumps-above-94-after-trump-says-us-doesnt-need-an-iran-deal-clouding-a-qatari-plan-to-reopen-hormuz/"
+    },
+    {
+     "label": "Newsquawk US Opening News (12 Nov 2026)",
+     "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---12th-november-2026"
     }
    ]
   },
@@ -1071,6 +1098,44 @@
     {
      "label": "Yahoo Finance ราคาปิด 11 พ.ย. (data/market.json)",
      "url": "https://finance.yahoo.com/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-12-dollar-high-gold-below-4000",
+   "date": "2026-11-12",
+   "time_utc": "2026-11-12T13:00:00+00:00",
+   "run": "evening",
+   "level": "low",
+   "category": "rates",
+   "title_th": "ดอลลาร์แข็งสุดตั้งแต่ เม.ย. 2025 ทองหลุด $4,000 รอ Fed ขึ้นดอกเบี้ย",
+   "summary_th": "12 พ.ย. ดัชนีดอลลาร์ (DXY) แตะเหนือ 103 สูงสุดตั้งแต่ เม.ย. 2025 จากการคาดว่า Fed จะขึ้นดอกเบี้ย ธ.ค. หลัง CPI ร้อนแรง (ตลาดเริ่มให้โอกาสขึ้น 0.50% ด้วย) ทองคำลง ~1–1.5% ไปราว $3,940–3,955 หลังยืน $4,000 ไม่อยู่ คืนนี้มีกรรมการ Fed พูดหลายคน (Hammack, Goolsbee, Daly, Williams, Barr) และ PPI ออกวันศุกร์",
+   "impacts": [
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ดอลลาร์แข็งและดอกเบี้ยขาขึ้นลดความน่าสนใจของทองที่ไม่มีดอกผล GLD อยู่ต่ำกว่าจุดสูงสุด ~26%"
+    },
+    {
+     "target": "finance",
+     "label_th": "การเงิน/ธนาคาร",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยสูงขึ้นช่วยส่วนต่างดอกเบี้ยของธนาคารอย่าง JPM, GS"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน ทองที่ลงลึกจากจุดสูงสุดทำให้ตัวคูณเงินสำรองของทองสูงขึ้น แผนจะซื้อเพิ่มเองตามกฎ",
+   "watch_next_th": "คำพูดกรรมการ Fed คืนนี้ · PPI สหรัฐฯ 13 พ.ย. · การประชุม Fed ธ.ค.",
+   "sources": [
+    {
+     "label": "Newsquawk US Opening News (12 Nov 2026)",
+     "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---12th-november-2026"
+    },
+    {
+     "label": "Yahoo Finance UK (12 Nov 2026)",
+     "url": "https://uk.finance.yahoo.com/news/nasdaq-futures-fall-nvidia-leadership-100447985.html"
     }
    ]
   }
