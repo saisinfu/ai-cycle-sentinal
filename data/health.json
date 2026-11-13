@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T01:30:00+00:00",
+ "updated_at": "2026-11-13T01:05:33+00:00",
  "readings": [
   {
    "date": "2026-11-07",
@@ -272,6 +272,52 @@
     "UNH": 402.11
    },
    "prices_as_of": "2026-11-11",
+   "sources": [
+    {
+     "key": "hc_jobs",
+     "label": "FRED CES6562000001",
+     "url": "https://fred.stlouisfed.org/data/CES6562000001"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-13",
+   "indicators": {
+    "lly_revenue_growth_yoy_pct": 39.0,
+    "unh_medical_care_ratio_pct": 88.4,
+    "isrg_procedure_growth_yoy_pct": 14.0,
+    "hc_policy_risk": 6.0,
+    "healthcare_jobs_growth_yoy_pct": 2.21
+   },
+   "confidence": {
+    "glp1_demand": "high",
+    "insurer_cost": "medium",
+    "surgery_volume": "high",
+    "policy_risk": "low",
+    "hc_jobs": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "glp1_demand": "Eli Lilly รายได้ไตรมาส 3/2026 +39% เทียบปีก่อน (ประกาศ 29 ต.ค.) เท่าเดิม จนกว่างบไตรมาสถัดไป (13 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "insurer_cost": "UnitedHealth สัดส่วนค่ารักษาไตรมาส 3/2026 = 88.4% (ประกาศ 13 ต.ค.) เท่าเดิม (13 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "surgery_volume": "Intuitive Surgical ผ่าตัด da Vinci ไตรมาส 3/2026 โตราว 14% (ประกาศ 20 ต.ค.) เท่าเดิม (13 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "policy_risk": "คงไว้ 6/10 (ความเชื่อมั่นต่ำ) ไม่มีข่าวนโยบายยาหรือประกันใหม่ (13 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "hc_jobs": "การจ้างงานสาธารณสุข ต.ค. 2026 = 24.00 ล้านตำแหน่ง +2.21% เทียบปีก่อน (ค่าใหม่จาก FRED) จากเดิม +2.22% (ก.ย.) (13 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "prices": "ราคาปิด 12 พ.ย. 2026 จาก Yahoo Finance: LLY $1435.63 (-0.12% วันที่ 12/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -0.12%) · ISRG $441.19 (-1.86% วันที่ 12/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -25.58%) · UNH $405.78 (+0.70% วันที่ 12/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -7.01%)"
+   },
+   "prices": {
+    "LLY": 1435.63,
+    "ISRG": 441.19,
+    "UNH": 405.78
+   },
+   "prices_as_of": "2026-11-12",
    "sources": [
     {
      "key": "hc_jobs",

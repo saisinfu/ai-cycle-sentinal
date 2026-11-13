@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-12T01:30:00+00:00",
+ "updated_at": "2026-11-13T01:05:33+00:00",
  "readings": [
   {
    "date": "2026-11-07",
@@ -322,6 +322,67 @@
     "ABNB": 181.9
    },
    "prices_as_of": "2026-11-11",
+   "sources": [
+    {
+     "key": "hotel",
+     "label": "Hotel-Online / CoStar week ending 31 Oct 2026",
+     "url": "https://www.hotel-online.com/news/us-hotel-performance-strengthens-in-late-october-as-revpar-jumps-nearly-10"
+    },
+    {
+     "key": "income",
+     "label": "FRED DSPIC96",
+     "url": "https://fred.stlouisfed.org/data/DSPIC96"
+    },
+    {
+     "key": "oil",
+     "label": "Yahoo Finance CL=F (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/CL=F/"
+    },
+    {
+     "key": "oil",
+     "label": "TheStreet: Stock market today Nov 10 2026",
+     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-13",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.7,
+    "us_hotel_revpar_yoy_pct": 9.7,
+    "wti_usd": 88.92,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "low",
+    "oil": "high",
+    "income": "high",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "ยังเปิดหน้า TSA ไม่ได้ ใช้ค่าเดิม −0.7% (สะสมถึง 23 ก.ย. ไม่ใช่ค่า 7 วันล่าสุด) ความเชื่อมั่นต่ำ (13 พ.ย.: เปิดหน้าแหล่งข้อมูลไม่ได้ในรอบนี้ จึงใช้ค่าเดิม ความเชื่อมั่นต่ำ)",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 25–31 ต.ค. 2026 = $101.88 +9.7% เทียบปีก่อน เท่าเดิม · ข้อมูลสัปดาห์ถัดไปออกราว 11–13 พ.ย. (13 พ.ย.: เปิดหน้าแหล่งข้อมูลไม่ได้ในรอบนี้ จึงใช้ค่าเดิม ความเชื่อมั่นต่ำ)",
+    "oil": "น้ำมัน WTI $88.92/บาร์เรล (ปิด 12 พ.ย. Yahoo Finance) เทียบ $86.30 เดิม (+3.0%)",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม (13 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% (ประกาศ 3 พ.ย.) เท่าเดิม (13 พ.ย.: ยังไม่มีกำหนดออกข้อมูลใหม่ ใช้ค่าเดิม)",
+    "prices": "ราคาปิด 12 พ.ย. 2026 จาก Yahoo Finance: BKNG $160.88 (+0.42% วันที่ 12/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -26.77%) · MAR $424.82 (-1.02% วันที่ 12/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -1.02%) · ABNB $180.85 (-0.16% วันที่ 12/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -5.07%)"
+   },
+   "prices": {
+    "BKNG": 160.88,
+    "MAR": 424.82,
+    "ABNB": 180.85
+   },
+   "prices_as_of": "2026-11-12",
    "sources": [
     {
      "key": "hotel",
