@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T01:05:58+00:00",
+ "updated_at": "2026-11-13T14:39:27+00:00",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -1139,6 +1139,89 @@
     {
      "label": "Yahoo Finance ^TNX",
      "url": "https://finance.yahoo.com/quote/^TNX"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-13-ppi-oct-light",
+   "date": "2026-11-13",
+   "time_utc": "2026-11-13T14:39:27+00:00",
+   "run": "evening",
+   "level": "medium",
+   "category": "inflation",
+   "title_th": "PPI ต.ค. ต่ำกว่าคาดเล็กน้อย ฟิวเจอร์สหุ้นสหรัฐฯ บวก NVDA ฟื้น +2%",
+   "summary_th": "13 พ.ย. 2026 ดัชนีราคาผู้ผลิต (PPI) ต.ค. ขึ้น 0.3% (คาด 0.4%) เทียบปีก่อน 6.5% (คาด 6.6%) ส่วนพื้นฐานไม่รวมอาหาร/พลังงานขึ้น 0.3% ตามคาด แต่หมวดที่ตัดบริการการค้าออกขึ้น 0.5% (คาด 0.3%) หลังตัวเลข ฟิวเจอร์ส S&P 500 +0.4% Nasdaq-100 +0.2% และ Nvidia ก่อนตลาดเปิด +2.2% หลังร่วง 4.3% เมื่อวาน ตลาดยังให้โอกาส Fed ขึ้นดอกเบี้ย 9 ธ.ค. ~100% (0.25% ราว 87%, 0.50% ราว 13%) บอนด์ 10 ปี ~5.13%",
+   "impacts": [
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "เงินเฟ้อฝั่งผู้ผลิตไม่ร้อนกว่าคาด ลดความกังวลว่า Fed จะขึ้นดอกเบี้ยแรงกว่า 0.25% ช่วยให้หุ้นฟื้นเล็กน้อย"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "Nvidia ฟื้นหลังข่าวซีอีโอลาออก แต่ดอกเบี้ยระยะยาวเหนือ 5% ยังกดมูลค่าหุ้นเติบโต"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ทองทรงตัวราว $3,885 ดอลลาร์แข็ง (103.2) และโอกาสขึ้นดอกเบี้ยยังกดดัน แต่เงินเฟ้อไม่เร่งตัวเพิ่ม"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน ซื้อตามน้ำหนักปกติ ตัวเลขนี้ไม่ได้เปลี่ยนภาพว่า Fed น่าจะขึ้นดอกเบี้ย ธ.ค. ถ้าตลาดย่อลงก่อนประชุม แผนจะใช้เงินสำรองซื้อเพิ่มเองตามกฎ",
+   "watch_next_th": "งบ Nvidia 17 พ.ย. (หลังตลาดปิด) · ประชุม Fed 9 ธ.ค.",
+   "sources": [
+    {
+     "label": "TipRanks: U.S. Stocks Rise on Lighter-Than-Expected October PPI (13 Nov 2026)",
+     "url": "https://www.tipranks.com/news/u-s-stocks-rise-on-lighter-than-expected-october-ppi"
+    },
+    {
+     "label": "Quackonomist Pre-Market 13 Nov 2026",
+     "url": "https://quackonomist.substack.com/p/quackonomist-pre-market-13-nov-2026"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-13-amat-cisco-ai-capex",
+   "date": "2026-11-13",
+   "time_utc": "2026-11-13T14:39:27+00:00",
+   "run": "evening",
+   "level": "medium",
+   "category": "earnings",
+   "title_th": "Applied Materials งบดี คาดการณ์เกินคาด หนุนหุ้นเครื่องจักรผลิตชิป (KLAC)",
+   "summary_th": "12 พ.ย. (หลังตลาดปิด) Applied Materials รายงานรายได้ไตรมาส $10.41 พันล้าน (+53%) กำไรต่อหุ้น $4.16 (คาด $4.06) และคาดรายได้ไตรมาสหน้า $11.1 พันล้าน สูงกว่าตลาดคาด (~$10.8–10.9 พันล้าน) จากความต้องการชิป AI หุ้น AMAT +3% หลังปิดตลาด KLAC ก่อนตลาดเปิด +1% ส่วน Cisco รายได้ +24% และเพิ่มเป้ารายได้ AI จากคลาวด์เป็น $9 พันล้าน แต่อัตรากำไรขั้นต้นลด หุ้น −2.7% ก่อนตลาดเปิด ขณะที่ AVGO −1.5% หลังพุ่ง 5.5% เมื่อวาน",
+   "impacts": [
+    {
+     "target": "KLAC",
+     "label_th": "KLA",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "AMAT เป็นคู่แข่งโดยตรงในธุรกิจเครื่องจักรผลิตชิป ยอดขายและคาดการณ์ที่แข็งแรงสะท้อนว่าโรงงานชิปยังลงทุนเพิ่มต่อ ซึ่งเป็นผลดีกับ KLAC ที่ยังต่ำกว่าจุดสูงสุด ~48%"
+    },
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "งบ AMAT และ Cisco ยืนยันว่าการลงทุนโครงสร้างพื้นฐาน AI ยังเติบโต แม้ Cisco จะเจอแรงกดดันด้านต้นทุนและอัตรากำไร"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน ซื้อหุ้นกลุ่ม AI ตามน้ำหนักโซนปกติ ไม่ต้องซื้อไล่ราคา KLAC ที่ย่อลึกยังได้เงินสำรองซื้อเพิ่มตามกฎ",
+   "watch_next_th": "งบ Nvidia 17 พ.ย. · งบ Broadcom ต้น ธ.ค.",
+   "sources": [
+    {
+     "label": "456X Morning Brief 13 Nov 2026 (Applied Materials)",
+     "url": "https://404kresearch.substack.com/p/456x-morning-brief-november-13-2026"
+    },
+    {
+     "label": "Quackonomist Pre-Market 13 Nov 2026",
+     "url": "https://quackonomist.substack.com/p/quackonomist-pre-market-13-nov-2026"
     }
    ]
   }
