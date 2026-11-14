@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T20:00:30+00:00",
+ "updated_at": "2026-11-14T02:30:27+00:00",
  "rules": {
   "day_drop_pct": -7.0,
   "drawdown_pct": -20.0,
@@ -25,7 +25,9 @@
   "ABNB": true,
   "RKLB": false,
   "ASTS": false,
-  "LMT": true
+  "LMT": true,
+  "PEP": true,
+  "MCD": false
  },
  "events": [
   {
@@ -137,6 +139,17 @@
    "drawdown_pct": -75.22,
    "title_th": "ASTS ร่วง 10.6% ในวันเดียว",
    "detail_th": "ปิดที่ 32.98 (ก่อนหน้า 36.89) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 75.2%"
+  },
+  {
+   "date": "2026-11-13",
+   "ticker": "MCD",
+   "name": "McDonald's",
+   "kind": "drawdown",
+   "value": -20.26,
+   "price": 271.97,
+   "drawdown_pct": -20.26,
+   "title_th": "MCD ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 271.97 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (341.06) อยู่ 20.3%"
   }
  ]
 }
