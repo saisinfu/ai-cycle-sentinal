@@ -1,1330 +1,1330 @@
 {
- "updated_at": "2026-11-14T01:07:04+00:00",
- "items": [
-  {
-   "id": "2026-10-28-bot-holds-1pct",
-   "date": "2026-10-28",
-   "time_utc": "2026-10-28T07:00:00Z",
-   "run": "morning",
-   "level": "low",
-   "category": "thailand",
-   "title_th": "ธปท. คงดอกเบี้ยนโยบาย 1.00% เป็นเอกฉันท์",
-   "summary_th": "กนง. ครั้งที่ 5/2026 (28 ต.ค.) คงดอกเบี้ย 1.00% คาดเศรษฐกิจไทยปี 2026 โต 2.4% ปี 2027 โต 2.1% เงินเฟ้อ 2.1% และ 1.3% เฝ้าระวังเงินเฟ้อจากน้ำมันและสงครามตะวันออกกลาง เงินบาทอ่อนจากความคาดหวังดอกเบี้ยสหรัฐฯ ขาขึ้น",
-   "impacts": [
+  "updated_at": "2026-11-14T13:53:52+00:00",
+  "items": [
     {
-     "target": "main:kkp",
-     "label_th": "KKP",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "ดอกเบี้ยต่ำคงที่ช่วยคุณภาพหนี้ แต่ส่วนต่างดอกเบี้ยของธนาคารยังแคบ"
+      "id": "2026-10-28-bot-holds-1pct",
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28T07:00:00Z",
+      "run": "morning",
+      "level": "low",
+      "category": "thailand",
+      "title_th": "ธปท. คงดอกเบี้ยนโยบาย 1.00% เป็นเอกฉันท์",
+      "summary_th": "กนง. ครั้งที่ 5/2026 (28 ต.ค.) คงดอกเบี้ย 1.00% คาดเศรษฐกิจไทยปี 2026 โต 2.4% ปี 2027 โต 2.1% เงินเฟ้อ 2.1% และ 1.3% เฝ้าระวังเงินเฟ้อจากน้ำมันและสงครามตะวันออกกลาง เงินบาทอ่อนจากความคาดหวังดอกเบี้ยสหรัฐฯ ขาขึ้น",
+      "impacts": [
+        {
+          "target": "main:kkp",
+          "label_th": "KKP",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "ดอกเบี้ยต่ำคงที่ช่วยคุณภาพหนี้ แต่ส่วนต่างดอกเบี้ยของธนาคารยังแคบ"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องเปลี่ยนแผน",
+      "watch_next_th": "ประชุม กนง. ครั้งถัดไป ธ.ค. 2026",
+      "sources": [
+        {
+          "label": "Bank of Thailand · MPC 5/2026",
+          "url": "https://www.bot.or.th/en/news-and-media/news/mpc/news-20261028-5FWvBPSf.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-28-fomc-hold-hike-priced",
+      "date": "2026-10-28",
+      "time_utc": "2026-10-28T18:00:00Z",
+      "run": "morning",
+      "level": "high",
+      "category": "fed",
+      "title_th": "Fed คงดอกเบี้ย 3.75–4.00% (10–2) ตลาดคาดขึ้นดอกเบี้ย ธ.ค.",
+      "summary_th": "28 ต.ค. 2026 Fed คงดอกเบี้ย 3.75–4.00% ด้วยเสียง 10–2 โดย Hammack และ Cook ต้องการขึ้น 0.25% แถลงการณ์ปรับมุมมองเศรษฐกิจเป็น 'แข็งแกร่ง' และระบุว่าเงินเฟ้อยังสูง CME FedWatch ให้โอกาสขึ้นดอกเบี้ยเดือน ธ.ค. ราว 78% และ Fed จะลดจำนวนการประชุมตั้งแต่ปี 2027",
+      "impacts": [
+        {
+          "target": "finance",
+          "label_th": "การเงิน / ธนาคาร",
+          "direction": "mixed",
+          "strength": "medium",
+          "reason_th": "ดอกเบี้ยสูงช่วยรายได้ดอกเบี้ยธนาคาร แต่เพิ่มความเสี่ยงหนี้เสียและกดคะแนนนโยบาย Fed"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "กองทุน NASDAQ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "หุ้นเทคโนโลยีมูลค่าสูงอ่อนไหวต่อดอกเบี้ยขาขึ้น"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ดอกเบี้ยแท้จริงสูงขึ้นเพิ่มต้นทุนการถือทอง"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "หุ้นเติบโตที่ยังไม่มีกำไรถูกกดดันจากดอกเบี้ยสูง"
+        }
+      ],
+      "what_to_do_th": "ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค. ไม่ต้องเปลี่ยนแผน DCA",
+      "watch_next_th": "CPI ต.ค. (กลาง พ.ย.) · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "StockAnalysis · Fed holds Oct 2026",
+          "url": "https://stockanalysis.com/news/fed-holds-rates-steady-oct-2026/"
+        },
+        {
+          "label": "Nation Thailand · Fed holds",
+          "url": "https://www.nationthailand.com/news/world/40072859"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-30-bigtech-capex-earnings",
+      "date": "2026-10-30",
+      "time_utc": "2026-10-30T20:00:00Z",
+      "run": "morning",
+      "level": "high",
+      "category": "earnings",
+      "title_th": "งบบริษัทเทคใหญ่: ลงทุน AI สูง กระแสเงินสดติดลบ หุ้นเทคร่วง",
+      "summary_th": "ปลาย ต.ค. 2026 Alphabet ร่วงกว่า 12% (29 ต.ค.) และ 30 ต.ค. Intel −28.6% จากคาดการณ์กำไรอ่อน Amazon มีกระแสเงินสดอิสระ 12 เดือน −$42.4 พันล้าน จากงบลงทุน $94.8 พันล้าน S&P 500 −1.8% Nasdaq −2.9% แย่สุดตั้งแต่ มิ.ย. ตลาดเข้าสู่โหมด 'ต้องเห็นผลตอบแทนก่อน' ของการลงทุน AI",
+      "impacts": [
+        {
+          "target": "ai",
+          "label_th": "ชิป / AI",
+          "direction": "mixed",
+          "strength": "high",
+          "reason_th": "งบลงทุนที่สูงยังหนุนความต้องการชิปและระบบไฟฟ้า แต่ความกังวลเรื่องผลตอบแทนทำให้หุ้น AI ถูกเทขาย"
+        },
+        {
+          "target": "AVGO",
+          "label_th": "Broadcom",
+          "direction": "mixed",
+          "strength": "medium",
+          "reason_th": "ลูกค้าคลาวด์ยังลงทุนชิปสั่งทำ แต่ราคาหุ้นถูกกดจากความกังวลรอบการลงทุน"
+        },
+        {
+          "target": "KLAC",
+          "label_th": "KLA",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "หุ้นอุปกรณ์ผลิตชิปผันผวนแรงตามมุมมองรอบการลงทุน"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "กองทุน NASDAQ",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "บริษัทเทคใหญ่มีน้ำหนักสูงในดัชนี"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ ค่าลงทุน/รายได้คลาวด์ในแอปคงที่ 1.58 เท่า",
+      "watch_next_th": "งบ Nvidia ปลาย พ.ย.",
+      "sources": [
+        {
+          "label": "AP via AJC · Oct 30",
+          "url": "https://www.ajc.com/news/2026/10/wall-street-tumbles-to-its-worst-day-since-june-after-the-sell-off-for-tech-stocks-deepens/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-bkng-q3-ftc",
+      "date": "2026-11-03",
+      "time_utc": "2026-11-03T21:00:00Z",
+      "run": "morning",
+      "level": "medium",
+      "category": "earnings",
+      "title_th": "Booking งบ Q3: คืนห้องพัก +6.7% แต่โดน FTC และคาด Q4 อ่อน",
+      "summary_th": "Booking Holdings รายงานไตรมาส 3/2026 (3 พ.ย.) จำนวนคืนห้องพัก +6.7% แต่ตัดรายได้ $900 ล้านและตั้งสำรองขาดทุน $100 ล้านจากกรณี FTC และคาดไตรมาส 4 คืนห้องพักโตเพียง 1–3% จากผลกระทบการเดินทางในตะวันออกกลาง หุ้น BKNG ลง 4.8% วันที่ 6 พ.ย.",
+      "impacts": [
+        {
+          "target": "BKNG",
+          "label_th": "Booking",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "การเติบโตชะลอและค่าใช้จ่ายทางกฎหมายกดกำไร"
+        },
+        {
+          "target": "travel",
+          "label_th": "ท่องเที่ยว",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "ความต้องการเดินทางยังโต แต่ช้าลงในไตรมาส 4"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย DCA ต่อตามน้ำหนักของหมวดท่องเที่ยว",
+      "watch_next_th": "",
+      "sources": [
+        {
+          "label": "Finsee · Booking Q3 2026",
+          "url": "https://finsee.ai/earnings/bkng/2026/q3/en/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-midterm-democratic-sweep",
+      "date": "2026-11-04",
+      "time_utc": "2026-11-04T21:00:00Z",
+      "run": "morning",
+      "level": "medium",
+      "category": "election",
+      "title_th": "เดโมแครตชนะเลือกตั้งกลางเทอม คุมทั้งสภาล่างและวุฒิสภา",
+      "summary_th": "ผลเลือกตั้ง 3 พ.ย. 2026 พรรคเดโมแครตชนะคุมทั้งสองสภา วันที่ 4 พ.ย. ดาวโจนส์ +3.03% S&P 500 +1.58% และน้ำมันดิบสหรัฐฯ ร่วงกว่า 8% เหลือ $88.12 เพราะตลาดคาดว่าแรงกดดันเรื่องสงครามอิหร่านและเงินเฟ้อจะเปลี่ยนนโยบาย แต่วันต่อมาตลาดกลับกังวลเรื่องการคุมเข้ม AI แทน",
+      "impacts": [
+        {
+          "target": "travel",
+          "label_th": "ท่องเที่ยว",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "น้ำมันที่ถูกลงช่วยลดต้นทุนสายการบินและค่าเดินทาง"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ / กลาโหม",
+          "direction": "mixed",
+          "strength": "medium",
+          "reason_th": "สภาเดโมแครตอาจทำให้การเพิ่มงบกลาโหมก้อนใหญ่ผ่านยากขึ้น แต่ความต้องการด้านความมั่นคงยังสูง"
+        },
+        {
+          "target": "health",
+          "label_th": "สุขภาพ",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "อาจมีแรงกดดันเรื่องราคายาและประกันมากขึ้นในปีหน้า"
+        },
+        {
+          "target": "ai",
+          "label_th": "ชิป / AI",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ตลาดกังวลการตรวจสอบ AI และการชะลอสร้างศูนย์ข้อมูลเพราะค่าไฟ"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องเปลี่ยนแผน ผลการเลือกตั้งมีผลระยะยาวผ่านนโยบาย DCA ต่อตามน้ำหนักเดิม",
+      "watch_next_th": "เส้นตายงบประมาณสหรัฐฯ 11 ธ.ค. และสภาชุดใหม่เริ่ม ม.ค. 2027",
+      "sources": [
+        {
+          "label": "StockTitan · Nov 4",
+          "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-4-2026"
+        },
+        {
+          "label": "Reuters via Devdiscourse",
+          "url": "https://www.devdiscourse.com/article/international/4001634-democratic-sweep-adds-new-twist-to-markets-iran-ai-and-debt-worries"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-05-ai-selloff-crash",
+      "date": "2026-11-05",
+      "time_utc": "2026-11-05T21:00:00Z",
+      "run": "morning",
+      "level": "high",
+      "category": "market",
+      "title_th": "หุ้น AI ร่วงหนัก S&P 500 −4.4% Nasdaq เข้าสู่ช่วงปรับฐาน",
+      "summary_th": "5 พ.ย. 2026 S&P 500 −4.4% (แย่สุดตั้งแต่ เม.ย. 2025) Nasdaq −5.5% ต่ำกว่าจุดสูงสุด 6 ต.ค. เกิน 10% ดัชนีชิป SOX −12% Nvidia −9.3% จากความกังวลว่าสภาเดโมแครตจะทำให้การสร้างศูนย์ข้อมูล AI ช้าลงและแพงขึ้น วันที่ 6 พ.ย. ฟื้นบางส่วน: KLAC +6.7% ETN +4.5% SMH +3.6% QQQ +1.4%",
+      "impacts": [
+        {
+          "target": "ai",
+          "label_th": "ชิป / AI",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "หุ้นชิปและโครงสร้างพื้นฐาน AI ถูกเทขายเพราะกลัวการลงทุน AI ชะลอ"
+        },
+        {
+          "target": "KLAC",
+          "label_th": "KLA",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 54% แม้ฟื้น 6.7% วันที่ 6 พ.ย."
+        },
+        {
+          "target": "AVGO",
+          "label_th": "Broadcom",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "ต่ำกว่าจุดสูงสุด 39%"
+        },
+        {
+          "target": "ETN",
+          "label_th": "Eaton",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ต่ำกว่าจุดสูงสุด 26% จากความกังวลการชะลอศูนย์ข้อมูล"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "กองทุน NASDAQ",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "QQQ ต่ำกว่าจุดสูงสุด 13.6% เพราะน้ำหนักหุ้นเทคโนโลยีสูง"
+        },
+        {
+          "target": "main:sp500",
+          "label_th": "กองทุน S&P 500",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "SPY ต่ำกว่าจุดสูงสุด 5.6%"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ (หุ้นชิปลง 25–54% จากจุดสูงสุด) ทำตามแผนต่อไป",
+      "watch_next_th": "VIX ยังสูง 25.6 · งบ Nvidia ปลาย พ.ย. · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "AP via NBC Bay Area",
+          "url": "https://www.nbcbayarea.com/news/national-international/november-5-stock-market/4170982/"
+        },
+        {
+          "label": "Fox Business · Nov 5",
+          "url": "https://www.foxbusiness.com/markets/stocks-nov-5-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-06-jobs-fed-hike-odds",
+      "date": "2026-11-06",
+      "time_utc": "2026-11-06T13:30:00Z",
+      "run": "morning",
+      "level": "high",
+      "category": "fed",
+      "title_th": "จ้างงาน ต.ค. แรงเกินคาด โอกาส Fed ขึ้นดอกเบี้ย ธ.ค. 77%",
+      "summary_th": "6 พ.ย. 2026 สหรัฐฯ เพิ่มการจ้างงาน 165,000 ตำแหน่ง (คาด 59,000) ว่างงาน 4.1% (คาด 4.2%) CME FedWatch ให้โอกาสขึ้นดอกเบี้ย 0.25% ในประชุม 9 ธ.ค. ที่ 76.8% พันธบัตร 10 ปีขึ้นเป็น ~4.87% และ 2 ปี 4.52% ความเชื่อมั่นผู้บริโภคเบื้องต้น พ.ย. ขึ้นเป็น 51",
+      "impacts": [
+        {
+          "target": "finance",
+          "label_th": "การเงิน / ธนาคาร",
+          "direction": "mixed",
+          "strength": "medium",
+          "reason_th": "ดอกเบี้ยสูงช่วยส่วนต่างดอกเบี้ยธนาคาร แต่เพิ่มความเสี่ยงหนี้เสียและทำให้คะแนนนโยบาย Fed ลดลง"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ดอกเบี้ยที่สูงขึ้นเพิ่มต้นทุนการถือทอง ทองลง ~1% เหลือ ~$4,048"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "กองทุน NASDAQ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "หุ้นเติบโตอ่อนไหวต่อดอกเบี้ยสูง"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "หุ้นเติบโตอย่าง RKLB/ASTS กดดันจากดอกเบี้ยสูง"
+        },
+        {
+          "target": "main:kkp",
+          "label_th": "KKP",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "ดอกเบี้ยสหรัฐฯ สูงทำให้เงินบาทอ่อนและเงินทุนไหลออก แต่ธนาคารไทยได้ประโยชน์จากส่วนต่างดอกเบี้ย"
+        }
+      ],
+      "what_to_do_th": "ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค. ไม่ต้องเปลี่ยนแผน DCA",
+      "watch_next_th": "CPI ต.ค. (กลาง พ.ย.) · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "InvestmentNews · October jobs",
+          "url": "https://www.investmentnews.com/fixed-income/october-jobs-report-beats-forecasts-lifting-december-fed-hike-odds/268915"
+        },
+        {
+          "label": "Kitco · Nov 6",
+          "url": "https://www.kitco.com/news/article/2026-11-06/gold-price-trades-near-4050oz-after-preliminary-consumer-sentiment-rises-51"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-06-drawdown-events",
+      "date": "2026-11-06",
+      "time_utc": "2026-11-06T21:00:00Z",
+      "run": "morning",
+      "level": "medium",
+      "category": "market",
+      "title_th": "9 รายการต่ำกว่าจุดสูงสุด 52 สัปดาห์เกิน 20%",
+      "summary_th": "ระบบราคาเริ่มติดตาม 6 พ.ย. พบ 9 รายการลงเกิน 20% จากจุดสูงสุด: ASTS −75.7%, RKLB −64.7%, KLAC −54.1%, AVGO −39.0%, BKNG −26.9%, ETN −25.7%, GLD −24.9%, GS −24.9%, ISRG −23.6% หุ้นชิปมาจากการเทขาย AI (5 พ.ย.) BKNG จากงบ 3 พ.ย. ทอง GLD จากความคาดหวังว่า Fed จะขึ้นดอกเบี้ย ธ.ค. (โอกาส ~77–78%) ทองลง ~1% เหลือ ~$4,048 วันที่ 6 พ.ย. ส่วน ASTS, RKLB, GS, ISRG ยังไม่พบข่าวเฉพาะในรอบนี้",
+      "impacts": [
+        {
+          "target": "ai",
+          "label_th": "ชิป / AI",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "KLAC, AVGO, ETN ลดลงแรงตามการเทขายหุ้น AI"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "ASTS และ RKLB ผันผวนสูงมาก RKLB ฟื้น 15.4% วันที่ 6 พ.ย. ก่อนงบไตรมาส 3"
+        },
+        {
+          "target": "BKNG",
+          "label_th": "Booking",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "งบไตรมาส 3 มีรายการ FTC และคาดการณ์ไตรมาส 4 อ่อน"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "GLD ต่ำกว่าจุดสูงสุด 24.9% ขณะตลาดคาด Fed ขึ้นดอกเบี้ย"
+        },
+        {
+          "target": "GS",
+          "label_th": "Goldman Sachs",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ต่ำกว่าจุดสูงสุด 24.9%"
+        },
+        {
+          "target": "ISRG",
+          "label_th": "Intuitive Surgical",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "ต่ำกว่าจุดสูงสุด 23.6% แม้ผ่าตัดยังโต ~14%"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ อยู่ในแผนต่อไป",
+      "watch_next_th": "งบ Rocket Lab ~9–10 พ.ย.",
+      "sources": [
+        {
+          "label": "Yahoo Finance (data/price_events.json)",
+          "url": "https://finance.yahoo.com/"
+        },
+        {
+          "label": "AP via NBC Bay Area",
+          "url": "https://www.nbcbayarea.com/news/national-international/november-5-stock-market/4170982/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-07-iran-qeshm-strikes-hormuz",
+      "date": "2026-11-07",
+      "time_utc": "2026-11-07T13:43:00Z",
+      "run": "evening",
+      "level": "high",
+      "category": "war",
+      "title_th": "สหรัฐฯ โจมตีเกาะเกชม์ของอิหร่าน ช่องแคบฮอร์มุซตึงเครียด เสี่ยงขยายวง",
+      "summary_th": "ทรัมป์ยืนยัน (7 พ.ย.) ว่าสหรัฐฯ ทำ “การโจมตีเล็กน้อย” ที่เกาะเกชม์ในช่องแคบฮอร์มุซ ขณะที่ IRGC อ้างว่าเรือบรรทุกน้ำมันชนทุ่นระเบิดและไฟไหม้อีกลำ (ยังไม่มีการยืนยันจากหน่วยงานเดินเรือ) และยกเลิกข้อจำกัดระยะยิงขีปนาวุธ 1,200 ไมล์ ทรัมป์กำลังพิจารณาว่าจะกลับมาปฏิบัติการทางทหารเต็มรูปแบบหรือไม่ ราคาน้ำมันเบรนต์ดีดกลับ ~3.9% ไปที่ ~$98 หลังร่วงกว่า 8% วันที่ 5 พ.ย. ส่วนกาตาร์บอกว่าการเจรจาไกล่เกลี่ย “มีความคืบหน้า” อัปเดต 7 พ.ย. ค่ำ: กองบัญชาการ CENTCOM ยิงสกัดเรือพาณิชย์อีกลำที่พยายามฝ่าการปิดล้อมอิหร่าน (รวม 5 ลำตั้งแต่ ก.ค.) และตั้งหน่วย “Iron Gate” เพื่อตัดเส้นทางขนส่งทางบกและทะเลแคสเปียนของอิหร่าน ขณะที่ทรัมป์ย้ำว่า “กำลังคุยกับอิหร่าน และดีลอาจเกิดขึ้นได้” ยังไม่มีการกลับมาโจมตีเต็มรูปแบบ",
+      "impacts": [
+        {
+          "target": "main:sp500",
+          "label_th": "กองทุน S&P 500",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ถ้าสงครามขยายวงช่วงสุดสัปดาห์ ตลาดเปิดวันจันทร์อาจลงแรง เพราะน้ำมันแพงดันเงินเฟ้อและความคาดหวังให้ Fed ขึ้นดอกเบี้ย"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "กองทุน NASDAQ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "หุ้นเทคยังเปราะบางหลังร่วงหนักสัปดาห์นี้ ความเสี่ยงสงครามบวกดอกเบี้ยสูงกดดันหุ้นเติบโต"
+        },
+        {
+          "target": "travel",
+          "label_th": "ท่องเที่ยว",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "น้ำมันแพงเพิ่มต้นทุนสายการบินและค่าเดินทาง สงครามในอ่าวเปอร์เซียกระทบการเดินทางระหว่างประเทศ"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ / กลาโหม",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "ความขัดแย้งยืดเยื้อหนุนความต้องการอาวุธ เช่น LMT"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "สงครามหนุนทองในฐานะสินทรัพย์ปลอดภัย แต่ถ้าน้ำมันดันเงินเฟ้อจน Fed ขึ้นดอกเบี้ย ทองจะถูกกดดัน (ทองล่าสุด ~$4,065)"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขายเพราะข่าวสงคราม แผนยังซื้อตามปกติ ถ้าตลาดลงวันจันทร์ แผนจะใช้เงินสำรองซื้อเพิ่มตามระยะห่างจากจุดสูงสุด",
+      "watch_next_th": "ราคาน้ำมันตอนเปิดตลาดวันจันทร์ 9 พ.ย. · ประชุม รมต.ต่างประเทศ G7 ปารีส 9–10 พ.ย. · ความคืบหน้าการไกล่เกลี่ยของกาตาร์",
+      "sources": [
+        {
+          "label": "CBS News live updates · Nov 7",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+        },
+        {
+          "label": "Gulf News · Nov 6",
+          "url": "https://gulfnews.com/world/mena/us-israel-iran-war-trump-warns-iran-heavy-hit-tehran-gulf-diplomacy-1.500737918"
+        },
+        {
+          "label": "Khaleej Times live · Nov 7",
+          "url": "https://www.khaleejtimes.com/world/mena/us-israel-iran-saudi-arabia-yemen-war-live-updates-november-7-2026"
+        },
+        {
+          "label": "Geopolitics Unplugged · Nov 7",
+          "url": "https://geopoliticsunplugged.substack.com/p/trump-confirms-new-us-strikes-on"
+        },
+        {
+          "label": "RFE/RL live blog · Nov 7",
+          "url": "https://www.rferl.org/a/iran-live-blog-trump-middle-east/33803414.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-08-houthi-riyadh-tankers-hormuz",
+      "date": "2026-11-08",
+      "time_utc": "2026-11-08T09:26:00Z",
+      "run": "evening",
+      "level": "high",
+      "category": "war",
+      "title_th": "ฮูตียิงขีปนาวุธใส่ริยาด อาคารอารัมโกเสียหาย เรือน้ำมันไฟไหม้ในฮอร์มุซ",
+      "summary_th": "เช้า 8 พ.ย. 2026 ซาอุฯ สกัดขีปนาวุธ 3 ลูก ขีปนาวุธร่อน 2 ลูก และโดรน 1 ลำจากเยเมน โดยมีเป้าหมายที่ริยาด เศษชิ้นส่วนตกใส่อาคารของ Saudi Aramco ในริยาด เสียหายเล็กน้อยและไม่มีผู้บาดเจ็บ ส่วนคืนวันที่ 7 พ.ย. UKMTO รายงานว่าเรือบรรทุกน้ำมันลำหนึ่งในช่องแคบฮอร์มุซถูกวัตถุไม่ทราบชนิดโจมตี และอีกลำเกิดไฟไหม้ใกล้คาซับ (โอมาน) โดยลูกเรือปลอดภัย ขณะที่อิหร่านอ้างว่าเรือ 2 ลำชนทุ่นระเบิด การเจรจาที่กาตาร์ไกล่เกลี่ยยังไม่คืบหน้า (อิหร่านกำลังพิจารณาข้อเสนอ) ตลาดน้ำมันและหุ้นสหรัฐฯ จะเปิดคืนวันจันทร์เวลาไทย จึงยังไม่มีราคาตอบสนอง",
+      "impacts": [
+        {
+          "target": "main:sp500",
+          "label_th": "กองทุน S&P 500",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "สงครามที่ลามไปถึงซาอุฯ อาจทำให้น้ำมันแพงขึ้นเมื่อตลาดเปิด ดันเงินเฟ้อและเพิ่มโอกาสที่ Fed จะขึ้นดอกเบี้ย ธ.ค."
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "กองทุน NASDAQ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "หุ้นเทคยังเปราะบางหลังร่วงหนักสัปดาห์ก่อน ข่าวสงครามบวกดอกเบี้ยสูงกดดันหุ้นเติบโตเพิ่ม"
+        },
+        {
+          "target": "travel",
+          "label_th": "ท่องเที่ยว",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "น้ำมันเครื่องบินแพงขึ้นและความไม่ปลอดภัยในตะวันออกกลางกดดันการเดินทาง (BKNG, MAR, ABNB)"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "สงครามหนุนทองในฐานะสินทรัพย์ปลอดภัย แต่ถ้าน้ำมันดันความคาดหวังให้ Fed ขึ้นดอกเบี้ย ก็ฉุดทองลง"
+        },
+        {
+          "target": "main:kkp",
+          "label_th": "KKP",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "ไทยนำเข้าน้ำมัน ราคาน้ำมันที่สูงขึ้นกดดันเศรษฐกิจและหุ้นไทย"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขายตามข่าว ถ้าตลาดเปิดวันจันทร์แล้วลง แผนจะใช้เงินสำรองซื้อเพิ่มตามระยะห่างจากจุดสูงสุดโดยอัตโนมัติ เตรียมใจรับความผันผวนเท่านั้น",
+      "watch_next_th": "ราคาน้ำมันตอนเปิดตลาด (เช้าวันจันทร์ 9 พ.ย. เวลาไทย) · ท่าทีทรัมป์ว่าจะโจมตีอิหร่านรอบใหม่หรือไม่ · ผลการเจรจาผ่านกาตาร์ · CPI สหรัฐฯ ต.ค. กลาง พ.ย.",
+      "sources": [
+        {
+          "label": "ABC News – Iran live updates (8 พ.ย.)",
+          "url": "https://abcnews.com/International/live-updates/iran-live-updates-trump-good-call-netanyahu/?id=137762456"
+        },
+        {
+          "label": "Al Jazeera – Iran war live (8 พ.ย.)",
+          "url": "https://www.aljazeera.com/news/liveblog/2026/11/8/iran-war-live-explosions-hit-qeshm-us-moves-to-block-land-supply-routes"
+        },
+        {
+          "label": "ABC (Australia) – Explosions heard in Strait of Hormuz",
+          "url": "https://www.abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730"
+        },
+        {
+          "label": "Iran International – live blog",
+          "url": "https://www.iranintl.com/en/liveblog/202611077068"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-09-iran-mines-irongate",
+      "date": "2026-11-09",
+      "time_utc": "2026-11-09T01:00:00+00:00",
+      "run": "morning",
+      "level": "high",
+      "category": "war",
+      "title_th": "เรือน้ำมันชนทุ่นระเบิดในฮอร์มุซ สหรัฐฯ ตั้งหน่วยปิดล้อมอิหร่านทางบก",
+      "summary_th": "8 พ.ย. 2026 กองทัพอิหร่านระบุเรือน้ำมัน 2 ลำไฟไหม้หลังชนทุ่นระเบิดในช่องแคบฮอร์มุซ และกองกำลังพิทักษ์ปฏิวัติประกาศยกเลิกเพดานพิสัยขีปนาวุธ 2,000 กม. ขณะที่ 7 พ.ย. สหรัฐฯ ตั้ง Task Force Iron Gate สกัดการขนส่งทางบกของอิหร่าน ส่วนอิหร่านกำลังพิจารณาข้อเสนอลดความตึงเครียดของกาตาร์ อัปเดตค่ำ 9 พ.ย.: ทรัมป์ให้สัมภาษณ์ CNN ว่า \"แทบไม่น่าจะต้อง\" สั่งโจมตีอิหร่านอีก หากการเจรจานิวเคลียร์และการเปิดช่องแคบฮอร์มุซคืบหน้า ราคาน้ำมันจึงลดลง (Brent ~96.5 ดอลลาร์ −1.8%, WTI ราว 88–90 ดอลลาร์) และนายกฯ กาตาร์มีกำหนดพบทรัมป์ที่ทำเนียบขาววันนี้",
+      "impacts": [
+        {
+          "target": "travel",
+          "label_th": "ท่องเที่ยว",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ความเสี่ยงต่อการขนส่งน้ำมันยังอยู่ แต่สัญญาณผ่อนคลายของทรัมป์ทำให้น้ำมันลดลง 9 พ.ย. ถ้าเจรจาคืบหน้า ต้นทุนสายการบินจะเบาลง"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ/กลาโหม",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "สงครามยืดเยื้อหนุนความต้องการอาวุธและงบกลาโหม เช่น LMT"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ (GLD)",
+          "direction": "positive",
+          "strength": "medium",
+          "reason_th": "ความเสี่ยงภูมิรัฐศาสตร์ทำให้นักลงทุนหาสินทรัพย์ปลอดภัย"
+        },
+        {
+          "target": "main:sp500",
+          "label_th": "S&P 500",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "น้ำมันลดลงช่วยลดแรงกดดันเงินเฟ้อ ฟิวเจอร์ส S&P 500 บวก ~0.5% เช้า 9 พ.ย. แต่ถ้าความขัดแย้งปะทุอีกตลาดอาจกลับมาผันผวน"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขายหรือรีบซื้อตามข่าว สถานการณ์ยังเปลี่ยนเร็ว แผนยังซื้อตามปกติและใช้เงินสำรองเมื่อราคาย่อ",
+      "watch_next_th": "ผลการพบกันระหว่างนายกฯ กาตาร์กับทรัมป์ 9 พ.ย. · ประชุม G7 ปารีส 9–10 พ.ย. · ราคาน้ำมันหลัง CPI 10 พ.ย.",
+      "sources": [
+        {
+          "label": "ABC News (8 Nov 2026)",
+          "url": "https://www.abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730"
+        },
+        {
+          "label": "CBS News live updates",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+        },
+        {
+          "label": "The National (9 Nov 2026)",
+          "url": "https://www.thenationalnews.com/business/energy/2026/11/09/oil-edges-lower-as-trump-plays-down-prospect-of-new-us-attacks-on-iran/"
+        }
+      ],
+      "updated_at": "2026-11-09T13:55:58+00:00"
+    },
+    {
+      "id": "2026-11-09-msft-oracle-winddown",
+      "date": "2026-11-09",
+      "time_utc": "2026-11-09T01:00:00+00:00",
+      "run": "morning",
+      "level": "medium",
+      "category": "sector",
+      "title_th": "Microsoft ทยอยเลิกเช่าเซิร์ฟเวอร์ AI จาก Oracle",
+      "summary_th": "Bloomberg รายงาน (6 พ.ย. 2026) ว่า Microsoft ไม่ต่อสัญญาเช่าพลังประมวลผล AI จาก Oracle ที่ทำไว้ปี 2023 เพราะใช้ชิป Nvidia รุ่นเก่า และย้ายงานไปศูนย์ข้อมูลของตัวเอง หุ้น Oracle ลง ~4% วันศุกร์ ข่าวนี้ตอกย้ำคำถามว่าบริษัทใหญ่เริ่มคุมการลงทุน AI หรือไม่",
+      "impacts": [
+        {
+          "target": "ai",
+          "label_th": "ชิป/AI",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "สะท้อนว่าชิปรุ่นเก่าเริ่มด้อยค่า แต่ Microsoft ยังลงทุนศูนย์ข้อมูลของตัวเองต่อ ความต้องการชิปรุ่นใหม่จึงยังอยู่"
+        },
+        {
+          "target": "AVGO",
+          "label_th": "Broadcom",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "บริษัทใหญ่ที่สร้างศูนย์ข้อมูลเองมักใช้ชิปออกแบบเฉพาะและอุปกรณ์เครือข่ายของ Broadcom แต่ความกังวลงบลงทุน AI กดดันทั้งกลุ่ม"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "NASDAQ",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "ข่าวลดการเช่าพลังประมวลผลเพิ่มความกังวลเรื่องฟองสบู่ AI หลัง Nasdaq ร่วง 3.4% สัปดาห์ก่อน"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย หมวด AI ยังอยู่โซนเฝ้าระวัง แผนยัง DCA ต่อและใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ",
+      "watch_next_th": "Ramp AI Index ต.ค. ออก 11 พ.ย. · งบ Nvidia ปลาย พ.ย.",
+      "sources": [
+        {
+          "label": "Reuters via Manila Times (8 Nov 2026)",
+          "url": "https://www.manilatimes.net/2026/11/08/business/top-business/microsoft-is-winding-down-deal-with-oracle/2464470"
+        },
+        {
+          "label": "TokenPost (8 Nov 2026)",
+          "url": "https://www.tokenpost.com/news/business/51955"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-09-week-cpi-rklb",
+      "date": "2026-11-09",
+      "time_utc": "2026-11-09T01:00:00+00:00",
+      "run": "morning",
+      "level": "medium",
+      "category": "inflation",
+      "title_th": "สัปดาห์นี้: CPI สหรัฐฯ (10 พ.ย.) ชี้ทาง Fed ขึ้นดอกเบี้ย ธ.ค.",
+      "summary_th": "สัปดาห์ก่อน S&P 500 ลง 2.68% (แย่สุดตั้งแต่ เม.ย. 2025) Nasdaq ลง 3.37% VIX 25.6 ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย 9 ธ.ค. ราว 77% สัปดาห์นี้มี CPI ต.ค. (อ. 10 พ.ย.) และ PPI (ศ. 13 พ.ย.) ส่วน Rocket Lab ประกาศงบไตรมาส 3 คืนนี้หลังตลาดปิด",
+      "impacts": [
+        {
+          "target": "finance",
+          "label_th": "การเงิน",
+          "direction": "mixed",
+          "strength": "medium",
+          "reason_th": "เงินเฟ้อสูงทำให้โอกาสขึ้นดอกเบี้ยเพิ่ม ส่วนต่างหุ้นกู้กว้างขึ้นเป็น 3.48% แต่ดอกเบี้ยสูงช่วยรายได้ดอกเบี้ยธนาคาร"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "NASDAQ",
+          "direction": "mixed",
+          "strength": "medium",
+          "reason_th": "CPI สูงกว่าคาดจะกดหุ้นเติบโต ถ้าต่ำกว่าคาดอาจทำให้ตลาดฟื้น"
+        },
+        {
+          "target": "RKLB",
+          "label_th": "Rocket Lab",
+          "direction": "mixed",
+          "strength": "high",
+          "reason_th": "งบและ backlog ไตรมาส 3 อาจทำให้หุ้นที่ต่ำกว่าจุดสูงสุด ~65% แกว่งแรงทั้งขึ้นและลง"
+        }
+      ],
+      "what_to_do_th": "ระวังความผันผวนช่วงประกาศ CPI และก่อนประชุม Fed 9 ธ.ค. ไม่ต้องขาย ซื้อตามแผนต่อไป",
+      "watch_next_th": "CPI ต.ค. อ. 10 พ.ย. · งบ Rocket Lab เช้า 10 พ.ย. เวลาไทย · PPI ศ. 13 พ.ย. · ตลาดพันธบัตรปิด 11 พ.ย.",
+      "sources": [
+        {
+          "label": "PalmaFutures Sunday Post (8 Nov 2026)",
+          "url": "https://palmafutures.substack.com/p/sunday-post-recap-and-week-ahead-19f"
+        },
+        {
+          "label": "FRED BAMLH0A0HYM2",
+          "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+        },
+        {
+          "label": "Finviz: Rocket Lab Q3 date",
+          "url": "https://finviz.com/news/404901/rocket-lab-announces-date-of-third-quarter-2026-financial-results"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-relief-rally-oil-drop",
+      "date": "2026-11-10",
+      "time_utc": "2026-11-10T01:10:43+00:00",
+      "run": "morning",
+      "level": "medium",
+      "category": "market",
+      "title_th": "หุ้นสหรัฐฯ ฟื้นแรง Nasdaq-100 +3.4% น้ำมันลง ~5% VIX ลด 22%",
+      "summary_th": "9 พ.ย. 2026 ตลาดหุ้นสหรัฐฯ ฟื้นหลังสัปดาห์ก่อนร่วงหนัก: Nasdaq-100 +3.4% (QQQ +3.54%) S&P 500 +2.4% หุ้นชิปนำ (SMH +5.1%, KLAC +9.3%, AVGO +8.8%) น้ำมัน WTI ลง 4.9% เหลือ $86.38 หลังทรัมป์บอกว่าการโจมตีอิหร่านรอบใหม่ 'ไม่น่าเกิด' หากการเจรจาคืบหน้า ดัชนีความกลัว VIX ลง 22% เหลือ 19.9",
+      "impacts": [
+        {
+          "target": "ai",
+          "label_th": "ชิป/AI",
+          "direction": "positive",
+          "strength": "medium",
+          "reason_th": "แรงขายหุ้น AI หยุดชั่วคราว KLAC/AVGO/ETN เด้ง 5–9% แต่ยังต่ำกว่าจุดสูงสุด 22–50% จึงยังผันผวนได้อีก"
+        },
+        {
+          "target": "travel",
+          "label_th": "ท่องเที่ยว",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "น้ำมันถูกลงช่วยลดต้นทุนเดินทางและสายการบิน"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "NASDAQ",
+          "direction": "positive",
+          "strength": "medium",
+          "reason_th": "หุ้นเทคใหญ่ฟื้นนำตลาด แต่ Nasdaq ยังอยู่ในช่วงปรับฐาน (−10.6% จากจุดสูงสุด)"
+        },
+        {
+          "target": "main:sp500",
+          "label_th": "S&P 500",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "ความกังวลสงครามและน้ำมันลดลงช่วยหนุนตลาดทั้งกระดาน"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "ดอลลาร์อ่อน (DXY −0.6%) ช่วยให้ GLD บวก 1.9%"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องไล่ซื้อเพิ่มหรือขาย ทำตามแผน DCA ปกติ งบยืดหยุ่นจะลดการใช้เงินสำรองเองเมื่อราคาฟื้นขึ้น",
+      "watch_next_th": "CPI ต.ค. คืนนี้ 10 พ.ย. (คาด +0.3% ต่อเดือน) · การเจรจาสหรัฐฯ–อิหร่าน · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "TheStreet: Stock market today Nov 9 2026",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-09-202"
+        },
+        {
+          "label": "CBS News Iran war live updates",
+          "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-rklb-q3-backlog",
+      "date": "2026-11-10",
+      "time_utc": "2026-11-10T01:10:43+00:00",
+      "run": "morning",
+      "level": "medium",
+      "category": "earnings",
+      "title_th": "Rocket Lab งบ Q3: รายได้สูงสุดใหม่ backlog $3.6 พันล้าน แต่ Neutron เลื่อนไป 2027",
+      "summary_th": "9 พ.ย. 2026 Rocket Lab รายงานรายได้ไตรมาส 3 $268 ล้าน (+73% เทียบปีก่อน สูงกว่าคาด $257 ล้าน) backlog ≈ $3.57 พันล้าน (+52% จากไตรมาสก่อน, ราว 3 เท่าของปีก่อน) คาดรายได้ Q4 $270–290 ล้าน แต่ขาดทุน $0.12/หุ้น แย่กว่าคาด และจรวด Neutron เลื่อนบินครั้งแรกไปปี 2027 หุ้นบวก 10.9% ในวันนั้นก่อนลง ~6.5% หลังตลาดปิด",
+      "impacts": [
+        {
+          "target": "RKLB",
+          "label_th": "Rocket Lab",
+          "direction": "mixed",
+          "strength": "medium",
+          "reason_th": "ยอดสั่งงานโตแรงยืนยันความต้องการ แต่ความล่าช้าของ Neutron และขาดทุนทำให้หุ้นผันผวน"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ/กลาโหม",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "สัญญาณ backlog ของ Rocket Lab ในแอปดีขึ้นจาก +137% เป็น +225% ดัชนีหมวดขยับขึ้นเล็กน้อย"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย หุ้น RKLB ยังต่ำกว่าจุดสูงสุด ~61% แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ อยู่ในกรอบแผน",
+      "watch_next_th": "กำหนดการทดสอบถัง Neutron ขั้นที่ 1 · งบกลาโหมหลังงบชั่วคราวหมด 11 ธ.ค.",
+      "sources": [
+        {
+          "label": "Rocket Lab Q3 2026 results",
+          "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts"
+        },
+        {
+          "label": "Investing.com: Rocket Lab Q3 2026 call transcript",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-rocket-lab-beats-revenue-in-q3-2026-stock-swings-lower-after-hours-93CH-5013696"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-anthropic-ipo-1-3t",
+      "date": "2026-11-10",
+      "time_utc": "2026-11-10T12:00:00+00:00",
+      "run": "evening",
+      "level": "low",
+      "category": "sector",
+      "title_th": "Anthropic ยื่นไฟลิง IPO มูลค่า ~1.3 ล้านล้านดอลลาร์ เริ่มโรดโชว์",
+      "summary_th": "10 พ.ย. 2026 Anthropic ยื่นเอกสารเข้าตลาดโดยตั้งมูลค่าราว $1.3 ล้านล้าน คาดกำหนดราคาภายในเดือนนี้ รายได้ต่อไตรมาสราว $17 พันล้านแต่ยังขาดทุน และมีภาระสัญญาซื้อกำลังประมวลผล AI ราว $895 พันล้าน ด้าน TSMC รายงานรายได้ ต.ค. โตเกือบ 6 เท่าจากปีก่อน",
+      "impacts": [
+        {
+          "target": "ai",
+          "label_th": "ชิป/AI",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "สัญญาซื้อกำลังประมวลผลมหาศาลยืนยันความต้องการชิปและศูนย์ข้อมูล (AVGO, KLAC, ETN) แต่ IPO ใหญ่อาจดึงเงินออกจากหุ้น AI อื่นชั่วคราว"
+        }
+      ],
+      "what_to_do_th": "ข้อมูลประกอบเท่านั้น ไม่ต้องเปลี่ยนแผน",
+      "watch_next_th": "วันกำหนดราคา IPO สัปดาห์หน้า · งบ CoreWeave คืนนี้",
+      "sources": [
+        {
+          "label": "AP via WPTF",
+          "url": "https://www.wptf.com/2026/11/10/before-the-bell-wall-street-mixed-in-early-trading/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-iran-war-over-brent-90",
+      "date": "2026-11-10",
+      "time_utc": "2026-11-10T13:20:00+00:00",
+      "run": "evening",
+      "level": "medium",
+      "category": "geopolitics",
+      "title_th": "ทรัมป์ว่าไม่ต้องมีดีลกับอิหร่าน เรือน้ำมันถูกโจมตี เบรนต์เด้งเหนือ $94",
+      "summary_th": "10 พ.ย. 2026 หลังทรัมป์กล่าวว่าสงครามกับอิหร่าน 'ทางทหารจบลงแล้วโดยปริยาย' น้ำมันเบรนต์ลง 2.2% เหลือ $90.55 (ต่ำสุดรอบ 3 เดือน) WTI ลง 1.8% เหลือ $84.94 ตลาดเอเชียบวกแรง Nikkei +2.9% Kospi +4.4% ยุโรปบวก ~1% อัปเดต 11 พ.ย.: น้ำมันเด้งกลับ เบรนต์ +1.1% เป็น $92.53 WTI +0.8% เป็น $86.71 เพราะยังมีเรือน้ำมันถูกโจมตี/ชนทุ่นระเบิดในช่องแคบฮอร์มุซ (ต.ค. ถูกโจมตี 37 ลำ สูงสุดตั้งแต่เริ่มสงคราม และอีก ~10 ลำใน พ.ย.) และเจ้าหน้าที่อิหร่านระบุว่ายังไม่มีการเจรจากับสหรัฐฯ อัปเดต 12 พ.ย.: IRGC ระบุเกิดระเบิดที่ซูเปอร์แทงเกอร์ 2 ลำในฮอร์มุซ (รวมน้ำมันกว่า 4 ล้านบาร์เรล) และทรัมป์โพสต์ว่า 'หมดเวลาทำข้อตกลงแล้ว' สหรัฐฯ ไม่จำเป็นต้องมีดีล ทำให้แผนของกาตาร์ที่จะเปิดช่องแคบอีกครั้งไม่แน่นอน เบรนต์ขึ้น ~1.4% เหนือ $94 หลังร่วงก่อนหน้าเพราะซาอุฯ เพิ่มการผลิตเป็น 10.56 ล้านบาร์เรล/วัน (สัปดาห์ก่อนเบรนต์ลง 16%)",
+      "impacts": [
+        {
+          "target": "travel",
+          "label_th": "ท่องเที่ยว",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "น้ำมันเด้งกลับและความหวังสันติภาพลดลง เพิ่มต้นทุนการเดินทางของ BKNG, MAR, ABNB"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ/กลาโหม",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "ความตึงเครียดที่ยืดเยื้อหนุนหุ้นกลาโหมอย่าง LMT"
+        },
+        {
+          "target": "main:sp500",
+          "label_th": "S&P 500 (เงินเฟ้อ)",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "น้ำมันสูงทำให้เงินเฟ้อลดช้า หนุนเหตุผลให้ Fed ขึ้นดอกเบี้ย ธ.ค."
+        }
+      ],
+      "what_to_do_th": "ไม่เปลี่ยนแผน ข่าวสงครามสลับขึ้นลงทุกวัน ซื้อตามแผนต่อไป ถ้าตลาดย่อเงินสำรองจะซื้อเพิ่มเอง",
+      "watch_next_th": "การพบกันระหว่างรองปธน. Vance กับเจ้าหน้าที่อิหร่าน · ข้อเสนอกาตาร์ · การโจมตีเรือในฮอร์มุซ",
+      "sources": [
+        {
+          "label": "AP via WPTF: Before the bell, 10 Nov 2026",
+          "url": "https://www.wptf.com/2026/11/10/before-the-bell-wall-street-mixed-in-early-trading/"
+        },
+        {
+          "label": "Reuters via Yahoo Finance",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-dow-futures-climb-102635174.html"
+        },
+        {
+          "label": "Reuters via Yahoo Finance: Oil rebounds as Hormuz attacks blunt truce hopes (11 Nov 2026)",
+          "url": "https://finance.yahoo.com/energy/articles/oil-rebounds-hormuz-shipping-attacks-045504059.html"
+        },
+        {
+          "label": "Le Private Banker: Oil jumps above $94 (12 Nov 2026)",
+          "url": "https://leprivatebanker.com/2026/11/12/oil-jumps-above-94-after-trump-says-us-doesnt-need-an-iran-deal-clouding-a-qatari-plan-to-reopen-hormuz/"
+        },
+        {
+          "label": "Newsquawk US Opening News (12 Nov 2026)",
+          "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---12th-november-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-10-cpi-hot-waller-hike",
+      "date": "2026-11-10",
+      "time_utc": "2026-11-10T13:30:00+00:00",
+      "run": "evening",
+      "level": "high",
+      "category": "inflation",
+      "title_th": "CPI ต.ค. สูงกว่าคาด ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย ธ.ค. ~100%",
+      "summary_th": "10 พ.ย. 2026 CPI สหรัฐฯ เดือน ต.ค. +0.4% เทียบเดือนก่อน (คาด +0.3%) core +0.3% (คาด +0.2%) Waller หนุนขึ้น 0.25% ในการประชุม 8–9 ธ.ค. และให้พิจารณา 0.50% ส่วน Logan (Fed ดัลลัส) ว่าควรขึ้นอีกอย่างน้อย 2 ครั้ง CME FedWatch ให้โอกาสขึ้นดอกเบี้ย ธ.ค. ~100% (จาก 84%) โดยโอกาสขึ้น 0.50% ~10% ตลาดปิด: S&P 500 −0.38%, Nasdaq −0.74%, ผลตอบแทน 10 ปี +0.14 จุดเป็น ~5.0% ทอง (GLD) −2.7%",
+      "impacts": [
+        {
+          "target": "main:nasdaq",
+          "label_th": "NASDAQ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ดอกเบี้ยสูงขึ้นกดมูลค่าหุ้นเติบโต Nasdaq ลง 0.74% ใน 10 พ.ย. หลังเด้งแรงวันก่อน"
+        },
+        {
+          "target": "ai",
+          "label_th": "ชิป/AI",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "KLAC/AVGO/ETN เพิ่งเด้ง 5–9% แต่ยังผันผวนสูง ดอกเบี้ยขาขึ้นทำให้หุ้นราคาแพงอ่อนไหวมากที่สุด"
+        },
+        {
+          "target": "main:sp500",
+          "label_th": "S&P 500",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "ต้นทุนเงินกู้สูงขึ้นกระทบกำไรบริษัทโดยรวม แต่ตลาดคาดการขึ้นดอกเบี้ยไว้ก่อนแล้วบางส่วน"
+        },
+        {
+          "target": "finance",
+          "label_th": "การเงิน",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "ดอกเบี้ยสูงช่วยรายได้ดอกเบี้ยของ JPM แต่ความผันผวนตลาดอาจกระทบ GS"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ดอกเบี้ยและผลตอบแทนพันธบัตรที่พุ่งขึ้นกดราคาทอง GLD ลง 2.7% ใน 10 พ.ย. ตอนนี้ต่ำกว่าจุดสูงสุด 52 สัปดาห์ ~26%"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย แผนยังซื้อทุกโซนตามปกติ ทองและหุ้นเทคที่ย่อลง แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเอง ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค.",
+      "watch_next_th": "PPI ศ. 13 พ.ย. · ตลาดพันธบัตรปิด 11 พ.ย. · ประชุม Fed 8–9 ธ.ค. · CPI พ.ย. 10 ธ.ค.",
+      "sources": [
+        {
+          "label": "BLS: CPI October 2026",
+          "url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm"
+        },
+        {
+          "label": "ZeroHedge: CPI hotter than expected, Waller",
+          "url": "https://www.zerohedge.com/markets/cpi-prints-hotter-expected-rate-hike-odds-soar-waller-sparks-hawkish-panic"
+        },
+        {
+          "label": "Yahoo Finance live, 10 Nov 2026",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-10-dow-sp-500-nasdaq-inflation-data-cpi-090627830.html"
+        },
+        {
+          "label": "Seoul Economic Daily: Dec hike odds 100% (11 Nov 2026)",
+          "url": "https://en.sedaily.com/world/2026/11/11/december-rate-hike-odds-hit-100-percent-after-hot-us"
+        },
+        {
+          "label": "TheStreet: Stock market today Nov 10 2026",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-11-asts-q3-drop",
+      "date": "2026-11-11",
+      "time_utc": "2026-11-11T01:07:35+00:00",
+      "run": "morning",
+      "level": "medium",
+      "category": "earnings",
+      "title_th": "ASTS ร่วง 10.6% หลังงบ Q3 ต่ำกว่าคาด BofA หั่นราคาเป้า",
+      "summary_th": "10 พ.ย. 2026 AST SpaceMobile ปิด $32.98 (−10.6%) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 75% หลังรายได้ไตรมาส 3 = $42.3 ล้าน (+187% แต่ต่ำกว่าคาด ~$46 ล้าน) BofA ลดราคาเป้าจาก $80 เป็น $45 เพราะปล่อยดาวเทียมช้ากว่าแผน (เป้า ~45 ดวงกลางปี 2027) และจรวด Blacklift ของตัวเองยังอีกนานถึงปลายปี 2028 บริษัทคงเป้ารายได้ปี 2026 ที่ $150–200 ล้าน",
+      "impacts": [
+        {
+          "target": "ASTS",
+          "label_th": "AST SpaceMobile",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "ความล่าช้าในการปล่อยดาวเทียมเลื่อนรายได้เชิงพาณิชย์ออกไป และดอกเบี้ยขาขึ้นกดมูลค่าหุ้นที่ยังขาดทุนมากที่สุด"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ/กลาโหม",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "RKLB ก็ร่วงช่วงเช้า 10 พ.ย. แม้ backlog สูงสุดใหม่ ขณะที่ LMT บวก 2.4% หมวดนี้ผันผวนสูงจากหุ้นอวกาศเติบโต"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย ASTS ยังซื้อตามน้ำหนักในแผน ราคาที่ต่ำกว่าจุดสูงสุดมากทำให้แผนงบยืดหยุ่นใช้เงินสำรองซื้อเพิ่ม แต่หุ้นตัวนี้ผันผวนมาก อย่าซื้อเกินแผน",
+      "watch_next_th": "งานเปิดตัวจรวด Blacklift 12 พ.ย. · กำหนดปล่อยดาวเทียม BlueBird ชุดถัดไปกับ SpaceX",
+      "sources": [
+        {
+          "label": "Motley Fool: Why AST SpaceMobile plunged today",
+          "url": "https://www.fool.com/investing/2026/11/10/why-ast-spacemobile-plunged-today/"
+        },
+        {
+          "label": "24/7 Wall St.: RKLB/ASTS 10 Nov 2026",
+          "url": "https://247wallst.com/investing/2026/11/10/rocket-lab-sinks-9-despite-record-backlog-ast-spacemobile-falls-6-on-bofa-price-target-cut-spacex-slides-3/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-11-coreweave-ai-rebound",
+      "date": "2026-11-11",
+      "time_utc": "2026-11-12T01:35:00+00:00",
+      "run": "morning",
+      "level": "medium",
+      "category": "sector",
+      "title_th": "หุ้นชิปเด้งแรงหลังงบ CoreWeave: Nasdaq-100 ปิด +2.6% VIX ลด 10%",
+      "summary_th": "11 พ.ย. 2026 หลังงบ CoreWeave (รายได้ Q3 +168%, งานในมือ $132.5 พันล้าน) คลายกังวลความต้องการ AI ตลาดสหรัฐฯ ปิดบวก: QQQ (Nasdaq-100) +2.62% SPY (S&P 500) +1.43% กองทุนหุ้นชิป SMH +5.67% และ VIX ลด 9.9% เหลือ 17.5 ในพอร์ต KLAC +6.2% AVGO +5.2% ETN +2.4% RKLB +5.7% ASTS +7.0% ขณะที่ทองคำ (GLD) −1.1% ผลตอบแทนพันธบัตร 10 ปีค้าง ~5.0% (ตลาดพันธบัตรปิดวัน Veterans Day)",
+      "impacts": [
+        {
+          "target": "ai",
+          "label_th": "ชิป/AI",
+          "direction": "positive",
+          "strength": "medium",
+          "reason_th": "ความต้องการศูนย์ข้อมูลยังแข็งแรง หนุนยอดสั่งชิปและเครื่องจักรผลิตชิป (AVGO, KLAC) และอุปกรณ์ไฟฟ้า (ETN) แต่หุ้นยังต่ำกว่าจุดสูงสุด 27–46%"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "NASDAQ",
+          "direction": "positive",
+          "strength": "medium",
+          "reason_th": "หุ้นเทคใหญ่ฟื้นตัวต่อเนื่อง แต่ดอกเบี้ยขาขึ้นและโอกาส Fed ขึ้นดอกเบี้ย ธ.ค. ยังกดดัน"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "เงินไหลกลับเข้าหุ้นและดอลลาร์แข็งค่า (ดัชนีดอลลาร์ +0.65%) ทำให้ทองอ่อนตัว"
+        }
+      ],
+      "what_to_do_th": "ไม่เปลี่ยนแผน ซื้อตามน้ำหนักปกติ ไม่ต้องซื้อไล่ราคา หุ้นชิปยังห่างจุดสูงสุดมาก แผนงบยืดหยุ่นยังใช้เงินสำรองซื้อเพิ่มตามระดับการย่อ",
+      "watch_next_th": "งบ Applied Materials และ Cisco 12 พ.ย. (หลังตลาดปิด) · PPI 13 พ.ย. · ผลประมูล PJM ภายใน 2 ธ.ค. · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "CoinCentral: Nasdaq futures jump as CoreWeave results ease AI worries",
+          "url": "https://coincentral.com/stock-market-today-nasdaq-futures-jump-as-coreweave-results-ease-ai-demand-worries"
+        },
+        {
+          "label": "StockTwits via Yahoo Finance: S&P 500, Nasdaq futures rise premarket",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-futures-rise-095935016.html"
+        },
+        {
+          "label": "Yahoo Finance ราคาปิด 11 พ.ย. (data/market.json)",
+          "url": "https://finance.yahoo.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-09-nvidia-huang-probe",
+      "date": "2026-11-13",
+      "time_utc": "2026-11-13T01:05:58+00:00",
+      "run": "morning",
+      "level": "high",
+      "category": "sector",
+      "title_th": "เจนเซน หวง ลาออกจากซีอีโอ Nvidia หุ้น NVDA ปิด −4% แต่ AVGO +5%",
+      "summary_th": "12 พ.ย. 2026 เจนเซน หวง ประกาศลาออกจากตำแหน่งซีอีโอ Nvidia หลังถูกสอบสวน บอร์ดตั้ง Colette Kress (CFO) เป็นซีอีโอรักษาการ ตามพาดหัวข่าว หุ้น NVDA ระหว่างวันร่วงหนักสุดราว 14% ก่อนปิดลงกว่า 4% ขณะที่เงินไหลไปหุ้นชิปคู่แข่ง: AVGO ปิด +4.97% ที่ $362.38 ส่วน KLAC −1.98% และ SMH −1.31% (ข้อมูลจากพาดหัวข่าวและ Yahoo Finance; รอบนี้เปิดอ่านเนื้อข่าวเต็มไม่ได้)",
+      "impacts": [
+        {
+          "target": "ai",
+          "label_th": "ชิป / AI",
+          "direction": "mixed",
+          "strength": "medium",
+          "reason_th": "ความไม่แน่นอนด้านผู้นำของผู้ผลิต GPU รายใหญ่สุดทำให้หุ้นกลุ่ม AI ผันผวน แต่ความต้องการชิปและงบลงทุนของคลาวด์ยังไม่เปลี่ยน"
+        },
+        {
+          "target": "AVGO",
+          "label_th": "Broadcom",
+          "direction": "positive",
+          "strength": "medium",
+          "reason_th": "นักลงทุนย้ายเงินไปหาผู้ผลิตชิป AI ทางเลือก (ชิปสั่งทำของคลาวด์) AVGO ขึ้น ~5% ในวันเดียว"
+        },
+        {
+          "target": "KLAC",
+          "label_th": "KLA",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "อารมณ์ตลาดกลุ่มเซมิคอนดักเตอร์อ่อนลง แม้ธุรกิจเครื่องตรวจวัดชิปไม่ได้ผูกกับ Nvidia โดยตรง"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "NASDAQ",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "Nvidia มีน้ำหนักมากในดัชนี QQQ ปิด −0.35% ต่ำกว่าจุดสูงสุด ~9.4%"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย หุ้นชิปในแผน (KLAC, AVGO, ETN) ยังซื้อแบบ DCA ตามน้ำหนักโซนเดิม ถ้าราคาย่อต่อ แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเอง",
+      "watch_next_th": "การแต่งตั้งซีอีโอถาวรของ Nvidia · งบ Nvidia ไตรมาสถัดไป (ปลาย พ.ย.) · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "TechCrunch: Nvidia's Jensen Huang resigns, names CFO Colette Kress interim CEO (12 Nov 2026)",
+          "url": "https://techcrunch.com/2026/11/12/nvidias-jensen-huang-resigns-chipmaker-names-cfo-colette-kress-as-interim-ceo/"
+        },
+        {
+          "label": "CNBC: Nvidia stock closes down over 4% after Huang resignation",
+          "url": "https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html"
+        },
+        {
+          "label": "Yahoo Finance: Markets News, Nov. 12, 2026",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nasdaq-p-131805045.html"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-12-dollar-high-gold-below-4000",
+      "date": "2026-11-13",
+      "time_utc": "2026-11-13T01:05:58+00:00",
+      "run": "morning",
+      "level": "medium",
+      "category": "rates",
+      "title_th": "บอนด์ 10 ปีแตะ 5.10% ดอลลาร์แข็ง ทอง (GLD) ปิด −2.5%",
+      "summary_th": "12 พ.ย. ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปีขึ้นไปปิด 5.10% (+0.10 จุด) ดัชนีดอลลาร์ 103.17 สูงสุดตั้งแต่ เม.ย. 2025 จากการคาดว่า Fed จะขึ้นดอกเบี้ย 9 ธ.ค. หลัง CPI ร้อนแรง GLD ปิด −2.49% ที่ $356.10 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 28% น้ำมัน WTI +2.8% ที่ $88.92 และ VIX +7% เป็น 18.75 (Yahoo Finance)",
+      "impacts": [
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ดอกเบี้ยจริงและดอลลาร์ที่สูงขึ้นลดความน่าสนใจของทองที่ไม่มีดอกผล"
+        },
+        {
+          "target": "finance",
+          "label_th": "การเงิน/ธนาคาร",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "ดอกเบี้ยสูงช่วยส่วนต่างดอกเบี้ยของธนาคาร แต่ GS และ JPM ปิดลงเล็กน้อยวันนี้"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ/กลาโหม",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "หุ้นเติบโตอย่าง RKLB อ่อนไหวต่อดอกเบี้ยระยะยาว สัญญาณดอกเบี้ย 3 เดือนแย่ลง (+0.46 จุด)"
+        }
+      ],
+      "what_to_do_th": "ไม่เปลี่ยนแผน ทองที่ลงลึกจากจุดสูงสุดทำให้แผนงบยืดหยุ่นใช้เงินสำรองซื้อเพิ่มเองตามกฎ ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค.",
+      "watch_next_th": "PPI สหรัฐฯ 13 พ.ย. · ความเชื่อมั่นผู้บริโภค ม.มิชิแกน · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "Newsquawk US Opening News (12 Nov 2026)",
+          "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---12th-november-2026"
+        },
+        {
+          "label": "Yahoo Finance UK (12 Nov 2026)",
+          "url": "https://uk.finance.yahoo.com/news/nasdaq-futures-fall-nvidia-leadership-100447985.html"
+        },
+        {
+          "label": "Yahoo Finance GLD",
+          "url": "https://finance.yahoo.com/quote/GLD"
+        },
+        {
+          "label": "Yahoo Finance ^TNX",
+          "url": "https://finance.yahoo.com/quote/^TNX"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-ppi-oct-light",
+      "date": "2026-11-13",
+      "time_utc": "2026-11-13T14:39:27+00:00",
+      "run": "evening",
+      "level": "medium",
+      "category": "inflation",
+      "title_th": "PPI ต.ค. ต่ำกว่าคาดเล็กน้อย ฟิวเจอร์สหุ้นสหรัฐฯ บวก NVDA ฟื้น +2%",
+      "summary_th": "13 พ.ย. 2026 ดัชนีราคาผู้ผลิต (PPI) ต.ค. ขึ้น 0.3% (คาด 0.4%) เทียบปีก่อน 6.5% (คาด 6.6%) ส่วนพื้นฐานไม่รวมอาหาร/พลังงานขึ้น 0.3% ตามคาด แต่หมวดที่ตัดบริการการค้าออกขึ้น 0.5% (คาด 0.3%) หลังตัวเลข ฟิวเจอร์ส S&P 500 +0.4% Nasdaq-100 +0.2% และ Nvidia ก่อนตลาดเปิด +2.2% หลังร่วง 4.3% เมื่อวาน ตลาดยังให้โอกาส Fed ขึ้นดอกเบี้ย 9 ธ.ค. ~100% (0.25% ราว 87%, 0.50% ราว 13%) บอนด์ 10 ปี ~5.13%",
+      "impacts": [
+        {
+          "target": "main:sp500",
+          "label_th": "S&P 500",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "เงินเฟ้อฝั่งผู้ผลิตไม่ร้อนกว่าคาด ลดความกังวลว่า Fed จะขึ้นดอกเบี้ยแรงกว่า 0.25% ช่วยให้หุ้นฟื้นเล็กน้อย"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "NASDAQ",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "Nvidia ฟื้นหลังข่าวซีอีโอลาออก แต่ดอกเบี้ยระยะยาวเหนือ 5% ยังกดมูลค่าหุ้นเติบโต"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "ทองทรงตัวราว $3,885 ดอลลาร์แข็ง (103.2) และโอกาสขึ้นดอกเบี้ยยังกดดัน แต่เงินเฟ้อไม่เร่งตัวเพิ่ม"
+        }
+      ],
+      "what_to_do_th": "ไม่เปลี่ยนแผน ซื้อตามน้ำหนักปกติ ตัวเลขนี้ไม่ได้เปลี่ยนภาพว่า Fed น่าจะขึ้นดอกเบี้ย ธ.ค. ถ้าตลาดย่อลงก่อนประชุม แผนจะใช้เงินสำรองซื้อเพิ่มเองตามกฎ",
+      "watch_next_th": "งบ Nvidia 17 พ.ย. (หลังตลาดปิด) · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "TipRanks: U.S. Stocks Rise on Lighter-Than-Expected October PPI (13 Nov 2026)",
+          "url": "https://www.tipranks.com/news/u-s-stocks-rise-on-lighter-than-expected-october-ppi"
+        },
+        {
+          "label": "Quackonomist Pre-Market 13 Nov 2026",
+          "url": "https://quackonomist.substack.com/p/quackonomist-pre-market-13-nov-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-13-amat-cisco-ai-capex",
+      "date": "2026-11-13",
+      "time_utc": "2026-11-13T14:39:27+00:00",
+      "run": "evening",
+      "level": "medium",
+      "category": "earnings",
+      "title_th": "Applied Materials งบดี คาดการณ์เกินคาด หนุนหุ้นเครื่องจักรผลิตชิป (KLAC)",
+      "summary_th": "12 พ.ย. (หลังตลาดปิด) Applied Materials รายงานรายได้ไตรมาส $10.41 พันล้าน (+53%) กำไรต่อหุ้น $4.16 (คาด $4.06) และคาดรายได้ไตรมาสหน้า $11.1 พันล้าน สูงกว่าตลาดคาด (~$10.8–10.9 พันล้าน) จากความต้องการชิป AI หุ้น AMAT +3% หลังปิดตลาด KLAC ก่อนตลาดเปิด +1% ส่วน Cisco รายได้ +24% และเพิ่มเป้ารายได้ AI จากคลาวด์เป็น $9 พันล้าน แต่อัตรากำไรขั้นต้นลด หุ้น −2.7% ก่อนตลาดเปิด ขณะที่ AVGO −1.5% หลังพุ่ง 5.5% เมื่อวาน",
+      "impacts": [
+        {
+          "target": "KLAC",
+          "label_th": "KLA",
+          "direction": "positive",
+          "strength": "medium",
+          "reason_th": "AMAT เป็นคู่แข่งโดยตรงในธุรกิจเครื่องจักรผลิตชิป ยอดขายและคาดการณ์ที่แข็งแรงสะท้อนว่าโรงงานชิปยังลงทุนเพิ่มต่อ ซึ่งเป็นผลดีกับ KLAC ที่ยังต่ำกว่าจุดสูงสุด ~48%"
+        },
+        {
+          "target": "ai",
+          "label_th": "ชิป / AI",
+          "direction": "positive",
+          "strength": "low",
+          "reason_th": "งบ AMAT และ Cisco ยืนยันว่าการลงทุนโครงสร้างพื้นฐาน AI ยังเติบโต แม้ Cisco จะเจอแรงกดดันด้านต้นทุนและอัตรากำไร"
+        }
+      ],
+      "what_to_do_th": "ไม่เปลี่ยนแผน ซื้อหุ้นกลุ่ม AI ตามน้ำหนักโซนปกติ ไม่ต้องซื้อไล่ราคา KLAC ที่ย่อลึกยังได้เงินสำรองซื้อเพิ่มตามกฎ",
+      "watch_next_th": "งบ Nvidia 17 พ.ย. · งบ Broadcom ต้น ธ.ค.",
+      "sources": [
+        {
+          "label": "456X Morning Brief 13 Nov 2026 (Applied Materials)",
+          "url": "https://404kresearch.substack.com/p/456x-morning-brief-november-13-2026"
+        },
+        {
+          "label": "Quackonomist Pre-Market 13 Nov 2026",
+          "url": "https://quackonomist.substack.com/p/quackonomist-pre-market-13-nov-2026"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14-chip-selloff-nvda-earnings",
+      "date": "2026-11-14",
+      "time_utc": "2026-11-14T01:07:04+00:00",
+      "run": "morning",
+      "level": "high",
+      "category": "sector",
+      "title_th": "หุ้นชิปกลับตัวร่วง AVGO −5.1% KLAC −3.6% ก่อนงบ Nvidia 17 พ.ย.",
+      "summary_th": "13 พ.ย. 2026 แรงซื้อหุ้นชิปคู่แข่ง Nvidia เมื่อวันก่อนกลับตัวเป็นแรงขายทำกำไร AMD ร่วงราว 9–11% AVGO ปิด −5.07% ที่ $345.89 KLAC −3.63% ที่ $151.59 SMH −3.13% ขณะที่ HSBC ลดคำแนะนำ Nvidia เป็น Hold (เป้า $170 จาก $365) หลังเจนเซน หวง ลาออกจากซีอีโอ Nasdaq ปิด −0.91% S&P 500 −0.40% Dow +0.10%",
+      "impacts": [
+        {
+          "target": "ai",
+          "label_th": "หมวดชิป / AI",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "ความไม่แน่นอนเรื่องผู้นำ Nvidia และแรงขายทำกำไร ทำให้หุ้นชิปผันผวนสูงก่อนงบไตรมาส Nvidia"
+        },
+        {
+          "target": "AVGO",
+          "label_th": "Broadcom",
+          "direction": "negative",
+          "strength": "high",
+          "reason_th": "เงินที่ไหลเข้าเมื่อวันก่อนไหลออก ราคาต่ำกว่าจุดสูงสุด 52 สัปดาห์ราว 28%"
+        },
+        {
+          "target": "KLAC",
+          "label_th": "KLA",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "ร่วงตามกลุ่มชิปแม้ Applied Materials งบดี ต่ำกว่าจุดสูงสุดราว 50%"
+        },
+        {
+          "target": "main:nasdaq",
+          "label_th": "NASDAQ",
+          "direction": "negative",
+          "strength": "medium",
+          "reason_th": "หุ้นเทคและชิปมีน้ำหนักมากในดัชนี"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อ AVGO/KLAC เพิ่มเมื่อราคาย่อลึก DCA ตามแผนต่อ",
+      "watch_next_th": "งบไตรมาส Nvidia อังคาร 17 พ.ย. (ไทยเช้า 18 พ.ย.) · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "Yahoo Finance: Stock market today 13 พ.ย. 2026",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
+        },
+        {
+          "label": "24/7 Wall St.: AMD Tumbles, Broadcom and Intel Slide",
+          "url": "https://247wallst.com/investing/2026/11/13/amd-tumbles-11-broadcom-and-intel-slide-6-as-chip-rally-reverses/"
+        },
+        {
+          "label": "Yahoo Finance (data/market.json)",
+          "url": "https://finance.yahoo.com/"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-14-yield-517-goolsbee",
+      "date": "2026-11-14",
+      "time_utc": "2026-11-14T01:07:04+00:00",
+      "run": "morning",
+      "level": "medium",
+      "category": "rates",
+      "title_th": "บอนด์ 10 ปีแตะ 5.17% Goolsbee ว่าเงินเฟ้อไม่คืบหน้า",
+      "summary_th": "13 พ.ย. ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปีขึ้นไปแตะ 5.17% ระหว่างวัน ก่อนปิด 5.15% (+0.05 จุด) แม้ PPI ต.ค. +0.3% ต่ำกว่าคาด Goolsbee (Fed ชิคาโก) ระบุว่าเงินเฟ้อ \"ไม่คืบหน้า\" ตลาดยังคาด Fed ขึ้นดอกเบี้ย 0.25% วันที่ 9 ธ.ค. (โอกาสขึ้น 0.50% เกิน 10%) ทอง GLD ทรงตัว −0.01%",
+      "impacts": [
+        {
+          "target": "finance",
+          "label_th": "หมวดการเงิน",
+          "direction": "mixed",
+          "strength": "low",
+          "reason_th": "ดอกเบี้ยสูงช่วยส่วนต่างรายได้ธนาคาร แต่เส้นดอกเบี้ยแบนลง (10ปี−2ปี +0.25%)"
+        },
+        {
+          "target": "main:gold",
+          "label_th": "ทองคำ (GLD)",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "ดอกเบี้ยแท้จริงสูงขึ้นลดความน่าสนใจของทองที่ไม่มีดอกผล"
+        },
+        {
+          "target": "space",
+          "label_th": "อวกาศ / กลาโหม",
+          "direction": "negative",
+          "strength": "low",
+          "reason_th": "หุ้นเติบโตอย่าง RKLB อ่อนไหวต่อดอกเบี้ยระยะยาว"
+        }
+      ],
+      "what_to_do_th": "ไม่ต้องเปลี่ยนแผน ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค.",
+      "watch_next_th": "ความเชื่อมั่นผู้บริโภค ม.มิชิแกน (ค่าสุดท้าย) 20 พ.ย. · ประชุม Fed 9 ธ.ค.",
+      "sources": [
+        {
+          "label": "TheStreet: Stock Market Today 13 พ.ย. 2026",
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-13-2026"
+        },
+        {
+          "label": "Yahoo Finance: Stock market today 13 พ.ย. 2026",
+          "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
+        }
+      ]
     }
-   ],
-   "what_to_do_th": "ไม่ต้องเปลี่ยนแผน",
-   "watch_next_th": "ประชุม กนง. ครั้งถัดไป ธ.ค. 2026",
-   "sources": [
-    {
-     "label": "Bank of Thailand · MPC 5/2026",
-     "url": "https://www.bot.or.th/en/news-and-media/news/mpc/news-20261028-5FWvBPSf.html"
-    }
-   ]
-  },
-  {
-   "id": "2026-10-28-fomc-hold-hike-priced",
-   "date": "2026-10-28",
-   "time_utc": "2026-10-28T18:00:00Z",
-   "run": "morning",
-   "level": "high",
-   "category": "fed",
-   "title_th": "Fed คงดอกเบี้ย 3.75–4.00% (10–2) ตลาดคาดขึ้นดอกเบี้ย ธ.ค.",
-   "summary_th": "28 ต.ค. 2026 Fed คงดอกเบี้ย 3.75–4.00% ด้วยเสียง 10–2 โดย Hammack และ Cook ต้องการขึ้น 0.25% แถลงการณ์ปรับมุมมองเศรษฐกิจเป็น 'แข็งแกร่ง' และระบุว่าเงินเฟ้อยังสูง CME FedWatch ให้โอกาสขึ้นดอกเบี้ยเดือน ธ.ค. ราว 78% และ Fed จะลดจำนวนการประชุมตั้งแต่ปี 2027",
-   "impacts": [
-    {
-     "target": "finance",
-     "label_th": "การเงิน / ธนาคาร",
-     "direction": "mixed",
-     "strength": "medium",
-     "reason_th": "ดอกเบี้ยสูงช่วยรายได้ดอกเบี้ยธนาคาร แต่เพิ่มความเสี่ยงหนี้เสียและกดคะแนนนโยบาย Fed"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "กองทุน NASDAQ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "หุ้นเทคโนโลยีมูลค่าสูงอ่อนไหวต่อดอกเบี้ยขาขึ้น"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ดอกเบี้ยแท้จริงสูงขึ้นเพิ่มต้นทุนการถือทอง"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "หุ้นเติบโตที่ยังไม่มีกำไรถูกกดดันจากดอกเบี้ยสูง"
-    }
-   ],
-   "what_to_do_th": "ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค. ไม่ต้องเปลี่ยนแผน DCA",
-   "watch_next_th": "CPI ต.ค. (กลาง พ.ย.) · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "StockAnalysis · Fed holds Oct 2026",
-     "url": "https://stockanalysis.com/news/fed-holds-rates-steady-oct-2026/"
-    },
-    {
-     "label": "Nation Thailand · Fed holds",
-     "url": "https://www.nationthailand.com/news/world/40072859"
-    }
-   ]
-  },
-  {
-   "id": "2026-10-30-bigtech-capex-earnings",
-   "date": "2026-10-30",
-   "time_utc": "2026-10-30T20:00:00Z",
-   "run": "morning",
-   "level": "high",
-   "category": "earnings",
-   "title_th": "งบบริษัทเทคใหญ่: ลงทุน AI สูง กระแสเงินสดติดลบ หุ้นเทคร่วง",
-   "summary_th": "ปลาย ต.ค. 2026 Alphabet ร่วงกว่า 12% (29 ต.ค.) และ 30 ต.ค. Intel −28.6% จากคาดการณ์กำไรอ่อน Amazon มีกระแสเงินสดอิสระ 12 เดือน −$42.4 พันล้าน จากงบลงทุน $94.8 พันล้าน S&P 500 −1.8% Nasdaq −2.9% แย่สุดตั้งแต่ มิ.ย. ตลาดเข้าสู่โหมด 'ต้องเห็นผลตอบแทนก่อน' ของการลงทุน AI",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "ชิป / AI",
-     "direction": "mixed",
-     "strength": "high",
-     "reason_th": "งบลงทุนที่สูงยังหนุนความต้องการชิปและระบบไฟฟ้า แต่ความกังวลเรื่องผลตอบแทนทำให้หุ้น AI ถูกเทขาย"
-    },
-    {
-     "target": "AVGO",
-     "label_th": "Broadcom",
-     "direction": "mixed",
-     "strength": "medium",
-     "reason_th": "ลูกค้าคลาวด์ยังลงทุนชิปสั่งทำ แต่ราคาหุ้นถูกกดจากความกังวลรอบการลงทุน"
-    },
-    {
-     "target": "KLAC",
-     "label_th": "KLA",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "หุ้นอุปกรณ์ผลิตชิปผันผวนแรงตามมุมมองรอบการลงทุน"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "กองทุน NASDAQ",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "บริษัทเทคใหญ่มีน้ำหนักสูงในดัชนี"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ ค่าลงทุน/รายได้คลาวด์ในแอปคงที่ 1.58 เท่า",
-   "watch_next_th": "งบ Nvidia ปลาย พ.ย.",
-   "sources": [
-    {
-     "label": "AP via AJC · Oct 30",
-     "url": "https://www.ajc.com/news/2026/10/wall-street-tumbles-to-its-worst-day-since-june-after-the-sell-off-for-tech-stocks-deepens/"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-03-bkng-q3-ftc",
-   "date": "2026-11-03",
-   "time_utc": "2026-11-03T21:00:00Z",
-   "run": "morning",
-   "level": "medium",
-   "category": "earnings",
-   "title_th": "Booking งบ Q3: คืนห้องพัก +6.7% แต่โดน FTC และคาด Q4 อ่อน",
-   "summary_th": "Booking Holdings รายงานไตรมาส 3/2026 (3 พ.ย.) จำนวนคืนห้องพัก +6.7% แต่ตัดรายได้ $900 ล้านและตั้งสำรองขาดทุน $100 ล้านจากกรณี FTC และคาดไตรมาส 4 คืนห้องพักโตเพียง 1–3% จากผลกระทบการเดินทางในตะวันออกกลาง หุ้น BKNG ลง 4.8% วันที่ 6 พ.ย.",
-   "impacts": [
-    {
-     "target": "BKNG",
-     "label_th": "Booking",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "การเติบโตชะลอและค่าใช้จ่ายทางกฎหมายกดกำไร"
-    },
-    {
-     "target": "travel",
-     "label_th": "ท่องเที่ยว",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "ความต้องการเดินทางยังโต แต่ช้าลงในไตรมาส 4"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย DCA ต่อตามน้ำหนักของหมวดท่องเที่ยว",
-   "watch_next_th": "",
-   "sources": [
-    {
-     "label": "Finsee · Booking Q3 2026",
-     "url": "https://finsee.ai/earnings/bkng/2026/q3/en/"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-04-midterm-democratic-sweep",
-   "date": "2026-11-04",
-   "time_utc": "2026-11-04T21:00:00Z",
-   "run": "morning",
-   "level": "medium",
-   "category": "election",
-   "title_th": "เดโมแครตชนะเลือกตั้งกลางเทอม คุมทั้งสภาล่างและวุฒิสภา",
-   "summary_th": "ผลเลือกตั้ง 3 พ.ย. 2026 พรรคเดโมแครตชนะคุมทั้งสองสภา วันที่ 4 พ.ย. ดาวโจนส์ +3.03% S&P 500 +1.58% และน้ำมันดิบสหรัฐฯ ร่วงกว่า 8% เหลือ $88.12 เพราะตลาดคาดว่าแรงกดดันเรื่องสงครามอิหร่านและเงินเฟ้อจะเปลี่ยนนโยบาย แต่วันต่อมาตลาดกลับกังวลเรื่องการคุมเข้ม AI แทน",
-   "impacts": [
-    {
-     "target": "travel",
-     "label_th": "ท่องเที่ยว",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "น้ำมันที่ถูกลงช่วยลดต้นทุนสายการบินและค่าเดินทาง"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ / กลาโหม",
-     "direction": "mixed",
-     "strength": "medium",
-     "reason_th": "สภาเดโมแครตอาจทำให้การเพิ่มงบกลาโหมก้อนใหญ่ผ่านยากขึ้น แต่ความต้องการด้านความมั่นคงยังสูง"
-    },
-    {
-     "target": "health",
-     "label_th": "สุขภาพ",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "อาจมีแรงกดดันเรื่องราคายาและประกันมากขึ้นในปีหน้า"
-    },
-    {
-     "target": "ai",
-     "label_th": "ชิป / AI",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ตลาดกังวลการตรวจสอบ AI และการชะลอสร้างศูนย์ข้อมูลเพราะค่าไฟ"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องเปลี่ยนแผน ผลการเลือกตั้งมีผลระยะยาวผ่านนโยบาย DCA ต่อตามน้ำหนักเดิม",
-   "watch_next_th": "เส้นตายงบประมาณสหรัฐฯ 11 ธ.ค. และสภาชุดใหม่เริ่ม ม.ค. 2027",
-   "sources": [
-    {
-     "label": "StockTitan · Nov 4",
-     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-4-2026"
-    },
-    {
-     "label": "Reuters via Devdiscourse",
-     "url": "https://www.devdiscourse.com/article/international/4001634-democratic-sweep-adds-new-twist-to-markets-iran-ai-and-debt-worries"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-05-ai-selloff-crash",
-   "date": "2026-11-05",
-   "time_utc": "2026-11-05T21:00:00Z",
-   "run": "morning",
-   "level": "high",
-   "category": "market",
-   "title_th": "หุ้น AI ร่วงหนัก S&P 500 −4.4% Nasdaq เข้าสู่ช่วงปรับฐาน",
-   "summary_th": "5 พ.ย. 2026 S&P 500 −4.4% (แย่สุดตั้งแต่ เม.ย. 2025) Nasdaq −5.5% ต่ำกว่าจุดสูงสุด 6 ต.ค. เกิน 10% ดัชนีชิป SOX −12% Nvidia −9.3% จากความกังวลว่าสภาเดโมแครตจะทำให้การสร้างศูนย์ข้อมูล AI ช้าลงและแพงขึ้น วันที่ 6 พ.ย. ฟื้นบางส่วน: KLAC +6.7% ETN +4.5% SMH +3.6% QQQ +1.4%",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "ชิป / AI",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "หุ้นชิปและโครงสร้างพื้นฐาน AI ถูกเทขายเพราะกลัวการลงทุน AI ชะลอ"
-    },
-    {
-     "target": "KLAC",
-     "label_th": "KLA",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 54% แม้ฟื้น 6.7% วันที่ 6 พ.ย."
-    },
-    {
-     "target": "AVGO",
-     "label_th": "Broadcom",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "ต่ำกว่าจุดสูงสุด 39%"
-    },
-    {
-     "target": "ETN",
-     "label_th": "Eaton",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ต่ำกว่าจุดสูงสุด 26% จากความกังวลการชะลอศูนย์ข้อมูล"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "กองทุน NASDAQ",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "QQQ ต่ำกว่าจุดสูงสุด 13.6% เพราะน้ำหนักหุ้นเทคโนโลยีสูง"
-    },
-    {
-     "target": "main:sp500",
-     "label_th": "กองทุน S&P 500",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "SPY ต่ำกว่าจุดสูงสุด 5.6%"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ (หุ้นชิปลง 25–54% จากจุดสูงสุด) ทำตามแผนต่อไป",
-   "watch_next_th": "VIX ยังสูง 25.6 · งบ Nvidia ปลาย พ.ย. · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "AP via NBC Bay Area",
-     "url": "https://www.nbcbayarea.com/news/national-international/november-5-stock-market/4170982/"
-    },
-    {
-     "label": "Fox Business · Nov 5",
-     "url": "https://www.foxbusiness.com/markets/stocks-nov-5-2026"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-06-jobs-fed-hike-odds",
-   "date": "2026-11-06",
-   "time_utc": "2026-11-06T13:30:00Z",
-   "run": "morning",
-   "level": "high",
-   "category": "fed",
-   "title_th": "จ้างงาน ต.ค. แรงเกินคาด โอกาส Fed ขึ้นดอกเบี้ย ธ.ค. 77%",
-   "summary_th": "6 พ.ย. 2026 สหรัฐฯ เพิ่มการจ้างงาน 165,000 ตำแหน่ง (คาด 59,000) ว่างงาน 4.1% (คาด 4.2%) CME FedWatch ให้โอกาสขึ้นดอกเบี้ย 0.25% ในประชุม 9 ธ.ค. ที่ 76.8% พันธบัตร 10 ปีขึ้นเป็น ~4.87% และ 2 ปี 4.52% ความเชื่อมั่นผู้บริโภคเบื้องต้น พ.ย. ขึ้นเป็น 51",
-   "impacts": [
-    {
-     "target": "finance",
-     "label_th": "การเงิน / ธนาคาร",
-     "direction": "mixed",
-     "strength": "medium",
-     "reason_th": "ดอกเบี้ยสูงช่วยส่วนต่างดอกเบี้ยธนาคาร แต่เพิ่มความเสี่ยงหนี้เสียและทำให้คะแนนนโยบาย Fed ลดลง"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ดอกเบี้ยที่สูงขึ้นเพิ่มต้นทุนการถือทอง ทองลง ~1% เหลือ ~$4,048"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "กองทุน NASDAQ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "หุ้นเติบโตอ่อนไหวต่อดอกเบี้ยสูง"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "หุ้นเติบโตอย่าง RKLB/ASTS กดดันจากดอกเบี้ยสูง"
-    },
-    {
-     "target": "main:kkp",
-     "label_th": "KKP",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "ดอกเบี้ยสหรัฐฯ สูงทำให้เงินบาทอ่อนและเงินทุนไหลออก แต่ธนาคารไทยได้ประโยชน์จากส่วนต่างดอกเบี้ย"
-    }
-   ],
-   "what_to_do_th": "ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค. ไม่ต้องเปลี่ยนแผน DCA",
-   "watch_next_th": "CPI ต.ค. (กลาง พ.ย.) · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "InvestmentNews · October jobs",
-     "url": "https://www.investmentnews.com/fixed-income/october-jobs-report-beats-forecasts-lifting-december-fed-hike-odds/268915"
-    },
-    {
-     "label": "Kitco · Nov 6",
-     "url": "https://www.kitco.com/news/article/2026-11-06/gold-price-trades-near-4050oz-after-preliminary-consumer-sentiment-rises-51"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-06-drawdown-events",
-   "date": "2026-11-06",
-   "time_utc": "2026-11-06T21:00:00Z",
-   "run": "morning",
-   "level": "medium",
-   "category": "market",
-   "title_th": "9 รายการต่ำกว่าจุดสูงสุด 52 สัปดาห์เกิน 20%",
-   "summary_th": "ระบบราคาเริ่มติดตาม 6 พ.ย. พบ 9 รายการลงเกิน 20% จากจุดสูงสุด: ASTS −75.7%, RKLB −64.7%, KLAC −54.1%, AVGO −39.0%, BKNG −26.9%, ETN −25.7%, GLD −24.9%, GS −24.9%, ISRG −23.6% หุ้นชิปมาจากการเทขาย AI (5 พ.ย.) BKNG จากงบ 3 พ.ย. ทอง GLD จากความคาดหวังว่า Fed จะขึ้นดอกเบี้ย ธ.ค. (โอกาส ~77–78%) ทองลง ~1% เหลือ ~$4,048 วันที่ 6 พ.ย. ส่วน ASTS, RKLB, GS, ISRG ยังไม่พบข่าวเฉพาะในรอบนี้",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "ชิป / AI",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "KLAC, AVGO, ETN ลดลงแรงตามการเทขายหุ้น AI"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "ASTS และ RKLB ผันผวนสูงมาก RKLB ฟื้น 15.4% วันที่ 6 พ.ย. ก่อนงบไตรมาส 3"
-    },
-    {
-     "target": "BKNG",
-     "label_th": "Booking",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "งบไตรมาส 3 มีรายการ FTC และคาดการณ์ไตรมาส 4 อ่อน"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "GLD ต่ำกว่าจุดสูงสุด 24.9% ขณะตลาดคาด Fed ขึ้นดอกเบี้ย"
-    },
-    {
-     "target": "GS",
-     "label_th": "Goldman Sachs",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ต่ำกว่าจุดสูงสุด 24.9%"
-    },
-    {
-     "target": "ISRG",
-     "label_th": "Intuitive Surgical",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "ต่ำกว่าจุดสูงสุด 23.6% แม้ผ่าตัดยังโต ~14%"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ อยู่ในแผนต่อไป",
-   "watch_next_th": "งบ Rocket Lab ~9–10 พ.ย.",
-   "sources": [
-    {
-     "label": "Yahoo Finance (data/price_events.json)",
-     "url": "https://finance.yahoo.com/"
-    },
-    {
-     "label": "AP via NBC Bay Area",
-     "url": "https://www.nbcbayarea.com/news/national-international/november-5-stock-market/4170982/"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-07-iran-qeshm-strikes-hormuz",
-   "date": "2026-11-07",
-   "time_utc": "2026-11-07T13:43:00Z",
-   "run": "evening",
-   "level": "high",
-   "category": "war",
-   "title_th": "สหรัฐฯ โจมตีเกาะเกชม์ของอิหร่าน ช่องแคบฮอร์มุซตึงเครียด เสี่ยงขยายวง",
-   "summary_th": "ทรัมป์ยืนยัน (7 พ.ย.) ว่าสหรัฐฯ ทำ “การโจมตีเล็กน้อย” ที่เกาะเกชม์ในช่องแคบฮอร์มุซ ขณะที่ IRGC อ้างว่าเรือบรรทุกน้ำมันชนทุ่นระเบิดและไฟไหม้อีกลำ (ยังไม่มีการยืนยันจากหน่วยงานเดินเรือ) และยกเลิกข้อจำกัดระยะยิงขีปนาวุธ 1,200 ไมล์ ทรัมป์กำลังพิจารณาว่าจะกลับมาปฏิบัติการทางทหารเต็มรูปแบบหรือไม่ ราคาน้ำมันเบรนต์ดีดกลับ ~3.9% ไปที่ ~$98 หลังร่วงกว่า 8% วันที่ 5 พ.ย. ส่วนกาตาร์บอกว่าการเจรจาไกล่เกลี่ย “มีความคืบหน้า” อัปเดต 7 พ.ย. ค่ำ: กองบัญชาการ CENTCOM ยิงสกัดเรือพาณิชย์อีกลำที่พยายามฝ่าการปิดล้อมอิหร่าน (รวม 5 ลำตั้งแต่ ก.ค.) และตั้งหน่วย “Iron Gate” เพื่อตัดเส้นทางขนส่งทางบกและทะเลแคสเปียนของอิหร่าน ขณะที่ทรัมป์ย้ำว่า “กำลังคุยกับอิหร่าน และดีลอาจเกิดขึ้นได้” ยังไม่มีการกลับมาโจมตีเต็มรูปแบบ",
-   "impacts": [
-    {
-     "target": "main:sp500",
-     "label_th": "กองทุน S&P 500",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ถ้าสงครามขยายวงช่วงสุดสัปดาห์ ตลาดเปิดวันจันทร์อาจลงแรง เพราะน้ำมันแพงดันเงินเฟ้อและความคาดหวังให้ Fed ขึ้นดอกเบี้ย"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "กองทุน NASDAQ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "หุ้นเทคยังเปราะบางหลังร่วงหนักสัปดาห์นี้ ความเสี่ยงสงครามบวกดอกเบี้ยสูงกดดันหุ้นเติบโต"
-    },
-    {
-     "target": "travel",
-     "label_th": "ท่องเที่ยว",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "น้ำมันแพงเพิ่มต้นทุนสายการบินและค่าเดินทาง สงครามในอ่าวเปอร์เซียกระทบการเดินทางระหว่างประเทศ"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ / กลาโหม",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "ความขัดแย้งยืดเยื้อหนุนความต้องการอาวุธ เช่น LMT"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "สงครามหนุนทองในฐานะสินทรัพย์ปลอดภัย แต่ถ้าน้ำมันดันเงินเฟ้อจน Fed ขึ้นดอกเบี้ย ทองจะถูกกดดัน (ทองล่าสุด ~$4,065)"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขายเพราะข่าวสงคราม แผนยังซื้อตามปกติ ถ้าตลาดลงวันจันทร์ แผนจะใช้เงินสำรองซื้อเพิ่มตามระยะห่างจากจุดสูงสุด",
-   "watch_next_th": "ราคาน้ำมันตอนเปิดตลาดวันจันทร์ 9 พ.ย. · ประชุม รมต.ต่างประเทศ G7 ปารีส 9–10 พ.ย. · ความคืบหน้าการไกล่เกลี่ยของกาตาร์",
-   "sources": [
-    {
-     "label": "CBS News live updates · Nov 7",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
-    },
-    {
-     "label": "Gulf News · Nov 6",
-     "url": "https://gulfnews.com/world/mena/us-israel-iran-war-trump-warns-iran-heavy-hit-tehran-gulf-diplomacy-1.500737918"
-    },
-    {
-     "label": "Khaleej Times live · Nov 7",
-     "url": "https://www.khaleejtimes.com/world/mena/us-israel-iran-saudi-arabia-yemen-war-live-updates-november-7-2026"
-    },
-    {
-     "label": "Geopolitics Unplugged · Nov 7",
-     "url": "https://geopoliticsunplugged.substack.com/p/trump-confirms-new-us-strikes-on"
-    },
-    {
-     "label": "RFE/RL live blog · Nov 7",
-     "url": "https://www.rferl.org/a/iran-live-blog-trump-middle-east/33803414.html"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-08-houthi-riyadh-tankers-hormuz",
-   "date": "2026-11-08",
-   "time_utc": "2026-11-08T09:26:00Z",
-   "run": "evening",
-   "level": "high",
-   "category": "war",
-   "title_th": "ฮูตียิงขีปนาวุธใส่ริยาด อาคารอารัมโกเสียหาย เรือน้ำมันไฟไหม้ในฮอร์มุซ",
-   "summary_th": "เช้า 8 พ.ย. 2026 ซาอุฯ สกัดขีปนาวุธ 3 ลูก ขีปนาวุธร่อน 2 ลูก และโดรน 1 ลำจากเยเมน โดยมีเป้าหมายที่ริยาด เศษชิ้นส่วนตกใส่อาคารของ Saudi Aramco ในริยาด เสียหายเล็กน้อยและไม่มีผู้บาดเจ็บ ส่วนคืนวันที่ 7 พ.ย. UKMTO รายงานว่าเรือบรรทุกน้ำมันลำหนึ่งในช่องแคบฮอร์มุซถูกวัตถุไม่ทราบชนิดโจมตี และอีกลำเกิดไฟไหม้ใกล้คาซับ (โอมาน) โดยลูกเรือปลอดภัย ขณะที่อิหร่านอ้างว่าเรือ 2 ลำชนทุ่นระเบิด การเจรจาที่กาตาร์ไกล่เกลี่ยยังไม่คืบหน้า (อิหร่านกำลังพิจารณาข้อเสนอ) ตลาดน้ำมันและหุ้นสหรัฐฯ จะเปิดคืนวันจันทร์เวลาไทย จึงยังไม่มีราคาตอบสนอง",
-   "impacts": [
-    {
-     "target": "main:sp500",
-     "label_th": "กองทุน S&P 500",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "สงครามที่ลามไปถึงซาอุฯ อาจทำให้น้ำมันแพงขึ้นเมื่อตลาดเปิด ดันเงินเฟ้อและเพิ่มโอกาสที่ Fed จะขึ้นดอกเบี้ย ธ.ค."
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "กองทุน NASDAQ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "หุ้นเทคยังเปราะบางหลังร่วงหนักสัปดาห์ก่อน ข่าวสงครามบวกดอกเบี้ยสูงกดดันหุ้นเติบโตเพิ่ม"
-    },
-    {
-     "target": "travel",
-     "label_th": "ท่องเที่ยว",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "น้ำมันเครื่องบินแพงขึ้นและความไม่ปลอดภัยในตะวันออกกลางกดดันการเดินทาง (BKNG, MAR, ABNB)"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "สงครามหนุนทองในฐานะสินทรัพย์ปลอดภัย แต่ถ้าน้ำมันดันความคาดหวังให้ Fed ขึ้นดอกเบี้ย ก็ฉุดทองลง"
-    },
-    {
-     "target": "main:kkp",
-     "label_th": "KKP",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "ไทยนำเข้าน้ำมัน ราคาน้ำมันที่สูงขึ้นกดดันเศรษฐกิจและหุ้นไทย"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขายตามข่าว ถ้าตลาดเปิดวันจันทร์แล้วลง แผนจะใช้เงินสำรองซื้อเพิ่มตามระยะห่างจากจุดสูงสุดโดยอัตโนมัติ เตรียมใจรับความผันผวนเท่านั้น",
-   "watch_next_th": "ราคาน้ำมันตอนเปิดตลาด (เช้าวันจันทร์ 9 พ.ย. เวลาไทย) · ท่าทีทรัมป์ว่าจะโจมตีอิหร่านรอบใหม่หรือไม่ · ผลการเจรจาผ่านกาตาร์ · CPI สหรัฐฯ ต.ค. กลาง พ.ย.",
-   "sources": [
-    {
-     "label": "ABC News – Iran live updates (8 พ.ย.)",
-     "url": "https://abcnews.com/International/live-updates/iran-live-updates-trump-good-call-netanyahu/?id=137762456"
-    },
-    {
-     "label": "Al Jazeera – Iran war live (8 พ.ย.)",
-     "url": "https://www.aljazeera.com/news/liveblog/2026/11/8/iran-war-live-explosions-hit-qeshm-us-moves-to-block-land-supply-routes"
-    },
-    {
-     "label": "ABC (Australia) – Explosions heard in Strait of Hormuz",
-     "url": "https://www.abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730"
-    },
-    {
-     "label": "Iran International – live blog",
-     "url": "https://www.iranintl.com/en/liveblog/202611077068"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-09-iran-mines-irongate",
-   "date": "2026-11-09",
-   "time_utc": "2026-11-09T01:00:00+00:00",
-   "run": "morning",
-   "level": "high",
-   "category": "war",
-   "title_th": "เรือน้ำมันชนทุ่นระเบิดในฮอร์มุซ สหรัฐฯ ตั้งหน่วยปิดล้อมอิหร่านทางบก",
-   "summary_th": "8 พ.ย. 2026 กองทัพอิหร่านระบุเรือน้ำมัน 2 ลำไฟไหม้หลังชนทุ่นระเบิดในช่องแคบฮอร์มุซ และกองกำลังพิทักษ์ปฏิวัติประกาศยกเลิกเพดานพิสัยขีปนาวุธ 2,000 กม. ขณะที่ 7 พ.ย. สหรัฐฯ ตั้ง Task Force Iron Gate สกัดการขนส่งทางบกของอิหร่าน ส่วนอิหร่านกำลังพิจารณาข้อเสนอลดความตึงเครียดของกาตาร์ อัปเดตค่ำ 9 พ.ย.: ทรัมป์ให้สัมภาษณ์ CNN ว่า \"แทบไม่น่าจะต้อง\" สั่งโจมตีอิหร่านอีก หากการเจรจานิวเคลียร์และการเปิดช่องแคบฮอร์มุซคืบหน้า ราคาน้ำมันจึงลดลง (Brent ~96.5 ดอลลาร์ −1.8%, WTI ราว 88–90 ดอลลาร์) และนายกฯ กาตาร์มีกำหนดพบทรัมป์ที่ทำเนียบขาววันนี้",
-   "impacts": [
-    {
-     "target": "travel",
-     "label_th": "ท่องเที่ยว",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ความเสี่ยงต่อการขนส่งน้ำมันยังอยู่ แต่สัญญาณผ่อนคลายของทรัมป์ทำให้น้ำมันลดลง 9 พ.ย. ถ้าเจรจาคืบหน้า ต้นทุนสายการบินจะเบาลง"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ/กลาโหม",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "สงครามยืดเยื้อหนุนความต้องการอาวุธและงบกลาโหม เช่น LMT"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ (GLD)",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "ความเสี่ยงภูมิรัฐศาสตร์ทำให้นักลงทุนหาสินทรัพย์ปลอดภัย"
-    },
-    {
-     "target": "main:sp500",
-     "label_th": "S&P 500",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "น้ำมันลดลงช่วยลดแรงกดดันเงินเฟ้อ ฟิวเจอร์ส S&P 500 บวก ~0.5% เช้า 9 พ.ย. แต่ถ้าความขัดแย้งปะทุอีกตลาดอาจกลับมาผันผวน"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขายหรือรีบซื้อตามข่าว สถานการณ์ยังเปลี่ยนเร็ว แผนยังซื้อตามปกติและใช้เงินสำรองเมื่อราคาย่อ",
-   "watch_next_th": "ผลการพบกันระหว่างนายกฯ กาตาร์กับทรัมป์ 9 พ.ย. · ประชุม G7 ปารีส 9–10 พ.ย. · ราคาน้ำมันหลัง CPI 10 พ.ย.",
-   "sources": [
-    {
-     "label": "ABC News (8 Nov 2026)",
-     "url": "https://www.abc.net.au/news/2026-11-08/iran-strait-of-hormuz-update-explosions-talks/107360730"
-    },
-    {
-     "label": "CBS News live updates",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
-    },
-    {
-     "label": "The National (9 Nov 2026)",
-     "url": "https://www.thenationalnews.com/business/energy/2026/11/09/oil-edges-lower-as-trump-plays-down-prospect-of-new-us-attacks-on-iran/"
-    }
-   ],
-   "updated_at": "2026-11-09T13:55:58+00:00"
-  },
-  {
-   "id": "2026-11-09-msft-oracle-winddown",
-   "date": "2026-11-09",
-   "time_utc": "2026-11-09T01:00:00+00:00",
-   "run": "morning",
-   "level": "medium",
-   "category": "sector",
-   "title_th": "Microsoft ทยอยเลิกเช่าเซิร์ฟเวอร์ AI จาก Oracle",
-   "summary_th": "Bloomberg รายงาน (6 พ.ย. 2026) ว่า Microsoft ไม่ต่อสัญญาเช่าพลังประมวลผล AI จาก Oracle ที่ทำไว้ปี 2023 เพราะใช้ชิป Nvidia รุ่นเก่า และย้ายงานไปศูนย์ข้อมูลของตัวเอง หุ้น Oracle ลง ~4% วันศุกร์ ข่าวนี้ตอกย้ำคำถามว่าบริษัทใหญ่เริ่มคุมการลงทุน AI หรือไม่",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "ชิป/AI",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "สะท้อนว่าชิปรุ่นเก่าเริ่มด้อยค่า แต่ Microsoft ยังลงทุนศูนย์ข้อมูลของตัวเองต่อ ความต้องการชิปรุ่นใหม่จึงยังอยู่"
-    },
-    {
-     "target": "AVGO",
-     "label_th": "Broadcom",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "บริษัทใหญ่ที่สร้างศูนย์ข้อมูลเองมักใช้ชิปออกแบบเฉพาะและอุปกรณ์เครือข่ายของ Broadcom แต่ความกังวลงบลงทุน AI กดดันทั้งกลุ่ม"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "ข่าวลดการเช่าพลังประมวลผลเพิ่มความกังวลเรื่องฟองสบู่ AI หลัง Nasdaq ร่วง 3.4% สัปดาห์ก่อน"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย หมวด AI ยังอยู่โซนเฝ้าระวัง แผนยัง DCA ต่อและใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ",
-   "watch_next_th": "Ramp AI Index ต.ค. ออก 11 พ.ย. · งบ Nvidia ปลาย พ.ย.",
-   "sources": [
-    {
-     "label": "Reuters via Manila Times (8 Nov 2026)",
-     "url": "https://www.manilatimes.net/2026/11/08/business/top-business/microsoft-is-winding-down-deal-with-oracle/2464470"
-    },
-    {
-     "label": "TokenPost (8 Nov 2026)",
-     "url": "https://www.tokenpost.com/news/business/51955"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-09-week-cpi-rklb",
-   "date": "2026-11-09",
-   "time_utc": "2026-11-09T01:00:00+00:00",
-   "run": "morning",
-   "level": "medium",
-   "category": "inflation",
-   "title_th": "สัปดาห์นี้: CPI สหรัฐฯ (10 พ.ย.) ชี้ทาง Fed ขึ้นดอกเบี้ย ธ.ค.",
-   "summary_th": "สัปดาห์ก่อน S&P 500 ลง 2.68% (แย่สุดตั้งแต่ เม.ย. 2025) Nasdaq ลง 3.37% VIX 25.6 ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย 9 ธ.ค. ราว 77% สัปดาห์นี้มี CPI ต.ค. (อ. 10 พ.ย.) และ PPI (ศ. 13 พ.ย.) ส่วน Rocket Lab ประกาศงบไตรมาส 3 คืนนี้หลังตลาดปิด",
-   "impacts": [
-    {
-     "target": "finance",
-     "label_th": "การเงิน",
-     "direction": "mixed",
-     "strength": "medium",
-     "reason_th": "เงินเฟ้อสูงทำให้โอกาสขึ้นดอกเบี้ยเพิ่ม ส่วนต่างหุ้นกู้กว้างขึ้นเป็น 3.48% แต่ดอกเบี้ยสูงช่วยรายได้ดอกเบี้ยธนาคาร"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ",
-     "direction": "mixed",
-     "strength": "medium",
-     "reason_th": "CPI สูงกว่าคาดจะกดหุ้นเติบโต ถ้าต่ำกว่าคาดอาจทำให้ตลาดฟื้น"
-    },
-    {
-     "target": "RKLB",
-     "label_th": "Rocket Lab",
-     "direction": "mixed",
-     "strength": "high",
-     "reason_th": "งบและ backlog ไตรมาส 3 อาจทำให้หุ้นที่ต่ำกว่าจุดสูงสุด ~65% แกว่งแรงทั้งขึ้นและลง"
-    }
-   ],
-   "what_to_do_th": "ระวังความผันผวนช่วงประกาศ CPI และก่อนประชุม Fed 9 ธ.ค. ไม่ต้องขาย ซื้อตามแผนต่อไป",
-   "watch_next_th": "CPI ต.ค. อ. 10 พ.ย. · งบ Rocket Lab เช้า 10 พ.ย. เวลาไทย · PPI ศ. 13 พ.ย. · ตลาดพันธบัตรปิด 11 พ.ย.",
-   "sources": [
-    {
-     "label": "PalmaFutures Sunday Post (8 Nov 2026)",
-     "url": "https://palmafutures.substack.com/p/sunday-post-recap-and-week-ahead-19f"
-    },
-    {
-     "label": "FRED BAMLH0A0HYM2",
-     "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
-    },
-    {
-     "label": "Finviz: Rocket Lab Q3 date",
-     "url": "https://finviz.com/news/404901/rocket-lab-announces-date-of-third-quarter-2026-financial-results"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-10-relief-rally-oil-drop",
-   "date": "2026-11-10",
-   "time_utc": "2026-11-10T01:10:43+00:00",
-   "run": "morning",
-   "level": "medium",
-   "category": "market",
-   "title_th": "หุ้นสหรัฐฯ ฟื้นแรง Nasdaq-100 +3.4% น้ำมันลง ~5% VIX ลด 22%",
-   "summary_th": "9 พ.ย. 2026 ตลาดหุ้นสหรัฐฯ ฟื้นหลังสัปดาห์ก่อนร่วงหนัก: Nasdaq-100 +3.4% (QQQ +3.54%) S&P 500 +2.4% หุ้นชิปนำ (SMH +5.1%, KLAC +9.3%, AVGO +8.8%) น้ำมัน WTI ลง 4.9% เหลือ $86.38 หลังทรัมป์บอกว่าการโจมตีอิหร่านรอบใหม่ 'ไม่น่าเกิด' หากการเจรจาคืบหน้า ดัชนีความกลัว VIX ลง 22% เหลือ 19.9",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "ชิป/AI",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "แรงขายหุ้น AI หยุดชั่วคราว KLAC/AVGO/ETN เด้ง 5–9% แต่ยังต่ำกว่าจุดสูงสุด 22–50% จึงยังผันผวนได้อีก"
-    },
-    {
-     "target": "travel",
-     "label_th": "ท่องเที่ยว",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "น้ำมันถูกลงช่วยลดต้นทุนเดินทางและสายการบิน"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "หุ้นเทคใหญ่ฟื้นนำตลาด แต่ Nasdaq ยังอยู่ในช่วงปรับฐาน (−10.6% จากจุดสูงสุด)"
-    },
-    {
-     "target": "main:sp500",
-     "label_th": "S&P 500",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "ความกังวลสงครามและน้ำมันลดลงช่วยหนุนตลาดทั้งกระดาน"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "ดอลลาร์อ่อน (DXY −0.6%) ช่วยให้ GLD บวก 1.9%"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องไล่ซื้อเพิ่มหรือขาย ทำตามแผน DCA ปกติ งบยืดหยุ่นจะลดการใช้เงินสำรองเองเมื่อราคาฟื้นขึ้น",
-   "watch_next_th": "CPI ต.ค. คืนนี้ 10 พ.ย. (คาด +0.3% ต่อเดือน) · การเจรจาสหรัฐฯ–อิหร่าน · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "TheStreet: Stock market today Nov 9 2026",
-     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-09-202"
-    },
-    {
-     "label": "CBS News Iran war live updates",
-     "url": "https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-10-rklb-q3-backlog",
-   "date": "2026-11-10",
-   "time_utc": "2026-11-10T01:10:43+00:00",
-   "run": "morning",
-   "level": "medium",
-   "category": "earnings",
-   "title_th": "Rocket Lab งบ Q3: รายได้สูงสุดใหม่ backlog $3.6 พันล้าน แต่ Neutron เลื่อนไป 2027",
-   "summary_th": "9 พ.ย. 2026 Rocket Lab รายงานรายได้ไตรมาส 3 $268 ล้าน (+73% เทียบปีก่อน สูงกว่าคาด $257 ล้าน) backlog ≈ $3.57 พันล้าน (+52% จากไตรมาสก่อน, ราว 3 เท่าของปีก่อน) คาดรายได้ Q4 $270–290 ล้าน แต่ขาดทุน $0.12/หุ้น แย่กว่าคาด และจรวด Neutron เลื่อนบินครั้งแรกไปปี 2027 หุ้นบวก 10.9% ในวันนั้นก่อนลง ~6.5% หลังตลาดปิด",
-   "impacts": [
-    {
-     "target": "RKLB",
-     "label_th": "Rocket Lab",
-     "direction": "mixed",
-     "strength": "medium",
-     "reason_th": "ยอดสั่งงานโตแรงยืนยันความต้องการ แต่ความล่าช้าของ Neutron และขาดทุนทำให้หุ้นผันผวน"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ/กลาโหม",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "สัญญาณ backlog ของ Rocket Lab ในแอปดีขึ้นจาก +137% เป็น +225% ดัชนีหมวดขยับขึ้นเล็กน้อย"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย หุ้น RKLB ยังต่ำกว่าจุดสูงสุด ~61% แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ อยู่ในกรอบแผน",
-   "watch_next_th": "กำหนดการทดสอบถัง Neutron ขั้นที่ 1 · งบกลาโหมหลังงบชั่วคราวหมด 11 ธ.ค.",
-   "sources": [
-    {
-     "label": "Rocket Lab Q3 2026 results",
-     "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts"
-    },
-    {
-     "label": "Investing.com: Rocket Lab Q3 2026 call transcript",
-     "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-rocket-lab-beats-revenue-in-q3-2026-stock-swings-lower-after-hours-93CH-5013696"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-10-anthropic-ipo-1-3t",
-   "date": "2026-11-10",
-   "time_utc": "2026-11-10T12:00:00+00:00",
-   "run": "evening",
-   "level": "low",
-   "category": "sector",
-   "title_th": "Anthropic ยื่นไฟลิง IPO มูลค่า ~1.3 ล้านล้านดอลลาร์ เริ่มโรดโชว์",
-   "summary_th": "10 พ.ย. 2026 Anthropic ยื่นเอกสารเข้าตลาดโดยตั้งมูลค่าราว $1.3 ล้านล้าน คาดกำหนดราคาภายในเดือนนี้ รายได้ต่อไตรมาสราว $17 พันล้านแต่ยังขาดทุน และมีภาระสัญญาซื้อกำลังประมวลผล AI ราว $895 พันล้าน ด้าน TSMC รายงานรายได้ ต.ค. โตเกือบ 6 เท่าจากปีก่อน",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "ชิป/AI",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "สัญญาซื้อกำลังประมวลผลมหาศาลยืนยันความต้องการชิปและศูนย์ข้อมูล (AVGO, KLAC, ETN) แต่ IPO ใหญ่อาจดึงเงินออกจากหุ้น AI อื่นชั่วคราว"
-    }
-   ],
-   "what_to_do_th": "ข้อมูลประกอบเท่านั้น ไม่ต้องเปลี่ยนแผน",
-   "watch_next_th": "วันกำหนดราคา IPO สัปดาห์หน้า · งบ CoreWeave คืนนี้",
-   "sources": [
-    {
-     "label": "AP via WPTF",
-     "url": "https://www.wptf.com/2026/11/10/before-the-bell-wall-street-mixed-in-early-trading/"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-10-iran-war-over-brent-90",
-   "date": "2026-11-10",
-   "time_utc": "2026-11-10T13:20:00+00:00",
-   "run": "evening",
-   "level": "medium",
-   "category": "geopolitics",
-   "title_th": "ทรัมป์ว่าไม่ต้องมีดีลกับอิหร่าน เรือน้ำมันถูกโจมตี เบรนต์เด้งเหนือ $94",
-   "summary_th": "10 พ.ย. 2026 หลังทรัมป์กล่าวว่าสงครามกับอิหร่าน 'ทางทหารจบลงแล้วโดยปริยาย' น้ำมันเบรนต์ลง 2.2% เหลือ $90.55 (ต่ำสุดรอบ 3 เดือน) WTI ลง 1.8% เหลือ $84.94 ตลาดเอเชียบวกแรง Nikkei +2.9% Kospi +4.4% ยุโรปบวก ~1% อัปเดต 11 พ.ย.: น้ำมันเด้งกลับ เบรนต์ +1.1% เป็น $92.53 WTI +0.8% เป็น $86.71 เพราะยังมีเรือน้ำมันถูกโจมตี/ชนทุ่นระเบิดในช่องแคบฮอร์มุซ (ต.ค. ถูกโจมตี 37 ลำ สูงสุดตั้งแต่เริ่มสงคราม และอีก ~10 ลำใน พ.ย.) และเจ้าหน้าที่อิหร่านระบุว่ายังไม่มีการเจรจากับสหรัฐฯ อัปเดต 12 พ.ย.: IRGC ระบุเกิดระเบิดที่ซูเปอร์แทงเกอร์ 2 ลำในฮอร์มุซ (รวมน้ำมันกว่า 4 ล้านบาร์เรล) และทรัมป์โพสต์ว่า 'หมดเวลาทำข้อตกลงแล้ว' สหรัฐฯ ไม่จำเป็นต้องมีดีล ทำให้แผนของกาตาร์ที่จะเปิดช่องแคบอีกครั้งไม่แน่นอน เบรนต์ขึ้น ~1.4% เหนือ $94 หลังร่วงก่อนหน้าเพราะซาอุฯ เพิ่มการผลิตเป็น 10.56 ล้านบาร์เรล/วัน (สัปดาห์ก่อนเบรนต์ลง 16%)",
-   "impacts": [
-    {
-     "target": "travel",
-     "label_th": "ท่องเที่ยว",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "น้ำมันเด้งกลับและความหวังสันติภาพลดลง เพิ่มต้นทุนการเดินทางของ BKNG, MAR, ABNB"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ/กลาโหม",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "ความตึงเครียดที่ยืดเยื้อหนุนหุ้นกลาโหมอย่าง LMT"
-    },
-    {
-     "target": "main:sp500",
-     "label_th": "S&P 500 (เงินเฟ้อ)",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "น้ำมันสูงทำให้เงินเฟ้อลดช้า หนุนเหตุผลให้ Fed ขึ้นดอกเบี้ย ธ.ค."
-    }
-   ],
-   "what_to_do_th": "ไม่เปลี่ยนแผน ข่าวสงครามสลับขึ้นลงทุกวัน ซื้อตามแผนต่อไป ถ้าตลาดย่อเงินสำรองจะซื้อเพิ่มเอง",
-   "watch_next_th": "การพบกันระหว่างรองปธน. Vance กับเจ้าหน้าที่อิหร่าน · ข้อเสนอกาตาร์ · การโจมตีเรือในฮอร์มุซ",
-   "sources": [
-    {
-     "label": "AP via WPTF: Before the bell, 10 Nov 2026",
-     "url": "https://www.wptf.com/2026/11/10/before-the-bell-wall-street-mixed-in-early-trading/"
-    },
-    {
-     "label": "Reuters via Yahoo Finance",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-dow-futures-climb-102635174.html"
-    },
-    {
-     "label": "Reuters via Yahoo Finance: Oil rebounds as Hormuz attacks blunt truce hopes (11 Nov 2026)",
-     "url": "https://finance.yahoo.com/energy/articles/oil-rebounds-hormuz-shipping-attacks-045504059.html"
-    },
-    {
-     "label": "Le Private Banker: Oil jumps above $94 (12 Nov 2026)",
-     "url": "https://leprivatebanker.com/2026/11/12/oil-jumps-above-94-after-trump-says-us-doesnt-need-an-iran-deal-clouding-a-qatari-plan-to-reopen-hormuz/"
-    },
-    {
-     "label": "Newsquawk US Opening News (12 Nov 2026)",
-     "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---12th-november-2026"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-10-cpi-hot-waller-hike",
-   "date": "2026-11-10",
-   "time_utc": "2026-11-10T13:30:00+00:00",
-   "run": "evening",
-   "level": "high",
-   "category": "inflation",
-   "title_th": "CPI ต.ค. สูงกว่าคาด ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย ธ.ค. ~100%",
-   "summary_th": "10 พ.ย. 2026 CPI สหรัฐฯ เดือน ต.ค. +0.4% เทียบเดือนก่อน (คาด +0.3%) core +0.3% (คาด +0.2%) Waller หนุนขึ้น 0.25% ในการประชุม 8–9 ธ.ค. และให้พิจารณา 0.50% ส่วน Logan (Fed ดัลลัส) ว่าควรขึ้นอีกอย่างน้อย 2 ครั้ง CME FedWatch ให้โอกาสขึ้นดอกเบี้ย ธ.ค. ~100% (จาก 84%) โดยโอกาสขึ้น 0.50% ~10% ตลาดปิด: S&P 500 −0.38%, Nasdaq −0.74%, ผลตอบแทน 10 ปี +0.14 จุดเป็น ~5.0% ทอง (GLD) −2.7%",
-   "impacts": [
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ดอกเบี้ยสูงขึ้นกดมูลค่าหุ้นเติบโต Nasdaq ลง 0.74% ใน 10 พ.ย. หลังเด้งแรงวันก่อน"
-    },
-    {
-     "target": "ai",
-     "label_th": "ชิป/AI",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "KLAC/AVGO/ETN เพิ่งเด้ง 5–9% แต่ยังผันผวนสูง ดอกเบี้ยขาขึ้นทำให้หุ้นราคาแพงอ่อนไหวมากที่สุด"
-    },
-    {
-     "target": "main:sp500",
-     "label_th": "S&P 500",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "ต้นทุนเงินกู้สูงขึ้นกระทบกำไรบริษัทโดยรวม แต่ตลาดคาดการขึ้นดอกเบี้ยไว้ก่อนแล้วบางส่วน"
-    },
-    {
-     "target": "finance",
-     "label_th": "การเงิน",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "ดอกเบี้ยสูงช่วยรายได้ดอกเบี้ยของ JPM แต่ความผันผวนตลาดอาจกระทบ GS"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ดอกเบี้ยและผลตอบแทนพันธบัตรที่พุ่งขึ้นกดราคาทอง GLD ลง 2.7% ใน 10 พ.ย. ตอนนี้ต่ำกว่าจุดสูงสุด 52 สัปดาห์ ~26%"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย แผนยังซื้อทุกโซนตามปกติ ทองและหุ้นเทคที่ย่อลง แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเอง ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค.",
-   "watch_next_th": "PPI ศ. 13 พ.ย. · ตลาดพันธบัตรปิด 11 พ.ย. · ประชุม Fed 8–9 ธ.ค. · CPI พ.ย. 10 ธ.ค.",
-   "sources": [
-    {
-     "label": "BLS: CPI October 2026",
-     "url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm"
-    },
-    {
-     "label": "ZeroHedge: CPI hotter than expected, Waller",
-     "url": "https://www.zerohedge.com/markets/cpi-prints-hotter-expected-rate-hike-odds-soar-waller-sparks-hawkish-panic"
-    },
-    {
-     "label": "Yahoo Finance live, 10 Nov 2026",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-10-dow-sp-500-nasdaq-inflation-data-cpi-090627830.html"
-    },
-    {
-     "label": "Seoul Economic Daily: Dec hike odds 100% (11 Nov 2026)",
-     "url": "https://en.sedaily.com/world/2026/11/11/december-rate-hike-odds-hit-100-percent-after-hot-us"
-    },
-    {
-     "label": "TheStreet: Stock market today Nov 10 2026",
-     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-11-asts-q3-drop",
-   "date": "2026-11-11",
-   "time_utc": "2026-11-11T01:07:35+00:00",
-   "run": "morning",
-   "level": "medium",
-   "category": "earnings",
-   "title_th": "ASTS ร่วง 10.6% หลังงบ Q3 ต่ำกว่าคาด BofA หั่นราคาเป้า",
-   "summary_th": "10 พ.ย. 2026 AST SpaceMobile ปิด $32.98 (−10.6%) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 75% หลังรายได้ไตรมาส 3 = $42.3 ล้าน (+187% แต่ต่ำกว่าคาด ~$46 ล้าน) BofA ลดราคาเป้าจาก $80 เป็น $45 เพราะปล่อยดาวเทียมช้ากว่าแผน (เป้า ~45 ดวงกลางปี 2027) และจรวด Blacklift ของตัวเองยังอีกนานถึงปลายปี 2028 บริษัทคงเป้ารายได้ปี 2026 ที่ $150–200 ล้าน",
-   "impacts": [
-    {
-     "target": "ASTS",
-     "label_th": "AST SpaceMobile",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "ความล่าช้าในการปล่อยดาวเทียมเลื่อนรายได้เชิงพาณิชย์ออกไป และดอกเบี้ยขาขึ้นกดมูลค่าหุ้นที่ยังขาดทุนมากที่สุด"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ/กลาโหม",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "RKLB ก็ร่วงช่วงเช้า 10 พ.ย. แม้ backlog สูงสุดใหม่ ขณะที่ LMT บวก 2.4% หมวดนี้ผันผวนสูงจากหุ้นอวกาศเติบโต"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย ASTS ยังซื้อตามน้ำหนักในแผน ราคาที่ต่ำกว่าจุดสูงสุดมากทำให้แผนงบยืดหยุ่นใช้เงินสำรองซื้อเพิ่ม แต่หุ้นตัวนี้ผันผวนมาก อย่าซื้อเกินแผน",
-   "watch_next_th": "งานเปิดตัวจรวด Blacklift 12 พ.ย. · กำหนดปล่อยดาวเทียม BlueBird ชุดถัดไปกับ SpaceX",
-   "sources": [
-    {
-     "label": "Motley Fool: Why AST SpaceMobile plunged today",
-     "url": "https://www.fool.com/investing/2026/11/10/why-ast-spacemobile-plunged-today/"
-    },
-    {
-     "label": "24/7 Wall St.: RKLB/ASTS 10 Nov 2026",
-     "url": "https://247wallst.com/investing/2026/11/10/rocket-lab-sinks-9-despite-record-backlog-ast-spacemobile-falls-6-on-bofa-price-target-cut-spacex-slides-3/"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-11-coreweave-ai-rebound",
-   "date": "2026-11-11",
-   "time_utc": "2026-11-12T01:35:00+00:00",
-   "run": "morning",
-   "level": "medium",
-   "category": "sector",
-   "title_th": "หุ้นชิปเด้งแรงหลังงบ CoreWeave: Nasdaq-100 ปิด +2.6% VIX ลด 10%",
-   "summary_th": "11 พ.ย. 2026 หลังงบ CoreWeave (รายได้ Q3 +168%, งานในมือ $132.5 พันล้าน) คลายกังวลความต้องการ AI ตลาดสหรัฐฯ ปิดบวก: QQQ (Nasdaq-100) +2.62% SPY (S&P 500) +1.43% กองทุนหุ้นชิป SMH +5.67% และ VIX ลด 9.9% เหลือ 17.5 ในพอร์ต KLAC +6.2% AVGO +5.2% ETN +2.4% RKLB +5.7% ASTS +7.0% ขณะที่ทองคำ (GLD) −1.1% ผลตอบแทนพันธบัตร 10 ปีค้าง ~5.0% (ตลาดพันธบัตรปิดวัน Veterans Day)",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "ชิป/AI",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "ความต้องการศูนย์ข้อมูลยังแข็งแรง หนุนยอดสั่งชิปและเครื่องจักรผลิตชิป (AVGO, KLAC) และอุปกรณ์ไฟฟ้า (ETN) แต่หุ้นยังต่ำกว่าจุดสูงสุด 27–46%"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "หุ้นเทคใหญ่ฟื้นตัวต่อเนื่อง แต่ดอกเบี้ยขาขึ้นและโอกาส Fed ขึ้นดอกเบี้ย ธ.ค. ยังกดดัน"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "เงินไหลกลับเข้าหุ้นและดอลลาร์แข็งค่า (ดัชนีดอลลาร์ +0.65%) ทำให้ทองอ่อนตัว"
-    }
-   ],
-   "what_to_do_th": "ไม่เปลี่ยนแผน ซื้อตามน้ำหนักปกติ ไม่ต้องซื้อไล่ราคา หุ้นชิปยังห่างจุดสูงสุดมาก แผนงบยืดหยุ่นยังใช้เงินสำรองซื้อเพิ่มตามระดับการย่อ",
-   "watch_next_th": "งบ Applied Materials และ Cisco 12 พ.ย. (หลังตลาดปิด) · PPI 13 พ.ย. · ผลประมูล PJM ภายใน 2 ธ.ค. · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "CoinCentral: Nasdaq futures jump as CoreWeave results ease AI worries",
-     "url": "https://coincentral.com/stock-market-today-nasdaq-futures-jump-as-coreweave-results-ease-ai-demand-worries"
-    },
-    {
-     "label": "StockTwits via Yahoo Finance: S&P 500, Nasdaq futures rise premarket",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/p-500-nasdaq-futures-rise-095935016.html"
-    },
-    {
-     "label": "Yahoo Finance ราคาปิด 11 พ.ย. (data/market.json)",
-     "url": "https://finance.yahoo.com/"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-09-nvidia-huang-probe",
-   "date": "2026-11-13",
-   "time_utc": "2026-11-13T01:05:58+00:00",
-   "run": "morning",
-   "level": "high",
-   "category": "sector",
-   "title_th": "เจนเซน หวง ลาออกจากซีอีโอ Nvidia หุ้น NVDA ปิด −4% แต่ AVGO +5%",
-   "summary_th": "12 พ.ย. 2026 เจนเซน หวง ประกาศลาออกจากตำแหน่งซีอีโอ Nvidia หลังถูกสอบสวน บอร์ดตั้ง Colette Kress (CFO) เป็นซีอีโอรักษาการ ตามพาดหัวข่าว หุ้น NVDA ระหว่างวันร่วงหนักสุดราว 14% ก่อนปิดลงกว่า 4% ขณะที่เงินไหลไปหุ้นชิปคู่แข่ง: AVGO ปิด +4.97% ที่ $362.38 ส่วน KLAC −1.98% และ SMH −1.31% (ข้อมูลจากพาดหัวข่าวและ Yahoo Finance; รอบนี้เปิดอ่านเนื้อข่าวเต็มไม่ได้)",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "ชิป / AI",
-     "direction": "mixed",
-     "strength": "medium",
-     "reason_th": "ความไม่แน่นอนด้านผู้นำของผู้ผลิต GPU รายใหญ่สุดทำให้หุ้นกลุ่ม AI ผันผวน แต่ความต้องการชิปและงบลงทุนของคลาวด์ยังไม่เปลี่ยน"
-    },
-    {
-     "target": "AVGO",
-     "label_th": "Broadcom",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "นักลงทุนย้ายเงินไปหาผู้ผลิตชิป AI ทางเลือก (ชิปสั่งทำของคลาวด์) AVGO ขึ้น ~5% ในวันเดียว"
-    },
-    {
-     "target": "KLAC",
-     "label_th": "KLA",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "อารมณ์ตลาดกลุ่มเซมิคอนดักเตอร์อ่อนลง แม้ธุรกิจเครื่องตรวจวัดชิปไม่ได้ผูกกับ Nvidia โดยตรง"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "Nvidia มีน้ำหนักมากในดัชนี QQQ ปิด −0.35% ต่ำกว่าจุดสูงสุด ~9.4%"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย หุ้นชิปในแผน (KLAC, AVGO, ETN) ยังซื้อแบบ DCA ตามน้ำหนักโซนเดิม ถ้าราคาย่อต่อ แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเอง",
-   "watch_next_th": "การแต่งตั้งซีอีโอถาวรของ Nvidia · งบ Nvidia ไตรมาสถัดไป (ปลาย พ.ย.) · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "TechCrunch: Nvidia's Jensen Huang resigns, names CFO Colette Kress interim CEO (12 Nov 2026)",
-     "url": "https://techcrunch.com/2026/11/12/nvidias-jensen-huang-resigns-chipmaker-names-cfo-colette-kress-as-interim-ceo/"
-    },
-    {
-     "label": "CNBC: Nvidia stock closes down over 4% after Huang resignation",
-     "url": "https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html"
-    },
-    {
-     "label": "Yahoo Finance: Markets News, Nov. 12, 2026",
-     "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nasdaq-p-131805045.html"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-12-dollar-high-gold-below-4000",
-   "date": "2026-11-13",
-   "time_utc": "2026-11-13T01:05:58+00:00",
-   "run": "morning",
-   "level": "medium",
-   "category": "rates",
-   "title_th": "บอนด์ 10 ปีแตะ 5.10% ดอลลาร์แข็ง ทอง (GLD) ปิด −2.5%",
-   "summary_th": "12 พ.ย. ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปีขึ้นไปปิด 5.10% (+0.10 จุด) ดัชนีดอลลาร์ 103.17 สูงสุดตั้งแต่ เม.ย. 2025 จากการคาดว่า Fed จะขึ้นดอกเบี้ย 9 ธ.ค. หลัง CPI ร้อนแรง GLD ปิด −2.49% ที่ $356.10 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 28% น้ำมัน WTI +2.8% ที่ $88.92 และ VIX +7% เป็น 18.75 (Yahoo Finance)",
-   "impacts": [
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ดอกเบี้ยจริงและดอลลาร์ที่สูงขึ้นลดความน่าสนใจของทองที่ไม่มีดอกผล"
-    },
-    {
-     "target": "finance",
-     "label_th": "การเงิน/ธนาคาร",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "ดอกเบี้ยสูงช่วยส่วนต่างดอกเบี้ยของธนาคาร แต่ GS และ JPM ปิดลงเล็กน้อยวันนี้"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ/กลาโหม",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "หุ้นเติบโตอย่าง RKLB อ่อนไหวต่อดอกเบี้ยระยะยาว สัญญาณดอกเบี้ย 3 เดือนแย่ลง (+0.46 จุด)"
-    }
-   ],
-   "what_to_do_th": "ไม่เปลี่ยนแผน ทองที่ลงลึกจากจุดสูงสุดทำให้แผนงบยืดหยุ่นใช้เงินสำรองซื้อเพิ่มเองตามกฎ ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค.",
-   "watch_next_th": "PPI สหรัฐฯ 13 พ.ย. · ความเชื่อมั่นผู้บริโภค ม.มิชิแกน · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "Newsquawk US Opening News (12 Nov 2026)",
-     "url": "https://www.newsquawk.com/headlines/newsquawk-daily-us-opening-news---12th-november-2026"
-    },
-    {
-     "label": "Yahoo Finance UK (12 Nov 2026)",
-     "url": "https://uk.finance.yahoo.com/news/nasdaq-futures-fall-nvidia-leadership-100447985.html"
-    },
-    {
-     "label": "Yahoo Finance GLD",
-     "url": "https://finance.yahoo.com/quote/GLD"
-    },
-    {
-     "label": "Yahoo Finance ^TNX",
-     "url": "https://finance.yahoo.com/quote/^TNX"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-13-ppi-oct-light",
-   "date": "2026-11-13",
-   "time_utc": "2026-11-13T14:39:27+00:00",
-   "run": "evening",
-   "level": "medium",
-   "category": "inflation",
-   "title_th": "PPI ต.ค. ต่ำกว่าคาดเล็กน้อย ฟิวเจอร์สหุ้นสหรัฐฯ บวก NVDA ฟื้น +2%",
-   "summary_th": "13 พ.ย. 2026 ดัชนีราคาผู้ผลิต (PPI) ต.ค. ขึ้น 0.3% (คาด 0.4%) เทียบปีก่อน 6.5% (คาด 6.6%) ส่วนพื้นฐานไม่รวมอาหาร/พลังงานขึ้น 0.3% ตามคาด แต่หมวดที่ตัดบริการการค้าออกขึ้น 0.5% (คาด 0.3%) หลังตัวเลข ฟิวเจอร์ส S&P 500 +0.4% Nasdaq-100 +0.2% และ Nvidia ก่อนตลาดเปิด +2.2% หลังร่วง 4.3% เมื่อวาน ตลาดยังให้โอกาส Fed ขึ้นดอกเบี้ย 9 ธ.ค. ~100% (0.25% ราว 87%, 0.50% ราว 13%) บอนด์ 10 ปี ~5.13%",
-   "impacts": [
-    {
-     "target": "main:sp500",
-     "label_th": "S&P 500",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "เงินเฟ้อฝั่งผู้ผลิตไม่ร้อนกว่าคาด ลดความกังวลว่า Fed จะขึ้นดอกเบี้ยแรงกว่า 0.25% ช่วยให้หุ้นฟื้นเล็กน้อย"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "Nvidia ฟื้นหลังข่าวซีอีโอลาออก แต่ดอกเบี้ยระยะยาวเหนือ 5% ยังกดมูลค่าหุ้นเติบโต"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "ทองทรงตัวราว $3,885 ดอลลาร์แข็ง (103.2) และโอกาสขึ้นดอกเบี้ยยังกดดัน แต่เงินเฟ้อไม่เร่งตัวเพิ่ม"
-    }
-   ],
-   "what_to_do_th": "ไม่เปลี่ยนแผน ซื้อตามน้ำหนักปกติ ตัวเลขนี้ไม่ได้เปลี่ยนภาพว่า Fed น่าจะขึ้นดอกเบี้ย ธ.ค. ถ้าตลาดย่อลงก่อนประชุม แผนจะใช้เงินสำรองซื้อเพิ่มเองตามกฎ",
-   "watch_next_th": "งบ Nvidia 17 พ.ย. (หลังตลาดปิด) · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "TipRanks: U.S. Stocks Rise on Lighter-Than-Expected October PPI (13 Nov 2026)",
-     "url": "https://www.tipranks.com/news/u-s-stocks-rise-on-lighter-than-expected-october-ppi"
-    },
-    {
-     "label": "Quackonomist Pre-Market 13 Nov 2026",
-     "url": "https://quackonomist.substack.com/p/quackonomist-pre-market-13-nov-2026"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-13-amat-cisco-ai-capex",
-   "date": "2026-11-13",
-   "time_utc": "2026-11-13T14:39:27+00:00",
-   "run": "evening",
-   "level": "medium",
-   "category": "earnings",
-   "title_th": "Applied Materials งบดี คาดการณ์เกินคาด หนุนหุ้นเครื่องจักรผลิตชิป (KLAC)",
-   "summary_th": "12 พ.ย. (หลังตลาดปิด) Applied Materials รายงานรายได้ไตรมาส $10.41 พันล้าน (+53%) กำไรต่อหุ้น $4.16 (คาด $4.06) และคาดรายได้ไตรมาสหน้า $11.1 พันล้าน สูงกว่าตลาดคาด (~$10.8–10.9 พันล้าน) จากความต้องการชิป AI หุ้น AMAT +3% หลังปิดตลาด KLAC ก่อนตลาดเปิด +1% ส่วน Cisco รายได้ +24% และเพิ่มเป้ารายได้ AI จากคลาวด์เป็น $9 พันล้าน แต่อัตรากำไรขั้นต้นลด หุ้น −2.7% ก่อนตลาดเปิด ขณะที่ AVGO −1.5% หลังพุ่ง 5.5% เมื่อวาน",
-   "impacts": [
-    {
-     "target": "KLAC",
-     "label_th": "KLA",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "AMAT เป็นคู่แข่งโดยตรงในธุรกิจเครื่องจักรผลิตชิป ยอดขายและคาดการณ์ที่แข็งแรงสะท้อนว่าโรงงานชิปยังลงทุนเพิ่มต่อ ซึ่งเป็นผลดีกับ KLAC ที่ยังต่ำกว่าจุดสูงสุด ~48%"
-    },
-    {
-     "target": "ai",
-     "label_th": "ชิป / AI",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "งบ AMAT และ Cisco ยืนยันว่าการลงทุนโครงสร้างพื้นฐาน AI ยังเติบโต แม้ Cisco จะเจอแรงกดดันด้านต้นทุนและอัตรากำไร"
-    }
-   ],
-   "what_to_do_th": "ไม่เปลี่ยนแผน ซื้อหุ้นกลุ่ม AI ตามน้ำหนักโซนปกติ ไม่ต้องซื้อไล่ราคา KLAC ที่ย่อลึกยังได้เงินสำรองซื้อเพิ่มตามกฎ",
-   "watch_next_th": "งบ Nvidia 17 พ.ย. · งบ Broadcom ต้น ธ.ค.",
-   "sources": [
-    {
-     "label": "456X Morning Brief 13 Nov 2026 (Applied Materials)",
-     "url": "https://404kresearch.substack.com/p/456x-morning-brief-november-13-2026"
-    },
-    {
-     "label": "Quackonomist Pre-Market 13 Nov 2026",
-     "url": "https://quackonomist.substack.com/p/quackonomist-pre-market-13-nov-2026"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-14-chip-selloff-nvda-earnings",
-   "date": "2026-11-14",
-   "time_utc": "2026-11-14T01:07:04+00:00",
-   "run": "morning",
-   "level": "high",
-   "category": "sector",
-   "title_th": "หุ้นชิปกลับตัวร่วง AVGO −5.1% KLAC −3.6% ก่อนงบ Nvidia 17 พ.ย.",
-   "summary_th": "13 พ.ย. 2026 แรงซื้อหุ้นชิปคู่แข่ง Nvidia เมื่อวันก่อนกลับตัวเป็นแรงขายทำกำไร AMD ร่วงราว 9–11% AVGO ปิด −5.07% ที่ $345.89 KLAC −3.63% ที่ $151.59 SMH −3.13% ขณะที่ HSBC ลดคำแนะนำ Nvidia เป็น Hold (เป้า $170 จาก $365) หลังเจนเซน หวง ลาออกจากซีอีโอ Nasdaq ปิด −0.91% S&P 500 −0.40% Dow +0.10%",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "หมวดชิป / AI",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "ความไม่แน่นอนเรื่องผู้นำ Nvidia และแรงขายทำกำไร ทำให้หุ้นชิปผันผวนสูงก่อนงบไตรมาส Nvidia"
-    },
-    {
-     "target": "AVGO",
-     "label_th": "Broadcom",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "เงินที่ไหลเข้าเมื่อวันก่อนไหลออก ราคาต่ำกว่าจุดสูงสุด 52 สัปดาห์ราว 28%"
-    },
-    {
-     "target": "KLAC",
-     "label_th": "KLA",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ร่วงตามกลุ่มชิปแม้ Applied Materials งบดี ต่ำกว่าจุดสูงสุดราว 50%"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "หุ้นเทคและชิปมีน้ำหนักมากในดัชนี"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อ AVGO/KLAC เพิ่มเมื่อราคาย่อลึก DCA ตามแผนต่อ",
-   "watch_next_th": "งบไตรมาส Nvidia อังคาร 17 พ.ย. (ไทยเช้า 18 พ.ย.) · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "Yahoo Finance: Stock market today 13 พ.ย. 2026",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
-    },
-    {
-     "label": "24/7 Wall St.: AMD Tumbles, Broadcom and Intel Slide",
-     "url": "https://247wallst.com/investing/2026/11/13/amd-tumbles-11-broadcom-and-intel-slide-6-as-chip-rally-reverses/"
-    },
-    {
-     "label": "Yahoo Finance (data/market.json)",
-     "url": "https://finance.yahoo.com/"
-    }
-   ]
-  },
-  {
-   "id": "2026-11-14-yield-517-goolsbee",
-   "date": "2026-11-14",
-   "time_utc": "2026-11-14T01:07:04+00:00",
-   "run": "morning",
-   "level": "medium",
-   "category": "rates",
-   "title_th": "บอนด์ 10 ปีแตะ 5.17% Goolsbee ว่าเงินเฟ้อไม่คืบหน้า",
-   "summary_th": "13 พ.ย. ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปีขึ้นไปแตะ 5.17% ระหว่างวัน ก่อนปิด 5.15% (+0.05 จุด) แม้ PPI ต.ค. +0.3% ต่ำกว่าคาด Goolsbee (Fed ชิคาโก) ระบุว่าเงินเฟ้อ \"ไม่คืบหน้า\" ตลาดยังคาด Fed ขึ้นดอกเบี้ย 0.25% วันที่ 9 ธ.ค. (โอกาสขึ้น 0.50% เกิน 10%) ทอง GLD ทรงตัว −0.01%",
-   "impacts": [
-    {
-     "target": "finance",
-     "label_th": "หมวดการเงิน",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "ดอกเบี้ยสูงช่วยส่วนต่างรายได้ธนาคาร แต่เส้นดอกเบี้ยแบนลง (10ปี−2ปี +0.25%)"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ (GLD)",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "ดอกเบี้ยแท้จริงสูงขึ้นลดความน่าสนใจของทองที่ไม่มีดอกผล"
-    },
-    {
-     "target": "space",
-     "label_th": "อวกาศ / กลาโหม",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "หุ้นเติบโตอย่าง RKLB อ่อนไหวต่อดอกเบี้ยระยะยาว"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องเปลี่ยนแผน ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค.",
-   "watch_next_th": "ความเชื่อมั่นผู้บริโภค ม.มิชิแกน (ค่าสุดท้าย) 20 พ.ย. · ประชุม Fed 9 ธ.ค.",
-   "sources": [
-    {
-     "label": "TheStreet: Stock Market Today 13 พ.ย. 2026",
-     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-13-2026"
-    },
-    {
-     "label": "Yahoo Finance: Stock market today 13 พ.ย. 2026",
-     "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
-    }
-   ]
-  }
- ]
+  ]
 }
