@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T01:05:33+00:00",
+ "updated_at": "2026-11-14T01:06:27+00:00",
  "readings": [
   {
    "date": "2026-11-07",
@@ -403,6 +403,67 @@
      "key": "oil",
      "label": "TheStreet: Stock market today Nov 10 2026",
      "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-14",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.7,
+    "us_hotel_revpar_yoy_pct": 4.7,
+    "wti_usd": 88.65,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "medium",
+    "oil": "high",
+    "income": "high",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "ยังเปิดหน้า TSA ไม่ได้ ใช้ค่าเดิม −0.7% (สะสมถึง 23 ก.ย. ไม่ใช่ค่า 7 วันล่าสุด) ความเชื่อมั่นต่ำ (14 พ.ย.: เปิดหน้าแหล่งข้อมูลไม่ได้ในรอบนี้ จึงใช้ค่าเดิม ความเชื่อมั่นต่ำ)",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 1–7 พ.ย. 2026 = $109.55 +4.7% เทียบปีก่อน (อัตราเข้าพัก 65.1%, ราคาห้อง $168.35 +3.2%) ชะลอจาก +9.7% สัปดาห์ก่อน",
+    "oil": "น้ำมัน WTI $88.65/บาร์เรล (ปิด 13 พ.ย. Yahoo Finance) เทียบ $88.92 เดิม (-0.3%)",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม (14 พ.ย.: ยังไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% (ประกาศ 3 พ.ย.) เท่าเดิม (14 พ.ย.: ยังไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "prices": "ราคาปิด 13 พ.ย. 2026 จาก Yahoo Finance: BKNG $159.86 (-0.83% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -27.23%) · MAR $423.17 (-0.35% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -1.4%) · ABNB $186.35 (+2.88% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -2.18%)"
+   },
+   "prices": {
+    "BKNG": 159.86,
+    "MAR": 423.17,
+    "ABNB": 186.35
+   },
+   "prices_as_of": "2026-11-13",
+   "sources": [
+    {
+     "key": "income",
+     "label": "FRED DSPIC96",
+     "url": "https://fred.stlouisfed.org/data/DSPIC96"
+    },
+    {
+     "key": "oil",
+     "label": "Yahoo Finance CL=F (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/CL=F/"
+    },
+    {
+     "key": "oil",
+     "label": "TheStreet: Stock market today Nov 10 2026",
+     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-10-2026"
+    },
+    {
+     "key": "hotel",
+     "label": "CoStar via Hospitality Net: week ending 7 Nov 2026",
+     "url": "https://www.hospitalitynet.org/news/4135464/us-hotel-results-for-week-ending-7-november"
     },
     {
      "key": "prices",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T01:05:33+00:00",
+ "updated_at": "2026-11-14T01:06:27+00:00",
  "readings": [
   {
    "date": "2026-11-07",
@@ -408,6 +408,77 @@
      "key": "rates",
      "label": "Yahoo Finance ^TNX (data/market.json)",
      "url": "https://finance.yahoo.com/quote/^TNX"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-14",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 225.0,
+    "us10y_change_3m_pp": 0.45
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "medium",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 งบกลาโหม FY2027 ยังไม่ผ่าน ใช้งบชั่วคราว (CR) ถึง 11 ธ.ค. คาดต้องต่อ CR ถึง ม.ค. และงบปีนี้ไม่น่าผ่านทัน (Air & Space Forces 9 พ.ย.)",
+    "gpr": "ดัชนี GPR อัปเดตแล้ว 2 พ.ย. แต่อ่านตัวเลข ต.ค. ไม่ได้ ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ · ความขัดแย้งอิหร่านยังยกระดับ (ทุ่นระเบิดในฮอร์มุซ 8 พ.ย.) (14 พ.ย.: ยังไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "launches": "จรวดขึ้นสู่วงโคจรทั่วโลกปี 2026 ถึง 31 ต.ค. 254 ครั้ง +0.4% เทียบปีก่อน เท่าเดิม (14 พ.ย.: ยังไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 3/2026 ≈ $3.57 พันล้าน (ประกาศ 9 พ.ย.) เทียบ $1.1 พันล้าน ไตรมาส 3/2025 = +225% (จากเดิม +137% ของไตรมาส 2) โต 52% จากไตรมาสก่อน (14 พ.ย.: ยังไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 5.15% (ปิด 13 พ.ย. Yahoo Finance) เทียบ 3 เดือนก่อน 4.70% = +0.45 จุด (จากเดิม +0.46)",
+    "prices": "ราคาปิด 13 พ.ย. 2026 จาก Yahoo Finance: LMT $594.47 (-1.59% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -12.15%) · RKLB $61.57 (-3.90% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -59.02%) · ASTS $32.53 (-5.72% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -75.56%)"
+   },
+   "prices": {
+    "LMT": 594.47,
+    "RKLB": 61.57,
+    "ASTS": 32.53
+   },
+   "prices_as_of": "2026-11-13",
+   "sources": [
+    {
+     "key": "gpr",
+     "label": "Caldara–Iacoviello GPR",
+     "url": "https://www.matteoiacoviello.com/gpr.htm"
+    },
+    {
+     "key": "launches",
+     "label": "SpaceNexus launch cadence Oct 2026",
+     "url": "https://spacenexus.us/releases/launch-cadence/2026-10"
+    },
+    {
+     "key": "rklb_backlog",
+     "label": "Rocket Lab Q3 2026 results (9 Nov 2026)",
+     "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-announces-third-quarter-2026-financial-results-posts"
+    },
+    {
+     "key": "rklb_backlog",
+     "label": "TipRanks: Rocket Lab Q3 2025 backlog $1.1B",
+     "url": "https://www.tipranks.com/news/rklb-earnings-rocket-lab-stock-surges-after-strong-q3"
+    },
+    {
+     "key": "rates",
+     "label": "Yahoo Finance ^TNX (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/^TNX"
+    },
+    {
+     "key": "defense_budget",
+     "label": "Air & Space Forces: After Midterms, Congress Returns to Reckon with Defense Funding",
+     "url": "https://www.airandspaceforces.com/after-midterms-congress-reckon-defense-funding-ndaa/"
     },
     {
      "key": "prices",

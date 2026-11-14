@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T14:39:27+00:00",
+ "updated_at": "2026-11-14T01:07:04+00:00",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -1222,6 +1222,107 @@
     {
      "label": "Quackonomist Pre-Market 13 Nov 2026",
      "url": "https://quackonomist.substack.com/p/quackonomist-pre-market-13-nov-2026"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-14-chip-selloff-nvda-earnings",
+   "date": "2026-11-14",
+   "time_utc": "2026-11-14T01:07:04+00:00",
+   "run": "morning",
+   "level": "high",
+   "category": "sector",
+   "title_th": "หุ้นชิปกลับตัวร่วง AVGO −5.1% KLAC −3.6% ก่อนงบ Nvidia 17 พ.ย.",
+   "summary_th": "13 พ.ย. 2026 แรงซื้อหุ้นชิปคู่แข่ง Nvidia เมื่อวันก่อนกลับตัวเป็นแรงขายทำกำไร AMD ร่วงราว 9–11% AVGO ปิด −5.07% ที่ $345.89 KLAC −3.63% ที่ $151.59 SMH −3.13% ขณะที่ HSBC ลดคำแนะนำ Nvidia เป็น Hold (เป้า $170 จาก $365) หลังเจนเซน หวง ลาออกจากซีอีโอ Nasdaq ปิด −0.91% S&P 500 −0.40% Dow +0.10%",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "หมวดชิป / AI",
+     "direction": "negative",
+     "strength": "high",
+     "reason_th": "ความไม่แน่นอนเรื่องผู้นำ Nvidia และแรงขายทำกำไร ทำให้หุ้นชิปผันผวนสูงก่อนงบไตรมาส Nvidia"
+    },
+    {
+     "target": "AVGO",
+     "label_th": "Broadcom",
+     "direction": "negative",
+     "strength": "high",
+     "reason_th": "เงินที่ไหลเข้าเมื่อวันก่อนไหลออก ราคาต่ำกว่าจุดสูงสุด 52 สัปดาห์ราว 28%"
+    },
+    {
+     "target": "KLAC",
+     "label_th": "KLA",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ร่วงตามกลุ่มชิปแม้ Applied Materials งบดี ต่ำกว่าจุดสูงสุดราว 50%"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "หุ้นเทคและชิปมีน้ำหนักมากในดัชนี"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อ AVGO/KLAC เพิ่มเมื่อราคาย่อลึก DCA ตามแผนต่อ",
+   "watch_next_th": "งบไตรมาส Nvidia อังคาร 17 พ.ย. (ไทยเช้า 18 พ.ย.) · ประชุม Fed 9 ธ.ค.",
+   "sources": [
+    {
+     "label": "Yahoo Finance: Stock market today 13 พ.ย. 2026",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
+    },
+    {
+     "label": "24/7 Wall St.: AMD Tumbles, Broadcom and Intel Slide",
+     "url": "https://247wallst.com/investing/2026/11/13/amd-tumbles-11-broadcom-and-intel-slide-6-as-chip-rally-reverses/"
+    },
+    {
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-14-yield-517-goolsbee",
+   "date": "2026-11-14",
+   "time_utc": "2026-11-14T01:07:04+00:00",
+   "run": "morning",
+   "level": "medium",
+   "category": "rates",
+   "title_th": "บอนด์ 10 ปีแตะ 5.17% Goolsbee ว่าเงินเฟ้อไม่คืบหน้า",
+   "summary_th": "13 พ.ย. ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปีขึ้นไปแตะ 5.17% ระหว่างวัน ก่อนปิด 5.15% (+0.05 จุด) แม้ PPI ต.ค. +0.3% ต่ำกว่าคาด Goolsbee (Fed ชิคาโก) ระบุว่าเงินเฟ้อ \"ไม่คืบหน้า\" ตลาดยังคาด Fed ขึ้นดอกเบี้ย 0.25% วันที่ 9 ธ.ค. (โอกาสขึ้น 0.50% เกิน 10%) ทอง GLD ทรงตัว −0.01%",
+   "impacts": [
+    {
+     "target": "finance",
+     "label_th": "หมวดการเงิน",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยสูงช่วยส่วนต่างรายได้ธนาคาร แต่เส้นดอกเบี้ยแบนลง (10ปี−2ปี +0.25%)"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยแท้จริงสูงขึ้นลดความน่าสนใจของทองที่ไม่มีดอกผล"
+    },
+    {
+     "target": "space",
+     "label_th": "อวกาศ / กลาโหม",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "หุ้นเติบโตอย่าง RKLB อ่อนไหวต่อดอกเบี้ยระยะยาว"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องเปลี่ยนแผน ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค.",
+   "watch_next_th": "ความเชื่อมั่นผู้บริโภค ม.มิชิแกน (ค่าสุดท้าย) 20 พ.ย. · ประชุม Fed 9 ธ.ค.",
+   "sources": [
+    {
+     "label": "TheStreet: Stock Market Today 13 พ.ย. 2026",
+     "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-13-2026"
+    },
+    {
+     "label": "Yahoo Finance: Stock market today 13 พ.ย. 2026",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-friday-november-13-dow-sp-500-nasdaq-nvidia-ppi-141451558.html"
     }
    ]
   }

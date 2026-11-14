@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-13T01:05:33+00:00",
+ "updated_at": "2026-11-14T01:06:27+00:00",
  "readings": [
   {
    "confidence": {
@@ -1644,6 +1644,74 @@
      "key": "power_grid",
      "label": "Construction Review: PJM 6.8GW backstop",
      "url": "https://constructionreviewonline.com/6-8gw-pjm-data-center-plan-gets-20-billion-backstop-as-federal-grid-review-faces-5-month-pause/"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-14",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 3.3,
+    "gpu_spot_price_change_1m_pct": 23.6,
+    "enterprise_ai_adoption_pct": 66.71,
+    "enterprise_ai_adoption_change_3m_pp": 1.82,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "low",
+    "enterprise_adoption": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon (14 พ.ย.: ยังไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ · เจนเซน หวง ลาออกจากซีอีโอ Nvidia 12 พ.ย. (CFO Colette Kress รักษาการ) แต่ยังไม่มีหลักฐานว่ากระทบอุปทานชิป (14 พ.ย.: ยังไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "gpu_spot_price": "ราคาเช่า GPU H100 (Ornn OCPI) $3.30/ชม. (ปิด 9 พ.ย.) เทียบ $2.67 เมื่อ 11 ต.ค. = +23.6% ใน 1 เดือน (จากเดิม +15.1%) แต่ 7 วันล่าสุด −2.4% (14 พ.ย.: เปิดหน้าแหล่งข้อมูลไม่ได้ในรอบนี้ จึงใช้ค่าเดิม ความเชื่อมั่นต่ำ)",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ต.ค. 2026 = 66.7% (FRED อัปเดต 11 พ.ย.) เทียบ ก.ค. 64.9% = +1.8 จุดใน 3 เดือน (จากเดิม +2.1 จุด) การใช้ AI ในองค์กรยังโตต่อแต่ชะลอลงเล็กน้อย",
+    "power_grid": "คงไว้ 8.8/10 (เท่าเดิม) PJM รอผลประมูล backstop ~6.8 GW ต้น ธ.ค. และ FERC กำหนดส่งเอกสารกฎเชื่อมต่อโหลดขนาดใหญ่ 16 พ.ย. (14 พ.ย.: ยังไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "prices": "ราคาปิด 13 พ.ย. 2026 จาก Yahoo Finance: KLAC $151.59 (-3.63% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -49.76%) · AVGO $345.89 (-5.07% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -28.17%) · ETN $351.96 (-1.97% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -23.48%)"
+   },
+   "prices": {
+    "KLAC": 151.59,
+    "AVGO": 345.89,
+    "ETN": 351.96
+   },
+   "prices_as_of": "2026-11-13",
+   "sources": [
+    {
+     "key": "capex_vs_revenue",
+     "label": "Reuters via Manila Times: Microsoft winding down Oracle deal (8 Nov 2026)",
+     "url": "https://www.manilatimes.net/2026/11/08/business/top-business/microsoft-is-winding-down-deal-with-oracle/2464470"
+    },
+    {
+     "key": "gpu_spot_price",
+     "label": "Ornn OCPI H100 SXM",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "power_grid",
+     "label": "Construction Review: PJM 6.8GW backstop",
+     "url": "https://constructionreviewonline.com/6-8gw-pjm-data-center-plan-gets-20-billion-backstop-as-federal-grid-review-faces-5-month-pause/"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "FRED RAMPAIENTERPRISE (ข้อมูล ต.ค. 2026)",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "Ramp AI Index Nov 2026",
+     "url": "https://ramp.com/data/ai-index-nov-2026"
     },
     {
      "key": "prices",
