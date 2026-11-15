@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-14T01:06:27+00:00",
+ "updated_at": "2026-11-15T01:04:37Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -480,6 +480,47 @@
      "label": "Air & Space Forces: After Midterms, Congress Returns to Reckon with Defense Funding",
      "url": "https://www.airandspaceforces.com/after-midterms-congress-reckon-defense-funding-ndaa/"
     },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-15",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 225.0,
+    "us10y_change_3m_pp": 0.45
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "medium",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 งบกลาโหม FY2027 ยังไม่ผ่าน ใช้งบชั่วคราว (CR) ถึง 11 ธ.ค. คาดต้องต่อ CR ถึง ม.ค. และงบปีนี้ไม่น่าผ่านทัน (Air & Space Forces 9 พ.ย.) (15 พ.ย.: วันอาทิตย์ ไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "gpr": "ดัชนี GPR อัปเดตแล้ว 2 พ.ย. แต่อ่านตัวเลข ต.ค. ไม่ได้ ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ · ความขัดแย้งอิหร่านยังยกระดับ (ทุ่นระเบิดในฮอร์มุซ 8 พ.ย.) (15 พ.ย.: วันอาทิตย์ ไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "launches": "จรวดขึ้นสู่วงโคจรทั่วโลกปี 2026 ถึง 31 ต.ค. 254 ครั้ง +0.4% เทียบปีก่อน เท่าเดิม (15 พ.ย.: วันอาทิตย์ ไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 3/2026 ≈ $3.57 พันล้าน (ประกาศ 9 พ.ย.) เทียบ $1.1 พันล้าน ไตรมาส 3/2025 = +225% (จากเดิม +137% ของไตรมาส 2) โต 52% จากไตรมาสก่อน (15 พ.ย.: วันอาทิตย์ ไม่มีข้อมูลใหม่ ใช้ค่าเดิม)",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 5.15% (ปิด 13 พ.ย. Yahoo Finance) เทียบ 3 เดือนก่อน 4.70% = +0.45 จุด (เท่าเดิม +0.45)",
+    "prices": "ราคาปิดล่าสุด (ตลาดสหรัฐฯ ปิดเสาร์–อาทิตย์) จาก Yahoo Finance: LMT $596.04 (-1.33% วันที่ 13/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -11.92%) · RKLB $64.07 (-3.14% วันที่ 12/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -57.35%) · ASTS $34.5 (-5.79% วันที่ 12/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -74.08%)"
+   },
+   "prices": {
+    "LMT": 596.04,
+    "RKLB": 64.07,
+    "ASTS": 34.5
+   },
+   "prices_as_of": "2026-11-13",
+   "sources": [
     {
      "key": "prices",
      "label": "Yahoo Finance (data/market.json)",
