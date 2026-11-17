@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T01:08:12Z",
+ "updated_at": "2026-11-17T13:55:31Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -1684,6 +1684,119 @@
     {
      "label": "Yahoo Finance (data/market.json)",
      "url": "https://finance.yahoo.com/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-17-nvda-earnings-tonight-futures",
+   "date": "2026-11-17",
+   "time_utc": "2026-11-17T13:34:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "earnings",
+   "title_th": "ก่อนเปิดตลาด: ฟิวเจอร์ส Nasdaq +0.3% หุ้นเทคหยุดร่วง รองบ Nvidia คืนนี้",
+   "summary_th": "17 พ.ย. เวลา 8:31 น. (นิวยอร์ก) ฟิวเจอร์ส Nasdaq-100 +0.31% S&P 500 −0.10% Dow −0.70% หลังเช้ามืดติดลบราว −0.4% ถือว่าแรงขายหุ้นเทคชะลอหลังร่วง 3 วัน Nvidia จะประกาศงบหลังตลาดปิดคืนนี้ (เช้า 18 พ.ย. เวลาไทย) ตลาดจับตาว่าจะยังคงเป้ารายได้ปีหน้าโตราว 70% หรือไม่ ขณะที่กระทรวงพาณิชย์สหรัฐฯ เพิ่งออกกฎจำกัดจีนเข้าถึงชิป AI ผ่านดาต้าเซ็นเตอร์ในประเทศที่สาม",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "หมวดชิป / AI",
+     "direction": "mixed",
+     "strength": "high",
+     "reason_th": "งบและคาดการณ์ของ Nvidia เป็นตัวชี้ว่าการลงทุน AI ยังโตต่อหรือไม่ ถ้าดีอาจหนุน AVGO/KLAC ให้เด้ง ถ้าลดเป้าอาจถูกขายต่อ"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "กองทุน NASDAQ",
+     "direction": "mixed",
+     "strength": "medium",
+     "reason_th": "Nvidia มีน้ำหนักมากในดัชนี ผลงบคืนนี้อาจทำให้ดัชนีขยับแรงได้ทั้งขึ้นและลง"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "กองทุน S&P 500",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ได้รับผลทางอ้อมจากหุ้นเทคใหญ่ แต่กระจายความเสี่ยงมากกว่า"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องรีบซื้อหรือขายก่อนงบ แผนยังซื้อตามรอบปกติ ถ้าหุ้นชิปร่วงต่อหลังงบ แผนจะใช้เงินสำรองซื้อเพิ่มให้เอง",
+   "watch_next_th": "งบ Nvidia เช้า 18 พ.ย. เวลาไทย · บันทึกประชุม Fed 18 พ.ย. 2:00 น. นิวยอร์ก (ตี 2 วันที่ 19 เวลาไทย) · หุ้น Anthropic เริ่มซื้อขาย 19 พ.ย.",
+   "sources": [
+    {
+     "label": "TipRanks: Stock futures choppy ahead of Nvidia earnings (17 พ.ย. 2026)",
+     "url": "https://www.tipranks.com/news/stock-futures-choppy-ahead-of-nvidia-earnings-investors-digest-disney-and-home-depot-results"
+    },
+    {
+     "label": "TipRanks: Stock Market Today, Nov. 17 (17 พ.ย. 2026)",
+     "url": "https://www.tipranks.com/news/stock-market-today-nov-17-u-s-stocks-jittery-ahead-of-nvidia-results"
+    },
+    {
+     "label": "Yahoo Finance: Nvidia earnings in focus as US stock futures decline (17 พ.ย. 2026)",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-earnings-focus-us-stock-101304049.html"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-17-retail-sales-fed-hike-odds",
+   "date": "2026-11-17",
+   "time_utc": "2026-11-17T13:36:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "rates",
+   "title_th": "ยอดค้าปลีก ต.ค. +0.2% ดีกว่าคาด ตลาดยังคาด Fed ขึ้นดอกเบี้ย ธ.ค. ~91–95%",
+   "summary_th": "ยอดค้าปลีกสหรัฐฯ เดือน ต.ค. (ประกาศ 17 พ.ย.) เพิ่ม 0.2% ดีกว่าคาด 0.1% และไม่รวมรถยนต์ +0.6% (คาด 0.4%) แสดงว่าผู้บริโภคยังใช้จ่าย ตามข้อมูล CME FedWatch ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย 0.25% วันที่ 9 ธ.ค. ราว 91–95% และ 0.5% ราว 5–9% วันนี้มีกรรมการ Fed พูดอีก 4 คน (Waller, Musalem, Hammack, Williams) ซึ่งล้วนเอนไปทางขึ้นดอกเบี้ย ดอลลาร์ (DXY) แตะราว 103.5 สูงสุดของปี ทองยืนราว $3,860–3,870",
+   "impacts": [
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ดอกเบี้ยขาขึ้นและดอลลาร์แข็งทำให้การถือทองที่ไม่มีดอกเบี้ยน่าสนใจน้อยลง นักวิเคราะห์ StoneX มองแนวรับ $3,860 หากหลุดอาจลงต่อ"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "กองทุน S&P 500",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยที่สูงขึ้นกดมูลค่าหุ้น แต่เศรษฐกิจที่ยังแข็งช่วยพยุงกำไรบริษัท"
+    },
+    {
+     "target": "staples",
+     "label_th": "หมวดสินค้าอุปโภค (COST, PEP, MCD)",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "คนยังจับจ่ายแต่ระวังราคาสูง ร้านขายออนไลน์ +1.2% เฟอร์นิเจอร์ −2.3% ร้านอาหาร +0.2%"
+    },
+    {
+     "target": "finance",
+     "label_th": "หมวดการเงิน (JPM, GS, V)",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยสูงช่วยส่วนต่างดอกเบี้ยธนาคาร และการใช้จ่ายที่ยังโตหนุนปริมาณธุรกรรมบัตร"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน การขึ้นดอกเบี้ยเดือน ธ.ค. ตลาดรับรู้ไปแล้วเกือบเต็มที่ ถ้าทองหรือหุ้นย่อลงเพิ่ม แผนจะซื้อเพิ่มจากเงินสำรองเอง",
+   "watch_next_th": "บันทึกประชุม Fed 18 พ.ย. (ตี 2 วันที่ 19 เวลาไทย) · ประชุม Fed 8–9 ธ.ค.",
+   "sources": [
+    {
+     "label": "AP via WSLS: Shoppers slowed spending in October (17 พ.ย. 2026)",
+     "url": "https://www.wsls.com/business/2026/11/17/shoppers-slowed-spending-in-october-with-high-prices-leading-to-caution/"
+    },
+    {
+     "label": "Bloomingbit: U.S. October retail sales rise 0.2%, beating forecasts",
+     "url": "https://en.bloomingbit.io/feed/news/124635"
+    },
+    {
+     "label": "Newsquawk: Today's Fedspeak 17 Nov 2026",
+     "url": "https://www.newsquawk.com/headlines/primer---todays-fedspeak-17th-november-2026-includes-musalem-waller-hammack-williams"
+    },
+    {
+     "label": "CryptoTicker: Waller and the December rate bet (FedWatch)",
+     "url": "https://cryptoticker.io/en/bitcoin-price-waller-rate-hike-november-17-2026/"
+    },
+    {
+     "label": "StoneX: US Dollar, Gold, Silver outlook (17 พ.ย. 2026)",
+     "url": "https://www.stonex.com/en-gb/news-and-analysis/us-dollar-gold-silver-outlook-2026-extremes-and-key-levels-to-watch-2026-11-17/"
     }
    ]
   }

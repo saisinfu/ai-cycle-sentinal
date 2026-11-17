@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T01:08:12Z",
+ "updated_at": "2026-11-17T13:55:31Z",
  "note": "รายการที่มี reconstructed=true สร้างย้อนหลังจากข่าวที่บันทึกไว้ ไม่ใช่ข้อความแจ้งเตือนต้นฉบับ",
  "items": [
   {
@@ -326,6 +326,19 @@
     "2026-11-17-tech-selloff-before-nvda",
     "2026-11-17-asts-rklb-space-drop",
     "2026-11-16-warsh-speech-dec-hike"
+   ]
+  },
+  {
+   "id": "2026-11-17-evening",
+   "date": "2026-11-17",
+   "run": "evening",
+   "time_utc": "2026-11-17T13:55:31Z",
+   "headline_th": "ช่วงค่ำไม่มีข่าวสำคัญที่กระทบพอร์ต",
+   "level": "medium",
+   "text_th": "ช่วงค่ำไม่มีข่าวสำคัญที่กระทบพอร์ต\nยอดค้าปลีก ต.ค. +0.2% ดีกว่าคาด ตลาดยังคาด Fed ขึ้นดอกเบี้ย ธ.ค. ~91–95% ดอลลาร์แข็งกดทอง (GLD) · งบ Nvidia ออกเช้า 18 พ.ย. เวลาไทย\nดูรายละเอียดในแอป AI Sentinel",
+   "news_ids": [
+    "2026-11-17-nvda-earnings-tonight-futures",
+    "2026-11-17-retail-sales-fed-hike-odds"
    ]
   }
  ]
