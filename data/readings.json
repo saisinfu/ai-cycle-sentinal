@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-16T01:05:03+00:00",
+ "updated_at": "2026-11-17T01:07:31Z",
  "readings": [
   {
    "confidence": {
@@ -1803,6 +1803,59 @@
      "key": "prices",
      "label": "Yahoo Finance (data/market.json)",
      "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-17",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 3.3,
+    "gpu_spot_price_change_1m_pct": 23.6,
+    "enterprise_ai_adoption_pct": 66.71,
+    "enterprise_ai_adoption_change_3m_pp": 1.82,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "low",
+    "enterprise_adoption": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon (17 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ · เจนเซน หวง ลาออกจากซีอีโอ Nvidia 12 พ.ย. (CFO Colette Kress รักษาการ) แต่ยังไม่มีหลักฐานว่ากระทบอุปทานชิป (17 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "gpu_spot_price": "ราคาเช่า GPU H100 (Ornn OCPI) $3.30/ชม. (ปิด 9 พ.ย.) เทียบ $2.67 เมื่อ 11 ต.ค. = +23.6% ใน 1 เดือน (จากเดิม +15.1%) แต่ 7 วันล่าสุด −2.4% (17 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ต.ค. 2026 = 66.7% (FRED อัปเดต 11 พ.ย.) เทียบ ก.ค. 64.9% = +1.8 จุดใน 3 เดือน (จากเดิม +2.1 จุด) การใช้ AI ในองค์กรยังโตต่อแต่ชะลอลงเล็กน้อย (17 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "power_grid": "คงไว้ 8.8/10 (เท่าเดิม) อัปเดต: PJM ยื่นแผนประมูลไฟฟ้าสำรอง (backstop) ~6.8 GW ฉบับแก้ไขต่อ FERC 29 ต.ค. เลื่อนเริ่ม 1 มี.ค. 2027 ผลประมูลประกาศ 10 พ.ค. 2027 (ไม่ใช่ต้น ธ.ค.) ผู้ใช้ไฟรายใหญ่อย่างดาต้าเซ็นเตอร์ต้องรับภาระต้นทุน และ CRA คาดไฟขาด ~11.5 GW ภายในปี 2030 (Utility Dive 4 พ.ย.)",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิด 16 พ.ย.): KLAC $143.96 (-5.49% วันที่ 16/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -52.29%) · AVGO $333.4 (-3.92% วันที่ 16/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -30.77%) · ETN $336.88 (-4.56% วันที่ 16/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -26.76%)"
+   },
+   "prices": {
+    "KLAC": 143.96,
+    "AVGO": 333.4,
+    "ETN": 336.88
+   },
+   "prices_as_of": "2026-11-16",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "power_grid",
+     "label": "Utility Dive: PJM revised data center backstop procurement (4 พ.ย. 2026)",
+     "url": "https://www.utilitydive.com/news/pjm-revised-data-center-backstop-procurement-ferc/873551/"
+    },
+    {
+     "key": "power_grid",
+     "label": "DataCenterFeed: PJM amended backstop filing (4 พ.ย. 2026)",
+     "url": "https://datacenterfeed.com/article/pjm-amended-reliability-backstop-procurement-ferc-filing-november-2026"
     }
    ],
    "created_by": "claude",
