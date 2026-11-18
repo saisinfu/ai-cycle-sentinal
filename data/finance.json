@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T01:07:31Z",
+ "updated_at": "2026-11-18T01:06:10Z",
  "readings": [
   {
    "date": "2026-10-24",
@@ -1415,6 +1415,67 @@
      "key": "fed_policy",
      "label": "AP via BNN Bloomberg: Warsh on AI (16 พ.ย. 2026)",
      "url": "https://www.bnnbloomberg.ca/business/international/2026/11/16/us-fed-chairman-warsh-grapples-with-ais-potential-economic-impact-steers-clear-of-its-inflation-risk/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-18",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.29,
+    "hy_oas_pct": 3.23,
+    "loan_growth_pct": 7.15,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 34
+   },
+   "confidence": {
+    "yield_curve": "high",
+    "credit_spread": "high",
+    "loan_growth": "high",
+    "delinquency": "high",
+    "fed_policy": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่างพันธบัตรสหรัฐฯ 10 ปี ลบ 2 ปี +0.29% (FRED 16 พ.ย. 2026) เพิ่มจาก +0.27% (13 พ.ย.) เส้นดอกเบี้ยยังเป็นบวก ไม่กลับหัว",
+    "credit_spread": "ส่วนต่างดอกเบี้ยหุ้นกู้เสี่ยงสูง 3.23% (FRED 13 พ.ย. 2026) กว้างขึ้นเล็กน้อยจาก 3.20% (12 พ.ย.) ยังต่ำกว่าเกณฑ์กังวล 5% มาก",
+    "loan_growth": "สินเชื่อธนาคารสหรัฐฯ โตเฉลี่ย ~7.15% ต่อปี (H.8 ฉบับ 6 พ.ย.) เท่าเดิม (18 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) เท่าเดิม ข้อมูลไตรมาส 3 ยังไม่ออก (18 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "fed_policy": "คงไว้ 34/100 ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย 0.25% วันที่ 9 ธ.ค. ราว 95–97% (CME FedWatch อ้างโดย Reuters/ChainCatcher 17 พ.ย.) Waller เคยพูด 10 พ.ย. ว่าควรพิจารณาขึ้น 0.50% · บันทึกการประชุม ต.ค. ออก 18 พ.ย. (ตี 2 วันที่ 19 พ.ย. เวลาไทย)",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิด 17 พ.ย.): JPM $329.96 (-2.44% วันที่ 17/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -9.64%) · V $416.77 (-2.27% วันที่ 17/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -4.54%) · GS $877.52 (-1.57% วันที่ 17/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -23.83%)"
+   },
+   "prices": {
+    "JPM": 329.96,
+    "V": 416.77,
+    "GS": 877.52
+   },
+   "prices_as_of": "2026-11-17",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "yield_curve",
+     "label": "FRED T10Y2Y",
+     "url": "https://fred.stlouisfed.org/series/T10Y2Y"
+    },
+    {
+     "key": "credit_spread",
+     "label": "FRED BAMLH0A0HYM2",
+     "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+    },
+    {
+     "key": "fed_policy",
+     "label": "KuCoin/ChainCatcher: CME FedWatch Dec hike 96.8% (17 พ.ย. 2026)",
+     "url": "https://www.kucoin.com/news/flash/fed-s-december-25-bp-hike-probability-at-96-8"
+    },
+    {
+     "key": "fed_policy",
+     "label": "Reuters via MarketScreener: Wall Street ends lower ahead of Nvidia earnings (17 พ.ย. 2026)",
+     "url": "https://marketscreener.com/news/wall-street-ends-lower-ahead-of-nvidia-earnings-anthropic-debut-ce785edcdc8df226"
     }
    ],
    "created_by": "claude",

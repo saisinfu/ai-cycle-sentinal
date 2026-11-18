@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T01:07:31Z",
+ "updated_at": "2026-11-18T01:06:10Z",
  "readings": [
   {
    "confidence": {
@@ -1856,6 +1856,59 @@
      "key": "power_grid",
      "label": "DataCenterFeed: PJM amended backstop filing (4 พ.ย. 2026)",
      "url": "https://datacenterfeed.com/article/pjm-amended-reliability-backstop-procurement-ferc-filing-november-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-18",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 3.3,
+    "gpu_spot_price_change_1m_pct": 23.6,
+    "enterprise_ai_adoption_pct": 66.71,
+    "enterprise_ai_adoption_change_3m_pp": 1.82,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "low",
+    "enterprise_adoption": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon (18 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ · เจนเซน หวง ลาออกจากซีอีโอ Nvidia 12 พ.ย. (CFO Colette Kress รักษาการ) แต่ยังไม่มีหลักฐานว่ากระทบอุปทานชิป (18 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "gpu_spot_price": "ราคาเช่า GPU H100 (Ornn OCPI) $3.30/ชม. (ปิด 9 พ.ย.) เทียบ $2.67 เมื่อ 11 ต.ค. = +23.6% ใน 1 เดือน (จากเดิม +15.1%) แต่ 7 วันล่าสุด −2.4% (18 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ต.ค. 2026 = 66.7% (FRED อัปเดต 11 พ.ย.) เทียบ ก.ค. 64.9% = +1.8 จุดใน 3 เดือน (จากเดิม +2.1 จุด) การใช้ AI ในองค์กรยังโตต่อแต่ชะลอลงเล็กน้อย (18 พ.ย.: ไม่มีข้อมูลใหม่ที่เปิดอ่านได้ในรอบนี้ จึงใช้ค่าเดิม)",
+    "power_grid": "คงไว้ 8.8/10 (เท่าเดิม) อัปเดต 16 พ.ย.: PJM ยื่น FERC ขอลดเวลาศึกษาการเชื่อมต่อดาต้าเซ็นเตอร์จาก 24 เหลือ 12 เดือน (คาดตัดสินราวกลาง มี.ค. 2027) และเสนอกฎให้โหลดใหญ่ ≥50 MW ต้องทนไฟกระเพื่อมได้ (เริ่ม 16 ม.ค. 2027) หลังเหตุ 22 ก.ค. ดาต้าเซ็นเตอร์ 3.9 GW หลุดจากระบบ PJM คาดโหลดใหม่เพิ่มถึง 30 GW ภายในปี 2030 ส่วนไฟขาด 6.8 GW ยังต้องประมูลสำรองเริ่ม 1 มี.ค. 2027 คอขวดยังสูงอยู่",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิด 17 พ.ย.): KLAC $144.56 (+0.42% วันที่ 17/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -52.09%) · AVGO $341.6 (+2.46% วันที่ 17/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -29.07%) · ETN $337.11 (+0.07% วันที่ 17/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -26.71%)"
+   },
+   "prices": {
+    "KLAC": 144.56,
+    "AVGO": 341.6,
+    "ETN": 337.11
+   },
+   "prices_as_of": "2026-11-17",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "power_grid",
+     "label": "PJM Inside Lines: PJM proposes new rules to protect grid reliability (16 พ.ย. 2026)",
+     "url": "https://insidelines.pjm.com/pjm-proposes-new-rules-to-protect-grid-reliability-as-data-center-demand-grows/"
+    },
+    {
+     "key": "power_grid",
+     "label": "StartupFortune: PJM asks FERC to halve data center grid studies to 12 months (18 พ.ย. 2026)",
+     "url": "https://startupfortune.com/pjm-asks-ferc-to-halve-data-center-grid-studies-to-12-months/"
     }
    ],
    "created_by": "claude",

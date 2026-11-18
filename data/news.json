@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-17T13:55:31Z",
+ "updated_at": "2026-11-18T01:07:18Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -1797,6 +1797,281 @@
     {
      "label": "StoneX: US Dollar, Gold, Silver outlook (17 พ.ย. 2026)",
      "url": "https://www.stonex.com/en-gb/news-and-analysis/us-dollar-gold-silver-outlook-2026-extremes-and-key-levels-to-watch-2026-11-17/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-18-nvda-beat-market-4day-drop",
+   "date": "2026-11-18",
+   "time_utc": "2026-11-18T01:07:18Z",
+   "run": "morning",
+   "level": "high",
+   "category": "earnings",
+   "title_th": "Nvidia งบดีเกินคาด แต่ S&P 500 ลง 4 วันติด ต่ำสุดตั้งแต่ ก.ค. VIX 25",
+   "summary_th": "17 พ.ย. 2026 S&P 500 ปิด 7,340.53 (−1.03%) ลบ 4 วันติด ต่ำสุดตั้งแต่ 29 ก.ค. Dow −1.64% Nasdaq −0.74% หุ้นซอฟต์แวร์ถูกขายหนัก (Salesforce −9.5%) ดัชนีความกลัว VIX +11% เป็น 25.46 หลังตลาดปิด Nvidia รายงานรายได้ไตรมาส $115.8 พันล้าน +103% (คาด $109.1 พันล้าน) ดาต้าเซ็นเตอร์ $107.6 พันล้าน +110% และคาดไตรมาสหน้า ~$130 พันล้าน (คาด $125.1 พันล้าน) หุ้นขึ้นราว 2% หลังตลาดปิด",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "หมวดชิป / AI",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "ความต้องการชิป AI ยังโตแรงและคาดการณ์สูงกว่าตลาด ช่วยลดความกังวลว่าการลงทุน AI กำลังชะลอ แม้ปัญหาผู้บริหาร Nvidia ยังไม่จบ"
+    },
+    {
+     "target": "AVGO",
+     "label_th": "Broadcom (AVGO)",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "ปิด +2.46% ที่ $341.60 ก่อนงบ Nvidia ยอดลงทุนดาต้าเซ็นเตอร์ที่ยังโตหนุนชิปเครือข่ายและชิปสั่งทำของ Broadcom"
+    },
+    {
+     "target": "KLAC",
+     "label_th": "KLA (KLAC)",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ปิด +0.42% ยังต่ำกว่าจุดสูงสุด 52% งบ Nvidia ดีช่วยความเชื่อมั่น แต่หุ้นยังผันผวนสูง"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "กองทุน S&P 500",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "SPY −1.01% ต่ำกว่าจุดสูงสุด 6% ทุกกลุ่มลบ ตลาดกังวล Fed ขึ้นดอกเบี้ยและหุ้นซอฟต์แวร์ถูกกระทบจาก AI"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "กองทุน NASDAQ",
+     "direction": "mixed",
+     "strength": "medium",
+     "reason_th": "QQQ −0.73% ต่ำกว่าจุดสูงสุด 13.5% งบ Nvidia ที่ดีอาจช่วยพยุงวันนี้ แต่หุ้นซอฟต์แวร์ยังอ่อนแอ"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย ราคาที่ย่อลงทำให้แผนงบยืดหยุ่นใช้เงินสำรองซื้อเพิ่มเอง ทำตามแผนเดิม",
+   "watch_next_th": "หุ้น Anthropic (ANT) เข้าตลาด Nasdaq สัปดาห์นี้ · บันทึกประชุม Fed 18 พ.ย. (ตี 2 วันที่ 19 พ.ย. เวลาไทย)",
+   "sources": [
+    {
+     "label": "Motley Fool: Stock Market Today, Nov. 17 (17 พ.ย. 2026)",
+     "url": "https://www.fool.com/coverage/stock-market-today/2026/11/17/stock-market-today-nov-17-stocks-slide-on-ai-chip-and-tech-pressures-salesforce-plummets-9/"
+    },
+    {
+     "label": "Motley Fool: Nvidia sales double under an interim CEO (17 พ.ย. 2026)",
+     "url": "https://www.fool.com/investing/2026/11/17/nvidia-sales-double-under-an-interim-ceo-rapid-earnings-reaction/"
+    },
+    {
+     "label": "The Wall Street Republic: Nvidia beats and guides to $130bn (17 พ.ย. 2026)",
+     "url": "https://thewallstreetrepublic.substack.com/p/nvidia-beats-and-guides-to-130bn"
+    },
+    {
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-18-unh-cms-crush-rule",
+   "date": "2026-11-18",
+   "time_utc": "2026-11-18T01:07:18Z",
+   "run": "morning",
+   "level": "high",
+   "category": "policy",
+   "title_th": "UNH ร่วง 5.4% หลัง CMS เสนอกฎคุมเข้ม Medicare Advantage",
+   "summary_th": "17 พ.ย. 2026 UnitedHealth ปิด $389.68 (−5.42%) หลัง CMS เสนอกฎ \"CRUSH\" (16 พ.ย.) เพื่อตรวจสอบการโกงและคุมเข้มแผน Medicare Advantage และ ส.ว. วอร์เรนเร่งผลักร่างกฎหมายห้ามบริษัทประกันเป็นเจ้าของผู้ให้บริการรักษา ทั้งนี้ UNH เพิ่งรายงานกำไรไตรมาส 3 ดีกว่าคาด ($4.69 ต่อหุ้น เทียบคาด $4.15)",
+   "impacts": [
+    {
+     "target": "UNH",
+     "label_th": "UnitedHealth (UNH)",
+     "direction": "negative",
+     "strength": "high",
+     "reason_th": "กฎตรวจสอบที่เข้มขึ้นอาจลดรายได้จาก Medicare Advantage ซึ่งเป็นธุรกิจหลัก และร่างกฎหมายแยกธุรกิจกดดันโครงสร้างกลุ่ม Optum"
+    },
+    {
+     "target": "health",
+     "label_th": "หมวดสุขภาพ",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ความเสี่ยงนโยบายสุขภาพเพิ่มขึ้น (ปรับคะแนนเป็น 6.5/10) แต่ LLY และ ISRG ไม่ได้ถูกกระทบโดยตรง"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย กฎยังเป็นเพียงข้อเสนอ แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อ UNH เพิ่มเมื่อราคาย่อ",
+   "watch_next_th": "ช่วงรับฟังความเห็นต่อกฎ CRUSH · ความคืบหน้าร่างกฎหมาย Break Up Big Medicine",
+   "sources": [
+    {
+     "label": "JKN: UnitedHealth shares slide 5.4% (18 พ.ย. 2026)",
+     "url": "https://news.jkn.co.kr/editions/english/post/1103124"
+    },
+    {
+     "label": "Motley Fool: Stock Market Today, Nov. 17 (17 พ.ย. 2026)",
+     "url": "https://www.fool.com/coverage/stock-market-today/2026/11/17/stock-market-today-nov-17-stocks-slide-on-ai-chip-and-tech-pressures-salesforce-plummets-9/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-18-iran-qeshm-strike-tankers",
+   "date": "2026-11-18",
+   "time_utc": "2026-11-18T01:07:18Z",
+   "run": "morning",
+   "level": "high",
+   "category": "war",
+   "title_th": "สหรัฐฯ โจมตีฐานขีปนาวุธเกาะเกชม์ เรือน้ำมันถูกโจมตีในฮอร์มุซต่อเนื่อง",
+   "summary_th": "17 พ.ย. 2026 เจ้าหน้าที่ทหารสหรัฐฯ (ไม่เปิดเผยชื่อ) ระบุว่าเครื่องบินสหรัฐฯ โจมตีฐานยิงขีปนาวุธของ IRGC บนเกาะเกชม์ เพื่อตอบโต้โดรนอิหร่านที่โจมตีฐานในบาห์เรน (15 และ 17 พ.ย.) ช่วง 16–17 พ.ย. มีเรือน้ำมันถูกโจมตี/ชนทุ่นระเบิดหลายลำในช่องแคบฮอร์มุซ และเรือบรรทุกเครื่องบินลำที่ 3 (USS Theodore Roosevelt) เข้าพื้นที่ ขณะที่อิหร่านเจรจากับโอมาน 17 พ.ย. น้ำมัน WTI ปิด ~$86 (+0.3%) เบรนต์ ~$93",
+   "impacts": [
+    {
+     "target": "travel",
+     "label_th": "หมวดท่องเที่ยว",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "น้ำมันที่ค้างสูง ~$86 เพิ่มต้นทุนสายการบินและค่าเดินทาง กดดันความต้องการท่องเที่ยว"
+    },
+    {
+     "target": "space",
+     "label_th": "หมวดอวกาศ/กลาโหม",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "ความตึงเครียดยืดเยื้อหนุนความต้องการอาวุธ (LMT) แต่ยังไม่มีงบกลาโหมก้อนใหม่"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "สงครามปกติหนุนทอง แต่ดอลลาร์แข็งและการคาด Fed ขึ้นดอกเบี้ยกดทองอยู่ ทองปิด ~$3,849"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย ติดตามราคาน้ำมัน หากตลาดผันผวนแผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่ม",
+   "watch_next_th": "การตอบโต้ของอิหร่าน · การเจรจาผ่านโอมาน/ปากีสถาน · ราคาน้ำมันเบรนต์ที่ $95",
+   "sources": [
+    {
+     "label": "Jerusalem Post: US strikes IRGC missile launch site on Qeshm Island (17 พ.ย. 2026)",
+     "url": "https://www.jpost.com/middle-east/iran-news/article-915235"
+    },
+    {
+     "label": "CBS News: Iran war live updates (16–17 พ.ย. 2026)",
+     "url": "https://www.cbsnews.com/live-updates/iran-war-us-nuclear-oil-strait-of-hormuz/"
+    },
+    {
+     "label": "The National: Iran and Oman discuss maritime security (17 พ.ย. 2026)",
+     "url": "https://www.thenationalnews.com/news/gulf/2026/11/17/iran-and-oman-discuss-maritime-security-amid-rising-attacks-in-strait-of-hormuz/"
+    },
+    {
+     "label": "The Wall Street Republic: daily recap (17 พ.ย. 2026)",
+     "url": "https://thewallstreetrepublic.substack.com/p/nvidia-beats-and-guides-to-130bn"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-18-fed-minutes-hike-odds-97",
+   "date": "2026-11-18",
+   "time_utc": "2026-11-18T01:07:18Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "fed",
+   "title_th": "ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย 9 ธ.ค. ~95–97% บันทึกประชุมออกคืนนี้",
+   "summary_th": "17 พ.ย. 2026 CME FedWatch ให้โอกาส Fed ขึ้นดอกเบี้ย 0.25% ในการประชุม 9 ธ.ค. ราว 95–97% (ขึ้น 0.50% ราว 3%) หลัง CPI ต.ค. +0.4% สูงกว่าคาด บอนด์ 10 ปีอยู่ ~5.10% บันทึกการประชุม 27–28 ต.ค. ออกวันที่ 18 พ.ย. (ตี 2 วันที่ 19 พ.ย. เวลาไทย)",
+   "impacts": [
+    {
+     "target": "finance",
+     "label_th": "หมวดการเงิน",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยสูงขึ้นช่วยส่วนต่างดอกเบี้ยของธนาคาร (JPM) แต่เพิ่มความเสี่ยงหนี้เสียและกดหุ้นวาณิชธนกิจ (GS)"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "การคาดขึ้นดอกเบี้ยทำให้ดอลลาร์แข็ง ทองใกล้ต่ำสุดในรอบปี"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "กองทุน NASDAQ",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยสูงกดมูลค่าหุ้นเติบโต"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องทำอะไรเพิ่ม ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค. ทำตามแผน DCA เดิม",
+   "watch_next_th": "บันทึกประชุม Fed (ตี 2 วันที่ 19 พ.ย. เวลาไทย) · ประชุม Fed 9 ธ.ค.",
+   "sources": [
+    {
+     "label": "KuCoin/ChainCatcher: CME FedWatch Dec hike 96.8% (17 พ.ย. 2026)",
+     "url": "https://www.kucoin.com/news/flash/fed-s-december-25-bp-hike-probability-at-96-8"
+    },
+    {
+     "label": "CryptoTicker: Waller and the December rate bet (17 พ.ย. 2026)",
+     "url": "https://cryptoticker.io/en/bitcoin-price-waller-rate-hike-november-17-2026/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-18-trump-xi-chip-rule-thailand",
+   "date": "2026-11-18",
+   "time_utc": "2026-11-18T01:07:18Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "thailand",
+   "title_th": "สหรัฐฯ คุมชิป AI ไปไทยและอีก 4 ประเทศ ก่อนทรัมป์พบสีจิ้นผิง 19 พ.ย.",
+   "summary_th": "16 พ.ย. 2026 กระทรวงพาณิชย์สหรัฐฯ ออกกฎให้บริษัทในสิงคโปร์ ไทย มาเลเซีย อินโดนีเซีย และบราซิล ต้องขอใบอนุญาตก่อนนำเข้าชิป AI ขั้นสูง เพื่อกันจีนใช้ชิปผ่านดาต้าเซ็นเตอร์ต่างประเทศ ทรัมป์จะพบสีจิ้นผิงที่เซินเจิ้น (APEC) 19 พ.ย. คุยเรื่องภาษี แร่หายาก และสินค้าเกษตร ข้อตกลงพักภาษีหมดอายุ 10 ม.ค. 2027",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "หมวดชิป / AI",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ยอดขายชิปไปดาต้าเซ็นเตอร์ในเอเชียตะวันออกเฉียงใต้อาจชะลอ แต่ทำเนียบขาวว่าเรื่องคุมชิปไม่อยู่บนโต๊ะเจรจา"
+    },
+    {
+     "target": "main:kkp",
+     "label_th": "KKP (KKP.BK)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ไทยถูกจำกัดชิป AI อาจกระทบการลงทุนดาต้าเซ็นเตอร์ในไทยระยะยาว ผลต่อธนาคารโดยตรงยังน้อย"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องทำอะไร เป็นข่าวที่ต้องติดตาม ผลการประชุมอาจทำให้ตลาดผันผวน",
+   "watch_next_th": "ผลการพบทรัมป์–สีจิ้นผิง 19 พ.ย. · ข้อตกลงพักภาษีหมดอายุ 10 ม.ค. 2027 · G20 ไมอามี 14–15 ธ.ค.",
+   "sources": [
+    {
+     "label": "Admirals: Trump-Xi APEC Shenzhen meeting (16 พ.ย. 2026)",
+     "url": "https://admiralmarkets.com/analytics/traders-blog/trump-xi-apec-shenzhen-meeting-markets"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-18-pjm-fast-energization",
+   "date": "2026-11-18",
+   "time_utc": "2026-11-18T01:07:18Z",
+   "run": "morning",
+   "level": "low",
+   "category": "sector",
+   "title_th": "PJM ขอ FERC ลดเวลาต่อไฟดาต้าเซ็นเตอร์เหลือ 12 เดือน",
+   "summary_th": "16 พ.ย. 2026 PJM ผู้ดูแลโครงข่ายไฟใหญ่สุดของสหรัฐฯ ยื่น FERC ขอลดเวลาศึกษาการเชื่อมต่อดาต้าเซ็นเตอร์จาก 24 เหลือ 12 เดือน (ขอคำตัดสินภายใน 120 วัน) และเสนอกฎให้โหลด ≥50 MW ต้องทนไฟกระเพื่อมได้ เริ่ม 16 ม.ค. 2027 PJM คาดโหลดดาต้าเซ็นเตอร์ใหม่ถึง 30 GW ภายในปี 2030",
+   "impacts": [
+    {
+     "target": "ETN",
+     "label_th": "Eaton (ETN)",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "การเร่งต่อไฟและกฎความทนทานต้องใช้อุปกรณ์ไฟฟ้าและระบบสำรองไฟมากขึ้น หนุนความต้องการสินค้าของ Eaton"
+    },
+    {
+     "target": "ai",
+     "label_th": "หมวดชิป / AI",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ถ้า FERC อนุมัติจะช่วยคลายคอขวดไฟฟ้าในระยะกลาง แต่ปัจจุบันไฟยังขาด ~6.8 GW"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องทำอะไร ข่าวนี้หนุนเหตุผลระยะยาวของ ETN",
+   "watch_next_th": "คำตัดสินของ FERC ราวกลาง มี.ค. 2027",
+   "sources": [
+    {
+     "label": "PJM Inside Lines (16 พ.ย. 2026)",
+     "url": "https://insidelines.pjm.com/pjm-proposes-new-rules-to-protect-grid-reliability-as-data-center-demand-grows/"
+    },
+    {
+     "label": "StartupFortune (18 พ.ย. 2026)",
+     "url": "https://startupfortune.com/pjm-asks-ferc-to-halve-data-center-grid-studies-to-12-months/"
     }
    ]
   }
