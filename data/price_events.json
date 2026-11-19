@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T03:40:35+00:00",
+ "updated_at": "2026-11-19T20:58:06+00:00",
  "rules": {
   "day_drop_pct": -7.0,
   "drawdown_pct": -20.0,
@@ -18,7 +18,7 @@
   "KKP.BK": true,
   "LLY": true,
   "ISRG": false,
-  "UNH": true,
+  "UNH": false,
   "COST": true,
   "BKNG": false,
   "MAR": true,
@@ -183,6 +183,17 @@
    "drawdown_pct": -19.59,
    "title_th": "UNH ร่วง 10.0% ในวันเดียว",
    "detail_th": "ปิดที่ 350.86 (ก่อนหน้า 389.68) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 19.6%"
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "UNH",
+   "name": "UnitedHealth Group",
+   "kind": "drawdown",
+   "value": -24.11,
+   "price": 331.14,
+   "drawdown_pct": -24.11,
+   "title_th": "UNH ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 331.14 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (436.35) อยู่ 24.1%"
   }
  ]
 }
