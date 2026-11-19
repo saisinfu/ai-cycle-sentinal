@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T01:06:10Z",
+ "updated_at": "2026-11-19T01:06:49Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -638,6 +638,57 @@
      "key": "hotel",
      "label": "Hotel Online: U.S. hotel performance early November (16 พ.ย. 2026)",
      "url": "https://www.hotel-online.com/news/us-hotel-performance-improves-in-early-november-fueled-by-strong-adr-growth"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-19",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.7,
+    "us_hotel_revpar_yoy_pct": 4.7,
+    "wti_usd": 82.08,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "medium",
+    "oil": "high",
+    "income": "high",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "ยังเปิดหน้า TSA ไม่ได้ ใช้ค่าเดิม −0.7% (สะสมถึง 23 ก.ย. ไม่ใช่ค่า 7 วันล่าสุด) ความเชื่อมั่นต่ำ (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 1–7 พ.ย. 2026 = $109.55 +4.7% เทียบปีก่อน (อัตราเข้าพัก 65.1%, ราคาห้อง $168.35 +3.2%) ข้อมูลสัปดาห์ 8–14 พ.ย. ยังไม่ออก (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "oil": "น้ำมัน WTI $82.08/บาร์เรล (ปิด 18 พ.ย. Yahoo Finance) ลดลง −4.2% จาก $85.71 ต่ำสุดตั้งแต่ปลาย ส.ค. หลังสต็อกน้ำมันสหรัฐฯ เพิ่มเกินคาด 3.4 ล้านบาร์เรล",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% (ประกาศ 3 พ.ย.) เท่าเดิม (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิด 18 พ.ย.): BKNG $153.29 (-0.76% วันที่ 18/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -30.22%) · MAR $426.76 (+0.95% วันที่ 18/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -0.56%) · ABNB $181.29 (+0.19% วันที่ 18/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -4.83%)"
+   },
+   "prices": {
+    "BKNG": 153.29,
+    "MAR": 426.76,
+    "ABNB": 181.29
+   },
+   "prices_as_of": "2026-11-18",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "hotel",
+     "label": "Hotel Online: U.S. hotel performance early November (16 พ.ย. 2026)",
+     "url": "https://www.hotel-online.com/news/us-hotel-performance-improves-in-early-november-fueled-by-strong-adr-growth"
+    },
+    {
+     "key": "oil",
+     "label": "TechFlow: US Stock Trends 19 พ.ย. 2026",
+     "url": "https://www.techflowpost.com/en-US/article/35499"
     }
    ],
    "created_by": "claude",

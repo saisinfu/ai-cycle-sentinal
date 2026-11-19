@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T01:06:10Z",
+ "updated_at": "2026-11-19T01:06:49Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -543,6 +543,57 @@
      "key": "policy_risk",
      "label": "JKN: UnitedHealth shares slide 5.4% amid scrutiny (18 พ.ย. 2026)",
      "url": "https://news.jkn.co.kr/editions/english/post/1103124"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-19",
+   "indicators": {
+    "lly_revenue_growth_yoy_pct": 39.0,
+    "unh_medical_care_ratio_pct": 88.4,
+    "isrg_procedure_growth_yoy_pct": 14.0,
+    "hc_policy_risk": 7.0,
+    "healthcare_jobs_growth_yoy_pct": 2.21
+   },
+   "confidence": {
+    "glp1_demand": "high",
+    "insurer_cost": "medium",
+    "surgery_volume": "high",
+    "policy_risk": "low",
+    "hc_jobs": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "glp1_demand": "Eli Lilly รายได้ไตรมาส 3/2026 +39% เทียบปีก่อน (ประกาศ 29 ต.ค.) เท่าเดิม จนกว่างบไตรมาสถัดไป (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "insurer_cost": "UnitedHealth สัดส่วนค่ารักษาไตรมาส 3/2026 = 88.4% (ประกาศ 13 ต.ค.) เท่าเดิม (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "surgery_volume": "Intuitive Surgical ผ่าตัด da Vinci ไตรมาส 3/2026 โตราว 14% (ประกาศ 20 ต.ค.) เท่าเดิม (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "policy_risk": "ปรับขึ้นเป็น 7/10 จาก 6.5 (ความเชื่อมั่นต่ำ) ตลาดตอบรับกฎ \"CRUSH\" ของ CMS แรงกว่าคาด: 18 พ.ย. UNH −10.2% Humana −13% Elevance −7.6% กฎนี้คาดประหยัดงบ ~$90 พันล้านใน 10 ปี และอาจเรียกเงินคืนย้อนหลังถึงปี 2018 (ยังเป็นร่าง รับฟังความเห็นถึง 19 ม.ค. 2027)",
+    "hc_jobs": "การจ้างงานสาธารณสุข ต.ค. 2026 = 24.00 ล้านตำแหน่ง +2.21% เทียบปีก่อน (ค่าใหม่จาก FRED) จากเดิม +2.22% (ก.ย.) (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิด 18 พ.ย.): LLY $1383.4 (-2.27% วันที่ 18/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -4.16%) · ISRG $421.91 (-2.00% วันที่ 18/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -28.83%) · UNH $350.86 (-9.96% วันที่ 18/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -19.59%)"
+   },
+   "prices": {
+    "LLY": 1383.4,
+    "ISRG": 421.91,
+    "UNH": 350.86
+   },
+   "prices_as_of": "2026-11-18",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "policy_risk",
+     "label": "Yahoo Finance: insurers drag Dow after CMS anti-fraud rule (18 พ.ย. 2026)",
+     "url": "https://finance.yahoo.com/healthcare/article/unitedhealth-and-other-insurance-stocks-drag-down-the-dow-after-cms-proposes-new-anti-fraud-rule-173851810.html"
+    },
+    {
+     "key": "policy_risk",
+     "label": "TechFlow: US Stock Trends 19 พ.ย. 2026",
+     "url": "https://www.techflowpost.com/en-US/article/35499"
     }
    ],
    "created_by": "claude",

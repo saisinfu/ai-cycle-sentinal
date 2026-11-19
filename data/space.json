@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-18T01:06:10Z",
+ "updated_at": "2026-11-19T01:06:49Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -643,6 +643,57 @@
     "ASTS": 27.59
    },
    "prices_as_of": "2026-11-17",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "gpr",
+     "label": "Matteo Iacoviello: GPR index",
+     "url": "https://www.matteoiacoviello.com/gpr.htm"
+    },
+    {
+     "key": "gpr",
+     "label": "Jerusalem Post: US strikes IRGC missile launch site on Qeshm Island (17 พ.ย. 2026)",
+     "url": "https://www.jpost.com/middle-east/iran-news/article-915235"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-19",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 225.0,
+    "us10y_change_3m_pp": 0.42
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "medium",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 งบกลาโหม FY2027 ยังไม่ผ่าน ใช้งบชั่วคราว (CR) ถึง 11 ธ.ค. คาดต้องต่อ CR ถึง ม.ค. และงบปีนี้ไม่น่าผ่านทัน (Air & Space Forces 9 พ.ย.) (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "gpr": "ดัชนี GPR รายเดือนอัปเดต 2 พ.ย. แต่หน้าเว็บไม่แสดงตัวเลข ต.ค. ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ · สงครามอิหร่านยังยืดเยื้อ: 17 พ.ย. สหรัฐฯ โจมตีฐานยิงขีปนาวุธบนเกาะเกชม์ เรือน้ำมันถูกโจมตีหลายลำ เรือบรรทุกเครื่องบินลำที่ 3 เข้าพื้นที่ (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "launches": "จรวดขึ้นสู่วงโคจรทั่วโลกปี 2026 ถึง 31 ต.ค. 254 ครั้ง +0.4% เทียบปีก่อน เท่าเดิม (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 3/2026 ≈ $3.57 พันล้าน (ประกาศ 9 พ.ย.) เทียบ $1.1 พันล้าน ไตรมาส 3/2025 = +225% (จากเดิม +137% ของไตรมาส 2) โต 52% จากไตรมาสก่อน (19 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 5.07% (ปิด 18 พ.ย. Yahoo Finance) เทียบ 3 เดือนก่อน 4.65% = +0.42 จุด (จากเดิม +0.39)",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิด 18 พ.ย.): LMT $578.28 (-2.04% วันที่ 18/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -14.54%) · RKLB $53.63 (-2.58% วันที่ 18/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -64.3%) · ASTS $25.47 (-7.70% วันที่ 18/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -80.87%)"
+   },
+   "prices": {
+    "LMT": 578.28,
+    "RKLB": 53.63,
+    "ASTS": 25.47
+   },
+   "prices_as_of": "2026-11-18",
    "sources": [
     {
      "key": "prices",
