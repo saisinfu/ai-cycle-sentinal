@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T01:07:36Z",
+ "updated_at": "2026-11-19T13:55:21Z",
  "note": "รายการที่มี reconstructed=true สร้างย้อนหลังจากข่าวที่บันทึกไว้ ไม่ใช่ข้อความแจ้งเตือนต้นฉบับ",
  "items": [
   {
@@ -386,6 +386,21 @@
     "2026-11-19-dow-561-gold-oil-drop",
     "2026-11-19-asts-offering-drop",
     "2026-11-10-anthropic-ipo-1-3t"
+   ]
+  },
+  {
+   "id": "2026-11-19-evening",
+   "date": "2026-11-19",
+   "run": "evening",
+   "time_utc": "2026-11-19T13:55:21Z",
+   "headline_th": "ช่วงค่ำไม่มีข่าวสำคัญที่กระทบพอร์ต",
+   "level": "medium",
+   "text_th": "ช่วงค่ำไม่มีข่าวสำคัญที่กระทบพอร์ต\nก่อนเปิดตลาด: ฟิวเจอร์ส Nasdaq +2.1% ชิปพุ่ง Walmart ปรับเป้าขึ้น (ทองยังต่ำสุดรอบปี)\nดูรายละเอียดในแอป AI Sentinel",
+   "news_ids": [
+    "2026-11-19-futures-rally-chips-walmart",
+    "2026-11-19-claims-fed-odds-957",
+    "2026-11-10-anthropic-ipo-1-3t",
+    "2026-11-18-trump-xi-chip-rule-thailand"
    ]
   }
  ]
