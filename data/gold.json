@@ -1,0 +1,84 @@
+{
+ "updated_at": "2026-11-20T03:30:19Z",
+ "readings": [
+  {
+   "date": "2026-11-20",
+   "indicators": {
+    "real_yield_10y_pct": 2.86,
+    "usd_index_change_3m_pct": 5.0,
+    "central_bank_gold_tonnes_q": 321.2,
+    "gold_etf_flows_tonnes_1m": 19,
+    "breakeven_inflation_10y_pct": 2.15,
+    "gold_usd_oz": 3532.0,
+    "usd_thb": 33.92,
+    "thai_gold_bar_sell_thb": 57400
+   },
+   "confidence": {
+    "real_yield": "medium",
+    "dollar": "high",
+    "central_banks": "high",
+    "etf_flows": "medium",
+    "inflation_expect": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "real_yield": "ดอกเบี้ยแท้จริง 10 ปีสหรัฐ (TIPS) ราว 2.86% (ตลาดรอง 19 พ.ย.) การประมูล TIPS 10 ปีวันเดียวกันได้ 2.903% สูงสุดในรอบ 24 ปี (ค่าแรกของหมวด ยังไม่มีค่าก่อนหน้า) · รอบนี้เปิด FRED ไม่ได้ ใช้ตัวเลขจาก Tipswatch แทน ความเชื่อมั่นปานกลาง",
+    "dollar": "ดัชนีดอลลาร์ (DXY) 103.86 (ปิด 19 พ.ย.) เทียบ 3 เดือนก่อน 98.90 = +5.0% ดอลลาร์แข็งมาก กดดันทอง (ค่าแรกของหมวด)",
+    "central_banks": "ธนาคารกลางทั่วโลกซื้อทองสุทธิไตรมาส 3/2026 = 321.2 ตัน (WGC 3 พ.ย.) +42% จาก 226.3 ตันในไตรมาส 3/2025 ทั้งปีถึง ก.ย. 675 ตัน จีนซื้อ 63 ตัน โปแลนด์ 40 ตัน เป็นแรงหนุนหลักของทอง (ค่าแรกของหมวด)",
+    "etf_flows": "กองทุนทองทั่วโลก ต.ค. 2026 ถือทองเพิ่ม 19 ตัน เป็น 4,275 ตัน (เงินไหลเข้า $2.7 พันล้าน, WGC 5 พ.ย.) WGC ไม่ได้ระบุเงินไหลเข้าเป็นตัน จึงใช้ส่วนเปลี่ยนของปริมาณถือครองแทน ความเชื่อมั่นปานกลาง ตัวเลข พ.ย. จะออกต้น ธ.ค.",
+    "inflation_expect": "เงินเฟ้อคาดการณ์ 10 ปีสหรัฐ 2.15% (ตอนปิดประมูล TIPS 19 พ.ย.) ต่ำสุดในการประมูล TIPS 10 ปีตั้งแต่ ม.ค. 2021 (18 พ.ย. = 2.19%) ตลาดไม่ได้กังวลเงินเฟ้อ จึงไม่ค่อยหนุนทอง · เปิด FRED ไม่ได้ ใช้ Tipswatch/tipsyield แทน",
+    "gold_thai": "ทองคำแท่ง 96.5% สมาคมค้าทองคำ 20 พ.ย. ครั้งที่ 1 (09:06 น.) ขายออก 57,400 บาท รับซื้อ 57,200 บาท ลง 2,500 บาท (−4.2%) จากปิด 19 พ.ย. 59,900 บาท ต่ำสุดในรอบกว่า 1 ปี สาเหตุหลักมาจากทองโลก: ทองฟิวเจอร์ส (GC=F) ปิด $3,532/ออนซ์ (−5.6%, Yahoo Finance) ทองสปอตเช้านี้ราว $3,557 จากดอลลาร์แข็งและคาด Fed ขึ้นดอกเบี้ย ส่วนเงินบาท 33.92 บาท/ดอลลาร์ แทบไม่เปลี่ยน จึงไม่ได้ช่วยพยุงราคาทองไทย",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (อัปเดต 03:17 UTC 20 พ.ย.): GLD $335.18 (-1.76% วันที่ 19/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -32.41%) · GDX $72.00 (-3.77% วันที่ 19/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -37.85%)"
+   },
+   "prices": {
+    "GLD": 335.18,
+    "GDX": 72.0
+   },
+   "prices_as_of": "2026-11-19",
+   "sources": [
+    {
+     "key": "real_yield",
+     "label": "Tipswatch: 10-year TIPS auction gets real yield of 2.903% (19 พ.ย. 2026)",
+     "url": "https://tipswatch.com/2026/11/19/10-year-tips-auction-gets-real-yield-of-2-903-highest-in-24-years/"
+    },
+    {
+     "key": "inflation_expect",
+     "label": "tipsyield.com: 10-Year TIPS Real Yield and Breakeven",
+     "url": "https://tipsyield.com/real-yields"
+    },
+    {
+     "key": "dollar",
+     "label": "Yahoo Finance DX-Y.NYB (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/DX-Y.NYB"
+    },
+    {
+     "key": "central_banks",
+     "label": "World Gold Council: Gold Demand Trends Q3 2026 – Central banks",
+     "url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026/central-banks"
+    },
+    {
+     "key": "etf_flows",
+     "label": "World Gold Council: Gold ETF Flows October 2026",
+     "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/11"
+    },
+    {
+     "key": "gold_thai",
+     "label": "กรุงเทพธุรกิจ: ราคาทองวันนี้ 20 พ.ย.69",
+     "url": "https://www.bangkokbiznews.com/finance/investment/1261599"
+    },
+    {
+     "key": "gold_thai",
+     "label": "มหาชนออนไลน์: ราคาทองวันนี้ 20 พ.ย. 2569 ครั้งที่ 1",
+     "url": "https://www.mahachon.net/56237"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  }
+ ]
+}
