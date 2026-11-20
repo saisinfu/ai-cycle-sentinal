@@ -28,7 +28,7 @@ before the repo was attached failed with HTTP 403 on push.
 
 ## Sectors (config/sectors.json)
 ai (KLAC/AVGO/ETN), finance (JPM/V/GS), health (LLY/ISRG/UNH), staples (COST/PEP/MCD),
-travel (BKNG/MAR/ABNB), space (LMT/RKLB/ASTS). Main port: gold (GLD), S&P 500 (SPY),
+travel (BKNG/MAR/ABNB), space (LMT/RKLB/ASTS), gold (GLD/GDX; drivers: real yield, dollar, central-bank buying, ETF flows, breakeven inflation; also Thai gold-bar price and USD/THB). Main port: gold (GLD), S&P 500 (SPY),
 NASDAQ (QQQ), KKP.BK. Each sector: 5 signals, clamped linear 0–100 score, weighted index,
 zones EXPANSION ≥70 / EARLY_WARNING / DIGESTION <40 with a ±3 dead-band. New sectors are added
 under `sectors_next` first (collected but hidden), then promoted with

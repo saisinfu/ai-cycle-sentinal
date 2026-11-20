@@ -232,7 +232,55 @@ SPACE = {
     ],
 }
 
-NEW = [HEALTH, STAPLES, TRAVEL, SPACE]
+GOLD = {
+    "id": "gold", "name": "ทองคำ", "icon": "gold", "data": "data/gold.json",
+    "confidence": "medium",
+    "confidence_note": "ปัจจัยทั้ง 5 เป็นตัวเลขทางการ (FRED, World Gold Council, ราคาตลาด) แต่ความสัมพันธ์ระหว่างดอกเบี้ยแท้จริงกับราคาทองอ่อนลงตั้งแต่ปี 2022 เพราะธนาคารกลางซื้อทองมาก · ยังไม่ได้ทดสอบย้อนหลัง",
+    "summary": {
+        "X": "ปัจจัยหนุนทองครบ: ดอกเบี้ยแท้จริงต่ำ ดอลลาร์อ่อน ธนาคารกลางและกองทุนซื้อต่อเนื่อง · DCA ตามน้ำหนักปกติ",
+        "W": "ปัจจัยผสม เช่น ดอกเบี้ยหรือดอลลาร์กดดัน แต่ยังมีแรงซื้อจากธนาคารกลาง · DCA ต่อ เอียงไปที่ทองจริงมากกว่าหุ้นเหมือง",
+        "D": "ดอกเบี้ยแท้จริงสูง ดอลลาร์แข็ง และเงินไหลออกจากกองทุนทอง · DCA ต่อ 80% ของงบ ไม่ขาย กันเงินสด 20% ไว้ซื้อเพิ่ม",
+    },
+    "signals": [
+        sig("real_yield", "real_yield_10y_pct", "ดอกเบี้ยแท้จริง 10 ปีสหรัฐ (TIPS)", "US 10Y real yield", "ดอกเบี้ยแท้จริง",
+            0.25, 2.5, 0.0, "{real_yield_10y_pct:2}%", "2.5% → 0% (ยิ่งต่ำยิ่งดี)",
+            "ทองไม่มีดอกเบี้ย ถ้าพันธบัตรให้ผลตอบแทนหลังหักเงินเฟ้อสูง คนจะถือทองน้อยลง",
+            "FRED: DFII10", "https://fred.stlouisfed.org/series/DFII10", "รายวัน"),
+        sig("dollar", "usd_index_change_3m_pct", "ดัชนีค่าเงินดอลลาร์ เปลี่ยนใน 3 เดือน", "US dollar index 3-month change", "ค่าเงินดอลลาร์",
+            0.20, 5, -5, "{usd_index_change_3m_pct:+1}%", "+5% → −5% (ดอลลาร์อ่อนดีกับทอง)",
+            "ทองซื้อขายเป็นดอลลาร์ ดอลลาร์แข็งทำให้ทองแพงขึ้นสำหรับคนประเทศอื่น ความต้องการจึงลด",
+            "Yahoo Finance: DX-Y.NYB (data/market.json)", "https://finance.yahoo.com/quote/DX-Y.NYB", "รายวัน"),
+        sig("central_banks", "central_bank_gold_tonnes_q", "ธนาคารกลางทั่วโลกซื้อทองสุทธิ", "Central bank net gold purchases", "ธนาคารกลางซื้อทอง",
+            0.20, 100, 300, "{central_bank_gold_tonnes_q:0} ตัน/ไตรมาส", "100 → 300 ตัน",
+            "แรงซื้อหลักของทองตั้งแต่ปี 2022 เมื่อหลายประเทศลดการถือดอลลาร์",
+            "World Gold Council: Gold Demand Trends", "https://www.gold.org/goldhub/research/gold-demand-trends", "รายไตรมาส"),
+        sig("etf_flows", "gold_etf_flows_tonnes_1m", "เงินไหลเข้ากองทุนทองทั่วโลก", "Global gold ETF flows", "เงินเข้ากองทุนทอง",
+            0.20, -60, 60, "{gold_etf_flows_tonnes_1m:+0} ตัน/เดือน", "−60 → +60 ตัน",
+            "สะท้อนความต้องการของนักลงทุนทั่วไปที่ซื้อทองผ่านกองทุน",
+            "World Gold Council: Gold ETF flows", "https://www.gold.org/goldhub/data/gold-etfs-holdings-and-flows", "รายเดือน"),
+        sig("inflation_expect", "breakeven_inflation_10y_pct", "เงินเฟ้อคาดการณ์ 10 ปีสหรัฐ", "US 10Y breakeven inflation", "เงินเฟ้อคาดการณ์",
+            0.15, 1.8, 2.8, "{breakeven_inflation_10y_pct:2}%", "1.8% → 2.8%",
+            "คนกังวลเงินเฟ้อมากขึ้น = ถือทองเพื่อรักษามูลค่ามากขึ้น",
+            "FRED: T10YIE", "https://fred.stlouisfed.org/series/T10YIE", "รายวัน"),
+    ],
+    "stocks": [{"ticker": "GLD", "name": "SPDR Gold Shares (ราคาทอง)"}, {"ticker": "GDX", "name": "VanEck Gold Miners (หุ้นเหมืองทอง)"}],
+    "rules": zone_rules({"GLD": 70, "GDX": 30},
+                        {"GLD": ["OVERWEIGHT_DCA", 80], "GDX": ["BUY_DCA", 20]},
+                        {"GLD": ["OVERWEIGHT_DCA", 70], "GDX": ["BUY_DCA", 10]}),
+    "reasons": {
+        "X": {"GLD": "ถือทองโดยตรง ติดตามราคาทองโลก", "GDX": "หุ้นเหมืองทองได้กำไรเพิ่มเร็วกว่าราคาทองเมื่อทองขึ้น (ผันผวนราว 2 เท่าของทอง)"},
+        "W": {"GLD": "เพิ่มจาก 70% เป็น 80% ทองจริงผันผวนน้อยกว่าหุ้นเหมือง", "GDX": "ยัง DCA ต่อ ลดจาก 30% เหลือ 20%"},
+        "D": {"GLD": "คงน้ำหนักหลัก 70% อีก 20% ของงบหมวดเก็บเป็นเงินสดสำรอง", "GDX": "ยัง DCA ต่อในน้ำหนักต่ำ 10% (ไม่หยุด ไม่ขาย)"},
+    },
+    "alerts": [
+        {"field": "real_yield_10y_pct", "op": ">", "value": 2.5, "zone": "D", "title": "ดอกเบี้ยแท้จริงสูง",
+         "message": "ดอกเบี้ยแท้จริง 10 ปี {real_yield_10y_pct:2}% (เกณฑ์แจ้งเตือน: เกิน 2.5%) กดดันราคาทอง"},
+        {"field": "central_bank_gold_tonnes_q", "op": "<", "value": 100, "zone": "D", "title": "ธนาคารกลางชะลอซื้อทอง",
+         "message": "ธนาคารกลางซื้อทองสุทธิ {central_bank_gold_tonnes_q:0} ตันในไตรมาสล่าสุด (เกณฑ์แจ้งเตือน: ต่ำกว่า 100 ตัน)"},
+    ],
+}
+
+NEW = [HEALTH, STAPLES, TRAVEL, SPACE, GOLD]
 
 
 def main():

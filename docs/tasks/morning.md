@@ -50,6 +50,13 @@ FIELDS AND METHODS
 - orbital_launches_ytd_growth_pct = global orbital launch attempts year-to-date vs the same period last year (%), from Next Spaceflight or Jonathan McDowell's statistics.
 - rklb_backlog_growth_yoy_pct = Rocket Lab latest quarterly backlog vs a year earlier (%).
 - us10y_change_3m_pp = data/market.json ^TNX price minus price_3m_ago (if the quote is above 20 it is ×10: divide by 10 first), 2 decimals.
+"gold" (data/gold.json)
+- real_yield_10y_pct = FRED DFII10 latest daily value (%), 2 decimals.
+- usd_index_change_3m_pct = data/market.json quotes["DX-Y.NYB"]: (price / price_3m_ago − 1) × 100, 1 decimal (copy; source Yahoo Finance).
+- central_bank_gold_tonnes_q = World Gold Council, latest quarter's central-bank net gold purchases in tonnes (Gold Demand Trends, https://www.gold.org/goldhub/research/gold-demand-trends); quarterly, carry forward between releases.
+- gold_etf_flows_tonnes_1m = World Gold Council, latest month's global gold ETF net flows in tonnes (https://www.gold.org/goldhub/data/gold-etfs-holdings-and-flows); monthly.
+- breakeven_inflation_10y_pct = FRED T10YIE latest daily value (%), 2 decimals.
+- Helper fields (not scored, shown in notes): gold_usd_oz = data/market.json quotes["GC=F"].price; usd_thb = quotes["THB=X"].price; thai_gold_bar_sell_thb = Gold Traders Association (สมาคมค้าทองคำ, https://www.goldtraders.or.th/) latest announced selling price of a 96.5% gold bar per baht-weight. In notes_th explain today's gold move for a Thai holder: world gold price in USD and the baht exchange rate both matter.
 
 SCORING (the app computes the same)
 Per signal: score = clamp((value − worst)/(best − worst) × 100, 0, 100), rounded to 0.1. Index = Σ score × weight, rounded to 0.1. Status with hysteresis over ALL readings in date order: first reading ≥70 EXPANSION, ≥40 EARLY_WARNING, else DIGESTION; then with previous status P: upper = 67 if P is EXPANSION else 73; lower = 43 if P is DIGESTION else 37; EXPANSION if index ≥ upper, DIGESTION if index < lower, else EARLY_WARNING.
