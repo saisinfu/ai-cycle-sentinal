@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T20:58:06+00:00",
+ "updated_at": "2026-11-20T03:17:55+00:00",
  "rules": {
   "day_drop_pct": -7.0,
   "drawdown_pct": -20.0,
@@ -27,7 +27,8 @@
   "ASTS": false,
   "LMT": true,
   "PEP": true,
-  "MCD": false
+  "MCD": false,
+  "GDX": false
  },
  "events": [
   {
@@ -183,6 +184,17 @@
    "drawdown_pct": -19.59,
    "title_th": "UNH ร่วง 10.0% ในวันเดียว",
    "detail_th": "ปิดที่ 350.86 (ก่อนหน้า 389.68) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 19.6%"
+  },
+  {
+   "date": "2026-11-19",
+   "ticker": "GDX",
+   "name": "VanEck Gold Miners (หุ้นเหมืองทอง)",
+   "kind": "drawdown",
+   "value": -37.85,
+   "price": 72.0,
+   "drawdown_pct": -37.85,
+   "title_th": "GDX ต่ำกว่าจุดสูงสุดเกิน 20%",
+   "detail_th": "ราคา 72.0 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (115.84) อยู่ 37.9%"
   },
   {
    "date": "2026-11-19",
