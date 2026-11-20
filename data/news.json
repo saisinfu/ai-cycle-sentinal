@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T13:55:21Z",
+ "updated_at": "2026-11-20T01:07:24Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -2050,44 +2050,6 @@
    ]
   },
   {
-   "id": "2026-11-18-unh-cms-crush-rule",
-   "date": "2026-11-19",
-   "time_utc": "2026-11-19T01:07:36Z",
-   "run": "morning",
-   "level": "high",
-   "category": "policy",
-   "title_th": "UNH ร่วงอีก 10.2% Humana −13% ตลาดกังวลกฎ CRUSH ของ CMS",
-   "summary_th": "18 พ.ย. 2026 UnitedHealth ปิด $350.86 (−10.0% ตามข้อมูล Yahoo) ลงต่อจาก −5.4% วันก่อน Humana −13% Elevance −7.6% CVS −5.2% หลัง CMS เสนอกฎ \"CRUSH\" (16 พ.ย.) เพิ่มการตรวจสอบแผน Medicare Advantage และเรียกเงินที่จ่ายเกินคืน คาดประหยัดงบ ~$90 พันล้านใน 10 ปี UNH ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 19.6% และฉุดดัชนี Dow ลง 561 จุด",
-   "impacts": [
-    {
-     "target": "UNH",
-     "label_th": "UnitedHealth (UNH)",
-     "direction": "negative",
-     "strength": "high",
-     "reason_th": "รายได้หลักมาจาก Medicare Advantage การตรวจสอบย้อนหลังและเรียกเงินคืนอาจกดกำไรหลายปี"
-    },
-    {
-     "target": "health",
-     "label_th": "หมวดสุขภาพ",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "ปรับคะแนนความเสี่ยงนโยบายเป็น 7/10 ดัชนีหมวดลดจาก 55.9 เป็น 54.3 แต่ LLY และ ISRG ไม่ถูกกระทบโดยตรง"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย กฎยังเป็นร่างและนักวิเคราะห์คาดว่าจะถูกฟ้องคัดค้าน แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อ UNH เพิ่มเมื่อราคาย่อ อยู่ในแผนเดิม",
-   "watch_next_th": "รับฟังความเห็นต่อกฎ CRUSH ถึง 19 ม.ค. 2027 · การฟ้องร้องจากบริษัทประกัน",
-   "sources": [
-    {
-     "label": "Yahoo Finance: insurers drag Dow after CMS anti-fraud rule (18 พ.ย. 2026)",
-     "url": "https://finance.yahoo.com/healthcare/article/unitedhealth-and-other-insurance-stocks-drag-down-the-dow-after-cms-proposes-new-anti-fraud-rule-173851810.html"
-    },
-    {
-     "label": "TechFlow: US Stock Trends 19 พ.ย. 2026",
-     "url": "https://www.techflowpost.com/en-US/article/35499"
-    }
-   ]
-  },
-  {
    "id": "2026-11-18-fed-minutes-hike-odds-97",
    "date": "2026-11-19",
    "time_utc": "2026-11-19T01:07:36Z",
@@ -2344,6 +2306,118 @@
     {
      "label": "Seoul Economic Daily: Dec. Rate Hike Odds at 95.7% (19 พ.ย. 2026)",
      "url": "https://en.sedaily.com/society/2026/11/19/us-dec-rate-hike-odds-at-957-percent-as-fed-resists-bigger"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-18-unh-cms-crush-rule",
+   "date": "2026-11-20",
+   "time_utc": "2026-11-20T01:07:24Z",
+   "run": "morning",
+   "level": "high",
+   "category": "policy",
+   "title_th": "UNH ลงต่อ −5.4% ต่ำกว่าจุดสูงสุดเกิน 20% จากกฎ CRUSH ของ CMS",
+   "summary_th": "อัปเดต 20 พ.ย.: 19 พ.ย. UnitedHealth ปิด $331.14 (−5.4%) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ ($436.35) 24.1% หลังร่วง −10% วันที่ 18 พ.ย. สาเหตุหลักยังเป็นร่างกฎ \"CRUSH\" ของ CMS (เสนอ 16 พ.ย.) ที่จะขยายผลตรวจสอบ Medicare Advantage ย้อนถึงปี 2018 คาดเรียกเงินคืนราว $9 พันล้านต่อปีทั้งอุตสาหกรรม (เบี้ยจาก CMS = 44% ของรายได้ UNH ปี 2025) บวกแรงขายทั้งตลาดวันที่ 19 พ.ย.",
+   "impacts": [
+    {
+     "target": "UNH",
+     "label_th": "UnitedHealth (UNH)",
+     "direction": "negative",
+     "strength": "high",
+     "reason_th": "รายได้หลักมาจาก Medicare Advantage การตรวจสอบย้อนหลังและเรียกเงินคืนอาจกดกำไรหลายปี"
+    },
+    {
+     "target": "health",
+     "label_th": "หมวดสุขภาพ",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "คะแนนความเสี่ยงนโยบายคงไว้ 7/10 ดัชนีหมวด 54.2 ยังโซนเฝ้าระวัง LLY (−2.2%) และ ISRG (−3.2%) ลงตามตลาด ไม่ได้ถูกกฎนี้กระทบโดยตรง"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย กฎยังเป็นร่าง แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อ UNH เพิ่มเมื่อราคาย่อแรง อยู่ในแผนเดิม",
+   "watch_next_th": "รับฟังความเห็นต่อกฎ CRUSH ถึง 19 ม.ค. 2027 · การฟ้องร้องจากบริษัทประกัน",
+   "sources": [
+    {
+     "label": "Yahoo Finance: insurers drag Dow after CMS anti-fraud rule (18 พ.ย. 2026)",
+     "url": "https://finance.yahoo.com/healthcare/article/unitedhealth-and-other-insurance-stocks-drag-down-the-dow-after-cms-proposes-new-anti-fraud-rule-173851810.html"
+    },
+    {
+     "label": "TechFlow: US Stock Trends 19 พ.ย. 2026",
+     "url": "https://www.techflowpost.com/en-US/article/35499"
+    },
+    {
+     "label": "TIKR: UnitedHealth sinks 5% on Medicare Advantage audit plan (17 พ.ย. 2026)",
+     "url": "https://www.tikr.com/blog/unitedhealth-sinks-5-on-medicare-advantage-audit-plan-as-cms-moves-to-crush-medical-fraud"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-20-dow-1100-sp-6-day-loss",
+   "date": "2026-11-20",
+   "time_utc": "2026-11-20T01:07:24Z",
+   "run": "morning",
+   "level": "high",
+   "category": "market",
+   "title_th": "Dow ร่วง 1,100 จุด S&P 500 −2% ลง 6 วันติด VIX พุ่งเกือบ 28",
+   "summary_th": "19 พ.ย. 2026 ตลาดสหรัฐฯ กลับตัวลงแรงหลังเปิดบวก: Dow −2.19% (−1,101 จุด) S&P 500 −2.0% (ลง 6 วันติด ยาวสุดตั้งแต่ เม.ย. 2024 ต่ำกว่าเส้นค่าเฉลี่ย 200 วัน) Nasdaq −2.23% VIX +15.5% เป็น 28.4 ชนวนคือความกังวลราคาหุ้น AI แพง (Nvidia −3.3% แม้งบดี AMD −7.7%) วันเดียวกับที่ Anthropic เข้าตลาด และ Fed ส่งสัญญาณอาจขึ้นดอกเบี้ย ทองคำ −2.1% เหลือ ~$3,664 ต่ำสุดตั้งแต่ ก.ย. 2025",
+   "impacts": [
+    {
+     "target": "main:nasdaq",
+     "label_th": "กองทุน NASDAQ (QQQ)",
+     "direction": "negative",
+     "strength": "high",
+     "reason_th": "QQQ −2.1% เหลือ $645.56 ต่ำกว่าจุดสูงสุด 15% หุ้นเทคโดนขายหนักสุดจากความกังวลมูลค่า AI และดอกเบี้ยสูง"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "กองทุน S&P 500 (SPY)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "SPY −1.9% ต่ำกว่าจุดสูงสุด 8% ทุกกลุ่มอ่อนตัว ยกเว้นพลังงานและของใช้จำเป็นที่ทรงตัว"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "GLD −1.8% ต่ำกว่าจุดสูงสุด 32% ดอลลาร์แข็งค่าสูงสุดรอบ 18 เดือน และคาด Fed ขึ้นดอกเบี้ย ทำให้ทองไม่ทำหน้าที่หลุมหลบภัยรอบนี้"
+    },
+    {
+     "target": "ai",
+     "label_th": "หมวดชิป / AI",
+     "direction": "negative",
+     "strength": "high",
+     "reason_th": "SMH −2.5% KLAC −2.1% AVGO −2.0% ETN −2.4% แรงขายหุ้น AI ยังต่อเนื่อง แม้สัญญาณพื้นฐานของหมวด (ดัชนี 55.9) ไม่เปลี่ยน"
+    },
+    {
+     "target": "travel",
+     "label_th": "หมวดท่องเที่ยว",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "BKNG −3.9% ABNB −4.2% MAR −2.8% หุ้นที่พึ่งการใช้จ่ายผู้บริโภคถูกขายตามตลาด"
+    },
+    {
+     "target": "finance",
+     "label_th": "หมวดการเงิน",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "V −3.1% GS −2.8% JPM −1.0% ส่วนต่างหุ้นกู้เสี่ยงกว้างขึ้นเป็น 3.34% สะท้อนนักลงทุนระวังมากขึ้น"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ ทุกหมวดยังอยู่โซนเฝ้าระวัง (ซื้อต่อตามสัดส่วนเดิม) ระวังความผันผวนต่อเนื่องก่อนประชุม Fed 9 ธ.ค.",
+   "watch_next_th": "20 พ.ย. ออปชันหมดอายุรายเดือน + ความเชื่อมั่นผู้บริโภค ม.มิชิแกน (ค่าสุดท้าย) · 26 พ.ย. ตลาดสหรัฐฯ ปิดวันขอบคุณพระเจ้า · 9 ธ.ค. ประชุม Fed",
+   "sources": [
+    {
+     "label": "Motley Fool: Stock Market Today, Nov. 19 — Dow plunges 1,100 points (19 พ.ย. 2026)",
+     "url": "https://www.fool.com/coverage/stock-market-today/2026/11/19/stock-market-today-nov-19-dow-plunges-1-100-points-as-the-s-and-p-500-suffers-its-6th-straight-day-of-losses/"
+    },
+    {
+     "label": "The Dark Side of the Boom: Wall Street chokes on Anthropic (19 พ.ย. 2026)",
+     "url": "https://thedarksideoftheboom.substack.com/p/wall-street-chokes-on-anthropic-as"
+    },
+    {
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
     }
    ]
   }

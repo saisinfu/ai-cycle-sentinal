@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T01:06:49Z",
+ "updated_at": "2026-11-20T01:06:49Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -689,6 +689,52 @@
      "key": "oil",
      "label": "TechFlow: US Stock Trends 19 พ.ย. 2026",
      "url": "https://www.techflowpost.com/en-US/article/35499"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-20",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.7,
+    "us_hotel_revpar_yoy_pct": 4.7,
+    "wti_usd": 83.01,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "medium",
+    "oil": "high",
+    "income": "high",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "ยังเปิดหน้า TSA ไม่ได้ ใช้ค่าเดิม −0.7% (สะสมถึง 23 ก.ย. ไม่ใช่ค่า 7 วันล่าสุด) ความเชื่อมั่นต่ำ",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 1–7 พ.ย. 2026 = $109.55 +4.7% เทียบปีก่อน (อัตราเข้าพัก 65.1%, ราคาห้อง $168.35 +3.2%) ข้อมูลสัปดาห์ 8–14 พ.ย. ยังไม่ออก (20 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "oil": "น้ำมัน WTI $83.01/บาร์เรล (ปิด 19 พ.ย. Yahoo Finance) เพิ่มขึ้นจาก $82.08 แต่ยังต่ำกว่าเกณฑ์กังวล $95 เรือน้ำมันยังถูกโจมตีรอบช่องแคบฮอร์มุซ",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม (20 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% (ประกาศ 3 พ.ย.) เท่าเดิม (20 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิด 19 พ.ย.): BKNG $147.37 (-3.86% วันที่ 19/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -32.92%) · MAR $414.03 (-2.79% วันที่ 19/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -3.53%) · ABNB $172.66 (-4.19% วันที่ 19/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -9.36%)"
+   },
+   "prices": {
+    "BKNG": 147.37,
+    "MAR": 414.03,
+    "ABNB": 172.66
+   },
+   "prices_as_of": "2026-11-19",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "oil",
+     "label": "Yahoo Finance CL=F (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/CL=F"
     }
    ],
    "created_by": "claude",

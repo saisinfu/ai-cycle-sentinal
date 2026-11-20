@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-19T01:06:49Z",
+ "updated_at": "2026-11-20T01:06:49Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -709,6 +709,52 @@
      "key": "gpr",
      "label": "Jerusalem Post: US strikes IRGC missile launch site on Qeshm Island (17 พ.ย. 2026)",
      "url": "https://www.jpost.com/middle-east/iran-news/article-915235"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-20",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 225.0,
+    "us10y_change_3m_pp": 0.35
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "medium",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 งบกลาโหม FY2027 ยังไม่ผ่าน ใช้งบชั่วคราว (CR) ถึง 11 ธ.ค. คาดต้องต่อ CR ถึง ม.ค. และงบปีนี้ไม่น่าผ่านทัน (Air & Space Forces 9 พ.ย.) (20 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "gpr": "ดัชนี GPR รายเดือนอัปเดต 2 พ.ย. แต่หน้าเว็บไม่แสดงตัวเลข ต.ค. ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ · สงครามอิหร่านยังยืดเยื้อ: 17 พ.ย. สหรัฐฯ โจมตีฐานยิงขีปนาวุธบนเกาะเกชม์ เรือน้ำมันถูกโจมตีหลายลำ เรือบรรทุกเครื่องบินลำที่ 3 เข้าพื้นที่ (20 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "launches": "จรวดขึ้นสู่วงโคจรทั่วโลกปี 2026 ถึง 31 ต.ค. 254 ครั้ง +0.4% เทียบปีก่อน เท่าเดิม (20 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 3/2026 ≈ $3.57 พันล้าน (ประกาศ 9 พ.ย.) เทียบ $1.1 พันล้าน ไตรมาส 3/2025 = +225% (จากเดิม +137% ของไตรมาส 2) โต 52% จากไตรมาสก่อน (20 พ.ย.: ไม่มีข้อมูลใหม่ในรอบนี้ จึงใช้ค่าเดิม)",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 5.05% (ปิด 19 พ.ย. Yahoo Finance) เทียบ 3 เดือนก่อน 4.70% = +0.35 จุด (จากเดิม +0.42) ดอกเบี้ยระยะยาวสูงยังกดดันหุ้นเติบโตอย่าง RKLB/ASTS",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิด 19 พ.ย.): LMT $572.45 (-0.99% วันที่ 19/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -15.41%) · RKLB $50.87 (-4.15% วันที่ 19/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -66.14%) · ASTS $25.57 (+0.32% วันที่ 19/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -80.79%)"
+   },
+   "prices": {
+    "LMT": 572.45,
+    "RKLB": 50.87,
+    "ASTS": 25.57
+   },
+   "prices_as_of": "2026-11-19",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "rates",
+     "label": "Yahoo Finance ^TNX (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/%5ETNX"
     }
    ],
    "created_by": "claude",
