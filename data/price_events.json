@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T03:32:21+00:00",
+ "updated_at": "2026-11-20T20:43:26+00:00",
  "rules": {
   "day_drop_pct": -7.0,
   "drawdown_pct": -20.0,
@@ -206,6 +206,50 @@
    "drawdown_pct": -24.11,
    "title_th": "UNH ต่ำกว่าจุดสูงสุดเกิน 20%",
    "detail_th": "ราคา 331.14 ต่ำกว่าจุดสูงสุด 52 สัปดาห์ (436.35) อยู่ 24.1%"
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "ASTS",
+   "name": "AST SpaceMobile",
+   "kind": "day_drop",
+   "value": -10.37,
+   "price": 22.9,
+   "drawdown_pct": -82.79,
+   "title_th": "ASTS ร่วง 10.4% ในวันเดียว",
+   "detail_th": "ปิดที่ 22.9 (ก่อนหน้า 25.55) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 82.8%"
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "AVGO",
+   "name": "Broadcom Inc.",
+   "kind": "day_drop",
+   "value": -12.4,
+   "price": 303.66,
+   "drawdown_pct": -36.94,
+   "title_th": "AVGO ร่วง 12.4% ในวันเดียว",
+   "detail_th": "ปิดที่ 303.66 (ก่อนหน้า 346.65) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 36.9%"
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "KLAC",
+   "name": "KLA Corporation",
+   "kind": "day_drop",
+   "value": -10.69,
+   "price": 126.36,
+   "drawdown_pct": -58.12,
+   "title_th": "KLAC ร่วง 10.7% ในวันเดียว",
+   "detail_th": "ปิดที่ 126.36 (ก่อนหน้า 141.48) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 58.1%"
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "RKLB",
+   "name": "Rocket Lab",
+   "kind": "day_drop",
+   "value": -10.98,
+   "price": 45.39,
+   "drawdown_pct": -69.79,
+   "title_th": "RKLB ร่วง 11.0% ในวันเดียว",
+   "detail_th": "ปิดที่ 45.39 (ก่อนหน้า 50.99) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 69.8%"
   }
  ]
 }
