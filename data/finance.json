@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T03:30:19Z",
+ "updated_at": "2026-11-21T01:06:29Z",
  "readings": [
   {
    "date": "2026-10-24",
@@ -1583,6 +1583,62 @@
      "key": "credit_spread",
      "label": "GovSpending: BAMLH0A0HYM2 (mirror ของ FRED) 3.34% ณ 16 พ.ย. 2026",
      "url": "https://govspending.org/series/BAMLH0A0HYM2/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-21",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.29,
+    "hy_oas_pct": 3.52,
+    "loan_growth_pct": 7.15,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 32
+   },
+   "confidence": {
+    "yield_curve": "low",
+    "credit_spread": "medium",
+    "loan_growth": "high",
+    "delinquency": "high",
+    "fed_policy": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่าง 10 ปี ลบ 2 ปี ≈ +0.29% (ปิด 20 พ.ย.: 10 ปี 4.92% − 2 ปี 4.63%) จากเดิม +0.30% แทบไม่เปลี่ยน คำนวณจากตัวเลขใน CappNotes เพราะเปิด FRED ไม่ได้ ความเชื่อมั่นต่ำ",
+    "credit_spread": "ส่วนต่างดอกเบี้ยหุ้นกู้เสี่ยงสูง (ICE BofA) 3.52% (19 พ.ย.) กว้างขึ้นจาก 3.34% (16 พ.ย.) +0.18 จุดในสัปดาห์เดียวที่หุ้นร่วง ตลาดระวังมากขึ้นแต่ยังไม่ใช่วิกฤตสินเชื่อ ยังต่ำกว่าเกณฑ์กังวล 5% มาก (อ้างอิงจาก CappNotes เพราะเปิด FRED ไม่ได้)",
+    "loan_growth": "สินเชื่อธนาคารสหรัฐฯ โตเฉลี่ย ~7.15% ต่อปี (H.8 ฉบับ 6 พ.ย.) เท่าเดิม (21 พ.ย. วันเสาร์: ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) เท่าเดิม ข้อมูลไตรมาส 3 ยังไม่ออก (21 พ.ย. วันเสาร์: ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "fed_policy": "คง 32/100 ตลาด (Kalshi) ให้โอกาส Fed ขึ้นดอกเบี้ย 0.25% วันที่ 9 ธ.ค. ราว 90% · 20 พ.ย. ผู้ว่าการ Lisa Cook บอกว่ารอนานเสี่ยงตามไม่ทัน และประธาน Fed ฟิลาเดลเฟียเปิดทางขึ้นติดกัน 2 ครั้ง ท่าทียังเข้มเหมือนเดิม",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (อัปเดต 20:43 UTC 20 พ.ย. ปิดตลาดวันศุกร์): JPM $310.46 (-3.05% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -14.98%) · V $402.86 (+0.15% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -7.72%) · GS $792.21 (-6.53% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -31.24%)"
+   },
+   "prices": {
+    "JPM": 310.46,
+    "V": 402.86,
+    "GS": 792.21
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "credit_spread",
+     "label": "GovSpending: BAMLH0A0HYM2 (mirror ของ FRED) 3.34% ณ 16 พ.ย. 2026",
+     "url": "https://govspending.org/series/BAMLH0A0HYM2/"
+    },
+    {
+     "key": "credit_spread",
+     "label": "CappNotes: Closing Look 20 พ.ย. 2026 (HY spread, yields, Kalshi)",
+     "url": "https://cappnotes.substack.com/p/closing-look-friday-november-20-2026"
+    },
+    {
+     "key": "fed_policy",
+     "label": "StockTitan: Stock Market Today 20 พ.ย. 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026"
     }
    ],
    "created_by": "claude",

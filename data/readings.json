@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T03:30:19Z",
+ "updated_at": "2026-11-21T01:06:29Z",
  "readings": [
   {
    "confidence": {
@@ -2005,6 +2005,54 @@
      "key": "prices",
      "label": "Yahoo Finance (data/market.json)",
      "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-21",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 3.3,
+    "gpu_spot_price_change_1m_pct": 23.6,
+    "enterprise_ai_adoption_pct": 66.71,
+    "enterprise_ai_adoption_change_3m_pp": 1.82,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "low",
+    "enterprise_adoption": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า (เท่าเดิม) ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon (21 พ.ย. วันเสาร์: ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ · 20 พ.ย. มีข่าว (Reuters) ว่า ก.ล.ต.สหรัฐฯ กำลังตรวจสอบประเด็นบัญชีของ Nvidia และอัยการแคลิฟอร์เนียออกหมายเรียกเรื่องชิปไปจีน หุ้น NVDA −14% แต่ยังไม่มีหลักฐานว่าอุปทานหรือคำสั่งซื้อชิปเปลี่ยน (21 พ.ย. วันเสาร์: ไม่มีข้อมูลระยะรอใหม่ จึงใช้ค่าเดิม)",
+    "gpu_spot_price": "ราคาเช่า GPU H100 (Ornn OCPI) คงไว้ $3.30/ชม. (ปิด 9 พ.ย.) +23.6% ใน 1 เดือน รอบนี้เปิดหน้า Ornn ไม่ได้ จึงใช้ค่าเดิม ความเชื่อมั่นต่ำ (21 พ.ย. วันเสาร์: ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ต.ค. 2026 = 66.7% (FRED อัปเดต 11 พ.ย.) เทียบ ก.ค. 64.9% = +1.8 จุดใน 3 เดือน (จากเดิม +2.1 จุด) การใช้ AI ในองค์กรยังโตต่อแต่ชะลอลงเล็กน้อย (21 พ.ย. วันเสาร์: ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "power_grid": "คงไว้ 8.8/10 (เท่าเดิม) อัปเดต 16 พ.ย.: PJM ยื่น FERC ขอลดเวลาศึกษาการเชื่อมต่อดาต้าเซ็นเตอร์จาก 24 เหลือ 12 เดือน (คาดตัดสินราวกลาง มี.ค. 2027) และเสนอกฎให้โหลดใหญ่ ≥50 MW ต้องทนไฟกระเพื่อมได้ (เริ่ม 16 ม.ค. 2027) หลังเหตุ 22 ก.ค. ดาต้าเซ็นเตอร์ 3.9 GW หลุดจากระบบ PJM คาดโหลดใหม่เพิ่มถึง 30 GW ภายในปี 2030 ส่วนไฟขาด 6.8 GW ยังต้องประมูลสำรองเริ่ม 1 มี.ค. 2027 คอขวดยังสูงอยู่ (21 พ.ย. วันเสาร์: ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (อัปเดต 20:43 UTC 20 พ.ย. ปิดตลาดวันศุกร์): KLAC $126.36 (-10.69% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -58.12%) · AVGO $303.66 (-12.40% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -36.94%) · ETN $311.16 (-5.87% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -32.35%)"
+   },
+   "prices": {
+    "KLAC": 126.36,
+    "AVGO": 303.66,
+    "ETN": 311.16
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "chip_lead_time",
+     "label": "CappNotes: Closing Look 20 พ.ย. 2026",
+     "url": "https://cappnotes.substack.com/p/closing-look-friday-november-20-2026"
     }
    ],
    "created_by": "claude",
