@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T01:06:29Z",
+ "updated_at": "2026-11-22T01:04:55Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -674,6 +674,52 @@
     "LLY": 1345.66,
     "ISRG": 400.89,
     "UNH": 338.79
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "policy_risk",
+     "label": "TIKR: UnitedHealth sinks 5% on Medicare Advantage audit plan (17 พ.ย. 2026)",
+     "url": "https://www.tikr.com/blog/unitedhealth-sinks-5-on-medicare-advantage-audit-plan-as-cms-moves-to-crush-medical-fraud"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-22",
+   "indicators": {
+    "lly_revenue_growth_yoy_pct": 39.0,
+    "unh_medical_care_ratio_pct": 88.4,
+    "isrg_procedure_growth_yoy_pct": 14.0,
+    "hc_policy_risk": 7.0,
+    "healthcare_jobs_growth_yoy_pct": 2.21
+   },
+   "confidence": {
+    "glp1_demand": "high",
+    "insurer_cost": "medium",
+    "surgery_volume": "high",
+    "policy_risk": "low",
+    "hc_jobs": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "glp1_demand": "Eli Lilly รายได้ไตรมาส 3/2026 +39% เทียบปีก่อน (ประกาศ 29 ต.ค.) เท่าเดิม จนกว่างบไตรมาสถัดไป (22 พ.ย. วันอาทิตย์: ตลาดปิด ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "insurer_cost": "UnitedHealth สัดส่วนค่ารักษาไตรมาส 3/2026 = 88.4% (ประกาศ 13 ต.ค.) เท่าเดิม (22 พ.ย. วันอาทิตย์: ตลาดปิด ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "surgery_volume": "Intuitive Surgical ผ่าตัด da Vinci ไตรมาส 3/2026 โตราว 14% (ประกาศ 20 ต.ค.) เท่าเดิม (22 พ.ย. วันอาทิตย์: ตลาดปิด ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "policy_risk": "คงไว้ 7/10 (ความเชื่อมั่นต่ำ) UNH ลงต่ออีก −5.4% วันที่ 19 พ.ย. ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 24% จากความกังวลกฎ CRUSH ของ CMS (เรียกเงิน Medicare Advantage คืนย้อนถึงปี 2018 ราว $9 พันล้านต่อปีทั้งอุตสาหกรรม รับฟังความเห็นถึง 19 ม.ค. 2027) ยังไม่มีนโยบายใหม่เพิ่ม (22 พ.ย. วันอาทิตย์: ตลาดปิด ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "hc_jobs": "การจ้างงานสาธารณสุข ต.ค. 2026 = 24.00 ล้านตำแหน่ง +2.21% เทียบปีก่อน (ค่าใหม่จาก FRED) จากเดิม +2.22% (ก.ย.) (22 พ.ย. วันอาทิตย์: ตลาดปิด ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันศุกร์ 20 พ.ย. วันอาทิตย์ตลาดปิด): LLY $1,347.11 (-0.30% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -6.68%) · ISRG $399.05 (-2.01% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -32.69%) · UNH $339.85 (+2.84% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -22.12%)"
+   },
+   "prices": {
+    "LLY": 1347.11,
+    "ISRG": 399.05,
+    "UNH": 339.85
    },
    "prices_as_of": "2026-11-20",
    "sources": [

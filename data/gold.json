@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-21T01:06:29Z",
+ "updated_at": "2026-11-22T01:04:55Z",
  "readings": [
   {
    "date": "2026-11-20",
@@ -164,6 +164,90 @@
      "key": "inflation_expect",
      "label": "FRED T10YIE",
      "url": "https://fred.stlouisfed.org/series/T10YIE"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-22",
+   "indicators": {
+    "real_yield_10y_pct": 2.88,
+    "usd_index_change_3m_pct": 5.1,
+    "central_bank_gold_tonnes_q": 321.2,
+    "gold_etf_flows_tonnes_1m": 19,
+    "breakeven_inflation_10y_pct": 2.16,
+    "gold_usd_oz": 3539.0,
+    "usd_thb": 33.94,
+    "thai_gold_bar_sell_thb": 57150
+   },
+   "confidence": {
+    "real_yield": "medium",
+    "dollar": "high",
+    "central_banks": "high",
+    "etf_flows": "medium",
+    "inflation_expect": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "real_yield": "ดอกเบี้ยแท้จริง 10 ปีสหรัฐ (TIPS) 2.88% (FRED 19 พ.ย.) จากเดิม 2.86% แทบไม่เปลี่ยน ยังสูงใกล้ระดับสูงสุดในรอบ 20 ปี เป็นแรงกดดันหลักต่อทอง (22 พ.ย. วันอาทิตย์: รอบนี้เปิดแหล่งข้อมูล (FRED/Ornn) ไม่ได้ จึงใช้ค่าเดิม ค่าของวันศุกร์ 20 พ.ย. อาจต่างเล็กน้อย)",
+    "dollar": "ดัชนีดอลลาร์ (DXY) 103.86 (ปิด 20 พ.ย.) เทียบ 3 เดือนก่อน 98.80 = +5.1% (จากเดิม +5.0%) ดอลลาร์แข็งมาก กดดันทอง (22 พ.ย. วันอาทิตย์: ตลาดปิด ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "central_banks": "ธนาคารกลางทั่วโลกซื้อทองสุทธิไตรมาส 3/2026 = 321.2 ตัน (WGC 3 พ.ย.) +42% จาก 226.3 ตันในไตรมาส 3/2025 ทั้งปีถึง ก.ย. 675 ตัน จีนซื้อ 63 ตัน โปแลนด์ 40 ตัน เป็นแรงหนุนหลักของทอง (ค่าแรกของหมวด) (22 พ.ย. วันอาทิตย์: ตลาดปิด ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "etf_flows": "กองทุนทองทั่วโลก ต.ค. 2026 ถือทองเพิ่ม 19 ตัน เป็น 4,275 ตัน (เงินไหลเข้า $2.7 พันล้าน, WGC 5 พ.ย.) WGC ไม่ได้ระบุเงินไหลเข้าเป็นตัน จึงใช้ส่วนเปลี่ยนของปริมาณถือครองแทน ความเชื่อมั่นปานกลาง ตัวเลข พ.ย. จะออกต้น ธ.ค. (22 พ.ย. วันอาทิตย์: ตลาดปิด ไม่มีข้อมูลใหม่ จึงใช้ค่าเดิม)",
+    "inflation_expect": "เงินเฟ้อคาดการณ์ 10 ปีสหรัฐ 2.16% (FRED 19 พ.ย.) จากเดิม 2.15% ทรงตัวระดับต่ำ ตลาดไม่กังวลเงินเฟ้อ จึงไม่ค่อยหนุนทอง (22 พ.ย. วันอาทิตย์: รอบนี้เปิดแหล่งข้อมูล (FRED/Ornn) ไม่ได้ จึงใช้ค่าเดิม ค่าของวันศุกร์ 20 พ.ย. อาจต่างเล็กน้อย)",
+    "gold_thai": "ทองโลก (GC=F) ปิดวันศุกร์ 20 พ.ย. $3,539/ออนซ์ (−4.0% ตาม Yahoo Finance) ต่ำสุดในรอบ ~14 เดือน จากแรงขายทุกสินทรัพย์ ดอลลาร์แข็ง และตลาดคาด Fed ขึ้นดอกเบี้ย 9 ธ.ค. ส่วนเงินบาท 33.94 บาท/ดอลลาร์ แทบไม่เปลี่ยน จึงไม่ช่วยพยุงราคาทองไทย · ทองแท่งไทยล่าสุด (สมาคมค้าทองคำ เสาร์ 21 พ.ย. ครั้งแรก 09:11 น.) ขายออก 57,150 บาท ลด 450 บาท จากเดิม 57,400 · วันอาทิตย์ไม่มีประกาศราคาใหม่ รอดูราคาเปิดวันจันทร์ 23 พ.ย.",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันศุกร์ 20 พ.ย. วันอาทิตย์ตลาดปิด): GLD $322.87 (-3.67% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -34.89%) · GDX $68.40 (-5.00% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -40.95%)"
+   },
+   "prices": {
+    "GLD": 322.87,
+    "GDX": 68.4
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "real_yield",
+     "label": "Tipswatch: 10-year TIPS auction gets real yield of 2.903% (19 พ.ย. 2026)",
+     "url": "https://tipswatch.com/2026/11/19/10-year-tips-auction-gets-real-yield-of-2-903-highest-in-24-years/"
+    },
+    {
+     "key": "inflation_expect",
+     "label": "tipsyield.com: 10-Year TIPS Real Yield and Breakeven",
+     "url": "https://tipsyield.com/real-yields"
+    },
+    {
+     "key": "dollar",
+     "label": "Yahoo Finance DX-Y.NYB (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/DX-Y.NYB"
+    },
+    {
+     "key": "central_banks",
+     "label": "World Gold Council: Gold Demand Trends Q3 2026 – Central banks",
+     "url": "https://www.gold.org/goldhub/research/gold-demand-trends/gold-demand-trends-q3-2026/central-banks"
+    },
+    {
+     "key": "etf_flows",
+     "label": "World Gold Council: Gold ETF Flows October 2026",
+     "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/11"
+    },
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "real_yield",
+     "label": "FRED DFII10",
+     "url": "https://fred.stlouisfed.org/graph/?id=DFII10"
+    },
+    {
+     "key": "inflation_expect",
+     "label": "FRED T10YIE",
+     "url": "https://fred.stlouisfed.org/series/T10YIE"
+    },
+    {
+     "key": "gold_thai",
+     "label": "กรุงเทพธุรกิจ: ราคาทองคำวันนี้ 21 พ.ย.69 ลง 450 บาท",
+     "url": "https://www.bangkokbiznews.com/news/news-update/1261757"
     }
    ],
    "created_by": "claude",
