@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T01:04:55Z",
+ "updated_at": "2026-11-23T01:10:20Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -846,6 +846,67 @@
     {
      "key": "rates",
      "label": "Yahoo Finance ^TNX (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/%5ETNX"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-23",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 225.0,
+    "us10y_change_3m_pp": 0.17
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "low",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 งบกลาโหม FY2027 ยังไม่ผ่าน งบชั่วคราว (CR) หมด 11 ธ.ค. ข่าว 20 พ.ย. ระบุว่ายังไม่มีสัญญาณตกลงกัน เสี่ยงรัฐบาลปิดบางส่วน ร่าง NDAA ฉบับรวมคาดออกภายใน 2–3 สัปดาห์",
+    "gpr": "ดัชนี GPR รายเดือนอัปเดต 2 พ.ย. แต่หน้าเว็บไม่แสดงตัวเลขและดาวน์โหลดไฟล์ไม่ได้ ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ",
+    "launches": "คงไว้ +0.4% (สะสมถึง 31 ต.ค.) ความเชื่อมั่นต่ำ · ข้อมูลจาก Flight Atlas (ไม่ใช่แหล่งหลัก) นับได้ 272 ครั้งถึง 22 พ.ย. เทียบ 282 ครั้งช่วงเดียวกันปีก่อน (≈ −3.5%) จะตรวจกับ Next Spaceflight/McDowell ก่อนปรับค่า",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 3/2026 ≈ $3.57 พันล้าน (ประกาศ 9 พ.ย.) +225% เทียบปีก่อน เท่าเดิม",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 4.91% (ปิด 20 พ.ย. Yahoo Finance) เทียบ 3 เดือนก่อน 4.74% = +0.17 จุด เท่าเดิม",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันศุกร์ 20 พ.ย.): LMT $565.50 (-1.11% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -16.43%) · RKLB $45.42 (-10.92% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -69.77%) · ASTS $23.27 (-8.92% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -82.52%) · คืนวันอาทิตย์ (เวลาสหรัฐฯ) ฟิวเจอร์ส Nasdaq +2–3% S&P 500 +1–2% ส่งสัญญาณเด้งกลับ (Fortune/Reuters) แต่ยังไม่ใช่ราคาปิดจริง"
+   },
+   "prices": {
+    "LMT": 565.5,
+    "RKLB": 45.42,
+    "ASTS": 23.27
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "defense_budget",
+     "label": "Latin Times: shutdown risk Dec 11",
+     "url": "https://www.latintimes.com/us-government-shutdown-risk-december-funding-deadline-601593"
+    },
+    {
+     "key": "gpr",
+     "label": "Caldara–Iacoviello GPR",
+     "url": "https://www.matteoiacoviello.com/gpr.htm"
+    },
+    {
+     "key": "launches",
+     "label": "Flight Atlas 2026 statistics",
+     "url": "https://www.flightatlas.org/history/2026/statistics"
+    },
+    {
+     "key": "rates",
+     "label": "Yahoo Finance ^TNX",
      "url": "https://finance.yahoo.com/quote/%5ETNX"
     }
    ],

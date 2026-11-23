@@ -18,7 +18,7 @@
    "source_url": "https://finance.yahoo.com/quote/KLAC",
    "currency": "USD",
    "pe": 31.8,
-   "pe_5y_avg": 29.15,
+   "pe_5y_avg": 30.12,
    "pe_source_url": "https://fullratio.com/stocks/nasdaq-klac/pe-ratio",
    "name": "KLA Corporation",
    "gauge": false
@@ -38,7 +38,7 @@
    "source_url": "https://finance.yahoo.com/quote/AVGO",
    "currency": "USD",
    "pe": 38.88,
-   "pe_5y_avg": 40.19,
+   "pe_5y_avg": 54.69,
    "pe_source_url": "https://fullratio.com/stocks/nasdaq-avgo/pe-ratio",
    "name": "Broadcom Inc.",
    "gauge": false
@@ -78,7 +78,7 @@
    "source_url": "https://finance.yahoo.com/quote/JPM",
    "currency": "USD",
    "pe": 13.03,
-   "pe_5y_avg": 11.64,
+   "pe_5y_avg": 11.05,
    "pe_source_url": "https://fullratio.com/stocks/nyse-jpm/pe-ratio",
    "name": "JPMorgan Chase",
    "gauge": false
@@ -98,7 +98,7 @@
    "source_url": "https://finance.yahoo.com/quote/V",
    "currency": "USD",
    "pe": 32.62,
-   "pe_5y_avg": 30.69,
+   "pe_5y_avg": 33.84,
    "pe_source_url": "https://fullratio.com/stocks/nyse-v/pe-ratio",
    "name": "Visa Inc.",
    "gauge": false
@@ -118,7 +118,7 @@
    "source_url": "https://finance.yahoo.com/quote/GS",
    "currency": "USD",
    "pe": 11.37,
-   "pe_5y_avg": 12.95,
+   "pe_5y_avg": 11.19,
    "pe_source_url": "https://fullratio.com/stocks/nyse-gs/pe-ratio",
    "name": "Goldman Sachs",
    "gauge": false
@@ -139,7 +139,9 @@
    "currency": "USD",
    "pe": 43.72,
    "name": "Eli Lilly",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 62.74,
+   "pe_source_url": "https://fullratio.com/stocks/nyse-lly/pe-ratio"
   },
   "ISRG": {
    "price": 399.05,
@@ -157,7 +159,9 @@
    "currency": "USD",
    "pe": 48.25,
    "name": "Intuitive Surgical",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 70.48,
+   "pe_source_url": "https://fullratio.com/stocks/nasdaq-isrg/pe-ratio"
   },
   "UNH": {
    "price": 339.85,
@@ -175,7 +179,9 @@
    "currency": "USD",
    "pe": 19.4,
    "name": "UnitedHealth Group",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 24.78,
+   "pe_source_url": "https://fullratio.com/stocks/nyse-unh/pe-ratio"
   },
   "COST": {
    "price": 1102.15,
@@ -213,7 +219,9 @@
    "currency": "USD",
    "pe": 17.68,
    "name": "PepsiCo",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 25.43,
+   "pe_source_url": "https://fullratio.com/stocks/nasdaq-pep/pe-ratio"
   },
   "MCD": {
    "price": 273.24,
@@ -231,7 +239,9 @@
    "currency": "USD",
    "pe": 21.62,
    "name": "McDonald's",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 27.6,
+   "pe_source_url": "https://fullratio.com/stocks/nyse-mcd/pe-ratio"
   },
   "BKNG": {
    "price": 144.91,
@@ -249,7 +259,9 @@
    "currency": "USD",
    "pe": 15.72,
    "name": "Booking Holdings",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 39.51,
+   "pe_source_url": "https://fullratio.com/stocks/nasdaq-bkng/pe-ratio"
   },
   "MAR": {
    "price": 406.64,
@@ -267,7 +279,9 @@
    "currency": "USD",
    "pe": 40.54,
    "name": "Marriott International",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 45.53,
+   "pe_source_url": "https://fullratio.com/stocks/nasdaq-mar/pe-ratio"
   },
   "ABNB": {
    "price": 170.36,
@@ -305,7 +319,9 @@
    "currency": "USD",
    "pe": 20.08,
    "name": "Lockheed Martin",
-   "gauge": false
+   "gauge": false,
+   "pe_5y_avg": 17.92,
+   "pe_source_url": "https://fullratio.com/stocks/nyse-lmt/pe-ratio"
   },
   "RKLB": {
    "price": 45.42,

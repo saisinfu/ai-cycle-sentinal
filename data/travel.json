@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T01:04:55Z",
+ "updated_at": "2026-11-23T01:10:20Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -826,6 +826,72 @@
     {
      "key": "oil",
      "label": "Yahoo Finance CL=F (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/CL=F"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-23",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.8,
+    "us_hotel_revpar_yoy_pct": 12.9,
+    "wti_usd": 83.62,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "medium",
+    "oil": "high",
+    "income": "high",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "เปิดหน้า TSA ไม่ได้ จึงคำนวณค่าเฉลี่ย 7 วันไม่ได้ ใช้ตัวเลขสะสมแทน: ผู้โดยสารผ่านจุดตรวจ 1 ม.ค.–18 พ.ย. 2026 ราว 792.7 ล้านคน −0.8% เทียบปีก่อน (จากเดิม −0.7% สะสมถึง 23 ก.ย.) ความเชื่อมั่นต่ำ · TSA คาดวันอาทิตย์ 29 พ.ย. อาจเกิน 3 ล้านคน",
+    "hotel": "ได้ข้อมูลใหม่: RevPAR โรงแรมสหรัฐฯ สัปดาห์ 8–14 พ.ย. 2026 = $106.37 +12.9% เทียบปีก่อน (อัตราเข้าพัก 64.5%, ราคาห้อง $164.85 +6.5%) จากเดิม +4.7% แต่ฐานปีก่อนต่ำเพราะรัฐบาลสหรัฐฯ ปิดทำการช่วงนั้น จึงดูดีเกินจริงบ้าง",
+    "oil": "น้ำมัน WTI $83.62/บาร์เรล (ปิด 20 พ.ย. Yahoo Finance) เท่าเดิม ยังต่ำกว่าเกณฑ์กังวล $95",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม ตัวเลข ต.ค. ออก 25 พ.ย.",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% (ประกาศ 3 พ.ย.) เท่าเดิม",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันศุกร์ 20 พ.ย.): BKNG $144.91 (-1.64% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -34.04%) · MAR $406.64 (-1.79% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -5.25%) · ABNB $170.36 (-1.41% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -10.57%) · คืนวันอาทิตย์ (เวลาสหรัฐฯ) ฟิวเจอร์ส Nasdaq +2–3% S&P 500 +1–2% ส่งสัญญาณเด้งกลับ (Fortune/Reuters) แต่ยังไม่ใช่ราคาปิดจริง"
+   },
+   "prices": {
+    "BKNG": 144.91,
+    "MAR": 406.64,
+    "ABNB": 170.36
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "hotel",
+     "label": "Hotel Management: US hotel RevPAR week ending Nov 14",
+     "url": "https://www.hotelmanagement.net/data-trends/us-hotel-revpar-nearly-13-year-over-year"
+    },
+    {
+     "key": "hotel",
+     "label": "Lodging Magazine (CoStar weekly)",
+     "url": "https://lodgingmagazine.com/?p=129730"
+    },
+    {
+     "key": "tsa",
+     "label": "QUE.com: Thanksgiving 2026 travel / TSA YTD",
+     "url": "https://que.com/thanksgiving-2026-travel-81-5-million-on-the-move-fares-up-17-and-a-tsa-record-on-the-line/"
+    },
+    {
+     "key": "income",
+     "label": "BEA release schedule",
+     "url": "https://bea.gov/node/43022"
+    },
+    {
+     "key": "oil",
+     "label": "Yahoo Finance CL=F",
      "url": "https://finance.yahoo.com/quote/CL=F"
     }
    ],

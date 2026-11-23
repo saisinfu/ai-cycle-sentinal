@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T01:04:55Z",
+ "updated_at": "2026-11-23T01:10:20Z",
  "readings": [
   {
    "confidence": {
@@ -2101,6 +2101,74 @@
      "key": "chip_lead_time",
      "label": "CappNotes: Closing Look 20 พ.ย. 2026",
      "url": "https://cappnotes.substack.com/p/closing-look-friday-november-20-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-23",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 2.89,
+    "gpu_spot_price_change_1m_pct": -7.37,
+    "enterprise_ai_adoption_pct": 66.71,
+    "enterprise_ai_adoption_change_3m_pp": 1.82,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "high",
+    "enterprise_adoption": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon ไม่มีตัวเลขใหม่จนกว่างบไตรมาสถัดไป (ปลาย ม.ค. 2027)",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ ข่าว Nvidia (CEO Jensen Huang ลาออก 17 พ.ย., ก.ล.ต.สหรัฐฯ สอบการเปิดเผยข้อมูล) ยังไม่มีหลักฐานว่าอุปทานชิปเปลี่ยน",
+    "gpu_spot_price": "ได้ข้อมูลใหม่แล้ว: ราคาเช่า GPU H100 (Ornn OCPI) $2.89/ชม. (ปิด 21 พ.ย.) −7.4% ใน 1 เดือน จากเดิม $3.30 (+23.6%, ค่าเก่า 9 พ.ย.) ราคาเช่าอ่อนลงต่อเนื่องจาก $3.39 (12 พ.ย.) ความต้องการเช่าชิปเริ่มชะลอ แต่ยังไม่ถึงเกณฑ์แจ้งเตือน −15%",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ต.ค. 2026 = 66.7% (FRED อัปเดต 11 พ.ย.) เทียบ ก.ค. 64.9% = +1.8 จุดใน 3 เดือน เท่าเดิม ตัวเลข พ.ย. ยังไม่ออก",
+    "power_grid": "คงไว้ 8.8/10 · ข่าวใหม่: 19 พ.ย. กลุ่มผู้แทนผู้บริโภค 7 รัฐและผู้ตรวจตลาด PJM ขอเลื่อนประมูลไฟฟ้า 2029/30 (9–15 ธ.ค.) เพราะคาดการณ์โหลดดาต้าเซ็นเตอร์สูงเกินจริง · 20 พ.ย. งานวิจัย Johns Hopkins คาดสหรัฐฯ ขาดหม้อแปลงราว 15% ภายในปี 2030 (รอส่งของเกิน 2 ปี) หนุนธุรกิจ ETN · ผลประมูลสำรอง PJM ต้องออกภายใน 2 ธ.ค. คอขวดยังสูงอยู่",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันศุกร์ 20 พ.ย.): KLAC $126.87 (-10.33% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -57.95%) · AVGO $304.41 (-12.19% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -36.79%) · ETN $311.33 (-5.82% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -32.31%) · คืนวันอาทิตย์ (เวลาสหรัฐฯ) ฟิวเจอร์ส Nasdaq +2–3% S&P 500 +1–2% ส่งสัญญาณเด้งกลับ (Fortune/Reuters) แต่ยังไม่ใช่ราคาปิดจริง"
+   },
+   "prices": {
+    "KLAC": 126.87,
+    "AVGO": 304.41,
+    "ETN": 311.33
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "gpu_spot_price",
+     "label": "Ornn OCPI-H100",
+     "url": "https://data.ornn.com/markets/h100-sxm"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "FRED RAMPAIENTERPRISE",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    },
+    {
+     "key": "power_grid",
+     "label": "Utility Dive: PJM capacity auction delay request",
+     "url": "https://www.utilitydive.com/news/ratepayer-advocates-pjm-market-monitor-capacity-auction/875165/"
+    },
+    {
+     "key": "power_grid",
+     "label": "Fortune: transformer shortage study",
+     "url": "https://fortune.com/2026/11/20/transformer-shortage-power-grid-johns-hopkins-study/"
+    },
+    {
+     "key": "chip_lead_time",
+     "label": "InvestmentNews: Nvidia SEC probe",
+     "url": "https://www.investmentnews.com/equities/embattled-nvidia-faces-sec-probe-as-california-attorney-general-mulls-action/269054"
     }
    ],
    "created_by": "claude",

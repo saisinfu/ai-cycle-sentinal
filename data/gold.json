@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T01:04:55Z",
+ "updated_at": "2026-11-23T01:10:20Z",
  "readings": [
   {
    "date": "2026-11-20",
@@ -248,6 +248,75 @@
      "key": "gold_thai",
      "label": "กรุงเทพธุรกิจ: ราคาทองคำวันนี้ 21 พ.ย.69 ลง 450 บาท",
      "url": "https://www.bangkokbiznews.com/news/news-update/1261757"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-23",
+   "indicators": {
+    "real_yield_10y_pct": 2.88,
+    "usd_index_change_3m_pct": 5.1,
+    "central_bank_gold_tonnes_q": 321.2,
+    "gold_etf_flows_tonnes_1m": 19,
+    "breakeven_inflation_10y_pct": 2.15,
+    "gold_usd_oz": 3539.0,
+    "usd_thb": 33.94,
+    "thai_gold_bar_sell_thb": 57150
+   },
+   "confidence": {
+    "real_yield": "high",
+    "dollar": "high",
+    "central_banks": "high",
+    "etf_flows": "medium",
+    "inflation_expect": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "real_yield": "ดอกเบี้ยแท้จริง 10 ปีสหรัฐฯ (TIPS) 2.88% (FRED 19 พ.ย.) เท่าเดิม ยังสูงใกล้ระดับสูงสุดรอบ 20 ปี เป็นแรงกดดันหลักต่อทอง ค่า 20 พ.ย. จะออกวันนี้",
+    "dollar": "ดัชนีดอลลาร์ (DXY) 103.84 (ปิด 20 พ.ย.) เทียบ 3 เดือนก่อน 98.80 = +5.1% ดอลลาร์แข็งใกล้สูงสุดรอบ 19 เดือน กดดันทอง",
+    "central_banks": "ธนาคารกลางทั่วโลกซื้อทองสุทธิไตรมาส 3/2026 = 321.2 ตัน (WGC 3 พ.ย.) เท่าเดิม ยังเป็นแรงหนุนหลักของทอง",
+    "etf_flows": "กองทุนทองทั่วโลก ต.ค. 2026 ถือทองเพิ่ม 19 ตัน เป็น 4,275 ตัน (WGC 5 พ.ย.) เท่าเดิม ตัวเลข พ.ย. ออกต้น ธ.ค. (ช่วงทองร่วงเดือนนี้อาจมีเงินไหลออก)",
+    "inflation_expect": "เงินเฟ้อคาดการณ์ 10 ปีสหรัฐฯ 2.15% (FRED 20 พ.ย.) จาก 2.16% ทรงตัวระดับต่ำ ไม่ค่อยหนุนทอง",
+    "gold_thai": "ทองโลก (GC=F) ปิดวันศุกร์ 20 พ.ย. $3,539/ออนซ์ ต่ำสุดรอบ ~14 เดือน ทั้งสัปดาห์ลงราว 9% เงินบาท 33.94 บาท/ดอลลาร์ ทรงตัว จึงไม่ช่วยพยุงราคาทองไทย · ทองแท่งไทยล่าสุด (เสาร์ 21 พ.ย.) ขายออก 57,150 บาท ทั้งสัปดาห์ลง 5,300 บาท ราคาวันจันทร์ยังไม่ประกาศ (สมาคมฯ มักประกาศราว 09:00 น.) · ผลสำรวจสมาคมค้าทองคำสัปดาห์นี้: ผู้เชี่ยวชาญ 54% มองทองลงต่อ",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันศุกร์ 20 พ.ย.): GLD $322.87 (-3.67% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -34.89%) · GDX $68.40 (-5.00% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -40.95%) · คืนวันอาทิตย์ (เวลาสหรัฐฯ) ฟิวเจอร์ส Nasdaq +2–3% S&P 500 +1–2% ส่งสัญญาณเด้งกลับ (Fortune/Reuters) แต่ยังไม่ใช่ราคาปิดจริง"
+   },
+   "prices": {
+    "GLD": 322.87,
+    "GDX": 68.4
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "real_yield",
+     "label": "FRED DFII10",
+     "url": "https://fred.stlouisfed.org/graph/?id=DFII10"
+    },
+    {
+     "key": "inflation_expect",
+     "label": "FRED T10YIE",
+     "url": "https://fred.stlouisfed.org/series/T10YIE"
+    },
+    {
+     "key": "dollar",
+     "label": "Yahoo Finance DX-Y.NYB",
+     "url": "https://finance.yahoo.com/quote/DX-Y.NYB"
+    },
+    {
+     "key": "etf_flows",
+     "label": "WGC ETF flows Oct 2026",
+     "url": "https://www.gold.org/goldhub/research/gold-etfs-holdings-and-flows/2026/11"
+    },
+    {
+     "key": "gold_thai",
+     "label": "สมาคมค้าทองคำ: ผลสำรวจ 23–27 พ.ย. 2026",
+     "url": "https://gtadmin.goldtraders.or.th/grc-gold-survey-23-27-nov-2026/"
     }
    ],
    "created_by": "claude",

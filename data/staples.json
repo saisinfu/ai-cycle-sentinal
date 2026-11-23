@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T01:04:55Z",
+ "updated_at": "2026-11-23T01:10:20Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -752,6 +752,67 @@
      "key": "sentiment",
      "label": "StockTitan: Stock Market Today 20 พ.ย. 2026 (UMich final)",
      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-23",
+   "indicators": {
+    "consumer_sentiment": 51.5,
+    "food_services_sales_yoy_pct": 7.0,
+    "food_at_home_cpi_yoy_pct": 1.77,
+    "fao_food_price_yoy_pct": 5.9,
+    "costco_us_comp_sales_pct": 8.1
+   },
+   "confidence": {
+    "sentiment": "medium",
+    "restaurant_sales": "medium",
+    "food_inflation": "high",
+    "input_cost": "high",
+    "costco_comps": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "sentiment": "ความเชื่อมั่นผู้บริโภค ม.มิชิแกน พ.ย. 2026 ค่าสุดท้าย 51.5 เท่าเดิม (ยังต่ำมาก แต่ฟื้นจาก 48.0 ใน ต.ค.) ค่าเบื้องต้น ธ.ค. ออกกลางเดือน",
+    "restaurant_sales": "ได้ข้อมูลใหม่: ยอดขายร้านอาหาร ต.ค. 2026 = $92.9 พันล้าน +7.0% เทียบปีก่อน (+0.2% จาก ก.ย.) จากเดิม +6.99% (ก.ย.) ทรงตัว อ้างอิงข่าวที่สรุปจากรายงาน Census 17 พ.ย. เพราะหน้า FRED ยังไม่อัปเดต",
+    "food_inflation": "ราคาอาหารในบ้าน (CPI) ก.ย. 2026 +1.77% เท่าเดิม · ต.ค. +0.4% จากเดือนก่อน แต่ BLS ไม่เผยแพร่ตัวเลขเทียบปีก่อนเพราะ ต.ค. 2025 เก็บข้อมูลไม่ได้ CPI พ.ย. ออกเดือน ธ.ค.",
+    "input_cost": "ดัชนีราคาอาหารโลก FAO ต.ค. 2026 = 133.9 จุด +5.9% เทียบปีก่อน เท่าเดิม ตัวเลขใหม่ออก 4 ธ.ค.",
+    "costco_comps": "Costco ยอดขายสาขาเดิมในสหรัฐฯ ต.ค. 2026 +8.1% (ประกาศ 4 พ.ย.) เท่าเดิม ตัวเลข พ.ย. ออกต้น ธ.ค.",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันศุกร์ 20 พ.ย.): COST $1,102.15 (+0.76% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -1.04%) · PEP $140.54 (+1.11% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -17.57%) · MCD $273.24 (+0.33% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -19.89%) · คืนวันอาทิตย์ (เวลาสหรัฐฯ) ฟิวเจอร์ส Nasdaq +2–3% S&P 500 +1–2% ส่งสัญญาณเด้งกลับ (Fortune/Reuters) แต่ยังไม่ใช่ราคาปิดจริง"
+   },
+   "prices": {
+    "COST": 1102.15,
+    "PEP": 140.54,
+    "MCD": 273.24
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "restaurant_sales",
+     "label": "Vinetur: US restaurant sales October 2026",
+     "url": "https://www.vinetur.com/en/20261118111393/restaurant-sales-fell-03-in-october-after-inflation-outpaced-revenue-growth.html"
+    },
+    {
+     "key": "food_inflation",
+     "label": "BLS CPI October 2026",
+     "url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm"
+    },
+    {
+     "key": "input_cost",
+     "label": "FAO Food Price Index",
+     "url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/"
+    },
+    {
+     "key": "costco_comps",
+     "label": "Costco October sales",
+     "url": "https://www.globenewswire.com/news-release/2026/11/04/3395861/0/en/index.html"
     }
    ],
    "created_by": "claude",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T01:04:55Z",
+ "updated_at": "2026-11-23T01:10:20Z",
  "readings": [
   {
    "date": "2026-10-24",
@@ -1695,6 +1695,77 @@
      "key": "fed_policy",
      "label": "StockTitan: Stock Market Today 20 พ.ย. 2026",
      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-23",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.29,
+    "hy_oas_pct": 3.52,
+    "loan_growth_pct": 7.18,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 32
+   },
+   "confidence": {
+    "yield_curve": "high",
+    "credit_spread": "high",
+    "loan_growth": "high",
+    "delinquency": "high",
+    "fed_policy": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่าง 10 ปี ลบ 2 ปี +0.29% (FRED 20 พ.ย.) ยืนยันตรงกับค่าที่คำนวณไว้ เท่าเดิม",
+    "credit_spread": "ส่วนต่างหุ้นกู้เสี่ยงสูง (ICE BofA) 3.52% (FRED 19 พ.ย.) เท่าเดิม กว้างขึ้นจาก 3.34% ต้นสัปดาห์ก่อน แต่ยังต่ำกว่าเกณฑ์กังวล 5% มาก",
+    "loan_growth": "สินเชื่อธนาคารสหรัฐฯ โตเฉลี่ย 4 ไตรมาส ~7.18% ต่อปี (H.8 ฉบับใหม่ 20 พ.ย.: Q4/25 6.1, Q1 8.3, Q2 8.1, Q3 6.2) จากเดิม 7.15% แทบไม่เปลี่ยน · ต.ค. โต 8.9% ต่อปี",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) เท่าเดิม ข้อมูลไตรมาส 3 ยังไม่ออก",
+    "fed_policy": "คง 32/100 ตลาด (CME FedWatch) ให้โอกาส Fed ขึ้นดอกเบี้ย 0.25% วันที่ 9 ธ.ค. ราว 99% (จาก ~97% วันศุกร์) และคาดขึ้นรวม 3 ครั้งถึง ก.ค. 2027 · สัปดาห์นี้ดู PCE ต.ค. (25 พ.ย.) และ Beige Book",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันศุกร์ 20 พ.ย.): JPM $310.53 (-3.03% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -14.97%) · V $401.87 (-0.09% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -7.95%) · GS $790.69 (-6.71% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -31.37%) · คืนวันอาทิตย์ (เวลาสหรัฐฯ) ฟิวเจอร์ส Nasdaq +2–3% S&P 500 +1–2% ส่งสัญญาณเด้งกลับ (Fortune/Reuters) แต่ยังไม่ใช่ราคาปิดจริง"
+   },
+   "prices": {
+    "JPM": 310.53,
+    "V": 401.87,
+    "GS": 790.69
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "yield_curve",
+     "label": "FRED T10Y2Y",
+     "url": "https://fred.stlouisfed.org/series/T10Y2Y"
+    },
+    {
+     "key": "credit_spread",
+     "label": "FRED BAMLH0A0HYM2",
+     "url": "https://fred.stlouisfed.org/series/BAMLH0A0HYM2"
+    },
+    {
+     "key": "delinquency",
+     "label": "FRED DRCCLACBS",
+     "url": "https://fred.stlouisfed.org/data/DRCCLACBS"
+    },
+    {
+     "key": "loan_growth",
+     "label": "Fed H.8 (Nov 20, 2026)",
+     "url": "https://www.federalreserve.gov/RELEASES/H8/current/"
+    },
+    {
+     "key": "fed_policy",
+     "label": "FinanceFeeds (Reuters/FedWatch)",
+     "url": "https://financefeeds.com/gold-price-today-3538-sunday-week-ahead-thanksgiving-december-fed-hike-odds-bull-3700-bear-3430/"
+    },
+    {
+     "key": "fed_policy",
+     "label": "Kalshi Fed odds",
+     "url": "https://kalshi.com/economics/fed-rate-odds"
     }
    ],
    "created_by": "claude",

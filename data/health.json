@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T01:04:55Z",
+ "updated_at": "2026-11-23T01:10:20Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -732,6 +732,62 @@
      "key": "policy_risk",
      "label": "TIKR: UnitedHealth sinks 5% on Medicare Advantage audit plan (17 พ.ย. 2026)",
      "url": "https://www.tikr.com/blog/unitedhealth-sinks-5-on-medicare-advantage-audit-plan-as-cms-moves-to-crush-medical-fraud"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-23",
+   "indicators": {
+    "lly_revenue_growth_yoy_pct": 39.0,
+    "unh_medical_care_ratio_pct": 88.4,
+    "isrg_procedure_growth_yoy_pct": 14.0,
+    "hc_policy_risk": 7.5,
+    "healthcare_jobs_growth_yoy_pct": 2.21
+   },
+   "confidence": {
+    "glp1_demand": "high",
+    "insurer_cost": "medium",
+    "surgery_volume": "high",
+    "policy_risk": "low",
+    "hc_jobs": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "glp1_demand": "Eli Lilly รายได้ไตรมาส 3/2026 +39% เทียบปีก่อน (ประกาศ 29 ต.ค.) เท่าเดิม จนกว่างบไตรมาสถัดไป",
+    "insurer_cost": "UnitedHealth สัดส่วนค่ารักษาไตรมาส 3/2026 = 88.4% (ประกาศ 13 ต.ค.) เท่าเดิม",
+    "surgery_volume": "Intuitive Surgical ผ่าตัด da Vinci ไตรมาส 3/2026 โตราว 14% (ประกาศ 20 ต.ค.) เท่าเดิม",
+    "policy_risk": "ปรับขึ้นเป็น 7.5/10 จาก 7 (ความเชื่อมั่นต่ำ) แรงกดดันต่อ Medicare Advantage เพิ่มหลายด้าน: 20 พ.ย. UnitedHealth ฟ้องรัฐบาลเรื่องถูกลดคะแนนดาวปี 2027 (เงินโบนัสหลายพันล้าน) และวันเดียวกัน CMS เสนอกฎปี 2028 ให้ได้คะแนนสูงยากขึ้น ต่อจากกฎ CRUSH (เรียกเงินคืน ~$9 พันล้าน/ปี) ส่วน LLY/ISRG ไม่มีข่าวนโยบายใหม่",
+    "hc_jobs": "การจ้างงานสาธารณสุข ต.ค. 2026 = 24.00 ล้านตำแหน่ง +2.21% เทียบปีก่อน เท่าเดิม (FRED 6 พ.ย.) ตัวเลข พ.ย. ออกต้น ธ.ค.",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันศุกร์ 20 พ.ย.): LLY $1,347.11 (-0.30% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -6.68%) · ISRG $399.05 (-2.01% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -32.69%) · UNH $339.85 (+2.84% วันที่ 20/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -22.12%) · คืนวันอาทิตย์ (เวลาสหรัฐฯ) ฟิวเจอร์ส Nasdaq +2–3% S&P 500 +1–2% ส่งสัญญาณเด้งกลับ (Fortune/Reuters) แต่ยังไม่ใช่ราคาปิดจริง"
+   },
+   "prices": {
+    "LLY": 1347.11,
+    "ISRG": 399.05,
+    "UNH": 339.85
+   },
+   "prices_as_of": "2026-11-20",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "policy_risk",
+     "label": "STAT: UnitedHealth sues CMS over star ratings",
+     "url": "https://www.statnews.com/2026/11/20/unitedhealth-cms-medicare-advantage-lawsuit-star-rating/"
+    },
+    {
+     "key": "policy_risk",
+     "label": "HHS: CMS proposes MA reforms (CY2028)",
+     "url": "https://www.hhs.gov/press-room/cms-proposes-medicare-advantage-reforms-competition-quality-beneficiary-choice.html"
+    },
+    {
+     "key": "hc_jobs",
+     "label": "FRED CES6562000001",
+     "url": "https://fred.stlouisfed.org/series/CES6562000001"
     }
    ],
    "created_by": "claude",
