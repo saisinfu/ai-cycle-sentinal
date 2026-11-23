@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T01:11:10Z",
+ "updated_at": "2026-11-23T14:05:00Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -2880,51 +2880,6 @@
    ]
   },
   {
-   "id": "2026-11-23-futures-rebound-after-ai-rout",
-   "date": "2026-11-23",
-   "time_utc": "2026-11-22T23:44:00Z",
-   "run": "morning",
-   "level": "medium",
-   "category": "market",
-   "title_th": "ฟิวเจอร์สสหรัฐฯ เด้งแรง Nasdaq +2–3% หลังสัปดาห์ร่วงหนักสุดตั้งแต่ปี 2020",
-   "summary_th": "คืนวันอาทิตย์ 22 พ.ย. (เวลาสหรัฐฯ) ฟิวเจอร์ส Dow +684 จุด (+1.4%) S&P 500 +1–2% และ Nasdaq +2–3% หลังสัปดาห์ก่อน Nasdaq ร่วงราว 10% มากสุดตั้งแต่ มี.ค. 2020 และหุ้นไต้หวันลง 17% ในสัปดาห์เดียว ไต้หวัน จีน และเกาหลีใต้ออกมาตรการพยุงตลาด (คุมชอร์ตเซล ผ่อนเกณฑ์มาร์จิน กองทุนพยุงหุ้น) แต่ยังเป็นแค่ราคาฟิวเจอร์ส ต้องรอดูราคาปิดจริงคืนนี้",
-   "impacts": [
-    {
-     "target": "ai",
-     "label_th": "ชิป / AI (KLAC, AVGO)",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "หุ้นชิปที่ร่วงหนักวันศุกร์ (AVGO −12%, KLAC −10%) มักเด้งแรงสุดเมื่อแรงขายตื่นตระหนกลดลง แต่ความกังวลเรื่อง Nvidia และฟองสบู่ AI ยังไม่หายไป"
-    },
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "ฟิวเจอร์ส Nasdaq บวก 2–3% บ่งชี้การฟื้นตัวทางเทคนิคหลังลงมาเกือบ 20% จากจุดสูงสุด"
-    },
-    {
-     "target": "main:sp500",
-     "label_th": "S&P 500",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "S&P 500 อยู่ในโซนปรับฐาน (−11.5% จากจุดสูงสุด) การเด้งกลับช่วยลดแรงกดดัน แต่สัปดาห์นี้ยังมี PCE และวันหยุดยาวที่สภาพคล่องต่ำ"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องไล่ซื้อหรือขาย แผนงบยืดหยุ่นยังซื้อตามรอบปกติ และใช้เงินสำรองซื้อเพิ่มเฉพาะเมื่อราคาย่อตามเกณฑ์ ความผันผวนยังสูง (VIX ~36)",
-   "watch_next_th": "ราคาปิดคืนนี้ (จ. 23 พ.ย.) · อ. 24 พ.ย. งบ Dell · พ. 25 พ.ย. 20:30 น. PCE ต.ค. + GDP ไตรมาส 3 · พฤ. 26 พ.ย. ตลาดสหรัฐฯ ปิด ศ. 27 ปิดครึ่งวัน",
-   "sources": [
-    {
-     "label": "Fortune: Dow futures jump nearly 700 points",
-     "url": "https://fortune.com/2026/11/22/stock-market-today-dow-futures-sp500-nasdaq-correction-ai-bust/"
-    },
-    {
-     "label": "Reuters via SRN News: US futures bounce while Asia braces",
-     "url": "https://srnnews.com/us-futures-bounce-while-asia-markets-brace-for-ai-wipeout/"
-    }
-   ]
-  },
-  {
    "id": "2026-11-23-unh-sues-cms-star-ratings",
    "date": "2026-11-23",
    "time_utc": "2026-11-23T01:00:00Z",
@@ -2997,6 +2952,119 @@
     {
      "label": "Fortune: transformer shortage study",
      "url": "https://fortune.com/2026/11/20/transformer-shortage-power-grid-johns-hopkins-study/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-23-futures-rebound-after-ai-rout",
+   "date": "2026-11-23",
+   "time_utc": "2026-11-23T13:36:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "market",
+   "title_th": "หุ้นสหรัฐฯ ก่อนเปิดเด้งแรง Nasdaq +3.5% Nvidia +9% AVGO +5.7%",
+   "summary_th": "อัปเดตค่ำ 23 พ.ย.: ก่อนตลาดสหรัฐฯ เปิด ฟิวเจอร์ส Nasdaq-100 บวกราว 3–3.5% S&P 500 +2–2.5% และ Dow +2% หลังสัปดาห์ก่อน Nasdaq ร่วงราว 10% มากสุดตั้งแต่ มี.ค. 2020 หุ้นชิปนำการฟื้น: Nvidia +9%, AVGO +5.7%, Lam Research/Micron +7% ส่วน RKLB +9% หลัง CFO บอกจะขึ้นราคาจรวด Electron ใน 6–9 เดือน VIX ลดจาก 35.9 เหลือราว 31 แต่ยังเป็นราคาก่อนเปิดตลาด ต้องดูราคาปิดจริง",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI (KLAC, AVGO)",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "หุ้นชิปที่ร่วงหนักวันศุกร์ (AVGO −12%, KLAC −10%) เด้งแรงสุดเมื่อแรงขายตื่นตระหนกลดลง แต่ความกังวลเรื่องฟองสบู่ AI และ Nvidia ยังไม่หายไป"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "ฟิวเจอร์ส Nasdaq บวก 3–3.5% เป็นการฟื้นทางเทคนิคหลังลงมาเกือบ 20% จากจุดสูงสุด 6 ต.ค."
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "S&P 500 ยังอยู่ในโซนปรับฐาน (−11.5% จากจุดสูงสุด) การเด้งช่วยลดแรงกดดัน แต่สัปดาห์นี้มี PCE และวันหยุดที่สภาพคล่องต่ำ"
+    },
+    {
+     "target": "RKLB",
+     "label_th": "Rocket Lab",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "ก่อนเปิดบวกกว่า 9% หลังร่วง 11% วันศุกร์ แผนขึ้นราคา Electron ช่วยเรื่องกำไรต่อเที่ยวบิน แต่หุ้นยังผันผวนสูงมาก (−70% จากจุดสูงสุด)"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องไล่ซื้อหรือขาย แผนยังซื้อตามรอบปกติ เงินสำรองที่ใช้ซื้อเพิ่มช่วงราคาย่อทำงานตามเกณฑ์อยู่แล้ว ความผันผวนยังสูง การเด้งวันเดียวยังไม่ยืนยันว่าจบรอบปรับฐาน",
+   "watch_next_th": "ราคาปิดคืนนี้ (จ. 23 พ.ย.) · อ. 24 พ.ย. งบ Dell · พ. 25 พ.ย. 20:30 น. PCE ต.ค. + GDP ไตรมาส 3 · พฤ. 26 พ.ย. ตลาดสหรัฐฯ ปิด ศ. 27 ปิดครึ่งวัน",
+   "sources": [
+    {
+     "label": "Fortune: Dow futures jump nearly 700 points",
+     "url": "https://fortune.com/2026/11/22/stock-market-today-dow-futures-sp500-nasdaq-correction-ai-bust/"
+    },
+    {
+     "label": "Reuters via SRN News: US futures bounce while Asia braces",
+     "url": "https://srnnews.com/us-futures-bounce-while-asia-markets-brace-for-ai-wipeout/"
+    },
+    {
+     "label": "Yahoo Finance: Premarket movers – chip stocks lead AI rebound",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/premarket-movers-chip-stocks-lead-124424524.html"
+    },
+    {
+     "label": "Fox Business: Stock futures rebound as AI, chip stocks rally",
+     "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
+    },
+    {
+     "label": "KuCoin/Zhitong: US stocks rally pre-market (RKLB)",
+     "url": "https://www.kucoin.com/news/flash/u-s-stocks-rally-pre-market-as-tech-shares-surge-ben-bernanke-opposes-fed-tightening"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-23-gold-rebounds-hike-bets-ease",
+   "date": "2026-11-23",
+   "time_utc": "2026-11-23T13:40:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "rates",
+   "title_th": "ทองเด้งราว 2–3% สู่ ~3,600 ดอลลาร์ ตลาดลดเดิมพัน Fed ขึ้นดอกเบี้ยแรง",
+   "summary_th": "จันทร์ 23 พ.ย. ทองโลกบวกราว 2–3% กลับไปแถว 3,600 ดอลลาร์/ออนซ์ หลังวันศุกร์ลงไปต่ำสุดรอบ 14 เดือนใกล้ 3,540 ดอลลาร์ ตลาดลดโอกาสที่ Fed จะขึ้นดอกเบี้ยแรง 0.50% ในการประชุม 8–9 ธ.ค. หลังรัฐมนตรีคลัง Bessent เตือนว่า Fed อาจ 'ทำผิดพลาด' หากคุมเข้มเกินไป และ Bill Ackman เตือนเสี่ยงเศรษฐกิจถดถอย แต่ CME FedWatch ยังให้โอกาสขึ้น 0.25% ราว 93–96%",
+   "impacts": [
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "เมื่อตลาดคาดดอกเบี้ยขึ้นน้อยลง ต้นทุนการถือทองที่ไม่มีดอกเบี้ยลดลง ทองจึงเด้ง แต่ GLD ยังต่ำกว่าจุดสูงสุดราว 35%"
+    },
+    {
+     "target": "gold",
+     "label_th": "ทองคำ / เหมืองทอง (GLD, GDX)",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "หุ้นเหมืองทอง GDX มักขยับแรงกว่าราคาทอง 2–3 เท่า ทั้งขาขึ้นและขาลง"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "ความคาดหวังว่า Fed จะไม่ขึ้นดอกเบี้ยแรงช่วยลดแรงกดดันต่อมูลค่าหุ้น แต่ Fed ยังน่าจะขึ้น 0.25% อยู่ดี"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน ทองยังอยู่โซนย่อตัว แผนจึงซื้อทองต่อและใช้เงินสำรองเพิ่มตามเกณฑ์ การเด้งวันเดียวไม่ใช่เหตุให้เร่งซื้อหรือขาย",
+   "watch_next_th": "พ. 25 พ.ย. 20:30 น. PCE ต.ค. · 8–9 ธ.ค. ประชุม Fed (ผลออกเช้า 10 ธ.ค. เวลาไทย) · ราคาทองแท่งไทยพรุ่งนี้",
+   "sources": [
+    {
+     "label": "Forbes: Treasury Secretary warning to the Fed",
+     "url": "https://www.forbes.com/sites/digital-assets/2026/11/23/serious-us-treasury-secretary-warning-to-the-fed-puts-bitcoin-and-crypto-on-the-brink-of-a-surprise-price-shock/"
+    },
+    {
+     "label": "BigGo Finance: chip stocks surge, gold and silver rise",
+     "url": "https://finance.biggo.com/news/317523df-1c8c-4ed6-a32e-c75d8fc6bc33"
+    },
+    {
+     "label": "Fox Business: FedWatch ~96% for December hike",
+     "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
     }
    ]
   }

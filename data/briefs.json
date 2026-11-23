@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T01:11:10Z",
+ "updated_at": "2026-11-23T14:05:00Z",
  "items": [
   {
    "id": "2026-10-28-morning",
@@ -493,6 +493,19 @@
     "2026-11-23-futures-rebound-after-ai-rout",
     "2026-11-23-unh-sues-cms-star-ratings",
     "2026-11-23-gpu-rent-falls-transformer-shortage"
+   ]
+  },
+  {
+   "id": "2026-11-23-evening",
+   "date": "2026-11-23",
+   "run": "evening",
+   "time_utc": "2026-11-23T14:05:00Z",
+   "headline_th": "ช่วงค่ำไม่มีข่าวสำคัญที่กระทบพอร์ต",
+   "level": "medium",
+   "text_th": "ช่วงค่ำไม่มีข่าวสำคัญที่กระทบพอร์ต\n• หุ้นสหรัฐฯ ก่อนเปิดเด้งแรง Nasdaq +3.5% AVGO +5.7% RKLB +9% ทองเด้ง ~2% สู่ 3,600 ดอลลาร์ ตลาดลดเดิมพัน Fed ขึ้นดอกแรง — ทำตามแผนเดิม ไม่ต้องไล่ซื้อ\nดูรายละเอียดในแอป AI Sentinel",
+   "news_ids": [
+    "2026-11-23-futures-rebound-after-ai-rout",
+    "2026-11-23-gold-rebounds-hike-bets-ease"
    ]
   }
  ]
