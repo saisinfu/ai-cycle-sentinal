@@ -48,6 +48,14 @@ String baht(double v) {
   return n < 0 ? '−$buf' : buf.toString();
 }
 
+/// Whole amounts in either currency: "12,346 บาท" / "\$1,234" (dollars under 1,000 keep cents).
+String amount(double v, String currency, {bool signed = false}) {
+  final sign = v < 0 ? '−' : (signed && v > 0 ? '+' : '');
+  final a = v.abs();
+  if (currency == 'USD') return '$sign\$${a < 1000 ? a.toStringAsFixed(2) : baht(a)}';
+  return '$sign${baht(a)} บาท';
+}
+
 String money(double v, String currency) =>
     currency == 'THB' ? '฿${v.toStringAsFixed(2)}' : '\$${v.toStringAsFixed(2)}';
 

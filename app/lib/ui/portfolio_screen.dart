@@ -25,6 +25,8 @@ const _themeColors = <String, Color>{
 
 Color themeColor(String t) => _themeColors[t] ?? AppColors.muted;
 
+String _fmtUnits(double u) => u == u.roundToDouble() ? u.toStringAsFixed(0) : u.toStringAsFixed(u < 1 ? 4 : 2);
+
 /// One editable line: a main-port asset, a sector stock, or something already entered.
 class _Slot {
   const _Slot(this.key, this.label, this.ticker, this.hint);
@@ -81,9 +83,13 @@ class PortfolioScreen extends ConsumerWidget {
               child: Text('ยังไม่มีข้อมูลพอร์ต · แตะรายการด้านล่างเพื่อกรอกจำนวนหน่วยหรือมูลค่าปัจจุบัน', style: TextStyle(fontSize: 14, height: 1.5)),
             )
           else ...[
-            _SummaryCard(pv: pv),
+            _SummaryCard(
+              pv: pv,
+              cur: s.portfolioCurrency,
+              onCur: (c) => ref.read(settingsProvider.notifier).update((x) => x.copyWith(portfolioCurrency: c)),
+            ),
             const SizedBox(height: kGap),
-            _RiskCard(pv: pv),
+            _RiskCard(pv: pv, cur: s.portfolioCurrency),
             const SizedBox(height: kGap),
             _AllocationCard(pv: pv),
           ],
@@ -166,27 +172,42 @@ class PortfolioScreen extends ConsumerWidget {
 }
 
 class _SummaryCard extends StatelessWidget {
-  const _SummaryCard({required this.pv});
+  const _SummaryCard({required this.pv, required this.cur, required this.onCur});
 
   final PortfolioView pv;
+  final String cur;
+  final ValueChanged<String> onCur;
 
   @override
   Widget build(BuildContext context) {
     final unpriced = pv.values.where((v) => !v.priced).length;
+    double c(double thb) => convert(thb, 'THB', cur, pv.fx);
+    final mixed = pv.values.any((v) => v.holding.currency != cur && v.holding.cost > 0);
     return SurfaceCard(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Eyebrow('มูลค่ารวมโดยประมาณ'),
+          Row(children: [
+            const Expanded(child: Eyebrow('มูลค่ารวมโดยประมาณ')),
+            ToggleChip(label: 'บาท', selected: cur == 'THB', onTap: () => onCur('THB')),
+            const SizedBox(width: 6),
+            ToggleChip(label: 'ดอลลาร์', selected: cur == 'USD', onTap: () => onCur('USD')),
+          ]),
           const SizedBox(height: 6),
-          Text('${baht(pv.total)} บาท', style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, fontFeatures: tabular)),
+          Text(amount(c(pv.total), cur), style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w700, fontFeatures: tabular)),
           const SizedBox(height: 4),
           if (pv.cost > 0)
             Text.rich(TextSpan(children: [
               const TextSpan(text: 'กำไร/ขาดทุน  ', style: TextStyle(color: AppColors.muted)),
-              TextSpan(text: '${pv.pnl >= 0 ? '+' : '−'}${baht(pv.pnl.abs())} บาท  ${pct(pv.pnlPct)}', style: TextStyle(color: pctColor(pv.pnlPct), fontFeatures: tabular)),
-              TextSpan(text: '  · ต้นทุน ${baht(pv.cost)}', style: const TextStyle(color: AppColors.muted)),
+              TextSpan(text: '${amount(c(pv.pnl), cur, signed: true)}  ${pct(pv.pnlPct)}', style: TextStyle(color: pctColor(pv.pnlPct), fontFeatures: tabular)),
+              TextSpan(text: '  · ต้นทุน ${amount(c(pv.cost), cur)}', style: const TextStyle(color: AppColors.muted)),
             ]), style: const TextStyle(fontSize: 13.5)),
+          if (mixed)
+            const Padding(
+              padding: EdgeInsets.only(top: 4),
+              child: Text('บางรายการกรอกต้นทุนเป็นอีกสกุลเงิน จึงแปลงด้วยค่าเงินวันนี้ กำไร/ขาดทุนรวมจึงไม่รวมผลจากค่าเงินที่เปลี่ยนไปตั้งแต่วันที่ซื้อ',
+                  style: TextStyle(fontSize: 12, color: AppColors.muted, height: 1.45)),
+            ),
           const SizedBox(height: 4),
           Text('ใช้ค่าเงิน ${pv.fx.toStringAsFixed(2)} บาท/ดอลลาร์ · สินทรัพย์ดอลลาร์ ${(pv.usdShare * 100).toStringAsFixed(0)}% ของพอร์ต'
               '${unpriced > 0 ? ' · $unpriced รายการไม่มีราคา ใช้ต้นทุนแทน' : ''}',
@@ -198,9 +219,10 @@ class _SummaryCard extends StatelessWidget {
 }
 
 class _RiskCard extends StatelessWidget {
-  const _RiskCard({required this.pv});
+  const _RiskCard({required this.pv, required this.cur});
 
   final PortfolioView pv;
+  final String cur;
 
   @override
   Widget build(BuildContext context) {
@@ -211,7 +233,7 @@ class _RiskCard extends StatelessWidget {
         children: [
           const Eyebrow('ถ้าตลาดแย่มาก'),
           const SizedBox(height: 6),
-          Text('อาจลดลงราว ${baht(pv.worstCaseThb)} บาท (${share.toStringAsFixed(0)}%)',
+          Text('อาจลดลงราว ${amount(convert(pv.worstCaseThb, 'THB', cur, pv.fx), cur)} (${share.toStringAsFixed(0)}%)',
               style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, fontFeatures: tabular)),
           const SizedBox(height: 6),
           const Text('ถามตัวเองว่าถ้าเห็นตัวเลขนี้จริง จะยังลงทุนต่อตามแผนได้ไหม ถ้าไม่ไหว ควรลดส่วนหุ้นรายตัวหรือเพิ่มเงินฉุกเฉิน',
@@ -340,9 +362,11 @@ class _HoldingRow extends StatelessWidget {
                   Text(slot.label, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w600)),
                   const SizedBox(height: 2),
                   Text(
-                    target == null
-                        ? slot.hint
-                        : 'เป้า ${(target! * 100).toStringAsFixed(0)}% · ตอนนี้ ${((actual ?? 0) * 100).toStringAsFixed(0)}%',
+                    [
+                      if (v != null && v.holding.units > 0 && v.holding.manualValue == null)
+                        '${_fmtUnits(v.holding.units)} ${v.holding.unit == 'share' ? (isGoldKey(slot.key, slot.ticker) ? 'หน่วย GLD' : 'หุ้น') : goldUnits[v.holding.unit]}',
+                      if (target == null) slot.hint else 'เป้า ${(target! * 100).toStringAsFixed(0)}% · ตอนนี้ ${((actual ?? 0) * 100).toStringAsFixed(0)}%',
+                    ].join(' · '),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(fontSize: 12, color: AppColors.muted, fontFeatures: tabular),
@@ -356,8 +380,10 @@ class _HoldingRow extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text('${baht(v.valueThb)} ฿', style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w600, fontFeatures: tabular)),
-                  if (v.pnlPct != null) Text(pct(v.pnlPct), style: TextStyle(fontSize: 12, color: pctColor(v.pnlPct), fontFeatures: tabular)),
+                  Text(amount(v.valueNative, v.holding.currency), style: const TextStyle(fontSize: 14.5, fontWeight: FontWeight.w600, fontFeatures: tabular)),
+                  if (v.pnlPct != null)
+                    Text('${amount(v.pnlNative, v.holding.currency, signed: true)} ${pct(v.pnlPct)}',
+                        style: TextStyle(fontSize: 12, color: pctColor(v.pnlPct), fontFeatures: tabular)),
                 ],
               ),
             const SizedBox(width: 4),
@@ -381,8 +407,12 @@ class _EditSheet extends StatefulWidget {
 
 class _EditSheetState extends State<_EditSheet> {
   late final _units = TextEditingController(text: _fmt(widget.initial?.units));
-  late final _cost = TextEditingController(text: _fmt(widget.initial?.costThb));
-  late final _manual = TextEditingController(text: _fmt(widget.initial?.manualValueThb));
+  late final _cost = TextEditingController(text: _fmt(widget.initial?.cost));
+  late final _manual = TextEditingController(text: _fmt(widget.initial?.manualValue));
+  late String _unit = widget.initial?.unit ?? (isGold ? 'baht' : 'share');
+  late String _cur = widget.initial?.currency ?? (isGold || (widget.slot.ticker?.endsWith('.BK') ?? true) ? 'THB' : 'USD');
+
+  bool get isGold => isGoldKey(widget.slot.key, widget.slot.ticker);
 
   static String _fmt(double? v) => v == null || v == 0 ? '' : (v == v.roundToDouble() ? v.toStringAsFixed(0) : v.toString());
 
@@ -396,56 +426,101 @@ class _EditSheetState extends State<_EditSheet> {
     super.dispose();
   }
 
-  Widget _field(String label, TextEditingController c, String? suffix) => Padding(
+  Widget _picker(String value, Map<String, String> options, ValueChanged<String> onChanged) => Padding(
+        padding: const EdgeInsets.only(right: 8),
+        child: DropdownButtonHideUnderline(
+          child: DropdownButton<String>(
+            value: value,
+            isDense: true,
+            borderRadius: BorderRadius.circular(12),
+            dropdownColor: AppColors.raised,
+            style: const TextStyle(fontSize: 14, color: AppColors.text, fontWeight: FontWeight.w600),
+            items: [for (final e in options.entries) DropdownMenuItem(value: e.key, child: Text(e.value))],
+            onChanged: (v) {
+              if (v != null) setState(() => onChanged(v));
+            },
+          ),
+        ),
+      );
+
+  Widget _field(String label, TextEditingController c, Widget suffix) => Padding(
         padding: const EdgeInsets.only(bottom: 12),
         child: TextField(
           controller: c,
           keyboardType: const TextInputType.numberWithOptions(decimal: true),
-          decoration: InputDecoration(labelText: label, suffixText: suffix, border: const OutlineInputBorder()),
+          decoration: InputDecoration(labelText: label, suffixIcon: suffix, border: const OutlineInputBorder()),
         ),
       );
 
   @override
   Widget build(BuildContext context) {
     final slot = widget.slot;
+    const curs = {'THB': 'บาท (THB)', 'USD': 'ดอลลาร์ (USD)'};
+    final unitOptions = isGold ? goldUnits : {'share': slot.ticker?.endsWith('.BK') ?? false ? 'หุ้น' : 'หุ้น/หน่วย'};
+    final curPicker = _picker(_cur, curs, (v) => _cur = v);
     return Padding(
       padding: EdgeInsets.fromLTRB(20, 20, 20, 20 + MediaQuery.of(context).viewInsets.bottom),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(slot.label, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
-          const SizedBox(height: 4),
-          Text(slot.hint, style: const TextStyle(fontSize: 12.5, color: AppColors.muted)),
-          const SizedBox(height: 16),
-          if (slot.ticker != null) _field('จำนวนหน่วยของ ${slot.ticker}', _units, 'หน่วย'),
-          _field('ต้นทุนรวมที่จ่ายไป', _cost, '฿'),
-          _field('มูลค่าปัจจุบัน (ไม่บังคับ)', _manual, '฿'),
-          const Text('ถ้าถือกองทุนไทยหรือทองแท่ง ให้กรอกมูลค่าปัจจุบันจากแอปธนาคาร/ร้านทองแทน (จะใช้ค่านี้ก่อนราคาตลาด)',
-              style: TextStyle(fontSize: 12, color: AppColors.muted, height: 1.45)),
-          const SizedBox(height: 16),
-          Row(children: [
-            if (widget.initial != null)
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(Holding(key: slot.key, label: slot.label, ticker: slot.ticker)),
-                child: const Text('ลบรายการนี้'),
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(slot.label, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
+            const SizedBox(height: 4),
+            Text(slot.hint, style: const TextStyle(fontSize: 12.5, color: AppColors.muted)),
+            const SizedBox(height: 16),
+            if (slot.ticker != null)
+              _field(isGold ? 'ปริมาณทองที่ถือ' : 'จำนวนหน่วยของ ${slot.ticker}', _units,
+                  unitOptions.length > 1 ? _picker(_unit, unitOptions, (v) => _unit = v) : Padding(
+                    padding: const EdgeInsets.only(right: 12, top: 14),
+                    child: Text(unitOptions.values.first, style: const TextStyle(fontSize: 14, color: AppColors.muted)),
+                  )),
+            if (isGold)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 12),
+                child: Text(
+                  switch (_unit) {
+                    'share' => 'หน่วยของกองทุน GLD ในตลาดสหรัฐ (1 หน่วยมีทองราว 0.09 ออนซ์) ใช้ราคา GLD',
+                    'baht' => '1 บาททองคำ = ทองแท่ง 96.5% หนัก 15.244 กรัม · คิดจากราคาทองโลกและค่าเงินวันนี้ อาจต่างจากราคาสมาคมค้าทองคำเล็กน้อย',
+                    'g' => 'น้ำหนักทองบริสุทธิ์เป็นกรัม · คิดจากราคาทองโลกและค่าเงินวันนี้',
+                    _ => '1 ออนซ์ทรอย = 31.1 กรัม · คิดจากราคาทองโลกและค่าเงินวันนี้',
+                  },
+                  style: const TextStyle(fontSize: 12, color: AppColors.muted, height: 1.45),
+                ),
               ),
-            const Spacer(),
-            TextButton(onPressed: () => Navigator.of(context).pop(), child: const Text('ยกเลิก')),
-            const SizedBox(width: 8),
-            FilledButton(
-              onPressed: () => Navigator.of(context).pop(Holding(
-                key: slot.key,
-                label: slot.label,
-                ticker: slot.ticker,
-                units: _num(_units.text) ?? 0,
-                costThb: _num(_cost.text) ?? 0,
-                manualValueThb: _num(_manual.text),
-              )),
-              child: const Text('บันทึก'),
+            _field('ต้นทุนรวมที่จ่ายไป', _cost, curPicker),
+            _field('มูลค่าปัจจุบัน (ไม่บังคับ)', _manual, _picker(_cur, curs, (v) => _cur = v)),
+            Text(
+              'ต้นทุน มูลค่า และกำไร/ขาดทุนของรายการนี้แสดงเป็น${_cur == 'THB' ? 'บาท' : 'ดอลลาร์'} · '
+              '${isGold ? 'ถ้าอยากใช้ราคาจากร้านทองหรือแอปทองเอง' : 'ถ้าถือกองทุนไทย'} ให้กรอกมูลค่าปัจจุบัน (จะใช้ค่านี้แทนราคาตลาด)',
+              style: const TextStyle(fontSize: 12, color: AppColors.muted, height: 1.45),
             ),
-          ]),
-        ],
+            const SizedBox(height: 16),
+            Row(children: [
+              if (widget.initial != null)
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(Holding(key: slot.key, label: slot.label, ticker: slot.ticker)),
+                  child: const Text('ลบรายการนี้'),
+                ),
+              const Spacer(),
+              TextButton(onPressed: () => Navigator.of(context).pop(), child: const Text('ยกเลิก')),
+              const SizedBox(width: 8),
+              FilledButton(
+                onPressed: () => Navigator.of(context).pop(Holding(
+                  key: slot.key,
+                  label: slot.label,
+                  ticker: slot.ticker,
+                  units: _num(_units.text) ?? 0,
+                  unit: _unit,
+                  currency: _cur,
+                  cost: _num(_cost.text) ?? 0,
+                  manualValue: _num(_manual.text),
+                )),
+                child: const Text('บันทึก'),
+              ),
+            ]),
+          ],
+        ),
       ),
     );
   }

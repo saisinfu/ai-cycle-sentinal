@@ -4,17 +4,45 @@ library;
 import 'config.dart';
 import 'models.dart';
 
-class Holding {
-  const Holding({required this.key, required this.label, this.ticker, this.units = 0, this.costThb = 0, this.manualValueThb});
+/// Units a gold holding can be entered in (key → Thai label).
+const goldUnits = <String, String>{
+  'share': 'หน่วย GLD',
+  'oz': 'ออนซ์',
+  'g': 'กรัม',
+  'baht': 'บาททองคำ',
+};
 
-  factory Holding.fromJson(Map j) => Holding(
-        key: j['key'] is String ? j['key'] as String : '',
-        label: j['label'] is String ? j['label'] as String : '',
-        ticker: j['ticker'] is String ? j['ticker'] as String : null,
-        units: j['units'] is num ? (j['units'] as num).toDouble() : 0,
-        costThb: j['costThb'] is num ? (j['costThb'] as num).toDouble() : 0,
-        manualValueThb: j['manualValueThb'] is num ? (j['manualValueThb'] as num).toDouble() : null,
-      );
+/// Fine gold (troy oz) in one unit; 'share' is priced from GLD directly.
+/// Thai "1 baht" bar = 15.244 g at 96.5% purity = 14.71 g fine gold.
+const _ozPer = <String, double>{'oz': 1.0, 'g': 1 / 31.1035, 'baht': 15.244 * 0.965 / 31.1035};
+
+bool isGoldKey(String key, String? ticker) => key == 'main:gold' || ticker == 'GLD' || ticker == 'IAU';
+
+class Holding {
+  const Holding({
+    required this.key,
+    required this.label,
+    this.ticker,
+    this.units = 0,
+    this.cost = 0,
+    this.manualValue,
+    this.unit = 'share',
+    this.currency = 'THB',
+  });
+
+  factory Holding.fromJson(Map j) {
+    double? n(Object? v) => v is num ? v.toDouble() : null;
+    return Holding(
+      key: j['key'] is String ? j['key'] as String : '',
+      label: j['label'] is String ? j['label'] as String : '',
+      ticker: j['ticker'] is String ? j['ticker'] as String : null,
+      units: n(j['units']) ?? 0,
+      cost: n(j['cost']) ?? n(j['costThb']) ?? 0,
+      manualValue: j.containsKey('manualValue') ? n(j['manualValue']) : n(j['manualValueThb']),
+      unit: j['unit'] is String ? j['unit'] as String : 'share',
+      currency: j['currency'] == 'USD' ? 'USD' : 'THB',
+    );
+  }
 
   /// Same keys as the monthly plan: 'main:<key>' or '<sectorId>:<ticker>'.
   final String key;
@@ -24,35 +52,41 @@ class Holding {
   final String? ticker;
   final double units;
 
-  /// Total amount paid, in baht.
-  final double costThb;
+  /// 'share' (units of [ticker]) or, for gold, 'oz' | 'g' | 'baht'.
+  final String unit;
 
-  /// For things without a usable price (Thai gold bar, Thai mutual funds): current value typed in.
-  final double? manualValueThb;
+  /// Currency of [cost] and [manualValue]: 'THB' or 'USD'.
+  final String currency;
 
-  Holding copyWith({double? units, double? costThb, double? manualValueThb, bool clearManual = false}) => Holding(
-        key: key,
-        label: label,
-        ticker: ticker,
-        units: units ?? this.units,
-        costThb: costThb ?? this.costThb,
-        manualValueThb: clearManual ? null : (manualValueThb ?? this.manualValueThb),
-      );
+  /// Total amount paid, in [currency].
+  final double cost;
+
+  /// For things without a usable price (Thai mutual funds): current value typed in, in [currency].
+  final double? manualValue;
 
   Map<String, Object?> toJson() => {
         'key': key,
         'label': label,
         'ticker': ticker,
         'units': units,
-        'costThb': costThb,
-        'manualValueThb': manualValueThb,
+        'unit': unit,
+        'currency': currency,
+        'cost': cost,
+        'manualValue': manualValue,
       };
 
-  bool get isEmpty => units <= 0 && (manualValueThb ?? 0) <= 0 && costThb <= 0;
+  bool get isEmpty => units <= 0 && (manualValue ?? 0) <= 0 && cost <= 0;
 }
 
 /// Baht per US dollar from the market snapshot (THB=X), with a fallback.
 double usdThb(MarketData m) => m.quotes['THB=X']?.price ?? 33.0;
+
+/// Gold spot in USD per troy oz: futures, else GLD's ~0.0915 oz per share.
+double? goldUsdOz(MarketData m) => m.quotes['GC=F']?.price ?? (m.quotes['GLD'] == null ? null : m.quotes['GLD']!.price / 0.0915);
+
+/// Convert an amount between THB and USD at today's rate.
+double convert(double amount, String from, String to, double fx) =>
+    from == to ? amount : (from == 'USD' ? amount * fx : amount / fx);
 
 class HoldingValue {
   const HoldingValue({
@@ -62,11 +96,17 @@ class HoldingValue {
     required this.isFund,
     required this.isUsd,
     required this.bucket,
+    required this.costThb,
+    required this.fx,
     this.priced = true,
   });
 
   final Holding holding;
   final double valueThb;
+
+  /// Cost converted to baht at today's rate if it was entered in dollars.
+  final double costThb;
+  final double fx;
   final String theme;
   final bool isFund;
   final bool isUsd;
@@ -77,8 +117,10 @@ class HoldingValue {
   /// False when no price was available and nothing was typed in.
   final bool priced;
 
-  double get pnlThb => valueThb - holding.costThb;
-  double? get pnlPct => holding.costThb > 0 ? (valueThb / holding.costThb - 1) * 100 : null;
+  /// Value in the holding's own currency.
+  double get valueNative => convert(valueThb, 'THB', holding.currency, fx);
+  double get pnlNative => valueNative - holding.cost;
+  double? get pnlPct => holding.cost > 0 ? (valueNative / holding.cost - 1) * 100 : null;
 }
 
 class PortfolioView {
@@ -153,18 +195,22 @@ PortfolioView buildPortfolio(List<Holding> holdings, AppConfig config, MarketDat
     final isUsd = q != null ? q.currency != 'THB' : !(h.ticker?.endsWith('.BK') ?? true);
     double value;
     var priced = true;
-    if (h.manualValueThb != null) {
-      value = h.manualValueThb!;
+    final costThb = convert(h.cost, h.currency, 'THB', fx);
+    final gold = goldUsdOz(market);
+    if (h.manualValue != null) {
+      value = convert(h.manualValue!, h.currency, 'THB', fx);
+    } else if (h.unit != 'share' && _ozPer.containsKey(h.unit) && gold != null && h.units > 0) {
+      value = h.units * _ozPer[h.unit]! * gold * fx;
     } else if (q != null && h.units > 0) {
       value = h.units * q.price * (q.currency == 'THB' ? 1 : fx);
     } else {
-      value = h.costThb;
+      value = costThb;
       priced = false;
     }
-    values.add(HoldingValue(holding: h, valueThb: value, theme: theme, isFund: isFund, isUsd: isUsd, bucket: bucket, priced: priced));
+    values.add(HoldingValue(holding: h, valueThb: value, costThb: costThb, fx: fx, theme: theme, isFund: isFund, isUsd: isUsd, bucket: bucket, priced: priced));
   }
   final total = values.fold(0.0, (a, b) => a + b.valueThb);
-  final cost = values.fold(0.0, (a, b) => a + b.holding.costThb);
+  final cost = values.fold(0.0, (a, b) => a + b.costThb);
   final byTheme = <String, double>{};
   final byBucket = <String, double>{};
   var usd = 0.0, worst = 0.0;

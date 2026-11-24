@@ -40,6 +40,7 @@ class UserSettings {
     this.checklistDone = const [],
     this.alertsSeenAt = '',
     this.calmPush = true,
+    this.portfolioCurrency = 'THB',
   });
 
   /// Emergency fund the owner wants before any reserve money is used (0 = not set).
@@ -62,6 +63,9 @@ class UserSettings {
 
   /// Show only actionable alerts in the badge.
   final bool calmPush;
+
+  /// Currency for portfolio totals: 'THB' or 'USD'.
+  final String portfolioCurrency;
 
   bool get emergencyOk => emergencyTarget <= 0 || emergencyHave >= emergencyTarget;
   bool get emergencySet => emergencyTarget > 0;
@@ -140,6 +144,7 @@ class UserSettings {
     List<String>? checklistDone,
     String? alertsSeenAt,
     bool? calmPush,
+    String? portfolioCurrency,
   }) =>
       UserSettings(
         salary: salary ?? this.salary,
@@ -172,6 +177,7 @@ class UserSettings {
         checklistDone: checklistDone ?? this.checklistDone,
         alertsSeenAt: alertsSeenAt ?? this.alertsSeenAt,
         calmPush: calmPush ?? this.calmPush,
+        portfolioCurrency: portfolioCurrency ?? this.portfolioCurrency,
       );
 
   Map<String, Object> toJson() => {
@@ -205,6 +211,7 @@ class UserSettings {
         'checklistDone': checklistDone,
         'alertsSeenAt': alertsSeenAt,
         'calmPush': calmPush,
+        'portfolioCurrency': portfolioCurrency,
         'zoneMethodV2': true,
       };
 
@@ -251,6 +258,7 @@ class UserSettings {
       checklistDone: j['checklistDone'] is List ? [for (final x in j['checklistDone'] as List) if (x is String) x] : const [],
       alertsSeenAt: j['alertsSeenAt'] is String ? j['alertsSeenAt'] as String : '',
       calmPush: j['calmPush'] is bool ? j['calmPush'] as bool : d.calmPush,
+      portfolioCurrency: j['portfolioCurrency'] == 'USD' ? 'USD' : 'THB',
     );
   }
 }
