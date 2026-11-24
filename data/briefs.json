@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T01:07:28Z",
+ "updated_at": "2026-11-24T14:05:00Z",
  "items": [
   {
    "id": "2026-10-28-morning",
@@ -520,6 +520,20 @@
     "2026-11-24-nvidia-huang-reinstated-rally",
     "2026-11-24-williams-more-hikes",
     "2026-11-23-gold-rebounds-hike-bets-ease"
+   ]
+  },
+  {
+   "id": "2026-11-24-evening",
+   "date": "2026-11-24",
+   "run": "evening",
+   "time_utc": "2026-11-24T14:05:00Z",
+   "headline_th": "ช่วงค่ำไม่มีข่าวที่ต้องทำอะไร · ก่อนเปิดตลาด Nasdaq ฟิวเจอร์ส −1.6% ชิปย่อหลังเด้งแรงเมื่อวาน แผนซื้อตามปกติ",
+   "level": "medium",
+   "text_th": "ช่วงค่ำไม่มีข่าวที่ต้องทำอะไร · ก่อนเปิดตลาด Nasdaq ฟิวเจอร์ส −1.6% ชิปย่อหลังเด้งแรงเมื่อวาน แผนซื้อตามปกติ\nดูรายละเอียดในแอป AI Sentinel · ข้อมูลตามกฎ ไม่ใช่คำแนะนำการลงทุน",
+   "news_ids": [
+    "2026-11-24-hormuz-mines-two-tankers",
+    "2026-11-24-futures-fall-nvda-giveback",
+    "2026-11-24-williams-more-hikes"
    ]
   }
  ]

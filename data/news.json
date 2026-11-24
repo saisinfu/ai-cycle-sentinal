@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T01:07:28Z",
+ "updated_at": "2026-11-24T14:05:00Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -3136,7 +3136,7 @@
    "level": "medium",
    "category": "fed",
    "title_th": "Williams (Fed นิวยอร์ก): เงินเฟ้อสูงเกินไป ไม่ปิดทางขึ้นดอกเบี้ยติดกัน",
-   "summary_th": "23 พ.ย. John Williams บอกเงินเฟ้อ 'สูงเกินไป' Fed ต้องดำเนินการต่อเนื่อง ไม่ปิดทางขึ้นดอกเบี้ยในการประชุมติดกัน คาดเงินเฟ้อปลายปี 2026 ที่ 3.5% และถึงเป้า 2% ในปี 2028 ตลาด (CME FedWatch) ให้โอกาสขึ้น 0.25% ในการประชุม 8–9 ธ.ค. ราว 96% ผลตอบแทน 10 ปีขึ้นเป็น ~4.94%",
+   "summary_th": "23 พ.ย. John Williams บอกเงินเฟ้อ 'สูงเกินไป' Fed ต้องดำเนินการต่อเนื่อง ไม่ปิดทางขึ้นดอกเบี้ยในการประชุมติดกัน คาดเงินเฟ้อปลายปี 2026 ที่ 3.5% และถึงเป้า 2% ในปี 2028 ตลาด (CME FedWatch) ให้โอกาสขึ้น 0.25% ในการประชุม 8–9 ธ.ค. ราว 96% ผลตอบแทน 10 ปีขึ้นเป็น ~4.94% · อัปเดตค่ำ 24 พ.ย.: หลังหุ้นเด้งแรง ตลาดตัดโอกาสขึ้น 0.5% ใน ธ.ค. ออกเกือบหมด (ขึ้น 0.25% ~95%) แต่เพิ่มโอกาสขึ้นอีกครั้ง 27 ม.ค. 2027 เป็น ~69% (จาก 49% วันที่ 20 พ.ย.)",
    "impacts": [
     {
      "target": "finance",
@@ -3170,6 +3170,100 @@
     {
      "label": "Fox Business: US stocks rebound Nov 23",
      "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
+    },
+    {
+     "label": "TheStreet: Nvidia rally sends Fed rate-hike bets soaring (CME FedWatch)",
+     "url": "https://www.thestreet.com/fed/nvidia-rally-fed-rate-hike-bets-december-2026"
+    }
+   ],
+   "caveat_th": "ถ้า PCE ต.ค. ออกมาต่ำกว่าคาด ตลาดอาจลดการคาดการขึ้นดอกเบี้ยรอบ ม.ค."
+  },
+  {
+   "id": "2026-11-24-hormuz-mines-two-tankers",
+   "date": "2026-11-24",
+   "time_utc": "2026-11-24T09:00:00Z",
+   "run": "evening",
+   "level": "low",
+   "category": "geopolitics",
+   "title_th": "อิหร่านอ้างเรือน้ำมัน 2 ลำชนทุ่นระเบิดในฮอร์มุซ น้ำมันแทบไม่ขยับ",
+   "summary_th": "เช้า อ. 24 พ.ย. กองทัพเรืออิหร่านแถลงผ่านสื่อรัฐว่าเรือน้ำมัน 2 ลำชนทุ่นระเบิดและเกิดไฟไหม้ในช่องแคบฮอร์มุซ ผบ.ทบ. อิหร่านขู่ว่าช่องแคบจะ 'ปิดมากขึ้นทุกวัน' Reuters ระบุว่ายังยืนยันข้อมูลอย่างอิสระไม่ได้ ตลาดน้ำมันแทบไม่ตอบสนอง (WTI ~80.2 ดอลลาร์ +0.1%, เบรนต์ ~89.5 ดอลลาร์ +0.2%) เพราะยังมีสัญญาณการเจรจาสหรัฐฯ–อิหร่าน",
+   "impacts": [
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ถ้าการขนส่งน้ำมันติดขัดจริงจะดันราคาน้ำมันและเงินเฟ้อ ทำให้ Fed ต้องเข้มขึ้น แต่วันนี้ราคาน้ำมันยังนิ่ง"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ความตึงเครียดอาจหนุนแรงซื้อทอง แต่ถ้าดันเงินเฟ้อและดอกเบี้ยขึ้นก็กดทองได้ ช่วงนี้ทองขยับตามความคาดหวังเรื่อง Fed มากกว่า"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน เหตุการณ์ในฮอร์มุซเกิดซ้ำหลายครั้งในเดือนนี้ และตลาดยังไม่ตอบสนองแรง",
+   "watch_next_th": "ราคาน้ำมันเบรนต์ ถ้ากลับขึ้นเหนือ 94 ดอลลาร์ (ระดับ 10 พ.ย.) ถือว่าตลาดเริ่มกังวลจริง",
+   "caveat_th": "ข้อมูลมาจากฝ่ายอิหร่านฝ่ายเดียวและยังไม่ได้รับการยืนยัน ถ้ามีการโจมตีเรือคุ้มกันของสหรัฐฯ สถานการณ์อาจยกระดับเร็ว",
+   "sources": [
+    {
+     "label": "Reuters via BOE Report: Two tankers catch fire after striking mines",
+     "url": "https://boereport.com/2026/11/24/two-oil-tankers-catch-fire-after-striking-mines-in-strait-of-hormuz-irans-navy-says/"
+    },
+    {
+     "label": "AP via Boston Globe: Tech stocks wane (oil prices)",
+     "url": "https://www.bostonglobe.com/2026/11/24/business/tech-stocks-tuesday/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-24-futures-fall-nvda-giveback",
+   "date": "2026-11-24",
+   "time_utc": "2026-11-24T13:18:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "market",
+   "title_th": "ก่อนเปิดตลาด: ฟิวเจอร์ส Nasdaq −1.6–2% Nvidia คืนกำไร −5% ชิปย่อตาม",
+   "summary_th": "คืน อ. 24 พ.ย. ก่อนตลาดสหรัฐฯ เปิด ฟิวเจอร์ส Nasdaq-100 ลด 1.6–2% S&P 500 ลด 0.9–1.3% Dow ลด 0.4–0.7% หลังจันทร์พุ่งแรงสุดตั้งแต่ เม.ย. 2025 Nvidia ลด ~5% (จันทร์ +31.5%) Micron AMD Marvell ลด 3.9–6.4% หุ้น Anthropic หลุดราคา IPO 83 ดอลลาร์ VIX ขึ้นกลับมาราว 30 ขณะที่ตลาดไต้หวัน +9% และเกาหลี +6.3% ยังรับข่าวดีจากเมื่อวาน",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI (KLAC, AVGO, ETN)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "นักลงทุนขายทำกำไรหุ้นชิปหลังเด้งแรง KLAC ที่เมื่อวาน +15% มีโอกาสย่อตามกลุ่ม ยังไม่มีข่าวเฉพาะของบริษัทในพอร์ต"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "Nasdaq ยังเสี่ยงจบเดือน พ.ย. ติดลบใกล้ระดับ −5.3% ของ ต.ค. ความผันผวนยังสูง"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ฟิวเจอร์สลดราว 1% คืนกำไรบางส่วนจาก +4.7% เมื่อวาน S&P 500 มีแนวโน้มเป็นเดือนแย่สุดตั้งแต่ มี.ค."
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องทำอะไร เป็นการย่อหลังเด้งแรง ไม่ใช่ข่าวร้ายเฉพาะบริษัท แผนซื้อตามรอบปกติ ถ้าราคาลงลึกต่อ แผนงบยืดหยุ่นจะใช้เงินสำรองมากขึ้นเอง",
+   "watch_next_th": "อ. 24 พ.ย. หลังปิดตลาด งบ Dell/HP/Workday · พ. 25 พ.ย. 20:30 น. PCE ต.ค. · พฤ. 26 พ.ย. ตลาดสหรัฐฯ ปิด",
+   "caveat_th": "ตัวเลขเป็นราคาก่อนเปิดตลาด ทิศทางอาจเปลี่ยนได้ทั้งวัน และถ้า PCE พรุ่งนี้ออกมาสูงกว่าคาด แรงขายอาจหนักขึ้น",
+   "sources": [
+    {
+     "label": "Reuters via Kitco: Nasdaq futures drop as AI stocks cool",
+     "url": "https://www.kitco.com/news/off-the-wire/2026-11-24/nasdaq-futures-drop-ai-stocks-cool-after-nvidia-fueled-rally"
+    },
+    {
+     "label": "AP via Boston Globe: Tech stocks wane a day after a Huang rally",
+     "url": "https://www.bostonglobe.com/2026/11/24/business/tech-stocks-tuesday/"
+    },
+    {
+     "label": "Yahoo Finance live: futures fall as investors test Nvidia rally",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-rebound-090614276.html"
     }
    ]
   }
