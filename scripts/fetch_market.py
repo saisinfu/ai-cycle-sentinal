@@ -62,6 +62,30 @@ def r(x, n=2):
     return None if x is None or (isinstance(x, float) and (math.isnan(x) or math.isinf(x))) else round(float(x), n)
 
 
+# Local close time per market (exchange time zone of the Yahoo index); None = trades around the clock.
+def close_time(t: str):
+    import datetime as _dt
+    if t.endswith(".BK"):
+        return _dt.time(17, 0)
+    if t in ("THB=X", "DX-Y.NYB"):
+        return None
+    if t.endswith("=F"):
+        return _dt.time(17, 10)
+    return _dt.time(16, 20)
+
+
+def completed(c: pd.Series, t: str) -> tuple[pd.Series, bool]:
+    """Drop today's bar while that market is still open, so an intraday price is never stored as a close."""
+    ct = close_time(t)
+    if ct is None or len(c) < 2 or c.index.tz is None:
+        return c, False
+    now_local = pd.Timestamp.now(tz=c.index.tz)
+    last = c.index[-1]
+    if last.date() == now_local.date() and now_local.time() < ct:
+        return c.iloc[:-1], True
+    return c, False
+
+
 def snapshot(t: str) -> dict | None:
     import yfinance as yf
     for attempt in range(3):
@@ -70,9 +94,13 @@ def snapshot(t: str) -> dict | None:
             if h is None or len(h) < 30:
                 raise RuntimeError("short history")
             c = h["Close"].dropna()
+            c, dropped = completed(c, t)
+            if len(c) < 30:
+                raise RuntimeError("short history after dropna")
             last, prev = float(c.iloc[-1]), float(c.iloc[-2])
             win = c[c.index >= c.index[-1] - pd.Timedelta(days=365)]
             hi = float(win.max())
+            lo = float(win.min())
 
             def back(days):
                 s = c[c.index <= c.index[-1] - pd.Timedelta(days=days)]
@@ -82,7 +110,8 @@ def snapshot(t: str) -> dict | None:
             q = {
                 "price": r(last), "prev_close": r(prev),
                 "change_1d_pct": r((last / prev - 1) * 100),
-                "high_52w": r(hi), "drawdown_pct": r((last / hi - 1) * 100),
+                "high_52w": r(hi), "low_52w": r(lo), "drawdown_pct": r((last / hi - 1) * 100),
+                "session": "closed",
                 "ma200": r(c.tail(200).mean()) if len(c) >= 200 else None,
                 "chg_1m_pct": r((last / m1 - 1) * 100) if m1 else None,
                 "chg_3m_pct": r((last / m3 - 1) * 100) if m3 else None,
@@ -143,7 +172,7 @@ def main() -> None:
         if not q or q.get("stale"):
             continue
         d, dd, ch = q["as_of"], q.get("drawdown_pct"), q.get("change_1d_pct")
-        if ch is not None and ch <= DAY_DROP and (t, "day_drop", d) not in seen:
+        if ch is not None and -40 < ch <= DAY_DROP and (t, "day_drop", d) not in seen:
             events.append({"date": d, "ticker": t, "name": names[t], "kind": "day_drop", "value": ch, "price": q["price"],
                            "drawdown_pct": dd,
                            "title_th": f"{t} ร่วง {abs(ch):.1f}% ในวันเดียว",

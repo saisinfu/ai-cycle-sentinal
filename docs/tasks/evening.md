@@ -12,16 +12,26 @@ NEWS ITEM SCHEMA (append to "items", sorted by time ascending, keep newest 120; 
 {"id": "<YYYY-MM-DD>-<short-slug>", "date": "YYYY-MM-DD", "time_utc": "<ISO>", "run": "evening", "level": "high|medium|low", "category": "fed|rates|inflation|jobs|geopolitics|war|crisis|policy|election|earnings|sector|market|thailand",
  "title_th": "<= 70 chars", "summary_th": "2–3 sentences with numbers and dates",
  "impacts": [{"target": "<sector id | ticker | main:gold|main:sp500|main:nasdaq|main:kkp>", "label_th": "...", "direction": "negative|positive|mixed", "strength": "high|medium|low", "reason_th": "1–2 sentences on the mechanism"}],
- "what_to_do_th": "1–2 sentences", "watch_next_th": "upcoming dates/data or empty", "sources": [{"label": "...", "url": "https://..."}]}
+ "what_to_do_th": "1–2 sentences", "watch_next_th": "upcoming dates/data or empty", "caveat_th": "one sentence: why this could be wrong", "sources": [{"label": "...", "url": "https://..."}]}
 At most 5 new items; if a story already in the feed developed, update that item (same id, add the new facts and sources) instead of adding another. level "high" = likely to move the portfolio or a followed sector by several percent, or a Fed/war/crisis event.
+
+NEWS QUALITY AND ADVICE RULES (apply to every news item)
+- Funded vs watch-only: config/sectors.json marks each sector "funded": true/false (the owner actually puts money only into funded sectors and the main port). For a stock in a watch-only sector, "what_to_do_th" must say it is watch-only and needs no action (e.g. "หมวดนี้ดูอย่างเดียว ไม่ต้องทำอะไร"); never suggest buying it.
+- Company-specific bad news (share offering/dilution, guidance cut, accounting or legal probe, losing a key customer, regulation aimed at that company) is NOT a "buy the dip" situation: say it is a reason to re-check why the stock is held ("เป็นเหตุให้ทบทวนว่ายังมีเหตุผลที่จะถืออยู่ไหม"), and that the plan's extra buying applies to market-wide falls, not to a company whose story changed.
+- The flexible budget gives single companies at most ×1.5 and funds up to ×2.5, one company at most 15% of the month, and spends at most 1/6 of the reserve per month; do not promise more.
+- Sources: a "high" item needs at least two independent reputable sources (Reuters, AP, Bloomberg, CNBC, FT, WSJ, Nikkei Asia, official releases from central banks/governments/companies, Bangkok Post or Thai PBS for Thai news). Avoid Substack posts, anonymous blogs, crypto/aggregator sites and AI-written sites; if only weak sources exist, the item can be at most "medium" and summary_th must say the information is not yet confirmed.
+- Add "caveat_th" to every item: one sentence on why this analysis could be wrong or what would change the conclusion (e.g. "ถ้า CPI ออกมาต่ำกว่าคาด ตลาดอาจเลิกคาดการขึ้นดอกเบี้ย"). Do not state opinions as facts (avoid "ตลาดรู้ล่วงหน้าแล้ว", "ทองยังเป็นที่หลบภัย" without evidence).
+- Level calibration: "high" ONLY for a Fed/BoT decision or a clear shift in rate expectations, war escalation or a financial crisis, or news likely to move a FUNDED holding or the main port by about 5% or more (including a price event in one of them). Everything else is "medium" or "low". Expect most days to have no "high" item.
+- Formatting: JSON indent=1, ensure_ascii=False, "time_utc" as "YYYY-MM-DDTHH:MM:SSZ", "date" = Bangkok date of time_utc, title_th at most 70 characters.
 
 HOW TO ADVISE (consistent with the app's rules)
 The rules never pause buying or sell on news: every zone keeps buying and only tilts weights; the budget is flexible — a base amount plus a cash reserve that is spent more heavily after prices fall (multiplier from 52-week-high drawdowns). So "what_to_do_th" should explain whether the event changes anything in the plan (usually: no panic selling; a fall means the plan buys more from the reserve; be aware of upcoming events). Never recommend selling everything or market timing; this is information, not investment advice.
 
 FINAL MESSAGE (Thai, short)
-- If any new or updated item is "high": first line = that headline; then one line per high/medium item.
-- Otherwise a single line: "ช่วงค่ำไม่มีข่าวสำคัญที่กระทบพอร์ต" plus at most one medium item if any.
-- End with "ดูรายละเอียดในแอป AI Sentinel".
+- If any new or updated item is "high" (per the calibration above): first line = that headline and what it means for the plan; then at most one more line.
+- Otherwise exactly one line: "ช่วงค่ำไม่มีข่าวที่ต้องทำอะไร" (you may add one short medium item about a funded holding).
+- End with "ดูรายละเอียดในแอป AI Sentinel · ข้อมูลตามกฎ ไม่ใช่คำแนะนำการลงทุน".
+- Brief "level": "high" only when a high item was added or updated; otherwise "low" or "medium".
 
 RUN SUMMARY FOR THE APP (data/briefs.json)
 After composing the FINAL MESSAGE and before committing, also save it to data/briefs.json so the app shows it: shape {"updated_at": "<UTC ISO>", "items": [...]} sorted by time ascending, keep the newest 90; create the file if missing. Item: {"id": "<YYYY-MM-DD>-evening", "date": "YYYY-MM-DD", "run": "evening", "time_utc": "<ISO>", "headline_th": <first line of the final message>, "level": "high" if the run reported any high news item, price event or status change, else "medium" if any medium item, else "low", "text_th": <the full final message exactly as you send it, Thai, line breaks kept>, "news_ids": [ids of news items added or updated in this run]}. If an item with the same id exists (a re-run), replace it. Commit it together with the other files.

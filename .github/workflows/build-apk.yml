@@ -76,6 +76,7 @@ jobs:
 
       - name: Get packages and app icon
         run: |
+          cp ../config/sectors.json assets/sectors.json
           flutter pub get
           dart run flutter_launcher_icons
 
@@ -90,7 +91,12 @@ jobs:
       - name: Build APK
         run: |
           set -o pipefail
-          if ! flutter build apk --release 2>&1 | tee build.log; then
+          ok=0
+          for attempt in 1 2 3; do
+            if flutter build apk --release 2>&1 | tee build.log; then ok=1; break; fi
+            echo "Build attempt $attempt failed; retrying in 30s"; sleep 30
+          done
+          if [ "$ok" != 1 ]; then
             grep -iE "error|exception|failed|what went wrong" build.log | head -45 | while IFS= read -r l; do echo "::error::$l"; done
             exit 1
           fi
