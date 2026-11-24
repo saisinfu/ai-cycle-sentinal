@@ -11,7 +11,8 @@ import 'sector_screen.dart';
 import 'widgets/common.dart';
 import 'widgets/market_pulse.dart';
 
-Color newsLevelColor(String level) => switch (level) { 'high' => AppColors.red, 'medium' => AppColors.yellow, _ => AppColors.muted };
+/// Importance, not direction: never red/green.
+Color newsLevelColor(String level) => switch (level) { 'high' => AppColors.yellow, 'medium' => AppColors.text, _ => AppColors.muted };
 
 String newsLevelTh(String level) => switch (level) { 'high' => 'สำคัญมาก', 'medium' => 'ควรรู้', _ => 'ทั่วไป' };
 
@@ -179,6 +180,10 @@ class NewsDetailScreen extends ConsumerWidget {
             const SectionHeader(title: 'ควรทำอะไร'),
             ExplainBlock(title: item.whatToDo, tags: const [Provenance.estimate], body: 'Claude วิเคราะห์ตามกฎของแอป: ไม่หยุดซื้อหรือขายตามข่าว ใช้งบยืดหยุ่นซื้อเพิ่มเมื่อราคาย่อ'),
           ],
+          if (item.caveat.isNotEmpty) ...[
+            const SectionHeader(title: 'ข้อควรระวัง: การวิเคราะห์นี้อาจผิดได้ถ้า…'),
+            SurfaceCard(child: Text(item.caveat, style: const TextStyle(fontSize: 13.5, height: 1.5))),
+          ],
           if (item.watchNext.isNotEmpty) ...[
             const SectionHeader(title: 'สิ่งที่ต้องติดตามต่อ'),
             SurfaceCard(child: Text(item.watchNext, style: const TextStyle(fontSize: 13.5, height: 1.5))),
@@ -251,7 +256,8 @@ class PriceEventScreen extends ConsumerWidget {
     final q = market?.quotes[e.ticker];
     final sector = config?.sectors.where((x) => x.stocks.any((st) => st.ticker == e.ticker)).firstOrNull;
     final related = news.where((n) => n.impacts.any((i) => i.target == e.ticker || i.target == sector?.id) || n.title.contains(e.ticker)).take(3).toList();
-    final m = flexMultiplier(s.flexMode, q?.drawdownPct ?? e.drawdown);
+    final isFund = sector?.stocks.where((st) => st.ticker == e.ticker).firstOrNull?.isFund ?? false;
+    final m = flexMultiplier(s.flexMode, q?.drawdownPct ?? e.drawdown, isFund: isFund);
     return Scaffold(
       appBar: AppBar(title: Text(e.ticker, style: const TextStyle(fontWeight: FontWeight.w700))),
       body: ListView(
@@ -279,10 +285,13 @@ class PriceEventScreen extends ConsumerWidget {
           ExplainBlock(
             title: s.flexMode == FlexMode.off
                 ? 'งบแบบคงที่: ลงตามปกติ ไม่หยุด ไม่ขาย'
-                : 'งบยืดหยุ่น: เดือนนี้ลง ${e.ticker} ×${m.toStringAsFixed(1)} ของงบฐาน',
+                : sector != null && !sector.funded
+                    ? '${e.ticker} อยู่ในหมวดที่ดูอย่างเดียว ไม่ต้องทำอะไร'
+                    : 'งบยืดหยุ่น: เดือนนี้ลง ${e.ticker} ×${m.toStringAsFixed(1)} ของงบฐาน${!isFund ? ' (หุ้นรายตัวสูงสุด ×1.5 และไม่เกิน 15% ของเดือน)' : ''}',
             tags: const [Provenance.rule],
             body: 'ทดสอบย้อนหลังพบว่าการหยุดซื้อหรือขายตอนราคาร่วงมักทำให้พลาดช่วงฟื้น แผนจึงใช้เงินสำรองซื้อเพิ่มเมื่อราคาห่างจุดสูงสุดมาก '
-                'ถ้าราคาร่วงเพราะพื้นฐานบริษัทเปลี่ยน (ไม่ใช่แค่ตลาดตื่นตระหนก) ควรอ่านข่าวที่เกี่ยวข้องก่อนตัดสินใจ',
+                'แต่ถ้าราคาร่วงเพราะเรื่องของบริษัทเอง (เพิ่มทุน ลดคาดการณ์กำไร ถูกสอบสวน เสียลูกค้ารายใหญ่) ไม่ใช่โอกาสซื้อเพิ่ม '
+                'เป็นเหตุให้ทบทวนว่ายังมีเหตุผลที่จะถืออยู่ไหม',
           ),
           if (related.isNotEmpty) ...[
             const SectionHeader(title: 'ข่าวที่เกี่ยวข้อง'),

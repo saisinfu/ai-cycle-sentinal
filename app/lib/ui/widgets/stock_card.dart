@@ -99,7 +99,7 @@ class _StockCardState extends State<StockCard> {
                 if (!_open)
                   Padding(
                     padding: const EdgeInsets.only(top: 8),
-                    child: Text('แตะเพื่อดูว่าทำไมถึงแนะนำแบบนี้', style: TextStyle(fontSize: 12, color: AppColors.muted.withAlpha(220))),
+                    child: Text('แตะเพื่อดูว่าทำไมกฎให้ผลแบบนี้', style: TextStyle(fontSize: 12, color: AppColors.muted.withAlpha(220))),
                   ),
                 AnimatedSize(
                   duration: const Duration(milliseconds: 220),
@@ -117,7 +117,7 @@ class _StockCardState extends State<StockCard> {
                                 Text(rec.reason, style: const TextStyle(fontSize: 13.5, height: 1.45)),
                                 const SizedBox(height: 12),
                               ],
-                              const Eyebrow('ทำไมถึงแนะนำแบบนี้'),
+                              const Eyebrow('ทำไมกฎให้ผลแบบนี้'),
                               const SizedBox(height: 8),
                               ExplainBlock(
                                 title: '1. สถานะหมวด: ${zoneName(latest.zone)} (${latest.index.toStringAsFixed(1)})',

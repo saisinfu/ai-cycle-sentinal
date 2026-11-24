@@ -41,7 +41,7 @@ class Repository {
   }
 
   /// Downloads [path] from the repo; falls back to the last saved copy.
-  Future<Loaded<String>> _fetch(String path) async {
+  Future<Loaded<String>> _fetch(String path, {bool Function(Object? json)? isValid}) async {
     final prefs = await _prefs();
     final key = 'cache:$path';
     try {
@@ -49,7 +49,8 @@ class Repository {
       final res = await http.get(uri).timeout(const Duration(seconds: 15));
       if (res.statusCode != 200) throw DataException('เซิร์ฟเวอร์ตอบกลับ ${res.statusCode}');
       final body = utf8.decode(res.bodyBytes);
-      jsonDecode(body); // validate before caching
+      final decoded = jsonDecode(body); // validate before caching
+      if (isValid != null && !isValid(decoded)) throw DataException('ไฟล์ $path รูปแบบไม่ถูกต้อง');
       try {
         await prefs?.setString(key, body);
       } catch (_) {}
@@ -65,7 +66,7 @@ class Repository {
 
   Future<AppConfig> loadConfig() async {
     try {
-      final r = await _fetch('config/sectors.json');
+      final r = await _fetch('config/sectors.json', isValid: (j) => j is Map && j['sectors'] is List && (j['sectors'] as List).isNotEmpty);
       final cfg = AppConfig.fromJson(jsonDecode(r.value) as Map);
       if (cfg.sectors.isNotEmpty) return cfg;
     } catch (_) {}
@@ -74,7 +75,7 @@ class Repository {
   }
 
   Future<Loaded<List<Reading>>> loadReadings(String path) async {
-    final r = await _fetch(path);
+    final r = await _fetch(path, isValid: (j) => j is Map && j['readings'] is List);
     final decoded = jsonDecode(r.value);
     final list = decoded is Map ? decoded['readings'] : decoded;
     if (list is! List) throw DataException('รูปแบบไฟล์ข้อมูลไม่ถูกต้อง');
@@ -84,8 +85,9 @@ class Repository {
 
   Future<MarketData> loadMarket() async {
     try {
-      final r = await _fetch('data/market.json');
-      return MarketData.fromJson(jsonDecode(r.value));
+      final r = await _fetch('data/market.json', isValid: (j) => j is Map && j['quotes'] is Map && (j['quotes'] as Map).isNotEmpty);
+      final m = MarketData.fromJson(jsonDecode(r.value));
+      return r.fromCache ? m.cached() : m;
     } catch (_) {
       return MarketData.empty;
     }
@@ -104,7 +106,7 @@ class Repository {
 
   Future<List<NewsItem>> loadNews() async {
     try {
-      final r = await _fetch('data/news.json');
+      final r = await _fetch('data/news.json', isValid: (j) => j is Map && j['items'] is List);
       return parseNews(jsonDecode(r.value));
     } catch (_) {
       return const [];
@@ -113,7 +115,7 @@ class Repository {
 
   Future<PriceEvents> loadPriceEvents() async {
     try {
-      final r = await _fetch('data/price_events.json');
+      final r = await _fetch('data/price_events.json', isValid: (j) => j is Map && j['events'] is List);
       return PriceEvents.fromJson(jsonDecode(r.value));
     } catch (_) {
       return const PriceEvents(events: []);
@@ -122,7 +124,7 @@ class Repository {
 
   Future<List<Brief>> loadBriefs() async {
     try {
-      final r = await _fetch('data/briefs.json');
+      final r = await _fetch('data/briefs.json', isValid: (j) => j is Map && j['items'] is List);
       return parseBriefs(jsonDecode(r.value));
     } catch (_) {
       return const [];

@@ -65,6 +65,19 @@ class _SectorScreenState extends ConsumerState<SectorScreen> {
               children: [
                 Text('ข้อมูลจริง · อัปเดต ${thDateLong(latest.reading.date)} · ${confidenceTh(vm.config.confidence)}',
                     style: const TextStyle(color: AppColors.muted, fontSize: 12.5)),
+                if (vm.config.isDraft) ...[
+                  const SizedBox(height: kGap),
+                  SurfaceCard(
+                    borderColor: AppColors.yellow.withAlpha(110),
+                    padding: const EdgeInsets.all(12),
+                    child: Text(
+                      vm.config.funded
+                          ? 'กฎของหมวดนี้เป็นกฎร่างตัวอย่างจาก Claude ยังไม่ได้ทดสอบหรือยืนยันโดยคุณ'
+                          : 'หมวดนี้ดูอย่างเดียว · กฎเป็นร่างตัวอย่าง ยังไม่ใช่แผน ไม่ต้องซื้อตาม',
+                      style: const TextStyle(fontSize: 13, height: 1.45),
+                    ),
+                  ),
+                ],
                 const SizedBox(height: kGap),
                 SurfaceCard(
                   borderColor: color.withAlpha(60),
@@ -83,6 +96,9 @@ class _SectorScreenState extends ConsumerState<SectorScreen> {
                       const SizedBox(height: 6),
                       Text('อยู่ในสถานะนี้ตั้งแต่ ${thDate(vm.statusSince)} · ${vm.config.confidenceNote}',
                           textAlign: TextAlign.center, style: const TextStyle(fontSize: 12, color: AppColors.muted, height: 1.4)),
+                      const SizedBox(height: 6),
+                      const Text('คะแนนไม่ได้พยากรณ์ผลตอบแทน: ใช้ปรับน้ำหนักเท่านั้น ไม่ใช้หยุดซื้อหรือขาย',
+                          textAlign: TextAlign.center, style: TextStyle(fontSize: 12, color: AppColors.muted, height: 1.4)),
                     ],
                   ),
                 ),

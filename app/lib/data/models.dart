@@ -97,7 +97,10 @@ class Quote {
     this.chg3m,
     this.gauge = false,
     this.stale = false,
+    this.low52w,
   });
+
+  final double? low52w;
 
   final String? name;
   final double? change1d;
@@ -127,7 +130,7 @@ class Quote {
 }
 
 class MarketData {
-  const MarketData({required this.quotes, this.updatedAt});
+  const MarketData({required this.quotes, this.updatedAt, this.fromCache = false});
 
   factory MarketData.fromJson(Object? j) {
     final quotes = <String, Quote>{};
@@ -151,6 +154,7 @@ class MarketData {
             drawdownPct: _num(v['drawdown_pct']),
             chg1m: _num(v['chg_1m_pct']),
             chg3m: _num(v['chg_3m_pct']),
+            low52w: _num(v['low_52w']),
             gauge: v['gauge'] == true,
             stale: v['stale'] == true,
           );
@@ -164,4 +168,9 @@ class MarketData {
 
   final Map<String, Quote> quotes;
   final String? updatedAt;
+
+  /// Shown from the phone's saved copy because the download failed.
+  final bool fromCache;
+
+  MarketData cached() => MarketData(quotes: quotes, updatedAt: updatedAt, fromCache: true);
 }

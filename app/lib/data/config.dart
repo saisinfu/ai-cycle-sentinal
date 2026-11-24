@@ -82,10 +82,13 @@ class RuleCell {
 }
 
 class StockSpec {
-  const StockSpec(this.ticker, this.name);
+  const StockSpec(this.ticker, this.name, {this.isFund = false});
 
   final String ticker;
   final String name;
+
+  /// ETF / fund (diversified) rather than a single company.
+  final bool isFund;
 }
 
 class AlertRule {
@@ -133,6 +136,8 @@ class SectorConfig {
     required this.reasons,
     required this.alerts,
     this.rulesNote = '',
+    this.theme = 'other',
+    this.funded = false,
   });
 
   factory SectorConfig.fromJson(Map j) {
@@ -186,11 +191,13 @@ class SectorConfig {
       ],
       stocks: [
         for (final s in (j['stocks'] as List? ?? const []))
-          if (s is Map) StockSpec(_s(s['ticker']), _s(s['name'])),
+          if (s is Map) StockSpec(_s(s['ticker']), _s(s['name']), isFund: s['kind'] == 'fund'),
       ],
       rules: rules,
       rulesFromUser: j['rules_origin'] == 'user',
       rulesNote: _s(j['rules_note']),
+      theme: _s(j['theme'], _s(j['id'])),
+      funded: j['funded'] == true,
       reasons: reasons,
       alerts: [
         for (final a in (j['alerts'] as List? ?? const [])) if (a is Map) AlertRule.fromJson(a),
@@ -212,6 +219,15 @@ class SectorConfig {
 
   /// Why the rules look the way they do (e.g. backtest outcome); empty if none.
   final String rulesNote;
+
+  /// Exposure theme used for look-through (tech, gold, health ...).
+  final String theme;
+
+  /// The owner actually puts money into this sector (others are watch-only).
+  final bool funded;
+
+  /// Rules are Claude's untested draft, not the owner's confirmed plan.
+  bool get isDraft => !rulesFromUser;
   final Map<Zone, Map<String, String>> reasons;
   final List<AlertRule> alerts;
 
@@ -220,12 +236,14 @@ class SectorConfig {
 }
 
 class MainAsset {
-  const MainAsset(this.key, this.name, this.proxy, this.note);
+  const MainAsset(this.key, this.name, this.proxy, this.note, {this.isFund = true, this.theme = 'other'});
 
   final String key;
   final String name;
   final String proxy;
   final String note;
+  final bool isFund;
+  final String theme;
 }
 
 class AppConfig {
@@ -238,7 +256,7 @@ class AppConfig {
         ].where((s) => s.id.isNotEmpty && s.signals.isNotEmpty).toList(),
         mainPort: [
           for (final a in (j['main_port'] as List? ?? const []))
-            if (a is Map) MainAsset(_s(a['key']), _s(a['name']), _s(a['proxy']), _s(a['note'])),
+            if (a is Map) MainAsset(_s(a['key']), _s(a['name']), _s(a['proxy']), _s(a['note']), isFund: a['kind'] != 'stock', theme: _s(a['theme'], 'other')),
         ],
       );
 

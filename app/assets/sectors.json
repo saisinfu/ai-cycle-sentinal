@@ -5,25 +5,33 @@
       "key": "gold",
       "name": "ทองคำ",
       "proxy": "GLD",
-      "note": "ใช้ราคา GLD (กองทุน ETF ทองคำในสหรัฐฯ) แทนราคาทองในไทย"
+      "note": "ใช้ราคา GLD (กองทุน ETF ทองคำในสหรัฐฯ) แทนราคาทองในไทย",
+      "kind": "fund",
+      "theme": "gold"
     },
     {
       "key": "sp500",
       "name": "กองทุน S&P 500",
       "proxy": "SPY",
-      "note": "ใช้ราคา SPY แทนดัชนี S&P 500"
+      "note": "ใช้ราคา SPY แทนดัชนี S&P 500",
+      "kind": "fund",
+      "theme": "us"
     },
     {
       "key": "nasdaq",
       "name": "กองทุน NASDAQ",
       "proxy": "QQQ",
-      "note": "ใช้ราคา QQQ แทนดัชนี NASDAQ-100"
+      "note": "ใช้ราคา QQQ แทนดัชนี NASDAQ-100",
+      "kind": "fund",
+      "theme": "tech"
     },
     {
       "key": "kkp",
       "name": "KKP เกียรตินาคินภัทร",
       "proxy": "KKP.BK",
-      "note": "ราคาหุ้นในตลาดหลักทรัพย์ฯ (บาท)"
+      "note": "ราคาหุ้นในตลาดหลักทรัพย์ฯ (บาท)",
+      "kind": "stock",
+      "theme": "thai"
     }
   ],
   "sectors": [
@@ -126,15 +134,18 @@
       "stocks": [
         {
           "ticker": "KLAC",
-          "name": "KLA Corporation"
+          "name": "KLA Corporation",
+          "kind": "stock"
         },
         {
           "ticker": "AVGO",
-          "name": "Broadcom Inc."
+          "name": "Broadcom Inc.",
+          "kind": "stock"
         },
         {
           "ticker": "ETN",
-          "name": "Eaton Corporation"
+          "name": "Eaton Corporation",
+          "kind": "stock"
         }
       ],
       "rules": {
@@ -212,9 +223,9 @@
           "field": "power_grid_stress_level",
           "op": ">",
           "value": 8,
-          "zone": "X",
+          "zone": "W",
           "title": "คอขวดไฟฟ้าวิกฤต",
-          "message": "ระดับ {power_grid_stress_level:1}/10 (เกณฑ์แจ้งเตือน: เกิน 8) เป็นปัจจัยหนุน ETN"
+          "message": "ระดับ {power_grid_stress_level:1}/10 (เกณฑ์แจ้งเตือน: เกิน 8) มีผล 2 ทาง: ชะลอการสร้างดาต้าเซ็นเตอร์ (จึงกดคะแนนหมวด AI) แต่เพิ่มความต้องการอุปกรณ์ไฟฟ้าของ ETN"
         }
       ],
       "rules_previous": {
@@ -265,7 +276,9 @@
       },
       "rules_previous_origin": "user",
       "rules_version": 2,
-      "rules_note": "ทดสอบย้อนหลัง 35 ปี (หมวดการเงิน) พบว่าการหยุด DCA หรือขายตามสัญญาณวัฏจักรให้ผลแย่กว่า DCA ปกติ กฎชุดนี้จึง DCA ต่อทุกโซน ไม่หยุดและไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสดสำรอง 20% ในช่วงย่อยการลงทุน เพื่อใช้ซื้อเพิ่มเมื่อกลับเป็นโซนขยายตัว"
+      "rules_note": "ทดสอบย้อนหลัง 35 ปี (หมวดการเงิน) พบว่าการหยุด DCA หรือขายตามสัญญาณวัฏจักรให้ผลแย่กว่า DCA ปกติ กฎชุดนี้จึง DCA ต่อทุกโซน ไม่หยุดและไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสดสำรอง 20% ในช่วงย่อยการลงทุน เพื่อใช้ซื้อเพิ่มเมื่อกลับเป็นโซนขยายตัว",
+      "theme": "tech",
+      "funded": true
     },
     {
       "id": "finance",
@@ -369,15 +382,18 @@
       "stocks": [
         {
           "ticker": "JPM",
-          "name": "JPMorgan Chase"
+          "name": "JPMorgan Chase",
+          "kind": "stock"
         },
         {
           "ticker": "V",
-          "name": "Visa Inc."
+          "name": "Visa Inc.",
+          "kind": "stock"
         },
         {
           "ticker": "GS",
-          "name": "Goldman Sachs"
+          "name": "Goldman Sachs",
+          "kind": "stock"
         }
       ],
       "rules": {
@@ -508,7 +524,9 @@
       },
       "rules_previous_origin": "draft",
       "rules_version": 2,
-      "rules_note": "ทดสอบย้อนหลัง 35 ปี (หมวดการเงิน) พบว่าการหยุด DCA หรือขายตามสัญญาณวัฏจักรให้ผลแย่กว่า DCA ปกติ กฎชุดนี้จึง DCA ต่อทุกโซน ไม่หยุดและไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสดสำรอง 20% ในช่วงย่อยการลงทุน เพื่อใช้ซื้อเพิ่มเมื่อกลับเป็นโซนขยายตัว"
+      "rules_note": "ทดสอบย้อนหลัง 35 ปี (หมวดการเงิน) พบว่าการหยุด DCA หรือขายตามสัญญาณวัฏจักรให้ผลแย่กว่า DCA ปกติ กฎชุดนี้จึง DCA ต่อทุกโซน ไม่หยุดและไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสดสำรอง 20% ในช่วงย่อยการลงทุน เพื่อใช้ซื้อเพิ่มเมื่อกลับเป็นโซนขยายตัว",
+      "theme": "finance",
+      "funded": false
     },
     {
       "id": "health",
@@ -612,15 +630,18 @@
       "stocks": [
         {
           "ticker": "LLY",
-          "name": "Eli Lilly"
+          "name": "Eli Lilly",
+          "kind": "stock"
         },
         {
           "ticker": "ISRG",
-          "name": "Intuitive Surgical"
+          "name": "Intuitive Surgical",
+          "kind": "stock"
         },
         {
           "ticker": "UNH",
-          "name": "UnitedHealth Group"
+          "name": "UnitedHealth Group",
+          "kind": "stock"
         }
       ],
       "rules": {
@@ -704,7 +725,9 @@
       ],
       "rules_origin": "draft",
       "rules_version": 2,
-      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน"
+      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน",
+      "theme": "health",
+      "funded": false
     },
     {
       "id": "staples",
@@ -808,15 +831,18 @@
       "stocks": [
         {
           "ticker": "COST",
-          "name": "Costco Wholesale"
+          "name": "Costco Wholesale",
+          "kind": "stock"
         },
         {
           "ticker": "PEP",
-          "name": "PepsiCo"
+          "name": "PepsiCo",
+          "kind": "stock"
         },
         {
           "ticker": "MCD",
-          "name": "McDonald's"
+          "name": "McDonald's",
+          "kind": "stock"
         }
       ],
       "rules": {
@@ -900,7 +926,9 @@
       ],
       "rules_origin": "draft",
       "rules_version": 2,
-      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน"
+      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน",
+      "theme": "staples",
+      "funded": false
     },
     {
       "id": "travel",
@@ -1004,15 +1032,18 @@
       "stocks": [
         {
           "ticker": "BKNG",
-          "name": "Booking Holdings"
+          "name": "Booking Holdings",
+          "kind": "stock"
         },
         {
           "ticker": "MAR",
-          "name": "Marriott International"
+          "name": "Marriott International",
+          "kind": "stock"
         },
         {
           "ticker": "ABNB",
-          "name": "Airbnb"
+          "name": "Airbnb",
+          "kind": "stock"
         }
       ],
       "rules": {
@@ -1096,7 +1127,9 @@
       ],
       "rules_origin": "draft",
       "rules_version": 2,
-      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน"
+      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน",
+      "theme": "travel",
+      "funded": false
     },
     {
       "id": "space",
@@ -1200,15 +1233,18 @@
       "stocks": [
         {
           "ticker": "LMT",
-          "name": "Lockheed Martin"
+          "name": "Lockheed Martin",
+          "kind": "stock"
         },
         {
           "ticker": "RKLB",
-          "name": "Rocket Lab"
+          "name": "Rocket Lab",
+          "kind": "stock"
         },
         {
           "ticker": "ASTS",
-          "name": "AST SpaceMobile"
+          "name": "AST SpaceMobile",
+          "kind": "stock"
         }
       ],
       "rules": {
@@ -1292,10 +1328,10 @@
       ],
       "rules_origin": "draft",
       "rules_version": 2,
-      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน"
-    }
-  ],
-  "sectors_next": [
+      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน",
+      "theme": "space",
+      "funded": false
+    },
     {
       "id": "gold",
       "name": "ทองคำ",
@@ -1398,11 +1434,13 @@
       "stocks": [
         {
           "ticker": "GLD",
-          "name": "SPDR Gold Shares (ราคาทอง)"
+          "name": "SPDR Gold Shares (ราคาทอง)",
+          "kind": "fund"
         },
         {
           "ticker": "GDX",
-          "name": "VanEck Gold Miners (หุ้นเหมืองทอง)"
+          "name": "VanEck Gold Miners (หุ้นเหมืองทอง)",
+          "kind": "fund"
         }
       ],
       "rules": {
@@ -1471,7 +1509,10 @@
       ],
       "rules_origin": "draft",
       "rules_version": 2,
-      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน"
+      "rules_note": "กฎตั้งต้นที่ Claude ร่าง (ยังไม่ได้ทดสอบย้อนหลัง) ใช้หลักเดียวกับหมวดอื่น: DCA ต่อทุกโซน ไม่หยุดไม่ขาย ปรับแค่น้ำหนักไปหาหุ้นที่ทนกว่า และกันเงินสด 20% ในช่วงย่อยการลงทุน",
+      "theme": "gold",
+      "funded": false
     }
-  ]
+  ],
+  "funded_note": "\"funded\": true = เจ้าของลงเงินจริงในหมวดนี้ (ตามน้ำหนักหมวดในแอป) ถ้าเปลี่ยนน้ำหนักในแอป ให้แก้ค่านี้ด้วย"
 }

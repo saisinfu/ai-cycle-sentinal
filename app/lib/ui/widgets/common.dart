@@ -57,6 +57,34 @@ class StatusPill extends StatelessWidget {
   }
 }
 
+/// Pill with an optional icon, for states that are not good/bad (no green/red).
+class NeutralPill extends StatelessWidget {
+  const NeutralPill({super.key, required this.label, this.color = AppColors.muted, this.icon});
+
+  final String label;
+  final Color color;
+  final IconData? icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3),
+      decoration: BoxDecoration(
+        color: AppColors.raised,
+        borderRadius: BorderRadius.circular(999),
+        border: Border.all(color: color.withAlpha(90)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (icon != null) ...[Icon(icon, size: 13, color: color), const SizedBox(width: 4)],
+          Text(label, style: TextStyle(color: color, fontSize: 12, fontWeight: FontWeight.w600)),
+        ],
+      ),
+    );
+  }
+}
+
 enum Provenance { data, calc, rule, estimate }
 
 /// Small label that says where a number comes from.
@@ -126,8 +154,10 @@ class SectionHeader extends StatelessWidget {
                 ? Text(t, style: const TextStyle(color: AppColors.muted, fontSize: 12))
                 : InkWell(
                     onTap: onTrailing,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 6),
+                    child: Container(
+                      constraints: const BoxConstraints(minHeight: 48),
+                      alignment: Alignment.centerRight,
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: Text(
                         t,
                         style: const TextStyle(fontSize: 12.5, decoration: TextDecoration.underline, decorationColor: AppColors.muted),

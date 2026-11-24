@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/engine.dart';
 import '../data/flex.dart';
+import '../data/holdings.dart';
 
 /// Everything the user can change in the app. Stored on the phone only.
 class UserSettings {
@@ -16,7 +17,7 @@ class UserSettings {
     this.mainSplitSet = false,
     this.sectorWeights = const {'ai': 100.0, 'finance': 0.0},
     this.followed = const {'ai': true, 'finance': true},
-    this.zoneMethod = ZoneMethod.fixed,
+    this.zoneMethod = ZoneMethod.ma200,
     this.bonusMonths = 7.0,
     this.lifeInsurance = 0.0,
     this.healthInsurance = 0.0,
@@ -30,7 +31,41 @@ class UserSettings {
     this.reserveCapMonths = 6.0,
     this.lastRecordedMonth = '',
     this.recordedReserveBefore = 0.0,
+    this.emergencyTarget = 0.0,
+    this.emergencyHave = 0.0,
+    this.stockCapPct = 15.0,
+    this.rebalance = true,
+    this.holdings = const [],
+    this.checklistMonth = '',
+    this.checklistDone = const [],
+    this.alertsSeenAt = '',
+    this.calmPush = true,
   });
+
+  /// Emergency fund the owner wants before any reserve money is used (0 = not set).
+  final double emergencyTarget;
+  final double emergencyHave;
+
+  /// Max % of the month's investable budget for one company.
+  final double stockCapPct;
+
+  /// Tilt the monthly base toward lines below their target weight (needs holdings).
+  final bool rebalance;
+  final List<Holding> holdings;
+
+  /// Ticked buy-list lines for [checklistMonth].
+  final String checklistMonth;
+  final List<String> checklistDone;
+
+  /// ISO time the alerts tab was last opened (for "new" markers and the badge).
+  final String alertsSeenAt;
+
+  /// Show only actionable alerts in the badge.
+  final bool calmPush;
+
+  bool get emergencyOk => emergencyTarget <= 0 || emergencyHave >= emergencyTarget;
+  bool get emergencySet => emergencyTarget > 0;
+  List<String> get doneThisMonth => checklistMonth == monthKey(DateTime.now()) ? checklistDone : const [];
 
   /// Reserve before the confirmation of [lastRecordedMonth] (to show and undo that month's plan).
   final double recordedReserveBefore;
@@ -96,6 +131,15 @@ class UserSettings {
     double? reserveCapMonths,
     String? lastRecordedMonth,
     double? recordedReserveBefore,
+    double? emergencyTarget,
+    double? emergencyHave,
+    double? stockCapPct,
+    bool? rebalance,
+    List<Holding>? holdings,
+    String? checklistMonth,
+    List<String>? checklistDone,
+    String? alertsSeenAt,
+    bool? calmPush,
   }) =>
       UserSettings(
         salary: salary ?? this.salary,
@@ -119,6 +163,15 @@ class UserSettings {
         reserveCapMonths: reserveCapMonths ?? this.reserveCapMonths,
         lastRecordedMonth: lastRecordedMonth ?? this.lastRecordedMonth,
         recordedReserveBefore: recordedReserveBefore ?? this.recordedReserveBefore,
+        emergencyTarget: emergencyTarget ?? this.emergencyTarget,
+        emergencyHave: emergencyHave ?? this.emergencyHave,
+        stockCapPct: stockCapPct ?? this.stockCapPct,
+        rebalance: rebalance ?? this.rebalance,
+        holdings: holdings ?? this.holdings,
+        checklistMonth: checklistMonth ?? this.checklistMonth,
+        checklistDone: checklistDone ?? this.checklistDone,
+        alertsSeenAt: alertsSeenAt ?? this.alertsSeenAt,
+        calmPush: calmPush ?? this.calmPush,
       );
 
   Map<String, Object> toJson() => {
@@ -143,6 +196,16 @@ class UserSettings {
         'reserveCapMonths': reserveCapMonths,
         'lastRecordedMonth': lastRecordedMonth,
         'recordedReserveBefore': recordedReserveBefore,
+        'emergencyTarget': emergencyTarget,
+        'emergencyHave': emergencyHave,
+        'stockCapPct': stockCapPct,
+        'rebalance': rebalance,
+        'holdings': [for (final h in holdings) h.toJson()],
+        'checklistMonth': checklistMonth,
+        'checklistDone': checklistDone,
+        'alertsSeenAt': alertsSeenAt,
+        'calmPush': calmPush,
+        'zoneMethodV2': true,
       };
 
   static Map<String, double>? _nums(Object? v) {
@@ -164,7 +227,8 @@ class UserSettings {
       followed: followedRaw is Map
           ? {for (final e in followedRaw.entries) if (e.key is String && e.value is bool) e.key as String: e.value as bool}
           : d.followed,
-      zoneMethod: zoneMethodFrom(j['zoneMethod'] as String?),
+      // v2.4: the old default ("fixed", anchored on today's price) always showed "in zone"; move to the 200-day line once.
+      zoneMethod: j['zoneMethodV2'] == true ? zoneMethodFrom(j['zoneMethod'] as String?) : ZoneMethod.ma200,
       bonusMonths: n('bonusMonths', d.bonusMonths),
       lifeInsurance: n('lifeInsurance', d.lifeInsurance),
       healthInsurance: n('healthInsurance', d.healthInsurance),
@@ -178,6 +242,15 @@ class UserSettings {
       reserveCapMonths: n('reserveCapMonths', d.reserveCapMonths),
       lastRecordedMonth: j['lastRecordedMonth'] is String ? j['lastRecordedMonth'] as String : '',
       recordedReserveBefore: n('recordedReserveBefore', d.recordedReserveBefore),
+      emergencyTarget: n('emergencyTarget', d.emergencyTarget),
+      emergencyHave: n('emergencyHave', d.emergencyHave),
+      stockCapPct: n('stockCapPct', d.stockCapPct),
+      rebalance: j['rebalance'] is bool ? j['rebalance'] as bool : d.rebalance,
+      holdings: j['holdings'] is List ? [for (final h in j['holdings'] as List) if (h is Map) Holding.fromJson(h)] : const [],
+      checklistMonth: j['checklistMonth'] is String ? j['checklistMonth'] as String : '',
+      checklistDone: j['checklistDone'] is List ? [for (final x in j['checklistDone'] as List) if (x is String) x] : const [],
+      alertsSeenAt: j['alertsSeenAt'] is String ? j['alertsSeenAt'] as String : '',
+      calmPush: j['calmPush'] is bool ? j['calmPush'] as bool : d.calmPush,
     );
   }
 }

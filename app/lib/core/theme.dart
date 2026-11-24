@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../data/config.dart';
 import '../data/zone.dart';
@@ -18,7 +19,21 @@ abstract final class AppColors {
   // Provenance tags (never reuse status colours).
   static const tagData = Color(0xFF8AB4F8);
   static const tagCalc = Color(0xFFC3A6FF);
+
+  // "Buy more" from the flexible budget (not a price direction, not a zone).
+  static const buy = Color(0xFF64B5F6);
+
+  // Budget buckets.
+  static const bucketMain = Color(0xFFE0E0E0);
+  static const bucketStocks = Color(0xFF4DB6AC);
+  static const bucketTax = Color(0xFFFFB74D);
 }
+
+IconData zoneIcon(Zone z) => switch (z) {
+      Zone.expansion => Icons.trending_up,
+      Zone.earlyWarning => Icons.remove_red_eye_outlined,
+      Zone.digestion => Icons.hourglass_bottom,
+    };
 
 Color zoneColor(Zone z) => switch (z) {
       Zone.expansion => AppColors.green,
@@ -101,6 +116,7 @@ ThemeData buildTheme() {
       focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.muted)),
       isDense: true,
     ),
-    textTheme: base.textTheme.apply(bodyColor: AppColors.text, displayColor: AppColors.text),
+    // Noto Sans Thai: proper Thai shaping; downloaded once and cached, system font while offline.
+    textTheme: GoogleFonts.notoSansThaiTextTheme(base.textTheme).apply(bodyColor: AppColors.text, displayColor: AppColors.text),
   );
 }

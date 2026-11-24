@@ -42,6 +42,7 @@ class NewsItem {
     required this.whatToDo,
     required this.watchNext,
     required this.sources,
+    this.caveat = '',
   });
 
   factory NewsItem.fromJson(Map j) => NewsItem(
@@ -55,6 +56,7 @@ class NewsItem {
         impacts: [for (final m in _maps(j['impacts'])) NewsImpact.fromJson(m)],
         whatToDo: _s(j['what_to_do_th']),
         watchNext: _s(j['watch_next_th']),
+        caveat: _s(j['caveat_th']),
         sources: [for (final m in _maps(j['sources'])) if (_s(m['url']).startsWith('http')) (_s(m['label'], 'ที่มา'), _s(m['url']))],
       );
 
@@ -70,6 +72,9 @@ class NewsItem {
   final List<NewsImpact> impacts;
   final String whatToDo;
   final String watchNext;
+
+  /// Why the analysis could be wrong.
+  final String caveat;
   final List<(String, String)> sources;
 
   String get sortKey => time.isNotEmpty ? time : date;

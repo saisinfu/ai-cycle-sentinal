@@ -17,7 +17,10 @@ import 'widgets/common.dart';
 import 'widgets/waterfall.dart';
 
 class AlertsScreen extends ConsumerStatefulWidget {
-  const AlertsScreen({super.key});
+  const AlertsScreen({super.key, this.seenBefore = ''});
+
+  /// Items after this mark are shown as new.
+  final String seenBefore;
 
   @override
   ConsumerState<AlertsScreen> createState() => _AlertsScreenState();
@@ -26,6 +29,7 @@ class AlertsScreen extends ConsumerStatefulWidget {
 class _AlertsScreenState extends ConsumerState<AlertsScreen> {
   String? _filter;
   String _type = 'all';
+  bool _mine = false;
 
   @override
   Widget build(BuildContext context) {
@@ -33,17 +37,25 @@ class _AlertsScreenState extends ConsumerState<AlertsScreen> {
     final sectors = ref.watch(allSectorsProvider);
     final news = ref.watch(newsProvider).valueOrNull ?? const <NewsItem>[];
     final prices = ref.watch(followedPriceEventsProvider);
+    final mine = ref.watch(myTargetsProvider);
     final signals = _filter == null ? all : all.where((a) => a.sector.id == _filter).toList();
+    final seen = widget.seenBefore;
+    final day = seen.length >= 10 ? seen.substring(0, 10) : seen;
+    bool fresh(String key, {bool byDay = false}) => seen.isNotEmpty && isNewSince(key, byDay ? day : seen);
 
-    // (date, sort key, widget)
-    final entries = <(String, String, Widget)>[
+    // (date, sort key, widget, is new)
+    final entries = <(String, String, Widget, bool)>[
       if (_type == 'all' || _type == 'news')
-        for (final n in news) (n.date, '${n.date}~3${n.sortKey}', NewsTile(item: n)),
+        for (final n in news)
+          if (!_mine || newsTouches(n, mine)) (n.date, '${n.date}~3${n.sortKey}', NewsTile(item: n), fresh(n.sortKey)),
       if (_type == 'all' || _type == 'price')
-        for (final e in prices) (e.date, '${e.date}~2${e.ticker}', PriceEventTile(event: e)),
+        for (final e in prices)
+          if (!_mine || mine.contains(e.ticker)) (e.date, '${e.date}~2${e.ticker}', PriceEventTile(event: e), fresh(e.date, byDay: true)),
       if (_type == 'all' || _type == 'signal')
-        for (final a in signals) (a.date, '${a.date}~1${a.title}', _SignalTile(a: a)),
+        for (final a in signals)
+          if (!_mine || a.sector.funded) (a.date, '${a.date}~1${a.title}', _SignalTile(a: a), fresh(a.date, byDay: true)),
     ]..sort((a, b) => b.$2.compareTo(a.$2));
+    final newCount = entries.where((e) => e.$4).length;
 
     String? lastDate;
     return Scaffold(
@@ -85,6 +97,16 @@ class _AlertsScreenState extends ConsumerState<AlertsScreen> {
                 ],
               ],
             ),
+            const SizedBox(height: 8),
+            Row(children: [
+              ToggleChip(
+                label: _mine ? '✓ เฉพาะที่กระทบพอร์ตฉัน' : 'เฉพาะที่กระทบพอร์ตฉัน',
+                selected: _mine,
+                onTap: () => setState(() => _mine = !_mine),
+              ),
+              const Spacer(),
+              if (newCount > 0) NeutralPill(label: 'ใหม่ $newCount รายการ', color: AppColors.buy),
+            ]),
             if (_type == 'signal') ...[
               const SizedBox(height: 8),
               SingleChildScrollView(
@@ -108,7 +130,7 @@ class _AlertsScreenState extends ConsumerState<AlertsScreen> {
                   child: Text('ยังไม่มีแจ้งเตือนในหมวดนี้', textAlign: TextAlign.center, style: TextStyle(color: AppColors.muted)),
                 ),
               ),
-            for (final (date, _, w) in entries) ...[
+            for (final (date, _, w, isNew) in entries) ...[
               if (date != lastDate)
                 Padding(
                   padding: const EdgeInsets.fromLTRB(4, 16, 4, 8),
@@ -116,6 +138,11 @@ class _AlertsScreenState extends ConsumerState<AlertsScreen> {
                     lastDate = date;
                     return thDateLong(date);
                   }()),
+                ),
+              if (isNew)
+                const Padding(
+                  padding: EdgeInsets.only(left: 4, bottom: 4),
+                  child: Text('● ใหม่', style: TextStyle(fontSize: 11.5, color: AppColors.buy, fontWeight: FontWeight.w700)),
                 ),
               Padding(padding: const EdgeInsets.only(bottom: 8), child: w),
             ],

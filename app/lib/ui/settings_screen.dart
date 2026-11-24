@@ -65,11 +65,46 @@ class SettingsScreen extends ConsumerWidget {
                   suffix: 'เดือน',
                   onSaved: (v) => n.update((x) => x.copyWith(reserveCapMonths: v.clamp(0, 60).toDouble())),
                 ),
+                NumberField(
+                  label: 'หุ้นรายตัวหนึ่งตัวได้ไม่เกิน (% ของงบเดือน, 0 = ไม่จำกัด)',
+                  value: s.stockCapPct,
+                  suffix: '%',
+                  onSaved: (v) => n.update((x) => x.copyWith(stockCapPct: v.clamp(0, 100).toDouble())),
+                ),
                 const SizedBox(height: 4),
                 const Text(
                   'ใส่เงินเก็บที่กันไว้ซื้อตอนตลาดย่อได้ (เช่น ส่วนหนึ่งของโบนัส) · กด "ลงทุนตามนี้แล้ว" ในหน้างบทุกเดือนเพื่อให้แอปอัปเดตยอดเอง · '
                   'กองทุนลดหย่อนภาษีไม่ปรับตามราคา',
                   style: TextStyle(fontSize: 12, color: AppColors.muted, height: 1.45),
+                ),
+              ],
+            ),
+          ),
+          const SectionHeader(title: 'เงินฉุกเฉิน (กันไว้ก่อนใช้เงินสำรอง)'),
+          SurfaceCard(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                NumberField(
+                  label: 'เป้าเงินฉุกเฉิน (แนะนำ 6 เท่าของค่าใช้จ่ายต่อเดือน)',
+                  value: s.emergencyTarget,
+                  suffix: '฿',
+                  onSaved: (v) => n.update((x) => x.copyWith(emergencyTarget: v < 0 ? 0 : v)),
+                ),
+                NumberField(
+                  label: 'เงินฉุกเฉินที่มีตอนนี้',
+                  value: s.emergencyHave,
+                  suffix: '฿',
+                  onSaved: (v) => n.update((x) => x.copyWith(emergencyHave: v < 0 ? 0 : v)),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  !s.emergencySet
+                      ? 'ยังไม่ได้ตั้งเป้า · เงินฉุกเฉินควรแยกจากเงินสำรองซื้อตอนย่อ'
+                      : s.emergencyOk
+                          ? 'เงินฉุกเฉินครบเป้าแล้ว แผนใช้เงินสำรองซื้อตอนย่อได้'
+                          : 'ยังไม่ครบเป้า: แผนจะไม่ดึงเงินสำรองมาซื้อเพิ่มจนกว่าเงินฉุกเฉินจะครบ',
+                  style: const TextStyle(fontSize: 12, color: AppColors.muted, height: 1.45),
                 ),
               ],
             ),
