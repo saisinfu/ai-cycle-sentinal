@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T01:10:20Z",
+ "updated_at": "2026-11-24T01:06:50Z",
  "readings": [
   {
    "confidence": {
@@ -2169,6 +2169,59 @@
      "key": "chip_lead_time",
      "label": "InvestmentNews: Nvidia SEC probe",
      "url": "https://www.investmentnews.com/equities/embattled-nvidia-faces-sec-probe-as-california-attorney-general-mulls-action/269054"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-24",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 2.89,
+    "gpu_spot_price_change_1m_pct": -7.37,
+    "enterprise_ai_adoption_pct": 66.71,
+    "enterprise_ai_adoption_change_3m_pp": 1.82,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "medium",
+    "enterprise_adoption": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon ไม่มีตัวเลขใหม่จนกว่างบไตรมาสถัดไป (ปลาย ม.ค. 2027)",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ · 23 พ.ย. บอร์ด Nvidia แต่งตั้ง Jensen Huang กลับเป็น CEO ทันที แต่ยังไม่มีหลักฐานว่าอุปทานชิปเปลี่ยน",
+    "gpu_spot_price": "คงไว้ $2.89/ชม. (ปิด 21 พ.ย.) −7.4% ใน 1 เดือน เพราะรอบนี้เปิดหน้า Ornn ไม่ได้ จึงลดความเชื่อมั่นเป็นปานกลาง ยังไม่ถึงเกณฑ์แจ้งเตือน −15%",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ต.ค. 2026 = 66.7% เทียบ ก.ค. = +1.8 จุดใน 3 เดือน เท่าเดิม (รอบนี้เปิดหน้า FRED ไม่ได้ ตัวเลข พ.ย. คาดออกกลาง ธ.ค.)",
+    "power_grid": "คงไว้ 8.8/10 ไม่พบข่าวไฟฟ้าดาต้าเซ็นเตอร์ใหม่ที่เปลี่ยนภาพ · ยังรอผลประมูลสำรองไฟฟ้า PJM (ภายใน 2 ธ.ค.) และคำขอเลื่อนประมูล 2029/30 · ภาวะขาดหม้อแปลงยังหนุน ETN",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันจันทร์ 23 พ.ย.): KLAC $145.85 (+14.96% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -51.66%) · AVGO $313.55 (+3.00% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -34.89%) · ETN $336.34 (+8.03% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -26.88%) · ตลาดเด้งแรงหลัง Nvidia แต่งตั้ง Jensen Huang กลับเป็น CEO (Nasdaq +6.5%, S&P 500 +4.7%)"
+   },
+   "prices": {
+    "KLAC": 145.85,
+    "AVGO": 313.55,
+    "ETN": 336.34
+   },
+   "prices_as_of": "2026-11-23",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "news",
+     "label": "Fox Business: stocks Nov 23, 2026",
+     "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
+    },
+    {
+     "key": "news",
+     "label": "NVIDIA 8-K: Board reinstates Jensen Huang",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
     }
    ],
    "created_by": "claude",

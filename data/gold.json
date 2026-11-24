@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T01:10:20Z",
+ "updated_at": "2026-11-24T01:06:50Z",
  "readings": [
   {
    "date": "2026-11-20",
@@ -317,6 +317,70 @@
      "key": "gold_thai",
      "label": "สมาคมค้าทองคำ: ผลสำรวจ 23–27 พ.ย. 2026",
      "url": "https://gtadmin.goldtraders.or.th/grc-gold-survey-23-27-nov-2026/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-24",
+   "indicators": {
+    "real_yield_10y_pct": 2.88,
+    "usd_index_change_3m_pct": 5.4,
+    "central_bank_gold_tonnes_q": 321.2,
+    "gold_etf_flows_tonnes_1m": 19,
+    "breakeven_inflation_10y_pct": 2.15,
+    "gold_usd_oz": 3627.4,
+    "usd_thb": 33.95,
+    "thai_gold_bar_sell_thb": 57150
+   },
+   "confidence": {
+    "real_yield": "high",
+    "dollar": "high",
+    "central_banks": "high",
+    "etf_flows": "medium",
+    "inflation_expect": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "real_yield": "ดอกเบี้ยแท้จริง 10 ปีสหรัฐฯ (TIPS) 2.88% (FRED 19 พ.ย. ค่าล่าสุดที่มี) เท่าเดิม ยังสูงกว่าเกณฑ์ 2.5% เป็นแรงกดดันหลักต่อทอง",
+    "dollar": "ดัชนีดอลลาร์ (DXY) 104.32 (ปิด 23 พ.ย.) เทียบ 3 เดือนก่อน 99.00 = +5.4% จากเดิม +5.1% ดอลลาร์ยังแข็ง กดดันทอง",
+    "central_banks": "ธนาคารกลางทั่วโลกซื้อทองสุทธิไตรมาส 3/2026 = 321.2 ตัน (WGC) เท่าเดิม ยังเป็นแรงหนุนหลัก",
+    "etf_flows": "กองทุนทองทั่วโลก ต.ค. 2026 ถือทองเพิ่ม 19 ตัน เท่าเดิม ตัวเลข พ.ย. ออกต้น ธ.ค. (อาจมีเงินไหลออกช่วงทองร่วง)",
+    "inflation_expect": "เงินเฟ้อคาดการณ์ 10 ปีสหรัฐฯ 2.15% (FRED 20 พ.ย.) เท่าเดิม ทรงตัวระดับต่ำ ไม่ค่อยหนุนทอง",
+    "gold_thai": "ทองโลก (GC=F) ปิดจันทร์ 23 พ.ย. $3,627.4/ออนซ์ +3.2% เด้งจากต่ำสุดรอบ 14 เดือน เงินบาท 33.95 บาท/ดอลลาร์ ทรงตัว (แข็งค่าเล็กน้อย) จึงช่วยทองไทยเพียงเล็กน้อย ทองไทยจึงน่าจะขยับขึ้นตามทองโลกเป็นหลัก · ทองแท่งไทยขายออกยังใช้ค่าเดิม 57,150 บาท (21 พ.ย.) ความเชื่อมั่นต่ำ เพราะหาราคาประกาศล่าสุดไม่ได้ (สมาคมฯ ประกาศราว 09:00 น.)",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันจันทร์ 23 พ.ย.): GLD $333.02 (+3.14% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -32.85%) · GDX $72.80 (+6.43% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -37.15%) · ตลาดเด้งแรงหลัง Nvidia แต่งตั้ง Jensen Huang กลับเป็น CEO (Nasdaq +6.5%, S&P 500 +4.7%)"
+   },
+   "prices": {
+    "GLD": 333.02,
+    "GDX": 72.8
+   },
+   "prices_as_of": "2026-11-23",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "news",
+     "label": "Fox Business: stocks Nov 23, 2026",
+     "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
+    },
+    {
+     "key": "news",
+     "label": "NVIDIA 8-K: Board reinstates Jensen Huang",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+    },
+    {
+     "key": "real_yield",
+     "label": "ALFRED DFII10",
+     "url": "https://alfred.stlouisfed.org/series?seid=DFII10"
+    },
+    {
+     "key": "dollar",
+     "label": "Yahoo Finance DX-Y.NYB / GC=F / THB=X (data/market.json)",
+     "url": "https://finance.yahoo.com/"
     }
    ],
    "created_by": "claude",

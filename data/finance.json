@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T01:10:20Z",
+ "updated_at": "2026-11-24T01:06:50Z",
  "readings": [
   {
    "date": "2026-10-24",
@@ -1766,6 +1766,72 @@
      "key": "fed_policy",
      "label": "Kalshi Fed odds",
      "url": "https://kalshi.com/economics/fed-rate-odds"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-24",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.29,
+    "hy_oas_pct": 3.52,
+    "loan_growth_pct": 7.18,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 32
+   },
+   "confidence": {
+    "yield_curve": "high",
+    "credit_spread": "high",
+    "loan_growth": "high",
+    "delinquency": "high",
+    "fed_policy": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่าง 10 ปี ลบ 2 ปี +0.29% (FRED 20 พ.ย. ค่าล่าสุดที่มี) เท่าเดิม · 23 พ.ย. ผลตอบแทน 10 ปีขึ้นเป็น ~4.94% และ 2 ปีขึ้นแรงกว่า หลัง Williams ส่งสัญญาณขึ้นดอกเบี้ย",
+    "credit_spread": "ส่วนต่างหุ้นกู้เสี่ยงสูง 3.52% (FRED 19 พ.ย. ค่าล่าสุดที่มี) เท่าเดิม ยังต่ำกว่าเกณฑ์กังวล 5% มาก หุ้นเด้งแรงวันจันทร์น่าจะช่วยให้ไม่กว้างขึ้นต่อ",
+    "loan_growth": "สินเชื่อธนาคารสหรัฐฯ โตเฉลี่ย 4 ไตรมาส ~7.18% ต่อปี (H.8 20 พ.ย.) เท่าเดิม H.8 ฉบับถัดไปศุกร์นี้",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) เท่าเดิม ข้อมูลไตรมาส 3 ยังไม่ออก",
+    "fed_policy": "คง 32/100 · 23 พ.ย. John Williams (Fed นิวยอร์ก) บอกเงินเฟ้อ \"สูงเกินไป\" ต้องดำเนินการ \"ต่อเนื่อง\" ไม่ปิดทางขึ้นดอกเบี้ยติดกันหลายครั้ง คาดเงินเฟ้อถึง 2% ปี 2028 · CME FedWatch ให้โอกาสขึ้น 0.25% วันที่ 9 ธ.ค. ราว 96%",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันจันทร์ 23 พ.ย.): JPM $316.66 (+1.97% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -13.29%) · V $409.40 (+1.87% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -6.22%) · GS $823.62 (+4.16% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -28.51%) · ตลาดเด้งแรงหลัง Nvidia แต่งตั้ง Jensen Huang กลับเป็น CEO (Nasdaq +6.5%, S&P 500 +4.7%)"
+   },
+   "prices": {
+    "JPM": 316.66,
+    "V": 409.4,
+    "GS": 823.62
+   },
+   "prices_as_of": "2026-11-23",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "news",
+     "label": "Fox Business: stocks Nov 23, 2026",
+     "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
+    },
+    {
+     "key": "news",
+     "label": "NVIDIA 8-K: Board reinstates Jensen Huang",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+    },
+    {
+     "key": "yield_curve",
+     "label": "FRED T10Y2Y",
+     "url": "https://fred.stlouisfed.org/series/T10Y2Y"
+    },
+    {
+     "key": "credit_spread",
+     "label": "ALFRED BAMLH0A0HYM2",
+     "url": "https://alfred.stlouisfed.org/series?seid=BAMLH0A0HYM2"
+    },
+    {
+     "key": "fed_policy",
+     "label": "Reuters via Kitco: Williams signals more hikes",
+     "url": "https://www.kitco.com/news/off-the-wire/2026-11-23/feds-williams-says-inflation-still-too-high-signals-more-rate-hikes"
     }
    ],
    "created_by": "claude",

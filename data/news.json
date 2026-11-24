@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T14:05:00Z",
+ "updated_at": "2026-11-24T01:07:28Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -3027,7 +3027,7 @@
    "level": "medium",
    "category": "rates",
    "title_th": "ทองเด้งราว 2–3% สู่ ~3,600 ดอลลาร์ ตลาดลดเดิมพัน Fed ขึ้นดอกเบี้ยแรง",
-   "summary_th": "จันทร์ 23 พ.ย. ทองโลกบวกราว 2–3% กลับไปแถว 3,600 ดอลลาร์/ออนซ์ หลังวันศุกร์ลงไปต่ำสุดรอบ 14 เดือนใกล้ 3,540 ดอลลาร์ ตลาดลดโอกาสที่ Fed จะขึ้นดอกเบี้ยแรง 0.50% ในการประชุม 8–9 ธ.ค. หลังรัฐมนตรีคลัง Bessent เตือนว่า Fed อาจ 'ทำผิดพลาด' หากคุมเข้มเกินไป และ Bill Ackman เตือนเสี่ยงเศรษฐกิจถดถอย แต่ CME FedWatch ยังให้โอกาสขึ้น 0.25% ราว 93–96%",
+   "summary_th": "จันทร์ 23 พ.ย. ทองโลกบวกราว 2–3% กลับไปแถว 3,600 ดอลลาร์/ออนซ์ หลังวันศุกร์ลงไปต่ำสุดรอบ 14 เดือนใกล้ 3,540 ดอลลาร์ ตลาดลดโอกาสที่ Fed จะขึ้นดอกเบี้ยแรง 0.50% ในการประชุม 8–9 ธ.ค. หลังรัฐมนตรีคลัง Bessent เตือนว่า Fed อาจ 'ทำผิดพลาด' หากคุมเข้มเกินไป และ Bill Ackman เตือนเสี่ยงเศรษฐกิจถดถอย แต่ CME FedWatch ยังให้โอกาสขึ้น 0.25% ราว 93–96% · อัปเดตราคาปิด: ทองฟิวเจอร์ส (GC=F) ปิด $3,627.4 +3.2% GLD +3.1% GDX +6.4% (Yahoo Finance) แม้ Williams จะส่งสัญญาณขึ้นดอกเบี้ย",
    "impacts": [
     {
      "target": "main:gold",
@@ -3064,6 +3064,111 @@
     },
     {
      "label": "Fox Business: FedWatch ~96% for December hike",
+     "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
+    },
+    {
+     "label": "Yahoo Finance GC=F (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/GC=F/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-24-nvidia-huang-reinstated-rally",
+   "date": "2026-11-24",
+   "time_utc": "2026-11-24T01:07:28Z",
+   "run": "morning",
+   "level": "high",
+   "category": "market",
+   "title_th": "Nvidia ตั้ง Huang กลับเป็น CEO หุ้นพุ่ง 31% Nasdaq +6.5% ดีสุดตั้งแต่ เม.ย. 25",
+   "summary_th": "จันทร์ 23 พ.ย. บอร์ด Nvidia มีมติเอกฉันท์แต่งตั้ง Jensen Huang กลับเป็น CEO ทันที 11 วันหลังลาออก (ระบุว่าได้ข้อมูลจากรัฐบาลสหรัฐฯ ว่าไม่มีความเสี่ยงด้านความมั่นคง แต่การสอบสวนภายในยังเดินต่อ) หุ้น Nvidia +31.5% Nasdaq +6.5% S&P 500 +4.7% Dow +3.0% VIX ลด 26% เหลือ 26.6 · หุ้นในพอร์ต: KLAC +15.0% ETN +8.0% AVGO +3.0% ดัชนีชิป SMH +15%",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI (KLAC, AVGO, ETN)",
+     "direction": "positive",
+     "strength": "high",
+     "reason_th": "ความไม่แน่นอนเรื่องผู้นำ Nvidia ที่ทำให้หุ้นชิปร่วงหนักสัปดาห์ก่อนคลี่คลายลง KLAC เด้งแรงสุด แต่ยังต่ำกว่าจุดสูงสุดราว 52%"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ",
+     "direction": "positive",
+     "strength": "high",
+     "reason_th": "Nasdaq ฟื้นเกือบ 2 ใน 3 ของที่ลดลงสัปดาห์ก่อน (−10%) QQQ ยังต่ำกว่าจุดสูงสุด 14%"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "SPY +4.7% ขึ้นมาเหลือต่ำกว่าจุดสูงสุด 7% จากเดิมราว 11%"
+    },
+    {
+     "target": "space",
+     "label_th": "อวกาศ (RKLB, ASTS)",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "หุ้นเสี่ยงสูงเด้งตามตลาด RKLB +9.3% ASTS +10.3% แต่ยังต่ำกว่าจุดสูงสุด 67–81%"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องไล่ซื้อ แผนซื้อตามรอบปกติ เมื่อราคาฟื้น แผนงบยืดหยุ่นจะใช้เงินสำรองน้อยลงเอง การเด้งวันเดียวยังไม่ยืนยันว่าจบรอบปรับฐาน",
+   "watch_next_th": "อ. 24 พ.ย. งบ Dell · พ. 25 พ.ย. 20:30 น. PCE ต.ค. · พฤ. 26 พ.ย. ตลาดสหรัฐฯ ปิด · 2 ธ.ค. ผลประมูลสำรองไฟฟ้า PJM",
+   "sources": [
+    {
+     "label": "NVIDIA press release (SEC 8-K)",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+    },
+    {
+     "label": "Fox Business: US stocks rebound Nov 23",
+     "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
+    },
+    {
+     "label": "FinanceFeeds: Nasdaq jumps 6.5% as Huang returns",
+     "url": "https://financefeeds.com/stock-market-today-nasdaq-jumps-6-5-percent-as-huang-returns/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-24-williams-more-hikes",
+   "date": "2026-11-24",
+   "time_utc": "2026-11-24T01:07:28Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "fed",
+   "title_th": "Williams (Fed นิวยอร์ก): เงินเฟ้อสูงเกินไป ไม่ปิดทางขึ้นดอกเบี้ยติดกัน",
+   "summary_th": "23 พ.ย. John Williams บอกเงินเฟ้อ 'สูงเกินไป' Fed ต้องดำเนินการต่อเนื่อง ไม่ปิดทางขึ้นดอกเบี้ยในการประชุมติดกัน คาดเงินเฟ้อปลายปี 2026 ที่ 3.5% และถึงเป้า 2% ในปี 2028 ตลาด (CME FedWatch) ให้โอกาสขึ้น 0.25% ในการประชุม 8–9 ธ.ค. ราว 96% ผลตอบแทน 10 ปีขึ้นเป็น ~4.94%",
+   "impacts": [
+    {
+     "target": "finance",
+     "label_th": "การเงิน / ธนาคาร",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยสูงขึ้นช่วยส่วนต่างดอกเบี้ยของธนาคาร (JPM) แต่เพิ่มความเสี่ยงหนี้เสียในระยะยาว ดัชนีหมวดการเงินคงที่ 62.6"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยแท้จริงสูง (2.88%) ทำให้ต้นทุนการถือทองสูง เป็นแรงต้านการฟื้นของทอง"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยที่สูงนานกดมูลค่าหุ้นเติบโต แต่ตลาดรับรู้ไปมากแล้ว"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน ระวังความผันผวนก่อนตัวเลข PCE และประชุม Fed",
+   "watch_next_th": "พ. 25 พ.ย. 20:30 น. PCE ต.ค. · ตี 2 คืนพุธ Beige Book · 8–9 ธ.ค. ประชุม Fed (ผลออกเช้า 10 ธ.ค. เวลาไทย)",
+   "sources": [
+    {
+     "label": "Reuters via Kitco: Williams",
+     "url": "https://www.kitco.com/news/off-the-wire/2026-11-23/feds-williams-says-inflation-still-too-high-signals-more-rate-hikes"
+    },
+    {
+     "label": "Fox Business: US stocks rebound Nov 23",
      "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
     }
    ]

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T01:10:20Z",
+ "updated_at": "2026-11-24T01:06:50Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -893,6 +893,62 @@
      "key": "oil",
      "label": "Yahoo Finance CL=F",
      "url": "https://finance.yahoo.com/quote/CL=F"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-24",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.8,
+    "us_hotel_revpar_yoy_pct": 12.9,
+    "wti_usd": 80.48,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "medium",
+    "oil": "high",
+    "income": "high",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "คงไว้ −0.8% (สะสม 1 ม.ค.–18 พ.ย. 2026) ความเชื่อมั่นต่ำ รอบนี้เปิดหน้า TSA ไม่ได้ จึงคำนวณค่าเฉลี่ย 7 วันไม่ได้ · สัปดาห์นี้เป็นช่วงเดินทางวันขอบคุณพระเจ้า",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 8–14 พ.ย. 2026 +12.9% เทียบปีก่อน เท่าเดิม (ฐานปีก่อนต่ำเพราะรัฐบาลปิด) รายงานสัปดาห์ถัดไปยังไม่ออก",
+    "oil": "น้ำมัน WTI $80.48/บาร์เรล (ปิด 23 พ.ย. Yahoo Finance) ลดจาก $83.62 (−4.2%) ยังต่ำกว่าเกณฑ์กังวล $95 ต้นทุนน้ำมันเครื่องบินลดลง",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม ตัวเลข ต.ค. ออก พ. 25 พ.ย.",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% เท่าเดิม",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันจันทร์ 23 พ.ย.): BKNG $144.94 (+0.02% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -34.02%) · MAR $415.63 (+2.21% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -3.16%) · ABNB $173.96 (+2.11% วันที่ 23/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -8.68%) · ตลาดเด้งแรงหลัง Nvidia แต่งตั้ง Jensen Huang กลับเป็น CEO (Nasdaq +6.5%, S&P 500 +4.7%)"
+   },
+   "prices": {
+    "BKNG": 144.94,
+    "MAR": 415.63,
+    "ABNB": 173.96
+   },
+   "prices_as_of": "2026-11-23",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "news",
+     "label": "Fox Business: stocks Nov 23, 2026",
+     "url": "https://www.foxbusiness.com/markets/stocks-november-23-2026"
+    },
+    {
+     "key": "news",
+     "label": "NVIDIA 8-K: Board reinstates Jensen Huang",
+     "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+    },
+    {
+     "key": "oil",
+     "label": "Yahoo Finance CL=F (data/market.json)",
+     "url": "https://finance.yahoo.com/quote/CL=F/"
     }
    ],
    "created_by": "claude",
