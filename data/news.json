@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T14:05:00Z",
+ "updated_at": "2026-11-25T01:07:04Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -3264,6 +3264,177 @@
     {
      "label": "Yahoo Finance live: futures fall as investors test Nvidia rally",
      "url": "https://finance.yahoo.com/markets/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-rebound-090614276.html"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-25-chips-giveback-klac-drop",
+   "date": "2026-11-25",
+   "time_utc": "2026-11-25T01:07:04Z",
+   "run": "morning",
+   "level": "high",
+   "category": "market",
+   "title_th": "หุ้นชิปคืนกำไร KLAC −8.4% ETN −5.1% AVGO −4% Nasdaq −1.5%",
+   "summary_th": "วันอังคาร 24 พ.ย. หุ้นชิปถูกขายคืนหลังพุ่งแรงวันจันทร์ (ข่าว Jensen Huang กลับเป็น CEO Nvidia): KLAC −8.4% เหลือ $133.65 (ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 55.7%) ETN −5.1% AVGO −4.0% Nvidia −5.9% Micron −11% กองทุนชิป SMH −7.3% Nasdaq −1.48% S&P 500 −0.5% ขณะที่ Dow +0.85% ปิดเหนือ 50,000 · เมื่อรวมสองวัน KLAC ยังสูงกว่าปิดวันศุกร์ราว 6%",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "หุ้นทั้ง 3 ตัวในหมวดลดลงพร้อมกัน แต่เป็นการคืนกำไรหลังเด้งแรง ไม่พบข่าวลบเฉพาะบริษัท ดัชนีหมวดคงที่ 44.3 (เตือนล่วงหน้า)"
+    },
+    {
+     "target": "KLAC",
+     "label_th": "KLA Corporation",
+     "direction": "negative",
+     "strength": "high",
+     "reason_th": "ลดลงเกินเกณฑ์ 7% ในวันเดียว หุ้นอุปกรณ์ผลิตชิปผันผวนตามความเชื่อมั่นเรื่องการลงทุน AI"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ (QQQ)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "QQQ −2.0% อยู่ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 16% ยังอยู่ช่วงงบยืดหยุ่นเดิม (−10% ถึง −20%)"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย ระดับงบยืดหยุ่นไม่เปลี่ยน (KLAC AVGO ETN ต่ำกว่าจุดสูงสุดเกิน 20% อยู่แล้ว) แผนซื้อเพิ่มจากเงินสำรองตามกฎเดิม หุ้นเดี่ยวไม่เกิน ×1.5",
+   "watch_next_th": "พ. 25 พ.ย. 20:30 น. PCE ต.ค. · พฤ. 26 พ.ย. ตลาดสหรัฐฯ ปิด · ศ. 27 พ.ย. ปิดครึ่งวัน",
+   "caveat_th": "ถ้าวันต่อไปมีข่าวพื้นฐานใหม่ (เช่น ภาษีชิป หรือลูกค้ารายใหญ่ลดการลงทุน AI) การลดลงนี้อาจไม่ใช่แค่การคืนกำไร",
+   "sources": [
+    {
+     "label": "Yahoo Finance (ราคาปิด 24 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "label": "StockTitan: Stock market today Nov 24, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    },
+    {
+     "label": "Kitco: Gold, silver extend losses (Nov 24)",
+     "url": "https://www.kitco.com/news/article/2026-11-24/gold-silver-extend-losses-tech-stocks-slide-fed-inflation-test-looms-kitco"
+    },
+    {
+     "label": "Yahoo Finance live: Nov 24 chip stocks slide",
+     "url": "https://ca.finance.yahoo.com/news/live/stock-market-today-tuesday-november-24-dow-sp-500-nasdaq-chip-stocks-nvidia-140629923.html"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-25-section301-tariffs-16-countries",
+   "date": "2026-11-25",
+   "time_utc": "2026-11-25T01:07:04Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "policy",
+   "title_th": "สหรัฐฯ เตรียมภาษี Section 301 ใหม่ 16 ประเทศ รวมไทย ไต้หวัน จีน",
+   "summary_th": "Reuters รายงาน 24 พ.ย. (อ้างแหล่งข่าว) ว่า USTR เตรียมประกาศผลสอบสวน \"กำลังการผลิตล้นเกิน\" ตามมาตรา 301 และเสนอภาษีซ้อนบนภาษีเดิม กับ 16 ประเทศ รวมจีน ไต้หวัน เกาหลีใต้ ญี่ปุ่น ไทย และ EU เพื่อทดแทนภาษีที่ศาลสูงสุดล้มไปเมื่อ ก.พ. 2026 ยังไม่รู้อัตรา (นักวิเคราะห์คาด 15–25%) ทางการยังไม่ยืนยัน",
+   "impacts": [
+    {
+     "target": "main:kkp",
+     "label_th": "KKP เกียรตินาคินภัทร",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ไทยอยู่ในรายชื่อ ถ้าภาษีสูงกว่าเพดานในข้อตกลงไทย–สหรัฐฯ จะกดเศรษฐกิจและหุ้นไทย แต่ยังไม่รู้อัตรา"
+    },
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ไต้หวันและเกาหลีอยู่ในรายชื่อ อาจเพิ่มต้นทุนซัพพลายเชนชิป"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ภาษีเพิ่มกดกำไรบริษัทและหนุนเงินเฟ้อ ทำให้ Fed ยิ่งต้องเข้มงวด"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องเปลี่ยนแผน รอดูอัตราภาษีจริงก่อน",
+   "watch_next_th": "ประกาศทางการจาก USTR (คาดเร็วๆ นี้) · การต่ออายุสงบศึกการค้าสหรัฐฯ–จีน (หมด 10 ม.ค.)",
+   "caveat_th": "ข้อมูลยังมาจากแหล่งข่าวนิรนาม ถ้าประเทศที่ทำข้อตกลงแล้ว (รวมไทย) ได้เพดานภาษีต่ำ ผลกระทบจะน้อยกว่าที่กังวล",
+   "sources": [
+    {
+     "label": "Reuters via Investing.com: new Section 301 tariffs",
+     "url": "https://www.investing.com/news/commodities-news/trump-administration-set-to-unveil-new-tariffs-after-probeon-excess-factory-capacity-sources-say-5048724"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-25-gold-falls-pce-ahead",
+   "date": "2026-11-25",
+   "time_utc": "2026-11-25T01:07:04Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "inflation",
+   "title_th": "ทองโลกลง 2.6% เหลือ ~$3,555 ก่อนตัวเลข PCE ตลาดคาด Fed ขึ้น 95%",
+   "summary_th": "วันอังคาร 24 พ.ย. ทองโลก (GC=F) ปิด $3,555 −2.6% คืนกำไรวันจันทร์ ใกล้ต่ำสุดรอบ 14 เดือน เพราะความเชื่อมั่นผู้บริโภค Conference Board พ.ย. พุ่งเป็น 103.3 (คาด ~92.5) และนักลงทุนลดทองก่อน PCE ต.ค. คืนนี้ 20:30 น. (คาดเงินเฟ้อ ~3.8%) ตลาดให้โอกาส Fed ขึ้น 0.25% วันที่ 9 ธ.ค. ราว 95% · บาทแข็งเป็น 33.90 ยิ่งกดทองไทย",
+   "impacts": [
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ดอกเบี้ยแท้จริงสูง (2.88%) และคาด Fed ขึ้นดอกเบี้ยทำให้ต้นทุนการถือทองสูง GLD −2.3% ต่ำกว่าจุดสูงสุด 34% ยังอยู่ช่วงงบยืดหยุ่นเดิม"
+    },
+    {
+     "target": "gold",
+     "label_th": "ทองคำ",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ดัชนีหมวดทองคงที่ 38.4 โซนย่อตัว"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย แผนงบยืดหยุ่นจะใช้เงินสำรองซื้อเพิ่มเมื่อราคาย่อ ระวังความผันผวนคืนนี้ตอน PCE ออก",
+   "watch_next_th": "พ. 25 พ.ย. 20:30 น. PCE ต.ค. + GDP ไตรมาส 3 (ปรับปรุง) · 9 ธ.ค. ประชุม Fed",
+   "caveat_th": "ถ้า PCE ออกต่ำกว่าคาด ตลาดอาจลดการคาดขึ้นดอกเบี้ยและทองอาจเด้งกลับได้เร็ว",
+   "sources": [
+    {
+     "label": "Kitco: Gold, silver extend losses (Nov 24)",
+     "url": "https://www.kitco.com/news/article/2026-11-24/gold-silver-extend-losses-tech-stocks-slide-fed-inflation-test-looms-kitco"
+    },
+    {
+     "label": "Yahoo Finance: Gold price today Nov 24",
+     "url": "https://finance.yahoo.com/personal-finance/investing/article/gold-price-today-tuesday-november-24-2026-gold-prices-improve-lift-from-14-month-lows-121821092.html"
+    },
+    {
+     "label": "Yahoo Finance (ราคาปิด 24 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-25-rklb-asts-drop-tech-selloff",
+   "date": "2026-11-25",
+   "time_utc": "2026-11-25T01:07:04Z",
+   "run": "morning",
+   "level": "low",
+   "category": "sector",
+   "title_th": "RKLB −7.4% ASTS −8.1% ร่วงตามแรงขายหุ้นเทคโนโลยี",
+   "summary_th": "วันอังคาร 24 พ.ย. Rocket Lab ลด 7.35% เหลือ $45.98 และ AST SpaceMobile ลด 8.06% เหลือ $23.60 (ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 69% และ 82%) ไปพร้อมกับแรงขายหุ้นเทคและชิป ยังไม่พบข่าวเฉพาะบริษัท (ข้อมูลสาเหตุยังไม่ยืนยัน)",
+   "impacts": [
+    {
+     "target": "space",
+     "label_th": "อวกาศ / กลาโหม",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "หุ้นอวกาศผันผวนสูงตามความเสี่ยงตลาดโดยรวม ดัชนีหมวด 48.3 ยังเตือนล่วงหน้า"
+    }
+   ],
+   "what_to_do_th": "หมวดนี้ดูอย่างเดียว ไม่ต้องทำอะไร",
+   "watch_next_th": "",
+   "caveat_th": "ถ้ามีข่าวเฉพาะบริษัทที่ยังไม่พบ (เช่น เพิ่มทุน หรือปัญหาการปล่อยดาวเทียม) สาเหตุอาจไม่ใช่แค่ตลาด",
+   "sources": [
+    {
+     "label": "Yahoo Finance (ราคาปิด 24 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "label": "StockTitan: Stock market today Nov 24, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
     }
    ]
   }

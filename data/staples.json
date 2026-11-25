@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T01:06:50Z",
+ "updated_at": "2026-11-25T01:06:15Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -864,6 +864,52 @@
      "key": "news",
      "label": "NVIDIA 8-K: Board reinstates Jensen Huang",
      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-25",
+   "indicators": {
+    "consumer_sentiment": 51.5,
+    "food_services_sales_yoy_pct": 7.0,
+    "food_at_home_cpi_yoy_pct": 1.77,
+    "fao_food_price_yoy_pct": 5.9,
+    "costco_us_comp_sales_pct": 8.1
+   },
+   "confidence": {
+    "sentiment": "medium",
+    "restaurant_sales": "medium",
+    "food_inflation": "high",
+    "input_cost": "high",
+    "costco_comps": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "sentiment": "ความเชื่อมั่นผู้บริโภค ม.มิชิแกน พ.ย. 2026 ค่าสุดท้าย 51.5 เท่าเดิม (ยังต่ำกว่าเกณฑ์กังวล 55) ค่าเบื้องต้น ธ.ค. ออกกลางเดือน",
+    "restaurant_sales": "ยอดขายร้านอาหาร ต.ค. 2026 +7.0% เทียบปีก่อน เท่าเดิม",
+    "food_inflation": "ราคาอาหารในบ้าน (CPI) ก.ย. 2026 +1.77% เท่าเดิม (ต.ค. ไม่มีตัวเลขเทียบปีก่อน) CPI พ.ย. ออกเดือน ธ.ค.",
+    "input_cost": "ดัชนีราคาอาหารโลก FAO ต.ค. 2026 +5.9% เทียบปีก่อน เท่าเดิม ตัวเลขใหม่ออก 4 ธ.ค.",
+    "costco_comps": "Costco ยอดขายสาขาเดิมในสหรัฐฯ ต.ค. 2026 +8.1% เท่าเดิม ตัวเลข พ.ย. ออกต้น ธ.ค.",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันอังคาร 24 พ.ย.): COST $1,091.71 (-0.56% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -1.98%) · PEP $142.68 (+1.76% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -16.31%) · MCD $280.70 (+1.56% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -17.70%) · ตลาดวันอังคาร: หุ้นชิปคืนกำไรหลังเด้งแรงวันจันทร์ (QQQ −2.0%, SPY −0.5%, SMH −7.3%) ส่วน Dow +0.8% ปิดเหนือ 50,000 ครั้งแรก"
+   },
+   "prices": {
+    "COST": 1091.71,
+    "PEP": 142.68,
+    "MCD": 280.7
+   },
+   "prices_as_of": "2026-11-24",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json ปิด 24 พ.ย.)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "prices",
+     "label": "StockTitan: Stock market today Nov 24, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
     }
    ],
    "created_by": "claude",

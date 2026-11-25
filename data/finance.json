@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T01:06:50Z",
+ "updated_at": "2026-11-25T01:06:15Z",
  "readings": [
   {
    "date": "2026-10-24",
@@ -1832,6 +1832,57 @@
      "key": "fed_policy",
      "label": "Reuters via Kitco: Williams signals more hikes",
      "url": "https://www.kitco.com/news/off-the-wire/2026-11-23/feds-williams-says-inflation-still-too-high-signals-more-rate-hikes"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-25",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.29,
+    "hy_oas_pct": 3.52,
+    "loan_growth_pct": 7.18,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 32
+   },
+   "confidence": {
+    "yield_curve": "medium",
+    "credit_spread": "high",
+    "loan_growth": "high",
+    "delinquency": "high",
+    "fed_policy": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่าง 10 ปี ลบ 2 ปี คงไว้ +0.29% (FRED 20 พ.ย. ค่าล่าสุดที่เปิดได้) · ราคาตลาด 24 พ.ย. 10 ปี ~4.90% 2 ปี ~4.67% ส่วนต่างราว +0.23% แคบลงเล็กน้อย รอยืนยันจาก FRED",
+    "credit_spread": "ส่วนต่างหุ้นกู้เสี่ยงสูง 3.52% (FRED 19 พ.ย. ค่าล่าสุดที่มี) เท่าเดิม ยังต่ำกว่าเกณฑ์กังวล 5% มาก หุ้นเด้งแรงวันจันทร์น่าจะช่วยให้ไม่กว้างขึ้นต่อ",
+    "loan_growth": "สินเชื่อธนาคารสหรัฐฯ โตเฉลี่ย 4 ไตรมาส ~7.18% ต่อปี (H.8 20 พ.ย.) เท่าเดิม H.8 ฉบับถัดไปศุกร์นี้",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) เท่าเดิม ข้อมูลไตรมาส 3 ยังไม่ออก",
+    "fed_policy": "คง 32/100 · 24 พ.ย. ความเชื่อมั่นผู้บริโภค Conference Board พ.ย. พุ่งเป็น 103.3 (คาด ~92.5) สูงสุดตั้งแต่ ม.ค. 2025 ตลาดฟิวเจอร์สให้โอกาส Fed ขึ้น 0.25% วันที่ 9 ธ.ค. ราว 95% · คืนนี้ (25 พ.ย. 20:30 น.) PCE ต.ค. คาดเงินเฟ้อทั่วไป ~3.8%",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันอังคาร 24 พ.ย.): JPM $317.10 (+0.14% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -13.17%) · V $416.78 (+1.80% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -4.53%) · GS $806.02 (-2.14% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -30.04%) · ตลาดวันอังคาร: หุ้นชิปคืนกำไรหลังเด้งแรงวันจันทร์ (QQQ −2.0%, SPY −0.5%, SMH −7.3%) ส่วน Dow +0.8% ปิดเหนือ 50,000 ครั้งแรก"
+   },
+   "prices": {
+    "JPM": 317.1,
+    "V": 416.78,
+    "GS": 806.02
+   },
+   "prices_as_of": "2026-11-24",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json ปิด 24 พ.ย.)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "prices",
+     "label": "StockTitan: Stock market today Nov 24, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    },
+    {
+     "key": "market",
+     "label": "Kitco PM report Nov 24, 2026",
+     "url": "https://www.kitco.com/news/article/2026-11-24/gold-silver-extend-losses-tech-stocks-slide-fed-inflation-test-looms-kitco"
     }
    ],
    "created_by": "claude",

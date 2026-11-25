@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T01:06:50Z",
+ "updated_at": "2026-11-25T01:06:15Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -959,6 +959,52 @@
      "key": "news",
      "label": "NVIDIA 8-K: Board reinstates Jensen Huang",
      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-25",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 225.0,
+    "us10y_change_3m_pp": 0.26
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "low",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 งบกลาโหม FY2027 ยังไม่ผ่าน งบชั่วคราว (CR) หมด 11 ธ.ค. ยังไม่มีสัญญาณตกลงกัน ร่าง NDAA ฉบับรวมคาดออกเร็วๆ นี้",
+    "gpr": "ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ (ดึงตัวเลขรายเดือนล่าสุดไม่ได้)",
+    "launches": "คงไว้ +0.4% (สะสมถึง 31 ต.ค.) ความเชื่อมั่นต่ำ ข้อมูลรองชี้ว่าอาจติดลบเล็กน้อย (≈ −3.5% ถึง 22 พ.ย.) รอยืนยันจากแหล่งหลัก",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 3/2026 ≈ $3.57 พันล้าน +225% เทียบปีก่อน เท่าเดิม",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 4.90% (ปิด 24 พ.ย. Yahoo Finance) เทียบ 3 เดือนก่อน 4.64% = +0.26 จุด จากเดิม +0.22",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันอังคาร 24 พ.ย.): LMT $586.63 (+2.62% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -13.31%) · RKLB $45.98 (-7.35% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -69.39%) · ASTS $23.60 (-8.06% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -82.27%) · ตลาดวันอังคาร: หุ้นชิปคืนกำไรหลังเด้งแรงวันจันทร์ (QQQ −2.0%, SPY −0.5%, SMH −7.3%) ส่วน Dow +0.8% ปิดเหนือ 50,000 ครั้งแรก"
+   },
+   "prices": {
+    "LMT": 586.63,
+    "RKLB": 45.98,
+    "ASTS": 23.6
+   },
+   "prices_as_of": "2026-11-24",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json ปิด 24 พ.ย.)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "prices",
+     "label": "StockTitan: Stock market today Nov 24, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
     }
    ],
    "created_by": "claude",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T01:06:50Z",
+ "updated_at": "2026-11-25T01:06:15Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -949,6 +949,57 @@
      "key": "oil",
      "label": "Yahoo Finance CL=F (data/market.json)",
      "url": "https://finance.yahoo.com/quote/CL=F/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-25",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.8,
+    "us_hotel_revpar_yoy_pct": 12.9,
+    "wti_usd": 81.69,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "medium",
+    "oil": "high",
+    "income": "high",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "คงไว้ −0.8% (สะสม 1 ม.ค.–18 พ.ย. 2026) ความเชื่อมั่นต่ำ รอบนี้เปิดหน้า TSA ไม่ได้ จึงคำนวณค่าเฉลี่ย 7 วันไม่ได้ · สัปดาห์นี้เป็นช่วงเดินทางวันขอบคุณพระเจ้า (พฤ. 26 พ.ย.)",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 8–14 พ.ย. 2026 +12.9% เทียบปีก่อน เท่าเดิม (ฐานปีก่อนต่ำเพราะรัฐบาลปิด) รายงานสัปดาห์ถัดไปยังไม่ออก",
+    "oil": "น้ำมัน WTI $81.69/บาร์เรล (ปิด 24 พ.ย. Yahoo Finance) เพิ่มจาก $80.48 (+1.5%) จากข่าวโจมตีเรือน้ำมันช่องแคบฮอร์มุซ ยังต่ำกว่าเกณฑ์กังวล $95",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม ตัวเลข ต.ค. ออกคืนนี้ 25 พ.ย. 20:30 น. (เวลาไทย)",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% เท่าเดิม",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันอังคาร 24 พ.ย.): BKNG $146.64 (+1.17% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -33.25%) · MAR $416.23 (+0.14% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -3.02%) · ABNB $173.39 (-0.33% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -8.98%) · ตลาดวันอังคาร: หุ้นชิปคืนกำไรหลังเด้งแรงวันจันทร์ (QQQ −2.0%, SPY −0.5%, SMH −7.3%) ส่วน Dow +0.8% ปิดเหนือ 50,000 ครั้งแรก"
+   },
+   "prices": {
+    "BKNG": 146.64,
+    "MAR": 416.23,
+    "ABNB": 173.39
+   },
+   "prices_as_of": "2026-11-24",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json ปิด 24 พ.ย.)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "prices",
+     "label": "StockTitan: Stock market today Nov 24, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    },
+    {
+     "key": "market",
+     "label": "Kitco PM report Nov 24, 2026",
+     "url": "https://www.kitco.com/news/article/2026-11-24/gold-silver-extend-losses-tech-stocks-slide-fed-inflation-test-looms-kitco"
     }
    ],
    "created_by": "claude",

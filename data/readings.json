@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-24T01:06:50Z",
+ "updated_at": "2026-11-25T01:06:15Z",
  "readings": [
   {
    "confidence": {
@@ -2222,6 +2222,59 @@
      "key": "news",
      "label": "NVIDIA 8-K: Board reinstates Jensen Huang",
      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000090/nov23pressrelease.htm"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-25",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 2.89,
+    "gpu_spot_price_change_1m_pct": -7.37,
+    "enterprise_ai_adoption_pct": 66.71,
+    "enterprise_ai_adoption_change_3m_pp": 1.82,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "low",
+    "enterprise_adoption": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon ไม่มีตัวเลขใหม่จนกว่างบไตรมาสถัดไป (ปลาย ม.ค. 2027)",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ · 24 พ.ย. หุ้นชิปย่อแรง (Nvidia −5.9%, Micron −11%) เป็นการคืนกำไรหลังวันจันทร์ ไม่ใช่หลักฐานว่าอุปทานชิปเปลี่ยน",
+    "gpu_spot_price": "คงไว้ $2.89/ชม. (ปิด 21 พ.ย.) −7.4% ใน 1 เดือน ความเชื่อมั่นลดเป็นต่ำ เพราะเปิดหน้า Ornn ไม่ได้ติดกันหลายรอบ ยังไม่ถึงเกณฑ์แจ้งเตือน −15%",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ต.ค. 2026 = 66.7% เทียบ ก.ค. 64.9% = +1.8 จุดใน 3 เดือน เท่าเดิม (ยืนยันจาก FRED อัปเดต 11 พ.ย.) ตัวเลข พ.ย. คาดออกกลาง ธ.ค.",
+    "power_grid": "คงไว้ 8.8/10 ไม่พบข่าวไฟฟ้าดาต้าเซ็นเตอร์ใหม่ที่เปลี่ยนภาพ · ยังรอผลประมูลสำรองไฟฟ้า PJM (ภายใน 2 ธ.ค.) · ภาวะขาดหม้อแปลงยังหนุน ETN",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันอังคาร 24 พ.ย.): KLAC $133.65 (-8.36% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -55.70%) · AVGO $301.08 (-3.98% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -37.48%) · ETN $319.27 (-5.08% วันที่ 24/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -30.59%) · ตลาดวันอังคาร: หุ้นชิปคืนกำไรหลังเด้งแรงวันจันทร์ (QQQ −2.0%, SPY −0.5%, SMH −7.3%) ส่วน Dow +0.8% ปิดเหนือ 50,000 ครั้งแรก"
+   },
+   "prices": {
+    "KLAC": 133.65,
+    "AVGO": 301.08,
+    "ETN": 319.27
+   },
+   "prices_as_of": "2026-11-24",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json ปิด 24 พ.ย.)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "prices",
+     "label": "StockTitan: Stock market today Nov 24, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    },
+    {
+     "key": "enterprise_adoption",
+     "label": "FRED RAMPAIENTERPRISE",
+     "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
     }
    ],
    "created_by": "claude",
