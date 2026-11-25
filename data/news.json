@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T01:07:04Z",
+ "updated_at": "2026-11-25T13:55:00Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -3322,48 +3322,6 @@
    ]
   },
   {
-   "id": "2026-11-25-section301-tariffs-16-countries",
-   "date": "2026-11-25",
-   "time_utc": "2026-11-25T01:07:04Z",
-   "run": "morning",
-   "level": "medium",
-   "category": "policy",
-   "title_th": "สหรัฐฯ เตรียมภาษี Section 301 ใหม่ 16 ประเทศ รวมไทย ไต้หวัน จีน",
-   "summary_th": "Reuters รายงาน 24 พ.ย. (อ้างแหล่งข่าว) ว่า USTR เตรียมประกาศผลสอบสวน \"กำลังการผลิตล้นเกิน\" ตามมาตรา 301 และเสนอภาษีซ้อนบนภาษีเดิม กับ 16 ประเทศ รวมจีน ไต้หวัน เกาหลีใต้ ญี่ปุ่น ไทย และ EU เพื่อทดแทนภาษีที่ศาลสูงสุดล้มไปเมื่อ ก.พ. 2026 ยังไม่รู้อัตรา (นักวิเคราะห์คาด 15–25%) ทางการยังไม่ยืนยัน",
-   "impacts": [
-    {
-     "target": "main:kkp",
-     "label_th": "KKP เกียรตินาคินภัทร",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "ไทยอยู่ในรายชื่อ ถ้าภาษีสูงกว่าเพดานในข้อตกลงไทย–สหรัฐฯ จะกดเศรษฐกิจและหุ้นไทย แต่ยังไม่รู้อัตรา"
-    },
-    {
-     "target": "ai",
-     "label_th": "ชิป / AI",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "ไต้หวันและเกาหลีอยู่ในรายชื่อ อาจเพิ่มต้นทุนซัพพลายเชนชิป"
-    },
-    {
-     "target": "main:sp500",
-     "label_th": "S&P 500",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "ภาษีเพิ่มกดกำไรบริษัทและหนุนเงินเฟ้อ ทำให้ Fed ยิ่งต้องเข้มงวด"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องเปลี่ยนแผน รอดูอัตราภาษีจริงก่อน",
-   "watch_next_th": "ประกาศทางการจาก USTR (คาดเร็วๆ นี้) · การต่ออายุสงบศึกการค้าสหรัฐฯ–จีน (หมด 10 ม.ค.)",
-   "caveat_th": "ข้อมูลยังมาจากแหล่งข่าวนิรนาม ถ้าประเทศที่ทำข้อตกลงแล้ว (รวมไทย) ได้เพดานภาษีต่ำ ผลกระทบจะน้อยกว่าที่กังวล",
-   "sources": [
-    {
-     "label": "Reuters via Investing.com: new Section 301 tariffs",
-     "url": "https://www.investing.com/news/commodities-news/trump-administration-set-to-unveil-new-tariffs-after-probeon-excess-factory-capacity-sources-say-5048724"
-    }
-   ]
-  },
-  {
    "id": "2026-11-25-gold-falls-pce-ahead",
    "date": "2026-11-25",
    "time_utc": "2026-11-25T01:07:04Z",
@@ -3435,6 +3393,155 @@
     {
      "label": "StockTitan: Stock market today Nov 24, 2026",
      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-25-pce-oct-core-hot",
+   "date": "2026-11-25",
+   "time_utc": "2026-11-25T13:30:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "inflation",
+   "title_th": "PCE ต.ค. 3.8% ตามคาด PCE พื้นฐาน 3.3% สูงกว่าคาด หนุน Fed ขึ้นดอกเบี้ย",
+   "summary_th": "25 พ.ย. 20:30 น. (เวลาไทย) ดัชนีเงินเฟ้อ PCE เดือน ต.ค. +0.3% จากเดือนก่อน และ +3.8% จากปีก่อน ตรงคาด ส่วน PCE พื้นฐาน (ไม่รวมอาหาร/พลังงาน) +3.3% จากปีก่อน สูงกว่าคาด 3.2% เล็กน้อย ก่อนตัวเลขออก ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย 0.25% ในการประชุม 9 ธ.ค. ราว 98% และลดเดิมพันการขึ้น 0.5%",
+   "impacts": [
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ (QQQ)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "เงินเฟ้อพื้นฐานที่ยังเร่งขึ้นทำให้ดอกเบี้ยสูงนานขึ้น กดมูลค่าหุ้นเติบโต แต่ตลาดคาดการขึ้น 0.25% ไว้เกือบเต็มแล้ว"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ดอกเบี้ยที่คาดว่าจะสูงขึ้นเพิ่มต้นทุนการถือทอง ทองโลกยังอยู่แถว ~$3,550 ใกล้ต่ำสุดรอบ 15 เดือน"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ยืนยันว่า Fed น่าจะขึ้นดอกเบี้ย ธ.ค. แต่ไม่ได้เปลี่ยนความคาดหวังมากนัก"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน ตัวเลขใกล้คาด ไม่ใช่การเปลี่ยนทิศดอกเบี้ย ถ้าตลาดลงแผนจะใช้เงินสำรองซื้อเพิ่มตามกฎ",
+   "watch_next_th": "พฤ. 26 พ.ย. ตลาดสหรัฐฯ ปิด · ศ. 27 พ.ย. ปิดครึ่งวัน · ต้น ธ.ค. ตัวเลขจ้างงาน · 9 ธ.ค. ประชุม Fed",
+   "caveat_th": "ถ้าตัวเลขจ้างงานหรือ CPI ก่อนประชุมออกมาร้อนแรงมาก ตลาดอาจกลับไปคาดการขึ้น 0.5% ซึ่งจะกดหุ้นและทองหนักกว่านี้",
+   "sources": [
+    {
+     "label": "Fox Business: Fed's favored inflation gauge rose in October (25 พ.ย.)",
+     "url": "https://www.foxbusiness.com/economy/october-2026-pce-inflation"
+    },
+    {
+     "label": "Yahoo Finance live: futures fall ahead of inflation data (25 พ.ย.)",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-25-section301-tariffs-16-countries",
+   "date": "2026-11-25",
+   "time_utc": "2026-11-25T13:55:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "policy",
+   "title_th": "สหรัฐฯ เสนอภาษี Section 301 ใหม่ 14 เศรษฐกิจ รวมไทย ไต้หวัน จีน 20%",
+   "summary_th": "ล่าสุด 25 พ.ย. USTR เสนออย่างเป็นทางการให้เก็บภาษี \"กำลังการผลิตล้นเกิน\" ตามมาตรา 301 กับ 14 เศรษฐกิจ ได้แก่ จีน ไทย ไต้หวัน เกาหลีใต้ ญี่ปุ่น EU เวียดนาม มาเลเซีย สิงคโปร์ อินโดนีเซีย อินเดีย กัมพูชา บังกลาเทศ สวิตเซอร์แลนด์ (เม็กซิโกและนอร์เวย์ยังไม่สรุป) จีนโดน 20% ซ้อนภาษีเดิม ส่วนอัตราของประเทศอื่นรอประกาศใน Federal Register ต้องผ่านช่วงรับฟังความเห็นและไต่สวนก่อน คาดมีผลเร็วสุดราว ม.ค. ปีหน้า",
+   "impacts": [
+    {
+     "target": "main:kkp",
+     "label_th": "KKP เกียรตินาคินภัทร",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ไทยอยู่ในรายชื่อทางการแล้ว ถ้าอัตราสูงจะกดการส่งออกและหุ้นไทย แต่ยังไม่รู้อัตราและยังไม่มีผลทันที"
+    },
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ไต้หวัน เกาหลีใต้ ญี่ปุ่น อยู่ในรายชื่อ อาจเพิ่มต้นทุนซัพพลายเชนชิป และเป็นแรงกดดันหุ้นชิปเช้านี้ร่วมกับข่าวคุมส่งออกเครื่องจักรผลิตชิป"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ภาษีเพิ่มกดกำไรบริษัทและหนุนเงินเฟ้อ ทำให้ Fed ยิ่งต้องเข้มงวด"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องเปลี่ยนแผน ยังไม่รู้อัตราของไทย และยังไม่มีผลทันที ซื้อตามแผนเดิม",
+   "watch_next_th": "อัตรารายประเทศใน Federal Register · ช่วงรับฟังความเห็น/ไต่สวน · สงบศึกการค้าสหรัฐฯ–จีน หมด 10 ม.ค.",
+   "caveat_th": "ถ้าไทยได้อัตราต่ำตามเพดานในข้อตกลงไทย–สหรัฐฯ หรือมีการเจรจาลดก่อนมีผล ผลกระทบจะน้อยกว่าที่ตลาดกังวล",
+   "sources": [
+    {
+     "label": "Reuters via Investing.com: new Section 301 tariffs",
+     "url": "https://www.investing.com/news/commodities-news/trump-administration-set-to-unveil-new-tariffs-after-probeon-excess-factory-capacity-sources-say-5048724"
+    },
+    {
+     "label": "Reuters via WSAU: US proposes new tariffs on 14 trading partners (25 พ.ย.)",
+     "url": "https://wsau.com/2026/11/25/us-proposes-new-tariffs-on-14-trading-partners-to-fight-excess-factory-capacity/"
+    },
+    {
+     "label": "RTÉ (AFP/Reuters): US proposes new tariffs on trading partners",
+     "url": "https://www.rte.ie/news/us/2026/1125/1600630-us-tariffs/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-25-premarket-chips-slide-again",
+   "date": "2026-11-25",
+   "time_utc": "2026-11-25T13:55:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "market",
+   "title_th": "ก่อนเปิดตลาด: ฟิวเจอร์ส Nasdaq −2.8% หุ้นชิปลงต่อ AVGO −4% KLAC −4%",
+   "summary_th": "เช้า 25 พ.ย. (เวลาสหรัฐฯ) ฟิวเจอร์ส Nasdaq-100 −2.8% S&P 500 −1.9% Dow −1.3% จากความกังวลเรื่องกำไรของ AI ภาษีใหม่ และร่างกฎหมาย MATCH Act ที่จะบังคับพันธมิตรคุมส่งออกเครื่องจักรผลิตชิปไปจีน ก่อนเปิดตลาด AVGO −4.1% KLAC และกลุ่มเครื่องจักรผลิตชิป (LRCX AMAT) −3.6 ถึง −4.6% VIX ขึ้นราว 29 · ตัวเลขก่อนเปิดตลาดยังเปลี่ยนได้ระหว่างวัน",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "วันที่สองติดที่หุ้นทั้งหมวดถูกขาย ถ้าคุมส่งออกเครื่องจักรผลิตชิปไปจีนเข้มขึ้น ยอดขายเครื่องจักรอย่าง KLAC อาจได้รับผล แต่ร่างกฎหมายยังไม่ผ่าน"
+    },
+    {
+     "target": "KLAC",
+     "label_th": "KLA Corporation",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ขายเครื่องตรวจสอบการผลิตชิป มีลูกค้าจีนสัดส่วนสูง จึงไวต่อข่าวคุมส่งออก"
+    },
+    {
+     "target": "AVGO",
+     "label_th": "Broadcom",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ลงตามกระแสขายหุ้น AI ราคาต่ำกว่าจุดสูงสุด 52 สัปดาห์ราว 37% ก่อนวันนี้"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ (QQQ)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ถ้าปิดลงราว 2–3% QQQ จะต่ำกว่าจุดสูงสุดใกล้ 18% เข้าใกล้ขั้นงบยืดหยุ่นถัดไป (−20%)"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย เป็นแรงขายทั้งตลาด ไม่ใช่ข่าวร้ายเฉพาะบริษัท แผนจะใช้เงินสำรองซื้อเพิ่มตามกฎ (หุ้นเดี่ยวไม่เกิน ×1.5 กองทุนไม่เกิน ×2.5) แต่ติดตามว่า MATCH Act ผ่านหรือไม่ เพราะถ้าผ่านเป็นเหตุให้ทบทวนเหตุผลที่ถือ KLAC",
+   "watch_next_th": "ราคาปิดคืนนี้ · ความคืบหน้า MATCH Act ใน NDAA · พฤ. 26 พ.ย. ตลาดปิด",
+   "caveat_th": "ตัวเลขก่อนเปิดตลาดมักเปลี่ยนมาก ถ้าตลาดเด้งระหว่างวันหลัง PCE ที่ใกล้คาด การลดลงจริงอาจน้อยกว่านี้",
+   "sources": [
+    {
+     "label": "Yahoo Finance live: Dow, S&P 500, Nasdaq futures fall (25 พ.ย.)",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+    },
+    {
+     "label": "Stocktwits via Yahoo Finance: ASML dips premarket amid chip rout",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/asml-dips-premarket-amid-chip-092535583.html"
     }
    ]
   }

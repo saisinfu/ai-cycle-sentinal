@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T01:07:04Z",
+ "updated_at": "2026-11-25T13:55:00Z",
  "items": [
   {
    "id": "2026-10-28-morning",
@@ -549,6 +549,20 @@
     "2026-11-25-gold-falls-pce-ahead",
     "2026-11-25-rklb-asts-drop-tech-selloff",
     "2026-11-25-section301-tariffs-16-countries"
+   ]
+  },
+  {
+   "id": "2026-11-25-evening",
+   "date": "2026-11-25",
+   "run": "evening",
+   "time_utc": "2026-11-25T13:55:00Z",
+   "headline_th": "ช่วงค่ำไม่มีข่าวที่ต้องทำอะไร",
+   "level": "medium",
+   "text_th": "ช่วงค่ำไม่มีข่าวที่ต้องทำอะไร\n• ฟิวเจอร์ส Nasdaq −2.8% หุ้นชิปลงต่อ (AVGO KLAC ราว −4% ก่อนเปิด) PCE พื้นฐาน 3.3% สูงกว่าคาดเล็กน้อย ไม่ต้องขาย แผนซื้อเพิ่มจากเงินสำรองตามกฎ\nดูรายละเอียดในแอป AI Sentinel · ข้อมูลตามกฎ ไม่ใช่คำแนะนำการลงทุน",
+   "news_ids": [
+    "2026-11-25-section301-tariffs-16-countries",
+    "2026-11-25-pce-oct-core-hot",
+    "2026-11-25-premarket-chips-slide-again"
    ]
   }
  ]
