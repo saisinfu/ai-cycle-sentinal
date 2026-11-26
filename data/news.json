@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T01:07:26Z",
+ "updated_at": "2026-11-26T13:59:17Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -3646,6 +3646,158 @@
     {
      "label": "Fox Business: stocks Nov 25, 2026",
      "url": "https://www.foxbusiness.com/markets/stocks-11-25-2026"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-26-houthi-ras-tanura-oil",
+   "date": "2026-11-26",
+   "time_utc": "2026-11-26T13:55:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "geopolitics",
+   "title_th": "ฮูตีอ้างโจมตีโรงกลั่นราสทานูราของซาอุฯ น้ำมันเบรนต์ขึ้นแตะ ~$94",
+   "summary_th": "25 พ.ย. กลุ่มฮูตีในเยเมนอ้างว่าโจมตีโรงกลั่นราสทานูรา (ใหญ่สุดของซาอุฯ) และย่านการเงินริยาด ขณะที่อิหร่านอ้างว่ามีเรือน้ำมันชนทุ่นระเบิดในฮอร์มุซอีก รัฐบาลซาอุฯ และอารัมโกยังไม่แสดงความเห็น · เบรนต์ปิด 25 พ.ย. +3.5% วันที่ 26 พ.ย. แกว่งระหว่าง ~$93.8–94.7 (ขึ้นราว 5% ในสัปดาห์นี้ หลังร่วงราว 1 ใน 4 ช่วงต้น พ.ย.) ส่วน WTI ~$84",
+   "impacts": [
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500 (SPY)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "น้ำมันแพงขึ้นดันเงินเฟ้อ ทำให้ Fed มีเหตุผลขึ้นดอกเบี้ยต่อ แต่ราคาน้ำมันวันนี้ยังไม่พุ่งต่อ"
+    },
+    {
+     "target": "travel",
+     "label_th": "ท่องเที่ยว",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "น้ำมันเครื่องบินแพงขึ้นเพิ่มต้นทุนการเดินทาง และความไม่ปลอดภัยในอ่าวเปอร์เซียกระทบการเดินทาง"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ความตึงเครียดอาจหนุนแรงซื้อทอง แต่ถ้าน้ำมันดันเงินเฟ้อและดอกเบี้ยขึ้นก็กดทองได้"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน ไม่ต้องขายตามข่าวสงคราม หมวดท่องเที่ยวดูอย่างเดียว ไม่ต้องทำอะไร",
+   "watch_next_th": "29 พ.ย. ประชุม OPEC+ กำหนดกำลังผลิตปี 2027 · ท่าทีซาอุฯ ต่อการโจมตี · 9 ธ.ค. ประชุม Fed",
+   "caveat_th": "ข้อมูลความเสียหายมาจากฝ่ายฮูตีและอิหร่าน ยังไม่ได้รับการยืนยันอิสระ ถ้าโรงกลั่นเสียหายจริงจนส่งออกสะดุด น้ำมันอาจพุ่งแรงกว่านี้",
+   "sources": [
+    {
+     "label": "Reuters via BOE Report: Oil rises as Iran claims mine strikes (26 พ.ย.)",
+     "url": "https://boereport.com/2026/11/26/oil-rises-on-supply-concerns-as-iran-claims-mine-strikes-on-ships/"
+    },
+    {
+     "label": "WOL: Oil prices fall as supply concerns linger (26 พ.ย.)",
+     "url": "https://www.wol.com/2026/11/26/oil-prices-fall-supply-concerns-linger-after-iran-claims-mine-strikes-ships-6583906/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-26-nvidia-halts-sea-servers",
+   "date": "2026-11-26",
+   "time_utc": "2026-11-26T13:56:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "policy",
+   "title_th": "Nvidia พักส่งเซิร์ฟเวอร์ไปไทยและอีก 3 ชาติอาเซียน ตามคุมส่งออกสหรัฐฯ",
+   "summary_th": "26 พ.ย. FT รายงานว่า Nvidia แจ้งผู้ผลิตเซิร์ฟเวอร์ให้หยุดส่งของไป 4 ประเทศอาเซียน (มาเลเซีย สิงคโปร์ ไทย อินโดนีเซีย) ท่ามกลางการคุมส่งออกชิป AI ของสหรัฐฯ ที่เข้มขึ้น ในไทยข่าวนี้ฉุดหุ้นโรงไฟฟ้า ก่อสร้าง และนิคมอุตสาหกรรมที่หวังรายได้จากดาต้าเซ็นเตอร์ รายละเอียดว่าหยุดนานแค่ไหนยังไม่ชัดเจน",
+   "impacts": [
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ถ้าการสร้างดาต้าเซ็นเตอร์ในอาเซียนชะลอ ความต้องการชิป อุปกรณ์ผลิตชิป และอุปกรณ์ไฟฟ้า (AVGO, KLAC, ETN) อาจลดลงบางส่วน แต่ตลาดหลักยังเป็นสหรัฐฯ"
+    },
+    {
+     "target": "main:kkp",
+     "label_th": "KKP / หุ้นไทย",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "กดดันความหวังการลงทุนดาต้าเซ็นเตอร์ในไทยและบรรยากาศตลาดหุ้นไทยโดยรวม"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน หมวดชิป/AI ซื้อตามแผนต่อ ข่าวนี้เป็นเรื่องนโยบายทั้งภูมิภาค ไม่ใช่ปัญหาเฉพาะบริษัทที่ถืออยู่",
+   "watch_next_th": "ความชัดเจนจากรัฐบาลสหรัฐฯ เรื่องกฎคุมส่งออกชิปไปอาเซียน · ศ. 27 พ.ย. ตลาดสหรัฐฯ เปิดครึ่งวัน",
+   "caveat_th": "ยังเป็นรายงานข่าวจากแหล่งไม่เปิดเผยชื่อ ถ้าเป็นการพักส่งชั่วคราวเพื่อตรวจสอบปลายทาง ผลกระทบจะน้อยกว่าที่ตลาดกังวล",
+   "sources": [
+    {
+     "label": "Kaohoon International: Market Roundup 26 Nov 2026",
+     "url": "https://www.kaohooninternational.com/markets/595586"
+    },
+    {
+     "label": "US News (Reuters): Nvidia halts server shipments to four SE Asian countries, FT reports",
+     "url": "https://www.usnews.com/news/top-news/articles/2026-11-26/nvidia-halts-server-shipments-to-four-southeast-asian-countries-ft-reports"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-26-set-falls-short-selling-kkp",
+   "date": "2026-11-26",
+   "time_utc": "2026-11-26T13:57:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "thailand",
+   "title_th": "SET −1% ปิด 1,414 แรงชอร์ตเซลล์และต่างชาติขาย KKP −3%",
+   "summary_th": "26 พ.ย. SET ปิด 1,414.44 จุด −14.06 จุด (−0.98%) มูลค่าซื้อขาย 64,010 ล้านบาท จากข่าว Nvidia พักส่งเซิร์ฟเวอร์ไปไทย เงินต่างชาติไหลออก และแรงชอร์ตเซลล์ ซึ่งตั้งแต่กลับมาใช้เกณฑ์ปกติ 16 พ.ย. สัดส่วนชอร์ตเซลล์พุ่งจาก ~3% เป็น 14.8% ของมูลค่าซื้อขาย (25 พ.ย.) และ SET ลง 5.2% ใน 7 วันทำการ (16–24 พ.ย.) · KKP ล่าสุด 110 บาท −3.1% ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 9.1% · สหรัฐฯ เสนอภาษี Section 301 สินค้าไทยไม่เกิน 18%",
+   "impacts": [
+    {
+     "target": "main:kkp",
+     "label_th": "KKP",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "หุ้นธนาคารใหญ่เป็นเป้าชอร์ตเซลล์และต่างชาติขาย KKP ร่วงตามตลาด ไม่มีข่าวร้ายเฉพาะบริษัท ยังห่างจุดสูงสุดไม่ถึง 10%"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย เป็นการลงตามตลาดทั้งกระดาน ไม่ใช่เรื่องเฉพาะบริษัท ถ้า KKP ลงลึกเกิน −10% จากจุดสูงสุด แผนจะเพิ่มเงินซื้อจากเงินสำรอง (หุ้นเดี่ยวไม่เกิน ×1.5)",
+   "watch_next_th": "แรงขายต่างชาติช่วง ธ.ค. · ผลสรุปภาษี Section 301 · 9 ธ.ค. ประชุม Fed",
+   "caveat_th": "ราคา KKP ในแอปเป็นราคาระหว่างวัน ราคาปิดจริงอาจต่างไป และถ้าตลาดปรับเกณฑ์ชอร์ตเซลล์อีกครั้ง แรงกดดันอาจหายเร็ว",
+   "sources": [
+    {
+     "label": "Kaohoon International: Market Roundup 26 Nov 2026",
+     "url": "https://www.kaohooninternational.com/markets/595586"
+    },
+    {
+     "label": "Kaohoon International: Resumption of short-selling rules weighs on Thai stocks",
+     "url": "https://www.kaohooninternational.com/markets/595558"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-26-asia-europe-rebound-us-holiday",
+   "date": "2026-11-26",
+   "time_utc": "2026-11-26T13:58:00Z",
+   "run": "evening",
+   "level": "low",
+   "category": "market",
+   "title_th": "ตลาดสหรัฐฯ หยุดวันขอบคุณพระเจ้า เอเชีย-ยุโรปฟื้น ฟิวเจอร์ส S&P +0.3%",
+   "summary_th": "พฤ. 26 พ.ย. ตลาดหุ้นสหรัฐฯ ปิดวันขอบคุณพระเจ้า และจะเปิดครึ่งวันศุกร์ 27 พ.ย. ส่วนตลาดอื่นฟื้นหลังแรงขายหุ้น AI: ไต้หวัน +2.5% นิกเกอิ +0.9% (SoftBank +7.3%) Kospi +0.3% หลังร่วง 6.2% วันก่อน DAX +1.8% · ฟิวเจอร์ส S&P 500 +0.3% Dow +0.2%",
+   "impacts": [
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ (QQQ)",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "แรงซื้อหุ้นเทคในเอเชียและฟิวเจอร์สที่เป็นบวกชี้ว่าแรงขายหุ้น AI อาจพักตัว"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500 (SPY)",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "ฟิวเจอร์สบวกเล็กน้อยก่อนเปิดตลาดครึ่งวันศุกร์"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องทำอะไร ซื้อตามแผนต่อ",
+   "watch_next_th": "ศ. 27 พ.ย. ตลาดสหรัฐฯ เปิดครึ่งวัน (ปริมาณซื้อขายต่ำ อาจแกว่งแรง) · ศ. 4 ธ.ค. ตัวเลขจ้างงาน",
+   "caveat_th": "วันหยุดยาวมีปริมาณซื้อขายน้อย การฟื้นตัวอาจไม่ต่อเนื่องเมื่อกลับมาซื้อขายเต็มวันสัปดาห์หน้า",
+   "sources": [
+    {
+     "label": "AP via BNN Bloomberg: World shares push higher, US closed for Thanksgiving",
+     "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/world-shares-push-higher-while-markets-in-us-will-be-closed-for-thanksgiving/"
     }
    ]
   }

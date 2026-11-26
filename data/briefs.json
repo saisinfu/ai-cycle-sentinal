@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T01:07:26Z",
+ "updated_at": "2026-11-26T13:59:17Z",
  "items": [
   {
    "id": "2026-10-28-morning",
@@ -576,6 +576,21 @@
    "news_ids": [
     "2026-11-26-nasdaq-intraday-plunge-comeback",
     "2026-11-26-gdp-claims-strong-hike-odds"
+   ]
+  },
+  {
+   "id": "2026-11-26-evening",
+   "date": "2026-11-26",
+   "run": "evening",
+   "time_utc": "2026-11-26T13:59:17Z",
+   "headline_th": "ช่วงค่ำไม่มีข่าวที่ต้องทำอะไร",
+   "level": "medium",
+   "text_th": "ช่วงค่ำไม่มีข่าวที่ต้องทำอะไร\nKKP −3% ตามตลาดหุ้นไทย (SET −1% จากแรงชอร์ตเซลล์และข่าว Nvidia พักส่งเซิร์ฟเวอร์ไปไทย) ไม่ใช่ข่าวร้ายเฉพาะบริษัท ไม่ต้องขาย\nดูรายละเอียดในแอป AI Sentinel · ข้อมูลตามกฎ ไม่ใช่คำแนะนำการลงทุน",
+   "news_ids": [
+    "2026-11-26-houthi-ras-tanura-oil",
+    "2026-11-26-nvidia-halts-sea-servers",
+    "2026-11-26-set-falls-short-selling-kkp",
+    "2026-11-26-asia-europe-rebound-us-holiday"
    ]
   }
  ]
