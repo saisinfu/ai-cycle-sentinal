@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T01:06:15Z",
+ "updated_at": "2026-11-26T01:06:52Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -1005,6 +1005,52 @@
      "key": "prices",
      "label": "StockTitan: Stock market today Nov 24, 2026",
      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-24-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-26",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 225.0,
+    "us10y_change_3m_pp": 0.26
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "low",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 งบกลาโหม FY2027 ยังไม่ผ่าน งบชั่วคราว (CR) หมด 11 ธ.ค. ยังไม่มีสัญญาณตกลงกัน",
+    "gpr": "ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ (ดึงตัวเลขรายเดือนล่าสุดไม่ได้)",
+    "launches": "คงไว้ +0.4% (สะสมถึง 31 ต.ค.) ความเชื่อมั่นต่ำ ข้อมูลรองชี้ว่าอาจติดลบเล็กน้อย รอยืนยันจากแหล่งหลัก",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 3/2026 ≈ $3.57 พันล้าน +225% เทียบปีก่อน เท่าเดิม",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 4.90% (ปิด 24 พ.ย. ค่าล่าสุดใน Yahoo Finance) เทียบ 3 เดือนก่อน 4.64% = +0.26 จุด เท่าเดิม · 25 พ.ย. ผลตอบแทนลดลงราว 4.82–4.85%",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันพุธ 25 พ.ย.): LMT $599.24 (+2.15% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -11.45%) · RKLB $47.02 (+2.26% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -68.70%) · ASTS $26.02 (+10.25% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -80.45%) · ตลาดวันพุธ 25 พ.ย.: ช่วงเช้าหุ้นชิป/AI ถูกขายหนัก Nasdaq ลงเกือบ 4% ระหว่างวัน ก่อนฟื้นตอนบ่าย ปิด Nasdaq −0.62% S&P 500 −0.25% Dow +0.33% · วันนี้ (พฤ. 26 พ.ย.) ตลาดสหรัฐฯ ปิดวันขอบคุณพระเจ้า"
+   },
+   "prices": {
+    "LMT": 599.24,
+    "RKLB": 47.02,
+    "ASTS": 26.02
+   },
+   "prices_as_of": "2026-11-25",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "market",
+     "label": "StockTitan: Stock market today Nov 25, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
     }
    ],
    "created_by": "claude",

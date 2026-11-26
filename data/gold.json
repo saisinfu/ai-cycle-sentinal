@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T01:06:15Z",
+ "updated_at": "2026-11-26T01:06:52Z",
  "readings": [
   {
    "date": "2026-11-20",
@@ -435,6 +435,60 @@
      "key": "market",
      "label": "Kitco PM report Nov 24, 2026",
      "url": "https://www.kitco.com/news/article/2026-11-24/gold-silver-extend-losses-tech-stocks-slide-fed-inflation-test-looms-kitco"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-26",
+   "indicators": {
+    "real_yield_10y_pct": 2.88,
+    "usd_index_change_3m_pct": 4.6,
+    "central_bank_gold_tonnes_q": 321.2,
+    "gold_etf_flows_tonnes_1m": 19,
+    "breakeven_inflation_10y_pct": 2.15,
+    "gold_usd_oz": 3561.9,
+    "usd_thb": 34.02,
+    "thai_gold_bar_sell_thb": 57150
+   },
+   "confidence": {
+    "real_yield": "high",
+    "dollar": "high",
+    "central_banks": "high",
+    "etf_flows": "medium",
+    "inflation_expect": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "real_yield": "ดอกเบี้ยแท้จริง 10 ปีสหรัฐฯ (TIPS) 2.88% (FRED 19 พ.ย. ค่าล่าสุดที่มี) เท่าเดิม รอบนี้เปิด FRED ไม่ได้ ยังสูงกว่าเกณฑ์ 2.5% เป็นแรงกดดันหลักต่อทอง",
+    "dollar": "ดัชนีดอลลาร์ (DXY) 103.71 (ปิด 25 พ.ย.) เทียบ 3 เดือนก่อน 99.17 = +4.6% จากเดิม +5.0% ดอลลาร์ยังแข็ง กดดันทอง",
+    "central_banks": "ธนาคารกลางทั่วโลกซื้อทองสุทธิไตรมาส 3/2026 = 321.2 ตัน (WGC) เท่าเดิม ยังเป็นแรงหนุนหลัก",
+    "etf_flows": "กองทุนทองทั่วโลก ต.ค. 2026 ถือทองเพิ่ม 19 ตัน เท่าเดิม ตัวเลข พ.ย. ออกต้น ธ.ค.",
+    "inflation_expect": "เงินเฟ้อคาดการณ์ 10 ปีสหรัฐฯ 2.15% (FRED 20 พ.ย.) เท่าเดิม ทรงตัวระดับต่ำ ไม่ค่อยหนุนทอง",
+    "gold_thai": "ทองโลก (GC=F) ค่าล่าสุดใน Yahoo Finance $3,561.9/ออนซ์ (ปิด 24 พ.ย.) · 25 พ.ย. ทองแกว่งแคบแถว $3,570–3,600 แหล่งข่าวรายงานไม่ตรงกัน (ขึ้นเล็กน้อยตาม Motley Fool) ยังใกล้ต่ำสุดรอบ 14 เดือน เพราะตลาดคาด Fed ขึ้นดอกเบี้ยเกือบแน่นอน · เงินบาท 34.02 บาท/ดอลลาร์ อ่อนลงเล็กน้อยจาก 33.90 ช่วยพยุงราคาทองไทยเล็กน้อย · ทองแท่งไทยขายออกยังใช้ค่าเดิม 57,150 บาท (21 พ.ย.) ความเชื่อมั่นต่ำ เพราะเปิดเว็บสมาคมค้าทองคำไม่ได้",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันพุธ 25 พ.ย.): GLD $327.45 (+0.61% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -33.97%) · GDX $73.89 (+3.53% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -36.21%) · ตลาดวันพุธ 25 พ.ย.: ช่วงเช้าหุ้นชิป/AI ถูกขายหนัก Nasdaq ลงเกือบ 4% ระหว่างวัน ก่อนฟื้นตอนบ่าย ปิด Nasdaq −0.62% S&P 500 −0.25% Dow +0.33% · วันนี้ (พฤ. 26 พ.ย.) ตลาดสหรัฐฯ ปิดวันขอบคุณพระเจ้า"
+   },
+   "prices": {
+    "GLD": 327.45,
+    "GDX": 73.89
+   },
+   "prices_as_of": "2026-11-25",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "market",
+     "label": "Motley Fool: Stock market today Nov 25 (Dow erases 1,100-point loss)",
+     "url": "https://www.fool.com/coverage/stock-market-today/2026/11/25/stock-market-today-nov-25-dow-erases-1-100-point-loss-as-wall-street-stages-dramatic-late-day-comeback/"
+    },
+    {
+     "key": "market",
+     "label": "StockTitan: Stock market today Nov 25, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
     }
    ],
    "created_by": "claude",

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T13:55:00Z",
+ "updated_at": "2026-11-26T01:07:26Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -3542,6 +3542,110 @@
     {
      "label": "Stocktwits via Yahoo Finance: ASML dips premarket amid chip rout",
      "url": "https://finance.yahoo.com/markets/stocks/articles/asml-dips-premarket-amid-chip-092535583.html"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-26-nasdaq-intraday-plunge-comeback",
+   "date": "2026-11-26",
+   "time_utc": "2026-11-26T01:07:26Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "market",
+   "title_th": "Nasdaq ดิ่งเกือบ 4% ระหว่างวันจากแรงขายหุ้น AI ก่อนฟื้น ปิด −0.6%",
+   "summary_th": "พุธ 25 พ.ย. ช่วงเช้าหุ้นชิป/AI ถูกขายวันที่สอง (Nasdaq-100 แตะต่ำกว่าจุดสูงสุดราว 20% ชั่วขณะ Dow เคยลงกว่า 1,100 จุด) จากความกังวลเรื่องผลตอบแทนการลงทุน AI ภาษีนำเข้าชุดใหม่ และ PCE พื้นฐานที่สูงกว่าคาด ก่อนฟื้นตอนบ่าย ปิด Nasdaq −0.62% S&P 500 −0.25% Dow +0.33% · Nvidia −3.9% (S&P Global Ratings จับตาอันดับเครดิต) ส่วน AVGO −0.07% KLAC +0.4% ETN −0.5% · VIX 28.3",
+   "impacts": [
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ (QQQ)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "QQQ ปิด −0.65% อยู่ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 16.6% ยังอยู่ช่วงงบยืดหยุ่นเดิม (−10% ถึง −20%)"
+    },
+    {
+     "target": "ai",
+     "label_th": "ชิป / AI",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "หุ้น 3 ตัวในหมวดเกือบไม่เปลี่ยนเมื่อปิดตลาด แม้ระหว่างวันจะลงแรง ดัชนีหมวดคงที่ 44.3 (เตือนล่วงหน้า)"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500 (SPY)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "SPY −0.29% ต่ำกว่าจุดสูงสุด 8% ยังไม่ถึงระดับ −10% ที่แผนจะเพิ่มเงินซื้อ"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย ระดับงบยืดหยุ่นไม่เปลี่ยน แผนซื้อเพิ่มจากเงินสำรองตามกฎเมื่อราคาย่อ (หุ้นเดี่ยวไม่เกิน ×1.5 กองทุนไม่เกิน ×2.5)",
+   "watch_next_th": "พฤ. 26 พ.ย. ตลาดสหรัฐฯ ปิด · ศ. 27 พ.ย. ปิดครึ่งวัน · 2 ธ.ค. ผลประมูลไฟฟ้า PJM · 9 ธ.ค. ประชุม Fed",
+   "caveat_th": "การฟื้นตอนบ่ายไม่มีข่าวใหม่รองรับ ถ้าความกังวลเรื่องการลงทุน AI ยังอยู่ แรงขายอาจกลับมาหลังวันหยุด",
+   "sources": [
+    {
+     "label": "Motley Fool: Dow erases 1,100-point loss (Nov 25)",
+     "url": "https://www.fool.com/coverage/stock-market-today/2026/11/25/stock-market-today-nov-25-dow-erases-1-100-point-loss-as-wall-street-stages-dramatic-late-day-comeback/"
+    },
+    {
+     "label": "Yahoo Finance live: Nov 25 PCE inflation data, AI sell-off",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+    },
+    {
+     "label": "StockTitan: Stock Market Today Live, Nov 25, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
+    },
+    {
+     "label": "Fox Business: stocks Nov 25, 2026",
+     "url": "https://www.foxbusiness.com/markets/stocks-11-25-2026"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-26-gdp-claims-strong-hike-odds",
+   "date": "2026-11-26",
+   "time_utc": "2026-11-26T01:07:26Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "fed",
+   "title_th": "GDP Q3 ปรับขึ้นเป็น 4.3% ว่างงานต่ำ ตลาดให้โอกาส Fed ขึ้นดอกเบี้ย 97%",
+   "summary_th": "25 พ.ย. GDP ไตรมาส 3 ฉบับที่สองปรับขึ้นเป็น 4.3% (คาด 3.5%) ผู้ขอสวัสดิการว่างงานครั้งแรก 189,000 (คาด 200,000) และ Beige Book ของ Fed ชี้แรงกดดันราคาขยายวง · CME FedWatch ให้โอกาสขึ้นดอกเบี้ย 0.25% ในการประชุม 9 ธ.ค. ราว 97–98% และขึ้นอีกเดือน ม.ค. ราว 63%",
+   "impacts": [
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "ดอกเบี้ยสูงขึ้นทำให้การถือทองที่ไม่มีดอกผลเสียโอกาสมากขึ้น และหนุนดอลลาร์"
+    },
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ (QQQ)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ต้นทุนเงินที่สูงขึ้นกดมูลค่าหุ้นเทคโนโลยีที่คาดกำไรในอนาคต"
+    },
+    {
+     "target": "finance",
+     "label_th": "การเงิน / ธนาคาร",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "เศรษฐกิจแข็งช่วยคุณภาพสินเชื่อ แต่ดอกเบี้ยสูงอาจกดการปล่อยกู้ คะแนนนโยบาย Fed ลดจาก 32 เป็น 30"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องทำอะไร ตลาดรู้ผลการประชุมไว้แล้วเกือบเต็มที่ ระวังความผันผวนก่อนประชุม Fed 9 ธ.ค. และซื้อตามแผนต่อ",
+   "watch_next_th": "ศ. 4 ธ.ค. ตัวเลขจ้างงาน พ.ย. · 9 ธ.ค. ผลประชุม Fed",
+   "caveat_th": "ถ้าตัวเลขจ้างงานหรือ CPI เดือน พ.ย. อ่อนกว่าคาด ตลาดอาจลดเดิมพันการขึ้นดอกเบี้ยรอบ ม.ค.",
+   "sources": [
+    {
+     "label": "Yahoo Finance live: Nov 25 PCE inflation data, AI sell-off",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+    },
+    {
+     "label": "StockTitan: Stock Market Today Live, Nov 25, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
+    },
+    {
+     "label": "Fox Business: stocks Nov 25, 2026",
+     "url": "https://www.foxbusiness.com/markets/stocks-11-25-2026"
     }
    ]
   }

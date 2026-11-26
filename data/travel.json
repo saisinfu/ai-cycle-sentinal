@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T01:06:15Z",
+ "updated_at": "2026-11-26T01:06:52Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -1000,6 +1000,57 @@
      "key": "market",
      "label": "Kitco PM report Nov 24, 2026",
      "url": "https://www.kitco.com/news/article/2026-11-24/gold-silver-extend-losses-tech-stocks-slide-fed-inflation-test-looms-kitco"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-26",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.8,
+    "us_hotel_revpar_yoy_pct": 12.9,
+    "wti_usd": 82.05,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "medium",
+    "oil": "high",
+    "income": "medium",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "คงไว้ −0.8% (สะสม 1 ม.ค.–18 พ.ย. 2026) ความเชื่อมั่นต่ำ รอบนี้เปิดหน้า TSA ไม่ได้อีก · สัปดาห์นี้เป็นช่วงเดินทางวันขอบคุณพระเจ้า",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 8–14 พ.ย. 2026 +12.9% เทียบปีก่อน เท่าเดิม (ฐานปีก่อนต่ำเพราะรัฐบาลปิด) รายงานสัปดาห์ถัดไปยังไม่ออก",
+    "oil": "น้ำมัน WTI $82.05/บาร์เรล (ปิด 24 พ.ย. ค่าล่าสุดใน Yahoo Finance) จากเดิม $81.69 · 25 พ.ย. สัญญา ม.ค. ขึ้นต่อแถว $84 จากสงครามสหรัฐฯ–อิหร่านที่ยังไม่จบ ยังต่ำกว่าเกณฑ์กังวล $95",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม ความเชื่อมั่นลดเป็นกลาง เพราะรอบนี้เปิด FRED ตรวจตัวเลข ต.ค. ไม่ได้",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% เท่าเดิม",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันพุธ 25 พ.ย.): BKNG $149.50 (+1.95% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -31.95%) · MAR $415.77 (-0.11% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -3.12%) · ABNB $172.15 (-0.72% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -9.63%) · ตลาดวันพุธ 25 พ.ย.: ช่วงเช้าหุ้นชิป/AI ถูกขายหนัก Nasdaq ลงเกือบ 4% ระหว่างวัน ก่อนฟื้นตอนบ่าย ปิด Nasdaq −0.62% S&P 500 −0.25% Dow +0.33% · วันนี้ (พฤ. 26 พ.ย.) ตลาดสหรัฐฯ ปิดวันขอบคุณพระเจ้า"
+   },
+   "prices": {
+    "BKNG": 149.5,
+    "MAR": 415.77,
+    "ABNB": 172.15
+   },
+   "prices_as_of": "2026-11-25",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "market",
+     "label": "Yahoo Finance live: Nov 25 PCE, AI sell-off",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+    },
+    {
+     "key": "market",
+     "label": "StockTitan: Stock market today Nov 25, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
     }
    ],
    "created_by": "claude",

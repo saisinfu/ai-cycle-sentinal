@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-25T01:06:15Z",
+ "updated_at": "2026-11-26T01:06:52Z",
  "readings": [
   {
    "date": "2026-10-24",
@@ -1883,6 +1883,67 @@
      "key": "market",
      "label": "Kitco PM report Nov 24, 2026",
      "url": "https://www.kitco.com/news/article/2026-11-24/gold-silver-extend-losses-tech-stocks-slide-fed-inflation-test-looms-kitco"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-26",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.28,
+    "hy_oas_pct": 3.52,
+    "loan_growth_pct": 7.18,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 30
+   },
+   "confidence": {
+    "yield_curve": "high",
+    "credit_spread": "high",
+    "loan_growth": "high",
+    "delinquency": "high",
+    "fed_policy": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่าง 10 ปี ลบ 2 ปี +0.28% (FRED 24 พ.ย.) จากเดิม +0.29% แคบลงเล็กน้อย ยังเป็นบวก ไม่กลับหัว",
+    "credit_spread": "ส่วนต่างหุ้นกู้เสี่ยงสูง 3.52% (FRED 19 พ.ย. ค่าล่าสุดที่มี) เท่าเดิม รอบนี้เปิด FRED ไม่ได้ ยังต่ำกว่าเกณฑ์กังวล 5% มาก",
+    "loan_growth": "สินเชื่อธนาคารสหรัฐฯ โตเฉลี่ย 4 ไตรมาส ~7.18% ต่อปี (H.8 20 พ.ย.) เท่าเดิม H.8 ฉบับถัดไปศุกร์นี้",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) เท่าเดิม ข้อมูลไตรมาส 3 ยังไม่ออก",
+    "fed_policy": "ลดจาก 32 เป็น 30/100 · 25 พ.ย. GDP ไตรมาส 3 ปรับขึ้นเป็น 4.3% (คาด 3.5%) ผู้ขอสวัสดิการว่างงาน 189,000 (คาด 200,000) PCE พื้นฐาน 3.3% สูงกว่าคาด และ Beige Book ชี้แรงกดดันราคากว้างขึ้น · CME FedWatch ให้โอกาสขึ้นดอกเบี้ย 9 ธ.ค. ราว 97% และขึ้นอีกครั้งเดือน ม.ค. ราว 63%",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันพุธ 25 พ.ย.): JPM $316.74 (-0.11% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -13.26%) · V $424.39 (+1.83% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -2.79%) · GS $801.03 (-0.62% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -30.47%) · ตลาดวันพุธ 25 พ.ย.: ช่วงเช้าหุ้นชิป/AI ถูกขายหนัก Nasdaq ลงเกือบ 4% ระหว่างวัน ก่อนฟื้นตอนบ่าย ปิด Nasdaq −0.62% S&P 500 −0.25% Dow +0.33% · วันนี้ (พฤ. 26 พ.ย.) ตลาดสหรัฐฯ ปิดวันขอบคุณพระเจ้า"
+   },
+   "prices": {
+    "JPM": 316.74,
+    "V": 424.39,
+    "GS": 801.03
+   },
+   "prices_as_of": "2026-11-25",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "yield_curve",
+     "label": "FRED T10Y2Y",
+     "url": "https://fred.stlouisfed.org/series/T10Y2Y"
+    },
+    {
+     "key": "market",
+     "label": "Yahoo Finance live: Nov 25 PCE, AI sell-off",
+     "url": "https://finance.yahoo.com/markets/live/stock-market-today-wednesday-november-25-dow-sp-500-nasdaq-pce-inflation-data-091428237.html"
+    },
+    {
+     "key": "fed_policy",
+     "label": "Fox Business: stocks Nov 25 (FedWatch)",
+     "url": "https://www.foxbusiness.com/markets/stocks-11-25-2026"
+    },
+    {
+     "key": "market",
+     "label": "StockTitan: Stock market today Nov 25, 2026",
+     "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
     }
    ],
    "created_by": "claude",
