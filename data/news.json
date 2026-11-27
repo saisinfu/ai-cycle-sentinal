@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T13:59:17Z",
+ "updated_at": "2026-11-27T01:07:37Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -3650,52 +3650,6 @@
    ]
   },
   {
-   "id": "2026-11-26-houthi-ras-tanura-oil",
-   "date": "2026-11-26",
-   "time_utc": "2026-11-26T13:55:00Z",
-   "run": "evening",
-   "level": "medium",
-   "category": "geopolitics",
-   "title_th": "ฮูตีอ้างโจมตีโรงกลั่นราสทานูราของซาอุฯ น้ำมันเบรนต์ขึ้นแตะ ~$94",
-   "summary_th": "25 พ.ย. กลุ่มฮูตีในเยเมนอ้างว่าโจมตีโรงกลั่นราสทานูรา (ใหญ่สุดของซาอุฯ) และย่านการเงินริยาด ขณะที่อิหร่านอ้างว่ามีเรือน้ำมันชนทุ่นระเบิดในฮอร์มุซอีก รัฐบาลซาอุฯ และอารัมโกยังไม่แสดงความเห็น · เบรนต์ปิด 25 พ.ย. +3.5% วันที่ 26 พ.ย. แกว่งระหว่าง ~$93.8–94.7 (ขึ้นราว 5% ในสัปดาห์นี้ หลังร่วงราว 1 ใน 4 ช่วงต้น พ.ย.) ส่วน WTI ~$84",
-   "impacts": [
-    {
-     "target": "main:sp500",
-     "label_th": "S&P 500 (SPY)",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "น้ำมันแพงขึ้นดันเงินเฟ้อ ทำให้ Fed มีเหตุผลขึ้นดอกเบี้ยต่อ แต่ราคาน้ำมันวันนี้ยังไม่พุ่งต่อ"
-    },
-    {
-     "target": "travel",
-     "label_th": "ท่องเที่ยว",
-     "direction": "negative",
-     "strength": "low",
-     "reason_th": "น้ำมันเครื่องบินแพงขึ้นเพิ่มต้นทุนการเดินทาง และความไม่ปลอดภัยในอ่าวเปอร์เซียกระทบการเดินทาง"
-    },
-    {
-     "target": "main:gold",
-     "label_th": "ทองคำ (GLD)",
-     "direction": "mixed",
-     "strength": "low",
-     "reason_th": "ความตึงเครียดอาจหนุนแรงซื้อทอง แต่ถ้าน้ำมันดันเงินเฟ้อและดอกเบี้ยขึ้นก็กดทองได้"
-    }
-   ],
-   "what_to_do_th": "ไม่เปลี่ยนแผน ไม่ต้องขายตามข่าวสงคราม หมวดท่องเที่ยวดูอย่างเดียว ไม่ต้องทำอะไร",
-   "watch_next_th": "29 พ.ย. ประชุม OPEC+ กำหนดกำลังผลิตปี 2027 · ท่าทีซาอุฯ ต่อการโจมตี · 9 ธ.ค. ประชุม Fed",
-   "caveat_th": "ข้อมูลความเสียหายมาจากฝ่ายฮูตีและอิหร่าน ยังไม่ได้รับการยืนยันอิสระ ถ้าโรงกลั่นเสียหายจริงจนส่งออกสะดุด น้ำมันอาจพุ่งแรงกว่านี้",
-   "sources": [
-    {
-     "label": "Reuters via BOE Report: Oil rises as Iran claims mine strikes (26 พ.ย.)",
-     "url": "https://boereport.com/2026/11/26/oil-rises-on-supply-concerns-as-iran-claims-mine-strikes-on-ships/"
-    },
-    {
-     "label": "WOL: Oil prices fall as supply concerns linger (26 พ.ย.)",
-     "url": "https://www.wol.com/2026/11/26/oil-prices-fall-supply-concerns-linger-after-iran-claims-mine-strikes-ships-6583906/"
-    }
-   ]
-  },
-  {
    "id": "2026-11-26-nvidia-halts-sea-servers",
    "date": "2026-11-26",
    "time_utc": "2026-11-26T13:56:00Z",
@@ -3735,38 +3689,6 @@
    ]
   },
   {
-   "id": "2026-11-26-set-falls-short-selling-kkp",
-   "date": "2026-11-26",
-   "time_utc": "2026-11-26T13:57:00Z",
-   "run": "evening",
-   "level": "medium",
-   "category": "thailand",
-   "title_th": "SET −1% ปิด 1,414 แรงชอร์ตเซลล์และต่างชาติขาย KKP −3%",
-   "summary_th": "26 พ.ย. SET ปิด 1,414.44 จุด −14.06 จุด (−0.98%) มูลค่าซื้อขาย 64,010 ล้านบาท จากข่าว Nvidia พักส่งเซิร์ฟเวอร์ไปไทย เงินต่างชาติไหลออก และแรงชอร์ตเซลล์ ซึ่งตั้งแต่กลับมาใช้เกณฑ์ปกติ 16 พ.ย. สัดส่วนชอร์ตเซลล์พุ่งจาก ~3% เป็น 14.8% ของมูลค่าซื้อขาย (25 พ.ย.) และ SET ลง 5.2% ใน 7 วันทำการ (16–24 พ.ย.) · KKP ล่าสุด 110 บาท −3.1% ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 9.1% · สหรัฐฯ เสนอภาษี Section 301 สินค้าไทยไม่เกิน 18%",
-   "impacts": [
-    {
-     "target": "main:kkp",
-     "label_th": "KKP",
-     "direction": "negative",
-     "strength": "medium",
-     "reason_th": "หุ้นธนาคารใหญ่เป็นเป้าชอร์ตเซลล์และต่างชาติขาย KKP ร่วงตามตลาด ไม่มีข่าวร้ายเฉพาะบริษัท ยังห่างจุดสูงสุดไม่ถึง 10%"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องขาย เป็นการลงตามตลาดทั้งกระดาน ไม่ใช่เรื่องเฉพาะบริษัท ถ้า KKP ลงลึกเกิน −10% จากจุดสูงสุด แผนจะเพิ่มเงินซื้อจากเงินสำรอง (หุ้นเดี่ยวไม่เกิน ×1.5)",
-   "watch_next_th": "แรงขายต่างชาติช่วง ธ.ค. · ผลสรุปภาษี Section 301 · 9 ธ.ค. ประชุม Fed",
-   "caveat_th": "ราคา KKP ในแอปเป็นราคาระหว่างวัน ราคาปิดจริงอาจต่างไป และถ้าตลาดปรับเกณฑ์ชอร์ตเซลล์อีกครั้ง แรงกดดันอาจหายเร็ว",
-   "sources": [
-    {
-     "label": "Kaohoon International: Market Roundup 26 Nov 2026",
-     "url": "https://www.kaohooninternational.com/markets/595586"
-    },
-    {
-     "label": "Kaohoon International: Resumption of short-selling rules weighs on Thai stocks",
-     "url": "https://www.kaohooninternational.com/markets/595558"
-    }
-   ]
-  },
-  {
    "id": "2026-11-26-asia-europe-rebound-us-holiday",
    "date": "2026-11-26",
    "time_utc": "2026-11-26T13:58:00Z",
@@ -3798,6 +3720,132 @@
     {
      "label": "AP via BNN Bloomberg: World shares push higher, US closed for Thanksgiving",
      "url": "https://www.bnnbloomberg.ca/markets/2026/11/26/world-shares-push-higher-while-markets-in-us-will-be-closed-for-thanksgiving/"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-26-houthi-ras-tanura-oil",
+   "date": "2026-11-26",
+   "time_utc": "2026-11-27T01:07:37Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "geopolitics",
+   "title_th": "ฮูตีโจมตีโรงกลั่น Jazan ของซาอุฯ เบรนต์ปิด $96.6 (+2.1%)",
+   "summary_th": "26 พ.ย. กระทรวงพลังงานซาอุฯ ยืนยันว่าโรงกลั่น Jazan (400,000 บาร์เรล/วัน) ถูกโจมตี ต้องหยุดบางส่วน เกิดไฟไหม้ และรายงานว่ามีคนงานเสียชีวิต 1 คน หลังวันก่อนฮูตีอ้างโจมตีราสทานูรา และมีรายงานโดรนอิหร่านโจมตีคูเวตมีผู้เสียชีวิต 2 ราย · เบรนต์ปิด $96.57 (+2.07%) ขึ้นเกือบ 6% ใน 2 วัน ส่วน WTI แถว $84.4–84.8 ในการซื้อขายบางเบาช่วงวันขอบคุณพระเจ้า",
+   "impacts": [
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500 (SPY)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "น้ำมันแพงขึ้นดันเงินเฟ้อ ทำให้ Fed มีเหตุผลขึ้นดอกเบี้ยต่อ"
+    },
+    {
+     "target": "travel",
+     "label_th": "ท่องเที่ยว",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "น้ำมันเครื่องบินแพงขึ้นเพิ่มต้นทุนการเดินทาง"
+    },
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ความตึงเครียดอาจหนุนแรงซื้อทอง แต่ถ้าน้ำมันดันเงินเฟ้อและดอกเบี้ยขึ้นก็กดทองได้"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน ไม่ต้องขายตามข่าวสงคราม หมวดท่องเที่ยวดูอย่างเดียว ไม่ต้องทำอะไร",
+   "watch_next_th": "อา. 29 พ.ย. 20:00 น. (เวลาไทย) ประชุม OPEC+ คาดคงกำลังผลิตถึงไตรมาส 1/2027 · ความเสียหายโรงกลั่นซาอุฯ · 9 ธ.ค. ประชุม Fed",
+   "caveat_th": "IEA ยังคาดว่าน้ำมันล้นตลาดไตรมาสนี้ ถ้าโรงกลั่นกลับมาเดินเครื่องเร็ว ราคาอาจย่อกลับ ส่วนการซื้อขายช่วงวันหยุดบางเบา ราคาจึงแกว่งเกินจริงได้",
+   "sources": [
+    {
+     "label": "The Nation: Brent gains 2.07% on 26 Nov as OPEC+ weighs 2027 quotas",
+     "url": "https://www.nationthailand.com/news/world/40073981"
+    },
+    {
+     "label": "Bloomberg via Spokesman-Review: Oil climbs as Houthis strike key Saudi refinery",
+     "url": "https://www.spokesman.com/stories/2026/nov/26/oil-climbs-as-yemens-houthi-rebels-strike-key-saud/"
+    },
+    {
+     "label": "FinScans: WTI rallies to $84.38 after Jazan strike",
+     "url": "https://finscans.com/news/2026/11/27/wti-oil-rallies-to-8438-after-strike-hits-400000-barrel"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-26-set-falls-short-selling-kkp",
+   "date": "2026-11-26",
+   "time_utc": "2026-11-27T01:07:37Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "thailand",
+   "title_th": "SET −1% ปิด 1,414 KKP ปิด 105 บาท −4.5% ลงลึกเกิน 10% จากจุดสูงสุด",
+   "summary_th": "26 พ.ย. SET ปิด 1,414.44 จุด −14.06 จุด (−0.98%) มูลค่าซื้อขาย 64,010 ล้านบาท จากข่าว Nvidia พักส่งเซิร์ฟเวอร์ไปไทย เงินต่างชาติไหลออก และแรงชอร์ตเซลล์ (สัดส่วนพุ่งจาก ~3.5% เป็น 14.8% ของมูลค่าซื้อขายวันที่ 25 พ.ย.) · อัปเดตเช้า 27 พ.ย.: ราคาปิด KKP ตาม Yahoo Finance 105 บาท จาก 110 บาท (−4.5%) ต่ำกว่าจุดสูงสุด 52 สัปดาห์ 13.2% (เดิม −9.1%) ไม่พบข่าวร้ายเฉพาะบริษัท",
+   "impacts": [
+    {
+     "target": "main:kkp",
+     "label_th": "KKP",
+     "direction": "negative",
+     "strength": "medium",
+     "reason_th": "หุ้นธนาคารเป็นเป้าชอร์ตเซลล์และต่างชาติขาย KKP ร่วงตามตลาด ไม่มีข่าวร้ายเฉพาะบริษัท ตอนนี้ลงลึกเกินเกณฑ์ −10% จากจุดสูงสุดแล้ว"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องขาย เป็นการลงตามตลาดทั้งกระดาน ไม่ใช่เรื่องเฉพาะบริษัท ตอนนี้ KKP ต่ำกว่าจุดสูงสุดเกิน 10% แผนงบยืดหยุ่นจะเพิ่มเงินซื้อ KKP จากเงินสำรอง (หุ้นเดี่ยวไม่เกิน ×1.5 และไม่เกิน 15% ของเงินเดือนนั้น)",
+   "watch_next_th": "แรงขายต่างชาติและชอร์ตเซลล์ช่วง ธ.ค. · ผลสรุปภาษี Section 301 · 9 ธ.ค. ประชุม Fed",
+   "caveat_th": "ราคาปิด 105 บาทมาจาก Yahoo Finance แหล่งเดียว ซึ่งต่างจากราคาระหว่างวันที่รายงานเมื่อคืน (−3%) ควรเช็กราคาจริงในแอปโบรกเกอร์ก่อนซื้อ และถ้าเกณฑ์ชอร์ตเซลล์ถูกปรับอีก แรงกดดันอาจหายเร็ว",
+   "sources": [
+    {
+     "label": "Kaohoon International: Market Roundup 26 Nov 2026",
+     "url": "https://www.kaohooninternational.com/markets/595586"
+    },
+    {
+     "label": "Kaohoon International: Resumption of short-selling rules weighs on Thai stocks",
+     "url": "https://www.kaohooninternational.com/markets/595558"
+    },
+    {
+     "label": "Yahoo Finance: KKP.BK",
+     "url": "https://finance.yahoo.com/quote/KKP.BK/history/"
+    },
+    {
+     "label": "Kaohoon International: Thai stocks reverse gains as short-selling resumes",
+     "url": "https://www.kaohooninternational.com/markets/595585"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-27-gold-rebounds-15m-low",
+   "date": "2026-11-27",
+   "time_utc": "2026-11-27T01:07:37Z",
+   "run": "morning",
+   "level": "low",
+   "category": "market",
+   "title_th": "ทองฟื้นแถว $3,578 หลังหลุด $3,500 ต่ำสุดรอบ 15 เดือน ทองไทย 57,550 บาท",
+   "summary_th": "25 พ.ย. ทองโลกหลุด $3,500 ชั่วคราว ต่ำสุดรอบ 15 เดือน หลัง PCE พื้นฐาน 3.3% สูงสุดตั้งแต่ปี 2023 ทำให้ตลาดคาด Fed ขึ้นดอกเบี้ย 9 ธ.ค. เกือบแน่นอน · 26 พ.ย. ทองสปอตฟื้นมาแถว $3,576–3,579 ในการซื้อขายบางเบาช่วงวันหยุดสหรัฐฯ · ทองแท่งไทยขายออก 57,550 บาท (26 พ.ย. ครั้งที่ 1)",
+   "impacts": [
+    {
+     "target": "main:gold",
+     "label_th": "ทองคำ (GLD)",
+     "direction": "mixed",
+     "strength": "low",
+     "reason_th": "ฟื้นจากแรงปิดสถานะขาย แต่แรงกดดันหลักคือดอกเบี้ยแท้จริงสูงและการคาด Fed ขึ้นดอกเบี้ยยังอยู่"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องทำอะไรเพิ่ม ทองยังต่ำกว่าจุดสูงสุดมาก แผนงบยืดหยุ่นใช้เงินสำรองซื้อเพิ่มตามกฎอยู่แล้ว",
+   "watch_next_th": "9 ธ.ค. ประชุม Fed · ตัวเลขการจ้างงานสหรัฐฯ ต้น ธ.ค.",
+   "caveat_th": "การฟื้นช่วงวันหยุดเกิดในตลาดที่สภาพคล่องบาง ถ้าตลาดกลับมาเต็มวันแล้วข้อมูลเศรษฐกิจยังร้อน ทองอาจกลับไปทดสอบจุดต่ำเดิม",
+   "sources": [
+    {
+     "label": "USAGOLD: Daily precious metals report 26 Nov 2026",
+     "url": "https://www.usagold.com/daily-precious-metals-market-report-november-26-2026/"
+    },
+    {
+     "label": "Mining.com.au: Gold drifts lower in thin Thanksgiving trading",
+     "url": "https://mining.com.au/gold-price-drifts-lower-in-thin-us-thanksgiving-trading/"
+    },
+    {
+     "label": "อินโฟเควสท์: ราคาทองคำแท่งวันนี้ บาทละ 57,550 บาท",
+     "url": "https://www.infoquest.co.th/2026/685662"
     }
    ]
   }

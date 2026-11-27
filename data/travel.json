@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T01:06:52Z",
+ "updated_at": "2026-11-27T01:06:44Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -1051,6 +1051,57 @@
      "key": "market",
      "label": "StockTitan: Stock market today Nov 25, 2026",
      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-27",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.8,
+    "us_hotel_revpar_yoy_pct": 12.9,
+    "wti_usd": 83.68,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "medium",
+    "oil": "high",
+    "income": "medium",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "คงไว้ −0.8% (สะสม 1 ม.ค.–18 พ.ย. 2026) ความเชื่อมั่นต่ำ รอบนี้เปิดหน้า TSA ไม่ได้อีก · ช่วงเดินทางวันขอบคุณพระเจ้า ตัวเลขจริงจะเห็นสัปดาห์หน้า",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 8–14 พ.ย. 2026 +12.9% เทียบปีก่อน เท่าเดิม (ฐานปีก่อนต่ำเพราะรัฐบาลปิด) รายงานสัปดาห์ถัดไปยังไม่ออก",
+    "oil": "น้ำมัน WTI $83.68/บาร์เรล (ปิด 25 พ.ย. ค่าล่าสุดใน Yahoo Finance) จากเดิม $82.05 · 26 พ.ย. ซื้อขายบางเบา WTI แถว $84.4–84.8 เบรนต์ปิด $96.57 (+2.07%) หลังฮูตีโจมตีโรงกลั่น Jazan ของซาอุฯ ยังต่ำกว่าเกณฑ์กังวล $95 (เกณฑ์ใช้ WTI)",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม ความเชื่อมั่นลดเป็นกลาง เพราะรอบนี้เปิด FRED ตรวจตัวเลข ต.ค. ไม่ได้",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% เท่าเดิม",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันพุธ 25 พ.ย.): BKNG $149.50 (+1.95% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -31.95%) · MAR $415.77 (-0.11% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -3.12%) · ABNB $172.15 (-0.72% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -9.63%) · ตลาดสหรัฐฯ ปิดวันขอบคุณพระเจ้า (พฤ. 26 พ.ย.) จึงยังไม่มีราคาปิดใหม่ คืนนี้ (ศ. 27 พ.ย.) เปิดครึ่งวัน"
+   },
+   "prices": {
+    "BKNG": 149.5,
+    "MAR": 415.77,
+    "ABNB": 172.15
+   },
+   "prices_as_of": "2026-11-25",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "oil_news",
+     "label": "The Nation: Brent gains 2.07% on 26 Nov as OPEC+ weighs 2027 quotas",
+     "url": "https://www.nationthailand.com/news/world/40073981"
+    },
+    {
+     "key": "oil_wti",
+     "label": "FinScans: WTI rallies to $84.38 after Jazan strike",
+     "url": "https://finscans.com/news/2026/11/27/wti-oil-rallies-to-8438-after-strike-hits-400000-barrel"
     }
    ],
    "created_by": "claude",

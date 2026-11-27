@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T01:06:52Z",
+ "updated_at": "2026-11-27T01:06:44Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -1051,6 +1051,47 @@
      "key": "market",
      "label": "StockTitan: Stock market today Nov 25, 2026",
      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-27",
+   "indicators": {
+    "defense_budget_score": 4.5,
+    "geopolitical_risk_index": 115.8,
+    "orbital_launches_ytd_growth_pct": 0.4,
+    "rklb_backlog_growth_yoy_pct": 225.0,
+    "us10y_change_3m_pp": 0.19
+   },
+   "confidence": {
+    "defense_budget": "low",
+    "gpr": "low",
+    "launches": "low",
+    "rklb_backlog": "medium",
+    "rates": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "defense_budget": "คงไว้ 4.5/10 งบกลาโหม FY2027 ยังไม่ผ่าน งบชั่วคราว (CR) หมด 11 ธ.ค. ยังไม่มีสัญญาณตกลงกัน",
+    "gpr": "ใช้ค่าเดิม ≈115.8 ความเชื่อมั่นต่ำ (ดึงตัวเลขรายเดือนล่าสุดไม่ได้)",
+    "launches": "คงไว้ +0.4% (สะสมถึง 31 ต.ค.) ความเชื่อมั่นต่ำ ข้อมูลรองชี้ว่าอาจติดลบเล็กน้อย รอยืนยันจากแหล่งหลัก",
+    "rklb_backlog": "Rocket Lab backlog ไตรมาส 3/2026 ≈ $3.57 พันล้าน +225% เทียบปีก่อน เท่าเดิม",
+    "rates": "ผลตอบแทนพันธบัตรสหรัฐฯ 10 ปี 4.85% (ปิด 25 พ.ย.) เทียบ 3 เดือนก่อน 4.66% = +0.19 จุด จากเดิม +0.26 ดอกเบี้ยระยะยาวลดลงเล็กน้อย",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันพุธ 25 พ.ย.): LMT $599.24 (+2.15% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -11.45%) · RKLB $47.02 (+2.26% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -68.70%) · ASTS $26.02 (+10.25% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -80.45%) · ตลาดสหรัฐฯ ปิดวันขอบคุณพระเจ้า (พฤ. 26 พ.ย.) จึงยังไม่มีราคาปิดใหม่ คืนนี้ (ศ. 27 พ.ย.) เปิดครึ่งวัน"
+   },
+   "prices": {
+    "LMT": 599.24,
+    "RKLB": 47.02,
+    "ASTS": 26.02
+   },
+   "prices_as_of": "2026-11-25",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
     }
    ],
    "created_by": "claude",

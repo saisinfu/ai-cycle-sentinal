@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T01:06:52Z",
+ "updated_at": "2026-11-27T01:06:44Z",
  "readings": [
   {
    "date": "2026-11-20",
@@ -489,6 +489,65 @@
      "key": "market",
      "label": "StockTitan: Stock market today Nov 25, 2026",
      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-27",
+   "indicators": {
+    "real_yield_10y_pct": 2.88,
+    "usd_index_change_3m_pct": 4.7,
+    "central_bank_gold_tonnes_q": 321.2,
+    "gold_etf_flows_tonnes_1m": 19,
+    "breakeven_inflation_10y_pct": 2.15,
+    "gold_usd_oz": 3535.8,
+    "usd_thb": 34.01,
+    "thai_gold_bar_sell_thb": 57550
+   },
+   "confidence": {
+    "real_yield": "high",
+    "dollar": "high",
+    "central_banks": "high",
+    "etf_flows": "medium",
+    "inflation_expect": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "real_yield": "ดอกเบี้ยแท้จริง 10 ปีสหรัฐฯ (TIPS) 2.88% (FRED 19 พ.ย. ค่าล่าสุดที่มี) เท่าเดิม รอบนี้เปิด FRED ไม่ได้ ยังสูงกว่าเกณฑ์ 2.5% เป็นแรงกดดันหลักต่อทอง",
+    "dollar": "ดัชนีดอลลาร์ (DXY) 103.78 (26 พ.ย.) เทียบ 3 เดือนก่อน 99.16 = +4.7% จากเดิม +4.6% ดอลลาร์ยังแข็ง กดดันทอง",
+    "central_banks": "ธนาคารกลางทั่วโลกซื้อทองสุทธิไตรมาส 3/2026 = 321.2 ตัน (WGC) เท่าเดิม ยังเป็นแรงหนุนหลัก",
+    "etf_flows": "กองทุนทองทั่วโลก ต.ค. 2026 ถือทองเพิ่ม 19 ตัน เท่าเดิม ตัวเลข พ.ย. ออกต้น ธ.ค.",
+    "inflation_expect": "เงินเฟ้อคาดการณ์ 10 ปีสหรัฐฯ 2.15% (FRED 20 พ.ย.) เท่าเดิม ทรงตัวระดับต่ำ ไม่ค่อยหนุนทอง",
+    "gold_thai": "ทองโลก (GC=F) ค่าล่าสุดใน Yahoo Finance $3,535.8/ออนซ์ (ปิด 25 พ.ย.) · วันที่ 25 พ.ย. ทองหลุด $3,500 ชั่วคราว ต่ำสุดรอบ 15 เดือน แล้วฟื้น 26 พ.ย. ทองสปอตแถว $3,576–3,579 ในการซื้อขายบางเบาช่วงวันหยุดสหรัฐฯ เพราะตลาดคาด Fed ขึ้นดอกเบี้ย 9 ธ.ค. เกือบแน่นอน · เงินบาท 34.01 บาท/ดอลลาร์ (เดิม 34.02) แทบไม่เปลี่ยน · ทองแท่งไทย 96.5% ขายออก 57,550 บาท (ประกาศครั้งที่ 1 วันที่ 26 พ.ย. 09:01 น.) จากเดิม 57,150 บาท (21 พ.ย.) +400 บาท สำหรับคนถือทองในไทย: ทองโลกขึ้นลงเป็นตัวหลัก เงินบาทที่นิ่งจึงไม่ช่วยหรือซ้ำเติม",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันพุธ 25 พ.ย.): GLD $327.45 (+0.61% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -33.97%) · GDX $73.89 (+3.53% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -36.21%) · ตลาดสหรัฐฯ ปิดวันขอบคุณพระเจ้า (พฤ. 26 พ.ย.) จึงยังไม่มีราคาปิดใหม่ คืนนี้ (ศ. 27 พ.ย.) เปิดครึ่งวัน"
+   },
+   "prices": {
+    "GLD": 327.45,
+    "GDX": 73.89
+   },
+   "prices_as_of": "2026-11-25",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "gold_thai",
+     "label": "อินโฟเควสท์: ราคาทองคำแท่งวันนี้ บาทละ 57,550 บาท (26 พ.ย.)",
+     "url": "https://www.infoquest.co.th/2026/685662"
+    },
+    {
+     "key": "gold_thai",
+     "label": "USAGOLD: Daily precious metals report 26 Nov 2026",
+     "url": "https://www.usagold.com/daily-precious-metals-market-report-november-26-2026/"
+    },
+    {
+     "key": "gold_thai",
+     "label": "Mining.com.au: Gold drifts lower in thin Thanksgiving trading",
+     "url": "https://mining.com.au/gold-price-drifts-lower-in-thin-us-thanksgiving-trading/"
     }
    ],
    "created_by": "claude",

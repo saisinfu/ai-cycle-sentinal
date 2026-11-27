@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-26T01:06:52Z",
+ "updated_at": "2026-11-27T01:06:44Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -956,6 +956,47 @@
      "key": "market",
      "label": "StockTitan: Stock market today Nov 25, 2026",
      "url": "https://www.stocktitan.net/articles/stock-market-today-live-november-25-2026"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-27",
+   "indicators": {
+    "consumer_sentiment": 51.5,
+    "food_services_sales_yoy_pct": 7.0,
+    "food_at_home_cpi_yoy_pct": 1.77,
+    "fao_food_price_yoy_pct": 5.9,
+    "costco_us_comp_sales_pct": 8.1
+   },
+   "confidence": {
+    "sentiment": "medium",
+    "restaurant_sales": "medium",
+    "food_inflation": "high",
+    "input_cost": "high",
+    "costco_comps": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "sentiment": "ความเชื่อมั่นผู้บริโภค ม.มิชิแกน พ.ย. 2026 ค่าสุดท้าย 51.5 เท่าเดิม (ยังต่ำกว่าเกณฑ์กังวล 55) ค่าเบื้องต้น ธ.ค. ออกกลางเดือน",
+    "restaurant_sales": "ยอดขายร้านอาหาร ต.ค. 2026 +7.0% เทียบปีก่อน เท่าเดิม",
+    "food_inflation": "ราคาอาหารในบ้าน (CPI) ก.ย. 2026 +1.77% เท่าเดิม CPI พ.ย. ออกเดือน ธ.ค.",
+    "input_cost": "ดัชนีราคาอาหารโลก FAO ต.ค. 2026 +5.9% เทียบปีก่อน เท่าเดิม ตัวเลขใหม่ออก 4 ธ.ค.",
+    "costco_comps": "Costco ยอดขายสาขาเดิมในสหรัฐฯ ต.ค. 2026 +8.1% เท่าเดิม ตัวเลข พ.ย. ออกต้น ธ.ค.",
+    "prices": "ราคาปิดล่าสุดจาก Yahoo Finance (ปิดตลาดวันพุธ 25 พ.ย.): COST $1,086.81 (-0.45% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -2.42%) · PEP $143.93 (+0.88% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -15.58%) · MCD $283.50 (+1.00% วันที่ 25/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -16.88%) · ตลาดสหรัฐฯ ปิดวันขอบคุณพระเจ้า (พฤ. 26 พ.ย.) จึงยังไม่มีราคาปิดใหม่ คืนนี้ (ศ. 27 พ.ย.) เปิดครึ่งวัน"
+   },
+   "prices": {
+    "COST": 1086.81,
+    "PEP": 143.93,
+    "MCD": 283.5
+   },
+   "prices_as_of": "2026-11-25",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
     }
    ],
    "created_by": "claude",
