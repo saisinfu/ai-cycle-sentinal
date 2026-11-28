@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-28T01:06:37Z",
+ "updated_at": "2026-11-28T13:55:51Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -3730,8 +3730,8 @@
    "run": "morning",
    "level": "medium",
    "category": "geopolitics",
-   "title_th": "ฮูตีโจมตีโรงกลั่น Jazan ของซาอุฯ เบรนต์ปิด $96.6 (+2.1%)",
-   "summary_th": "26 พ.ย. กระทรวงพลังงานซาอุฯ ยืนยันว่าโรงกลั่น Jazan (400,000 บาร์เรล/วัน) ถูกโจมตี ต้องหยุดบางส่วน เกิดไฟไหม้ และรายงานว่ามีคนงานเสียชีวิต 1 คน หลังวันก่อนฮูตีอ้างโจมตีราสทานูรา และมีรายงานโดรนอิหร่านโจมตีคูเวตมีผู้เสียชีวิต 2 ราย · เบรนต์ปิด $96.57 (+2.07%) ขึ้นเกือบ 6% ใน 2 วัน ส่วน WTI แถว $84.4–84.8 ในการซื้อขายบางเบาช่วงวันขอบคุณพระเจ้า",
+   "title_th": "ซาอุฯ-ฮูตียิงโต้ถึงเมืองหลวง หลังโจมตีโรงกลั่น Jazan เบรนต์ ~$95",
+   "summary_th": "26 พ.ย. กระทรวงพลังงานซาอุฯ ยืนยันว่าโรงกลั่น Jazan (400,000 บาร์เรล/วัน) ถูกโจมตี ต้องหยุดบางส่วน เกิดไฟไหม้ และรายงานว่ามีคนงานเสียชีวิต 1 คน หลังวันก่อนฮูตีอ้างโจมตีราสทานูรา และมีรายงานโดรนอิหร่านโจมตีคูเวตมีผู้เสียชีวิต 2 ราย · เบรนต์ปิด $96.57 (+2.07%) ขึ้นเกือบ 6% ใน 2 วัน ส่วน WTI แถว $84.4–84.8 ในการซื้อขายบางเบาช่วงวันขอบคุณพระเจ้า · อัปเดต 28 พ.ย.: ซาอุฯ สกัดขีปนาวุธร่อนของฮูตีที่ยิงไปทางริยาดได้ ส่วนฝ่ายฮูตีรายงานว่าซาอุฯ โจมตีกรุงซานา บาดเจ็บ 13 คน (ตัวเลขจากสื่อฝ่ายฮูตี ยังไม่ยืนยันอิสระ) · ศ. 27 พ.ย. เบรนต์ปิด $95.44 (−1.2%) WTI $83.08 (−0.7%) ทั้งสัปดาห์เบรนต์ยัง +3% แต่ทั้งเดือน พ.ย. ยังลงเกือบ 16%",
    "impacts": [
     {
      "target": "main:sp500",
@@ -3755,9 +3755,9 @@
      "reason_th": "ความตึงเครียดอาจหนุนแรงซื้อทอง แต่ถ้าน้ำมันดันเงินเฟ้อและดอกเบี้ยขึ้นก็กดทองได้"
     }
    ],
-   "what_to_do_th": "ไม่เปลี่ยนแผน ไม่ต้องขายตามข่าวสงคราม หมวดท่องเที่ยวดูอย่างเดียว ไม่ต้องทำอะไร",
-   "watch_next_th": "อา. 29 พ.ย. 20:00 น. (เวลาไทย) ประชุม OPEC+ คาดคงกำลังผลิตถึงไตรมาส 1/2027 · ความเสียหายโรงกลั่นซาอุฯ · 9 ธ.ค. ประชุม Fed",
-   "caveat_th": "IEA ยังคาดว่าน้ำมันล้นตลาดไตรมาสนี้ ถ้าโรงกลั่นกลับมาเดินเครื่องเร็ว ราคาอาจย่อกลับ ส่วนการซื้อขายช่วงวันหยุดบางเบา ราคาจึงแกว่งเกินจริงได้",
+   "what_to_do_th": "ไม่เปลี่ยนแผน ไม่ต้องขายตามข่าวสงคราม ตลาดสหรัฐฯ เปิดวันจันทร์อาจแกว่งตามราคาน้ำมันและผลประชุม OPEC+ หมวดท่องเที่ยวดูอย่างเดียว ไม่ต้องทำอะไร",
+   "watch_next_th": "อา. 29 พ.ย. ประชุม OPEC+ (คาดคงกำลังผลิตถึงไตรมาส 1/2027 แต่อิรัก-คาซัคสถานยังค้านโควตา 2027) · จ. 30 พ.ย. ราคาน้ำมันเปิดตลาด · 9 ธ.ค. ประชุม Fed",
+   "caveat_th": "IEA ยังคาดว่าน้ำมันล้นตลาดไตรมาสนี้ ถ้าการโจมตีไม่ทำให้การผลิตเสียหายจริง หรือ OPEC+ ตกลงกันได้ ราคาอาจย่อกลับ ข้อมูลผู้บาดเจ็บยังมาจากแหล่งฝ่ายเดียว",
    "sources": [
     {
      "label": "The Nation: Brent gains 2.07% on 26 Nov as OPEC+ weighs 2027 quotas",
@@ -3770,6 +3770,14 @@
     {
      "label": "FinScans: WTI rallies to $84.38 after Jazan strike",
      "url": "https://finscans.com/news/2026/11/27/wti-oil-rallies-to-8438-after-strike-hits-400000-barrel"
+    },
+    {
+     "label": "AFP via Free Malaysia Today: Saudi, Houthis trade strikes targeting capitals (28 พ.ย.)",
+     "url": "https://www.freemalaysiatoday.com/category/world/2026/11/28/saudi-houthis-trade-strikes-targeting-capitals"
+    },
+    {
+     "label": "The National: Oil set to post weekly gain as Middle East attacks stoke supply concerns",
+     "url": "https://thenationalnews.com/business/energy/2026/11/27/oil-set-to-post-weekly-gain-as-middle-east-attacks-stoke-supply-concerns"
     }
    ]
   },
@@ -3878,6 +3886,49 @@
     {
      "label": "Kaohoon International: Market Roundup 27 November 2026",
      "url": "https://www.kaohooninternational.com/markets/595651"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-28-united-fidelity-bank-fails",
+   "date": "2026-11-28",
+   "time_utc": "2026-11-27T23:00:00Z",
+   "run": "evening",
+   "level": "medium",
+   "category": "crisis",
+   "title_th": "ธนาคาร United Fidelity ($5.9 พันล้าน) ล้ม ใหญ่สุดในรอบ 2 ปีครึ่ง",
+   "summary_th": "ศ. 27 พ.ย. หน่วยงานกำกับสหรัฐฯ (OCC) สั่งปิด United Fidelity Bank ในรัฐอินดีแอนา สินทรัพย์ ~$5.9 พันล้าน เป็นธนาคารล้มรายที่ 7 ของปี 2026 และใหญ่สุดตั้งแต่ เม.ย. 2024 · First Citizens Bank รับโอนเงินฝาก ~$4.5 พันล้าน และ 22 สาขาเปิดทำการตามปกติตั้งแต่ 28 พ.ย. · FDIC ประเมินความเสียหายต่อกองทุนคุ้มครองเงินฝาก ~$1.83 พันล้าน (~31% ของสินทรัพย์) ยังไม่ได้แถลงสาเหตุ",
+   "impacts": [
+    {
+     "target": "finance",
+     "label_th": "การเงิน/ธนาคาร",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ความเสียหายสูงถึง 31% ของสินทรัพย์ อาจทำให้นักลงทุนกังวลคุณภาพสินเชื่อของธนาคารขนาดกลาง-เล็กในช่วงดอกเบี้ยสูง แต่ JPM GS V เป็นบริษัทใหญ่ที่ไม่เกี่ยวข้องโดยตรง"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500 (SPY)",
+     "direction": "negative",
+     "strength": "low",
+     "reason_th": "ขนาดยังเล็กมากเมื่อเทียบกับวิกฤตธนาคารภูมิภาคปี 2023 จึงน่าจะกระทบภาพรวมจำกัด เว้นแต่มีธนาคารอื่นล้มตาม"
+    }
+   ],
+   "what_to_do_th": "ไม่เปลี่ยนแผน ลูกค้าเงินฝากได้รับการคุ้มครองครบ หมวดการเงินดูอย่างเดียว ไม่ต้องทำอะไร",
+   "watch_next_th": "จ. 30 พ.ย. ราคาหุ้นธนาคารภูมิภาค (KRE) เมื่อตลาดเปิด · ดูว่ามีธนาคารอื่นมีปัญหาตามหรือไม่",
+   "caveat_th": "ยังไม่รู้สาเหตุที่แท้จริง ถ้ามาจากหนี้เสียสินเชื่ออสังหาฯ เชิงพาณิชย์ที่ธนาคารอื่นก็ถืออยู่มาก ความกังวลอาจลามได้มากกว่าที่ประเมิน",
+   "sources": [
+    {
+     "label": "CNN: Federal regulators shut $6 billion Indiana lender in biggest bank failure in over two years",
+     "url": "https://www.cnn.com/2026/11/27/business/united-fidelity-bank-fdic"
+    },
+    {
+     "label": "FDIC: United Fidelity Bank, fsb (Failed Bank List)",
+     "url": "https://www.fdic.gov/bank-failures/failed-bank-list/united-fidelity-bank-fsb"
+    },
+    {
+     "label": "TNW: US regulators shut United Fidelity Bank in biggest bank failure since 2024",
+     "url": "https://thenextweb.com/news/us-regulators-shut-united-fidelity-bank-in-biggest-bank-failure-since-2024"
     }
    ]
   },
