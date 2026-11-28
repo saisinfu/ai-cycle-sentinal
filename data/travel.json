@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T01:06:44Z",
+ "updated_at": "2026-11-28T01:06:14Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -1102,6 +1102,52 @@
      "key": "oil_wti",
      "label": "FinScans: WTI rallies to $84.38 after Jazan strike",
      "url": "https://finscans.com/news/2026/11/27/wti-oil-rallies-to-8438-after-strike-hits-400000-barrel"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-28",
+   "indicators": {
+    "tsa_throughput_yoy_pct": -0.8,
+    "us_hotel_revpar_yoy_pct": 12.9,
+    "wti_usd": 83.68,
+    "real_disposable_income_yoy_pct": 0.95,
+    "bkng_room_nights_growth_yoy_pct": 6.7
+   },
+   "confidence": {
+    "tsa": "low",
+    "hotel": "medium",
+    "oil": "high",
+    "income": "medium",
+    "bookings": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "tsa": "คงไว้ −0.8% (สะสม 1 ม.ค.–18 พ.ย. 2026) ความเชื่อมั่นต่ำ รอบนี้เปิดหน้า TSA ไม่ได้ · ตัวเลขช่วงเดินทางวันขอบคุณพระเจ้าจะเห็นสัปดาห์หน้า",
+    "hotel": "RevPAR โรงแรมสหรัฐฯ สัปดาห์ 8–14 พ.ย. 2026 +12.9% เทียบปีก่อน เท่าเดิม (ฐานปีก่อนต่ำเพราะรัฐบาลปิด)",
+    "oil": "น้ำมัน WTI $83.68/บาร์เรล (ปิด 25 พ.ย. ค่าล่าสุดใน Yahoo Finance) เท่าเดิม · ศ. 27 พ.ย. WTI แถว $83 (−1%) เบรนต์แถว $94 · OPEC+ ประชุม อา. 29 พ.ย. ยังต่ำกว่าเกณฑ์กังวล $95",
+    "income": "รายได้หลังหักภาษีที่แท้จริง ก.ย. 2026 +0.95% เทียบปีก่อน เท่าเดิม (เปิด FRED ตรวจตัวเลขใหม่ไม่ได้)",
+    "bookings": "Booking Holdings คืนห้องพักไตรมาส 3/2026 +6.7% เท่าเดิม",
+    "prices": "ราคาปิดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิดครึ่งวัน ศ. 27 พ.ย.): BKNG $150.39 (+0.60% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -31.54%) · MAR $421.01 (+1.26% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -1.90%) · ABNB $179.16 (+4.07% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -5.95%) · วันนี้เสาร์ ตลาดปิด ราคาใหม่จะมีหลังปิดตลาดจันทร์ 30 พ.ย."
+   },
+   "prices": {
+    "BKNG": 150.39,
+    "MAR": 421.01,
+    "ABNB": 179.16
+   },
+   "prices_as_of": "2026-11-27",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "market",
+     "label": "Milton Berg Edge: ตลาดปิด 27 พ.ย. 2026",
+     "url": "https://miltonbergedge.com/daily/2026-11-27?via=x#sp500-best-week-since-april-2025"
     }
    ],
    "created_by": "claude",

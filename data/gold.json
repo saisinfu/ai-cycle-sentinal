@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T01:06:44Z",
+ "updated_at": "2026-11-28T01:06:14Z",
  "readings": [
   {
    "date": "2026-11-20",
@@ -548,6 +548,60 @@
      "key": "gold_thai",
      "label": "Mining.com.au: Gold drifts lower in thin Thanksgiving trading",
      "url": "https://mining.com.au/gold-price-drifts-lower-in-thin-us-thanksgiving-trading/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-28",
+   "indicators": {
+    "real_yield_10y_pct": 2.88,
+    "usd_index_change_3m_pct": 4.4,
+    "central_bank_gold_tonnes_q": 321.2,
+    "gold_etf_flows_tonnes_1m": 19,
+    "breakeven_inflation_10y_pct": 2.15,
+    "gold_usd_oz": 3535.8,
+    "usd_thb": 33.89,
+    "thai_gold_bar_sell_thb": 58950
+   },
+   "confidence": {
+    "real_yield": "low",
+    "dollar": "high",
+    "central_banks": "high",
+    "etf_flows": "medium",
+    "inflation_expect": "low",
+    "prices": "high"
+   },
+   "notes_th": {
+    "real_yield": "ดอกเบี้ยแท้จริง 10 ปีสหรัฐฯ (TIPS) 2.88% (FRED 19 พ.ย. ค่าล่าสุดที่มี) เท่าเดิม รอบนี้เปิด FRED ไม่ได้ ยังสูงกว่าเกณฑ์ 2.5% เป็นแรงกดดันหลักต่อทอง",
+    "dollar": "ดัชนีดอลลาร์ (DXY) 104.05 (27 พ.ย.) เทียบ 3 เดือนก่อน 99.70 = +4.4% จากเดิม +4.7% ดอลลาร์ยังแข็ง กดดันทอง",
+    "central_banks": "ธนาคารกลางทั่วโลกซื้อทองสุทธิไตรมาส 3/2026 = 321.2 ตัน (WGC) เท่าเดิม ยังเป็นแรงหนุนหลัก",
+    "etf_flows": "กองทุนทองทั่วโลก ต.ค. 2026 ถือทองเพิ่ม 19 ตัน เท่าเดิม ตัวเลข พ.ย. ออกต้น ธ.ค.",
+    "inflation_expect": "เงินเฟ้อคาดการณ์ 10 ปีสหรัฐฯ 2.15% (FRED 20 พ.ย.) เท่าเดิม ทรงตัวระดับต่ำ ไม่ค่อยหนุนทอง",
+    "gold_thai": "ทองโลก (GC=F) ค่าล่าสุดใน Yahoo Finance ยังเป็น $3,535.8/ออนซ์ (ปิด 25 พ.ย.) · ศ. 27 พ.ย. ทองขึ้นราว 3% ในวันเดียว (GLD +2.1%, หุ้นเหมืองทอง GDX +7.2%) · เงินบาทแข็งขึ้นเป็น 33.89 บาท/ดอลลาร์ (เดิม 34.01) · ทองแท่งไทย 96.5% ขายออก 58,950 บาท (สมาคมค้าทองคำ 27 พ.ย. ครั้งที่ 39) จากเดิม 57,550 บาท +1,400 บาท สำหรับคนถือทองในไทย: ทองโลกที่ขึ้นเป็นตัวหลัก เงินบาทที่แข็งขึ้นทำให้ราคาทองไทยขึ้นน้อยกว่าทองโลกเล็กน้อย",
+    "prices": "ราคาปิดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิดครึ่งวัน ศ. 27 พ.ย.): GLD $334.40 (+2.12% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -32.57%) · GDX $79.18 (+7.16% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -31.65%) · วันนี้เสาร์ ตลาดปิด ราคาใหม่จะมีหลังปิดตลาดจันทร์ 30 พ.ย."
+   },
+   "prices": {
+    "GLD": 334.4,
+    "GDX": 79.18
+   },
+   "prices_as_of": "2026-11-27",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "gold_thai",
+     "label": "สมาคมค้าทองคำ: ราคาทองตามประกาศ",
+     "url": "https://www.goldtraders.or.th/dailyprices"
+    },
+    {
+     "key": "market",
+     "label": "Milton Berg Edge: ตลาดปิด 27 พ.ย. 2026",
+     "url": "https://miltonbergedge.com/daily/2026-11-27?via=x#sp500-best-week-since-april-2025"
     }
    ],
    "created_by": "claude",

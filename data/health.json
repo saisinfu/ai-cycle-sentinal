@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T01:06:44Z",
+ "updated_at": "2026-11-28T01:06:14Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -971,6 +971,47 @@
     {
      "key": "prices",
      "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-28",
+   "indicators": {
+    "lly_revenue_growth_yoy_pct": 39.0,
+    "unh_medical_care_ratio_pct": 88.4,
+    "isrg_procedure_growth_yoy_pct": 14.0,
+    "hc_policy_risk": 7.5,
+    "healthcare_jobs_growth_yoy_pct": 2.21
+   },
+   "confidence": {
+    "glp1_demand": "high",
+    "insurer_cost": "medium",
+    "surgery_volume": "high",
+    "policy_risk": "low",
+    "hc_jobs": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "glp1_demand": "Eli Lilly รายได้ไตรมาส 3/2026 +39% เทียบปีก่อน (ประกาศ 29 ต.ค.) เท่าเดิม จนกว่างบไตรมาสถัดไป",
+    "insurer_cost": "UnitedHealth สัดส่วนค่ารักษาไตรมาส 3/2026 = 88.4% เท่าเดิม",
+    "surgery_volume": "Intuitive Surgical ผ่าตัด da Vinci ไตรมาส 3/2026 โตราว 14% เท่าเดิม",
+    "policy_risk": "คงไว้ 7.5/10 (ความเชื่อมั่นต่ำ) ไม่พบข่าวนโยบายใหม่ ยังมีคดี UnitedHealth ฟ้อง CMS และกฎ Medicare Advantage ที่เข้มขึ้นค้างอยู่",
+    "hc_jobs": "การจ้างงานสาธารณสุข ต.ค. 2026 +2.21% เทียบปีก่อน เท่าเดิม ตัวเลข พ.ย. ออก 4 ธ.ค.",
+    "prices": "ราคาปิดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิดครึ่งวัน ศ. 27 พ.ย.): LLY $1,392.38 (+0.01% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -3.54%) · ISRG $430.18 (+0.70% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -27.44%) · UNH $351.41 (+1.51% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -19.47%) · วันนี้เสาร์ ตลาดปิด ราคาใหม่จะมีหลังปิดตลาดจันทร์ 30 พ.ย."
+   },
+   "prices": {
+    "LLY": 1392.38,
+    "ISRG": 430.18,
+    "UNH": 351.41
+   },
+   "prices_as_of": "2026-11-27",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
      "url": "https://finance.yahoo.com/"
     }
    ],

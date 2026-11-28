@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T01:06:44Z",
+ "updated_at": "2026-11-28T01:06:14Z",
  "readings": [
   {
    "confidence": {
@@ -2381,6 +2381,64 @@
      "key": "enterprise_adoption",
      "label": "FRED: Ramp AI Index (large businesses)",
      "url": "https://fred.stlouisfed.org/data/RAMPAIENTERPRISE"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-28",
+   "indicators": {
+    "capex_to_cloud_revenue_ratio": 1.58,
+    "chip_lead_time_weeks": 24,
+    "gpu_spot_price_usd_hr": 2.89,
+    "gpu_spot_price_change_1m_pct": -7.37,
+    "enterprise_ai_adoption_pct": 66.71,
+    "enterprise_ai_adoption_change_3m_pp": 1.82,
+    "power_grid_stress_level": 8.8
+   },
+   "confidence": {
+    "capex_vs_revenue": "medium",
+    "chip_lead_time": "low",
+    "gpu_spot_price": "low",
+    "enterprise_adoption": "high",
+    "power_grid": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "capex_vs_revenue": "คงไว้ที่ 1.58 เท่า ตามงบไตรมาส 3/2026 ของ Microsoft, Alphabet และ Amazon ไม่มีตัวเลขใหม่จนกว่างบไตรมาสถัดไป (ปลาย ม.ค. 2027)",
+    "chip_lead_time": "คงไว้ที่ 24 สัปดาห์ (ความเชื่อมั่นต่ำ) ไม่พบรายงานระยะรอ GPU ฉบับใหม่ · มีข่าว (Bloomberg ผ่าน CNBC) ว่าชิป Blackwell ที่ห้ามส่งจีนไปติดตั้งในดาต้าเซ็นเตอร์เซี่ยงไฮ้ ยังไม่กระทบอุปทานโดยตรง",
+    "gpu_spot_price": "คงไว้ $2.89/ชม. (ปิด 21 พ.ย.) −7.4% ใน 1 เดือน ความเชื่อมั่นต่ำ เพราะรอบนี้เปิดหน้า Ornn ไม่ได้อีก ยังไม่ถึงเกณฑ์แจ้งเตือน −15%",
+    "enterprise_adoption": "Ramp AI Index ธุรกิจใหญ่ ต.ค. 2026 = 66.7% เทียบ ก.ค. 64.9% = +1.8 จุดใน 3 เดือน เท่าเดิม (รอบนี้เปิด FRED ไม่ได้) ตัวเลข พ.ย. คาดออกกลาง ธ.ค.",
+    "power_grid": "คงไว้ 8.8/10 · ผู้ตรวจตลาด PJM (12 พ.ย.) ชี้ดาต้าเซ็นเตอร์ทำให้ต้นทุนกำลังผลิตเพิ่มแล้ว $29.4 พันล้าน และการประมูล 2029/30 เดือน ธ.ค. อาจเพิ่มอีก $5–10 พันล้าน · ยังรอผลประมูลสำรองไฟฟ้า PJM (ภายใน 2 ธ.ค.)",
+    "prices": "ราคาปิดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิดครึ่งวัน ศ. 27 พ.ย.): KLAC $140.86 (+4.96% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -53.31%) · AVGO $312.34 (+3.82% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -35.14%) · ETN $325.92 (+2.55% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -29.14%) · วันนี้เสาร์ ตลาดปิด ราคาใหม่จะมีหลังปิดตลาดจันทร์ 30 พ.ย."
+   },
+   "prices": {
+    "KLAC": 140.86,
+    "AVGO": 312.34,
+    "ETN": 325.92
+   },
+   "prices_as_of": "2026-11-27",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "power_grid",
+     "label": "S&P Global: PJM customer costs could increase by $10 billion after Dec. capacity auction (12 พ.ย.)",
+     "url": "https://www.spglobal.com/energy/en/news-research/latest-news/natural-gas/111226-pjm-customer-costs-could-increase-by-10-billion-after-dec-capacity-auction"
+    },
+    {
+     "key": "power_grid",
+     "label": "Modo Energy: PJM data centers load forecast (10 พ.ย.)",
+     "url": "https://modoenergy.com/research/pjm-data-centers-load-forecast-november-2026"
+    },
+    {
+     "key": "market",
+     "label": "Milton Berg Edge: ตลาดปิด 27 พ.ย. 2026",
+     "url": "https://miltonbergedge.com/daily/2026-11-27?via=x#sp500-best-week-since-april-2025"
     }
    ],
    "created_by": "claude",

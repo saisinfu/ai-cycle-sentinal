@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T01:06:44Z",
+ "updated_at": "2026-11-28T01:06:14Z",
  "readings": [
   {
    "date": "2026-11-07",
@@ -996,6 +996,47 @@
     {
      "key": "prices",
      "label": "Yahoo Finance (ราคาปิด 25 พ.ย. ผ่าน data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-28",
+   "indicators": {
+    "consumer_sentiment": 51.5,
+    "food_services_sales_yoy_pct": 7.0,
+    "food_at_home_cpi_yoy_pct": 1.77,
+    "fao_food_price_yoy_pct": 5.9,
+    "costco_us_comp_sales_pct": 8.1
+   },
+   "confidence": {
+    "sentiment": "medium",
+    "restaurant_sales": "medium",
+    "food_inflation": "high",
+    "input_cost": "high",
+    "costco_comps": "high",
+    "prices": "high"
+   },
+   "notes_th": {
+    "sentiment": "ความเชื่อมั่นผู้บริโภค ม.มิชิแกน พ.ย. 2026 ค่าสุดท้าย 51.5 เท่าเดิม (ต่ำกว่าเกณฑ์กังวล 55) ค่าเบื้องต้น ธ.ค. ออกกลางเดือน",
+    "restaurant_sales": "ยอดขายร้านอาหาร ต.ค. 2026 +7.0% เทียบปีก่อน เท่าเดิม",
+    "food_inflation": "ราคาอาหารในบ้าน (CPI) ก.ย. 2026 +1.77% เท่าเดิม CPI ฉบับถัดไปออกเดือน ธ.ค.",
+    "input_cost": "ดัชนีราคาอาหารโลก FAO ต.ค. 2026 +5.9% เทียบปีก่อน เท่าเดิม ตัวเลขใหม่ออก 4 ธ.ค.",
+    "costco_comps": "Costco ยอดขายสาขาเดิมในสหรัฐฯ ต.ค. 2026 +8.1% เท่าเดิม ตัวเลข พ.ย. ออกต้น ธ.ค.",
+    "prices": "ราคาปิดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิดครึ่งวัน ศ. 27 พ.ย.): COST $1,097.81 (+1.01% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -1.43%) · PEP $144.60 (+0.47% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -15.19%) · MCD $282.62 (-0.31% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -17.13%) · วันนี้เสาร์ ตลาดปิด ราคาใหม่จะมีหลังปิดตลาดจันทร์ 30 พ.ย."
+   },
+   "prices": {
+    "COST": 1097.81,
+    "PEP": 144.6,
+    "MCD": 282.62
+   },
+   "prices_as_of": "2026-11-27",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
      "url": "https://finance.yahoo.com/"
     }
    ],

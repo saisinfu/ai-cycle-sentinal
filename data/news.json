@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T13:54:34Z",
+ "updated_at": "2026-11-28T01:06:37Z",
  "items": [
   {
    "id": "2026-10-28-bot-holds-1pct",
@@ -3854,52 +3854,6 @@
    ]
   },
   {
-   "id": "2026-11-27-premarket-ai-rebound",
-   "date": "2026-11-27",
-   "time_utc": "2026-11-27T13:58:00Z",
-   "run": "evening",
-   "level": "medium",
-   "category": "market",
-   "title_th": "ก่อนเปิดตลาดครึ่งวัน: ฟิวเจอร์ส Nasdaq +2.4% S&P +1.7% หุ้น AI ฟื้น",
-   "summary_th": "ศ. 27 พ.ย. ก่อนตลาดสหรัฐฯ เปิด (ซื้อขายครึ่งวัน ปิด 01:00 น. เวลาไทย) ฟิวเจอร์ส Nasdaq 100 +2.4% S&P 500 +1.7% Dow +1.3% จากแรงซื้อคืนหุ้น AI หลังร่วงหนักหลายสัปดาห์: Nvidia +4% Micron +6% AMD +5% ในช่วงก่อนเปิด · ตลาดเอเชียบวกแรง (Kospi +4.3% นิกเกอิ +2.1%) · แต่ CME FedWatch ยังให้โอกาส Fed ขึ้นดอกเบี้ย 0.25% วันที่ 9 ธ.ค. ถึง 98.9% · แหล่งข่าวไม่ได้ระบุตัวเลขของ AVGO KLAC ETN",
-   "impacts": [
-    {
-     "target": "main:nasdaq",
-     "label_th": "NASDAQ (QQQ)",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "หุ้นเทคและ AI ที่เป็นน้ำหนักหลักของดัชนีถูกซื้อคืน หลัง Nasdaq 100 ลงราว 8% ในเดือน พ.ย."
-    },
-    {
-     "target": "main:sp500",
-     "label_th": "S&P 500 (SPY)",
-     "direction": "positive",
-     "strength": "low",
-     "reason_th": "ฟิวเจอร์สบวกตามหุ้นเทคและตลาดโลก"
-    },
-    {
-     "target": "ai",
-     "label_th": "AI / ชิป",
-     "direction": "positive",
-     "strength": "medium",
-     "reason_th": "หุ้นชิปและผู้ผลิตหน่วยความจำนำการฟื้น ซึ่งมักลากหุ้นอุปกรณ์ผลิตชิปอย่าง KLAC และ AVGO ไปด้วย"
-    }
-   ],
-   "what_to_do_th": "ไม่ต้องรีบซื้อเพิ่มหรือขาย ซื้อตามแผนรายเดือนต่อ ถ้าราคาฟื้นขึ้น แผนงบยืดหยุ่นจะใช้เงินสำรองน้อยลงเองตามกฎ",
-   "watch_next_th": "ศ. 27 พ.ย. ตลาดปิดเร็ว 01:00 น. (เวลาไทย) · ศ. 4 ธ.ค. ตัวเลขจ้างงาน · 9 ธ.ค. ประชุม Fed",
-   "caveat_th": "วันซื้อขายครึ่งวันหลังวันหยุดมีปริมาณน้อย ตัวเลขฟิวเจอร์สตอนเช้าอาจไม่เท่าราคาปิดจริง และการคาด Fed ขึ้นดอกเบี้ยยังกดดันหุ้นเทคอยู่",
-   "sources": [
-    {
-     "label": "Forbes: Stock futures surge as battered AI shares rebound",
-     "url": "https://www.forbes.com/sites/siladityaray/2026/11/27/stock-futures-surge-as-battered-ai-shares-rebound-ahead-of-shorterned-friday-trading/"
-    },
-    {
-     "label": "TipRanks: Stock Market Today, Nov. 27",
-     "url": "https://www.tipranks.com/news/stock-market-today-nov-27-markets-reopen-for-shortened-black-friday-trading"
-    }
-   ]
-  },
-  {
    "id": "2026-11-27-set-rebounds-exports",
    "date": "2026-11-27",
    "time_utc": "2026-11-27T13:58:00Z",
@@ -3924,6 +3878,56 @@
     {
      "label": "Kaohoon International: Market Roundup 27 November 2026",
      "url": "https://www.kaohooninternational.com/markets/595651"
+    }
+   ]
+  },
+  {
+   "id": "2026-11-27-premarket-ai-rebound",
+   "date": "2026-11-27",
+   "time_utc": "2026-11-28T01:06:37Z",
+   "run": "morning",
+   "level": "medium",
+   "category": "market",
+   "title_th": "หุ้น AI ฟื้นแรง ศ. 27 พ.ย. Nasdaq +2.3% ทั้งสัปดาห์ +6.7% ดีสุดรอบ 7 เดือน",
+   "summary_th": "ศ. 27 พ.ย. (ซื้อขายครึ่งวัน) S&P 500 ปิด 7,297 (+1.6%) Nasdaq 24,130 (+2.3%) ดัชนีชิป SOX +4.7% ทั้งสัปดาห์ S&P +5.6% Nasdaq +6.7% ดีที่สุดตั้งแต่ เม.ย. 2025 · หุ้นที่ถือ: AVGO +3.8% ($312.34) KLAC +5.0% ($140.86) ETN +2.6% · VIX ลงเหลือ 23.8 จาก 35.9 เมื่อสัปดาห์ก่อน · แต่ S&P ยังต่ำกว่าจุดสูงสุด ~6.7% Nasdaq ~12.6% และตลาดยังคาด Fed ขึ้นดอกเบี้ย 0.25% วันที่ 9 ธ.ค. เกือบแน่นอน",
+   "impacts": [
+    {
+     "target": "main:nasdaq",
+     "label_th": "NASDAQ (QQQ)",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "หุ้นเทคและชิปที่เป็นน้ำหนักหลักถูกซื้อคืน QQQ ปิด $650.99 (+2.7%) ระยะห่างจากจุดสูงสุดแคบลงเหลือ −14.3%"
+    },
+    {
+     "target": "main:sp500",
+     "label_th": "S&P 500 (SPY)",
+     "direction": "positive",
+     "strength": "low",
+     "reason_th": "ทุกกลุ่มอุตสาหกรรมบวก SPY +1.6% ยังอยู่ต่ำกว่าจุดสูงสุด 6.5% (ไม่ถึงเกณฑ์ −10%)"
+    },
+    {
+     "target": "ai",
+     "label_th": "AI / ชิป",
+     "direction": "positive",
+     "strength": "medium",
+     "reason_th": "แรงซื้อคืนหุ้นชิปหลังร่วงหนัก AVGO KLAC ETN บวกทั้งหมด แต่ยังต่ำกว่าจุดสูงสุด 29–53% ตัวชี้วัดพื้นฐานของหมวดไม่เปลี่ยน"
+    }
+   ],
+   "what_to_do_th": "ไม่ต้องรีบซื้อเพิ่มหรือขาย ซื้อตามแผนรายเดือนต่อ หุ้นหมวด AI ยังต่ำกว่าจุดสูงสุดเกิน 20% แผนงบยืดหยุ่นจึงยังใช้เงินสำรองซื้อเพิ่มตามกฎ",
+   "watch_next_th": "อา. 29 พ.ย. ประชุม OPEC+ · ศ. 4 ธ.ค. ตัวเลขจ้างงาน · 8–9 ธ.ค. ประชุม Fed · ผลประมูลสำรองไฟฟ้า PJM ภายใน 2 ธ.ค.",
+   "caveat_th": "วันซื้อขายครึ่งวันหลังวันหยุดมีปริมาณน้อย (ปริมาณ NYSE ต่ำกว่าวันก่อนมาก) การฟื้นอาจไม่ยั่งยืนถ้า Fed ขึ้นดอกเบี้ยแรงกว่าคาด",
+   "sources": [
+    {
+     "label": "Milton Berg Edge: Wall Street caps its best week since April 2025 (27 พ.ย.)",
+     "url": "https://miltonbergedge.com/daily/2026-11-27?via=x#sp500-best-week-since-april-2025"
+    },
+    {
+     "label": "BigGo Finance: Dow jumps 591 points, Nasdaq +6.7% for the week",
+     "url": "https://finance.biggo.com/news/94218d89-8592-4b2f-a61c-1e75d032506d"
+    },
+    {
+     "label": "Yahoo Finance: Stocks snap from a $6 trillion washout to a $3.5 trillion surge",
+     "url": "https://finance.yahoo.com/markets/article/stocks-snap-from-a-6-trillion-washout-to-a-3-trillion-surge-as-nvidia-micron-and-spacex-bounce-back-151218930.html"
     }
    ]
   }

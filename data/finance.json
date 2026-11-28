@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T01:06:44Z",
+ "updated_at": "2026-11-28T01:06:14Z",
  "readings": [
   {
    "date": "2026-10-24",
@@ -1995,6 +1995,52 @@
      "key": "fed_policy",
      "label": "USAGOLD: market report 26 Nov (Fed pricing)",
      "url": "https://www.usagold.com/daily-precious-metals-market-report-november-26-2026/"
+    }
+   ],
+   "created_by": "claude",
+   "method_version": 1
+  },
+  {
+   "date": "2026-11-28",
+   "indicators": {
+    "yield_curve_10y2y_pct": 0.28,
+    "hy_oas_pct": 3.52,
+    "loan_growth_pct": 7.18,
+    "cc_delinquency_pct": 2.85,
+    "fed_policy_score": 30
+   },
+   "confidence": {
+    "yield_curve": "low",
+    "credit_spread": "low",
+    "loan_growth": "high",
+    "delinquency": "high",
+    "fed_policy": "medium",
+    "prices": "high"
+   },
+   "notes_th": {
+    "yield_curve": "ส่วนต่าง 10 ปี ลบ 2 ปี +0.28% (FRED 24 พ.ย.) เท่าเดิม รอบนี้เปิด FRED ไม่ได้ ยังเป็นบวก ไม่กลับหัว",
+    "credit_spread": "ส่วนต่างหุ้นกู้เสี่ยงสูง 3.52% (FRED 19 พ.ย. ค่าล่าสุดที่มี) เท่าเดิม รอบนี้เปิด FRED ไม่ได้ ยังต่ำกว่าเกณฑ์กังวล 5% มาก",
+    "loan_growth": "สินเชื่อธนาคารสหรัฐฯ โตเฉลี่ย 4 ไตรมาส ~7.18% ต่อปี (H.8 20 พ.ย.) เท่าเดิม ยังไม่ได้ตรวจ H.8 ฉบับสัปดาห์วันขอบคุณพระเจ้า",
+    "delinquency": "หนี้บัตรเครดิตค้างชำระ 2.85% (ไตรมาส 2/2026) เท่าเดิม ข้อมูลไตรมาส 3 ยังไม่ออก",
+    "fed_policy": "คงไว้ 30/100 · ตลาดยังมองว่า Fed ขึ้นดอกเบี้ย 0.25% ในการประชุม 8–9 ธ.ค. เกือบแน่นอน หลัง PCE พื้นฐาน 3.3% (สูงกว่าคาด 3.2%) และ GDP ไตรมาส 3 ปรับขึ้นเป็น 4.3%",
+    "prices": "ราคาปิดจาก Yahoo Finance (ตลาดสหรัฐฯ ปิดครึ่งวัน ศ. 27 พ.ย.): JPM $322.96 (+1.96% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -11.56%) · V $429.56 (+1.22% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -1.61%) · GS $812.87 (+1.48% วันที่ 27/11, ต่ำกว่าจุดสูงสุด 52 สัปดาห์ -29.44%) · วันนี้เสาร์ ตลาดปิด ราคาใหม่จะมีหลังปิดตลาดจันทร์ 30 พ.ย."
+   },
+   "prices": {
+    "JPM": 322.96,
+    "V": 429.56,
+    "GS": 812.87
+   },
+   "prices_as_of": "2026-11-27",
+   "sources": [
+    {
+     "key": "prices",
+     "label": "Yahoo Finance (data/market.json)",
+     "url": "https://finance.yahoo.com/"
+    },
+    {
+     "key": "market",
+     "label": "Milton Berg Edge: ตลาดปิด 27 พ.ย. 2026",
+     "url": "https://miltonbergedge.com/daily/2026-11-27?via=x#sp500-best-week-since-april-2025"
     }
    ],
    "created_by": "claude",
